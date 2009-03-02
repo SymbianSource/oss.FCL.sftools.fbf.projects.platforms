@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<project name="sample-package-spec" >
+	<property name="sf.project.type" value="platform" />
+	
+    <property name="sf.build.target" value="armv5" />
+    <property name="sf.build.variant" value="udeb" />
+    <property name="sf.build.productioncode.enable" value="true" />
+    <property name="sf.build.testcode.enable" value="false" />
+    <property name="sf.build.framework" value="sbsv2" />
+    <property name="sf.build.sbsv2.config" value="" />
+    <property name="sf.build.sbsv2.options" value="-k" />
+    <property name="sf.build.clean.enable" value="true" />
+    
+    <property name="sf.referenceroms.createimages.enable" value="true" />
+    <property name="sf.testroms.createimages.enable" value="true" />
+    
+    <property name="sf.sourcesync.enable" value="true" />
+    <property name="sf.sourcesync.usecache" value="true" />
+    <property name="sf.sourcesync.sourcespecfile" value="sources.csv" />
+    
+    <property name="sf.baseline.enable" value="true" />
+    <property name="sf.baseline.select" value="explicit" />
+    <property name="sf.baseline.id" value="200910" />
+    <property name="sf.baseline.service" value="S60_51" />
+    <property name="sf.baseline.location" value="TB9.1_Releases\week02\S60.MCL_200902_hw70" />
+  
+    <property name="sf.toolsbaseline.enable" value="true" />
+    <property name="sf.toolsbaseline.select" value="explicit" />
+    <property name="sf.toolsbaseline.id" value="200910" />
+    <property name="sf.toolsbaseline.service" value="S60_51" />
+    <property name="sf.toolsbaseline.location" value="TB9.1_Releases\week02\S60.MCL_200902_hw70" />
+    
+    <property name="sf.publish.unpackagedartefacts.enable" value="true" />
+    <property name="sf.publish.packagedartefacts.enable" value="true" />
+    
+    <property name="sf.tagafterbuild.enable" value="true" />
+</project>
