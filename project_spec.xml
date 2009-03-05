@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <project name="sample-package-spec" >
-	<property name="sf.project.type" value="platform" />
+	<property name="sf.project.type" value="package" />
 	
     <property name="sf.build.target" value="armv5" />
     <property name="sf.build.variant" value="udeb" />
@@ -19,11 +19,11 @@
     <property name="sf.sourcesync.usecache" value="true" />
     <property name="sf.sourcesync.sourcespecfile" value="sources.csv" />
     
-    <property name="sf.baseline.enable" value="true" />
+    <property name="sf.baseline.enable" value="false" />
     <property name="sf.baseline.select" value="explicit" />
     <property name="sf.baseline.id" value="200910" />
     <property name="sf.baseline.service" value="S60_51" />
-    <property name="sf.baseline.location" value="TB9.1_Releases\week02\S60.MCL_200902_hw70" />
+    <property name="sf.baseline.location" value="\\lon-engbuild68\d$\GRACE\Dummy\Symbian_OS_vtb91sf\SY_TB91_200910_101" />
   
     <property name="sf.toolsbaseline.enable" value="true" />
     <property name="sf.toolsbaseline.select" value="explicit" />
