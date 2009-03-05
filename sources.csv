@@ -1,2 +1,2 @@
 source,dst,tag,type,branch,pattern
-\\lon-engbuild68\d$\Mercurial\prototype\environment\packages\sf\app\camera\S60_camera,\sf\app\camera,tip,tag,default,*/layer.sysdef.xml
+\\lon-engbuild68\d$\Mercurial\prototype\environment\packages\sf\app\camera\S60_camera,\sf\app\camera,tip,tag,default,layers.sysdef.xml
