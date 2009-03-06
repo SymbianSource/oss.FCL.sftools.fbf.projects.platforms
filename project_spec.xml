@@ -23,7 +23,7 @@
     <property name="sf.spec.baseline.select" value="explicit" />
     <property name="sf.spec.baseline.id" value="200910" />
     <property name="sf.spec.baseline.service" value="S60_51" />
-    <property name="sf.spec.baseline.location" value="TB9.1_Releases\week02\S60.MCL_200902_hw70" />
+    <property name="sf.spec.baseline.location" value="\\lon-engbuild68\d$\GRACE\Dummy\Symbian_OS_vtb91sf\SY_TB91_200910_101" />
   
     <property name="sf.spec.toolsbaseline.enable" value="true" />
     <property name="sf.spec.toolsbaseline.select" value="explicit" />
