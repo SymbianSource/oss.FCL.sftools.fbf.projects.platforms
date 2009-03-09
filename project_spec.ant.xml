@@ -20,16 +20,12 @@
     <property name="sf.spec.sourcesync.sourcespecfile" value="sources.csv" />
     
     <property name="sf.spec.baseline.enable" value="true" />
-    <property name="sf.spec.baseline.select" value="explicit" />
-    <property name="sf.spec.baseline.id" value="200910" />
-    <property name="sf.spec.baseline.service" value="S60_51" />
+    <property name="sf.spec.baseline.select" value="location" />
+    <!-- property name="sf.spec.baseline.id" value="200910" />
+    <property name="sf.spec.baseline.service" value="S60_51" / -->
     <property name="sf.spec.baseline.location" value="\\lon-engbuild68\d$\GRACE\Dummy\Symbian_OS_vtb91sf\SY_TB91_200910_101" />
   
-    <property name="sf.spec.toolsbaseline.enable" value="true" />
-    <property name="sf.spec.toolsbaseline.select" value="explicit" />
-    <property name="sf.spec.toolsbaseline.id" value="200910" />
-    <property name="sf.spec.toolsbaseline.service" value="S60_51" />
-    <property name="sf.spec.toolsbaseline.location" value="TB9.1_Releases\week02\S60.MCL_200902_hw70" />
+    <property name="sf.spec.toolsbaseline.enable" value="false" />
     
     <property name="sf.spec.publish.unpackagedartefacts.enable" value="true" />
     <property name="sf.spec.publish.packagedartefacts.enable" value="true" />
