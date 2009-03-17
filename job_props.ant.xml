@@ -6,7 +6,7 @@
     <property name="sf.spec.sourcesync.usecache" value="true"/>
     
     <property name="sf.spec.baseline.select" value="location" />
-    <property name="sf.spec.baseline.location" value="\\lon-engbuild68\d$\GRACE\Dummy\Symbian_OS_vtb91sf\SY_TB91_200910_101" />
+    <property name="sf.spec.baseline.location" value="\\lon-engbuild68\d$\GRACE\Symbian_OS\Symbian_OS_vtb91sf\SY_TB91_200910_101" />
   
     <property name="sf.spec.toolsbaseline.enable" value="true"/>
 </project>
