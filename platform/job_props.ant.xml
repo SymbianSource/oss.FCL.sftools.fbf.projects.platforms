@@ -23,6 +23,7 @@
     <property name="sf.spec.baseline.select" value="location" />
     <property name="sf.spec.baseline.location" value="D:\PDK\PDK_20090401" />  
     <property name="sf.spec.toolsbaseline.enable" value="true"/>
+    <property name="sf.spec.publish.rootdir" value="D:\SF_Builds"/>
     
     <!-- platform build specific properties -->
     <property name="sf.spec.s60.sysdef.clean.configurations.list"  value="S60_5_1_clean" />
