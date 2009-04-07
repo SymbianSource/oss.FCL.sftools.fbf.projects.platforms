@@ -16,12 +16,15 @@
     
     <property name="sf.spec.sourcesync.usecache" value="true"/>
             
-    <property name="sf.spec.baseline.enable"   value="true"/>    
-    <property name="sf.spec.sourcesync.enable" value="false"/>
-    <property name="sf.spec.baseline.clean"    value="true"/>
+
+    <!-- get full source env and binaries from pdk -->
+    <property name="sf.spec.sourcesync.enable"       value="true"/>
+    <property name="sf.spec.baseline.getenv_options" value="-I emu"/>
+    <property name="sf.spec.baseline.enable"         value="true"/>     
+    <property name="sf.spec.baseline.clean"          value="true"/>
     
     <property name="sf.spec.baseline.select" value="location" />
-    <property name="sf.spec.baseline.location" value="D:\PDK\PDK_20090401" />  
+    <property name="sf.spec.baseline.location" value="D:\PDK\PDK_20090401\" />  
     <property name="sf.spec.toolsbaseline.enable" value="true"/>
     
     <!-- platform build specific properties -->
