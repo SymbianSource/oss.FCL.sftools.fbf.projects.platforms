@@ -44,7 +44,19 @@
     <property name="sf.spec.os.skipbuild"   value="false"/>
     <property name="sf.spec.s60.skipbuild"  value="true"/>
     <property name="sf.spec.splitbuild"     value="false"/> 
-	<!-- *this* platform build defines two steps. false means single foundation model 
-	      which uses sf.spec.os.* attrs -->
+    <!-- *this* platform build defines two steps. false means single foundation model 
+          which uses sf.spec.os.* attrs -->
     
+    <!-- generate dir list(s) of epoc32 tree -->
+    <property name="sf.spec.dirlist.enable"  value="false"/>
+    
+    <!-- generate delta of two epoc32 trees. note: this takes a while! -->
+    <property name="sf.spec.dirdelta.enable" value="false"/>
+
+    <!-- prefilter raptor logs -->
+    <property name="sf.spec.logs.raptorfilter.enable" value="true"/>
+    
+    <!-- zip all logs before publish -->
+    <property name="sf.spec.logs.zip.enable"  value="true"/>
+
 </project>
