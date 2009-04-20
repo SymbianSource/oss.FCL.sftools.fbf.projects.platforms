@@ -244,12 +244,6 @@
      <component name="s60compatibilityheaders" long-name="S60 Compatibility Headers" filter="gt">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit version="9.4" bldFile="os/ossrv/genericservices/s60compatibilityheaders/group94" mrp="os/ossrv/genericservices/s60compatibilityheaders/group94/tools_s60_header_compat94.mrp"/>
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit version="9.5" bldFile="os/ossrv/genericservices/s60compatibilityheaders/group95" mrp="os/ossrv/genericservices/s60compatibilityheaders/group95/tools_s60_header_compat95.mrp"/>
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit version="9.6" bldFile="os/ossrv/genericservices/s60compatibilityheaders/group96" mrp="os/ossrv/genericservices/s60compatibilityheaders/group96/tools_s60_header_compat96.mrp"/>
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit version="Future" bldFile="os/ossrv/genericservices/s60compatibilityheaders/groupfuture" mrp="os/ossrv/genericservices/s60compatibilityheaders/groupfuture/tools_s60_header_compatfuture.mrp"/>
      </component>
      <component name="syslibsdocs" long-name="Syslibs Documentation" class="doc">
       <unit mrp="os/ossrv/genericservices/syslibsdocs/syslibs_documentation.mrp"/>
@@ -1932,12 +1926,9 @@
      <component name="esockserver" long-name="ESock Server">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit version="2" bldFile="os/commsfw/datacommsserver/esockserver/group" mrp="os/commsfw/datacommsserver/esockserver/group/comms-infras_esock.mrp"/>
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit version="3" bldFile="os/unref/orphan/comgen/comms-infras/esock/group" mrp="os/unref/orphan/comgen/comms-infras/esock/group/comms-infras_esock.mrp"/>
      </component>
      <component name="esockserverconfig" long-name="ESock Server Config" introduced="9.1" class="config">
       <unit version="2" mrp="os/commsfw/datacommsserver/esockserver/group/comms-infras_esock-config.mrp"/>
-      <unit version="3" mrp="os/unref/orphan/comgen/comms-infras/esock/group/comms-infras_esock-config.mrp"/>
      </component>
      <component name="networkcontroller" long-name="Network Controller" plugin="Y" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -1946,8 +1937,6 @@
      <component name="networkinterfacemgr" long-name="Network Interface Manager" introduced="ER5U">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit version="1" bldFile="os/commsfw/datacommsserver/networkinterfacemgr/group" mrp="os/commsfw/datacommsserver/networkinterfacemgr/group/comms-infras_nifman.mrp"/>
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit version="2" bldFile="os/unref/orphan/comgen/comms-infras/nifman/group" mrp="os/unref/orphan/comgen/comms-infras/nifman/group/comms-infras_nifman.mrp"/>
      </component>
      <component name="networkingdialogapi" long-name="Networking Dialog API" introduced="6.1">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -2011,13 +2000,10 @@
      </component>
      <component name="pppconfig" long-name="PPP Config" introduced="ER5">
       <unit version="1" mrp="os/networkingsrv/linklayerprotocols/pppnif/group/networking_ppp-config.mrp"/>
-      <unit version="2" mrp="os/unref/orphan/comgen/networking/ppp/group/networking_ppp-config.mrp"/>
      </component>
      <component name="pppnif" long-name="PPP NIF" plugin="Y" introduced="ER5">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit version="1" bldFile="os/networkingsrv/linklayerprotocols/pppnif/group" mrp="os/networkingsrv/linklayerprotocols/pppnif/group/networking_ppp.mrp"/>
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit version="2" bldFile="os/unref/orphan/comgen/networking/ppp/group" mrp="os/unref/orphan/comgen/networking/ppp/group/networking_ppp.mrp"/>
      </component>
      <component name="slipnif" long-name="SLIP NIF" plugin="Y">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -2722,12 +2708,9 @@
      </component>
      <component name="usbmgr" long-name="USB Manager">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit version="1" bldFile="os/unref/orphan/comgen/ser-comms/usb/group" mrp="os/unref/orphan/comgen/ser-comms/usb/group/ser-comms_usb.mrp"/>
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit version="2" bldFile="os/shortlinksrv/usbmgmt/usbmgr/group" mrp="os/shortlinksrv/usbmgmt/usbmgr/group/usb_manager.mrp"/>
      </component>
      <component name="usbmgrtest" long-name="USB Manager Tests" introduced="7.0" class="test">
-      <unit version="1" mrp="os/unref/orphan/comgen/ser-comms/usb_test/group/ser-comms_usb_test.mrp"/>
       <unit version="2" mrp="os/shortlinksrv/usbmgmt/usbmgrtest/group/usb_test.mrp"/>
      </component>
     </collection>
@@ -19157,8 +19140,6 @@
      <component name="contactsmodel" long-name="Contacts Model" introduced="ER5">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit version="1" bldFile="app/contacts/phonebookengines/contactsmodel/group" mrp="app/contacts/phonebookengines/contactsmodel/group/app-engines_cntmodel.mrp"/>
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit version="2" bldFile="app/contacts/phonebookengines/contactsmodel/groupsql" mrp="app/contacts/phonebookengines/contactsmodel/groupsql/app-engines_cntmodel.mrp"/>
      </component>
      <component name="VirtualPhonebook" long-name="Virtual Phonebook">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
@@ -24803,7 +24784,6 @@
       <unit mrp="app/techview/toolkit/configfiles/techview_epoc_ini.mrp"/>
      </component>
      <component name="romimages" long-name="ROM Images" filter="techview">
-      <unit version="Future" mrp="os/deviceplatformrelease/symbianosbld/cedarutils/techview_roms_Future.mrp"/>
       <unit version="9.4" mrp="os/deviceplatformrelease/symbianosbld/cedarutils/techview_roms_9.4.mrp"/>
      </component>
      <component name="romkit" long-name="ROM Kit" filter="techview">
