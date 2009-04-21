@@ -42,7 +42,7 @@
     
     <!-- build os and s60 by default -->
     <property name="sf.spec.os.skipbuild"   value="false"/>
-    <property name="sf.spec.s60.skipbuild"  value="true"/>
+    <property name="sf.spec.s60.skipbuild"  value="false"/>
     <property name="sf.spec.splitbuild"     value="false"/> 
     <!-- *this* platform build defines two steps. false means single foundation model 
           which uses sf.spec.os.* attrs -->
@@ -54,7 +54,7 @@
     <property name="sf.spec.dirdelta.enable" value="true"/>
 
     <!-- prefilter raptor logs -->
-    <property name="sf.spec.logs.raptorfilter.enable" value="false"/>
+    <property name="sf.spec.logs.raptorfilter.enable" value="true"/>
     
     <!-- zip all logs before publish -->
     <property name="sf.spec.logs.zip.enable"  value="true"/>
