@@ -36,14 +36,14 @@
     <property name="sf.spec.s60.sysdef.dtd"  value="${sf.spec.job.dir}\sysdefs\sysdef_dtd_1_4_0.xml"/>
     <property name="sf.spec.os.sysdef.dtd"   value="${sf.spec.job.dir}\sysdefs\sysdef_dtd_2_0_0.xml"/>
     
-    <property name="sf.spec.sysdef.version"      value="1.4.0"/> <!-- default -->
-    <property name="sf.spec.s60.sysdef.version"  value="1.4.0"/>
+    <property name="sf.spec.sysdef.version"      value="2.0.0"/> <!-- default -->
+    <property name="sf.spec.s60.sysdef.version"  value="2.0.0"/>
     <property name="sf.spec.os.sysdef.version"   value="2.0.0"/>
     
     <!-- build os and s60 by default -->
     <property name="sf.spec.os.skipbuild"   value="false"/>
     <property name="sf.spec.s60.skipbuild"  value="false"/>
-    <property name="sf.spec.splitbuild"     value="false"/> 
+    <property name="sf.spec.splitbuild"     value="true"/> 
     <!-- *this* platform build defines two steps. false means single foundation model 
           which uses sf.spec.os.* attrs -->
     
