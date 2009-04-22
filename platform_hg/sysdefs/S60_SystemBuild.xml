@@ -682,7 +682,7 @@ this configuration can be used only when those components has built among normal
 				<unitRef unit="sf_tools_swconfigtools"/>
 				<unitRef unit="ext_mw_websrvde"/>
 				<unitRef unit="ext_tools_oemrndtools"/>
-				<unitRef unit="sf_tools_themeinstaller"/>
+				<!--<unitRef unit="sf_tools_themeinstaller"/> -->
 				<unitRef unit="ext_tools_toolsextensions"/>
 				<unitRef unit="sf_app_commonemail"/>
 				<unitRef unit="sf_app_radio"/>
@@ -754,13 +754,13 @@ but components should be built in S60 platform builds
 -->
     <unitList name="S60_BINARY_ONLY" description="S60 build binary only components">
       <!--<unitRef unit="sf_os_wlan_wlan_bearer_wlanengine_symbian_3.1"/>-->
-      <unitRef unit="sf_mw_accesssec_eapol_eapol_symbian_ccxeapol"/>
+      <!--<unitRef unit="sf_mw_accesssec_eapol_eapol_symbian_ccxeapol"/>-->
       <unitRef unit="sf_mw_helix_helix_ren_src"/>
     </unitList>
 
     <unitList name="S60_BINARY_ONLY_SF" description="S60 build binary only components">
       <unitRef unit="sf_os_wlan_wlan_bearer_wlanengine_symbian_3.1"/>
-      <unitRef unit="sf_mw_accesssec_eapol_eapol_symbian_ccxeapol"/>
+      <!--<unitRef unit="sf_mw_accesssec_eapol_eapol_symbian_ccxeapol"/>-->
     </unitList>
 
     <!--
