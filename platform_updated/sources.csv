@@ -78,7 +78,7 @@ source,dst,tag,type,branch,pattern
 //lon-engbuild87/d$/mercurial_development/sfl/sf/mw/shortlinkconn/FCL_shortlinkconn/,/sf/mw/shortlinkconn,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/svgt/MCL_svgt/,/sf/mw/svgt,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/uiaccelerator/MCL_uiaccelerator/,/sf/mw/uiaccelerator,tip,tag,default,layers.sysdef.xml
-//lon-engbuild87/d$/mercurial_master/sfl/sf/mw/uiresources/MCL_uiresources/,/sf/mw/uiresources,tip,tag,default,layers.sysdef.xml
+//lon-engbuild87/d$/mercurial_development/sfl/sf/mw/uiresources/FCL_uiresources/,/sf/mw/uiresources,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/uitools/MCL_uitools/,/sf/mw/uitools,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/videoutils/MCL_videoutils/,/sf/mw/videoutils,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/vpnclient/MCL_vpnclient/,/sf/mw/vpnclient,tip,tag,default,layers.sysdef.xml
