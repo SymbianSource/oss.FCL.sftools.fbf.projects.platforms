@@ -313,12 +313,18 @@
     <collection name="authenticationservices" long-name="Authentication Services" level="utilities"/>
     <collection name="authorisation" long-name="Authorisation" level="utilities">
      <component name="userpromptservice" long-name="User Prompt Service" introduced="tb92">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/security/authorisation/userpromptservice/group" mrp="os/security/authorisation/userpromptservice/group/security_ups.mrp"/>
      </component>
     </collection>
     <collection name="contentmgmt" long-name="Content Management" level="utilities">
      <component name="cafrecogniserconfig" long-name="CAF Recogniser Config" introduced="9.1">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/security/contentmgmt/cafrecogniserconfig" mrp="os/security/contentmgmt/cafrecogniserconfig/security_reccafconfig.mrp"/>
      </component>
      <component name="cafstreamingsupport" long-name="CAF Streaming Support" introduced="tb92">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/security/contentmgmt/cafstreamingsupport/group" mrp="os/security/contentmgmt/cafstreamingsupport/group/security_streamingcaf.mrp"/>
      </component>
      <component name="contentaccessfwfordrm" long-name="Content Access Framework for DRM" introduced="9.1">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -327,14 +333,20 @@
     </collection>
     <collection name="crypto" long-name="Crypto Libraries" level="libraries">
      <component name="strongcryptospi" long-name="Strong Crypto SPI" filter="gt" introduced="tb92">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/security/crypto/weakcryptospi/strong" mrp="os/security/crypto/weakcryptospi/group/security_cryptospi_strong.mrp"/>
      </component>
      <component name="strongcrypto" long-name="Strong Cryptography Library" filter="gt">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os/security/crypto/weakcrypto/strong" mrp="os/security/crypto/weakcrypto/group/security_crypto_strong.mrp"/>
      </component>
      <component name="weakcryptospi" long-name="Weak Crypto SPI" filter="gt" introduced="tb92">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/security/crypto/weakcryptospi/group" mrp="os/security/crypto/weakcryptospi/group/security_cryptospi_weak.mrp"/>
      </component>
      <component name="weakcrypto" long-name="Weak Cryptography Library" filter="gt">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/security/crypto/weakcrypto/group" mrp="os/security/crypto/weakcrypto/group/security_crypto_weak.mrp"/>
      </component>
     </collection>
     <collection name="cryptomgmtlibs" long-name="Crypto Management Libraries" level="management">
@@ -343,6 +355,8 @@
             <unit bldFile="os/security/cryptomgmtlibs/cryptotokenfw/group" mrp="os/security/cryptomgmtlibs/cryptotokenfw/group/security_cryptotokens.mrp"/>
      </component>
      <component name="securitycommonutils" long-name="Security Common Utils" introduced="8.0">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/security/cryptomgmtlibs/securitycommonutils/group" mrp="os/security/cryptomgmtlibs/securitycommonutils/group/security_commonutils.mrp"/>
      </component>
      <component name="securitydocs" long-name="Security Documentation">
       <unit mrp="os/security/cryptomgmtlibs/securitydocs/security_documentation.mrp"/>
@@ -357,6 +371,8 @@
     </collection>
     <collection name="cryptoplugins" long-name="Crypto Plugins" level="plugins">
      <component name="cryptospiplugins" long-name="Crypto SPI Plugins" filter="gt" plugin="Y" introduced="tb92">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/security/cryptoplugins/cryptospiplugins/group" mrp="os/security/cryptoplugins/cryptospiplugins/group/security_cryptospi_plugins.mrp"/>
      </component>
     </collection>
     <collection name="cryptoservices" long-name="Crypto Services" level="plugins">
@@ -440,6 +456,8 @@
     </collection>
     <collection name="featuremgmt" long-name="Feature Management" level="framework">
      <component name="featuremgr" long-name="Feature Manager" introduced="tb92">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/persistentdata/featuremgmt/featuremgr/group" mrp="os/persistentdata/featuremgmt/featuremgr/group/syslibs_featmgr.mrp"/>
      </component>
      <component name="featureregistry" long-name="Feature Registry" introduced="9.2" deprecated="Future">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -718,6 +736,8 @@
             <unit bldFile="os/commsfw/datacommsserver/networkingdialogapi/group" mrp="os/commsfw/datacommsserver/networkingdialogapi/group/networking_dialog.mrp"/>
      </component>
      <component name="networkingdialogstub" long-name="Networking Dialog Stub" introduced="6.1">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/commsfw/datacommsserver/networkingdialogapi/default" mrp="os/commsfw/datacommsserver/networkingdialogapi/default/networking_dialog_default.mrp"/>
      </component>
     </collection>
     <collection name="serialserver" long-name="Serial Server" level="server">
@@ -805,12 +825,16 @@
             <unit bldFile="os/networkingsrv/networkcontrol/ipcprshim/group" mrp="os/networkingsrv/networkcontrol/ipcprshim/group/networking_shimcpr.mrp"/>
      </component>
      <component name="ipnetworklayer" long-name="IP Network Layer" plugin="Y" introduced="tb92">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/networkingsrv/networkcontrol/ipnetworklayer/group" mrp="os/networkingsrv/networkcontrol/ipnetworklayer/group/networking_ipproto.mrp"/>
      </component>
      <component name="ipscpr" long-name="IP SCPR" plugin="Y" introduced="9.1">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os/networkingsrv/networkcontrol/ipscpr/group" mrp="os/networkingsrv/networkcontrol/ipscpr/group/networking_ipscpr.mrp"/>
      </component>
      <component name="iptransportlayer" long-name="IP Transport Layer" plugin="Y">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/networkingsrv/networkcontrol/iptransportlayer/group" mrp="os/networkingsrv/networkcontrol/iptransportlayer/group/networking_iptransport.mrp"/>
      </component>
      <component name="pfqoslib" long-name="PF QoS Library" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -824,6 +848,8 @@
             <unit bldFile="os/networkingsrv/networkcontrol/qosfwconfig/qos/group" mrp="os/networkingsrv/networkcontrol/qosfwconfig/qos/group/networking_qos.mrp"/>
      </component>
      <component name="qosipscpr" long-name="QoS IP SCPR" plugin="Y">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/networkingsrv/networkcontrol/qosipscpr/group" mrp="os/networkingsrv/networkcontrol/qosipscpr/group/networking_qosipscpr.mrp"/>
      </component>
      <component name="qoslib" long-name="QoS Library" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -955,6 +981,8 @@
             <unit bldFile="os/cellularsrv/basebandadaptationplugins/basebandchanneladaptorforc32/group" mrp="os/cellularsrv/basebandadaptationplugins/basebandchanneladaptorforc32/group/networking_c32bca.mrp"/>
      </component>
      <component name="basebandchanneladaptorforisc" long-name="Baseband Channel Adaptor for ISC" plugin="Y">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/cellularsrv/basebandadaptationplugins/basebandchanneladaptorforisc/group" mrp="os/cellularsrv/basebandadaptationplugins/basebandchanneladaptorforisc/group/networking_bcatoisc.mrp"/>
      </component>
     </collection>
     <collection name="fax" long-name="Fax" level="server">
@@ -991,6 +1019,8 @@
             <unit bldFile="os/cellularsrv/telephonyprotocols/gprsumtsqosprt/group" mrp="os/cellularsrv/telephonyprotocols/gprsumtsqosprt/group/networking_guqos.mrp"/>
      </component>
      <component name="pdplayer" long-name="PDP Layer" plugin="Y" introduced="tb92">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/cellularsrv/telephonyprotocols/pdplayer/group" mrp="os/cellularsrv/telephonyprotocols/pdplayer/group/networking_pdp.mrp"/>
      </component>
      <component name="psdagt" long-name="PSD AGT" plugin="Y" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -1193,6 +1223,8 @@
             <unit bldFile="os/shortlinksrv/bluetoothmgmt/bluetoothclientlib" mrp="os/shortlinksrv/bluetoothmgmt/bluetoothclientlib/bluetooth_user.mrp"/>
      </component>
      <component name="btconfig" long-name="Bluetooth Config" class="config">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/shortlinksrv/bluetoothmgmt/btconfig" mrp="os/shortlinksrv/bluetoothmgmt/btconfig/bluetooth_config.mrp"/>
      </component>
      <component name="btmgr" long-name="Bluetooth Manager" introduced="6.0">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -1478,10 +1510,16 @@
     </collection>
     <collection name="graphicscomposition" long-name="Graphics Composition" level="engines">
      <component name="compositionengineadaptation" long-name="Composition Engine Adaptation" introduced="tb92">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/graphics/graphicscomposition/compositionengineadaptation/group" mrp="os/graphics/graphicscomposition/compositionengineadaptation/group/graphics_compositionbackend.mrp"/>
      </component>
      <component name="graphicscompositionengine" long-name="Graphics Composition Engine" introduced="tb92">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/graphics/graphicscomposition/graphicscompositionengine/group" mrp="os/graphics/graphicscomposition/graphicscompositionengine/group/graphics_gce.mrp"/>
      </component>
      <component name="surfaceupdate" long-name="Surface Update" introduced="tb92">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/graphics/graphicscomposition/surfaceupdate/group" mrp="os/graphics/graphicscomposition/surfaceupdate/group/graphics_surfaceupdate.mrp"/>
      </component>
     </collection>
     <collection name="graphicsdeviceinterface" long-name="Graphics Device Interface" level="device-interface">
@@ -1500,6 +1538,8 @@
     </collection>
     <collection name="graphicshwdrivers" long-name="Graphics Hardware Drivers" level="adaptation">
      <component name="surfacemgr" long-name="Surface Manager" introduced="tb92">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/graphics/graphicshwdrivers/surfacemgr/group" mrp="os/graphics/graphicshwdrivers/surfacemgr/group/graphics_surfacemanager.mrp"/>
      </component>
     </collection>
     <collection name="graphicsresourceservices" long-name="Graphics Resource Services" level="engines"/>
@@ -1524,6 +1564,8 @@
     </collection>
     <collection name="graphicsutils" long-name="Graphics Utils" level="engines">
      <component name="commongraphicsheaders" long-name="Common Graphics Headers" introduced="tb92">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/graphics/graphicsutils/commongraphicsheaders/group" mrp="os/graphics/graphicsutils/commongraphicsheaders/group/graphics_commonheader.mrp"/>
      </component>
     </collection>
     <collection name="opengles" long-name="OpenGLES" level="internal-adaptations">
@@ -1538,6 +1580,8 @@
     </collection>
     <collection name="openvg" long-name="OpenVG" level="internal-adaptations">
      <component name="openvgimplementation" long-name="OpenVG Implementation" introduced="tb91">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/graphics/openvg/openvgimplementation/group/" mrp="os/graphics/openvg/openvgimplementation/group/graphics_openvg.mrp"/>
      </component>
      <component name="openvginterface" long-name="OpenVG Interface" introduced="tb91">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -1680,6 +1724,8 @@
       <unit mrp="os/buildtools/devlib/devlibhelp/group/shared/developerlibrary_doc_plain_html.mrp"/>
      </component>
      <component name="devlibhelp" long-name="Developer Library Help">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit version="9.4" bldFile="os/buildtools/devlib/devlibhelp/group/devlib94" mrp="os/buildtools/devlib/devlibhelp/group/devlib94/developerlibrary_doc_html.mrp"/>
      </component>
      <component name="devlibsrc" long-name="Developer Library Source" filter="gt">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -1744,6 +1790,8 @@
      <component name="systemmonitor" long-name="System Monitor" introduced="8.0">
      </component>
      <component name="statapi" long-name="STAT API" filter="gt">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os/buildtools/toolsandutils/statapi/source/statapi/console" mrp="os/buildtools/toolsandutils/statapi/group/testtools_stat_device_gt.mrp"/>
      </component>
      <component name="statsource" long-name="STAT Source" filter="gt">
       <unit mrp="os/buildtools/toolsandutils/statsource/group/testtools_stat_common_source.mrp"/>
@@ -2041,6 +2089,8 @@
             <unit bldFile="mw/appsupport/contenthandling/contenthandlingfw/Group" mrp="mw/appsupport/contenthandling/contenthandlingfw/Group/content-handling.mrp"/>
      </component>
      <component name="referencedrmagent" long-name="Reference DRM Agent" introduced="8.0">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="mw/appsupport/contenthandling/referencedrmagent/RefTestAgent/group" mrp="mw/appsupport/contenthandling/referencedrmagent/RefTestAgent/group/security_rta.mrp"/>
      </component>
      <component name="webrecognisers" long-name="Web Recognisers" plugin="Y">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -2073,8 +2123,12 @@
     </collection>
     <collection name="openenvutils" long-name="Open Environment Utilities" level="specific">
      <component name="commandshell" long-name="Command Shell" introduced="tb92">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="mw/appsupport/openenvutils/commandshell/group" mrp="mw/appsupport/openenvutils/commandshell/group/oetools_zsh.mrp"/>
      </component>
      <component name="telnetserver" long-name="Telnet Server" introduced="tb92">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="mw/appsupport/openenvutils/telnetserver/group" mrp="mw/appsupport/openenvutils/telnetserver/group/oetools_telnetd.mrp"/>
      </component>
     </collection>
     <collection name="printingsupport" long-name="Printing Support" level="generic">
@@ -2504,6 +2558,8 @@
    <block long-name="IP App Protocols" level="generic" name="ipappprotocols" levels="plugin framework server generic specific">
     <collection name="sipconnproviderplugins" long-name="SIP Connection Provider Plugins" level="conn">
      <component name="sipconnectionplugins" long-name="SIP Connection Plugins" plugin="Y" introduced="tb92" filter="gt">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="mw/ipappprotocols/sipconnproviderplugins/sipconnectionplugins/group" mrp="mw/ipappprotocols/sipconnproviderplugins/sipconnectionplugins/group/mm-protocols_sipproviders.mrp"/>
      </component>
      <component name="sipconnprovider" long-name="SIP Connection Provider" plugin="Y" introduced="9.2" filter="gt">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -3143,6 +3199,8 @@
     </collection>
     <collection name="usbfunctiondrivers" long-name="USB Function Drivers" level="server">
      <component name="massstoragemgr" long-name="Mass Storage Manager" introduced="tb92">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="mw/remoteconn/usbfunctiondrivers/massstoragemgr/group" mrp="mw/remoteconn/usbfunctiondrivers/massstoragemgr/group/connectivity_usbms.mrp"/>
      </component>
     </collection>
     <collection name="backupandrestore" long-name="Backup and Restore" level="specific">
@@ -4939,6 +4997,8 @@
     </collection>
     <collection name="pimappservices" long-name="PIM App Services" level="services">
      <component name="agnmodel" long-name="Agenda Model" introduced="5.0" deprecated="9.1">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="app/organizer/pimappservices/agnmodel/group" mrp="app/organizer/pimappservices/agnmodel/group/app-engines_agnmodel.mrp"/>
      </component>
      <component name="agendamodeltest" long-name="Agenda Model Test" introduced="8.1" class="test">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -5956,52 +6016,32 @@
     </collection>
     <collection name="controlpanel" long-name="Control Panel" level="ui">
      <component name="cctlcolscheme" long-name="Colour Scheme Control" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/controlpanel/cctlcolscheme/group" mrp="app/techview/controlpanel/cctlcolscheme/group/techview_cctlcolscheme.mrp"/>
      </component>
      <component name="fepsetup" long-name="FEP Setup" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/controlpanel/fepsetup/group" mrp="app/techview/controlpanel/fepsetup/group/techview_fepsetup.mrp"/>
      </component>
      <component name="keyclickref" long-name="Key Click Ref" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/controlpanel/keyclickref/Group" mrp="app/techview/controlpanel/keyclickref/Group/techview_KeyClickRef.mrp"/>
      </component>
      <component name="soundsetup" long-name="Sound Setup" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/controlpanel/soundsetup/group" mrp="app/techview/controlpanel/soundsetup/group/techview_soundsetup.mrp"/>
      </component>
     </collection>
     <collection name="datasyncapps" long-name="Data Sync Applications" level="apps2">
      <component name="syncmlapp" long-name="SyncML App" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/datasyncapps/syncmlapp/group" mrp="app/techview/datasyncapps/syncmlapp/group/techview_syncmlapp.mrp"/>
      </component>
     </collection>
     <collection name="installationapps" long-name="Installation Apps" level="apps2">
      <component name="installapp" long-name="Install App" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/installationapps/installapp/group" mrp="app/techview/installationapps/installapp/group/techview_installapp.mrp"/>
      </component>
     </collection>
     <collection name="messagingapps" long-name="Messaging Apps" level="apps2">
      <component name="messagingui" long-name="Messaging UI" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/messagingapps/messagingui/Group" mrp="app/techview/messagingapps/messagingui/Group/techview_messagingui.mrp"/>
      </component>
     </collection>
     <collection name="networkingapps" long-name="Networking Apps" level="apps1">
      <component name="iapstatusapp" long-name="IAP Status App" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/networkingapps/iapstatusapp/group" mrp="app/techview/networkingapps/iapstatusapp/group/techview_iapstatusapp.mrp"/>
      </component>
      <component name="networkingagentnotifier" long-name="Networking Agent Notifier" filter="techview" plugin="Y" introduced="7.0s">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/networkingapps/networkingagentnotifier/group" mrp="app/techview/networkingapps/networkingagentnotifier/group/techview_networking_agentnotifier.mrp"/>
      </component>
      <component name="techviewvpnui" long-name="VPN UI" filter="techview" introduced="7.0">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/networkingapps/techviewvpnui/group" mrp="app/techview/networkingapps/techviewvpnui/group/techview_networking_vpnui.mrp"/>
      </component>
     </collection>
     <collection name="networkingutils" long-name="Networking Utils" level="utils">
@@ -6014,76 +6054,46 @@
     </collection>
     <collection name="pimapps" long-name="PIM Apps" level="apps3">
      <component name="agenda" long-name="Agenda UI" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/pimapps/agenda/group" mrp="app/techview/pimapps/agenda/group/techview_agenda.mrp"/>
      </component>
      <component name="contactstechview" long-name="Contacts" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/pimapps/contactstechview/group" mrp="app/techview/pimapps/contactstechview/group/techview_contacts.mrp"/>
      </component>
      <component name="contacui" long-name="Contacts UI" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/pimapps/contacui/group" mrp="app/techview/pimapps/contacui/group/techview_contacui.mrp" priority="30"/>
      </component>
     </collection>
     <collection name="securityapps" long-name="Security Apps" level="apps3">
      <component name="secui" long-name="Security UI" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/securityapps/secui/group" mrp="app/techview/securityapps/secui/group/techview_secui.mrp"/>
      </component>
      <component name="securityupstechview" long-name="Security UPS Techview" filter="techview">
      </component>
     </collection>
     <collection name="shortlinkapps" long-name="Shortlink Apps" level="apps1">
      <component name="bluetoothui" long-name="Bluetooth UI" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/shortlinkapps/bluetoothui/group" mrp="app/techview/shortlinkapps/bluetoothui/group/techview_bluetoothui.mrp"/>
      </component>
      <component name="connectui" long-name="Connect UI" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/shortlinkapps/connectui/group" mrp="app/techview/shortlinkapps/connectui/group/techview_connectui.mrp"/>
      </component>
      <component name="techviewusbui" long-name="USB UI" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/shortlinkapps/techviewusbui/group" mrp="app/techview/shortlinkapps/techviewusbui/group/techview_usbui.mrp"/>
      </component>
     </collection>
     <collection name="techviewplat" long-name="Techview Platform" level="services">
      <component name="eikstd" long-name="EIKSTD" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/techviewplat/eikstd/group" mrp="app/techview/techviewplat/eikstd/group/techview_eikstd.mrp" priority="20"/>
      </component>
      <component name="feps" long-name="FEPS" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/techviewplat/feps/group" mrp="app/techview/techviewplat/feps/group/techview_feps.mrp"/>
      </component>
      <component name="techviewuiklaf" long-name="UIKLAF" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/techviewplat/techviewuiklaf/GROUP" mrp="app/techview/techviewplat/techviewuiklaf/GROUP/techview_uiklaf.mrp" priority="10"/>
      </component>
     </collection>
     <collection name="techviewui" long-name="Techview UI" level="ui">
      <component name="techviewextras" long-name="Extras" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/techviewui/techviewextras/group" mrp="app/techview/techviewui/techviewextras/group/techview_extras.mrp"/>
      </component>
      <component name="shell" long-name="Shell" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/techviewui/shell/group" mrp="app/techview/techviewui/shell/group/techview_shell.mrp"/>
      </component>
      <component name="startup" long-name="Startup" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/techviewui/startup/group" mrp="app/techview/techviewui/startup/group/techview_startup.mrp"/>
      </component>
      <component name="statuspane" long-name="Status Pane" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/techviewui/statuspane/group" mrp="app/techview/techviewui/statuspane/group/techview_statuspane.mrp"/>
      </component>
     </collection>
     <collection name="telephonyapps" long-name="Telephony Apps" level="apps1">
      <component name="techviewphoneui" long-name="Phone UI" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/telephonyapps/techviewphoneui/group" mrp="app/techview/telephonyapps/techviewphoneui/group/techview_phoneui.mrp"/>
      </component>
     </collection>
     <collection name="testapps" long-name="Test Apps" level="utils">
@@ -6095,12 +6105,8 @@
      <component name="statdevice" long-name="STAT Device" filter="techview">
      </component>
      <component name="simpleapp" long-name="Simple App" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/testapps/simpleapp/group" mrp="app/techview/testapps/simpleapp/group/Techview_SimpleApp.mrp"/>
      </component>
      <component name="memspy" long-name="MemSpy" filter="techview" introduced="9.2" class="test" purpose="development" license-values="3">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-              <unit bldFile="app/techview/testapps/memspy/group" mrp="app/techview/testapps/memspy/group/graphics_memspy.mrp"/>
      </component>
     </collection>
     <collection name="toolkit" long-name="Toolkit" level="utils">
@@ -6114,24 +6120,16 @@
       <unit version="9.4" mrp="os/deviceplatformrelease/symbianosbld/cedarutils/techview_roms_9.4.mrp"/>
      </component>
      <component name="romkit" long-name="ROM Kit" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/toolkit/romkit/group" mrp="app/techview/toolkit/romkit/group/techview_romkit.mrp"/>
      </component>
     </collection>
     <collection name="utilityapps" long-name="Utility Apps" level="apps2">
      <component name="helptechview" long-name="Help" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/utilityapps/helptechview/group" mrp="app/techview/utilityapps/helptechview/group/techview_help.mrp"/>
      </component>
      <component name="timew" long-name="World Time" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/utilityapps/timew/group" mrp="app/techview/utilityapps/timew/group/techview_timew.mrp"/>
      </component>
     </collection>
     <collection name="avapps" long-name="A/V Apps" level="apps3">
      <component name="techviewaudio" long-name="Audio" filter="techview">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/avapps/techviewaudio/Group" mrp="app/techview/avapps/techviewaudio/Group/techview_audio.mrp"/>
      </component>
     </collection>
     <collection name="buildverification" long-name="Build Verification" level="services">
@@ -6142,12 +6140,8 @@
     </collection>
     <collection name="sysvalidation" long-name="System Validation" level="services">
      <component name="systemtestos" long-name="System Test OS" filter="systemtest">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/sysvalidation/systemtestos/Group" mrp="app/techview/sysvalidation/systemtestos/Group/systemtest_os.mrp"/>
      </component>
      <component name="systemtesttools" long-name="System Test Tools" filter="systemtest">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app/techview/sysvalidation/systemtesttools/Group" mrp="app/techview/sysvalidation/systemtesttools/Group/systemtest_tools.mrp"/>
      </component>
     </collection>
    </block>

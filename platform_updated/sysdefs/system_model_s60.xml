@@ -455,6 +455,14 @@
     </collection>
    </block>
    <block long-name="Locating Services" level="services" name="lbs" levels="hw-if data-acquisition adaptation management application-interface">
+    <!-- Following Collection added by SF via autopopulating script from S60 Model -->
+    <collection name="lbs" long-name="lbs">
+     <!-- Following Component added by SF via autopopulating script from S60 Model -->
+     <component name="lbs" long-name="lbs">
+      <!-- Unit added by SF via autopopulating script from S60 Model -->
+      <unit bldFile="os/lbs/group"/>
+     </component>
+    </collection>
     <collection name="datasourceadaptation" long-name="Data Source Adaptation" level="adaptation">
      <component name="gpsdatasourceadaptation" long-name="GPS Data Source Adaptation" plugin="Y" introduced="tb91">
      </component>
@@ -6453,15 +6461,7 @@
     </collection>
    </block>
    <!-- Following Block added by SF via autopopulating script from S60 Model -->
-   <block long-name="" level="new" name="">
-    <!-- Following Collection added by SF via autopopulating script from S60 Model -->
-    <collection name="lbs" long-name="lbs">
-     <!-- Following Component added by SF via autopopulating script from S60 Model -->
-     <component name="lbs" long-name="lbs">
-      <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/lbs/group"/>
-     </component>
-    </collection>
+   <block long-name="buildplatforms" level="new" name="buildplatforms">
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
     <collection name="buildplatforms" long-name="buildplatforms">
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
