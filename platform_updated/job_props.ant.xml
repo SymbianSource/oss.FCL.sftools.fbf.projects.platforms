@@ -12,7 +12,7 @@
     
     <property name="sf.spec.build.system" value="sbs"/>
     
-    <property name="sf.spec.sbs.config" value="winscw"/> <!-- both _urel and _udeb -->
+    <property name="sf.spec.sbs.config" value="winscw.whatlog"/> <!-- both _urel and _udeb -->
     <property name="sf.spec.sbs.tools.config" value="tools_rel,tools2_rel"/>
     
     <property name="sf.spec.sourcesync.usecache" value="true"/>
@@ -53,7 +53,7 @@
     <property name="sf.spec.dirdelta.enable" value="true"/>
 
     <!-- prefilter raptor logs -->
-    <property name="sf.spec.logs.raptorfilter.enable" value="true"/>
+    <property name="sf.spec.logs.raptorfilter.enable" value="false"/>
     
     <!-- zip all logs before publish -->
     <property name="sf.spec.logs.zip.enable"  value="true"/>
