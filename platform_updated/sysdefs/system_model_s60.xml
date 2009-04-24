@@ -10,7 +10,7 @@
     </collection>
     <collection name="brdbootldr" long-name="Board Boot Loader" level="hw-if">
      <component name="ubootldr" long-name="Boot Loader" introduced="9.2">
-      <unit mrp="os/kernelhwsrv/brdbootldr/ubootldr/base_ubootldr.mrp"/>
+      <unit mrp="os\kernelhwsrv\brdbootldr\ubootldr\base_ubootldr.mrp"/>
      </component>
     </collection>
     <collection name="filesystems" long-name="File Systems" level="framework">
@@ -27,7 +27,7 @@
      <component name="rofs" long-name="ROFS" filter="gt" plugin="Y">
      </component>
      <component name="romfs" long-name="ROM File System" filter="gt" plugin="Y">
-      <unit mrp="os/kernelhwsrv/userlibandfileserver/fileserver/srom/base_f32_srom.mrp"/>
+      <unit mrp="os\kernelhwsrv\userlibandfileserver\fileserver\srom\base_f32_srom.mrp"/>
      </component>
      <component name="usbmsfs" long-name="USB Mass Storage File System" filter="gt" plugin="Y">
      </component>
@@ -36,7 +36,7 @@
      <component name="uiibootsupport" long-name="UniStore2 Boot Support" filter="gt" introduced="9.1">
      </component>
      <component name="uiicore" long-name="UniStore2 Core" filter="gt" introduced="9.1">
-      <unit mrp="os/kernelhwsrv/kernel/eka/drivers/unistore2/base_drivers_unistore2_undeliverable.mrp"/>
+      <unit mrp="os\kernelhwsrv\kernel\eka\drivers\unistore2\base_drivers_unistore2_undeliverable.mrp"/>
      </component>
      <component name="uiicrashlogger" long-name="UniStore2 Crash Logger" filter="gt" introduced="9.1">
      </component>
@@ -86,7 +86,7 @@
      <component name="btrace" long-name="Kernel Trace Tool">
      </component>
      <component name="legacydrivers" long-name="Legacy Drivers">
-      <unit mrp="os/kernelhwsrv/kernel/eka/drivers/adc/base_e32_drivers_adc.mrp"/>
+      <unit mrp="os\kernelhwsrv\kernel\eka\drivers\adc\base_e32_drivers_adc.mrp"/>
      </component>
      <component name="locmedia" long-name="Local Media Subsystem" introduced="8.1b">
       <!-- these are LDDs for storage media -->
@@ -106,7 +106,7 @@
     </collection>
     <collection name="userlibandfileserver" long-name="User Library and File Server" level="framework">
      <component name="basedocs" long-name="Base Documentation">
-      <unit mrp="os/kernelhwsrv/userlibandfileserver/basedocs/base_documentation.mrp"/>
+      <unit mrp="os\kernelhwsrv\userlibandfileserver\basedocs\base_documentation.mrp"/>
      </component>
      <component name="estart" long-name="Base Starter" filter="gt">
      </component>
@@ -176,7 +176,7 @@
      <component name="s60compatibilityheaders" long-name="S60 Compatibility Headers" filter="gt">
      </component>
      <component name="syslibsdocs" long-name="Syslibs Documentation" class="doc">
-      <unit mrp="os/ossrv/genericservices/syslibsdocs/syslibs_documentation.mrp"/>
+      <unit mrp="os\ossrv\genericservices\syslibsdocs\syslibs_documentation.mrp"/>
      </component>
      <component name="systemagent" long-name="System Agent" introduced="9.0">
      </component>
@@ -235,7 +235,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="ossrv" long-name="ossrv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/ossrv/group"/>
+      <unit bldFile="os\ossrv\group"/>
      </component>
     </collection>
    </block>
@@ -269,10 +269,10 @@
      <component name="securitycommonutils" long-name="Security Common Utils" introduced="8.0">
      </component>
      <component name="securitydocs" long-name="Security Documentation">
-      <unit mrp="os/security/cryptomgmtlibs/securitydocs/security_documentation.mrp"/>
+      <unit mrp="os\security\cryptomgmtlibs\securitydocs\security_documentation.mrp"/>
      </component>
      <component name="securitytestfw" long-name="Security Test Framework" introduced="7.0" class="test" deprecated="tb92">
-      <unit mrp="os/security/cryptomgmtlibs/securitytestfw/group/security_testframework.mrp"/>
+      <unit mrp="os\security\cryptomgmtlibs\securitytestfw\group\security_testframework.mrp"/>
      </component>
      <component name="securityutils" long-name="Security Utils" introduced="8.0">
      </component>
@@ -289,7 +289,7 @@
      <component name="filebasedcertificateandkeystores" long-name="File-based Certificate and Key Stores" introduced="8.0">
      </component>
      <component name="rootcertificates" long-name="Root Certificates" introduced="7.0s">
-      <unit mrp="os/security/cryptoservices/rootcertificates/rootcerts.mrp"/>
+      <unit mrp="os\security\cryptoservices\rootcertificates\rootcerts.mrp"/>
      </component>
     </collection>
     <collection name="securityanddataprivacytools" long-name="Security and Data Privacy Tools" level="services">
@@ -450,7 +450,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="devicesrv" long-name="devicesrv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/devicesrv/group"/>
+      <unit bldFile="os\devicesrv\group"/>
      </component>
     </collection>
    </block>
@@ -460,7 +460,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="lbs" long-name="lbs">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/lbs/group"/>
+      <unit bldFile="os\lbs\group"/>
      </component>
     </collection>
     <collection name="datasourceadaptation" long-name="Data Source Adaptation" level="adaptation">
@@ -507,7 +507,7 @@
     </collection>
     <collection name="lbstest" long-name="Locating Services Tests" level="application-interface">
      <component name="lbstestproduct" long-name="LBS Test Product" introduced="9.2" class="test">
-      <unit mrp="os/lbs/lbstest/lbstestproduct/group/lbs_testproduct.mrp"/>
+      <unit mrp="os\lbs\lbstest\lbstestproduct\group\lbs_testproduct.mrp"/>
      </component>
      <component name="locationprotocoltest" long-name="Location Protocol Tests" plugin="Y" introduced="9.2">
      </component>
@@ -534,7 +534,7 @@
     </collection>
     <collection name="commsfwtools" long-name="Comms Framework Tools" level="app-if">
      <component name="commstools" long-name="Comms Tools" introduced="tb91" class="PC">
-      <unit mrp="os/commsfw/commsfwtools/commstools/group/comms-infras_tools.mrp"/>
+      <unit mrp="os\commsfw\commsfwtools\commstools\group\comms-infras_tools.mrp"/>
      </component>
      <component name="installdefaultcommsdatabase" long-name="Install Default Comms Database" class="PC">
      </component>
@@ -545,7 +545,7 @@
      <component name="commsrootserver" long-name="Comms Root Server" introduced="7.0s">
      </component>
      <component name="commsrootserverconfig" long-name="Comms Root Server Config" introduced="9.1" class="config">
-      <unit mrp="os/commsfw/commsprocess/commsrootserverconfig/group/comms-infras_rootserver-config.mrp"/>
+      <unit mrp="os\commsfw\commsprocess\commsrootserverconfig\group\comms-infras_rootserver-config.mrp"/>
      </component>
     </collection>
     <collection name="commsinfrastructureapitest" long-name="Comms-Infras API Tests" level="app-if">
@@ -555,8 +555,8 @@
      <component name="esockserver" long-name="ESock Server">
      </component>
      <component name="esockserverconfig" long-name="ESock Server Config" introduced="9.1" class="config">
-      <unit version="2" mrp="os/commsfw/datacommsserver/esockserver/group/comms-infras_esock-config.mrp"/>
-      <unit version="3" mrp="os/unref/orphan/comgen/comms-infras/esock/group/comms-infras_esock-config.mrp"/>
+      <unit version="2" mrp="os\commsfw\datacommsserver\esockserver\group\comms-infras_esock-config.mrp"/>
+      <unit version="3" mrp="os\unref\orphan\comgen\comms-infras\esock\group\comms-infras_esock-config.mrp"/>
      </component>
      <component name="networkcontroller" long-name="Network Controller" plugin="Y" introduced="7.0s">
      </component>
@@ -573,7 +573,7 @@
      <component name="c32serialserverconfig" long-name="C32 Serial Server Config" introduced="ER5" class="config">
      </component>
      <component name="c32serialserverdocs" long-name="C32 Serial Server Documentation">
-      <unit mrp="os/commsfw/serialserver/c32serialserverdocs/ser-comms_documentation.mrp"/>
+      <unit mrp="os\commsfw\serialserver\c32serialserverdocs\ser-comms_documentation.mrp"/>
      </component>
      <component name="packetloopbackcsy" long-name="Packet Loopback CSY" introduced="8.1" class="test">
      </component>
@@ -583,7 +583,7 @@
     </collection>
     <collection name="commsfw_info" long-name="Comms Framework Info" level="app-if">
      <component name="commsinfrastructuredocs" long-name="Comms Infrastructure Documentation" introduced="7.0" class="doc">
-      <unit mrp="os/commsfw/commsfw_info/commsinfrastructuredocs/comms-infras_documentation.mrp"/>
+      <unit mrp="os\commsfw\commsfw_info\commsinfrastructuredocs\comms-infras_documentation.mrp"/>
      </component>
     </collection>
     <collection name="commsfwsupport" long-name="Comms Framework Support" level="support">
@@ -604,11 +604,11 @@
      <component name="ethernetnif" long-name="Ethernet NIF" plugin="Y">
      </component>
      <component name="ethernetpacketdriver" long-name="Ethernet Packet Driver" plugin="Y" introduced="7.0">
-      <unit mrp="os/networkingsrv/linklayerprotocols/ethernetpacketdriver/group/networking_etherdrv_srconly.mrp"/>
+      <unit mrp="os\networkingsrv\linklayerprotocols\ethernetpacketdriver\group\networking_etherdrv_srconly.mrp"/>
      </component>
      <component name="pppconfig" long-name="PPP Config" introduced="ER5">
-      <unit version="1" mrp="os/networkingsrv/linklayerprotocols/pppnif/group/networking_ppp-config.mrp"/>
-      <unit version="2" mrp="os/unref/orphan/comgen/networking/ppp/group/networking_ppp-config.mrp"/>
+      <unit version="1" mrp="os\networkingsrv\linklayerprotocols\pppnif\group\networking_ppp-config.mrp"/>
+      <unit version="2" mrp="os\unref\orphan\comgen\networking\ppp\group\networking_ppp-config.mrp"/>
      </component>
      <component name="pppnif" long-name="PPP NIF" plugin="Y" introduced="ER5">
      </component>
@@ -635,7 +635,7 @@
      <component name="pfqoslib" long-name="PF QoS Library" introduced="7.0s">
      </component>
      <component name="qosfwconfig" long-name="QoS Framework Config" introduced="7.0s" class="config">
-      <unit mrp="os/networkingsrv/networkcontrol/qosfwconfig/qos/group/networking_qos-config.mrp"/>
+      <unit mrp="os\networkingsrv\networkcontrol\qosfwconfig\qos\group\networking_qos-config.mrp"/>
      </component>
      <component name="qosfwprt" long-name="QoS Framework PRT" plugin="Y" introduced="7.0s">
      </component>
@@ -651,10 +651,10 @@
      </component>
      <component name="mobileip" long-name="Mobile IP" plugin="Y" introduced="8.1">
      </component>
-     <component name="tcpipv4v6prt" long-name="TCP/IPv4/v6 PRT" plugin="Y" introduced="7.0">
+     <component name="tcpipv4v6prt" long-name="tcp\ipv4\v6 PRT" plugin="Y" introduced="7.0">
      </component>
-     <component name="tcpipv4config" long-name="TCP/IPv4/v6 Config" introduced="7.0" class="config">
-      <unit mrp="os/networkingsrv/networkprotocols/tcpipv4v6prt/group/networking_tcpip6-config.mrp"/>
+     <component name="tcpipv4config" long-name="tcp\ipv4\v6 Config" introduced="7.0" class="config">
+      <unit mrp="os\networkingsrv\networkprotocols\tcpipv4v6prt\group\networking_tcpip6-config.mrp"/>
      </component>
     </collection>
     <collection name="networksecurity" long-name="Network Security" level="framework">
@@ -667,23 +667,23 @@
     </collection>
     <collection name="networkingtestandutils" long-name="Networking Test and Utils" level="app-if">
      <component name="exampleinternetutilities" long-name="Example Internet Utilities" introduced="ER5">
-      <unit mrp="os/networkingsrv/networkingtestandutils/exampleinternetutilities/group/networking_inetutil.mrp"/>
+      <unit mrp="os\networkingsrv\networkingtestandutils\exampleinternetutilities\group\networking_inetutil.mrp"/>
      </component>
      <component name="ipanalyzer" long-name="IP Analyzer" introduced="7.0" deprecated="tb92">
-      <unit mrp="os/networkingsrv/networkingtestandutils/ipanalyzer/group/networking_iprotor.mrp"/>
+      <unit mrp="os\networkingsrv\networkingtestandutils\ipanalyzer\group\networking_iprotor.mrp"/>
      </component>
      <component name="ipprobe" long-name="IP Probe" plugin="Y" introduced="7.0s">
-      <unit mrp="os/networkingsrv/networkingtestandutils/ipprobe/group/networking_probe.mrp"/>
+      <unit mrp="os\networkingsrv\networkingtestandutils\ipprobe\group\networking_probe.mrp"/>
      </component>
      <component name="ipv6to4tunnel" long-name="IPv6 to 4 Tunnel" plugin="Y">
-      <unit mrp="os/networkingsrv/networkingtestandutils/ipv6to4tunnel/group/networking_6to4.mrp"/>
+      <unit mrp="os\networkingsrv\networkingtestandutils\ipv6to4tunnel\group\networking_6to4.mrp"/>
      </component>
      <component name="networkingexamples" long-name="Networking Examples" introduced="7.0">
      </component>
      <component name="networkingintegrationtest" long-name="Networking Integration Test" introduced="ER5" class="test">
      </component>
      <component name="networkingunittest" long-name="Networking Unit Test" introduced="7.0" class="test">
-      <unit mrp="os/networkingsrv/networkingtestandutils/networkingunittest/group/networking_unittest.mrp"/>
+      <unit mrp="os\networkingsrv\networkingtestandutils\networkingunittest\group\networking_unittest.mrp"/>
      </component>
     </collection>
     <collection name="pppcompressionplugins" long-name="PPP Compression Plugins" level="plugin">
@@ -696,19 +696,19 @@
     </collection>
     <collection name="networkingsrv_info" long-name="Networking Services Info" level="app-if">
      <component name="networkingdocs" long-name="Networking Documentation" class="doc">
-      <unit mrp="os/networkingsrv/networkingsrv_info/networkingdocs/networking_documentation.mrp"/>
+      <unit mrp="os\networkingsrv\networkingsrv_info\networkingdocs\networking_documentation.mrp"/>
      </component>
      <component name="networkingrom" long-name="Networking ROM">
       <!--  production component: contains the IBY files -->
      </component>
     </collection>
-    <collection name="tcpiputils" long-name="TCP/IP Utilities" level="plugin">
+    <collection name="tcpiputils" long-name="tcp\ip Utilities" level="plugin">
      <component name="dhcp" long-name="DHCP" introduced="8.0">
      </component>
      <component name="dnd" long-name="DND" introduced="7.0">
      </component>
      <component name="dndconfig" long-name="DND Config" introduced="7.0" class="config">
-      <unit mrp="os/networkingsrv/tcpiputils/dnd/group/networking_dnd-config.mrp"/>
+      <unit mrp="os\networkingsrv\tcpiputils\dnd\group\networking_dnd-config.mrp"/>
      </component>
      <component name="networkaddressandporttranslation" long-name="Network Address and Port Translation" plugin="Y" introduced="tb91">
      </component>
@@ -718,7 +718,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="networkingsrv" long-name="networkingsrv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/networkingsrv/group"/>
+      <unit bldFile="os\networkingsrv\group"/>
      </component>
     </collection>
    </block>
@@ -748,7 +748,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="wlan" long-name="wlan">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/wlan/group"/>
+      <unit bldFile="os\wlan\group"/>
      </component>
     </collection>
    </block>
@@ -776,9 +776,9 @@
     <collection name="telephonyprotocols" long-name="Telephony Protocols" level="framework">
      <component name="csdagt" long-name="CSD AGT" plugin="Y" introduced="6.1">
      </component>
-     <component name="gprsumtsqosinterface" long-name="GPRS/UMTS QoS Interface" plugin="Y" introduced="7.0s">
+     <component name="gprsumtsqosinterface" long-name="gprs\umts QoS Interface" plugin="Y" introduced="7.0s">
      </component>
-     <component name="gprsumtsqosprt" long-name="GPRS/UMTS QoS PRT" plugin="Y" introduced="7.0s">
+     <component name="gprsumtsqosprt" long-name="gprs\umts QoS PRT" plugin="Y" introduced="7.0s">
      </component>
      <component name="pdplayer" long-name="PDP Layer" plugin="Y" introduced="tb92">
      </component>
@@ -792,7 +792,7 @@
      </component>
      <component name="secondarypdpcontextumtsdriver" long-name="Secondary PDP context UMTS Driver" introduced="8.1">
      </component>
-     <component name="umtsgprsscpr" long-name="UMTS/GPRS SCPR" plugin="Y" introduced="8.1">
+     <component name="umtsgprsscpr" long-name="umts\gprs SCPR" plugin="Y" introduced="8.1">
      </component>
     </collection>
     <collection name="telephonyreferenceplat" long-name="Telephony Reference Platform" level="plugin"/>
@@ -800,7 +800,7 @@
      <component name="etelcdma" long-name="ETel CDMA" introduced="7.0s">
      </component>
      <component name="etelconfig" long-name="ETel Config">
-      <unit mrp="os/cellularsrv/telephonyserver/etelserverandcore/group/telephony_etel-config.mrp"/>
+      <unit mrp="os\cellularsrv\telephonyserver\etelserverandcore\group\telephony_etel-config.mrp"/>
      </component>
      <component name="etelmultimode" long-name="ETel Multimode" introduced="7.0">
      </component>
@@ -839,10 +839,10 @@
     </collection>
     <collection name="cellularsrv_info" long-name="Cellular Baseband Services Info" level="app-if">
      <component name="telephonyconfidentialdocs" long-name="Telephony Confidential Documentation" class="doc">
-      <unit mrp="os/cellularsrv/cellularsrv_info/telephonyconfidentialdocs/telephony_confidential.mrp"/>
+      <unit mrp="os\cellularsrv\cellularsrv_info\telephonyconfidentialdocs\telephony_confidential.mrp"/>
      </component>
      <component name="telephonydocs" long-name="Telephony Documentation" class="doc">
-      <unit mrp="os/cellularsrv/cellularsrv_info/telephonydocs/telephony_documentation.mrp"/>
+      <unit mrp="os\cellularsrv\cellularsrv_info\telephonydocs\telephony_documentation.mrp"/>
      </component>
     </collection>
     <collection name="commonnetworkinterface" long-name="Common Network Interface" level="hw-if">
@@ -898,7 +898,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="cellularsrv" long-name="cellularsrv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/cellularsrv/group"/>
+      <unit bldFile="os\cellularsrv\group"/>
      </component>
     </collection>
    </block>
@@ -907,10 +907,10 @@
      <component name="btcomm" long-name="Bluetooth CSY" plugin="Y" introduced="6.0">
      </component>
      <component name="btdocs" long-name="Bluetooth Documentation" class="doc">
-      <unit mrp="os/shortlinksrv/bluetooth/btdocs/bluetooth_documentation.mrp"/>
+      <unit mrp="os\shortlinksrv\bluetooth\btdocs\bluetooth_documentation.mrp"/>
      </component>
      <component name="btexample" long-name="Bluetooth Examples and Tests" introduced="6.1" class="test">
-      <unit mrp="os/shortlinksrv/bluetooth/btexample/test/bluetooth_tests_examples.mrp"/>
+      <unit mrp="os\shortlinksrv\bluetooth\btexample\test\bluetooth_tests_examples.mrp"/>
      </component>
      <component name="gavdp" long-name="Bluetooth GAVDP" introduced="8.1">
      </component>
@@ -932,7 +932,7 @@
     </collection>
     <collection name="bluetoothmgmt" long-name="Bluetooth Management" level="plugin">
      <component name="btcommon" long-name="Bluetooth Build Utilities">
-      <unit mrp="os/shortlinksrv/bluetoothmgmt/btcommon/bluetooth_common.mrp"/>
+      <unit mrp="os\shortlinksrv\bluetoothmgmt\btcommon\bluetooth_common.mrp"/>
      </component>
      <component name="bluetoothclientlib" long-name="Bluetooth Client Library" introduced="6.0">
      </component>
@@ -957,12 +957,12 @@
      <component name="irdaconfig" long-name="IrDA Config" introduced="6.0" class="config">
      </component>
      <component name="irdadocs" long-name="IrDA Documentation" class="doc">
-      <unit mrp="os/shortlinksrv/irda/irdadocs/infra-red_documentation.mrp"/>
+      <unit mrp="os\shortlinksrv\irda\irdadocs\infra-red_documentation.mrp"/>
      </component>
      <component name="irdastack" long-name="IrDA Stack">
      </component>
      <component name="irdatest" long-name="IrDA Test" introduced="9.2" class="test">
-      <unit mrp="os/shortlinksrv/irda/irdatest/group/infra-red_irda_test.mrp"/>
+      <unit mrp="os\shortlinksrv\irda\irdatest\group\infra-red_irda_test.mrp"/>
      </component>
     </collection>
     <collection name="usbldd" long-name="Shortlink Logical Device Drivers" level="hw-if">
@@ -971,13 +971,13 @@
     </collection>
     <collection name="usbmgmt" long-name="USB Management" level="server">
      <component name="usbclassandmgrdocs" long-name="USB Class and Manager Documentation" class="doc">
-      <unit mrp="os/shortlinksrv/usbmgmt/usbclassandmgrdocs/usb_documentation.mrp"/>
+      <unit mrp="os\shortlinksrv\usbmgmt\usbclassandmgrdocs\usb_documentation.mrp"/>
      </component>
      <component name="usbmgr" long-name="USB Manager">
      </component>
      <component name="usbmgrtest" long-name="USB Manager Tests" introduced="7.0" class="test">
-      <unit version="1" mrp="os/unref/orphan/comgen/ser-comms/usb_test/group/ser-comms_usb_test.mrp"/>
-      <unit version="2" mrp="os/shortlinksrv/usbmgmt/usbmgrtest/group/usb_test.mrp"/>
+      <unit version="1" mrp="os\unref\orphan\comgen\ser-comms\usb_test\group\ser-comms_usb_test.mrp"/>
+      <unit version="2" mrp="os\shortlinksrv\usbmgmt\usbmgrtest\group\usb_test.mrp"/>
      </component>
     </collection>
     <collection name="usbbsptemplate" long-name="USB BSP Template" level="adaptation"/>
@@ -986,7 +986,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="shortlinksrv" long-name="shortlinksrv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/shortlinksrv/group"/>
+      <unit bldFile="os\shortlinksrv\group"/>
      </component>
     </collection>
    </block>
@@ -995,15 +995,15 @@
      <component name="camerafw" long-name="Camera Framework" introduced="7.0s">
      </component>
      <component name="cameraunittest" long-name="Camera Unit Tests" introduced="9.2" class="test">
-      <unit mrp="os/mm/imagingandcamerafws/cameraunittest/group/multimedia_unittest_ecam_source.mrp"/>
+      <unit mrp="os\mm\imagingandcamerafws\cameraunittest\group\multimedia_unittest_ecam_source.mrp"/>
      </component>
      <component name="imagingfws" long-name="Imaging Frameworks" introduced="7.0s">
      </component>
      <component name="imaginginttest" long-name="Imaging Integration Tests" introduced="7.0s" class="test">
-      <unit mrp="os/mm/imagingandcamerafws/imaginginttest/group/multimedia_inttest_icl_source.mrp"/>
+      <unit mrp="os\mm\imagingandcamerafws\imaginginttest\group\multimedia_inttest_icl_source.mrp"/>
      </component>
      <component name="imagingunittest" long-name="Imaging Unit Tests" introduced="7.0s" class="test">
-      <unit mrp="os/mm/imagingandcamerafws/imagingunittest/group/multimedia_unittest_icl_source.mrp"/>
+      <unit mrp="os\mm\imagingandcamerafws\imagingunittest\group\multimedia_unittest_icl_source.mrp"/>
      </component>
     </collection>
     <collection name="mmapitest" long-name="Multimedia API Tests" level="app-if">
@@ -1012,7 +1012,7 @@
     <collection name="mmdataplane" long-name="Multimedia Data Plane Adaptation" level="hw-if"/>
     <collection name="mmdevicefw" long-name="Multimedia Device Framework" level="device-fw">
      <component name="mdfunittest" long-name="MDF Unit Tests" introduced="9.2" class="test">
-      <unit mrp="os/mm/mmdevicefw/mdfunittest/group/multimedia_unittest_mdf_source.mrp"/>
+      <unit mrp="os\mm\mmdevicefw\mdfunittest\group\multimedia_unittest_mdf_source.mrp"/>
      </component>
      <component name="mdf" long-name="Media Device Framework" introduced="9.2">
      </component>
@@ -1029,7 +1029,7 @@
      <component name="dvbhreceiverhai" long-name="Mobile TV DVB-H Receiver HAI" introduced="tb92">
      </component>
      <component name="dvbhunittest" long-name="Mobile TV DVB-H Unit Tests" introduced="tb92" class="test">
-      <unit mrp="os/mm/mmhais/dvbhunittest/hai/dvbh/group/multimedia_unittest_dvbhhai.mrp"/>
+      <unit mrp="os\mm\mmhais\dvbhunittest\hai\dvbh\group\multimedia_unittest_dvbhhai.mrp"/>
      </component>
      <component name="refacladapt" long-name="Reference ACL Adaptation" introduced="tb92">
      </component>
@@ -1041,7 +1041,7 @@
      <component name="3gplib" long-name="3GP Library" introduced="Future">
      </component>
      <component name="3gpunittest" long-name="3GP Unit Tests" introduced="Future" class="test">
-      <unit mrp="os/mm/mmplugins/3gpunittest/group/multimedia_unittest_3gplibrary_source.mrp"/>
+      <unit mrp="os\mm\mmplugins\3gpunittest\group\multimedia_unittest_3gplibrary_source.mrp"/>
      </component>
      <component name="cameraplugins" long-name="Camera Plugins" plugin="Y" introduced="7.0s">
      </component>
@@ -1055,16 +1055,16 @@
     <collection name="mmswadaptation" long-name="Multimedia Software Adaptation" level="adaptation"/>
     <collection name="mmtestenv" long-name="Multimedia Test Environment" level="device-fw">
      <component name="mmtestagent" long-name="Multimedia Test Agent" introduced="8.0" class="test">
-      <unit mrp="os/mm/mmtestenv/mmtestagent/group/multimediatestagent_source.mrp"/>
+      <unit mrp="os\mm\mmtestenv\mmtestagent\group\multimediatestagent_source.mrp"/>
      </component>
      <component name="mmtestfw" long-name="Multimedia Test Framework" introduced="7.0s" class="test">
-      <unit mrp="os/mm/mmtestenv/mmtestfw/group/multimedia_testframework_source.mrp"/>
+      <unit mrp="os\mm\mmtestenv\mmtestfw\group\multimedia_testframework_source.mrp"/>
      </component>
      <component name="mmtestfwunittest" long-name="Multimedia Test Framework Unit Tests" introduced="7.0s" class="test">
-      <unit mrp="os/mm/mmtestenv/mmtestfwunittest/group/multimedia_unittest_testframework_source.mrp"/>
+      <unit mrp="os\mm\mmtestenv\mmtestfwunittest\group\multimedia_unittest_testframework_source.mrp"/>
      </component>
      <component name="mmtesttools" long-name="Multimedia Test Tools">
-      <unit mrp="os/mm/mmtestenv/mmtesttools/Group/multimedia_testtools_source.mrp"/>
+      <unit mrp="os\mm\mmtestenv\mmtesttools\group\multimedia_testtools_source.mrp"/>
      </component>
     </collection>
     <collection name="omxil" long-name="OpenMAX IL" level="hw-if">
@@ -1075,12 +1075,12 @@
      <component name="a3facf" long-name="A3F Audio Component Framework" introduced="tb92">
      </component>
      <component name="a3fcharacterisationtest" long-name="A3F Characterisation Tests" introduced="tb91" class="test">
-      <unit mrp="os/mm/devsound/a3fcharacterisationtest/group/multimedia_a3f_devsound_char.mrp"/>
+      <unit mrp="os\mm\devsound\a3fcharacterisationtest\group\multimedia_a3f_devsound_char.mrp"/>
      </component>
      <component name="a3fdevsound" long-name="A3F DevSound" introduced="tb92">
      </component>
      <component name="a3fintegrationtest" long-name="A3F Integration Tests" introduced="tb92">
-      <unit mrp="os/mm/devsound/a3fintegrationtest/group/multimedia_inttest_a3f_devsound_source.mrp"/>
+      <unit mrp="os\mm\devsound\a3fintegrationtest\group\multimedia_inttest_a3f_devsound_source.mrp"/>
      </component>
      <component name="a3fsrvstart" long-name="A3F Server Start" plugin="Y" introduced="tb92">
      </component>
@@ -1106,7 +1106,7 @@
     <collection name="devsoundextensions" long-name="Devsound Extensions" level="device-fw">
      <component name="addeddevsoundcontrol" long-name="Added DevSound Control">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/mm/devsoundextensions/addeddevsoundcontrol/Group"/>
+      <unit bldFile="os\mm\devsoundextensions\addeddevsoundcontrol\Group"/>
      </component>
      <component name="audiorouting" long-name="Audio Routing">
      </component>
@@ -1126,7 +1126,7 @@
      </component>
      <component name="mmfdevsoundserverplatsec" long-name="MMF DevSound Server PlatSec">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/mm/devsoundextensions/mmfdevsoundserverplatsec/Group"/>
+      <unit bldFile="os\mm\devsoundextensions\mmfdevsoundserverplatsec\Group"/>
      </component>
      <component name="restrictedaudiooutput" long-name="Restricted Audio Output">
      </component>
@@ -1139,7 +1139,7 @@
     </collection>
     <collection name="mm_info" long-name="Multimedia Info" level="app-if">
      <component name="mmdocs" long-name="Multimedia Documentation">
-      <unit mrp="os/mm/mm_info/mmdocs/multimedia_documentation.mrp"/>
+      <unit mrp="os\mm\mm_info\mmdocs\multimedia_documentation.mrp"/>
      </component>
     </collection>
     <collection name="videoadaptationextensions" long-name="Video Adaptation Extensions" level="adaptation">
@@ -1151,7 +1151,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="mm" long-name="mm">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/mm/group"/>
+      <unit bldFile="os\mm\group"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -1159,32 +1159,32 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="AacEncoderPlugin" long-name="AacEncoderPlugin">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/mm/audio/ARM_CMMF_codecs/AacEncoderPlugin/Group"/>
+      <unit bldFile="os\mm\audio\arm_CMMF_codecs\aacencoderplugin\Group"/>
      </component>
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="AmrNbCodecPlugin" long-name="AmrNbCodecPlugin">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/mm/audio/ARM_CMMF_codecs/AmrNbCodecPlugin/Group"/>
+      <unit bldFile="os\mm\audio\arm_CMMF_codecs\amrnbcodecplugin\Group"/>
      </component>
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="AmrWbCodecPlugin" long-name="AmrWbCodecPlugin">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/mm/audio/ARM_CMMF_codecs/AmrWbCodecPlugin/Group"/>
+      <unit bldFile="os\mm\audio\arm_CMMF_codecs\amrwbcodecplugin\Group"/>
      </component>
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="EAacPlusCodecPlugin" long-name="EAacPlusCodecPlugin">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/mm/audio/ARM_CMMF_codecs/EAacPlusCodecPlugin/Group"/>
+      <unit bldFile="os\mm\audio\arm_CMMF_codecs\eaacpluscodecplugin\Group"/>
      </component>
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="MP3CodecPlugin" long-name="MP3CodecPlugin">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/mm/audio/ARM_CMMF_codecs/MP3CodecPlugin/Group"/>
+      <unit bldFile="os\mm\audio\arm_CMMF_codecs\mp3codecplugin\Group"/>
      </component>
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="WMADecoderPlugin" long-name="WMADecoderPlugin">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/mm/audio/ARM_CMMF_codecs/WMADecoderPlugin/Group"/>
+      <unit bldFile="os\mm\audio\arm_CMMF_codecs\wmadecoderplugin\Group"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -1192,7 +1192,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="ARM_MDF_Decoders" long-name="ARM_MDF_Decoders">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/mm/video/ARM_MDF_Decoders/group"/>
+      <unit bldFile="os\mm\video\arm_MDF_decoders\group"/>
      </component>
     </collection>
    </block>
@@ -1209,12 +1209,12 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="H264AVCVideoEncARM" long-name="H264AVCVideoEncARM">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/imagingext/imagingmodules/H264AVCVideoEncARM/group"/>
+      <unit bldFile="os\imagingext\imagingmodules\h264avcvideoencarm\group"/>
      </component>
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="Build" long-name="Build">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/imagingext/imagingmodules/VideoEncPluginARM/Build"/>
+      <unit bldFile="os\imagingext\imagingmodules\videoencpluginarm\Build"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -1222,7 +1222,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="imagingext" long-name="imagingext">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/imagingext/group"/>
+      <unit bldFile="os\imagingext\group"/>
      </component>
     </collection>
    </block>
@@ -1259,7 +1259,7 @@
     <collection name="graphicsresourceservices" long-name="Graphics Resource Services" level="engines"/>
     <collection name="graphicstest" long-name="Graphics Test" level="app-if">
      <component name="graphicstestharness" long-name="Graphics Test Harness" class="test" introduced="8.1">
-      <unit mrp="os/graphics/graphicstest/graphicstestharness/group/graphics_testharness.mrp"/>
+      <unit mrp="os\graphics\graphicstest\graphicstestharness\group\graphics_testharness.mrp"/>
      </component>
      <component name="uibench" long-name="UI Bench" introduced="9.2" class="test">
      </component>
@@ -1306,7 +1306,7 @@
     </collection>
     <collection name="graphics_info" long-name="Graphics Info" level="app-if">
      <component name="graphicsdocs" long-name="Graphics Documentation" class="doc">
-      <unit mrp="os/graphics/graphics_info/graphicsdocs/graphics_documentation.mrp"/>
+      <unit mrp="os\graphics\graphics_info\graphicsdocs\graphics_documentation.mrp"/>
      </component>
     </collection>
     <collection name="graphicsaccelaration" long-name="Graphics Accelaration" level="adaptation">
@@ -1317,7 +1317,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="graphicsaccelaration" long-name="graphicsaccelaration">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/graphics/graphicsaccelaration/group"/>
+      <unit bldFile="os\graphics\graphicsaccelaration\group"/>
      </component>
     </collection>
     <collection name="m3g" long-name="M3G" level="internal-adaptations">
@@ -1331,7 +1331,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="graphics" long-name="graphics">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/graphics/group"/>
+      <unit bldFile="os\graphics\group"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -1339,7 +1339,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="graphics_pub" long-name="graphics_pub">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/graphics/graphics_pub/group"/>
+      <unit bldFile="os\graphics\graphics_pub\group"/>
      </component>
     </collection>
    </block>
@@ -1396,7 +1396,7 @@
      <component name="texthandling" long-name="Text Handling">
      </component>
      <component name="word" long-name="Word" class="test">
-      <unit mrp="os/textandloc/textrendering/word/group/app-framework_word.mrp"/>
+      <unit mrp="os\textandloc\textrendering\word\group\app-framework_word.mrp"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -1404,7 +1404,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="textandloc" long-name="textandloc">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/textandloc/group"/>
+      <unit bldFile="os\textandloc\group"/>
      </component>
     </collection>
    </block>
@@ -1413,23 +1413,23 @@
      <component name="buildsystemtools" long-name="Build System Tools">
      </component>
      <component name="commonbldutils" long-name="Common Utils">
-      <unit mrp="os/buildtools/bldsystemtools/commonbldutils/tools_utils_common.mrp"/>
+      <unit mrp="os\buildtools\bldsystemtools\commonbldutils\tools_utils_common.mrp"/>
      </component>
      <component name="gttechviewbaseline" long-name="GT Techview Baseline">
-      <unit mrp="os/buildtools/packaging/additionalutils/gt_techview_baseline.mrp"/>
+      <unit mrp="os\buildtools\packaging\additionalutils\gt_techview_baseline.mrp"/>
       <!-- DEF087736 This is needed for generating export tables but shouldn't appear otherwise it is included in techview and gt -->
      </component>
     </collection>
     <collection name="devlib" long-name="Developer Library" level="ui">
      <component name="devlibhtml" long-name="Developer Library HTML">
-      <unit mrp="os/buildtools/devlib/devlibhelp/group/shared/developerlibrary_doc_plain_html.mrp"/>
+      <unit mrp="os\buildtools\devlib\devlibhelp\group\shared\developerlibrary_doc_plain_html.mrp"/>
      </component>
      <component name="devlibhelp" long-name="Developer Library Help">
      </component>
      <component name="devlibsrc" long-name="Developer Library Source" filter="gt">
      </component>
      <component name="toolsdocs" long-name="Tools Documentation">
-      <unit mrp="os/buildtools/devlib/toolsdocs/tools_documentation.mrp"/>
+      <unit mrp="os\buildtools\devlib\toolsdocs\tools_documentation.mrp"/>
      </component>
     </collection>
     <collection name="fileconv" long-name="File Converters" level="mw">
@@ -1448,7 +1448,7 @@
      <component name="autotest" long-name="Autotest">
      </component>
      <component name="additionalredistribution" long-name="Additional Redistribution">
-      <unit mrp="os/buildtools/perltoolsplat_os/redistribution/additional_tools.mrp"/>
+      <unit mrp="os\buildtools\perltoolsplat_os\redistribution\additional_tools.mrp"/>
      </component>
      <component name="burtestserver" long-name="BUR Test Server">
      </component>
@@ -1459,22 +1459,22 @@
      <component name="cdb" long-name="Code Database">
      </component>
      <component name="ctsfunctionalitycheckers" long-name="CTS Functionality Checkers">
-      <unit mrp="os/buildtools/toolsandutils/ctsfunctionalitycheckers/Group/testtools_cts_functionalitycheckers.mrp"/>
+      <unit mrp="os\buildtools\toolsandutils\ctsfunctionalitycheckers\group\testtools_cts_functionalitycheckers.mrp"/>
      </component>
      <component name="e32tools" long-name="E32 Tools" class="PC" deprecated="tb91">
      </component>
      <component name="kitcomparator" long-name="Kit Comparator">
      </component>
      <component name="kitsetupapp" long-name="Kit Setup App" filter="gt">
-      <unit mrp="os/buildtools/toolsandutils/kitsetupapp/group/tools_devkits_kitsetupapp.mrp"/>
+      <unit mrp="os\buildtools\toolsandutils\kitsetupapp\group\tools_devkits_kitsetupapp.mrp"/>
      </component>
      <component name="navigationpages" long-name="Navigation Pages">
-      <unit mrp="os/buildtools/toolsandutils/navigationpages/tools_sdk_eng_NavigationPages.mrp"/>
+      <unit mrp="os\buildtools\toolsandutils\navigationpages\tools_sdk_eng_NavigationPages.mrp"/>
      </component>
      <component name="productinstaller" long-name="Product Installer" filter="gt">
      </component>
      <component name="productionbldtools" long-name="Production Build Tools" filter="gt">
-      <unit mrp="os/buildtools/toolsandutils/productionbldtools/product_tools.mrp"/>
+      <unit mrp="os\buildtools\toolsandutils\productionbldtools\product_tools.mrp"/>
      </component>
      <component name="statdesktop" long-name="STAT Desktop" filter="gt">
      </component>
@@ -1485,7 +1485,7 @@
      <component name="statapi" long-name="STAT API" filter="gt">
      </component>
      <component name="statsource" long-name="STAT Source" filter="gt">
-      <unit mrp="os/buildtools/toolsandutils/statsource/group/testtools_stat_common_source.mrp"/>
+      <unit mrp="os\buildtools\toolsandutils\statsource\group\testtools_stat_common_source.mrp"/>
      </component>
      <component name="testconfigfileparser" long-name="Test Config File Parser">
      </component>
@@ -1496,10 +1496,10 @@
      <component name="usecasecontroller" long-name="Use Case Controller">
      </component>
      <component name="wincredistribution" long-name="WinC Redistribution">
-      <unit mrp="os/buildtools/dist_os/redistributionwinceka2/tools_redistribution_winc.mrp"/>
+      <unit mrp="os\buildtools\dist_os\redistributionwinceka2\tools_redistribution_winc.mrp"/>
      </component>
      <component name="wintunnel" long-name="Wintunnel">
-      <unit mrp="os/buildtools/toolsandutils/wintunnel/group/testtools_WinTunnel_srconly.mrp"/>
+      <unit mrp="os\buildtools\toolsandutils\wintunnel\group\testtools_WinTunnel_srconly.mrp"/>
      </component>
     </collection>
     <collection name="binanamdw_os" long-name="Binary Analysis Middleware" level="fw">
@@ -1578,7 +1578,7 @@
     </collection>
     <collection name="packaging" long-name="Packaging" level="ui">
      <component name="additionalutils" long-name="Additional Utils">
-      <unit mrp="os/buildtools/packaging/additionalutils/additional_unknown_cedar.mrp"/>
+      <unit mrp="os\buildtools\packaging\additionalutils\additional_unknown_cedar.mrp"/>
      </component>
      <component name="dummy" long-name="Dummy">
      </component>
@@ -1595,7 +1595,7 @@
      <component name="bldtools" long-name="Build Tools" filter="gt">
      </component>
      <component name="e32toolp" long-name="E32 Perl Tools" class="PC">
-      <unit mrp="os/buildtools/sbsv1_os/e32toolp/group/tools_e32toolp.mrp"/>
+      <unit mrp="os\buildtools\sbsv1_os\e32toolp\group\tools_e32toolp.mrp"/>
      </component>
     </collection>
     <collection name="srcanamdw_os" long-name="Source Analysis Middleware" level="fw">
@@ -1643,7 +1643,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="xmlsrv" long-name="xmlsrv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/xmlsrv/group"/>
+      <unit bldFile="os\xmlsrv\group"/>
      </component>
     </collection>
    </block>
@@ -1654,7 +1654,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="S60Extras" long-name="S60Extras">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/deviceplatformrelease/S60Extras/group"/>
+      <unit bldFile="os\deviceplatformrelease\s60extras\group"/>
      </component>
     </collection>
     <collection name="S60Helps" long-name="S60 Helps" level="mid">
@@ -1663,7 +1663,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="S60Helps" long-name="S60Helps">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/deviceplatformrelease/S60Helps/Group"/>
+      <unit bldFile="os\deviceplatformrelease\s60helps\group"/>
      </component>
     </collection>
     <collection name="S60LocFiles" long-name="S60 Loc Files" level="mid">
@@ -1672,7 +1672,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="S60LocFiles" long-name="S60LocFiles">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/deviceplatformrelease/S60LocFiles/group"/>
+      <unit bldFile="os\deviceplatformrelease\s60locfiles\group"/>
      </component>
     </collection>
     <collection name="Version" long-name="Version" level="top">
@@ -1681,20 +1681,20 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="Version" long-name="Version">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="os/deviceplatformrelease/Version/group"/>
+      <unit bldFile="os\deviceplatformrelease\version\group"/>
      </component>
     </collection>
     <collection name="foundation_system" long-name="Foundation System" level="top">
      <component name="systemdocs" long-name="System Documentation" class="doc">
-      <unit mrp="os/deviceplatformrelease/foundation_system/systemdocs/group/system.mrp"/>
+      <unit mrp="os\deviceplatformrelease\foundation_system\systemdocs\group\system.mrp"/>
      </component>
     </collection>
     <collection name="symbianosbld" long-name="Symbian OS Build" level="bld">
      <component name="cedarutils" long-name="Cedar Utils">
-      <unit mrp="os/deviceplatformrelease/symbianosbld/cedarutils/tools_utils_cedar.mrp"/>
+      <unit mrp="os\deviceplatformrelease\symbianosbld\cedarutils\tools_utils_cedar.mrp"/>
      </component>
      <component name="productionbldcbrconfig" long-name="Production Build CBR Config" filter="gt">
-      <unit mrp="os/deviceplatformrelease/symbianosbld/productionbldcbrconfig/product_cbr_config.mrp"/>
+      <unit mrp="os\deviceplatformrelease\symbianosbld\productionbldcbrconfig\product_cbr_config.mrp"/>
      </component>
     </collection>
    </block>
@@ -1746,7 +1746,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="osrndtools" long-name="osrndtools">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="ostools/osrndtools/group"/>
+      <unit bldFile="ostools\osrndtools\group"/>
      </component>
     </collection>
    </block>
@@ -1760,7 +1760,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="swconfigtools" long-name="swconfigtools">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="tools/swconfigtools/group"/>
+      <unit bldFile="tools\swconfigtools\group"/>
      </component>
     </collection>
    </block>
@@ -1771,7 +1771,7 @@
      <component name="apparchitecture" long-name="Application Architecture">
      </component>
      <component name="uiftestfw" long-name="UIF Test Framework" class="test" introduced="9.2">
-      <unit mrp="mw/appsupport/appfw/uiftestfw/group/app-framework_testframework.mrp"/>
+      <unit mrp="mw\appsupport\appfw\uiftestfw\group\app-framework_testframework.mrp"/>
      </component>
      <component name="viewserver" long-name="View Server" introduced="6.0">
      </component>
@@ -1783,13 +1783,13 @@
      <component name="alarmservertest" long-name="Alarm Server Test" introduced="8.1" class="test" deprecated="tb92">
      </component>
      <component name="appservicesdocs" long-name="Application Services Documentation" class="doc">
-      <unit mrp="mw/appsupport/commonappservices/appservicesdocs/app-services_documentation.mrp"/>
+      <unit mrp="mw\appsupport\commonappservices\appservicesdocs\app-services_documentation.mrp"/>
      </component>
      <component name="backuprestorenotification" long-name="Backup Restore Notification" introduced="8.1">
      </component>
      <component name="coreappstest" long-name="Core Apps Test" introduced="8.1" class="test">
-      <!-- XML Previous Location: Application Services/Other Application Services/ -->
-      <unit mrp="mw/appsupport/commonappservices/coreappstest/Group/app-services_CoreAppsTest.mrp"/>
+      <!-- XML Previous Location: Application services\other Application Services/ -->
+      <unit mrp="mw\appsupport\commonappservices\coreappstest\group\app-services_CoreAppsTest.mrp"/>
      </component>
     </collection>
     <collection name="contenthandling" long-name="Content Handling" level="plugin">
@@ -1930,7 +1930,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="appsupport" long-name="appsupport">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/appsupport/group"/>
+      <unit bldFile="mw\appsupport\group"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -1938,12 +1938,12 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="flash_mmi_service_interface_custom_api" long-name="flash_mmi_service_interface_custom_api">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/appsupport/appsupport_plat/flash_mmi_service_interface_custom_api/group"/>
+      <unit bldFile="mw\appsupport\appsupport_plat\flash_mmi_service_interface_custom_api\group"/>
      </component>
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="flash_netscape_plugin_command_api" long-name="flash_netscape_plugin_command_api">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/appsupport/appsupport_plat/flash_netscape_plugin_command_api/group"/>
+      <unit bldFile="mw\appsupport\appsupport_plat\flash_netscape_plugin_command_api\group"/>
      </component>
     </collection>
    </block>
@@ -1994,7 +1994,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="Certificates_OEM" long-name="Certificates_OEM">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/securitysrv/pkiutilities/Certificates_OEM/group"/>
+      <unit bldFile="mw\securitysrv\pkiutilities\certificates_oem\group"/>
      </component>
     </collection>
     <collection name="remotelock" long-name="Remote Lock" level="server">
@@ -2034,7 +2034,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="securitysrv" long-name="securitysrv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/securitysrv/group"/>
+      <unit bldFile="mw\securitysrv\group"/>
      </component>
     </collection>
    </block>
@@ -2076,7 +2076,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="drm" long-name="drm">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/drm/group"/>
+      <unit bldFile="mw\drm\group"/>
      </component>
     </collection>
    </block>
@@ -2102,7 +2102,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="accesssec" long-name="accesssec">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/accesssec/group"/>
+      <unit bldFile="mw\accesssec\group"/>
      </component>
     </collection>
    </block>
@@ -2156,7 +2156,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="locationsrv" long-name="locationsrv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/locationsrv/group"/>
+      <unit bldFile="mw\locationsrv\group"/>
      </component>
     </collection>
    </block>
@@ -2216,7 +2216,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="ipconnmgmt" long-name="ipconnmgmt">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/ipconnmgmt/group"/>
+      <unit bldFile="mw\ipconnmgmt\group"/>
      </component>
     </collection>
    </block>
@@ -2274,7 +2274,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="netprotocols" long-name="netprotocols">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/netprotocols/group"/>
+      <unit bldFile="mw\netprotocols\group"/>
      </component>
     </collection>
    </block>
@@ -2323,7 +2323,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="ipappprotocols" long-name="ipappprotocols">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/ipappprotocols/group"/>
+      <unit bldFile="mw\ipappprotocols\group"/>
      </component>
     </collection>
    </block>
@@ -2369,7 +2369,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="wirelessacc" long-name="wirelessacc">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/wirelessacc/group"/>
+      <unit bldFile="mw\wirelessacc\group"/>
      </component>
     </collection>
    </block>
@@ -2561,7 +2561,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="ipappsrv" long-name="ipappsrv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/ipappsrv/group"/>
+      <unit bldFile="mw\ipappsrv\group"/>
      </component>
     </collection>
    </block>
@@ -2600,7 +2600,7 @@
      <component name="networkhandlingengine" long-name="Network Handling Engine">
      </component>
     </collection>
-    <collection name="phoneclientserver" long-name="Phone Client/Server" level="server">
+    <collection name="phoneclientserver" long-name="Phone client\server" level="server">
      <component name="CallUI" long-name="Call UI">
      </component>
      <component name="EnPolicy" long-name="En Policy">
@@ -2637,7 +2637,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="phonesrv" long-name="phonesrv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/phonesrv/group"/>
+      <unit bldFile="mw\phonesrv\group"/>
      </component>
     </collection>
    </block>
@@ -2654,16 +2654,16 @@
      <component name="msgconf" long-name="Messaging Config" introduced="tb91" class="config">
      </component>
      <component name="msgtest" long-name="Messaging Test">
-      <!-- XML Previous Location: Application Services/Messaging Application Support/ -->
+      <!-- XML Previous Location: Application services\messaging Application Support/ -->
      </component>
      <component name="msgtestfw" long-name="Messaging Test Framework" deprecated="tb92">
-      <unit mrp="mw/messagingmw/messagingfw/msgtestfw/group/messaging_testframework.mrp"/>
+      <unit mrp="mw\messagingmw\messagingfw\msgtestfw\group\messaging_testframework.mrp"/>
      </component>
      <component name="msgtestproduct" long-name="Messaging Test Product">
-      <unit mrp="mw/messagingmw/messagingfw/msgtestproduct/group/messaging_testproduct.mrp"/>
+      <unit mrp="mw\messagingmw\messagingfw\msgtestproduct\group\messaging_testproduct.mrp"/>
      </component>
      <component name="msgtests" long-name="Messaging Tests">
-      <unit mrp="mw/messagingmw/messagingfw/msgtests/group/messaging.mrp"/>
+      <unit mrp="mw\messagingmw\messagingfw\msgtests\group\messaging.mrp"/>
      </component>
      <component name="suplsmshandler" long-name="SUPL SMS Handler" plugin="Y" introduced="tb92">
      </component>
@@ -2691,7 +2691,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="messagingmw" long-name="messagingmw">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/messagingmw/group"/>
+      <unit bldFile="mw\messagingmw\group"/>
      </component>
     </collection>
    </block>
@@ -2727,7 +2727,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="imsrv" long-name="imsrv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/imsrv/group"/>
+      <unit bldFile="mw\imsrv\group"/>
      </component>
     </collection>
    </block>
@@ -2787,7 +2787,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="legacypresence" long-name="legacypresence">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/legacypresence/group"/>
+      <unit bldFile="mw\legacypresence\group"/>
      </component>
     </collection>
    </block>
@@ -2801,7 +2801,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="opensrv" long-name="opensrv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/opensrv/group"/>
+      <unit bldFile="mw\opensrv\group"/>
      </component>
     </collection>
    </block>
@@ -2875,7 +2875,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="remotemgmt" long-name="remotemgmt">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/remotemgmt/group"/>
+      <unit bldFile="mw\remotemgmt\group"/>
      </component>
     </collection>
    </block>
@@ -2901,7 +2901,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="networkingdm" long-name="networkingdm">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/networkingdm/group"/>
+      <unit bldFile="mw\networkingdm\group"/>
      </component>
     </collection>
    </block>
@@ -2929,7 +2929,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="remotestorage" long-name="remotestorage">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/remotestorage/group"/>
+      <unit bldFile="mw\remotestorage\group"/>
      </component>
     </collection>
    </block>
@@ -2938,10 +2938,10 @@
      <component name="chatscripts" long-name="Chat Scripts">
      </component>
      <component name="connectqi" long-name="ConnectQI" introduced="9.1" class="PC">
-      <unit mrp="mw/remoteconn/connectivitypcside/connectqi/connectqisdk_mr3.mrp"/>
+      <unit mrp="mw\remoteconn\connectivitypcside\connectqi\connectqisdk_mr3.mrp"/>
      </component>
      <component name="connectqisdk" long-name="ConnectQI SDK" introduced="9.1" class="PC">
-      <unit mrp="mw/remoteconn/connectivitypcside/connectqisdk/connectqisdk_public.mrp"/>
+      <unit mrp="mw\remoteconn\connectivitypcside\connectqisdk\connectqisdk_public.mrp"/>
      </component>
     </collection>
     <collection name="connectivitytransports" long-name="Connectivity Transports" level="plugin">
@@ -2985,7 +2985,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="remoteconn" long-name="remoteconn">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/remoteconn/group"/>
+      <unit bldFile="mw\remoteconn\group"/>
      </component>
     </collection>
    </block>
@@ -3001,18 +3001,18 @@
      <component name="contentmanager" long-name="Content Manager">
      </component>
     </collection>
-    <collection name="upnpavcontroller" long-name="UPnP A/V Controller" level="server">
-     <component name="upnpavcontrollerclient" long-name="UPnP A/V Ccontroller Client">
+    <collection name="upnpavcontroller" long-name="UPnP a\v Controller" level="server">
+     <component name="upnpavcontrollerclient" long-name="UPnP a\v Ccontroller Client">
      </component>
-     <component name="upnpavcontrollerhelper" long-name="UPnP A/V Controller Helper">
+     <component name="upnpavcontrollerhelper" long-name="UPnP a\v Controller Helper">
      </component>
-     <component name="upnpavcontrollerserver" long-name="UPnP A/V Controller Server">
+     <component name="upnpavcontrollerserver" long-name="UPnP a\v Controller Server">
      </component>
      <component name="upnpxmlparser" long-name="UPnP XML Parser">
      </component>
     </collection>
-    <collection name="upnpavcontrolpoint" long-name="UPnP A/V Control Point" level="plugin">
-     <component name="avcontrolframework" long-name="A/V Control Famework">
+    <collection name="upnpavcontrolpoint" long-name="UPnP a\v Control Point" level="plugin">
+     <component name="avcontrolframework" long-name="a\v Control Famework">
      </component>
      <component name="avcpengine" long-name="AVCP Engine">
      </component>
@@ -3050,7 +3050,7 @@
      </component>
     </collection>
     <collection name="upnpmediaserver" long-name="UPnP Media Server" level="server">
-     <component name="avobjects" long-name="A/V Objects">
+     <component name="avobjects" long-name="a\v Objects">
      </component>
      <component name="connectionmanagerservice" long-name="Connection Manager Service">
      </component>
@@ -3112,7 +3112,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="dlnasrv" long-name="dlnasrv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/dlnasrv/group"/>
+      <unit bldFile="mw\dlnasrv\group"/>
      </component>
     </collection>
    </block>
@@ -3186,7 +3186,7 @@
      </component>
      <component name="usbosdescriptorhandler" long-name="USB Os Descriptor Handler">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/shortlinkconn/usbclasses/usbosdescriptorhandler/group"/>
+      <unit bldFile="mw\shortlinkconn\usbclasses\usbosdescriptorhandler\group"/>
      </component>
     </collection>
     <collection name="usbengines" long-name="USB Engines" level="generic">
@@ -3214,7 +3214,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="shortlinkconn" long-name="shortlinkconn">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/shortlinkconn/group"/>
+      <unit bldFile="mw\shortlinkconn\group"/>
      </component>
     </collection>
    </block>
@@ -3242,7 +3242,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="imghandling" long-name="imghandling">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/imghandling/group"/>
+      <unit bldFile="mw\imghandling\group"/>
      </component>
     </collection>
    </block>
@@ -3278,7 +3278,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="metadatasrv" long-name="metadatasrv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/metadatasrv/group"/>
+      <unit bldFile="mw\metadatasrv\group"/>
      </component>
     </collection>
    </block>
@@ -3334,7 +3334,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="mds" long-name="mds">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/mds/group"/>
+      <unit bldFile="mw\mds\group"/>
      </component>
     </collection>
    </block>
@@ -3386,7 +3386,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="mmuifw" long-name="mmuifw">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/mmuifw/group"/>
+      <unit bldFile="mw\mmuifw\group"/>
      </component>
     </collection>
    </block>
@@ -3414,7 +3414,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="videoutils" long-name="videoutils">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/videoutils/group"/>
+      <unit bldFile="mw\videoutils\group"/>
      </component>
     </collection>
    </block>
@@ -3423,10 +3423,10 @@
      <component name="mmfcharacterisationvalidation" long-name="MMF Characterisation Validation" introduced="9.3" class="test">
      </component>
      <component name="mmfintegrationtest" long-name="MMF Integration Tests" introduced="7.0s" class="test">
-      <unit mrp="mw/mmmw/mmfwtest/mmfintegrationtest/group/multimedia_inttest_mmf_source.mrp"/>
+      <unit mrp="mw\mmmw\mmfwtest\mmfintegrationtest\group\multimedia_inttest_mmf_source.mrp"/>
      </component>
      <component name="mmfunittest" long-name="MMF Unit Tests" introduced="7.0s" class="test">
-      <unit mrp="mw/mmmw/mmfwtest/mmfunittest/group/multimedia_unittest_mmf_source.mrp"/>
+      <unit mrp="mw\mmmw\mmfwtest\mmfunittest\group\multimedia_unittest_mmf_source.mrp"/>
      </component>
     </collection>
     <collection name="mmmiddlewarefws" long-name="Multimedia Middleware Frameworks" level="server">
@@ -3441,7 +3441,7 @@
     </collection>
     <collection name="mmvalidationsuite" long-name="Multimedia Validation Suite" level="specific">
      <component name="mvsintegrationtest" long-name="MVS Integration Tests" introduced="tb91" class="test">
-      <unit mrp="mw/mmmw/mmvalidationsuite/mvsintegrationtest/group/multimedia_inttest_mvs_source.mrp"/>
+      <unit mrp="mw\mmmw\mmvalidationsuite\mvsintegrationtest\group\multimedia_inttest_mvs_source.mrp"/>
      </component>
      <component name="mmvalidationsuiteagents" long-name="Multimedia Validation Suite Agents" introduced="tb91">
      </component>
@@ -3498,7 +3498,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="mtp" long-name="mtp">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/mmmw/mtp/group"/>
+      <unit bldFile="mw\mmmw\mtp\group"/>
      </component>
     </collection>
     <collection name="radioutility" long-name="Radio Utility" level="generic">
@@ -3518,7 +3518,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="mmmw" long-name="mmmw">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/mmmw/group"/>
+      <unit bldFile="mw\mmmw\group"/>
      </component>
     </collection>
    </block>
@@ -3530,7 +3530,7 @@
      </component>
      <component name="src" long-name="Src">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/helix/helix_ren/src/group"/>
+      <unit bldFile="mw\helix\helix_ren\src\group"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -3538,7 +3538,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="helix" long-name="helix">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/helix/group"/>
+      <unit bldFile="mw\helix\group"/>
      </component>
     </collection>
    </block>
@@ -3568,7 +3568,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="camerasrv" long-name="camerasrv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/camerasrv/group"/>
+      <unit bldFile="mw\camerasrv\group"/>
      </component>
     </collection>
    </block>
@@ -3602,7 +3602,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="mmappfw" long-name="mmappfw">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/mmappfw/group"/>
+      <unit bldFile="mw\mmappfw\group"/>
      </component>
     </collection>
    </block>
@@ -3674,7 +3674,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="inputmethods" long-name="inputmethods">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/inputmethods/group"/>
+      <unit bldFile="mw\inputmethods\group"/>
      </component>
     </collection>
    </block>
@@ -3685,7 +3685,7 @@
      <component name="grid" long-name="Grid">
      </component>
      <component name="uifwsdocs" long-name="UI Frameworks Documentation" class="doc">
-      <unit mrp="mw/classicui/commonuisupport/uifwsdocs/app-framework_documentation.mrp"/>
+      <unit mrp="mw\classicui\commonuisupport\uifwsdocs\app-framework_documentation.mrp"/>
      </component>
      <component name="uilaf" long-name="UI Look and Feel" introduced="6.0">
      </component>
@@ -3751,7 +3751,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="classicui" long-name="classicui">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/classicui/group"/>
+      <unit bldFile="mw\classicui\group"/>
      </component>
     </collection>
    </block>
@@ -3769,7 +3769,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="svgt" long-name="svgt">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/svgt/group"/>
+      <unit bldFile="mw\svgt\group"/>
      </component>
     </collection>
    </block>
@@ -3791,7 +3791,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="uiaccelerator" long-name="uiaccelerator">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/uiaccelerator/group"/>
+      <unit bldFile="mw\uiaccelerator\group"/>
      </component>
     </collection>
    </block>
@@ -3859,7 +3859,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="uiresources" long-name="uiresources">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/uiresources/group"/>
+      <unit bldFile="mw\uiresources\group"/>
      </component>
     </collection>
    </block>
@@ -3933,7 +3933,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="homescreensrv" long-name="homescreensrv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/homescreensrv/group"/>
+      <unit bldFile="mw\homescreensrv\group"/>
      </component>
     </collection>
    </block>
@@ -3952,7 +3952,7 @@
      <component name="makekeys" long-name="MakeKeys" filter="gt" introduced="6.0" class="PC">
      </component>
      <component name="openssllib" long-name="OpenSSL Library" class="PC">
-      <unit mrp="mw/appinstall/secureswitools/openssllib/security_openssl.mrp"/>
+      <unit mrp="mw\appinstall\secureswitools\openssllib\security_openssl.mrp"/>
      </component>
      <component name="swianalysistoolkit" long-name="SWI Analysis Toolkit" class="PC">
      </component>
@@ -3980,7 +3980,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="appinstall" long-name="appinstall">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/appinstall/group"/>
+      <unit bldFile="mw\appinstall\group"/>
      </component>
     </collection>
    </block>
@@ -4002,7 +4002,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="serviceapifw" long-name="serviceapifw">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/serviceapifw/group"/>
+      <unit bldFile="mw\serviceapifw\group"/>
      </component>
     </collection>
    </block>
@@ -4072,7 +4072,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="serviceapi" long-name="serviceapi">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/serviceapi/group"/>
+      <unit bldFile="mw\serviceapi\group"/>
      </component>
     </collection>
    </block>
@@ -4168,7 +4168,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="web" long-name="web">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/web/group"/>
+      <unit bldFile="mw\web\group"/>
      </component>
     </collection>
    </block>
@@ -4232,7 +4232,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="websrv" long-name="websrv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/websrv/group"/>
+      <unit bldFile="mw\websrv\group"/>
      </component>
     </collection>
    </block>
@@ -4250,7 +4250,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="conntools" long-name="conntools">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/conntools/group"/>
+      <unit bldFile="app\conntools\group"/>
      </component>
     </collection>
    </block>
@@ -4266,7 +4266,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="platformtools" long-name="platformtools">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="tools/platformtools/group"/>
+      <unit bldFile="tools\platformtools\group"/>
      </component>
     </collection>
    </block>
@@ -4296,7 +4296,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="uitools" long-name="uitools">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/uitools/group"/>
+      <unit bldFile="mw\uitools\group"/>
      </component>
     </collection>
    </block>
@@ -4374,7 +4374,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="location" long-name="location">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/location/group"/>
+      <unit bldFile="app\location\group"/>
      </component>
     </collection>
    </block>
@@ -4412,7 +4412,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="mmsharinguis" long-name="mmsharinguis">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/mmsharinguis/group"/>
+      <unit bldFile="app\mmsharinguis\group"/>
      </component>
     </collection>
    </block>
@@ -4478,7 +4478,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="phone" long-name="phone">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/phone/group"/>
+      <unit bldFile="app\phone\group"/>
      </component>
     </collection>
    </block>
@@ -4486,7 +4486,7 @@
     <collection name="packetvideoengine" long-name="Packetvideo Engine" level="engine">
      <component name="PacketVideoEngineBinaries" long-name="Packet Video Engine Binaries">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/videotelephony/packetvideoengine/PacketVideoEngineBinaries/group"/>
+      <unit bldFile="app\videotelephony\packetvideoengine\packetvideoenginebinaries\group"/>
      </component>
     </collection>
     <collection name="packetvideoplugins" long-name="Packetvideo Plugins" level="plugin">
@@ -4510,7 +4510,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="videotelephony" long-name="videotelephony">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/videotelephony/group"/>
+      <unit bldFile="app\videotelephony\group"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -4518,7 +4518,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="vtprotocols" long-name="vtprotocols">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/videotelephony/vtprotocols/group"/>
+      <unit bldFile="app\videotelephony\vtprotocols\group"/>
      </component>
     </collection>
    </block>
@@ -4570,7 +4570,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="poc" long-name="poc">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/poc/group"/>
+      <unit bldFile="app\poc\group"/>
      </component>
     </collection>
    </block>
@@ -4622,7 +4622,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="iptelephony" long-name="iptelephony">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/iptelephony/group"/>
+      <unit bldFile="app\iptelephony\group"/>
      </component>
     </collection>
    </block>
@@ -4646,7 +4646,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="settingsuis" long-name="settingsuis">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/settingsuis/group"/>
+      <unit bldFile="app\settingsuis\group"/>
      </component>
     </collection>
    </block>
@@ -4674,7 +4674,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="contentcontrol" long-name="contentcontrol">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/contentcontrol/group"/>
+      <unit bldFile="app\contentcontrol\group"/>
      </component>
     </collection>
    </block>
@@ -4708,7 +4708,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="devicecontrol" long-name="devicecontrol">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/devicecontrol/group"/>
+      <unit bldFile="app\devicecontrol\group"/>
      </component>
     </collection>
    </block>
@@ -4782,7 +4782,7 @@
     <collection name="PCSync" long-name="PC Sync" level="pcsuite-control">
      <component name="PCSyncNgr" long-name="PC Sync Ngr" Application="PC Sync 2" Modules="S60_PCS2_ngr">
      </component>
-     <component name="PCSyncApp" License="Other/prorietary">
+     <component name="PCSyncApp" License="other\prorietary">
      </component>
     </collection>
     <collection name="PhoneBrowser" long-name="Phone Browser" level="pcsuite">
@@ -4890,7 +4890,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="files" long-name="files">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/files/group"/>
+      <unit bldFile="app\files\group"/>
      </component>
     </collection>
    </block>
@@ -4968,14 +4968,14 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="contacts" long-name="contacts">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/contacts/group"/>
+      <unit bldFile="app\contacts\group"/>
      </component>
     </collection>
    </block>
    <block long-name="Organizer Application Suite" level="apps" span="2" name="organizer" levels="support services engine ui">
     <collection name="officeappeng" long-name="Office App Engines" level="engine">
      <component name="charteng" long-name="Chart" introduced="5.0" deprecated="9.3" class="test">
-      <unit mrp="app/organizer/officeappeng/charteng/group/app-engines_chart.mrp"/>
+      <unit mrp="app\organizer\officeappeng\charteng\group\app-engines_chart.mrp"/>
      </component>
      <component name="datamodel" long-name="Data Engine" introduced="5.0" deprecated="9.3">
      </component>
@@ -4992,7 +4992,7 @@
      <component name="calendarvcalplugin" long-name="Calendar vCal Plugin" plugin="Y" introduced="8.1">
      </component>
      <component name="appenginesdocs" long-name="Application Engines Documentation" class="doc">
-      <unit mrp="app/organizer/pimappservices/appenginesdocs/app-engines_documentation.mrp"/>
+      <unit mrp="app\organizer\pimappservices\appenginesdocs\app-engines_documentation.mrp"/>
      </component>
      <component name="calendar" long-name="Calendar" introduced="9.2">
      </component>
@@ -5100,7 +5100,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="organizer" long-name="organizer">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/organizer/group"/>
+      <unit bldFile="app\organizer\group"/>
      </component>
     </collection>
    </block>
@@ -5153,7 +5153,7 @@
     </collection>
     <collection name="mmsengine" long-name="MMS Engine" level="1">
      <component name="mmsconf" long-name="MMS Configuration">
-      <unit mrp="app/messaging/mmsengine/mmssettings/group/messaging_mmssettings-config.mrp"/>
+      <unit mrp="app\messaging\mmsengine\mmssettings\group\messaging_mmssettings-config.mrp"/>
      </component>
      <component name="mmssettings" long-name="MMS Settings" introduced="9.2">
      </component>
@@ -5207,7 +5207,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="messaging" long-name="messaging">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/messaging/group"/>
+      <unit bldFile="app\messaging\group"/>
      </component>
     </collection>
    </block>
@@ -5243,7 +5243,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="conversations" long-name="conversations">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/conversations/group"/>
+      <unit bldFile="app\conversations\group"/>
      </component>
     </collection>
    </block>
@@ -5269,7 +5269,7 @@
      </component>
      <component name="utils" long-name="Utilities">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/utils/group"/>
+      <unit bldFile="app\utils\group"/>
      </component>
      <component name="wvotaparser" long-name="WV OTA Parser">
      </component>
@@ -5345,7 +5345,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="im" long-name="im">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/im/group"/>
+      <unit bldFile="app\im\group"/>
      </component>
     </collection>
    </block>
@@ -5373,7 +5373,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="dictionary" long-name="dictionary">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/dictionary/group"/>
+      <unit bldFile="app\dictionary\group"/>
      </component>
     </collection>
    </block>
@@ -5389,7 +5389,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="camera" long-name="camera">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/camera/group"/>
+      <unit bldFile="app\camera\group"/>
      </component>
     </collection>
    </block>
@@ -5429,7 +5429,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="imgeditor" long-name="imgeditor">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/imgeditor/group"/>
+      <unit bldFile="app\imgeditor\group"/>
      </component>
     </collection>
    </block>
@@ -5469,7 +5469,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="videoeditor" long-name="videoeditor">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/videoeditor/group"/>
+      <unit bldFile="app\videoeditor\group"/>
      </component>
     </collection>
    </block>
@@ -5483,7 +5483,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="gallery" long-name="gallery">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/gallery/group"/>
+      <unit bldFile="app\gallery\group"/>
      </component>
     </collection>
    </block>
@@ -5517,7 +5517,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="videoplayer" long-name="videoplayer">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/videoplayer/group"/>
+      <unit bldFile="app\videoplayer\group"/>
      </component>
     </collection>
    </block>
@@ -5615,7 +5615,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="photos" long-name="photos">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/photos/group"/>
+      <unit bldFile="app\photos\group"/>
      </component>
     </collection>
    </block>
@@ -5697,7 +5697,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="videocenter" long-name="videocenter">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/videocenter/group"/>
+      <unit bldFile="app\videocenter\group"/>
      </component>
     </collection>
    </block>
@@ -5767,7 +5767,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="musicplayer" long-name="musicplayer">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/musicplayer/group"/>
+      <unit bldFile="app\musicplayer\group"/>
      </component>
     </collection>
    </block>
@@ -5785,7 +5785,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="radio" long-name="radio">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/radio/group"/>
+      <unit bldFile="app\radio\group"/>
      </component>
     </collection>
    </block>
@@ -5807,7 +5807,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="voicerec" long-name="voicerec">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/voicerec/group"/>
+      <unit bldFile="app\voicerec\group"/>
      </component>
     </collection>
    </block>
@@ -5827,7 +5827,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="screensaver" long-name="screensaver">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/screensaver/group"/>
+      <unit bldFile="app\screensaver\group"/>
      </component>
     </collection>
    </block>
@@ -5855,7 +5855,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="homescreen" long-name="homescreen">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/homescreen/group"/>
+      <unit bldFile="app\homescreen\group"/>
      </component>
     </collection>
    </block>
@@ -5869,7 +5869,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="imgvieweruis" long-name="imgvieweruis">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/imgvieweruis/group"/>
+      <unit bldFile="app\imgvieweruis\group"/>
      </component>
     </collection>
    </block>
@@ -5883,7 +5883,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="graphicsuis" long-name="graphicsuis">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/graphicsuis/group"/>
+      <unit bldFile="app\graphicsuis\group"/>
      </component>
     </collection>
    </block>
@@ -5898,7 +5898,7 @@
     </collection>
     <collection name="symhelp" long-name="Symbian Help" level="eng">
      <component name="cshlpcmpbackend" long-name="CSHelp Compiler Backend">
-      <unit mrp="app/helps/symhelp/cshlpcmpbackend/group/tools_sdk_eng_cshlpcmp_backend_srconly.mrp"/>
+      <unit mrp="app\helps\symhelp\cshlpcmpbackend\group\tools_sdk_eng_cshlpcmp_backend_srconly.mrp"/>
      </component>
      <component name="cshlpcmpfrontend" long-name="CSHelp Compiler Frontend">
      </component>
@@ -5914,7 +5914,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="helps" long-name="helps">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/helps/group"/>
+      <unit bldFile="app\helps\group"/>
      </component>
     </collection>
    </block>
@@ -5928,7 +5928,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="profile" long-name="profile">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/profile/group"/>
+      <unit bldFile="app\profile\group"/>
      </component>
     </collection>
    </block>
@@ -5992,7 +5992,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="speechsrv" long-name="speechsrv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/speechsrv/group"/>
+      <unit bldFile="app\speechsrv\group"/>
      </component>
     </collection>
    </block>
@@ -6036,7 +6036,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="webuis" long-name="webuis">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/webuis/group"/>
+      <unit bldFile="app\webuis\group"/>
      </component>
     </collection>
    </block>
@@ -6120,7 +6120,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="java" long-name="java">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/java/group"/>
+      <unit bldFile="app\java\group"/>
      </component>
     </collection>
    </block>
@@ -6168,7 +6168,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="rndtools" long-name="rndtools">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="tools/rndtools/group"/>
+      <unit bldFile="tools\rndtools\group"/>
      </component>
     </collection>
    </block>
@@ -6211,10 +6211,10 @@
     </collection>
     <collection name="networkingutils" long-name="Networking Utils" level="utils">
      <component name="ipadministrationtool" long-name="IP Administration Tool" introduced="7.0">
-      <unit mrp="app/techview/networkingutils/ipadministrationtool/group/networking_ipadm.mrp"/>
+      <unit mrp="app\techview\networkingutils\ipadministrationtool\group\networking_ipadm.mrp"/>
      </component>
      <component name="nameresolverutility" long-name="Name Resolver Utility" introduced="7.0s">
-      <unit mrp="app/techview/networkingutils/nameresolverutility/group/networking_nslookup.mrp"/>
+      <unit mrp="app\techview\networkingutils\nameresolverutility\group\networking_nslookup.mrp"/>
      </component>
     </collection>
     <collection name="pimapps" long-name="PIM Apps" level="apps3">
@@ -6263,7 +6263,7 @@
     </collection>
     <collection name="testapps" long-name="Test Apps" level="utils">
      <component name="rschandler" long-name="Resource Handler" deprecated="tb92">
-      <unit mrp="app/techview/testapps/rschandler/TVResourceHandler/group/Testtools_ResourceHandler_gt.mrp"/>
+      <unit mrp="app\techview\testapps\rschandler\tvresourcehandler\group\Testtools_ResourceHandler_gt.mrp"/>
      </component>
      <component name="rschandlerui" long-name="Resource Handler UI" filter="techview">
      </component>
@@ -6276,14 +6276,14 @@
     </collection>
     <collection name="toolkit" long-name="Toolkit" level="utils">
      <component name="additionalconfigfiles" long-name="Additional Configuration Files" filter="techview">
-      <unit mrp="app/techview/toolkit/configfiles/techview_additional_cedar.mrp"/>
+      <unit mrp="app\techview\toolkit\configfiles\techview_additional_cedar.mrp"/>
      </component>
      <component name="configfiles" long-name="Configuration Files" filter="techview">
-      <unit mrp="app/techview/toolkit/configfiles/techview_epoc_ini.mrp"/>
+      <unit mrp="app\techview\toolkit\configfiles\techview_epoc_ini.mrp"/>
      </component>
      <component name="romimages" long-name="ROM Images" filter="techview">
-      <unit version="Future" mrp="os/deviceplatformrelease/symbianosbld/cedarutils/techview_roms_Future.mrp"/>
-      <unit version="9.4" mrp="os/deviceplatformrelease/symbianosbld/cedarutils/techview_roms_9.4.mrp"/>
+      <unit version="Future" mrp="os\deviceplatformrelease\symbianosbld\cedarutils\techview_roms_Future.mrp"/>
+      <unit version="9.4" mrp="os\deviceplatformrelease\symbianosbld\cedarutils\techview_roms_9.4.mrp"/>
      </component>
      <component name="romkit" long-name="ROM Kit" filter="techview">
      </component>
@@ -6294,7 +6294,7 @@
      <component name="timew" long-name="World Time" filter="techview">
      </component>
     </collection>
-    <collection name="avapps" long-name="A/V Apps" level="apps3">
+    <collection name="avapps" long-name="a\v Apps" level="apps3">
      <component name="techviewaudio" long-name="Audio" filter="techview">
      </component>
     </collection>
@@ -6316,7 +6316,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="audiostubs" long-name="audiostubs">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="adaptation/stubs/audiostubs/group"/>
+      <unit bldFile="adaptation\stubs\audiostubs\group"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -6324,7 +6324,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="btaudioadaptation_stub" long-name="btaudioadaptation_stub">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="adaptation/stubs/btaudioadaptation_stub/group"/>
+      <unit bldFile="adaptation\stubs\btaudioadaptation_stub\group"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -6332,7 +6332,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="drm_stubs" long-name="drm_stubs">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="adaptation/stubs/drm_stubs/group"/>
+      <unit bldFile="adaptation\stubs\drm_stubs\group"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -6340,7 +6340,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="licensee_tsy_stub" long-name="licensee_tsy_stub">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="adaptation/stubs/licensee_tsy_stub/group"/>
+      <unit bldFile="adaptation\stubs\licensee_tsy_stub\group"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -6348,7 +6348,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="ocrsrv_stub" long-name="ocrsrv_stub">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="adaptation/stubs/ocrsrv_stub/group"/>
+      <unit bldFile="adaptation\stubs\ocrsrv_stub\group"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -6356,7 +6356,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="omasuplasnconverterstubimpl" long-name="omasuplasnconverterstubimpl">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="adaptation/stubs/omasuplasnconverterstubimpl/group"/>
+      <unit bldFile="adaptation\stubs\omasuplasnconverterstubimpl\group"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -6364,7 +6364,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="posmsgpluginreferenceimpl" long-name="posmsgpluginreferenceimpl">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="adaptation/stubs/posmsgpluginreferenceimpl/group"/>
+      <unit bldFile="adaptation\stubs\posmsgpluginreferenceimpl\group"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -6372,7 +6372,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="power_save_display_mode_stub" long-name="power_save_display_mode_stub">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="adaptation/stubs/power_save_display_mode_stub/group"/>
+      <unit bldFile="adaptation\stubs\power_save_display_mode_stub\group"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -6380,7 +6380,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="simatk_tsy_stub" long-name="simatk_tsy_stub">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="adaptation/stubs/simatk_tsy_stub/group"/>
+      <unit bldFile="adaptation\stubs\simatk_tsy_stub\group"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -6388,7 +6388,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="srsfenginestub" long-name="srsfenginestub">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="adaptation/stubs/srsfenginestub/group"/>
+      <unit bldFile="adaptation\stubs\srsfenginestub\group"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -6396,7 +6396,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="systemswstubs" long-name="systemswstubs">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="adaptation/stubs/systemswstubs/group"/>
+      <unit bldFile="adaptation\stubs\systemswstubs\group"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -6404,7 +6404,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="tactileclickplugin_stub" long-name="tactileclickplugin_stub">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="adaptation/stubs/tactileclickplugin_stub/group"/>
+      <unit bldFile="adaptation\stubs\tactileclickplugin_stub\group"/>
      </component>
     </collection>
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
@@ -6412,7 +6412,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="wlanhwinit_stub" long-name="wlanhwinit_stub">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="adaptation/stubs/wlanhwinit_stub/group"/>
+      <unit bldFile="adaptation\stubs\wlanhwinit_stub\group"/>
      </component>
     </collection>
    </block>
@@ -6423,7 +6423,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="commonemail" long-name="commonemail">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/commonemail/group"/>
+      <unit bldFile="app\commonemail\group"/>
      </component>
     </collection>
    </block>
@@ -6434,7 +6434,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="printing" long-name="printing">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="app/printing/group"/>
+      <unit bldFile="app\printing\group"/>
      </component>
     </collection>
    </block>
@@ -6445,7 +6445,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="hapticsservices" long-name="hapticsservices">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/hapticsservices/group"/>
+      <unit bldFile="mw\hapticsservices\group"/>
      </component>
     </collection>
    </block>
@@ -6456,7 +6456,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="mobiletv" long-name="mobiletv">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="mw/mobiletv/group"/>
+      <unit bldFile="mw\mobiletv\group"/>
      </component>
     </collection>
    </block>
@@ -6467,7 +6467,7 @@
      <!-- Following Component added by SF via autopopulating script from S60 Model -->
      <component name="buildplatforms" long-name="buildplatforms">
       <!-- Unit added by SF via autopopulating script from S60 Model -->
-      <unit bldFile="tools/buildplatforms/group"/>
+      <unit bldFile="tools\buildplatforms\group"/>
      </component>
     </collection>
    </block>
