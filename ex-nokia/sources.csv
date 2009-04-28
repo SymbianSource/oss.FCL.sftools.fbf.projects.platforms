@@ -40,7 +40,7 @@ source,dst,tag,type,branch,pattern
 //lon-engbuild87/d$/mercurial_master/sfl/sf/app/videoplayer/MCL_videoplayer/,/sf/app/videoplayer,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/app/videotelephony/MCL_videotelephony/,/sf/app/videotelephony,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/app/voicerec/MCL_voicerec/,/sf/app/voicerec,tip,tag,default,layers.sysdef.xml
-//lon-engbuild87/d$/mercurial_master/sfl/sf/app/webuis/MCL_webuis/,/sf/app/webuis,tip,tag,default,layers.sysdef.xml
+//lon-engbuild87/d$/mercurial_master/epl/sf/app/webuis/MCL_webuis/,/sf/app/webuis,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/accesssec/MCL_accesssec/,/sf/mw/accesssec,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/appinstall/MCL_appinstall/,/sf/mw/appinstall,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/appsupport/MCL_appsupport/,/sf/mw/appsupport,tip,tag,default,layers.sysdef.xml
@@ -73,8 +73,8 @@ source,dst,tag,type,branch,pattern
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/remotemgmt/MCL_remotemgmt/,/sf/mw/remotemgmt,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/remotestorage/MCL_remotestorage/,/sf/mw/remotestorage,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/securitysrv/MCL_securitysrv/,/sf/mw/securitysrv,tip,tag,default,layers.sysdef.xml
-//lon-engbuild87/d$/mercurial_master/sfl/sf/mw/serviceapi/MCL_serviceapi/,/sf/mw/serviceapi,tip,tag,default,layers.sysdef.xml
-//lon-engbuild87/d$/mercurial_master/sfl/sf/mw/serviceapifw/MCL_serviceapifw/,/sf/mw/serviceapifw,tip,tag,default,layers.sysdef.xml
+//lon-engbuild87/d$/mercurial_master/epl/sf/mw/serviceapi/MCL_serviceapi/,/sf/mw/serviceapi,tip,tag,default,layers.sysdef.xml
+//lon-engbuild87/d$/mercurial_master/epl/sf/mw/serviceapifw/MCL_serviceapifw/,/sf/mw/serviceapifw,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/shortlinkconn/MCL_shortlinkconn/,/sf/mw/shortlinkconn,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/svgt/MCL_svgt/,/sf/mw/svgt,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/uiaccelerator/MCL_uiaccelerator/,/sf/mw/uiaccelerator,tip,tag,default,layers.sysdef.xml
@@ -82,7 +82,7 @@ source,dst,tag,type,branch,pattern
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/uitools/MCL_uitools/,/sf/mw/uitools,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/videoutils/MCL_videoutils/,/sf/mw/videoutils,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/vpnclient/MCL_vpnclient/,/sf/mw/vpnclient,tip,tag,default,layers.sysdef.xml
-//lon-engbuild87/d$/mercurial_master/sfl/sf/mw/web/MCL_web/,/sf/mw/web,tip,tag,default,layers.sysdef.xml
+//lon-engbuild87/d$/mercurial_master/epl/sf/mw/web/MCL_web/,/sf/mw/web,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/websrv/MCL_websrv/,/sf/mw/websrv,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/mw/wirelessacc/MCL_wirelessacc/,/sf/mw/wirelessacc,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master/sfl/sf/os/boardsupport/MCL_boardsupport/,/sf/os/boardsupport,tip,tag,default,layers.sysdef.xml
