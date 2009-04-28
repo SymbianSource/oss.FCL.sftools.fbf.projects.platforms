@@ -1,0 +1,1267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE SystemDefinition [
+ <!ELEMENT SystemDefinition (systemModel?, build?)>
+ <!ATTLIST SystemDefinition
+  name CDATA #REQUIRED
+  schema CDATA #REQUIRED>
+ <!ELEMENT systemModel (layer+)>
+ <!ELEMENT layer (logicalset* | module*)*>
+ <!ATTLIST layer
+  name CDATA #REQUIRED
+  levels CDATA #IMPLIED
+  span CDATA #IMPLIED>
+ <!ELEMENT logicalset (logicalsubset* | module* | unit* | package* | prebuilt*)*>
+ <!ATTLIST logicalset name CDATA #REQUIRED>
+ <!ELEMENT logicalsubset (module* | unit* | package* | prebuilt*)*>
+ <!ATTLIST logicalsubset name CDATA #REQUIRED>
+ <!ELEMENT module (component* | unit* | package* | prebuilt*)*>
+ <!ATTLIST module
+  name CDATA #REQUIRED
+  level CDATA #IMPLIED>
+ <!ELEMENT component (unit* | package* | prebuilt*)*>
+ <!ATTLIST component name CDATA #REQUIRED>
+ <!ELEMENT unit EMPTY>
+ <!ATTLIST unit
+  unitID ID #REQUIRED
+  name CDATA #REQUIRED
+  mrp CDATA #REQUIRED
+  filter CDATA #IMPLIED
+  bldFile CDATA #REQUIRED
+  priority CDATA #IMPLIED
+  contract CDATA #IMPLIED>
+ <!ELEMENT package EMPTY>
+ <!ATTLIST package
+  name CDATA #REQUIRED
+  mrp CDATA #REQUIRED
+  filter CDATA #IMPLIED
+  contract CDATA #IMPLIED>
+ <!ELEMENT prebuilt EMPTY>
+ <!ATTLIST prebuilt
+  name CDATA #REQUIRED
+  version CDATA #REQUIRED
+  late (Y|N) #IMPLIED
+  filter CDATA #IMPLIED
+  contract CDATA #IMPLIED>
+ <!ELEMENT build (option* | target+ | targetList+ | unitList+ | configuration+)*>
+ <!ELEMENT unitList (unitRef+)>
+ <!ATTLIST unitList
+  name ID #REQUIRED
+  description CDATA #REQUIRED>
+ <!ELEMENT unitRef EMPTY>
+ <!ATTLIST unitRef unit IDREF #REQUIRED>
+ <!ELEMENT targetList EMPTY>
+ <!ATTLIST targetList
+  name ID #REQUIRED
+  description CDATA #REQUIRED
+  target IDREFS #REQUIRED>
+ <!ELEMENT target EMPTY>
+ <!ATTLIST target
+  name ID #REQUIRED
+  abldTarget CDATA #REQUIRED
+  description CDATA #REQUIRED>
+ <!ELEMENT option EMPTY>
+ <!ATTLIST option
+  name ID #REQUIRED
+  abldOption CDATA #REQUIRED
+  description CDATA #REQUIRED
+  enable (Y | N | y | n) #REQUIRED>
+ <!ELEMENT configuration (unitListRef+ | layerRef+ | task+)*>
+ <!ATTLIST configuration
+  name ID #REQUIRED
+  description CDATA #REQUIRED
+  filter CDATA #REQUIRED>
+ <!ELEMENT task ( unitListRef* , (buildLayer | specialInstructions))>
+ <!ELEMENT unitListRef EMPTY>
+ <!ATTLIST unitListRef unitList IDREF #REQUIRED>
+ <!ELEMENT layerRef EMPTY>
+ <!ATTLIST layerRef layerName CDATA #REQUIRED>
+ <!ELEMENT buildLayer EMPTY>
+ <!ATTLIST buildLayer
+  command CDATA #REQUIRED
+  targetList IDREFS #IMPLIED
+  unitParallel (Y | N | y | n) #REQUIRED
+  targetParallel (Y | N | y | n) #IMPLIED>
+ <!ELEMENT specialInstructions EMPTY>
+ <!ATTLIST specialInstructions
+  name CDATA #REQUIRED
+  cwd CDATA #REQUIRED
+  command CDATA #REQUIRED>
+]>
+<!-- 
+============================================================================ 
+Name        : sysdef_dtd_1_4_0.xml 
+Part of     : Helium 
+Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.
+This component and the accompanying materials are made available
+under the terms of the License "Eclipse Public License v1.0"
+which accompanies this distribution, and is available
+at the URL "http://www.eclipse.org/legal/epl-v10.html".
+Initial Contributors:
+Nokia Corporation - initial contribution.
+Contributors:
+Description:
+============================================================================
+-->
+<SystemDefinition name="sysdef_dtd_1_4_0_xml + S60_SystemBuild + S60_SystemModel" schema="1.4.0"><systemModel>
+<layer name="sf">
+<logicalset name="adaptation">
+<logicalsubset name="stubs">
+<module name="audiostubs">
+<component name="audiostubs">
+<unit unitID="sf_adaptation_stubs_audiostubs" name="audiostubs" bldFile="\sf\adaptation\stubs\audiostubs\group" mrp="" filter="!no_stubs"/>
+</component>
+</module>
+<module name="btaudioadaptation_stub">
+<component name="btaudioadaptation_stub">
+<unit unitID="sf_adaptation_stubs_btaudioadaptation_stub" name="btaudioadaptation_stub" bldFile="\sf\adaptation\stubs\btaudioadaptation_stub\group" mrp="" filter="!no_stubs"/>
+</component>
+</module>
+<module name="drm_stubs">
+<component name="drm_stubs">
+<unit unitID="sf_adaptation_stubs_drm_stubs" name="drm_stubs" bldFile="\sf\adaptation\stubs\drm_stubs\group" mrp="" filter="!no_stubs"/>
+</component>
+</module>
+<module name="licensee_tsy_stub">
+<component name="licensee_tsy_stub">
+<unit unitID="sf_adaptation_stubs_licensee_tsy_stub" name="licensee_tsy_stub" bldFile="\sf\adaptation\stubs\licensee_tsy_stub\group" mrp="" filter="!no_stubs"/>
+</component>
+</module>
+<module name="ocrsrv_stub">
+<component name="ocrsrv_stub">
+<unit unitID="sf_adaptation_stubs_ocrsrv_stub" name="ocrsrv_stub" bldFile="\sf\adaptation\stubs\ocrsrv_stub\group" mrp="" filter="!no_stubs"/>
+</component>
+</module>
+<module name="omasuplasnconverterstubimpl">
+<component name="omasuplasnconverterstubimpl">
+<unit unitID="sf_adaptation_stubs_omasuplasnconverterstubimpl" name="omasuplasnconverterstubimpl" bldFile="\sf\adaptation\stubs\omasuplasnconverterstubimpl\group" mrp="" filter="!no_stubs"/>
+</component>
+</module>
+<module name="posmsgpluginreferenceimpl">
+<component name="posmsgpluginreferenceimpl">
+<unit unitID="sf_adaptation_stubs_posmsgpluginreferenceimpl" name="posmsgpluginreferenceimpl" bldFile="\sf\adaptation\stubs\posmsgpluginreferenceimpl\group" mrp="" filter="!no_stubs"/>
+</component>
+</module>
+<module name="power_save_display_mode_stub">
+<component name="power_save_display_mode_stub">
+<unit unitID="sf_adaptation_stubs_power_save_display_mode_stub" name="power_save_display_mode_stub" bldFile="\sf\adaptation\stubs\power_save_display_mode_stub\group" mrp="" filter="!no_stubs"/>
+</component>
+</module>
+<module name="simatk_tsy_stub">
+<component name="simatk_tsy_stub">
+<unit unitID="sf_adaptation_stubs_simatk_tsy_stub" name="simatk_tsy_stub" bldFile="\sf\adaptation\stubs\simatk_tsy_stub\group" mrp="" filter="!no_stubs"/>
+</component>
+</module>
+<module name="srsfenginestub">
+<component name="srsfenginestub">
+<unit unitID="sf_adaptation_stubs_srsfenginestub" name="srsfenginestub" bldFile="\sf\adaptation\stubs\srsfenginestub\group" mrp="" filter="!no_stubs"/>
+</component>
+</module>
+<module name="systemswstubs">
+<component name="systemswstubs">
+<unit unitID="sf_adaptation_stubs_systemswstubs" name="systemswstubs" bldFile="\sf\adaptation\stubs\systemswstubs\group" mrp="" filter="!no_stubs"/>
+</component>
+</module>
+<module name="tactileclickplugin_stub">
+<component name="tactileclickplugin_stub">
+<unit unitID="sf_adaptation_stubs_tactileclickplugin_stub" name="tactileclickplugin_stub" bldFile="\sf\adaptation\stubs\tactileclickplugin_stub\group" mrp="" filter="!no_stubs"/>
+</component>
+</module>
+<module name="wlanhwinit_stub">
+<component name="wlanhwinit_stub">
+<unit unitID="sf_adaptation_stubs_wlanhwinit_stub" name="wlanhwinit_stub" bldFile="\sf\adaptation\stubs\wlanhwinit_stub\group" mrp="" filter="!no_stubs"/>
+</component>
+</module>
+</logicalsubset>
+</logicalset>
+<logicalset name="app">
+<logicalsubset name="camera">
+<module name="camera">
+<component name="camera">
+<unit unitID="sf_app_camera" name="camera" bldFile="\sf\app\camera\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="commonemail">
+<module name="commonemail">
+<component name="commonemail">
+<unit unitID="sf_app_commonemail" name="commonemail" bldFile="\sf\app\commonemail\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="conntools">
+<module name="conntools">
+<component name="conntools">
+<unit unitID="sf_app_conntools" name="conntools" bldFile="\sf\app\conntools\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="contacts">
+<module name="contacts">
+<component name="contacts">
+<unit unitID="sf_app_contacts" name="contacts" bldFile="\sf\app\contacts\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="contentcontrol">
+<module name="contentcontrol">
+<component name="contentcontrol">
+<unit unitID="sf_app_contentcontrol" name="contentcontrol" bldFile="\sf\app\contentcontrol\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="conversations">
+<module name="conversations">
+<component name="conversations">
+<unit unitID="sf_app_conversations" name="conversations" bldFile="\sf\app\conversations\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="devicecontrol">
+<module name="devicecontrol">
+<component name="devicecontrol">
+<unit unitID="sf_app_devicecontrol" name="devicecontrol" bldFile="\sf\app\devicecontrol\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="dictionary">
+<module name="dictionary">
+<component name="dictionary">
+<unit unitID="sf_app_dictionary" name="dictionary" bldFile="\sf\app\dictionary\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="files">
+<module name="files">
+<component name="files">
+<unit unitID="sf_app_files" name="files" bldFile="\sf\app\files\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="gallery">
+<module name="gallery">
+<component name="gallery">
+<unit unitID="sf_app_gallery" name="gallery" bldFile="\sf\app\gallery\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="graphicsuis">
+<module name="graphicsuis">
+<component name="graphicsuis">
+<unit unitID="sf_app_graphicsuis" name="graphicsuis" bldFile="\sf\app\graphicsuis\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="helps">
+<module name="helps">
+<component name="helps">
+<unit unitID="sf_app_helps" name="helps" bldFile="\sf\app\helps\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="homescreen">
+<module name="homescreen">
+<component name="homescreen">
+<unit unitID="sf_app_homescreen" name="homescreen" bldFile="\sf\app\homescreen\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="im">
+<module name="im">
+<component name="im">
+<unit unitID="sf_app_im" name="im" bldFile="\sf\app\im\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="imgeditor">
+<module name="imgeditor">
+<component name="imgeditor">
+<unit unitID="sf_app_imgeditor" name="imgeditor" bldFile="\sf\app\imgeditor\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="imgvieweruis">
+<module name="imgvieweruis">
+<component name="imgvieweruis">
+<unit unitID="sf_app_imgvieweruis" name="imgvieweruis" bldFile="\sf\app\imgvieweruis\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="iptelephony">
+<module name="iptelephony">
+<component name="iptelephony">
+<unit unitID="sf_app_iptelephony" name="iptelephony" bldFile="\sf\app\iptelephony\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="java">
+<module name="java">
+<component name="java">
+<unit unitID="sf_app_java" name="java" bldFile="\sf\app\java\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="location">
+<module name="location">
+<component name="location">
+<unit unitID="sf_app_location" name="location" bldFile="\sf\app\location\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="messaging">
+<module name="messaging">
+<component name="messaging">
+<unit unitID="sf_app_messaging" name="messaging" bldFile="\sf\app\messaging\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="mmsharinguis">
+<module name="mmsharinguis">
+<component name="mmsharinguis">
+<unit unitID="sf_app_mmsharinguis" name="mmsharinguis" bldFile="\sf\app\mmsharinguis\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="musicplayer">
+<module name="musicplayer">
+<component name="musicplayer">
+<unit unitID="sf_app_musicplayer" name="musicplayer" bldFile="\sf\app\musicplayer\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="organizer">
+<module name="organizer">
+<component name="organizer">
+<unit unitID="sf_app_organizer" name="organizer" bldFile="\sf\app\organizer\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="phone">
+<module name="phone">
+<component name="phone">
+<unit unitID="sf_app_phone" name="phone" bldFile="\sf\app\phone\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="photos">
+<module name="photos">
+<component name="photos">
+<unit unitID="sf_app_photos" name="photos" bldFile="\sf\app\photos\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="poc">
+<module name="poc">
+<component name="poc">
+<unit unitID="sf_app_poc" name="poc" bldFile="\sf\app\poc\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="printing">
+<module name="printing">
+<component name="printing">
+<unit unitID="sf_app_printing" name="printing" bldFile="\sf\app\printing\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="profile">
+<module name="profile">
+<component name="profile">
+<unit unitID="sf_app_profile" name="profile" bldFile="\sf\app\profile\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="radio">
+<module name="radio">
+<component name="radio">
+<unit unitID="sf_app_radio" name="radio" bldFile="\sf\app\radio\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="screensaver">
+<module name="screensaver">
+<component name="screensaver">
+<unit unitID="sf_app_screensaver" name="screensaver" bldFile="\sf\app\screensaver\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="settingsuis">
+<module name="settingsuis">
+<component name="settingsuis">
+<unit unitID="sf_app_settingsuis" name="settingsuis" bldFile="\sf\app\settingsuis\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="speechsrv">
+<module name="speechsrv">
+<component name="speechsrv">
+<unit unitID="sf_app_speechsrv" name="speechsrv" bldFile="\sf\app\speechsrv\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="utils">
+<module name="utils">
+<component name="utils">
+<unit unitID="sf_app_utils" name="utils" bldFile="\sf\app\utils\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="videocenter">
+<module name="videocenter">
+<component name="videocenter">
+<unit unitID="sf_app_videocenter" name="videocenter" bldFile="\sf\app\videocenter\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="videoeditor">
+<module name="videoeditor">
+<component name="videoeditor">
+<unit unitID="sf_app_videoeditor" name="videoeditor" bldFile="\sf\app\videoeditor\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="videoplayer">
+<module name="videoplayer">
+<component name="videoplayer">
+<unit unitID="sf_app_videoplayer" name="videoplayer" bldFile="\sf\app\videoplayer\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="videotelephony">
+<module name="videotelephony">
+<component name="videotelephony">
+<unit unitID="sf_app_videotelephony" name="videotelephony" bldFile="\sf\app\videotelephony\group" mrp=""/>
+</component>
+</module>
+<module name="packetvideoengine">
+<component name="PacketVideoEngineBinaries">
+<unit unitID="sf_app_videotelephony_packetvideoengine_PacketVideoEngineBinaries" name="PacketVideoEngineBinaries" bldFile="\sf\app\videotelephony\packetvideoengine\PacketVideoEngineBinaries\group" mrp=""/>
+</component>
+</module>
+<module name="vtprotocols">
+<component name="vtprotocols">
+<unit unitID="sf_app_videotelephony_vtprotocols" name="vtprotocols" bldFile="\sf\app\videotelephony\vtprotocols\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="voicerec">
+<module name="voicerec">
+<component name="voicerec">
+<unit unitID="sf_app_voicerec" name="voicerec" bldFile="\sf\app\voicerec\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="webuis">
+<module name="webuis">
+<component name="webuis">
+<unit unitID="sf_app_webuis" name="webuis" bldFile="\sf\app\webuis\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+</logicalset>
+<logicalset name="mw">
+<logicalsubset name="accesssec">
+<module name="accesssec">
+<component name="accesssec">
+<unit unitID="sf_mw_accesssec" name="accesssec" bldFile="\sf\mw\accesssec\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="appinstall">
+<module name="appinstall">
+<component name="appinstall">
+<unit unitID="sf_mw_appinstall" name="appinstall" bldFile="\sf\mw\appinstall\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="appsupport">
+<module name="appsupport">
+<component name="appsupport">
+<unit unitID="sf_mw_appsupport" name="appsupport" bldFile="\sf\mw\appsupport\group" mrp=""/>
+</component>
+</module>
+<module name="appsupport_plat">
+<component name="flash_mmi_service_interface_custom_api">
+<unit unitID="sf_mw_appsupport_appsupport_plat_flash_mmi_service_interface_custom_api" name="flash_mmi_service_interface_custom_api" bldFile="\sf\mw\appsupport\appsupport_plat\flash_mmi_service_interface_custom_api\group" mrp=""/>
+</component>
+</module>
+<module name="appsupport_plat">
+<component name="flash_netscape_plugin_command_api">
+<unit unitID="sf_mw_appsupport_appsupport_plat_flash_netscape_plugin_command_api" name="flash_netscape_plugin_command_api" bldFile="\sf\mw\appsupport\appsupport_plat\flash_netscape_plugin_command_api\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="camerasrv">
+<module name="camerasrv">
+<component name="camerasrv">
+<unit unitID="sf_mw_camerasrv" name="camerasrv" bldFile="\sf\mw\camerasrv\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="classicui">
+<module name="classicui">
+<component name="classicui">
+<unit unitID="sf_mw_classicui" name="classicui" bldFile="\sf\mw\classicui\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="dlnasrv">
+<module name="dlnasrv">
+<component name="dlnasrv">
+<unit unitID="sf_mw_dlnasrv" name="dlnasrv" bldFile="\sf\mw\dlnasrv\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="drm">
+<module name="drm">
+<component name="drm">
+<unit unitID="sf_mw_drm" name="drm" bldFile="\sf\mw\drm\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="hapticsservices">
+<module name="hapticsservices">
+<component name="hapticsservices">
+<unit unitID="sf_mw_hapticsservices" name="hapticsservices" bldFile="\sf\mw\hapticsservices\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="helix">
+<module name="helix">
+<component name="helix">
+<unit unitID="sf_mw_helix" name="helix" bldFile="\sf\mw\helix\group" mrp=""/>
+</component>
+</module>
+<module name="helix_ren">
+<component name="src">
+<unit unitID="sf_mw_helix_helix_ren_src" name="src" bldFile="\sf\mw\helix\helix_ren\src\group" mrp="" filter="!no_binonly"/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="homescreensrv">
+<module name="homescreensrv">
+<component name="homescreensrv">
+<unit unitID="sf_mw_homescreensrv" name="homescreensrv" bldFile="\sf\mw\homescreensrv\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="imghandling">
+<module name="imghandling">
+<component name="imghandling">
+<unit unitID="sf_mw_imghandling" name="imghandling" bldFile="\sf\mw\imghandling\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="imsrv">
+<module name="imsrv">
+<component name="imsrv">
+<unit unitID="sf_mw_imsrv" name="imsrv" bldFile="\sf\mw\imsrv\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="inputmethods">
+<module name="inputmethods">
+<component name="inputmethods">
+<unit unitID="sf_mw_inputmethods" name="inputmethods" bldFile="\sf\mw\inputmethods\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="ipappprotocols">
+<module name="ipappprotocols">
+<component name="ipappprotocols">
+<unit unitID="sf_mw_ipappprotocols" name="ipappprotocols" bldFile="\sf\mw\ipappprotocols\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="ipappsrv">
+<module name="ipappsrv">
+<component name="ipappsrv">
+<unit unitID="sf_mw_ipappsrv" name="ipappsrv" bldFile="\sf\mw\ipappsrv\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="ipconnmgmt">
+<module name="ipconnmgmt">
+<component name="ipconnmgmt">
+<unit unitID="sf_mw_ipconnmgmt" name="ipconnmgmt" bldFile="\sf\mw\ipconnmgmt\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="legacypresence">
+<module name="legacypresence">
+<component name="legacypresence">
+<unit unitID="sf_mw_legacypresence" name="legacypresence" bldFile="\sf\mw\legacypresence\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="locationsrv">
+<module name="locationsrv">
+<component name="locationsrv">
+<unit unitID="sf_mw_locationsrv" name="locationsrv" bldFile="\sf\mw\locationsrv\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="mds">
+<module name="mds">
+<component name="mds">
+<unit unitID="sf_mw_mds" name="mds" bldFile="\sf\mw\mds\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="messagingmw">
+<module name="messagingmw">
+<component name="messagingmw">
+<unit unitID="sf_mw_messagingmw" name="messagingmw" bldFile="\sf\mw\messagingmw\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="metadatasrv">
+<module name="metadatasrv">
+<component name="metadatasrv">
+<unit unitID="sf_mw_metadatasrv" name="metadatasrv" bldFile="\sf\mw\metadatasrv\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="mmappfw">
+<module name="mmappfw">
+<component name="mmappfw">
+<unit unitID="sf_mw_mmappfw" name="mmappfw" bldFile="\sf\mw\mmappfw\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="mmmw">
+<module name="mmmw">
+<component name="mmmw">
+<unit unitID="sf_mw_mmmw" name="mmmw" bldFile="\sf\mw\mmmw\group" mrp=""/>
+</component>
+</module>
+<module name="mtp">
+<component name="mtp">
+<unit unitID="sf_mw_mmmw_mtp" name="mtp" bldFile="\sf\mw\mmmw\mtp\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="mmuifw">
+<module name="mmuifw">
+<component name="mmuifw">
+<unit unitID="sf_mw_mmuifw" name="mmuifw" bldFile="\sf\mw\mmuifw\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="mobiletv">
+<module name="mobiletv">
+<component name="mobiletv">
+<unit unitID="sf_mw_mobiletv" name="mobiletv" bldFile="\sf\mw\mobiletv\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="netprotocols">
+<module name="netprotocols">
+<component name="netprotocols">
+<unit unitID="sf_mw_netprotocols" name="netprotocols" bldFile="\sf\mw\netprotocols\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="networkingdm">
+<module name="networkingdm">
+<component name="networkingdm">
+<unit unitID="sf_mw_networkingdm" name="networkingdm" bldFile="\sf\mw\networkingdm\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="opensrv">
+<module name="opensrv">
+<component name="opensrv">
+<unit unitID="sf_mw_opensrv" name="opensrv" bldFile="\sf\mw\opensrv\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="phonesrv">
+<module name="phonesrv">
+<component name="phonesrv">
+<unit unitID="sf_mw_phonesrv" name="phonesrv" bldFile="\sf\mw\phonesrv\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="remoteconn">
+<module name="remoteconn">
+<component name="remoteconn">
+<unit unitID="sf_mw_remoteconn" name="remoteconn" bldFile="\sf\mw\remoteconn\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="remotemgmt">
+<module name="remotemgmt">
+<component name="remotemgmt">
+<unit unitID="sf_mw_remotemgmt" name="remotemgmt" bldFile="\sf\mw\remotemgmt\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="remotestorage">
+<module name="remotestorage">
+<component name="remotestorage">
+<unit unitID="sf_mw_remotestorage" name="remotestorage" bldFile="\sf\mw\remotestorage\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="securitysrv">
+<module name="securitysrv">
+<component name="securitysrv">
+<unit unitID="sf_mw_securitysrv" name="securitysrv" bldFile="\sf\mw\securitysrv\group" mrp=""/>
+</component>
+</module>
+<module name="pkiutilities">
+<component name="Certificates_OEM">
+<unit unitID="sf_mw_securitysrv_pkiutilities_Certificates_OEM" name="Certificates_OEM" bldFile="\sf\mw\securitysrv\pkiutilities\Certificates_OEM\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="serviceapi">
+<module name="serviceapi">
+<component name="serviceapi">
+<unit unitID="sf_mw_serviceapi" name="serviceapi" bldFile="\sf\mw\serviceapi\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="serviceapifw">
+<module name="serviceapifw">
+<component name="serviceapifw">
+<unit unitID="sf_mw_serviceapifw" name="serviceapifw" bldFile="\sf\mw\serviceapifw\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="shortlinkconn">
+<module name="shortlinkconn">
+<component name="shortlinkconn">
+<unit unitID="sf_mw_shortlinkconn" name="shortlinkconn" bldFile="\sf\mw\shortlinkconn\group" mrp=""/>
+</component>
+</module>
+<module name="usbclasses">
+<component name="usbosdescriptorhandler">
+<unit unitID="sf_mw_shortlinkconn_usbclasses_usbosdescriptorhandler" name="usbosdescriptorhandler" bldFile="\sf\mw\shortlinkconn\usbclasses\usbosdescriptorhandler\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="svgt">
+<module name="svgt">
+<component name="svgt">
+<unit unitID="sf_mw_svgt" name="svgt" bldFile="\sf\mw\svgt\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="uiaccelerator">
+<module name="uiaccelerator">
+<component name="uiaccelerator">
+<unit unitID="sf_mw_uiaccelerator" name="uiaccelerator" bldFile="\sf\mw\uiaccelerator\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="uiresources">
+<module name="uiresources">
+<component name="uiresources">
+<unit unitID="sf_mw_uiresources" name="uiresources" bldFile="\sf\mw\uiresources\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="uitools">
+<module name="uitools">
+<component name="uitools">
+<unit unitID="sf_mw_uitools" name="uitools" bldFile="\sf\mw\uitools\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="videoutils">
+<module name="videoutils">
+<component name="videoutils">
+<unit unitID="sf_mw_videoutils" name="videoutils" bldFile="\sf\mw\videoutils\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="web">
+<module name="web">
+<component name="web">
+<unit unitID="sf_mw_web" name="web" bldFile="\sf\mw\web\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="websrv">
+<module name="websrv">
+<component name="websrv">
+<unit unitID="sf_mw_websrv" name="websrv" bldFile="\sf\mw\websrv\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="wirelessacc">
+<module name="wirelessacc">
+<component name="wirelessacc">
+<unit unitID="sf_mw_wirelessacc" name="wirelessacc" bldFile="\sf\mw\wirelessacc\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+</logicalset>
+<logicalset name="os">
+<logicalsubset name="cellularsrv">
+<module name="cellularsrv">
+<component name="cellularsrv">
+<unit unitID="sf_os_cellularsrv" name="cellularsrv" bldFile="\sf\os\cellularsrv\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="deviceplatformrelease">
+<module name="S60Extras">
+<component name="S60Extras">
+<unit unitID="sf_os_deviceplatformrelease_S60Extras" name="S60Extras" bldFile="\sf\os\deviceplatformrelease\S60Extras\group" mrp=""/>
+</component>
+</module>
+<module name="S60Helps">
+<component name="S60Helps">
+<unit unitID="sf_os_deviceplatformrelease_S60Helps" name="S60Helps" bldFile="\sf\os\deviceplatformrelease\S60Helps\Group" mrp=""/>
+</component>
+</module>
+<module name="S60LocFiles">
+<component name="S60LocFiles">
+<unit unitID="sf_os_deviceplatformrelease_S60LocFiles" name="S60LocFiles" bldFile="\sf\os\deviceplatformrelease\S60LocFiles\group" mrp=""/>
+</component>
+</module>
+<module name="Version">
+<component name="Version">
+<unit unitID="sf_os_deviceplatformrelease_Version" name="Version" bldFile="\sf\os\deviceplatformrelease\Version\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="devicesrv">
+<module name="devicesrv">
+<component name="devicesrv">
+<unit unitID="sf_os_devicesrv" name="devicesrv" bldFile="\sf\os\devicesrv\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="graphics">
+<module name="graphics">
+<component name="graphics">
+<unit unitID="sf_os_graphics" name="graphics" bldFile="\sf\os\graphics\group" mrp=""/>
+</component>
+</module>
+<module name="graphics_pub">
+<component name="graphics_pub">
+<unit unitID="sf_os_graphics_graphics_pub" name="graphics_pub" bldFile="\sf\os\graphics\graphics_pub\group" mrp=""/>
+</component>
+</module>
+<module name="graphicsaccelaration">
+<component name="graphicsaccelaration">
+<unit unitID="sf_os_graphics_graphicsaccelaration" name="graphicsaccelaration" bldFile="\sf\os\graphics\graphicsaccelaration\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="imagingext">
+<module name="imagingext">
+<component name="imagingext">
+<unit unitID="sf_os_imagingext" name="imagingext" bldFile="\sf\os\imagingext\group" mrp=""/>
+</component>
+</module>
+<module name="imagingmodules">
+<component name="H264AVCVideoEncARM">
+<unit unitID="sf_os_imagingext_imagingmodules_H264AVCVideoEncARM" name="H264AVCVideoEncARM" bldFile="\sf\os\imagingext\imagingmodules\H264AVCVideoEncARM\group" mrp=""/>
+</component>
+</module>
+<module name="imagingmodules">
+<component name="Build">
+<unit unitID="sf_os_imagingext_imagingmodules_Build" name="Build" bldFile="\sf\os\imagingext\imagingmodules\VideoEncPluginARM\Build" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<module name="lbs">
+<component name="lbs">
+<unit unitID="sf_os_lbs" name="lbs" bldFile="\sf\os\lbs\group" mrp=""/>
+</component>
+</module>
+<logicalsubset name="mm">
+<module name="mm">
+<component name="mm">
+<unit unitID="sf_os_mm" name="mm" bldFile="\sf\os\mm\group" mrp=""/>
+</component>
+</module>
+<module name="audio">
+<component name="AacEncoderPlugin">
+<unit unitID="sf_os_mm_audio_AacEncoderPlugin" name="AacEncoderPlugin" bldFile="\sf\os\mm\audio\ARM_CMMF_codecs\AacEncoderPlugin\Group" mrp=""/>
+</component>
+</module>
+<module name="audio">
+<component name="AmrNbCodecPlugin">
+<unit unitID="sf_os_mm_audio_AmrNbCodecPlugin" name="AmrNbCodecPlugin" bldFile="\sf\os\mm\audio\ARM_CMMF_codecs\AmrNbCodecPlugin\Group" mrp=""/>
+</component>
+</module>
+<module name="audio">
+<component name="AmrWbCodecPlugin">
+<unit unitID="sf_os_mm_audio_AmrWbCodecPlugin" name="AmrWbCodecPlugin" bldFile="\sf\os\mm\audio\ARM_CMMF_codecs\AmrWbCodecPlugin\Group" mrp=""/>
+</component>
+</module>
+<module name="audio">
+<component name="EAacPlusCodecPlugin">
+<unit unitID="sf_os_mm_audio_EAacPlusCodecPlugin" name="EAacPlusCodecPlugin" bldFile="\sf\os\mm\audio\ARM_CMMF_codecs\EAacPlusCodecPlugin\Group" mrp=""/>
+</component>
+</module>
+<module name="audio">
+<component name="MP3CodecPlugin">
+<unit unitID="sf_os_mm_audio_MP3CodecPlugin" name="MP3CodecPlugin" bldFile="\sf\os\mm\audio\ARM_CMMF_codecs\MP3CodecPlugin\Group" mrp=""/>
+</component>
+</module>
+<module name="audio">
+<component name="WMADecoderPlugin">
+<unit unitID="sf_os_mm_audio_WMADecoderPlugin" name="WMADecoderPlugin" bldFile="\sf\os\mm\audio\ARM_CMMF_codecs\WMADecoderPlugin\Group" mrp=""/>
+</component>
+</module>
+<module name="devsoundextensions">
+<component name="addeddevsoundcontrol">
+<unit unitID="sf_os_mm_devsoundextensions_addeddevsoundcontrol" name="addeddevsoundcontrol" bldFile="\sf\os\mm\devsoundextensions\addeddevsoundcontrol\Group" mrp=""/>
+</component>
+</module>
+<module name="devsoundextensions">
+<component name="mmfdevsoundserverplatsec">
+<unit unitID="sf_os_mm_devsoundextensions_mmfdevsoundserverplatsec" name="mmfdevsoundserverplatsec" bldFile="\sf\os\mm\devsoundextensions\mmfdevsoundserverplatsec\Group" mrp="" filter="!no_stubs"/>
+</component>
+</module>
+<module name="video">
+<component name="ARM_MDF_Decoders">
+<unit unitID="sf_os_mm_video_ARM_MDF_Decoders" name="ARM_MDF_Decoders" bldFile="\sf\os\mm\video\ARM_MDF_Decoders\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="networkingsrv">
+<module name="networkingsrv">
+<component name="networkingsrv">
+<unit unitID="sf_os_networkingsrv" name="networkingsrv" bldFile="\sf\os\networkingsrv\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="ossrv">
+<module name="ossrv">
+<component name="ossrv">
+<unit unitID="sf_os_ossrv" name="ossrv" bldFile="\sf\os\ossrv\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="shortlinksrv">
+<module name="shortlinksrv">
+<component name="shortlinksrv">
+<unit unitID="sf_os_shortlinksrv" name="shortlinksrv" bldFile="\sf\os\shortlinksrv\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="textandloc">
+<module name="textandloc">
+<component name="textandloc">
+<unit unitID="sf_os_textandloc" name="textandloc" bldFile="\sf\os\textandloc\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="wlan">
+<module name="wlan">
+<component name="wlan">
+<unit unitID="sf_os_wlan" name="wlan" bldFile="\sf\os\wlan\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="xmlsrv">
+<module name="xmlsrv">
+<component name="xmlsrv">
+<unit unitID="sf_os_xmlsrv" name="xmlsrv" bldFile="\sf\os\xmlsrv\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+</logicalset>
+<logicalset name="ostools">
+<logicalsubset name="osrndtools">
+<module name="osrndtools">
+<component name="osrndtools">
+<unit unitID="sf_ostools_osrndtools" name="osrndtools" bldFile="\sf\ostools\osrndtools\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+</logicalset>
+<logicalset name="tools">
+<module name="buildplatforms">
+<component name="buildplatforms">
+<unit unitID="sf_tools_buildplatforms" name="buildplatforms" bldFile="\sf\tools\buildplatforms\group" mrp=""/>
+</component>
+</module>
+<logicalsubset name="platformtools">
+<module name="platformtools">
+<component name="platformtools">
+<unit unitID="sf_tools_platformtools" name="platformtools" bldFile="\sf\tools\platformtools\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="rndtools">
+<module name="rndtools">
+<component name="rndtools">
+<unit unitID="sf_tools_rndtools" name="rndtools" bldFile="\sf\tools\rndtools\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="swconfigtools">
+<module name="swconfigtools">
+<component name="swconfigtools">
+<unit unitID="sf_tools_swconfigtools" name="swconfigtools" bldFile="\sf\tools\swconfigtools\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+</logicalset>
+</layer>
+<layer name="ext">
+<logicalset name="mw">
+<logicalsubset name="websrvde">
+<module name="websrvde">
+<component name="websrvde">
+<unit unitID="ext_mw_websrvde" name="websrvde" bldFile="\ext\mw\websrvde\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+</logicalset>
+<logicalset name="tools">
+<logicalsubset name="oemrndtools">
+<module name="oemrndtools">
+<component name="oemrndtools">
+<unit unitID="ext_tools_oemrndtools" name="oemrndtools" bldFile="\ext\tools\oemrndtools\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="toolsextensions">
+<module name="toolsextensions">
+<component name="toolsextensions">
+<unit unitID="ext_tools_toolsextensions" name="toolsextensions" bldFile="\ext\tools\toolsextensions\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+</logicalset>
+</layer></systemModel>
+<build>
+    <option name="KEEPGOING" abldOption="-keepgoing" description="Causes make to keepgoing on errors" enable="Y"/>
+<!--    <option name="SAVESPACE" abldOption="-savespace" description="Causes the removal of intermediate files" enable="Y"/> -->
+    <target name="WINS" abldTarget="wins" description="MSVC Compiler"/>
+    <target name="WINS_REL" abldTarget="wins urel" description="MSVC Compiler"/>
+    <target name="WINS_DEB" abldTarget="wins udeb" description="MSVC Compiler"/>
+    <target name="WINSCW" abldTarget="winscw" description="CodeWarrior Compiler"/>
+    <target name="WINSCW_REL" abldTarget="winscw urel" description="CodeWarrior Compiler"/>
+    <target name="WINSCW_DEB" abldTarget="winscw udeb" description="CodeWarrior Compiler"/>
+    <target name="TOOLS" abldTarget="tools" description="MSVC Compiler for Tools"/>
+    <target name="TOOLS_REL" abldTarget="tools rel" description="MSVC Compiler for Tools Release mode only"/>
+    <target name="ARMV5" abldTarget="armv5" description="RVCT Compiler"/>
+    <target name="ARMV5_REL" abldTarget="armv5 urel" description="RVCT Compiler"/>
+    <target name="ARMV5_DEB" abldTarget="armv5 udeb" description="RVCT Compiler"/>
+    <!-- Aditional Targets -->
+    <target name="CWTOOLS" abldTarget="cwtools" description="CodeWarrior Compiler for Tools"/> <!-- Not supported -->
+    <target name="CWTOOLS_REL" abldTarget="cwtools rel" description="CodeWarrior Compiler for Tools Release mode only"/> <!-- Not supported -->
+    <targetList name="default" description="Main Targets" target="WINSCW ARMV5"/>
+    <targetList name="default_winscw" description="Main Targets" target="WINSCW"/>
+    <targetList name="default_armv5" description="Main Targets" target="ARMV5"/>
+    <targetList name="default_rel" description="Main Targets for rel" target="WINSCW_REL ARMV5_REL"/>
+    <targetList name="default_deb" description="Main Targets for deb" target="WINSCW_DEB ARMV5_DEB"/>
+    <targetList name="default_debrel" description="Main Targets for WINSCW deb and ARMV5 urel" target="WINSCW_DEB ARMV5_REL"/>
+    <targetList name="default_tools" description="tools Targets" target="TOOLS"/>
+    <targetList name="tools_rel" description="tools Release Targets" target="TOOLS_REL"/>
+    <targetList name="cwtools" description="cwtools Targets" target="CWTOOLS"/>
+    <targetList name="cwtools_rel" description="cwtools Release Targets" target="CWTOOLS_REL"/>
+		<configuration name="S60_5_1_clean" description="S60 5.1 clean build" filter="raptor_S60_5_1_clean">
+    	<unitListRef unitList="S60_COMMON_OSEXTENSION"/>
+    	<unitListRef unitList="S60_COMMON_OSEXTENSION_OEM"/>
+      <unitListRef unitList="S60_COMMON"/>
+      <unitListRef unitList="S60_OEM_BUILD"/>
+      <unitListRef unitList="S60_COMMON_OSEXTENSION_STUBS"/>
+      <unitListRef unitList="S60_COMMON_STUBS"/>
+      <unitListRef unitList="S60_BINARY_ONLY"/>
+      <task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="Y"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_tools" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld library" targetList="default_tools" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld target" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld final" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -what build" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_winscw" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default_winscw" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default_winscw" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_armv5" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default_armv5" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default_armv5" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld target" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld final" targetList="default" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld -what build" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+    </configuration>
+<!--  
+launch -what command for binary only component so thosa can be zipped  
+this configuration can be used only when those components has built among normal build
+-->
+<!--  OS Extension build configurations start  -->
+    <unitList name="S60_COMMON_OSEXTENSION" description="S60 common OSExtension">
+				<unitRef unit="sf_os_cellularsrv"/>
+        <unitRef unit="sf_os_deviceplatformrelease_S60LocFiles"/>   			
+        <unitRef unit="sf_os_deviceplatformrelease_S60Extras"/>   			
+        <unitRef unit="sf_os_deviceplatformrelease_S60Helps"/>
+        <unitRef unit="sf_os_deviceplatformrelease_Version"/>
+				<unitRef unit="sf_os_devicesrv"/>
+				<unitRef unit="sf_os_graphics"/>
+				<unitRef unit="sf_os_imagingext"/>
+				<unitRef unit="sf_os_lbs"/>
+				<unitRef unit="sf_os_mm"/>
+				<unitRef unit="sf_os_networkingsrv"/>
+				<unitRef unit="sf_os_mm_devsoundextensions_mmfdevsoundserverplatsec"/>
+				<unitRef unit="sf_os_mm_devsoundextensions_addeddevsoundcontrol"/>
+				<unitRef unit="sf_os_shortlinksrv"/>
+				<unitRef unit="sf_os_wlan"/>
+				<unitRef unit="sf_ostools_osrndtools"/>
+			</unitList>
+    <unitList name="S60_COMMON_OSEXTENSION_OEM" description="S60 common OSExtension OEM">
+				<unitRef unit="sf_os_imagingext_imagingmodules_Build"/>
+				<unitRef unit="sf_os_imagingext_imagingmodules_H264AVCVideoEncARM"/>
+				<unitRef unit="sf_os_mm_audio_AacEncoderPlugin"/>
+				<unitRef unit="sf_os_mm_audio_AmrNbCodecPlugin"/>
+				<unitRef unit="sf_os_mm_audio_AmrWbCodecPlugin"/>
+				<unitRef unit="sf_os_mm_audio_EAacPlusCodecPlugin"/>
+				<unitRef unit="sf_os_mm_audio_MP3CodecPlugin"/>
+				<unitRef unit="sf_os_mm_audio_WMADecoderPlugin"/>
+				<unitRef unit="sf_os_mm_video_ARM_MDF_Decoders"/>
+	  </unitList>
+    <unitList name="S60_COMMON" description="S60 common">
+				<unitRef unit="sf_mw_classicui"/>
+				<unitRef unit="sf_mw_accesssec"/>
+				<unitRef unit="sf_mw_appinstall"/>
+				<unitRef unit="sf_mw_appsupport"/>
+				<unitRef unit="sf_mw_camerasrv"/>
+				<unitRef unit="sf_mw_dlnasrv"/>
+				<unitRef unit="sf_mw_drm"/>
+				<unitRef unit="sf_mw_helix"/>
+				<unitRef unit="sf_mw_homescreensrv"/>
+				<unitRef unit="sf_mw_imghandling"/>
+				<unitRef unit="sf_mw_imsrv"/>
+				<unitRef unit="sf_mw_inputmethods"/>
+				<unitRef unit="sf_mw_ipappprotocols"/>
+				<unitRef unit="sf_mw_ipappsrv"/>
+				<unitRef unit="sf_mw_ipconnmgmt"/>
+				<unitRef unit="sf_mw_legacypresence"/>
+				<unitRef unit="sf_mw_locationsrv"/>
+				<unitRef unit="sf_mw_mds"/>
+				<unitRef unit="sf_mw_messagingmw"/>
+				<unitRef unit="sf_mw_metadatasrv"/>
+				<unitRef unit="sf_mw_mmappfw"/>
+				<unitRef unit="sf_mw_mmmw"/>
+				<unitRef unit="sf_mw_mmuifw"/>
+				<unitRef unit="sf_mw_mobiletv"/>
+				<unitRef unit="sf_mw_netprotocols"/>
+				<unitRef unit="sf_mw_networkingdm"/>
+				<unitRef unit="sf_mw_opensrv"/>
+				<unitRef unit="sf_mw_phonesrv"/>
+				<unitRef unit="sf_mw_remoteconn"/>
+				<unitRef unit="sf_mw_remotemgmt"/>
+				<unitRef unit="sf_mw_remotestorage"/>
+				<unitRef unit="sf_mw_securitysrv"/>
+				<unitRef unit="sf_mw_serviceapi"/>
+				<unitRef unit="sf_mw_serviceapifw"/>
+				<unitRef unit="sf_mw_shortlinkconn"/>
+				<unitRef unit="sf_mw_svgt"/>
+				<unitRef unit="sf_mw_uiaccelerator"/>
+				<unitRef unit="sf_mw_uiresources"/>
+				<unitRef unit="sf_mw_uitools"/>
+				<unitRef unit="sf_mw_videoutils"/>
+				<unitRef unit="sf_mw_web"/>
+				<unitRef unit="sf_mw_websrv"/>
+				<unitRef unit="sf_mw_wirelessacc"/>
+				<unitRef unit="sf_app_camera"/>
+				<unitRef unit="sf_app_conntools"/>
+				<unitRef unit="sf_app_screensaver"/>
+				<unitRef unit="sf_app_contacts"/>
+				<unitRef unit="sf_app_contentcontrol"/>
+				<unitRef unit="sf_app_conversations"/>
+				<unitRef unit="sf_app_devicecontrol"/>
+				<unitRef unit="sf_app_dictionary"/>
+				<unitRef unit="sf_app_files"/>
+				<unitRef unit="sf_app_graphicsuis"/>
+				<unitRef unit="sf_app_helps"/>
+				<unitRef unit="sf_app_homescreen"/>
+				<unitRef unit="sf_app_im"/>
+				<unitRef unit="sf_app_imgeditor"/>
+				<unitRef unit="sf_app_imgvieweruis"/>
+				<unitRef unit="sf_app_iptelephony"/>
+				<unitRef unit="sf_app_location"/>
+				<unitRef unit="sf_app_messaging"/>
+				<unitRef unit="sf_app_mmsharinguis"/>
+				<unitRef unit="sf_app_musicplayer"/>
+				<unitRef unit="sf_app_organizer"/>
+				<unitRef unit="sf_app_phone"/>
+				<unitRef unit="sf_app_photos"/>
+				<unitRef unit="sf_app_poc"/>
+				<unitRef unit="sf_app_profile"/>
+				<unitRef unit="sf_app_settingsuis"/>
+				<unitRef unit="sf_app_speechsrv"/>
+				<unitRef unit="sf_app_utils"/>
+				<unitRef unit="sf_app_videoeditor"/>
+				<unitRef unit="sf_app_videoplayer"/>
+				<unitRef unit="sf_app_videocenter"/>
+				<unitRef unit="sf_app_videotelephony"/>
+				<unitRef unit="sf_app_voicerec"/>
+				<unitRef unit="sf_app_webuis"/>
+				<unitRef unit="sf_os_textandloc"/>
+				<unitRef unit="sf_os_xmlsrv"/>
+				<unitRef unit="sf_os_ossrv"/>
+				<unitRef unit="sf_tools_buildplatforms"/>
+				<!--unitRef unit="sf_tools_build_s60"/>
+				<unitRef unit="sf_tools_makefile_templates"/-->
+				<unitRef unit="sf_tools_platformtools"/>
+				<!--unitRef unit="sf_tools_platsim"/-->
+				<unitRef unit="sf_tools_rndtools"/>
+				<unitRef unit="sf_tools_swconfigtools"/>
+				<unitRef unit="ext_mw_websrvde"/>
+				<unitRef unit="ext_tools_oemrndtools"/>
+				<unitRef unit="sf_tools_themeinstaller"/>
+				<unitRef unit="ext_tools_toolsextensions"/>
+				<unitRef unit="sf_app_commonemail"/>
+				<unitRef unit="sf_app_radio"/>
+				<unitRef unit="sf_app_printing"/>
+				<unitRef unit="sf_mw_hapticsservices"/>
+				<unitRef unit="sf_app_gallery"/>
+    </unitList>
+    <unitList name="S60_OEM_BUILD" description="S60 OEM build">
+				<unitRef unit="sf_mw_mmmw_mtp"/>
+				<unitRef unit="sf_mw_helix"/>
+				<unitRef unit="sf_mw_helix_helix_ren_src"/>
+				<unitRef unit="sf_mw_securitysrv_pkiutilities_Certificates_OEM"/>
+				<unitRef unit="sf_mw_shortlinkconn_usbclasses_usbosdescriptorhandler"/>
+				<unitRef unit="sf_app_videotelephony_packetvideoengine_PacketVideoEngineBinaries"/>
+				<unitRef unit="sf_app_videotelephony_vtprotocols"/>
+				<unitRef unit="sf_os_graphics_graphicsaccelaration"/>
+				<unitRef unit="sf_os_graphics_graphics_pub"/>
+				<unitRef unit="sf_app_java"/>
+				<unitRef unit="sf_mw_appsupport_appsupport_plat_flash_mmi_service_interface_custom_api"/>
+				<unitRef unit="sf_mw_appsupport_appsupport_plat_flash_netscape_plugin_command_api"/>
+    </unitList>
+    <unitList name="S60_COMMON_OSEXTENSION_STUBS" description="S60 common OSExtension">
+    	<unitRef unit="sf_adaptation_stubs_licensee_tsy_stub"/>
+    	<unitRef unit="sf_adaptation_stubs_simatk_tsy_stub"/>
+    	<unitRef unit="sf_adaptation_stubs_audiostubs"/>
+    	<unitRef unit="sf_adaptation_stubs_wlanhwinit_stub"/>
+			<unitRef unit="sf_adaptation_stubs_systemswstubs"/>
+    </unitList>
+    <unitList name="S60_COMMON_STUBS" description="S60 common adaptation stubs">
+			<unitRef unit="sf_adaptation_stubs_btaudioadaptation_stub"/>
+			<unitRef unit="sf_adaptation_stubs_drm_stubs"/>
+			<unitRef unit="sf_adaptation_stubs_posmsgpluginreferenceimpl"/>
+			<unitRef unit="sf_adaptation_stubs_srsfenginestub"/>
+			<unitRef unit="sf_adaptation_stubs_ocrsrv_stub"/>
+			<unitRef unit="sf_adaptation_stubs_power_save_display_mode_stub"/>
+			<unitRef unit="sf_adaptation_stubs_tactileclickplugin_stub"/>
+			<unitRef unit="sf_adaptation_stubs_omasuplasnconverterstubimpl"/>			
+    </unitList>
+<!--    
+binary only are components that sources can not be delivered for all lisencees
+but components should be built in S60 platform builds
+-->
+    <unitList name="S60_BINARY_ONLY" description="S60 build binary only components">
+      <!--<unitRef unit="sf_os_wlan_wlan_bearer_wlanengine_symbian_3.1"/>-->
+      <unitRef unit="sf_mw_accesssec_eapol_eapol_symbian_ccxeapol"/>
+      <unitRef unit="sf_mw_helix_helix_ren_src"/>
+    </unitList>
+    <!--
+    extra components need to be build in winscw build
+    -->
+  </build></SystemDefinition>
