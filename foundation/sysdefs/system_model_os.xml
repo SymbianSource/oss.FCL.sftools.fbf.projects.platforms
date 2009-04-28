@@ -12,7 +12,7 @@
     </collection>
     <collection name="brdbootldr" long-name="Board Boot Loader" level="hw-if">
      <component name="ubootldr" long-name="Boot Loader" introduced="9.2">
-      <unit mrp="os\kernelhwsrv\brdbootldr\ubootldr\base_ubootldr.mrp"/>
+      <unit mrp="os/kernelhwsrv/brdbootldr/ubootldr/base_ubootldr.mrp"/>
      </component>
     </collection>
     <collection name="filesystems" long-name="File Systems" level="framework">
@@ -37,7 +37,7 @@
             <unit bldFile="os\kernelhwsrv\userlibandfileserver\fileserver\srofs" mrp="os\kernelhwsrv\userlibandfileserver\fileserver\srofs\base_f32_srofs.mrp"/>
      </component>
      <component name="romfs" long-name="ROM File System" filter="gt" plugin="Y">
-      <unit mrp="os\kernelhwsrv\userlibandfileserver\fileserver\srom\base_f32_srom.mrp"/>
+      <unit mrp="os/kernelhwsrv/userlibandfileserver/fileserver/srom/base_f32_srom.mrp"/>
      </component>
      <component name="usbmsfs" long-name="USB Mass Storage File System" filter="gt" plugin="Y">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -48,7 +48,7 @@
      <component name="uiibootsupport" long-name="UniStore2 Boot Support" filter="gt" introduced="9.1">
      </component>
      <component name="uiicore" long-name="UniStore2 Core" filter="gt" introduced="9.1">
-      <unit mrp="os\kernelhwsrv\kernel\eka\drivers\unistore2\base_drivers_unistore2_undeliverable.mrp"/>
+      <unit mrp="os/kernelhwsrv/kernel/eka/drivers/unistore2/base_drivers_unistore2_undeliverable.mrp"/>
      </component>
      <component name="uiicrashlogger" long-name="UniStore2 Crash Logger" filter="gt" introduced="9.1">
      </component>
@@ -68,8 +68,6 @@
      </component>
      <component name="mediadrivers" long-name="Media Drivers">
       <!-- these are for storage media -->
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\media" mrp="os\kernelhwsrv\kernel\eka\drivers\media\base_e32_drivers_media.mrp"/>
      </component>
      <component name="sdcard3c" long-name="SD Card 3C Driver" filter="gt" introduced="9.1">
      </component>
@@ -90,8 +88,6 @@
     </collection>
     <collection name="kerneltest" long-name="Kernel Test" level="hw-if">
      <component name="e32test" long-name="E32 Tests" class="test">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\kernelhwsrv\kerneltest\e32test\group" mrp="os\kernelhwsrv\kerneltest\e32test\group\base_e32test.mrp"/>
      </component>
      <component name="e32utils" long-name="E32 Utilities">
      </component>
@@ -116,7 +112,7 @@
             <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\trace" mrp="os\kernelhwsrv\kernel\eka\drivers\trace\base_e32_drivers_trace.mrp"/>
      </component>
      <component name="legacydrivers" long-name="Legacy Drivers">
-      <unit mrp="os\kernelhwsrv\kernel\eka\drivers\adc\base_e32_drivers_adc.mrp"/>
+      <unit mrp="os/kernelhwsrv/kernel/eka/drivers/adc/base_e32_drivers_adc.mrp"/>
      </component>
      <component name="locmedia" long-name="Local Media Subsystem" introduced="8.1b">
       <!-- these are LDDs for storage media -->
@@ -148,15 +144,13 @@
     </collection>
     <collection name="userlibandfileserver" long-name="User Library and File Server" level="framework">
      <component name="basedocs" long-name="Base Documentation">
-      <unit mrp="os\kernelhwsrv\userlibandfileserver\basedocs\base_documentation.mrp"/>
+      <unit mrp="os/kernelhwsrv/userlibandfileserver/basedocs/base_documentation.mrp"/>
      </component>
      <component name="estart" long-name="Base Starter" filter="gt">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os\kernelhwsrv\userlibandfileserver\fileserver\estart" mrp="os\kernelhwsrv\userlibandfileserver\fileserver\estart\base_f32_estart.mrp"/>
      </component>
      <component name="compsupp" long-name="Compiler Runtime Support" filter="gt">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\kernelhwsrv\kernel\eka\compsupp" mrp="os\kernelhwsrv\kernel\eka\compsupp\base_e32_compsupp.mrp"/>
      </component>
      <component name="domainmgr" long-name="Domain Manager" introduced="8.1b">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -214,14 +208,10 @@
    <block long-name="Generic OS Services" level="services" name="ossrv" levels="physical-abstraction app-libs encoding translation data-services utilities">
     <collection name="compressionlibs" long-name="Compression Libraries" level="data-services">
      <component name="ziplib" long-name="Zip Compression Library" introduced="6.0">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\ossrv\compressionlibs\ziplib\group" mrp="os\ossrv\compressionlibs\ziplib\group\syslibs_ezlib.mrp"/>
      </component>
     </collection>
     <collection name="genericopenlibs" long-name="Generic Open Libraries" level="translation">
      <component name="cstdlib" long-name="C Standard Library" introduced="ER5">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\ossrv\genericopenlibs\cstdlib\group" mrp="os\ossrv\genericopenlibs\cstdlib\group\syslibs_stdlib.mrp"/>
      </component>
      <component name="openenvcore" long-name="Open Environment Core" introduced="tb91">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -246,7 +236,7 @@
             <unit version="9.4" bldFile="os\ossrv\genericservices\s60compatibilityheaders\group94" mrp="os\ossrv\genericservices\s60compatibilityheaders\group94\tools_s60_header_compat94.mrp"/>
      </component>
      <component name="syslibsdocs" long-name="Syslibs Documentation" class="doc">
-      <unit mrp="os\ossrv\genericservices\syslibsdocs\syslibs_documentation.mrp"/>
+      <unit mrp="os/ossrv/genericservices/syslibsdocs/syslibs_documentation.mrp"/>
      </component>
      <component name="systemagent" long-name="System Agent" introduced="9.0">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -264,7 +254,7 @@
      </component>
      <component name="pluginfw" long-name="Plugin Framework" introduced="6.2">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit version="2" bldFile="os\ossrv\lowlevellibsandfws\pluginfw\Group" mrp="os\ossrv\lowlevellibsandfws\pluginfw\group\syslibs_ecom.mrp"/>
+            <unit version="2" bldFile="os\ossrv\lowlevellibsandfws\pluginfw\Group" mrp="os\ossrv\lowlevellibsandfws\pluginfw\Group\syslibs_ecom.mrp"/>
      </component>
     </collection>
     <collection name="syslibsapitest" long-name="SysLibs API Tests" level="utilities">
@@ -313,18 +303,12 @@
     <collection name="authenticationservices" long-name="Authentication Services" level="utilities"/>
     <collection name="authorisation" long-name="Authorisation" level="utilities">
      <component name="userpromptservice" long-name="User Prompt Service" introduced="tb92">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\security\authorisation\userpromptservice\group" mrp="os\security\authorisation\userpromptservice\group\security_ups.mrp"/>
      </component>
     </collection>
     <collection name="contentmgmt" long-name="Content Management" level="utilities">
      <component name="cafrecogniserconfig" long-name="CAF Recogniser Config" introduced="9.1">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\security\contentmgmt\cafrecogniserconfig" mrp="os\security\contentmgmt\cafrecogniserconfig\security_reccafconfig.mrp"/>
      </component>
      <component name="cafstreamingsupport" long-name="CAF Streaming Support" introduced="tb92">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\security\contentmgmt\cafstreamingsupport\group" mrp="os\security\contentmgmt\cafstreamingsupport\group\security_streamingcaf.mrp"/>
      </component>
      <component name="contentaccessfwfordrm" long-name="Content Access Framework for DRM" introduced="9.1">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -333,20 +317,14 @@
     </collection>
     <collection name="crypto" long-name="Crypto Libraries" level="libraries">
      <component name="strongcryptospi" long-name="Strong Crypto SPI" filter="gt" introduced="tb92">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\security\crypto\weakcryptospi\strong" mrp="os\security\crypto\weakcryptospi\group\security_cryptospi_strong.mrp"/>
      </component>
      <component name="strongcrypto" long-name="Strong Cryptography Library" filter="gt">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os\security\crypto\weakcrypto\strong" mrp="os\security\crypto\weakcrypto\group\security_crypto_strong.mrp"/>
      </component>
      <component name="weakcryptospi" long-name="Weak Crypto SPI" filter="gt" introduced="tb92">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\security\crypto\weakcryptospi\group" mrp="os\security\crypto\weakcryptospi\group\security_cryptospi_weak.mrp"/>
      </component>
      <component name="weakcrypto" long-name="Weak Cryptography Library" filter="gt">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\security\crypto\weakcrypto\group" mrp="os\security\crypto\weakcrypto\group\security_crypto_weak.mrp"/>
      </component>
     </collection>
     <collection name="cryptomgmtlibs" long-name="Crypto Management Libraries" level="management">
@@ -355,14 +333,12 @@
             <unit bldFile="os\security\cryptomgmtlibs\cryptotokenfw\group" mrp="os\security\cryptomgmtlibs\cryptotokenfw\group\security_cryptotokens.mrp"/>
      </component>
      <component name="securitycommonutils" long-name="Security Common Utils" introduced="8.0">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\security\cryptomgmtlibs\securitycommonutils\group" mrp="os\security\cryptomgmtlibs\securitycommonutils\group\security_commonutils.mrp"/>
      </component>
      <component name="securitydocs" long-name="Security Documentation">
-      <unit mrp="os\security\cryptomgmtlibs\securitydocs\security_documentation.mrp"/>
+      <unit mrp="os/security/cryptomgmtlibs/securitydocs/security_documentation.mrp"/>
      </component>
      <component name="securitytestfw" long-name="Security Test Framework" introduced="7.0" class="test" deprecated="tb92">
-      <unit mrp="os\security\cryptomgmtlibs\securitytestfw\group\security_testframework.mrp"/>
+      <unit mrp="os/security/cryptomgmtlibs/securitytestfw/group/security_testframework.mrp"/>
      </component>
      <component name="securityutils" long-name="Security Utils" introduced="8.0">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -371,8 +347,6 @@
     </collection>
     <collection name="cryptoplugins" long-name="Crypto Plugins" level="plugins">
      <component name="cryptospiplugins" long-name="Crypto SPI Plugins" filter="gt" plugin="Y" introduced="tb92">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\security\cryptoplugins\cryptospiplugins\group" mrp="os\security\cryptoplugins\cryptospiplugins\group\security_cryptospi_plugins.mrp"/>
      </component>
     </collection>
     <collection name="cryptoservices" long-name="Crypto Services" level="plugins">
@@ -389,7 +363,7 @@
             <unit bldFile="os\security\cryptoservices\filebasedcertificateandkeystores\group" mrp="os\security\cryptoservices\filebasedcertificateandkeystores\group\security_filetokens.mrp"/>
      </component>
      <component name="rootcertificates" long-name="Root Certificates" introduced="7.0s">
-      <unit mrp="os\security\cryptoservices\rootcertificates\rootcerts.mrp"/>
+      <unit mrp="os/security/cryptoservices/rootcertificates/rootcerts.mrp"/>
      </component>
     </collection>
     <collection name="securityanddataprivacytools" long-name="Security and Data Privacy Tools" level="services">
@@ -433,7 +407,7 @@
      </component>
      <component name="sql" long-name="SQL" introduced="9.3">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\persistentdata\persistentstorage\sql\GROUP" mrp="os\persistentdata\persistentstorage\sql\group\syslibs_sql.mrp"/>
+            <unit bldFile="os\persistentdata\persistentstorage\sql\GROUP" mrp="os\persistentdata\persistentstorage\sql\GROUP\syslibs_sql.mrp"/>
      </component>
      <component name="store" long-name="Store">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -456,8 +430,6 @@
     </collection>
     <collection name="featuremgmt" long-name="Feature Management" level="framework">
      <component name="featuremgr" long-name="Feature Manager" introduced="tb92">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\persistentdata\featuremgmt\featuremgr\group" mrp="os\persistentdata\featuremgmt\featuremgr\group\syslibs_featmgr.mrp"/>
      </component>
      <component name="featureregistry" long-name="Feature Registry" introduced="9.2" deprecated="Future">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -651,7 +623,7 @@
     </collection>
     <collection name="lbstest" long-name="Locating Services Tests" level="application-interface">
      <component name="lbstestproduct" long-name="LBS Test Product" introduced="9.2" class="test">
-      <unit mrp="os\lbs\lbstest\lbstestproduct\group\lbs_testproduct.mrp"/>
+      <unit mrp="os/lbs/lbstest/lbstestproduct/group/lbs_testproduct.mrp"/>
      </component>
      <component name="locationprotocoltest" long-name="Location Protocol Tests" plugin="Y" introduced="9.2">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -692,7 +664,7 @@
     </collection>
     <collection name="commsfwtools" long-name="Comms Framework Tools" level="app-if">
      <component name="commstools" long-name="Comms Tools" introduced="tb91" class="PC">
-      <unit mrp="os\commsfw\commsfwtools\commstools\group\comms-infras_tools.mrp"/>
+      <unit mrp="os/commsfw/commsfwtools/commstools/group/comms-infras_tools.mrp"/>
      </component>
      <component name="installdefaultcommsdatabase" long-name="Install Default Comms Database" class="PC">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -709,7 +681,7 @@
             <unit bldFile="os\commsfw\commsprocess\commsrootserverconfig\group" mrp="os\commsfw\commsprocess\commsrootserverconfig\group\comms-infras_rootserver.mrp"/>
      </component>
      <component name="commsrootserverconfig" long-name="Comms Root Server Config" introduced="9.1" class="config">
-      <unit mrp="os\commsfw\commsprocess\commsrootserverconfig\group\comms-infras_rootserver-config.mrp"/>
+      <unit mrp="os/commsfw/commsprocess/commsrootserverconfig/group/comms-infras_rootserver-config.mrp"/>
      </component>
     </collection>
     <collection name="commsinfrastructureapitest" long-name="Comms-Infras API Tests" level="app-if">
@@ -721,7 +693,8 @@
             <unit version="2" bldFile="os\commsfw\datacommsserver\esockserver\group" mrp="os\commsfw\datacommsserver\esockserver\group\comms-infras_esock.mrp"/>
      </component>
      <component name="esockserverconfig" long-name="ESock Server Config" introduced="9.1" class="config">
-      <unit version="2" mrp="os\commsfw\datacommsserver\esockserver\group\comms-infras_esock-config.mrp"/>
+      <unit version="2" mrp="os/commsfw/datacommsserver/esockserver/group/comms-infras_esock-config.mrp"/>
+      <unit version="3" mrp="os/unref/orphan/comgen/comms-infras/esock/group/comms-infras_esock-config.mrp"/>
      </component>
      <component name="networkcontroller" long-name="Network Controller" plugin="Y" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -736,8 +709,6 @@
             <unit bldFile="os\commsfw\datacommsserver\networkingdialogapi\group" mrp="os\commsfw\datacommsserver\networkingdialogapi\group\networking_dialog.mrp"/>
      </component>
      <component name="networkingdialogstub" long-name="Networking Dialog Stub" introduced="6.1">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\commsfw\datacommsserver\networkingdialogapi\default" mrp="os\commsfw\datacommsserver\networkingdialogapi\default\networking_dialog_default.mrp"/>
      </component>
     </collection>
     <collection name="serialserver" long-name="Serial Server" level="server">
@@ -750,11 +721,11 @@
             <unit bldFile="os\commsfw\serialserver\c32serialserverconfig" mrp="os\commsfw\serialserver\c32serialserverconfig\ser-comms_c32-config.mrp"/>
      </component>
      <component name="c32serialserverdocs" long-name="C32 Serial Server Documentation">
-      <unit mrp="os\commsfw\serialserver\c32serialserverdocs\ser-comms_documentation.mrp"/>
+      <unit mrp="os/commsfw/serialserver/c32serialserverdocs/ser-comms_documentation.mrp"/>
      </component>
      <component name="packetloopbackcsy" long-name="Packet Loopback CSY" introduced="8.1" class="test">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\commsfw\serialserver\packetloopbackcsy\group" mrp="os\commsfw\serialserver\packetloopbackcsy\group\packetloopbackcsy.mrp"/>
+            <unit bldFile="os\commsfw\serialserver\packetloopbackcsy\group" mrp="os\commsfw\serialserver\packetloopbackcsy\group\PacketLoopbackCSY.mrp"/>
      </component>
      <component name="serialportcsy" long-name="Serial Port CSY" class="placeholder" plugin="Y" introduced="ER5">
       <!-- placeholder for ser-comms_serialportcsy, currently built by C32 -->
@@ -762,7 +733,7 @@
     </collection>
     <collection name="commsfw_info" long-name="Comms Framework Info" level="app-if">
      <component name="commsinfrastructuredocs" long-name="Comms Infrastructure Documentation" introduced="7.0" class="doc">
-      <unit mrp="os\commsfw\commsfw_info\commsinfrastructuredocs\comms-infras_documentation.mrp"/>
+      <unit mrp="os/commsfw/commsfw_info/commsinfrastructuredocs/comms-infras_documentation.mrp"/>
      </component>
     </collection>
     <collection name="commsfwsupport" long-name="Comms Framework Support" level="support">
@@ -787,18 +758,15 @@
     </collection>
     <collection name="linklayerprotocols" long-name="Link Layer Protocols" level="hw-if">
      <component name="ethernetnif" long-name="Ethernet NIF" plugin="Y">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\networkingsrv\linklayerprotocols\ethernetnif\group" mrp="os\networkingsrv\linklayerprotocols\ethernetnif\group\networking_ether802.mrp"/>
      </component>
      <component name="ethernetpacketdriver" long-name="Ethernet Packet Driver" plugin="Y" introduced="7.0">
-      <unit mrp="os\networkingsrv\linklayerprotocols\ethernetpacketdriver\group\networking_etherdrv_srconly.mrp"/>
+      <unit mrp="os/networkingsrv/linklayerprotocols/ethernetpacketdriver/group/networking_etherdrv_srconly.mrp"/>
      </component>
      <component name="pppconfig" long-name="PPP Config" introduced="ER5">
-      <unit version="1" mrp="os\networkingsrv\linklayerprotocols\pppnif\group\networking_ppp-config.mrp"/>
+      <unit version="1" mrp="os/networkingsrv/linklayerprotocols/pppnif/group/networking_ppp-config.mrp"/>
+      <unit version="2" mrp="os/unref/orphan/comgen/networking/ppp/group/networking_ppp-config.mrp"/>
      </component>
      <component name="pppnif" long-name="PPP NIF" plugin="Y" introduced="ER5">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit version="1" bldFile="os\networkingsrv\linklayerprotocols\pppnif\group" mrp="os\networkingsrv\linklayerprotocols\pppnif\group\networking_ppp.mrp"/>
      </component>
      <component name="slipnif" long-name="SLIP NIF" plugin="Y">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -825,31 +793,25 @@
             <unit bldFile="os\networkingsrv\networkcontrol\ipcprshim\group" mrp="os\networkingsrv\networkcontrol\ipcprshim\group\networking_shimcpr.mrp"/>
      </component>
      <component name="ipnetworklayer" long-name="IP Network Layer" plugin="Y" introduced="tb92">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\networkingsrv\networkcontrol\ipnetworklayer\group" mrp="os\networkingsrv\networkcontrol\ipnetworklayer\group\networking_ipproto.mrp"/>
      </component>
      <component name="ipscpr" long-name="IP SCPR" plugin="Y" introduced="9.1">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os\networkingsrv\networkcontrol\ipscpr\group" mrp="os\networkingsrv\networkcontrol\ipscpr\group\networking_ipscpr.mrp"/>
      </component>
      <component name="iptransportlayer" long-name="IP Transport Layer" plugin="Y">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\networkingsrv\networkcontrol\iptransportlayer\group" mrp="os\networkingsrv\networkcontrol\iptransportlayer\group\networking_iptransport.mrp"/>
      </component>
      <component name="pfqoslib" long-name="PF QoS Library" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os\networkingsrv\networkcontrol\pfqoslib\group" mrp="os\networkingsrv\networkcontrol\pfqoslib\group\networking_pfqoslib.mrp"/>
      </component>
      <component name="qosfwconfig" long-name="QoS Framework Config" introduced="7.0s" class="config">
-      <unit mrp="os\networkingsrv\networkcontrol\qosfwconfig\qos\group\networking_qos-config.mrp"/>
+      <unit mrp="os/networkingsrv/networkcontrol/qosfwconfig/qos/group/networking_qos-config.mrp"/>
      </component>
      <component name="qosfwprt" long-name="QoS Framework PRT" plugin="Y" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os\networkingsrv\networkcontrol\qosfwconfig\qos\group" mrp="os\networkingsrv\networkcontrol\qosfwconfig\qos\group\networking_qos.mrp"/>
      </component>
      <component name="qosipscpr" long-name="QoS IP SCPR" plugin="Y">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\networkingsrv\networkcontrol\qosipscpr\group" mrp="os\networkingsrv\networkcontrol\qosipscpr\group\networking_qosipscpr.mrp"/>
      </component>
      <component name="qoslib" long-name="QoS Library" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -869,40 +831,34 @@
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os\networkingsrv\networkprotocols\mobileip\group" mrp="os\networkingsrv\networkprotocols\mobileip\group\networking_mobileip.mrp"/>
      </component>
-     <component name="tcpipv4v6prt" long-name="tcp\ipv4\v6 PRT" plugin="Y" introduced="7.0">
+     <component name="tcpipv4v6prt" long-name="TCP/IPv4/v6 PRT" plugin="Y" introduced="7.0">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os\networkingsrv\networkprotocols\tcpipv4v6prt\group" mrp="os\networkingsrv\networkprotocols\tcpipv4v6prt\group\networking_tcpip6.mrp"/>
      </component>
-     <component name="tcpipv4config" long-name="tcp\ipv4\v6 Config" introduced="7.0" class="config">
-      <unit mrp="os\networkingsrv\networkprotocols\tcpipv4v6prt\group\networking_tcpip6-config.mrp"/>
+     <component name="tcpipv4config" long-name="TCP/IPv4/v6 Config" introduced="7.0" class="config">
+      <unit mrp="os/networkingsrv/networkprotocols/tcpipv4v6prt/group/networking_tcpip6-config.mrp"/>
      </component>
     </collection>
     <collection name="networksecurity" long-name="Network Security" level="framework">
      <component name="ipsec" long-name="IPsec" introduced="7.0">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\networkingsrv\networksecurity\ipsec\group" mrp="os\networkingsrv\networksecurity\ipsec\group\networking_ipsec.mrp"/>
      </component>
      <component name="tls" long-name="TLS" introduced="6.0">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\networkingsrv\networksecurity\tls\group" mrp="os\networkingsrv\networksecurity\tls\group\networking_tls.mrp"/>
      </component>
      <component name="tlsprovider" long-name="TLS Provider" introduced="8.1">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\networkingsrv\networksecurity\tlsprovider\group" mrp="os\networkingsrv\networksecurity\tlsprovider\group\security_tlsprovider.mrp"/>
      </component>
     </collection>
     <collection name="networkingtestandutils" long-name="Networking Test and Utils" level="app-if">
      <component name="exampleinternetutilities" long-name="Example Internet Utilities" introduced="ER5">
-      <unit mrp="os\networkingsrv\networkingtestandutils\exampleinternetutilities\group\networking_inetutil.mrp"/>
+      <unit mrp="os/networkingsrv/networkingtestandutils/exampleinternetutilities/group/networking_inetutil.mrp"/>
      </component>
      <component name="ipanalyzer" long-name="IP Analyzer" introduced="7.0" deprecated="tb92">
-      <unit mrp="os\networkingsrv\networkingtestandutils\ipanalyzer\group\networking_iprotor.mrp"/>
+      <unit mrp="os/networkingsrv/networkingtestandutils/ipanalyzer/group/networking_iprotor.mrp"/>
      </component>
      <component name="ipprobe" long-name="IP Probe" plugin="Y" introduced="7.0s">
-      <unit mrp="os\networkingsrv\networkingtestandutils\ipprobe\group\networking_probe.mrp"/>
+      <unit mrp="os/networkingsrv/networkingtestandutils/ipprobe/group/networking_probe.mrp"/>
      </component>
      <component name="ipv6to4tunnel" long-name="IPv6 to 4 Tunnel" plugin="Y">
-      <unit mrp="os\networkingsrv\networkingtestandutils\ipv6to4tunnel\group\networking_6to4.mrp"/>
+      <unit mrp="os/networkingsrv/networkingtestandutils/ipv6to4tunnel/group/networking_6to4.mrp"/>
      </component>
      <component name="networkingexamples" long-name="Networking Examples" introduced="7.0">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -910,10 +866,10 @@
      </component>
      <component name="networkingintegrationtest" long-name="Networking Integration Test" introduced="ER5" class="test">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\networkingsrv\networkingtestandutils\networkingintegrationtest\Group" mrp="os\networkingsrv\networkingtestandutils\networkingintegrationtest\group\networking_integrationtest.mrp"/>
+            <unit bldFile="os\networkingsrv\networkingtestandutils\networkingintegrationtest\Group" mrp="os\networkingsrv\networkingtestandutils\networkingintegrationtest\Group\networking_integrationtest.mrp"/>
      </component>
      <component name="networkingunittest" long-name="Networking Unit Test" introduced="7.0" class="test">
-      <unit mrp="os\networkingsrv\networkingtestandutils\networkingunittest\group\networking_unittest.mrp"/>
+      <unit mrp="os/networkingsrv/networkingtestandutils/networkingunittest/group/networking_unittest.mrp"/>
      </component>
     </collection>
     <collection name="pppcompressionplugins" long-name="PPP Compression Plugins" level="plugin">
@@ -928,13 +884,13 @@
     </collection>
     <collection name="networkingsrv_info" long-name="Networking Services Info" level="app-if">
      <component name="networkingdocs" long-name="Networking Documentation" class="doc">
-      <unit mrp="os\networkingsrv\networkingsrv_info\networkingdocs\networking_documentation.mrp"/>
+      <unit mrp="os/networkingsrv/networkingsrv_info/networkingdocs/networking_documentation.mrp"/>
      </component>
      <component name="networkingrom" long-name="Networking ROM">
       <!--  production component: contains the IBY files -->
      </component>
     </collection>
-    <collection name="tcpiputils" long-name="tcp\ip Utilities" level="plugin">
+    <collection name="tcpiputils" long-name="TCP/IP Utilities" level="plugin">
      <component name="dhcp" long-name="DHCP" introduced="8.0">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os\networkingsrv\tcpiputils\dhcp\group" mrp="os\networkingsrv\tcpiputils\dhcp\group\networking_dhcp.mrp"/>
@@ -944,7 +900,7 @@
             <unit bldFile="os\networkingsrv\tcpiputils\dnd\group" mrp="os\networkingsrv\tcpiputils\dnd\group\networking_dnd.mrp"/>
      </component>
      <component name="dndconfig" long-name="DND Config" introduced="7.0" class="config">
-      <unit mrp="os\networkingsrv\tcpiputils\dnd\group\networking_dnd-config.mrp"/>
+      <unit mrp="os/networkingsrv/tcpiputils/dnd/group/networking_dnd-config.mrp"/>
      </component>
      <component name="networkaddressandporttranslation" long-name="Network Address and Port Translation" plugin="Y" introduced="tb91">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -981,14 +937,12 @@
             <unit bldFile="os\cellularsrv\basebandadaptationplugins\basebandchanneladaptorforc32\group" mrp="os\cellularsrv\basebandadaptationplugins\basebandchanneladaptorforc32\group\networking_c32bca.mrp"/>
      </component>
      <component name="basebandchanneladaptorforisc" long-name="Baseband Channel Adaptor for ISC" plugin="Y">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\cellularsrv\basebandadaptationplugins\basebandchanneladaptorforisc\group" mrp="os\cellularsrv\basebandadaptationplugins\basebandchanneladaptorforisc\group\networking_bcatoisc.mrp"/>
      </component>
     </collection>
     <collection name="fax" long-name="Fax" level="server">
      <component name="faxclientandserver" long-name="Fax Client and Server">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\cellularsrv\fax\faxclientandserver\Group" mrp="os\cellularsrv\fax\faxclientandserver\group\telephony_fax.mrp"/>
+            <unit bldFile="os\cellularsrv\fax\faxclientandserver\Group" mrp="os\cellularsrv\fax\faxclientandserver\Group\telephony_fax.mrp"/>
      </component>
     </collection>
     <collection name="hwpluginsimulation" long-name="Hardware Plugin Simulation" level="adaptation">
@@ -1010,17 +964,15 @@
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os\cellularsrv\telephonyprotocols\csdagt\group" mrp="os\cellularsrv\telephonyprotocols\csdagt\group\networking_csdagt.mrp"/>
      </component>
-     <component name="gprsumtsqosinterface" long-name="gprs\umts QoS Interface" plugin="Y" introduced="7.0s">
+     <component name="gprsumtsqosinterface" long-name="GPRS/UMTS QoS Interface" plugin="Y" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os\cellularsrv\telephonyprotocols\gprsumtsqosinterface\group" mrp="os\cellularsrv\telephonyprotocols\gprsumtsqosinterface\group\networking_umtsif.mrp"/>
      </component>
-     <component name="gprsumtsqosprt" long-name="gprs\umts QoS PRT" plugin="Y" introduced="7.0s">
+     <component name="gprsumtsqosprt" long-name="GPRS/UMTS QoS PRT" plugin="Y" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os\cellularsrv\telephonyprotocols\gprsumtsqosprt\group" mrp="os\cellularsrv\telephonyprotocols\gprsumtsqosprt\group\networking_guqos.mrp"/>
      </component>
      <component name="pdplayer" long-name="PDP Layer" plugin="Y" introduced="tb92">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\cellularsrv\telephonyprotocols\pdplayer\group" mrp="os\cellularsrv\telephonyprotocols\pdplayer\group\networking_pdp.mrp"/>
      </component>
      <component name="psdagt" long-name="PSD AGT" plugin="Y" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -1042,7 +994,7 @@
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os\cellularsrv\telephonyprotocols\secondarypdpcontextumtsdriver\group" mrp="os\cellularsrv\telephonyprotocols\secondarypdpcontextumtsdriver\group\networking_spud.mrp"/>
      </component>
-     <component name="umtsgprsscpr" long-name="umts\gprs SCPR" plugin="Y" introduced="8.1">
+     <component name="umtsgprsscpr" long-name="UMTS/GPRS SCPR" plugin="Y" introduced="8.1">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os\cellularsrv\telephonyprotocols\umtsgprsscpr\group" mrp="os\cellularsrv\telephonyprotocols\umtsgprsscpr\group\networking_UmtsGprsSCPR.mrp"/>
      </component>
@@ -1052,7 +1004,7 @@
      <component name="etelcdma" long-name="ETel CDMA" introduced="7.0s">
      </component>
      <component name="etelconfig" long-name="ETel Config">
-      <unit mrp="os\cellularsrv\telephonyserver\etelserverandcore\group\telephony_etel-config.mrp"/>
+      <unit mrp="os/cellularsrv/telephonyserver/etelserverandcore/group/telephony_etel-config.mrp"/>
      </component>
      <component name="etelmultimode" long-name="ETel Multimode" introduced="7.0">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -1096,7 +1048,7 @@
      </component>
      <component name="etel3rdpartyapi" long-name="ETel 3rd Party API" introduced="7.0">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\cellularsrv\telephonyutils\etel3rdpartyapi\Group" mrp="os\cellularsrv\telephonyutils\etel3rdpartyapi\group\telephony_etel3rdparty.mrp"/>
+            <unit bldFile="os\cellularsrv\telephonyutils\etel3rdpartyapi\Group" mrp="os\cellularsrv\telephonyutils\etel3rdpartyapi\Group\telephony_etel3rdparty.mrp"/>
      </component>
      <component name="telephonywatchers" long-name="Telephony Watchers" plugin="Y" introduced="6.0">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -1117,10 +1069,10 @@
     </collection>
     <collection name="cellularsrv_info" long-name="Cellular Baseband Services Info" level="app-if">
      <component name="telephonyconfidentialdocs" long-name="Telephony Confidential Documentation" class="doc">
-      <unit mrp="os\cellularsrv\cellularsrv_info\telephonyconfidentialdocs\telephony_confidential.mrp"/>
+      <unit mrp="os/cellularsrv/cellularsrv_info/telephonyconfidentialdocs/telephony_confidential.mrp"/>
      </component>
      <component name="telephonydocs" long-name="Telephony Documentation" class="doc">
-      <unit mrp="os\cellularsrv\cellularsrv_info\telephonydocs\telephony_documentation.mrp"/>
+      <unit mrp="os/cellularsrv/cellularsrv_info/telephonydocs/telephony_documentation.mrp"/>
      </component>
     </collection>
     <collection name="commonnetworkinterface" long-name="Common Network Interface" level="hw-if">
@@ -1179,10 +1131,10 @@
             <unit bldFile="os\shortlinksrv\bluetooth\btcomm" mrp="os\shortlinksrv\bluetooth\btcomm\bluetooth_btcomm.mrp"/>
      </component>
      <component name="btdocs" long-name="Bluetooth Documentation" class="doc">
-      <unit mrp="os\shortlinksrv\bluetooth\btdocs\bluetooth_documentation.mrp"/>
+      <unit mrp="os/shortlinksrv/bluetooth/btdocs/bluetooth_documentation.mrp"/>
      </component>
      <component name="btexample" long-name="Bluetooth Examples and Tests" introduced="6.1" class="test">
-      <unit mrp="os\shortlinksrv\bluetooth\btexample\test\bluetooth_tests_examples.mrp"/>
+      <unit mrp="os/shortlinksrv/bluetooth/btexample/test/bluetooth_tests_examples.mrp"/>
      </component>
      <component name="gavdp" long-name="Bluetooth GAVDP" introduced="8.1">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -1216,15 +1168,13 @@
     </collection>
     <collection name="bluetoothmgmt" long-name="Bluetooth Management" level="plugin">
      <component name="btcommon" long-name="Bluetooth Build Utilities">
-      <unit mrp="os\shortlinksrv\bluetoothmgmt\btcommon\bluetooth_common.mrp"/>
+      <unit mrp="os/shortlinksrv/bluetoothmgmt/btcommon/bluetooth_common.mrp"/>
      </component>
      <component name="bluetoothclientlib" long-name="Bluetooth Client Library" introduced="6.0">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os\shortlinksrv\bluetoothmgmt\bluetoothclientlib" mrp="os\shortlinksrv\bluetoothmgmt\bluetoothclientlib\bluetooth_user.mrp"/>
      </component>
      <component name="btconfig" long-name="Bluetooth Config" class="config">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\shortlinksrv\bluetoothmgmt\btconfig" mrp="os\shortlinksrv\bluetoothmgmt\btconfig\bluetooth_config.mrp"/>
      </component>
      <component name="btmgr" long-name="Bluetooth Manager" introduced="6.0">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -1257,14 +1207,14 @@
      <component name="irdaconfig" long-name="IrDA Config" introduced="6.0" class="config">
      </component>
      <component name="irdadocs" long-name="IrDA Documentation" class="doc">
-      <unit mrp="os\shortlinksrv\irda\irdadocs\infra-red_documentation.mrp"/>
+      <unit mrp="os/shortlinksrv/irda/irdadocs/infra-red_documentation.mrp"/>
      </component>
      <component name="irdastack" long-name="IrDA Stack">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os\shortlinksrv\irda\irdastack\group" mrp="os\shortlinksrv\irda\irdastack\group\infra-red_irda.mrp"/>
      </component>
      <component name="irdatest" long-name="IrDA Test" introduced="9.2" class="test">
-      <unit mrp="os\shortlinksrv\irda\irdatest\group\infra-red_irda_test.mrp"/>
+      <unit mrp="os/shortlinksrv/irda/irdatest/group/infra-red_irda_test.mrp"/>
      </component>
     </collection>
     <collection name="usbldd" long-name="Shortlink Logical Device Drivers" level="hw-if">
@@ -1275,14 +1225,15 @@
     </collection>
     <collection name="usbmgmt" long-name="USB Management" level="server">
      <component name="usbclassandmgrdocs" long-name="USB Class and Manager Documentation" class="doc">
-      <unit mrp="os\shortlinksrv\usbmgmt\usbclassandmgrdocs\usb_documentation.mrp"/>
+      <unit mrp="os/shortlinksrv/usbmgmt/usbclassandmgrdocs/usb_documentation.mrp"/>
      </component>
      <component name="usbmgr" long-name="USB Manager">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit version="2" bldFile="os\shortlinksrv\usbmgmt\usbmgr\group" mrp="os\shortlinksrv\usbmgmt\usbmgr\group\usb_manager.mrp"/>
      </component>
      <component name="usbmgrtest" long-name="USB Manager Tests" introduced="7.0" class="test">
-      <unit version="2" mrp="os\shortlinksrv\usbmgmt\usbmgrtest\group\usb_test.mrp"/>
+      <unit version="1" mrp="os/unref/orphan/comgen/ser-comms/usb_test/group/ser-comms_usb_test.mrp"/>
+      <unit version="2" mrp="os/shortlinksrv/usbmgmt/usbmgrtest/group/usb_test.mrp"/>
      </component>
     </collection>
     <collection name="usbbsptemplate" long-name="USB BSP Template" level="adaptation"/>
@@ -1294,17 +1245,17 @@
             <unit bldFile="os\mm\imagingandcamerafws\camerafw\framework\group" mrp="os\mm\imagingandcamerafws\camerafw\framework\group\multimedia_ecam_framework.mrp"/>
      </component>
      <component name="cameraunittest" long-name="Camera Unit Tests" introduced="9.2" class="test">
-      <unit mrp="os\mm\imagingandcamerafws\cameraunittest\group\multimedia_unittest_ecam_source.mrp"/>
+      <unit mrp="os/mm/imagingandcamerafws/cameraunittest/group/multimedia_unittest_ecam_source.mrp"/>
      </component>
      <component name="imagingfws" long-name="Imaging Frameworks" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os\mm\imagingandcamerafws\imagingfws\group" mrp="os\mm\imagingandcamerafws\imagingfws\group\multimedia_icl.mrp"/>
      </component>
      <component name="imaginginttest" long-name="Imaging Integration Tests" introduced="7.0s" class="test">
-      <unit mrp="os\mm\imagingandcamerafws\imaginginttest\group\multimedia_inttest_icl_source.mrp"/>
+      <unit mrp="os/mm/imagingandcamerafws/imaginginttest/group/multimedia_inttest_icl_source.mrp"/>
      </component>
      <component name="imagingunittest" long-name="Imaging Unit Tests" introduced="7.0s" class="test">
-      <unit mrp="os\mm\imagingandcamerafws\imagingunittest\group\multimedia_unittest_icl_source.mrp"/>
+      <unit mrp="os/mm/imagingandcamerafws/imagingunittest/group/multimedia_unittest_icl_source.mrp"/>
      </component>
     </collection>
     <collection name="mmapitest" long-name="Multimedia API Tests" level="app-if">
@@ -1313,13 +1264,13 @@
     <collection name="mmdataplane" long-name="Multimedia Data Plane Adaptation" level="hw-if"/>
     <collection name="mmdevicefw" long-name="Multimedia Device Framework" level="device-fw">
      <component name="mdfunittest" long-name="MDF Unit Tests" introduced="9.2" class="test">
-      <unit mrp="os\mm\mmdevicefw\mdfunittest\group\multimedia_unittest_mdf_source.mrp"/>
+      <unit mrp="os/mm/mmdevicefw/mdfunittest/group/multimedia_unittest_mdf_source.mrp"/>
      </component>
      <component name="mdf" long-name="Media Device Framework" introduced="9.2">
      </component>
      <component name="asrcontroller" long-name="Speech Recognition Controller" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\asr\group" mrp="mw\mmmw\mmmiddlewarefws\mmfw\asr\group\multimedia_mmf_ASR.mrp"/>
+            <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\ASR\group" mrp="mw\mmmw\mmmiddlewarefws\mmfw\ASR\group\multimedia_mmf_ASR.mrp"/>
      </component>
     </collection>
     <collection name="mmhais" long-name="Multimedia Hardware Adaptation Interfaces" level="adaptation">
@@ -1333,14 +1284,14 @@
      </component>
      <component name="devsoundhwdeviceapi" long-name="DevSound Hardware Device API" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\sounddev\group_hwdev" mrp="mw\mmmw\mmmiddlewarefws\mmfw\sounddev\group_hwdev\multimedia_mdf_devsound_hwdev.mrp"/>
+            <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\SoundDev\group_hwdev" mrp="mw\mmmw\mmmiddlewarefws\mmfw\SoundDev\group_hwdev\multimedia_mdf_devsound_hwdev.mrp"/>
      </component>
      <component name="dvbhreceiverhai" long-name="Mobile TV DVB-H Receiver HAI" introduced="tb92">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os\mm\mmhais\dvbhreceiverhai\hai\dvbh\group" mrp="os\mm\mmhais\dvbhreceiverhai\hai\dvbh\group\multimedia_mobiletv_dvbh_hai.mrp"/>
      </component>
      <component name="dvbhunittest" long-name="Mobile TV DVB-H Unit Tests" introduced="tb92" class="test">
-      <unit mrp="os\mm\mmhais\dvbhunittest\hai\dvbh\group\multimedia_unittest_dvbhhai.mrp"/>
+      <unit mrp="os/mm/mmhais/dvbhunittest/hai/dvbh/group/multimedia_unittest_dvbhhai.mrp"/>
      </component>
      <component name="refacladapt" long-name="Reference ACL Adaptation" introduced="tb92">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -1348,7 +1299,7 @@
      </component>
      <component name="videohai" long-name="Video HAI" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\devvideo\group" mrp="mw\mmmw\mmmiddlewarefws\mmfw\devvideo\group\multimedia_mdf_devvideo.mrp"/>
+            <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\DevVideo\group" mrp="mw\mmmw\mmmiddlewarefws\mmfw\DevVideo\group\multimedia_mdf_devvideo.mrp"/>
      </component>
     </collection>
     <collection name="mmhostprocess" long-name="Multimedia Host Process" level="devices"/>
@@ -1358,7 +1309,7 @@
             <unit bldFile="os\mm\mmplugins\3gplib\group" mrp="os\mm\mmplugins\3gplib\group\multimedia_3gplibrary.mrp"/>
      </component>
      <component name="3gpunittest" long-name="3GP Unit Tests" introduced="Future" class="test">
-      <unit mrp="os\mm\mmplugins\3gpunittest\group\multimedia_unittest_3gplibrary_source.mrp"/>
+      <unit mrp="os/mm/mmplugins/3gpunittest/group/multimedia_unittest_3gplibrary_source.mrp"/>
      </component>
      <component name="cameraplugins" long-name="Camera Plugins" plugin="Y" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -1378,16 +1329,16 @@
     <collection name="mmswadaptation" long-name="Multimedia Software Adaptation" level="adaptation"/>
     <collection name="mmtestenv" long-name="Multimedia Test Environment" level="device-fw">
      <component name="mmtestagent" long-name="Multimedia Test Agent" introduced="8.0" class="test">
-      <unit mrp="os\mm\mmtestenv\mmtestagent\group\multimediatestagent_source.mrp"/>
+      <unit mrp="os/mm/mmtestenv/mmtestagent/group/multimediatestagent_source.mrp"/>
      </component>
      <component name="mmtestfw" long-name="Multimedia Test Framework" introduced="7.0s" class="test">
-      <unit mrp="os\mm\mmtestenv\mmtestfw\group\multimedia_testframework_source.mrp"/>
+      <unit mrp="os/mm/mmtestenv/mmtestfw/group/multimedia_testframework_source.mrp"/>
      </component>
      <component name="mmtestfwunittest" long-name="Multimedia Test Framework Unit Tests" introduced="7.0s" class="test">
-      <unit mrp="os\mm\mmtestenv\mmtestfwunittest\group\multimedia_unittest_testframework_source.mrp"/>
+      <unit mrp="os/mm/mmtestenv/mmtestfwunittest/group/multimedia_unittest_testframework_source.mrp"/>
      </component>
      <component name="mmtesttools" long-name="Multimedia Test Tools">
-      <unit mrp="os\mm\mmtestenv\mmtesttools\group\multimedia_testtools_source.mrp"/>
+      <unit mrp="os/mm/mmtestenv/mmtesttools/Group/multimedia_testtools_source.mrp"/>
      </component>
     </collection>
     <collection name="omxil" long-name="OpenMAX IL" level="hw-if">
@@ -1402,14 +1353,14 @@
             <unit bldFile="os\mm\devsound\a3facf\group" mrp="os\mm\devsound\a3facf\group\multimedia_a3f_acf.mrp"/>
      </component>
      <component name="a3fcharacterisationtest" long-name="A3F Characterisation Tests" introduced="tb91" class="test">
-      <unit mrp="os\mm\devsound\a3fcharacterisationtest\group\multimedia_a3f_devsound_char.mrp"/>
+      <unit mrp="os/mm/devsound/a3fcharacterisationtest/group/multimedia_a3f_devsound_char.mrp"/>
      </component>
      <component name="a3fdevsound" long-name="A3F DevSound" introduced="tb92">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="os\mm\devsound\a3fdevsound\group" mrp="os\mm\devsound\a3fdevsound\group\multimedia_a3f_devsound.mrp"/>
      </component>
      <component name="a3fintegrationtest" long-name="A3F Integration Tests" introduced="tb92">
-      <unit mrp="os\mm\devsound\a3fintegrationtest\group\multimedia_inttest_a3f_devsound_source.mrp"/>
+      <unit mrp="os/mm/devsound/a3fintegrationtest/group/multimedia_inttest_a3f_devsound_source.mrp"/>
      </component>
      <component name="a3fsrvstart" long-name="A3F Server Start" plugin="Y" introduced="tb92">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -1425,15 +1376,15 @@
      </component>
      <component name="devsoundapi" long-name="DevSound API" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\sounddev\group_api" mrp="mw\mmmw\mmmiddlewarefws\mmfw\sounddev\group_api\multimedia_mdf_devsound_api.mrp"/>
+            <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\SoundDev\group_api" mrp="mw\mmmw\mmmiddlewarefws\mmfw\SoundDev\group_api\multimedia_mdf_devsound_api.mrp"/>
      </component>
      <component name="devsoundpluginsupport" long-name="DevSound Plugin Support" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\sounddev\group_pluginsupport" mrp="mw\mmmw\mmmiddlewarefws\mmfw\sounddev\group_pluginsupport\multimedia_mdf_devsound_pluginsupport.mrp"/>
+            <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\SoundDev\group_pluginsupport" mrp="mw\mmmw\mmmiddlewarefws\mmfw\SoundDev\group_pluginsupport\multimedia_mdf_devsound_pluginsupport.mrp"/>
      </component>
      <component name="refdevsound" long-name="Reference DevSound Plugins" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\sounddev\group_refplugin" mrp="mw\mmmw\mmmiddlewarefws\mmfw\sounddev\group_refplugin\multimedia_mdf_devsound_refplugin.mrp"/>
+            <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\SoundDev\group_refplugin" mrp="mw\mmmw\mmmiddlewarefws\mmfw\SoundDev\group_refplugin\multimedia_mdf_devsound_refplugin.mrp"/>
      </component>
     </collection>
     <collection name="codecs" long-name="Codecs" level="middleware">
@@ -1476,7 +1427,7 @@
     </collection>
     <collection name="mm_info" long-name="Multimedia Info" level="app-if">
      <component name="mmdocs" long-name="Multimedia Documentation">
-      <unit mrp="os\mm\mm_info\mmdocs\multimedia_documentation.mrp"/>
+      <unit mrp="os/mm/mm_info/mmdocs/multimedia_documentation.mrp"/>
      </component>
     </collection>
     <collection name="videoadaptationextensions" long-name="Video Adaptation Extensions" level="adaptation">
@@ -1510,16 +1461,10 @@
     </collection>
     <collection name="graphicscomposition" long-name="Graphics Composition" level="engines">
      <component name="compositionengineadaptation" long-name="Composition Engine Adaptation" introduced="tb92">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\graphics\graphicscomposition\compositionengineadaptation\group" mrp="os\graphics\graphicscomposition\compositionengineadaptation\group\graphics_compositionbackend.mrp"/>
      </component>
      <component name="graphicscompositionengine" long-name="Graphics Composition Engine" introduced="tb92">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\graphics\graphicscomposition\graphicscompositionengine\group" mrp="os\graphics\graphicscomposition\graphicscompositionengine\group\graphics_gce.mrp"/>
      </component>
      <component name="surfaceupdate" long-name="Surface Update" introduced="tb92">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\graphics\graphicscomposition\surfaceupdate\group" mrp="os\graphics\graphicscomposition\surfaceupdate\group\graphics_surfaceupdate.mrp"/>
      </component>
     </collection>
     <collection name="graphicsdeviceinterface" long-name="Graphics Device Interface" level="device-interface">
@@ -1538,14 +1483,12 @@
     </collection>
     <collection name="graphicshwdrivers" long-name="Graphics Hardware Drivers" level="adaptation">
      <component name="surfacemgr" long-name="Surface Manager" introduced="tb92">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\graphics\graphicshwdrivers\surfacemgr\group" mrp="os\graphics\graphicshwdrivers\surfacemgr\group\graphics_surfacemanager.mrp"/>
      </component>
     </collection>
     <collection name="graphicsresourceservices" long-name="Graphics Resource Services" level="engines"/>
     <collection name="graphicstest" long-name="Graphics Test" level="app-if">
      <component name="graphicstestharness" long-name="Graphics Test Harness" class="test" introduced="8.1">
-      <unit mrp="os\graphics\graphicstest\graphicstestharness\group\graphics_testharness.mrp"/>
+      <unit mrp="os/graphics/graphicstest/graphicstestharness/group/graphics_testharness.mrp"/>
      </component>
      <component name="uibench" long-name="UI Bench" introduced="9.2" class="test">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -1564,8 +1507,6 @@
     </collection>
     <collection name="graphicsutils" long-name="Graphics Utils" level="engines">
      <component name="commongraphicsheaders" long-name="Common Graphics Headers" introduced="tb92">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\graphics\graphicsutils\commongraphicsheaders\group" mrp="os\graphics\graphicsutils\commongraphicsheaders\group\graphics_commonheader.mrp"/>
      </component>
     </collection>
     <collection name="opengles" long-name="OpenGLES" level="internal-adaptations">
@@ -1580,8 +1521,6 @@
     </collection>
     <collection name="openvg" long-name="OpenVG" level="internal-adaptations">
      <component name="openvgimplementation" long-name="OpenVG Implementation" introduced="tb91">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\graphics\openvg\openvgimplementation\group/" mrp="os\graphics\openvg\openvgimplementation\group\graphics_openvg.mrp"/>
      </component>
      <component name="openvginterface" long-name="OpenVG Interface" introduced="tb91">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -1614,7 +1553,7 @@
     </collection>
     <collection name="graphics_info" long-name="Graphics Info" level="app-if">
      <component name="graphicsdocs" long-name="Graphics Documentation" class="doc">
-      <unit mrp="os\graphics\graphics_info\graphicsdocs\graphics_documentation.mrp"/>
+      <unit mrp="os/graphics/graphics_info/graphicsdocs/graphics_documentation.mrp"/>
      </component>
     </collection>
     <collection name="graphicsaccelaration" long-name="Graphics Accelaration" level="adaptation">
@@ -1669,6 +1608,8 @@
             <unit bldFile="os\textandloc\fontservices\fontstore\group" mrp="os\textandloc\fontservices\fontstore\group\graphics_fntstore.mrp"/>
      </component>
      <component name="freetypefontrasteriser" long-name="FreeType Font Rasteriser" plugin="Y">
+      <!-- Unit added by SF via autopopulating script from System Definition Template -->
+            <unit bldFile="os\textandloc\fontservices\freetypefontrasteriser\group" mrp="os\textandloc\fontservices\freetypefontrasteriser\group\graphics_freetype.mrp"/>
      </component>
      <component name="graphicstestfonts" long-name="Graphics Test Fonts" introduced="tb91">
      </component>
@@ -1701,7 +1642,7 @@
             <unit bldFile="os\textandloc\textrendering\texthandling\group" mrp="os\textandloc\textrendering\texthandling\group\app-framework_etext.mrp"/>
      </component>
      <component name="word" long-name="Word" class="test">
-      <unit mrp="os\textandloc\textrendering\word\group\app-framework_word.mrp"/>
+      <unit mrp="os/textandloc/textrendering/word/group/app-framework_word.mrp"/>
      </component>
     </collection>
    </block>
@@ -1712,27 +1653,23 @@
             <unit bldFile="os\buildtools\bldsystemtools\buildsystemtools\group" mrp="os\buildtools\bldsystemtools\buildsystemtools\group\tools_build.mrp"/>
      </component>
      <component name="commonbldutils" long-name="Common Utils">
-      <unit mrp="os\buildtools\bldsystemtools\commonbldutils\tools_utils_common.mrp"/>
+      <unit mrp="os/buildtools/bldsystemtools/commonbldutils/tools_utils_common.mrp"/>
      </component>
      <component name="gttechviewbaseline" long-name="GT Techview Baseline">
-      <unit mrp="os\buildtools\packaging\additionalutils\gt_techview_baseline.mrp"/>
+      <unit mrp="os/buildtools/packaging/additionalutils/gt_techview_baseline.mrp"/>
       <!-- DEF087736 This is needed for generating export tables but shouldn't appear otherwise it is included in techview and gt -->
      </component>
     </collection>
     <collection name="devlib" long-name="Developer Library" level="ui">
      <component name="devlibhtml" long-name="Developer Library HTML">
-      <unit mrp="os\buildtools\devlib\devlibhelp\group\shared\developerlibrary_doc_plain_html.mrp"/>
+      <unit mrp="os/buildtools/devlib/devlibhelp/group/shared/developerlibrary_doc_plain_html.mrp"/>
      </component>
      <component name="devlibhelp" long-name="Developer Library Help">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit version="9.4" bldFile="os\buildtools\devlib\devlibhelp\group\devlib94" mrp="os\buildtools\devlib\devlibhelp\group\devlib94\developerlibrary_doc_html.mrp"/>
      </component>
      <component name="devlibsrc" long-name="Developer Library Source" filter="gt">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\buildtools\devlib\devlibhelp\securitysupplement\doc_source" mrp="os\buildtools\devlib\devlibhelp\developerlibrary_doc_source.mrp"/>
      </component>
      <component name="toolsdocs" long-name="Tools Documentation">
-      <unit mrp="os\buildtools\devlib\toolsdocs\tools_documentation.mrp"/>
+      <unit mrp="os/buildtools/devlib/toolsdocs/tools_documentation.mrp"/>
      </component>
     </collection>
     <collection name="fileconv" long-name="File Converters" level="mw">
@@ -1753,7 +1690,7 @@
             <unit bldFile="os\buildtools\toolsandutils\autotest\group" mrp="os\buildtools\toolsandutils\autotest\group\tools_autotest.mrp"/>
      </component>
      <component name="additionalredistribution" long-name="Additional Redistribution">
-      <unit mrp="os\buildtools\perltoolsplat_os\redistribution\additional_tools.mrp"/>
+      <unit mrp="os/buildtools/perltoolsplat_os/redistribution/additional_tools.mrp"/>
      </component>
      <component name="burtestserver" long-name="BUR Test Server">
      </component>
@@ -1764,7 +1701,7 @@
      <component name="cdb" long-name="Code Database">
      </component>
      <component name="ctsfunctionalitycheckers" long-name="CTS Functionality Checkers">
-      <unit mrp="os\buildtools\toolsandutils\ctsfunctionalitycheckers\group\testtools_cts_functionalitycheckers.mrp"/>
+      <unit mrp="os/buildtools/toolsandutils/ctsfunctionalitycheckers/Group/testtools_cts_functionalitycheckers.mrp"/>
      </component>
      <component name="e32tools" long-name="E32 Tools" class="PC" deprecated="tb91">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -1773,15 +1710,15 @@
      <component name="kitcomparator" long-name="Kit Comparator">
      </component>
      <component name="kitsetupapp" long-name="Kit Setup App" filter="gt">
-      <unit mrp="os\buildtools\toolsandutils\kitsetupapp\group\tools_devkits_kitsetupapp.mrp"/>
+      <unit mrp="os/buildtools/toolsandutils/kitsetupapp/group/tools_devkits_kitsetupapp.mrp"/>
      </component>
      <component name="navigationpages" long-name="Navigation Pages">
-      <unit mrp="os\buildtools\toolsandutils\navigationpages\tools_sdk_eng_NavigationPages.mrp"/>
+      <unit mrp="os/buildtools/toolsandutils/navigationpages/tools_sdk_eng_NavigationPages.mrp"/>
      </component>
      <component name="productinstaller" long-name="Product Installer" filter="gt">
      </component>
      <component name="productionbldtools" long-name="Production Build Tools" filter="gt">
-      <unit mrp="os\buildtools\toolsandutils\productionbldtools\product_tools.mrp"/>
+      <unit mrp="os/buildtools/toolsandutils/productionbldtools/product_tools.mrp"/>
      </component>
      <component name="statdesktop" long-name="STAT Desktop" filter="gt">
      </component>
@@ -1790,27 +1727,23 @@
      <component name="systemmonitor" long-name="System Monitor" introduced="8.0">
      </component>
      <component name="statapi" long-name="STAT API" filter="gt">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\buildtools\toolsandutils\statapi\source\statapi\console" mrp="os\buildtools\toolsandutils\statapi\group\testtools_stat_device_gt.mrp"/>
      </component>
      <component name="statsource" long-name="STAT Source" filter="gt">
-      <unit mrp="os\buildtools\toolsandutils\statsource\group\testtools_stat_common_source.mrp"/>
+      <unit mrp="os/buildtools/toolsandutils/statsource/group/testtools_stat_common_source.mrp"/>
      </component>
      <component name="testconfigfileparser" long-name="Test Config File Parser">
      </component>
      <component name="testdriver" long-name="Test Driver">
      </component>
      <component name="testtoolsdesktop" long-name="Test Tools Desktop" filter="gt" deprecated="tb91">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\buildtools\toolsandutils\testtoolsdesktop\group" mrp="os\buildtools\toolsandutils\testtoolsdesktop\group\testtools_desktop.mrp"/>
      </component>
      <component name="usecasecontroller" long-name="Use Case Controller">
      </component>
      <component name="wincredistribution" long-name="WinC Redistribution">
-      <unit mrp="os\buildtools\dist_os\redistributionwinceka2\tools_redistribution_winc.mrp"/>
+      <unit mrp="os/buildtools/dist_os/redistributionwinceka2/tools_redistribution_winc.mrp"/>
      </component>
      <component name="wintunnel" long-name="Wintunnel">
-      <unit mrp="os\buildtools\toolsandutils\wintunnel\group\testtools_WinTunnel_srconly.mrp"/>
+      <unit mrp="os/buildtools/toolsandutils/wintunnel/group/testtools_WinTunnel_srconly.mrp"/>
      </component>
     </collection>
     <collection name="binanamdw_os" long-name="Binary Analysis Middleware" level="fw">
@@ -1893,7 +1826,7 @@
     </collection>
     <collection name="packaging" long-name="Packaging" level="ui">
      <component name="additionalutils" long-name="Additional Utils">
-      <unit mrp="os\buildtools\packaging\additionalutils\additional_unknown_cedar.mrp"/>
+      <unit mrp="os/buildtools/packaging/additionalutils/additional_unknown_cedar.mrp"/>
      </component>
      <component name="dummy" long-name="Dummy">
      </component>
@@ -1910,7 +1843,7 @@
      <component name="bldtools" long-name="Build Tools" filter="gt">
      </component>
      <component name="e32toolp" long-name="E32 Perl Tools" class="PC">
-      <unit mrp="os\buildtools\sbsv1_os\e32toolp\group\tools_e32toolp.mrp"/>
+      <unit mrp="os/buildtools/sbsv1_os/e32toolp/group/tools_e32toolp.mrp"/>
      </component>
     </collection>
     <collection name="srcanamdw_os" long-name="Source Analysis Middleware" level="fw">
@@ -1979,15 +1912,15 @@
     </collection>
     <collection name="foundation_system" long-name="Foundation System" level="top">
      <component name="systemdocs" long-name="System Documentation" class="doc">
-      <unit mrp="os\deviceplatformrelease\foundation_system\systemdocs\group\system.mrp"/>
+      <unit mrp="os/deviceplatformrelease/foundation_system/systemdocs/group/system.mrp"/>
      </component>
     </collection>
     <collection name="symbianosbld" long-name="Symbian OS Build" level="bld">
      <component name="cedarutils" long-name="Cedar Utils">
-      <unit mrp="os\deviceplatformrelease\symbianosbld\cedarutils\tools_utils_cedar.mrp"/>
+      <unit mrp="os/deviceplatformrelease/symbianosbld/cedarutils/tools_utils_cedar.mrp"/>
      </component>
      <component name="productionbldcbrconfig" long-name="Production Build CBR Config" filter="gt">
-      <unit mrp="os\deviceplatformrelease\symbianosbld\productionbldcbrconfig\product_cbr_config.mrp"/>
+      <unit mrp="os/deviceplatformrelease/symbianosbld/productionbldcbrconfig/product_cbr_config.mrp"/>
      </component>
     </collection>
    </block>
@@ -2035,7 +1968,7 @@
      </component>
      <component name="testexecute" long-name="Test Execute" deprecated="tb91">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="os\osrndtools\testexecfw1\testexecute\Group" mrp="os\osrndtools\testexecfw1\testexecute\group\tools_testexecute.mrp"/>
+            <unit bldFile="os\osrndtools\testexecfw1\testexecute\Group" mrp="os\osrndtools\testexecfw1\testexecute\Group\tools_testexecute.mrp"/>
      </component>
     </collection>
    </block>
@@ -2054,7 +1987,7 @@
             <unit bldFile="mw\appsupport\appfw\apparchitecture\group" mrp="mw\appsupport\appfw\apparchitecture\group\app-framework_apparc.mrp"/>
      </component>
      <component name="uiftestfw" long-name="UIF Test Framework" class="test" introduced="9.2">
-      <unit mrp="mw\appsupport\appfw\uiftestfw\group\app-framework_testframework.mrp"/>
+      <unit mrp="mw/appsupport/appfw/uiftestfw/group/app-framework_testframework.mrp"/>
      </component>
      <component name="viewserver" long-name="View Server" introduced="6.0">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -2065,32 +1998,30 @@
     <collection name="commonappservices" long-name="Common Application Services" level="framework">
      <component name="alarmserver" long-name="Alarm Server" introduced="7.0">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\appsupport\commonappservices\alarmserver\Group" mrp="mw\appsupport\commonappservices\alarmserver\group\app-services_alarmserver.mrp"/>
+            <unit bldFile="mw\appsupport\commonappservices\alarmserver\Group" mrp="mw\appsupport\commonappservices\alarmserver\Group\app-services_alarmserver.mrp"/>
      </component>
      <component name="alarmservertest" long-name="Alarm Server Test" introduced="8.1" class="test" deprecated="tb92">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\appsupport\commonappservices\alarmservertest\TestAlarmSrv" mrp="mw\appsupport\commonappservices\alarmservertest\testalarmsrv\app-services_testalarmsrv.mrp"/>
+            <unit bldFile="mw\appsupport\commonappservices\alarmservertest\TestAlarmSrv" mrp="mw\appsupport\commonappservices\alarmservertest\TestAlarmSrv\app-services_testalarmsrv.mrp"/>
      </component>
      <component name="appservicesdocs" long-name="Application Services Documentation" class="doc">
-      <unit mrp="mw\appsupport\commonappservices\appservicesdocs\app-services_documentation.mrp"/>
+      <unit mrp="mw/appsupport/commonappservices/appservicesdocs/app-services_documentation.mrp"/>
      </component>
      <component name="backuprestorenotification" long-name="Backup Restore Notification" introduced="8.1">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="mw\appsupport\commonappservices\backuprestorenotification\group" mrp="mw\appsupport\commonappservices\backuprestorenotification\group\app-services_BackupRestoreNotification.mrp"/>
      </component>
      <component name="coreappstest" long-name="Core Apps Test" introduced="8.1" class="test">
-      <!-- XML Previous Location: Application services\other Application Services/ -->
-      <unit mrp="mw\appsupport\commonappservices\coreappstest\group\app-services_CoreAppsTest.mrp"/>
+      <!-- XML Previous Location: Application Services/Other Application Services/ -->
+      <unit mrp="mw/appsupport/commonappservices/coreappstest/Group/app-services_CoreAppsTest.mrp"/>
      </component>
     </collection>
     <collection name="contenthandling" long-name="Content Handling" level="plugin">
      <component name="contenthandlingfw" long-name="Content Handling Framework" introduced="8.0">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\appsupport\contenthandling\contenthandlingfw\Group" mrp="mw\appsupport\contenthandling\contenthandlingfw\group\content-handling.mrp"/>
+            <unit bldFile="mw\appsupport\contenthandling\contenthandlingfw\Group" mrp="mw\appsupport\contenthandling\contenthandlingfw\Group\content-handling.mrp"/>
      </component>
      <component name="referencedrmagent" long-name="Reference DRM Agent" introduced="8.0">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\appsupport\contenthandling\referencedrmagent\reftestagent\group" mrp="mw\appsupport\contenthandling\referencedrmagent\reftestagent\group\security_rta.mrp"/>
      </component>
      <component name="webrecognisers" long-name="Web Recognisers" plugin="Y">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -2112,7 +2043,7 @@
      </component>
      <component name="richtexttohtmlconverter" long-name="RichText to HTML Converter" plugin="Y" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\appsupport\filehandling\richtexttohtmlconverter\Group" mrp="mw\appsupport\filehandling\richtexttohtmlconverter\group\app-services_richtexttohtmlconv.mrp"/>
+            <unit bldFile="mw\appsupport\filehandling\richtexttohtmlconverter\Group" mrp="mw\appsupport\filehandling\richtexttohtmlconverter\Group\app-services_richtexttohtmlconv.mrp"/>
      </component>
     </collection>
     <collection name="hwresourceadaptation" long-name="Hardware Resource Adaptation" level="generic">
@@ -2123,12 +2054,8 @@
     </collection>
     <collection name="openenvutils" long-name="Open Environment Utilities" level="specific">
      <component name="commandshell" long-name="Command Shell" introduced="tb92">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\appsupport\openenvutils\commandshell\group" mrp="mw\appsupport\openenvutils\commandshell\group\oetools_zsh.mrp"/>
      </component>
      <component name="telnetserver" long-name="Telnet Server" introduced="tb92">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\appsupport\openenvutils\telnetserver\group" mrp="mw\appsupport\openenvutils\telnetserver\group\oetools_telnetd.mrp"/>
      </component>
     </collection>
     <collection name="printingsupport" long-name="Printing Support" level="generic">
@@ -2144,8 +2071,6 @@
             <unit bldFile="mw\appsupport\tzpcside\tzcompiler\group" mrp="mw\appsupport\tzpcside\tzcompiler\group\app-services_tzcompiler.mrp"/>
      </component>
      <component name="worlddatabasekit" long-name="World Database Kit" introduced="6.0" deprecated="9.1" class="config PC">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\appsupport\tzpcside\worlddatabasekit\group" mrp="mw\appsupport\tzpcside\worlddatabasekit\group\app-services_wlddatabasekit_cedar.mrp"/>
      </component>
      <component name="worldtools" long-name="World Tools" introduced="ER5" deprecated="9.1" class="config PC">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -2175,7 +2100,7 @@
      </component>
      <component name="worldservertest" long-name="World Server Test" introduced="8.1" deprecated="9.1" class="test">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\appsupport\tzservices\worldservertest\TestWorldSrv" mrp="mw\appsupport\tzservices\worldservertest\testworldsrv\app-services_testworldsrv.mrp"/>
+            <unit bldFile="mw\appsupport\tzservices\worldservertest\TestWorldSrv" mrp="mw\appsupport\tzservices\worldservertest\TestWorldSrv\app-services_testworldsrv.mrp"/>
      </component>
     </collection>
     <collection name="contextframework" long-name="Context Framework" level="framework">
@@ -2523,11 +2448,11 @@
      </component>
      <component name="wapbase" long-name="WAP Base" introduced="6.0">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\netprotocols\applayerprotocols\wapbase\Group" mrp="mw\netprotocols\applayerprotocols\wapbase\group\wap-browser_wapbase.mrp"/>
+            <unit bldFile="mw\netprotocols\applayerprotocols\wapbase\Group" mrp="mw\netprotocols\applayerprotocols\wapbase\Group\wap-browser_wapbase.mrp"/>
      </component>
      <component name="wappushsupport" long-name="WAP Push Support" introduced="6.2">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\netprotocols\applayerprotocols\wappushsupport\Group" mrp="mw\netprotocols\applayerprotocols\wappushsupport\group\wap-browser_wappushsupport.mrp"/>
+            <unit bldFile="mw\netprotocols\applayerprotocols\wappushsupport\Group" mrp="mw\netprotocols\applayerprotocols\wappushsupport\Group\wap-browser_wappushsupport.mrp"/>
      </component>
     </collection>
     <collection name="wapstack" long-name="WAP Stack" level="plugin">
@@ -2558,8 +2483,6 @@
    <block long-name="IP App Protocols" level="generic" name="ipappprotocols" levels="plugin framework server generic specific">
     <collection name="sipconnproviderplugins" long-name="SIP Connection Provider Plugins" level="conn">
      <component name="sipconnectionplugins" long-name="SIP Connection Plugins" plugin="Y" introduced="tb92" filter="gt">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\ipappprotocols\sipconnproviderplugins\sipconnectionplugins\group" mrp="mw\ipappprotocols\sipconnproviderplugins\sipconnectionplugins\group\mm-protocols_sipproviders.mrp"/>
      </component>
      <component name="sipconnprovider" long-name="SIP Connection Provider" plugin="Y" introduced="9.2" filter="gt">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -2590,7 +2513,7 @@
      </component>
      <component name="sipfw" long-name="SIP Framework" introduced="9.2" filter="gt">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit version="2" bldFile="mw\ipappprotocols\realtimenetprots\sipfw\Group" mrp="mw\ipappprotocols\realtimenetprots\sipfw\group\mm-protocols_SIP2_Com.mrp"/>
+            <unit version="2" bldFile="mw\ipappprotocols\realtimenetprots\sipfw\Group" mrp="mw\ipappprotocols\realtimenetprots\sipfw\Group\mm-protocols_SIP2_Com.mrp"/>
      </component>
     </collection>
     <collection name="rtp" long-name="RTP" level="server">
@@ -2869,7 +2792,7 @@
      <component name="networkhandlingengine" long-name="Network Handling Engine">
      </component>
     </collection>
-    <collection name="phoneclientserver" long-name="Phone client\server" level="server">
+    <collection name="phoneclientserver" long-name="Phone Client/Server" level="server">
      <component name="CallUI" long-name="Call UI">
      </component>
      <component name="EnPolicy" long-name="En Policy">
@@ -2905,12 +2828,10 @@
    <block long-name="Messaging Middleware" level="specific" name="messagingmw" levels="stack fw api">
     <collection name="messagingfw" long-name="Messaging FW" level="fw">
      <component name="biomsgfw" long-name="BIO Messaging Framework" introduced="6.0">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\messagingmw\messagingfw\biomsgfw\group" mrp="mw\messagingmw\messagingfw\biomsgfw\group\messaging_biomsg.mrp"/>
      </component>
      <component name="biowatchers" long-name="BIO Watchers" plugin="Y" introduced="8.0">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\messagingmw\messagingfw\biowatchers\Group" mrp="mw\messagingmw\messagingfw\biowatchers\group\messaging_biomsg_biowatchers_cdma.mrp"/>
+            <unit bldFile="mw\messagingmw\messagingfw\biowatchers\Group" mrp="mw\messagingmw\messagingfw\biowatchers\Group\messaging_biomsg_biowatchers_cdma.mrp"/>
      </component>
      <component name="msgsrvnstore" long-name="Message Server and Store">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -2925,18 +2846,18 @@
             <unit bldFile="mw\messagingmw\messagingfw\msgconf\group" mrp="mw\messagingmw\messagingfw\msgconf\group\messaging_config.mrp"/>
      </component>
      <component name="msgtest" long-name="Messaging Test">
-      <!-- XML Previous Location: Application services\messaging Application Support/ -->
+      <!-- XML Previous Location: Application Services/Messaging Application Support/ -->
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
             <unit bldFile="mw\messagingmw\messagingfw\msgtest\group" mrp="mw\messagingmw\messagingfw\msgtest\group\messaging_test.mrp"/>
      </component>
      <component name="msgtestfw" long-name="Messaging Test Framework" deprecated="tb92">
-      <unit mrp="mw\messagingmw\messagingfw\msgtestfw\group\messaging_testframework.mrp"/>
+      <unit mrp="mw/messagingmw/messagingfw/msgtestfw/group/messaging_testframework.mrp"/>
      </component>
      <component name="msgtestproduct" long-name="Messaging Test Product">
-      <unit mrp="mw\messagingmw\messagingfw\msgtestproduct\group\messaging_testproduct.mrp"/>
+      <unit mrp="mw/messagingmw/messagingfw/msgtestproduct/group/messaging_testproduct.mrp"/>
      </component>
      <component name="msgtests" long-name="Messaging Tests">
-      <unit mrp="mw\messagingmw\messagingfw\msgtests\group\messaging.mrp"/>
+      <unit mrp="mw/messagingmw/messagingfw/msgtests/group/messaging.mrp"/>
      </component>
      <component name="suplsmshandler" long-name="SUPL SMS Handler" plugin="Y" introduced="tb92">
      </component>
@@ -3057,8 +2978,6 @@
    <block long-name="Remote Management" level="specific" name="remotemgmt" levels="plugin framework server generic specific">
     <collection name="remotemgmttest" long-name="Remote Management Test" level="specific">
      <component name="omadevicemgmtintegrationtest" long-name="OMA Device Management Integration Test" introduced="9.1" class="test">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\remotemgmt\remotemgmttest\omadevicemgmtintegrationtest\group" mrp="mw\remotemgmt\remotemgmttest\omadevicemgmtintegrationtest\group\devprov_integtest.mrp"/>
      </component>
      <component name="omasyncmlintegrationtest" long-name="OMA SyncML Integration Test" introduced="7.0s" class="test">
      </component>
@@ -3167,10 +3086,10 @@
             <unit bldFile="mw\remoteconn\connectivitypcside\chatscripts\group" mrp="mw\remoteconn\connectivitypcside\chatscripts\group\testtools_chatscripts.mrp"/>
      </component>
      <component name="connectqi" long-name="ConnectQI" introduced="9.1" class="PC">
-      <unit mrp="mw\remoteconn\connectivitypcside\connectqi\connectqisdk_mr3.mrp"/>
+      <unit mrp="mw/remoteconn/connectivitypcside/connectqi/connectqisdk_mr3.mrp"/>
      </component>
      <component name="connectqisdk" long-name="ConnectQI SDK" introduced="9.1" class="PC">
-      <unit mrp="mw\remoteconn\connectivitypcside\connectqisdk\connectqisdk_public.mrp"/>
+      <unit mrp="mw/remoteconn/connectivitypcside/connectqisdk/connectqisdk_public.mrp"/>
      </component>
     </collection>
     <collection name="connectivitytransports" long-name="Connectivity Transports" level="plugin">
@@ -3187,8 +3106,6 @@
             <unit bldFile="mw\remoteconn\connectivitytransports\plpremotelink\plpvariant" mrp="mw\remoteconn\connectivitytransports\plpremotelink\plpvariant\connectivity_legacy_plp_plpvariant.mrp"/>
      </component>
      <component name="mrouter" long-name="m-Router" filter="gt">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\remoteconn\connectivitytransports\mrouter\group" mrp="mw\remoteconn\connectivitytransports\mrouter\group\connectivity_mRouterSecure.mrp"/>
      </component>
     </collection>
     <collection name="mtpdataproviders" long-name="MTP Data Providers" level="generic">
@@ -3199,8 +3116,6 @@
     </collection>
     <collection name="usbfunctiondrivers" long-name="USB Function Drivers" level="server">
      <component name="massstoragemgr" long-name="Mass Storage Manager" introduced="tb92">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\remoteconn\usbfunctiondrivers\massstoragemgr\group" mrp="mw\remoteconn\usbfunctiondrivers\massstoragemgr\group\connectivity_usbms.mrp"/>
      </component>
     </collection>
     <collection name="backupandrestore" long-name="Backup and Restore" level="specific">
@@ -3215,12 +3130,8 @@
     </collection>
     <collection name="mtpfws" long-name="MTP Frameworks" level="framework">
      <component name="mtpfw" long-name="MTP Framework" introduced="tb91">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\remoteconn\mtpfws\mtpfw\group" mrp="mw\remoteconn\mtpfws\mtpfw\group\mtp_framework.mrp"/>
      </component>
      <component name="mtpintegrationtest" long-name="MTP Integration Test" introduced="tb91" class="test">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\remoteconn\mtpfws\mtpintegrationtest\group" mrp="mw\remoteconn\mtpfws\mtpintegrationtest\group\mtp_test.mrp"/>
      </component>
     </collection>
     <collection name="mtptransports" long-name="MTP Transports" level="plugin">
@@ -3255,18 +3166,18 @@
      <component name="contentmanager" long-name="Content Manager">
      </component>
     </collection>
-    <collection name="upnpavcontroller" long-name="UPnP a\v Controller" level="server">
-     <component name="upnpavcontrollerclient" long-name="UPnP a\v Ccontroller Client">
+    <collection name="upnpavcontroller" long-name="UPnP A/V Controller" level="server">
+     <component name="upnpavcontrollerclient" long-name="UPnP A/V Ccontroller Client">
      </component>
-     <component name="upnpavcontrollerhelper" long-name="UPnP a\v Controller Helper">
+     <component name="upnpavcontrollerhelper" long-name="UPnP A/V Controller Helper">
      </component>
-     <component name="upnpavcontrollerserver" long-name="UPnP a\v Controller Server">
+     <component name="upnpavcontrollerserver" long-name="UPnP A/V Controller Server">
      </component>
      <component name="upnpxmlparser" long-name="UPnP XML Parser">
      </component>
     </collection>
-    <collection name="upnpavcontrolpoint" long-name="UPnP a\v Control Point" level="plugin">
-     <component name="avcontrolframework" long-name="a\v Control Famework">
+    <collection name="upnpavcontrolpoint" long-name="UPnP A/V Control Point" level="plugin">
+     <component name="avcontrolframework" long-name="A/V Control Famework">
      </component>
      <component name="avcpengine" long-name="AVCP Engine">
      </component>
@@ -3304,7 +3215,7 @@
      </component>
     </collection>
     <collection name="upnpmediaserver" long-name="UPnP Media Server" level="server">
-     <component name="avobjects" long-name="a\v Objects">
+     <component name="avobjects" long-name="A/V Objects">
      </component>
      <component name="connectionmanagerservice" long-name="Connection Manager Service">
      </component>
@@ -3627,10 +3538,10 @@
             <unit bldFile="mw\mmmw\mmfwtest\mmfcharacterisationvalidation\group" mrp="mw\mmmw\mmfwtest\mmfcharacterisationvalidation\group\multimedia_mmf_char.mrp"/>
      </component>
      <component name="mmfintegrationtest" long-name="MMF Integration Tests" introduced="7.0s" class="test">
-      <unit mrp="mw\mmmw\mmfwtest\mmfintegrationtest\group\multimedia_inttest_mmf_source.mrp"/>
+      <unit mrp="mw/mmmw/mmfwtest/mmfintegrationtest/group/multimedia_inttest_mmf_source.mrp"/>
      </component>
      <component name="mmfunittest" long-name="MMF Unit Tests" introduced="7.0s" class="test">
-      <unit mrp="mw\mmmw\mmfwtest\mmfunittest\group\multimedia_unittest_mmf_source.mrp"/>
+      <unit mrp="mw/mmmw/mmfwtest/mmfunittest/group/multimedia_unittest_mmf_source.mrp"/>
      </component>
     </collection>
     <collection name="mmmiddlewarefws" long-name="Multimedia Middleware Frameworks" level="server">
@@ -3651,7 +3562,7 @@
     </collection>
     <collection name="mmvalidationsuite" long-name="Multimedia Validation Suite" level="specific">
      <component name="mvsintegrationtest" long-name="MVS Integration Tests" introduced="tb91" class="test">
-      <unit mrp="mw\mmmw\mmvalidationsuite\mvsintegrationtest\group\multimedia_inttest_mvs_source.mrp"/>
+      <unit mrp="mw/mmmw/mmvalidationsuite/mvsintegrationtest/group/multimedia_inttest_mvs_source.mrp"/>
      </component>
      <component name="mmvalidationsuiteagents" long-name="Multimedia Validation Suite Agents" introduced="tb91">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -3858,11 +3769,11 @@
             <unit bldFile="mw\classicui\commonuisupport\grid\group" mrp="mw\classicui\commonuisupport\grid\group\app-framework_grid.mrp"/>
      </component>
      <component name="uifwsdocs" long-name="UI Frameworks Documentation" class="doc">
-      <unit mrp="mw\classicui\commonuisupport\uifwsdocs\app-framework_documentation.mrp"/>
+      <unit mrp="mw/classicui/commonuisupport/uifwsdocs/app-framework_documentation.mrp"/>
      </component>
      <component name="uilaf" long-name="UI Look and Feel" introduced="6.0">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="mw\classicui\commonuisupport\uilaf\GROUP" mrp="mw\classicui\commonuisupport\uilaf\group\app-framework_uiklafgt.mrp"/>
+            <unit bldFile="mw\classicui\commonuisupport\uilaf\GROUP" mrp="mw\classicui\commonuisupport\uilaf\GROUP\app-framework_uiklafgt.mrp"/>
      </component>
      <component name="uikon" long-name="Uikon" introduced="6.0">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -4111,7 +4022,7 @@
             <unit bldFile="mw\appinstall\secureswitools\makekeys\group" mrp="mw\appinstall\secureswitools\makekeys\group\security_makekeys.mrp"/>
      </component>
      <component name="openssllib" long-name="OpenSSL Library" class="PC">
-      <unit mrp="mw\appinstall\secureswitools\openssllib\security_openssl.mrp"/>
+      <unit mrp="mw/appinstall/secureswitools/openssllib/security_openssl.mrp"/>
      </component>
      <component name="swianalysistoolkit" long-name="SWI Analysis Toolkit" class="PC">
      </component>
@@ -4797,7 +4708,7 @@
     <collection name="PCSync" long-name="PC Sync" level="pcsuite-control">
      <component name="PCSyncNgr" long-name="PC Sync Ngr" Application="PC Sync 2" Modules="S60_PCS2_ngr">
      </component>
-     <component name="PCSyncApp" License="other\prorietary">
+     <component name="PCSyncApp" License="Other/prorietary">
      </component>
     </collection>
     <collection name="PhoneBrowser" long-name="Phone Browser" level="pcsuite">
@@ -4908,8 +4819,6 @@
             <unit bldFile="app\contacts\pimprotocols\pbap\group" mrp="app\contacts\pimprotocols\pbap\group\bluetooth_accesshost.mrp"/>
      </component>
      <component name="phonebooksync" long-name="Phonebook Sync" plugin="Y">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app\contacts\pimprotocols\phonebooksync\group" mrp="app\contacts\pimprotocols\phonebooksync\group\telephony_phbksync.mrp"/>
      </component>
     </collection>
     <collection name="ccservices" long-name="CC Services" level="services">
@@ -4942,8 +4851,6 @@
      <component name="CntSortPlugin" long-name="Cnt Sort Plugin">
      </component>
      <component name="contactsmodel" long-name="Contacts Model" introduced="ER5">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit version="1" bldFile="app\contacts\phonebookengines\contactsmodel\group" mrp="app\contacts\phonebookengines\contactsmodel\group\app-engines_cntmodel.mrp"/>
      </component>
      <component name="VirtualPhonebook" long-name="Virtual Phonebook">
      </component>
@@ -4980,11 +4887,9 @@
    <block long-name="Organizer Application Suite" level="apps" span="2" name="organizer" levels="support services engine ui">
     <collection name="officeappeng" long-name="Office App Engines" level="engine">
      <component name="charteng" long-name="Chart" introduced="5.0" deprecated="9.3" class="test">
-      <unit mrp="app\organizer\officeappeng\charteng\group\app-engines_chart.mrp"/>
+      <unit mrp="app/organizer/officeappeng/charteng/group/app-engines_chart.mrp"/>
      </component>
      <component name="datamodel" long-name="Data Engine" introduced="5.0" deprecated="9.3">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app\organizer\officeappeng\datamodel\group" mrp="app\organizer\officeappeng\datamodel\group\app-engines_damodel.mrp"/>
      </component>
      <component name="sheeteng" long-name="Sheet Engine" introduced="5.0" deprecated="9.3">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
@@ -4997,23 +4902,19 @@
     </collection>
     <collection name="pimappservices" long-name="PIM App Services" level="services">
      <component name="agnmodel" long-name="Agenda Model" introduced="5.0" deprecated="9.1">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app\organizer\pimappservices\agnmodel\group" mrp="app\organizer\pimappservices\agnmodel\group\app-engines_agnmodel.mrp"/>
      </component>
      <component name="agendamodeltest" long-name="Agenda Model Test" introduced="8.1" class="test">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app\organizer\pimappservices\agendamodeltest\TestAgendaSrv" mrp="app\organizer\pimappservices\agendamodeltest\testagendasrv\app-engines_testagendasrv.mrp"/>
+            <unit bldFile="app\organizer\pimappservices\agendamodeltest\TestAgendaSrv" mrp="app\organizer\pimappservices\agendamodeltest\TestAgendaSrv\app-engines_testagendasrv.mrp"/>
      </component>
      <component name="calendarvcalplugin" long-name="Calendar vCal Plugin" plugin="Y" introduced="8.1">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit version="1" bldFile="app\organizer\pimappservices\calendarvcalplugin\group" mrp="app\organizer\pimappservices\calendarvcalplugin\group\app-engines_agnversit.mrp"/>
+            <unit version="2" bldFile="app\organizer\pimappservices\calendarvcalplugin\group" mrp="app\organizer\pimappservices\calendarvcalplugin\group\app-engines_agnversit2.mrp"/>
      </component>
      <component name="appenginesdocs" long-name="Application Engines Documentation" class="doc">
-      <unit mrp="app\organizer\pimappservices\appenginesdocs\app-engines_documentation.mrp"/>
+      <unit mrp="app/organizer/pimappservices/appenginesdocs/app-engines_documentation.mrp"/>
      </component>
      <component name="calendar" long-name="Calendar" introduced="9.2">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit version="1" bldFile="app\organizer\pimappservices\calendar\group" mrp="app\organizer\pimappservices\calendar\group\app-engines_calinterimapi.mrp"/>
      </component>
     </collection>
     <collection name="pimappsupport" long-name="PIM Application Support" level="support">
@@ -5024,8 +4925,6 @@
             <unit bldFile="app\organizer\pimappsupport\chinesecalendarconverter\group" mrp="app\organizer\pimappsupport\chinesecalendarconverter\group\app-services_calcon.mrp"/>
      </component>
      <component name="vcardandvcal" long-name="vCard and vCal" introduced="ER5">
-      <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app\organizer\pimappsupport\vcardandvcal\group" mrp="app\organizer\pimappsupport\vcardandvcal\group\app-services_versit.mrp"/>
      </component>
     </collection>
     <collection name="alarmengines" long-name="Alarm Engines" level="engine">
@@ -5143,11 +5042,11 @@
     <collection name="messagingappbase" long-name="Messaging App Base" level="2">
      <component name="obexmtms" long-name="OBEX MTMs" plugin="Y" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app\messaging\messagingappbase\obexmtms\Group" mrp="app\messaging\messagingappbase\obexmtms\group\messaging_obex.mrp"/>
+            <unit bldFile="app\messaging\messagingappbase\obexmtms\Group" mrp="app\messaging\messagingappbase\obexmtms\Group\messaging_obex.mrp"/>
      </component>
      <component name="smilparser" long-name="SMIL Parser" introduced="7.0s">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app\messaging\messagingappbase\smilparser\GROUP" mrp="app\messaging\messagingappbase\smilparser\group\messaging_gmxml.mrp"/>
+            <unit bldFile="app\messaging\messagingappbase\smilparser\GROUP" mrp="app\messaging\messagingappbase\smilparser\GROUP\messaging_gmxml.mrp"/>
      </component>
      <component name="bium" long-name="Bium">
      </component>
@@ -5176,11 +5075,11 @@
     </collection>
     <collection name="mmsengine" long-name="MMS Engine" level="1">
      <component name="mmsconf" long-name="MMS Configuration">
-      <unit mrp="app\messaging\mmsengine\mmssettings\group\messaging_mmssettings-config.mrp"/>
+      <unit mrp="app/messaging/mmsengine/mmssettings/group/messaging_mmssettings-config.mrp"/>
      </component>
      <component name="mmssettings" long-name="MMS Settings" introduced="9.2">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app\messaging\mmsengine\mmssettings\group/" mrp="app\messaging\mmsengine\mmssettings\group\messaging_mmssettings.mrp"/>
+            <unit bldFile="app\messaging\mmsengine\mmssettings\group\" mrp="app\messaging\mmsengine\mmssettings\group\messaging_mmssettings.mrp"/>
      </component>
      <component name="applicationadapter" long-name="Application Adapter">
      </component>
@@ -5210,7 +5109,7 @@
     <collection name="mobilemessaging" long-name="Mobile Messaging" level="2">
      <component name="smsmtm" long-name="SMS MTM" plugin="Y">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app\messaging\mobilemessaging\smsmtm\multimode\group" mrp="app\messaging\mobilemessaging\smsmtm\multimode\group\messaging_sms_multimode.mrp"/>
+            <unit bldFile="app\messaging\mobilemessaging\smsmtm\multimode\Group" mrp="app\messaging\mobilemessaging\smsmtm\multimode\Group\messaging_sms_multimode.mrp"/>
      </component>
      <component name="audiomsg" long-name="Audio Message">
      </component>
@@ -5779,7 +5678,7 @@
     </collection>
     <collection name="symhelp" long-name="Symbian Help" level="eng">
      <component name="cshlpcmpbackend" long-name="CSHelp Compiler Backend">
-      <unit mrp="app\helps\symhelp\cshlpcmpbackend\group\tools_sdk_eng_cshlpcmp_backend_srconly.mrp"/>
+      <unit mrp="app/helps/symhelp/cshlpcmpbackend/group/tools_sdk_eng_cshlpcmp_backend_srconly.mrp"/>
      </component>
      <component name="cshlpcmpfrontend" long-name="CSHelp Compiler Frontend">
      </component>
@@ -6046,10 +5945,10 @@
     </collection>
     <collection name="networkingutils" long-name="Networking Utils" level="utils">
      <component name="ipadministrationtool" long-name="IP Administration Tool" introduced="7.0">
-      <unit mrp="app\techview\networkingutils\ipadministrationtool\group\networking_ipadm.mrp"/>
+      <unit mrp="app/techview/networkingutils/ipadministrationtool/group/networking_ipadm.mrp"/>
      </component>
      <component name="nameresolverutility" long-name="Name Resolver Utility" introduced="7.0s">
-      <unit mrp="app\techview\networkingutils\nameresolverutility\group\networking_nslookup.mrp"/>
+      <unit mrp="app/techview/networkingutils/nameresolverutility/group/networking_nslookup.mrp"/>
      </component>
     </collection>
     <collection name="pimapps" long-name="PIM Apps" level="apps3">
@@ -6098,7 +5997,7 @@
     </collection>
     <collection name="testapps" long-name="Test Apps" level="utils">
      <component name="rschandler" long-name="Resource Handler" deprecated="tb92">
-      <unit mrp="app\techview\testapps\rschandler\tvresourcehandler\group\Testtools_ResourceHandler_gt.mrp"/>
+      <unit mrp="app/techview/testapps/rschandler/TVResourceHandler/group/Testtools_ResourceHandler_gt.mrp"/>
      </component>
      <component name="rschandlerui" long-name="Resource Handler UI" filter="techview">
      </component>
@@ -6111,13 +6010,14 @@
     </collection>
     <collection name="toolkit" long-name="Toolkit" level="utils">
      <component name="additionalconfigfiles" long-name="Additional Configuration Files" filter="techview">
-      <unit mrp="app\techview\toolkit\configfiles\techview_additional_cedar.mrp"/>
+      <unit mrp="app/techview/toolkit/configfiles/techview_additional_cedar.mrp"/>
      </component>
      <component name="configfiles" long-name="Configuration Files" filter="techview">
-      <unit mrp="app\techview\toolkit\configfiles\techview_epoc_ini.mrp"/>
+      <unit mrp="app/techview/toolkit/configfiles/techview_epoc_ini.mrp"/>
      </component>
      <component name="romimages" long-name="ROM Images" filter="techview">
-      <unit version="9.4" mrp="os\deviceplatformrelease\symbianosbld\cedarutils\techview_roms_9.4.mrp"/>
+      <unit version="Future" mrp="os/deviceplatformrelease/symbianosbld/cedarutils/techview_roms_Future.mrp"/>
+      <unit version="9.4" mrp="os/deviceplatformrelease/symbianosbld/cedarutils/techview_roms_9.4.mrp"/>
      </component>
      <component name="romkit" long-name="ROM Kit" filter="techview">
      </component>
@@ -6128,14 +6028,14 @@
      <component name="timew" long-name="World Time" filter="techview">
      </component>
     </collection>
-    <collection name="avapps" long-name="a\v Apps" level="apps3">
+    <collection name="avapps" long-name="A/V Apps" level="apps3">
      <component name="techviewaudio" long-name="Audio" filter="techview">
      </component>
     </collection>
     <collection name="buildverification" long-name="Build Verification" level="services">
      <component name="smoketest" long-name="Smoke Test" filter="gt">
       <!-- Unit added by SF via autopopulating script from System Definition Template -->
-            <unit bldFile="app\techview\buildverification\smoketest\Group" mrp="app\techview\buildverification\smoketest\group\testtools_smoketest.mrp"/>
+            <unit bldFile="app\techview\buildverification\smoketest\Group" mrp="app\techview\buildverification\smoketest\Group\testtools_smoketest.mrp"/>
      </component>
     </collection>
     <collection name="sysvalidation" long-name="System Validation" level="services">
