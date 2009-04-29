@@ -58,5 +58,9 @@
     
     <!-- zip all logs before publish -->
     <property name="sf.spec.logs.zip.enable"  value="true"/>
+	
+	<!-- packaging options for bin/src-->
+	<property name="sf.spec.package.bin.enable"  value="true"/>
+	<property name="sf.spec.package.src.enable"  value="true"/>
 
 </project>
