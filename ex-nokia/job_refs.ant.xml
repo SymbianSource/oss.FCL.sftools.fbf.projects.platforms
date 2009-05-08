@@ -11,7 +11,7 @@
   <path id="sf.spec.s60.system.definition.files">
 <!--        <fileset dir="${sf.project.location}\sysdefs\" includes="S60_*.xml"/> -->
 	<fileset dir="${sf.project.location}/" casesensitive="false">
-			<include name="sysdefs/system_model_s60_sf.xml" />
+			<include name="sysdefs/system_model_s60.xml" />
 	</fileset>
   </path>   
     
