@@ -24,7 +24,7 @@
     <property name="sf.spec.baseline.clean"          value="false"/>
     
     <property name="sf.spec.baseline.select" value="location" />
-    <property name="sf.spec.baseline.location" value="\\LON_ENGBUILD87\D$\PDK\PDK_20090507\" />  
+    <property name="sf.spec.baseline.location" value="\\LON-ENGBUILD87\D$\PDK\PDK_20090507\" />  
     <property name="sf.spec.toolsbaseline.enable" value="true"/>
     <property name="sf.spec.publish.rootdir" value="D:\SF_Builds"/>
     
