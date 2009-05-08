@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <!DOCTYPE SystemDefinition [
  <!ELEMENT SystemDefinition (systemModel?, build?)>
  <!ATTLIST SystemDefinition
@@ -11,7 +11,11 @@
   levels CDATA #IMPLIED
   span CDATA #IMPLIED>
  <!ELEMENT logicalset (logicalsubset* | module* | unit* | package* | prebuilt*)*>
- <!ATTLIST logicalset name CDATA #REQUIRED>
+ <!ATTLIST logicalset
+  name CDATA #REQUIRED
+  levels CDATA #IMPLIED
+  span CDATA #IMPLIED
+  level CDATA #IMPLIED>
  <!ELEMENT logicalsubset (module* | unit* | package* | prebuilt*)*>
  <!ATTLIST logicalsubset name CDATA #REQUIRED>
  <!ELEMENT module (component* | unit* | package* | prebuilt*)*>
@@ -87,23 +91,8 @@
   cwd CDATA #REQUIRED
   command CDATA #REQUIRED>
 ]>
-<!-- 
-============================================================================ 
-Name        : sysdef_dtd_1_4_0.xml 
-Part of     : Helium 
-Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
-All rights reserved.
-This component and the accompanying materials are made available
-under the terms of the License "Eclipse Public License v1.0"
-which accompanies this distribution, and is available
-at the URL "http://www.eclipse.org/legal/epl-v10.html".
-Initial Contributors:
-Nokia Corporation - initial contribution.
-Contributors:
-Description:
-============================================================================
--->
-<SystemDefinition name="sysdef_dtd_1_4_0_xml + S60_SystemBuild + S60_SystemModel" schema="1.4.0"><systemModel>
+<SystemDefinition name="S60_SystemModel + S60_SystemBuild" schema="1.4.0">
+<systemModel>
 <layer name="sf">
 <logicalset name="adaptation">
 <logicalsubset name="stubs">
@@ -120,11 +109,6 @@ Description:
 <module name="drm_stubs">
 <component name="drm_stubs">
 <unit unitID="sf_adaptation_stubs_drm_stubs" name="drm_stubs" bldFile="\sf\adaptation\stubs\drm_stubs\group" mrp="" filter="!no_stubs"/>
-</component>
-</module>
-<module name="licensee_tsy_stub">
-<component name="licensee_tsy_stub">
-<unit unitID="sf_adaptation_stubs_licensee_tsy_stub" name="licensee_tsy_stub" bldFile="\sf\adaptation\stubs\licensee_tsy_stub\group" mrp="" filter="!no_stubs"/>
 </component>
 </module>
 <module name="ocrsrv_stub">
@@ -145,11 +129,6 @@ Description:
 <module name="power_save_display_mode_stub">
 <component name="power_save_display_mode_stub">
 <unit unitID="sf_adaptation_stubs_power_save_display_mode_stub" name="power_save_display_mode_stub" bldFile="\sf\adaptation\stubs\power_save_display_mode_stub\group" mrp="" filter="!no_stubs"/>
-</component>
-</module>
-<module name="simatk_tsy_stub">
-<component name="simatk_tsy_stub">
-<unit unitID="sf_adaptation_stubs_simatk_tsy_stub" name="simatk_tsy_stub" bldFile="\sf\adaptation\stubs\simatk_tsy_stub\group" mrp="" filter="!no_stubs"/>
 </component>
 </module>
 <module name="srsfenginestub">
@@ -635,6 +614,16 @@ Description:
 <unit unitID="sf_mw_mmmw" name="mmmw" bldFile="\sf\mw\mmmw\group" mrp=""/>
 </component>
 </module>
+<module name="metadatautility">
+<component name="3GPExtParserLib">
+<unit unitID="sf_mw_mmmw_metadatautility_3GPExtParserLib" name="3GPExtParserLib" bldFile="\sf\mw\mmmw\metadatautility\3GPExtParserLib\group" mrp=""/>
+</component>
+</module>
+<module name="mmfw">
+<component name="gstreamer">
+<unit unitID="sf_mw_mmmw_mmfw_gstreamer" name="gstreamer" bldFile="\sf\mw\mmmw\mmfw\gstreamer\group" mrp=""/>
+</component>
+</module>
 <module name="mtp">
 <component name="mtp">
 <unit unitID="sf_mw_mmmw_mtp" name="mtp" bldFile="\sf\mw\mmmw\mtp\group" mrp=""/>
@@ -769,6 +758,11 @@ Description:
 <unit unitID="sf_mw_uitools" name="uitools" bldFile="\sf\mw\uitools\group" mrp=""/>
 </component>
 </module>
+<module name="toollibraries">
+<component name="toollibraries">
+<unit unitID="sf_mw_uitools_toollibraries" name="toollibraries" bldFile="\sf\mw\uitools\toollibraries\group" mrp=""/>
+</component>
+</module>
 </logicalsubset>
 <logicalsubset name="videoutils">
 <module name="videoutils">
@@ -823,6 +817,11 @@ Description:
 <unit unitID="sf_os_deviceplatformrelease_S60LocFiles" name="S60LocFiles" bldFile="\sf\os\deviceplatformrelease\S60LocFiles\group" mrp=""/>
 </component>
 </module>
+<module name="S60LocFiles">
+<component name="group_oem">
+<unit unitID="sf_os_deviceplatformrelease_S60LocFiles_group_oem" name="group_oem" bldFile="\sf\os\deviceplatformrelease\S60LocFiles\group_oem" mrp=""/>
+</component>
+</module>
 <module name="Version">
 <component name="Version">
 <unit unitID="sf_os_deviceplatformrelease_Version" name="Version" bldFile="\sf\os\deviceplatformrelease\Version\group" mrp=""/>
@@ -848,8 +847,13 @@ Description:
 </component>
 </module>
 <module name="graphicsaccelaration">
-<component name="graphicsaccelaration">
-<unit unitID="sf_os_graphics_graphicsaccelaration" name="graphicsaccelaration" bldFile="\sf\os\graphics\graphicsaccelaration\group" mrp=""/>
+<component name="2D_OpenVG_1_0">
+<unit unitID="sf_os_graphics_graphicsaccelaration_2D_OpenVG_1_0" name="2D_OpenVG_1_0" bldFile="\sf\os\graphics\graphicsaccelaration\2D_OpenVG_1_0\group" mrp=""/>
+</component>
+</module>
+<module name="graphicsaccelaration">
+<component name="3d_opengl_es_1_1">
+<unit unitID="sf_os_graphics_graphicsaccelaration_3d_opengl_es_1_1" name="3d_opengl_es_1_1" bldFile="\sf\os\graphics\graphicsaccelaration\3d_opengl_es_1_1\group" mrp=""/>
 </component>
 </module>
 </logicalsubset>
@@ -914,11 +918,6 @@ Description:
 <module name="devsoundextensions">
 <component name="addeddevsoundcontrol">
 <unit unitID="sf_os_mm_devsoundextensions_addeddevsoundcontrol" name="addeddevsoundcontrol" bldFile="\sf\os\mm\devsoundextensions\addeddevsoundcontrol\Group" mrp=""/>
-</component>
-</module>
-<module name="devsoundextensions">
-<component name="mmfdevsoundserverplatsec">
-<unit unitID="sf_os_mm_devsoundextensions_mmfdevsoundserverplatsec" name="mmfdevsoundserverplatsec" bldFile="\sf\os\mm\devsoundextensions\mmfdevsoundserverplatsec\Group" mrp="" filter="!no_stubs"/>
 </component>
 </module>
 <module name="video">
@@ -1009,6 +1008,15 @@ Description:
 </logicalset>
 </layer>
 <layer name="ext">
+<logicalset name="app">
+<logicalsubset name="eas">
+<module name="eas">
+<component name="eas">
+<unit unitID="ext_app_eas" name="eas" bldFile="\ext\app\eas\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+</logicalset>
 <logicalset name="mw">
 <logicalsubset name="websrvde">
 <module name="websrvde">
@@ -1034,6 +1042,18 @@ Description:
 </module>
 </logicalsubset>
 </logicalset>
+</layer>
+<layer name="SF_SOS">
+<module name="sf_licenseetsystub">
+<component name="sf_licenseetsystub">
+<unit unitID="sf_os_cellularsrv_telephonyserverplugins_licenseetsystub" name="sf_licenseetsystub" bldFile="\sf\os\cellularsrv\telephonyserverplugins\licenseetsystub\group" mrp="" filter="!no_stubs"/>
+</component>
+</module>
+<module name="sf_common_tsy">
+<component name="sf_common_tsy">
+<unit unitID="sf_os_cellularsrv_telephonyserverplugins_common_tsy" name="sf_common_tsy" bldFile="\sf\os\cellularsrv\telephonyserverplugins\common_tsy\group" mrp="" filter=""/>
+</component>
+</module>
 </layer></systemModel>
 <build>
     <option name="KEEPGOING" abldOption="-keepgoing" description="Causes make to keepgoing on errors" enable="Y"/>
@@ -1095,7 +1115,7 @@ this configuration can be used only when those components has built among normal
 -->
 <!--  OS Extension build configurations start  -->
     <unitList name="S60_COMMON_OSEXTENSION" description="S60 common OSExtension">
-				<unitRef unit="sf_os_cellularsrv"/>
+				<unitRef unit="sf_os_cellularsrv_telephonyserverplugins_common_tsy"/>
         <unitRef unit="sf_os_deviceplatformrelease_S60LocFiles"/>   			
         <unitRef unit="sf_os_deviceplatformrelease_S60Extras"/>   			
         <unitRef unit="sf_os_deviceplatformrelease_S60Helps"/>
@@ -1106,13 +1126,14 @@ this configuration can be used only when those components has built among normal
 				<unitRef unit="sf_os_lbs"/>
 				<unitRef unit="sf_os_mm"/>
 				<unitRef unit="sf_os_networkingsrv"/>
-				<unitRef unit="sf_os_mm_devsoundextensions_mmfdevsoundserverplatsec"/>
 				<unitRef unit="sf_os_mm_devsoundextensions_addeddevsoundcontrol"/>
 				<unitRef unit="sf_os_shortlinksrv"/>
 				<unitRef unit="sf_os_wlan"/>
 				<unitRef unit="sf_ostools_osrndtools"/>
 			</unitList>
     <unitList name="S60_COMMON_OSEXTENSION_OEM" description="S60 common OSExtension OEM">
+				<unitRef unit="sf_os_deviceplatformrelease_S60LocFiles_group_oem"/>
+				<unitRef unit="sf_os_cellularsrv"/>
 				<unitRef unit="sf_os_imagingext_imagingmodules_Build"/>
 				<unitRef unit="sf_os_imagingext_imagingmodules_H264AVCVideoEncARM"/>
 				<unitRef unit="sf_os_mm_audio_AacEncoderPlugin"/>
@@ -1131,7 +1152,6 @@ this configuration can be used only when those components has built among normal
 				<unitRef unit="sf_mw_camerasrv"/>
 				<unitRef unit="sf_mw_dlnasrv"/>
 				<unitRef unit="sf_mw_drm"/>
-				<unitRef unit="sf_mw_helix"/>
 				<unitRef unit="sf_mw_homescreensrv"/>
 				<unitRef unit="sf_mw_imghandling"/>
 				<unitRef unit="sf_mw_imsrv"/>
@@ -1211,15 +1231,13 @@ this configuration can be used only when those components has built among normal
 				<!--unitRef unit="sf_tools_platsim"/-->
 				<unitRef unit="sf_tools_rndtools"/>
 				<unitRef unit="sf_tools_swconfigtools"/>
-				<unitRef unit="ext_mw_websrvde"/>
-				<unitRef unit="ext_tools_oemrndtools"/>
 				<unitRef unit="sf_tools_themeinstaller"/>
-				<unitRef unit="ext_tools_toolsextensions"/>
 				<unitRef unit="sf_app_commonemail"/>
 				<unitRef unit="sf_app_radio"/>
 				<unitRef unit="sf_app_printing"/>
 				<unitRef unit="sf_mw_hapticsservices"/>
 				<unitRef unit="sf_app_gallery"/>
+				<unitRef unit="ext_tools_toolsextensions"/>
     </unitList>
     <unitList name="S60_OEM_BUILD" description="S60 OEM build">
 				<unitRef unit="sf_mw_mmmw_mtp"/>
@@ -1229,15 +1247,21 @@ this configuration can be used only when those components has built among normal
 				<unitRef unit="sf_mw_shortlinkconn_usbclasses_usbosdescriptorhandler"/>
 				<unitRef unit="sf_app_videotelephony_packetvideoengine_PacketVideoEngineBinaries"/>
 				<unitRef unit="sf_app_videotelephony_vtprotocols"/>
-				<unitRef unit="sf_os_graphics_graphicsaccelaration"/>
+				<unitRef unit="sf_os_graphics_graphicsaccelaration_2D_OpenVG_1_0"/>
+				<unitRef unit="sf_os_graphics_graphicsaccelaration_3d_opengl_es_1_1"/>
 				<unitRef unit="sf_os_graphics_graphics_pub"/>
 				<unitRef unit="sf_app_java"/>
 				<unitRef unit="sf_mw_appsupport_appsupport_plat_flash_mmi_service_interface_custom_api"/>
 				<unitRef unit="sf_mw_appsupport_appsupport_plat_flash_netscape_plugin_command_api"/>
+				<unitRef unit="sf_mw_uitools_toollibraries"/>
+				<unitRef unit="sf_mw_mmmw_metadatautility_3GPExtParserLib"/>
+				<unitRef unit="sf_mw_mmmw_mmfw_gstreamer"/>
+				<unitRef unit="ext_app_eas"/>
+				<unitRef unit="ext_mw_websrvde"/>
+				<unitRef unit="ext_tools_oemrndtools"/>
     </unitList>
     <unitList name="S60_COMMON_OSEXTENSION_STUBS" description="S60 common OSExtension">
-    	<unitRef unit="sf_adaptation_stubs_licensee_tsy_stub"/>
-    	<unitRef unit="sf_adaptation_stubs_simatk_tsy_stub"/>
+    	<unitRef unit="sf_os_cellularsrv_telephonyserverplugins_licenseetsystub"/>
     	<unitRef unit="sf_adaptation_stubs_audiostubs"/>
     	<unitRef unit="sf_adaptation_stubs_wlanhwinit_stub"/>
 			<unitRef unit="sf_adaptation_stubs_systemswstubs"/>
