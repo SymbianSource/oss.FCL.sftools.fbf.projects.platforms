@@ -274,9 +274,14 @@
 </module>
 </logicalsubset>
 <logicalsubset name="java">
-<module name="java">
-<component name="java">
-<unit unitID="sf_app_java" name="java" bldFile="\sf\app\java\group" mrp=""/>
+<module name="java_plat">
+<component name="java_plat">
+<unit unitID="sf_app_java_java_plat" name="java_plat" bldFile="\sf\app\java\java_plat\group" mrp=""/>
+</component>
+</module>
+<module name="java_stubs">
+<component name="java_stubs">
+<unit unitID="sf_app_java_java_stubs" name="java_stubs" bldFile="\sf\app\java\java_stubs\group" mrp=""/>
 </component>
 </module>
 </logicalsubset>
@@ -412,14 +417,9 @@
 <unit unitID="sf_app_videotelephony" name="videotelephony" bldFile="\sf\app\videotelephony\group" mrp=""/>
 </component>
 </module>
-<module name="packetvideoengine">
-<component name="PacketVideoEngineBinaries">
-<unit unitID="sf_app_videotelephony_packetvideoengine_PacketVideoEngineBinaries" name="PacketVideoEngineBinaries" bldFile="\sf\app\videotelephony\packetvideoengine\PacketVideoEngineBinaries\group" mrp=""/>
-</component>
-</module>
-<module name="vtprotocols">
-<component name="vtprotocols">
-<unit unitID="sf_app_videotelephony_vtprotocols" name="vtprotocols" bldFile="\sf\app\videotelephony\vtprotocols\group" mrp=""/>
+<module name="vtprotocolsstub">
+<component name="vtprotocolsstub">
+<unit unitID="sf_app_videotelephony_vtprotocolsstub" name="vtprotocolsstub" bldFile="\sf\app\videotelephony\vtprotocolsstub\group" mrp=""/>
 </component>
 </module>
 </logicalsubset>
@@ -459,16 +459,6 @@
 <unit unitID="sf_mw_appsupport" name="appsupport" bldFile="\sf\mw\appsupport\group" mrp=""/>
 </component>
 </module>
-<module name="appsupport_plat">
-<component name="flash_mmi_service_interface_custom_api">
-<unit unitID="sf_mw_appsupport_appsupport_plat_flash_mmi_service_interface_custom_api" name="flash_mmi_service_interface_custom_api" bldFile="\sf\mw\appsupport\appsupport_plat\flash_mmi_service_interface_custom_api\group" mrp=""/>
-</component>
-</module>
-<module name="appsupport_plat">
-<component name="flash_netscape_plugin_command_api">
-<unit unitID="sf_mw_appsupport_appsupport_plat_flash_netscape_plugin_command_api" name="flash_netscape_plugin_command_api" bldFile="\sf\mw\appsupport\appsupport_plat\flash_netscape_plugin_command_api\group" mrp=""/>
-</component>
-</module>
 </logicalsubset>
 <logicalsubset name="camerasrv">
 <module name="camerasrv">
@@ -502,18 +492,6 @@
 <module name="hapticsservices">
 <component name="hapticsservices">
 <unit unitID="sf_mw_hapticsservices" name="hapticsservices" bldFile="\sf\mw\hapticsservices\group" mrp=""/>
-</component>
-</module>
-</logicalsubset>
-<logicalsubset name="helix">
-<module name="helix">
-<component name="helix">
-<unit unitID="sf_mw_helix" name="helix" bldFile="\sf\mw\helix\group" mrp=""/>
-</component>
-</module>
-<module name="helix_ren">
-<component name="src">
-<unit unitID="sf_mw_helix_helix_ren_src" name="src" bldFile="\sf\mw\helix\helix_ren\src\group" mrp="" filter="!no_binonly"/>
 </component>
 </module>
 </logicalsubset>
@@ -614,19 +592,9 @@
 <unit unitID="sf_mw_mmmw" name="mmmw" bldFile="\sf\mw\mmmw\group" mrp=""/>
 </component>
 </module>
-<module name="metadatautility">
-<component name="3GPExtParserLib">
-<unit unitID="sf_mw_mmmw_metadatautility_3GPExtParserLib" name="3GPExtParserLib" bldFile="\sf\mw\mmmw\metadatautility\3GPExtParserLib\group" mrp=""/>
-</component>
-</module>
 <module name="mmfw">
-<component name="gstreamer">
-<unit unitID="sf_mw_mmmw_mmfw_gstreamer" name="gstreamer" bldFile="\sf\mw\mmmw\mmfw\gstreamer\group" mrp=""/>
-</component>
-</module>
-<module name="mtp">
-<component name="mtp">
-<unit unitID="sf_mw_mmmw_mtp" name="mtp" bldFile="\sf\mw\mmmw\mtp\group" mrp=""/>
+<component name="helix_stub">
+<unit unitID="sf_mw_mmmw_mmfw_helix_stub" name="helix_stub" bldFile="\sf\mw\mmmw\mmfw\helix_stub\group" mrp=""/>
 </component>
 </module>
 </logicalsubset>
@@ -700,8 +668,8 @@
 </component>
 </module>
 <module name="pkiutilities">
-<component name="Certificates_OEM">
-<unit unitID="sf_mw_securitysrv_pkiutilities_Certificates_OEM" name="Certificates_OEM" bldFile="\sf\mw\securitysrv\pkiutilities\Certificates_OEM\group" mrp=""/>
+<component name="Certificates">
+<unit unitID="sf_mw_securitysrv_pkiutilities_Certificates" name="Certificates" bldFile="\sf\mw\securitysrv\pkiutilities\Certificates\group" mrp=""/>
 </component>
 </module>
 </logicalsubset>
@@ -723,11 +691,6 @@
 <module name="shortlinkconn">
 <component name="shortlinkconn">
 <unit unitID="sf_mw_shortlinkconn" name="shortlinkconn" bldFile="\sf\mw\shortlinkconn\group" mrp=""/>
-</component>
-</module>
-<module name="usbclasses">
-<component name="usbosdescriptorhandler">
-<unit unitID="sf_mw_shortlinkconn_usbclasses_usbosdescriptorhandler" name="usbosdescriptorhandler" bldFile="\sf\mw\shortlinkconn\usbclasses\usbosdescriptorhandler\group" mrp=""/>
 </component>
 </module>
 </logicalsubset>
@@ -758,16 +721,18 @@
 <unit unitID="sf_mw_uitools" name="uitools" bldFile="\sf\mw\uitools\group" mrp=""/>
 </component>
 </module>
-<module name="toollibraries">
-<component name="toollibraries">
-<unit unitID="sf_mw_uitools_toollibraries" name="toollibraries" bldFile="\sf\mw\uitools\toollibraries\group" mrp=""/>
-</component>
-</module>
 </logicalsubset>
 <logicalsubset name="videoutils">
 <module name="videoutils">
 <component name="videoutils">
 <unit unitID="sf_mw_videoutils" name="videoutils" bldFile="\sf\mw\videoutils\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+<logicalsubset name="vpnclient">
+<module name="vpnclient">
+<component name="vpnclient">
+<unit unitID="sf_mw_vpnclient" name="vpnclient" bldFile="\sf\mw\vpnclient\group" mrp=""/>
 </component>
 </module>
 </logicalsubset>
@@ -795,9 +760,19 @@
 </logicalset>
 <logicalset name="os">
 <logicalsubset name="cellularsrv">
-<module name="cellularsrv">
-<component name="cellularsrv">
-<unit unitID="sf_os_cellularsrv" name="cellularsrv" bldFile="\sf\os\cellularsrv\group" mrp=""/>
+<module name="basebandabstraction">
+<component name="basebandabstraction">
+<unit unitID="sf_os_cellularsrv_basebandabstraction" name="basebandabstraction" bldFile="\sf\os\cellularsrv\basebandabstraction\group" mrp=""/>
+</component>
+</module>
+<module name="cellularsrv_plat">
+<component name="primary_pdp_context_qos_parameter_setting_api">
+<unit unitID="sf_os_cellularsrv_cellularsrv_plat_primary_pdp_context_qos_parameter_setting_api" name="primary_pdp_context_qos_parameter_setting_api" bldFile="\sf\os\cellularsrv\cellularsrv_plat\primary_pdp_context_qos_parameter_setting_api\group" mrp=""/>
+</component>
+</module>
+<module name="commonnetworkinterface">
+<component name="commonnetworkinterface">
+<unit unitID="sf_os_cellularsrv_commonnetworkinterface" name="commonnetworkinterface" bldFile="\sf\os\cellularsrv\commonnetworkinterface\group" mrp=""/>
 </component>
 </module>
 </logicalsubset>
@@ -815,11 +790,6 @@
 <module name="S60LocFiles">
 <component name="S60LocFiles">
 <unit unitID="sf_os_deviceplatformrelease_S60LocFiles" name="S60LocFiles" bldFile="\sf\os\deviceplatformrelease\S60LocFiles\group" mrp=""/>
-</component>
-</module>
-<module name="S60LocFiles">
-<component name="group_oem">
-<unit unitID="sf_os_deviceplatformrelease_S60LocFiles_group_oem" name="group_oem" bldFile="\sf\os\deviceplatformrelease\S60LocFiles\group_oem" mrp=""/>
 </component>
 </module>
 <module name="Version">
@@ -841,36 +811,11 @@
 <unit unitID="sf_os_graphics" name="graphics" bldFile="\sf\os\graphics\group" mrp=""/>
 </component>
 </module>
-<module name="graphics_pub">
-<component name="graphics_pub">
-<unit unitID="sf_os_graphics_graphics_pub" name="graphics_pub" bldFile="\sf\os\graphics\graphics_pub\group" mrp=""/>
-</component>
-</module>
-<module name="graphicsaccelaration">
-<component name="2D_OpenVG_1_0">
-<unit unitID="sf_os_graphics_graphicsaccelaration_2D_OpenVG_1_0" name="2D_OpenVG_1_0" bldFile="\sf\os\graphics\graphicsaccelaration\2D_OpenVG_1_0\group" mrp=""/>
-</component>
-</module>
-<module name="graphicsaccelaration">
-<component name="3d_opengl_es_1_1">
-<unit unitID="sf_os_graphics_graphicsaccelaration_3d_opengl_es_1_1" name="3d_opengl_es_1_1" bldFile="\sf\os\graphics\graphicsaccelaration\3d_opengl_es_1_1\group" mrp=""/>
-</component>
-</module>
 </logicalsubset>
 <logicalsubset name="imagingext">
 <module name="imagingext">
 <component name="imagingext">
 <unit unitID="sf_os_imagingext" name="imagingext" bldFile="\sf\os\imagingext\group" mrp=""/>
-</component>
-</module>
-<module name="imagingmodules">
-<component name="H264AVCVideoEncARM">
-<unit unitID="sf_os_imagingext_imagingmodules_H264AVCVideoEncARM" name="H264AVCVideoEncARM" bldFile="\sf\os\imagingext\imagingmodules\H264AVCVideoEncARM\group" mrp=""/>
-</component>
-</module>
-<module name="imagingmodules">
-<component name="Build">
-<unit unitID="sf_os_imagingext_imagingmodules_Build" name="Build" bldFile="\sf\os\imagingext\imagingmodules\VideoEncPluginARM\Build" mrp=""/>
 </component>
 </module>
 </logicalsubset>
@@ -885,44 +830,9 @@
 <unit unitID="sf_os_mm" name="mm" bldFile="\sf\os\mm\group" mrp=""/>
 </component>
 </module>
-<module name="audio">
-<component name="AacEncoderPlugin">
-<unit unitID="sf_os_mm_audio_AacEncoderPlugin" name="AacEncoderPlugin" bldFile="\sf\os\mm\audio\ARM_CMMF_codecs\AacEncoderPlugin\Group" mrp=""/>
-</component>
-</module>
-<module name="audio">
-<component name="AmrNbCodecPlugin">
-<unit unitID="sf_os_mm_audio_AmrNbCodecPlugin" name="AmrNbCodecPlugin" bldFile="\sf\os\mm\audio\ARM_CMMF_codecs\AmrNbCodecPlugin\Group" mrp=""/>
-</component>
-</module>
-<module name="audio">
-<component name="AmrWbCodecPlugin">
-<unit unitID="sf_os_mm_audio_AmrWbCodecPlugin" name="AmrWbCodecPlugin" bldFile="\sf\os\mm\audio\ARM_CMMF_codecs\AmrWbCodecPlugin\Group" mrp=""/>
-</component>
-</module>
-<module name="audio">
-<component name="EAacPlusCodecPlugin">
-<unit unitID="sf_os_mm_audio_EAacPlusCodecPlugin" name="EAacPlusCodecPlugin" bldFile="\sf\os\mm\audio\ARM_CMMF_codecs\EAacPlusCodecPlugin\Group" mrp=""/>
-</component>
-</module>
-<module name="audio">
-<component name="MP3CodecPlugin">
-<unit unitID="sf_os_mm_audio_MP3CodecPlugin" name="MP3CodecPlugin" bldFile="\sf\os\mm\audio\ARM_CMMF_codecs\MP3CodecPlugin\Group" mrp=""/>
-</component>
-</module>
-<module name="audio">
-<component name="WMADecoderPlugin">
-<unit unitID="sf_os_mm_audio_WMADecoderPlugin" name="WMADecoderPlugin" bldFile="\sf\os\mm\audio\ARM_CMMF_codecs\WMADecoderPlugin\Group" mrp=""/>
-</component>
-</module>
 <module name="devsoundextensions">
 <component name="addeddevsoundcontrol">
 <unit unitID="sf_os_mm_devsoundextensions_addeddevsoundcontrol" name="addeddevsoundcontrol" bldFile="\sf\os\mm\devsoundextensions\addeddevsoundcontrol\Group" mrp=""/>
-</component>
-</module>
-<module name="video">
-<component name="ARM_MDF_Decoders">
-<unit unitID="sf_os_mm_video_ARM_MDF_Decoders" name="ARM_MDF_Decoders" bldFile="\sf\os\mm\video\ARM_MDF_Decoders\group" mrp=""/>
 </component>
 </module>
 </logicalsubset>
@@ -960,6 +870,11 @@
 <unit unitID="sf_os_wlan" name="wlan" bldFile="\sf\os\wlan\group" mrp=""/>
 </component>
 </module>
+<module name="wlan_bearer">
+<component name="wlanengine_symbian_3.1">
+<unit unitID="sf_os_wlan_wlan_bearer_wlanengine_symbian_3.1" name="wlanengine_symbian_3.1" bldFile="\sf\os\wlan\wlan_bearer\wlanengine\wlan_symbian\wlanengine_symbian_3.1\group" mrp=""/>
+</component>
+</module>
 </logicalsubset>
 <logicalsubset name="xmlsrv">
 <module name="xmlsrv">
@@ -974,6 +889,16 @@
 <module name="osrndtools">
 <component name="osrndtools">
 <unit unitID="sf_ostools_osrndtools" name="osrndtools" bldFile="\sf\ostools\osrndtools\group" mrp=""/>
+</component>
+</module>
+<module name="hti">
+<component name="hti">
+<unit unitID="sf_ostools_osrndtools_hti" name="hti" bldFile="\sf\ostools\osrndtools\hti\group" mrp=""/>
+</component>
+</module>
+<module name="osrndtools_plat">
+<component name="hti_api">
+<unit unitID="sf_ostools_osrndtools_osrndtools_plat_hti_api" name="hti_api" bldFile="\sf\ostools\osrndtools\osrndtools_plat\hti_api\group" mrp=""/>
 </component>
 </module>
 </logicalsubset>
@@ -997,6 +922,11 @@
 <unit unitID="sf_tools_rndtools" name="rndtools" bldFile="\sf\tools\rndtools\group" mrp=""/>
 </component>
 </module>
+<module name="htiui">
+<component name="htiui">
+<unit unitID="sf_tools_rndtools_htiui" name="htiui" bldFile="\sf\tools\rndtools\htiui\group" mrp=""/>
+</component>
+</module>
 </logicalsubset>
 <logicalsubset name="swconfigtools">
 <module name="swconfigtools">
@@ -1008,32 +938,7 @@
 </logicalset>
 </layer>
 <layer name="ext">
-<logicalset name="app">
-<logicalsubset name="eas">
-<module name="eas">
-<component name="eas">
-<unit unitID="ext_app_eas" name="eas" bldFile="\ext\app\eas\group" mrp=""/>
-</component>
-</module>
-</logicalsubset>
-</logicalset>
-<logicalset name="mw">
-<logicalsubset name="websrvde">
-<module name="websrvde">
-<component name="websrvde">
-<unit unitID="ext_mw_websrvde" name="websrvde" bldFile="\ext\mw\websrvde\group" mrp=""/>
-</component>
-</module>
-</logicalsubset>
-</logicalset>
 <logicalset name="tools">
-<logicalsubset name="oemrndtools">
-<module name="oemrndtools">
-<component name="oemrndtools">
-<unit unitID="ext_tools_oemrndtools" name="oemrndtools" bldFile="\ext\tools\oemrndtools\group" mrp=""/>
-</component>
-</module>
-</logicalsubset>
 <logicalsubset name="toolsextensions">
 <module name="toolsextensions">
 <component name="toolsextensions">
@@ -1052,6 +957,11 @@
 <module name="sf_common_tsy">
 <component name="sf_common_tsy">
 <unit unitID="sf_os_cellularsrv_telephonyserverplugins_common_tsy" name="sf_common_tsy" bldFile="\sf\os\cellularsrv\telephonyserverplugins\common_tsy\group" mrp="" filter=""/>
+</component>
+</module>
+<module name="sf_openvg11">
+<component name="sf_openvg11">
+<unit unitID="sf_os_graphics_openvg_openvginterface_group_openvg11" name="sf_openvg11" bldFile="\sf\os\graphics\openvg\openvginterface\group\openvg11" mrp="" filter=""/>
 </component>
 </module>
 </layer></systemModel>
@@ -1082,14 +992,13 @@
     <targetList name="tools_rel" description="tools Release Targets" target="TOOLS_REL"/>
     <targetList name="cwtools" description="cwtools Targets" target="CWTOOLS"/>
     <targetList name="cwtools_rel" description="cwtools Release Targets" target="CWTOOLS_REL"/>
-		<configuration name="S60_5_1_clean" description="S60 5.1 clean build" filter="raptor_S60_5_1_clean">
+		<configuration name="S60_5_1_sf" description="S60 5.1 clean build" filter="S60_5_0,raptor_S60_5_1_sf">
     	<unitListRef unitList="S60_COMMON_OSEXTENSION"/>
-    	<unitListRef unitList="S60_COMMON_OSEXTENSION_OEM"/>
       <unitListRef unitList="S60_COMMON"/>
-      <unitListRef unitList="S60_OEM_BUILD"/>
+      <unitListRef unitList="S60_SF_BUILD"/>
       <unitListRef unitList="S60_COMMON_OSEXTENSION_STUBS"/>
       <unitListRef unitList="S60_COMMON_STUBS"/>
-      <unitListRef unitList="S60_BINARY_ONLY"/>
+      <unitListRef unitList="S60_BINARY_ONLY_SF"/>
       <task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
       <task><buildLayer command="abld export" unitParallel="Y"/></task>
       <task><buildLayer command="abld makefile" targetList="default_tools" unitParallel="Y" targetParallel="Y"/></task>
@@ -1131,19 +1040,6 @@ this configuration can be used only when those components has built among normal
 				<unitRef unit="sf_os_wlan"/>
 				<unitRef unit="sf_ostools_osrndtools"/>
 			</unitList>
-    <unitList name="S60_COMMON_OSEXTENSION_OEM" description="S60 common OSExtension OEM">
-				<unitRef unit="sf_os_deviceplatformrelease_S60LocFiles_group_oem"/>
-				<unitRef unit="sf_os_cellularsrv"/>
-				<unitRef unit="sf_os_imagingext_imagingmodules_Build"/>
-				<unitRef unit="sf_os_imagingext_imagingmodules_H264AVCVideoEncARM"/>
-				<unitRef unit="sf_os_mm_audio_AacEncoderPlugin"/>
-				<unitRef unit="sf_os_mm_audio_AmrNbCodecPlugin"/>
-				<unitRef unit="sf_os_mm_audio_AmrWbCodecPlugin"/>
-				<unitRef unit="sf_os_mm_audio_EAacPlusCodecPlugin"/>
-				<unitRef unit="sf_os_mm_audio_MP3CodecPlugin"/>
-				<unitRef unit="sf_os_mm_audio_WMADecoderPlugin"/>
-				<unitRef unit="sf_os_mm_video_ARM_MDF_Decoders"/>
-	  </unitList>
     <unitList name="S60_COMMON" description="S60 common">
 				<unitRef unit="sf_mw_classicui"/>
 				<unitRef unit="sf_mw_accesssec"/>
@@ -1239,26 +1135,20 @@ this configuration can be used only when those components has built among normal
 				<unitRef unit="sf_app_gallery"/>
 				<unitRef unit="ext_tools_toolsextensions"/>
     </unitList>
-    <unitList name="S60_OEM_BUILD" description="S60 OEM build">
-				<unitRef unit="sf_mw_mmmw_mtp"/>
-				<unitRef unit="sf_mw_helix"/>
-				<unitRef unit="sf_mw_helix_helix_ren_src"/>
-				<unitRef unit="sf_mw_securitysrv_pkiutilities_Certificates_OEM"/>
-				<unitRef unit="sf_mw_shortlinkconn_usbclasses_usbosdescriptorhandler"/>
-				<unitRef unit="sf_app_videotelephony_packetvideoengine_PacketVideoEngineBinaries"/>
-				<unitRef unit="sf_app_videotelephony_vtprotocols"/>
-				<unitRef unit="sf_os_graphics_graphicsaccelaration_2D_OpenVG_1_0"/>
-				<unitRef unit="sf_os_graphics_graphicsaccelaration_3d_opengl_es_1_1"/>
-				<unitRef unit="sf_os_graphics_graphics_pub"/>
-				<unitRef unit="sf_app_java"/>
-				<unitRef unit="sf_mw_appsupport_appsupport_plat_flash_mmi_service_interface_custom_api"/>
-				<unitRef unit="sf_mw_appsupport_appsupport_plat_flash_netscape_plugin_command_api"/>
-				<unitRef unit="sf_mw_uitools_toollibraries"/>
-				<unitRef unit="sf_mw_mmmw_metadatautility_3GPExtParserLib"/>
-				<unitRef unit="sf_mw_mmmw_mmfw_gstreamer"/>
-				<unitRef unit="ext_app_eas"/>
-				<unitRef unit="ext_mw_websrvde"/>
-				<unitRef unit="ext_tools_oemrndtools"/>
+    <unitList name="S60_SF_BUILD" description="S60 SF build">
+				<unitRef unit="sf_mw_mmmw_mmfw_helix_stub"/>
+				<unitRef unit="sf_mw_securitysrv_pkiutilities_Certificates"/>
+				<unitRef unit="sf_mw_vpnclient"/>
+				<unitRef unit="sf_app_videotelephony_vtprotocolsstub"/>
+				<unitRef unit="sf_app_java_java_plat"/>
+				<unitRef unit="sf_app_java_java_stubs"/>
+				<unitRef unit="sf_os_cellularsrv_commonnetworkinterface"/>
+				<unitRef unit="sf_os_cellularsrv_basebandabstraction"/>
+				<unitRef unit="sf_os_cellularsrv_cellularsrv_plat_primary_pdp_context_qos_parameter_setting_api"/>
+				<unitRef unit="sf_tools_rndtools_htiui"/>
+				<unitRef unit="sf_ostools_osrndtools_osrndtools_plat_hti_api"/>
+				<unitRef unit="sf_ostools_osrndtools_hti"/>
+				<unitRef unit="sf_os_graphics_openvg_openvginterface_group_openvg11"/>
     </unitList>
     <unitList name="S60_COMMON_OSEXTENSION_STUBS" description="S60 common OSExtension">
     	<unitRef unit="sf_os_cellularsrv_telephonyserverplugins_licenseetsystub"/>
@@ -1280,10 +1170,9 @@ this configuration can be used only when those components has built among normal
 binary only are components that sources can not be delivered for all lisencees
 but components should be built in S60 platform builds
 -->
-    <unitList name="S60_BINARY_ONLY" description="S60 build binary only components">
-      <!--<unitRef unit="sf_os_wlan_wlan_bearer_wlanengine_symbian_3.1"/>-->
+    <unitList name="S60_BINARY_ONLY_SF" description="S60 build binary only components">
+      <unitRef unit="sf_os_wlan_wlan_bearer_wlanengine_symbian_3.1"/>
       <unitRef unit="sf_mw_accesssec_eapol_eapol_symbian_ccxeapol"/>
-      <unitRef unit="sf_mw_helix_helix_ren_src"/>
     </unitList>
     <!--
     extra components need to be build in winscw build
