@@ -7,24 +7,24 @@
     <property name="sf.project.type" value="platform" />
     
     <property name="sf.spec.job.name" value="platform"/>
-    <property name="sf.spec.corebuildversion" value="week12"/>
+    <property name="sf.spec.corebuildversion" value="week19"/>
     
     <property name="sf.spec.build.system" value="sbs"/>
     
-    <property name="sf.spec.sbs.config" value="winscw.whatlog"/> <!-- both _urel and _udeb -->
+    <property name="sf.spec.sbs.config" value="winscw.whatlog,armv5.whatlog"/> <!-- both _urel and _udeb -->
     <property name="sf.spec.sbs.tools.config" value="tools_rel,tools2_rel"/>
     
     <property name="sf.spec.sourcesync.usecache" value="true"/>
             
 
     <!-- get full source env and binaries from pdk -->
-    <property name="sf.spec.sourcesync.enable"       value="true"/>
-    <property name="sf.spec.baseline.getenv_options" value="-I emu"/>
+    <property name="sf.spec.sourcesync.enable"       value="false"/>
+    <property name="sf.spec.baseline.getenv_options" value=""/>
     <property name="sf.spec.baseline.enable"         value="true"/>     
     <property name="sf.spec.baseline.clean"          value="true"/>
     
     <property name="sf.spec.baseline.select" value="location" />
-    <property name="sf.spec.baseline.location" value="D:\PDK\PDK_20090401\" />  
+    <property name="sf.spec.baseline.location" value="D:\PDK\PDK_20090507\" />  
     <property name="sf.spec.toolsbaseline.enable" value="true"/>
     <property name="sf.spec.publish.rootdir" value="D:\SF_Builds"/>
     
@@ -58,7 +58,7 @@
     <property name="sf.spec.logs.zip.enable"  value="true"/>
 	
 		<!-- packaging options for bin/src-->
-	<property name="sf.spec.package.bin.enable"  value="true"/>
-	<property name="sf.spec.package.src.enable"  value="true"/>
+	<property name="sf.spec.package.bin.enable"  value="false"/>
+	<property name="sf.spec.package.src.enable"  value="false"/>
     
 </project>
