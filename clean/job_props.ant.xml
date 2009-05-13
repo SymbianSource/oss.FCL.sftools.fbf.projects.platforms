@@ -20,7 +20,7 @@
     <!-- get full source env and binaries from pdk -->
     <property name="sf.spec.sourcesync.enable"       value="true"/>
     <property name="sf.spec.baseline.getenv_options" value="-I src"/>
-    <property name="sf.spec.baseline.enable"         value="true"/>     
+    <property name="sf.spec.baseline.enable"         value="false"/>     
     <property name="sf.spec.baseline.clean"          value="false"/>
     
     <property name="sf.spec.baseline.select" value="location" />
