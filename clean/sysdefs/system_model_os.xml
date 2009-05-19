@@ -114,22 +114,27 @@
           <unit mrp="os\buildtools\toolsandutils\ctsfunctionalitycheckers\Group\testtools_cts_functionalitycheckers.mrp"/>
         </component>
         <component name="BURTESTSERVER">
-          <unit bldFile="os\buildtools\toolsandutils\burtestserver\Group" mrp="os\buildtools\toolsandutils\burtestserver\Group\testtools_burtestserver.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\toolsandutils\burtestserver\Group" mrp="os\buildtools\toolsandutils\burtestserver\Group\testtools_burtestserver.mrp"/> -->
         </component>
         <component name="CBRTOOLS" filter="gt">
-          <unit bldFile="os\buildtools\toolsandutils\cbrtools\group" mrp="os\buildtools\toolsandutils\cbrtools\group\tools_cbr_tools.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\toolsandutils\cbrtools\group" mrp="os\buildtools\toolsandutils\cbrtools\group\tools_cbr_tools.mrp"/> -->
         </component>
         <component name="CBRPRF">
-          <unit bldFile="os\buildtools\toolsandutils\prf\group" mrp="os\buildtools\toolsandutils\prf\group\tools_cbr_prf.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\toolsandutils\prf\group" mrp="os\buildtools\toolsandutils\prf\group\tools_cbr_prf.mrp"/> -->
         </component>
         <component name="CDB">
-          <unit bldFile="os\buildtools\toolsandutils\cdb\group" mrp="os\buildtools\toolsandutils\cdb\group\testtools_cdb.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\toolsandutils\cdb\group" mrp="os\buildtools\toolsandutils\cdb\group\testtools_cdb.mrp"/> -->
         </component>
         <component name="CHATSCRIPTS">
           <unit bldFile="mw\remoteconn\connectivitypcside\chatscripts\group" mrp="mw\remoteconn\connectivitypcside\chatscripts\group\testtools_chatscripts.mrp"/>
         </component>
         <component name="DEPCHECK">
-          <unit bldFile="os\buildtools\binanamdw_os\depcheck" mrp="os\buildtools\binanamdw_os\depcheck\tools_depcheck.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\binanamdw_os\depcheck" mrp="os\buildtools\binanamdw_os\depcheck\tools_depcheck.mrp"/> -->
         </component>
         <component name="E32 Tools" class="PC">
           <unit bldFile="os\buildtools\toolsandutils\e32tools\group" mrp="os\buildtools\toolsandutils\e32tools\group\tools_e32tools.mrp"/>
@@ -138,22 +143,28 @@
           <unit mrp="os\buildtools\sbsv1_os\e32toolp\group\tools_e32toolp.mrp"/>
         </component>
         <component name="EVALID">
-          <unit bldFile="os\buildtools\bintools_os\evalid" mrp="os\buildtools\bintools_os\evalid\tools_evalid.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\bintools_os\evalid" mrp="os\buildtools\bintools_os\evalid\tools_evalid.mrp"/> -->
         </component>
         <component name="KITCOMPARATOR">
-          <unit bldFile="os\buildtools\toolsandutils\kitcomparator\group" mrp="os\buildtools\toolsandutils\kitcomparator\group\testtools_cts_kitcomparator.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\toolsandutils\kitcomparator\group" mrp="os\buildtools\toolsandutils\kitcomparator\group\testtools_cts_kitcomparator.mrp"/> -->
         </component>
         <component name="LEAVESCAN">
-          <unit bldFile="os\buildtools\srcanamdw_os\leavescan\group" mrp="os\buildtools\srcanamdw_os\leavescan\group\testtools_leavescan.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\srcanamdw_os\leavescan\group" mrp="os\buildtools\srcanamdw_os\leavescan\group\testtools_leavescan.mrp"/> -->
         </component>
         <component name="PROGRAMCHECKER">
-          <unit bldFile="os\buildtools\srcanamdw_os\programchecker\group" mrp="os\buildtools\srcanamdw_os\programchecker\group\testtools_programchecker.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\srcanamdw_os\programchecker\group" mrp="os\buildtools\srcanamdw_os\programchecker\group\testtools_programchecker.mrp"/> -->
         </component>
         <component name="RCOMP">
-          <unit bldFile="os\buildtools\bintools_os\rcomp\group" mrp="os\buildtools\bintools_os\rcomp\group\tools_rcomp.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\bintools_os\rcomp\group" mrp="os\buildtools\bintools_os\rcomp\group\tools_rcomp.mrp"/> -->
         </component>
         <component name="Redistribution" filter="gt">
-          <unit bldFile="os\buildtools\perltoolsplat_os\redistribution" mrp="os\buildtools\perltoolsplat_os\redistribution\tools_redistribution_common.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\perltoolsplat_os\redistribution" mrp="os\buildtools\perltoolsplat_os\redistribution\tools_redistribution_common.mrp"/> -->
         </component>
         <component name="WinC Redistribution">
           <unit mrp="os\buildtools\dist_os\redistributionwinceka2\tools_redistribution_winc.mrp"/>
@@ -168,10 +179,12 @@
           <unit bldFile="os\buildtools\imgtools_os\romkiteka2\group" mrp="os\buildtools\imgtools_os\romkiteka2\group\tools_romkit.mrp"/>
         </component>
         <component name="MIGRATIONTOOL">
-          <unit bldFile="os\buildtools\srcanamdw_os\migrationtool\group" mrp="os\buildtools\srcanamdw_os\migrationtool\group\testtools_migrationtool.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\srcanamdw_os\migrationtool\group" mrp="os\buildtools\srcanamdw_os\migrationtool\group\testtools_migrationtool.mrp"/> -->
         </component>
         <component name="TESTDRIVER">
-          <unit bldFile="os\buildtools\toolsandutils\testdriver\Group" mrp="os\buildtools\toolsandutils\testdriver\Group\testtools_testdriver.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\toolsandutils\testdriver\Group" mrp="os\buildtools\toolsandutils\testdriver\Group\testtools_testdriver.mrp"/> -->
         </component>
         <component name="S60 Compatibility Headers" filter="gt">
           <unit version="9.4" bldFile="os\ossrv\genericservices\s60compatibilityheaders\group94" mrp="os\ossrv\genericservices\s60compatibilityheaders\group94\tools_s60_header_compat94.mrp"/>
@@ -180,13 +193,15 @@
           <unit bldFile="app\techview\buildverification\smoketest\Group" mrp="app\techview\buildverification\smoketest\Group\testtools_smoketest.mrp"/>
         </component>
         <component name="Stat API" filter="gt">
-          <unit bldFile="os\buildtools\toolsandutils\statapi\source\statapi\console" mrp="os\buildtools\toolsandutils\statapi\group\testtools_stat_device_gt.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\toolsandutils\statapi\source\statapi\console" mrp="os\buildtools\toolsandutils\statapi\group\testtools_stat_device_gt.mrp"/> -->
         </component>
         <component name="Stat Source" contract="Symbian_Affiliate" filter="gt">
           <unit mrp="os\buildtools\toolsandutils\statsource\group\testtools_stat_common_source.mrp"/>
         </component>
         <component name="STAT_DESKTOP" contract="Symbian_Affiliate" filter="gt">
-          <unit bldFile="os\buildtools\toolsandutils\statdesktop\group" mrp="os\buildtools\toolsandutils\statdesktop\group\testtools_stat_desktop.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\toolsandutils\statdesktop\group" mrp="os\buildtools\toolsandutils\statdesktop\group\testtools_stat_desktop.mrp"/> -->
         </component>
         <component name="Bluetooth Logging Engine" introduced="9.2" class="test">
           <unit bldFile="os\shortlinksrv\bluetooth\btlogger\group" mrp="os\shortlinksrv\bluetooth\btlogger\group\bluetooth_logger.mrp"/>
@@ -195,13 +210,15 @@
           <unit bldFile="os\osrndtools\testexecfw1\testexecute\Group" mrp="os\osrndtools\testexecfw1\testexecute\Group\tools_testexecute.mrp"/>
         </component>
         <component name="Test Tools Desktop" filter="gt">
-          <unit bldFile="os\buildtools\toolsandutils\testtoolsdesktop\group" mrp="os\buildtools\toolsandutils\testtoolsdesktop\group\testtools_desktop.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\toolsandutils\testtoolsdesktop\group" mrp="os\buildtools\toolsandutils\testtoolsdesktop\group\testtools_desktop.mrp"/> -->
         </component>
         <component name="Wintunnel">
           <unit mrp="os\buildtools\toolsandutils\wintunnel\group\testtools_WinTunnel_srconly.mrp"/>
         </component>
         <component name="Use Case Controller">
-          <unit bldFile="os\buildtools\toolsandutils\usecasecontroller\BuildScripts\group" mrp="os\buildtools\toolsandutils\usecasecontroller\BuildScripts\group\testtools_ucc.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\toolsandutils\usecasecontroller\BuildScripts\group" mrp="os\buildtools\toolsandutils\usecasecontroller\BuildScripts\group\testtools_ucc.mrp"/> -->
         </component>
         <component name="CINIDATA">
           <unit bldFile="os\osrndtools\testexecfw1\cinidata" mrp="os\osrndtools\testexecfw1\cinidata\tools_cinidata.mrp"/>
@@ -210,7 +227,8 @@
           <unit bldFile="os\buildtools\toolsandutils\autotest\group" mrp="os\buildtools\toolsandutils\autotest\group\tools_autotest.mrp"/>
         </component>
         <component name="TESTCONFIGFILEPARSER">
-          <unit bldFile="os\buildtools\toolsandutils\testconfigfileparser\group" mrp="os\buildtools\toolsandutils\testconfigfileparser\group\tools_testconfigfileparser.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\toolsandutils\testconfigfileparser\group" mrp="os\buildtools\toolsandutils\testconfigfileparser\group\tools_testconfigfileparser.mrp"/> -->
         </component>
         <component name="KITSETUPAPP" filter="gt">
           <unit mrp="os\buildtools\toolsandutils\kitsetupapp\group\tools_devkits_kitsetupapp.mrp"/>
@@ -219,16 +237,19 @@
           <unit mrp="os\buildtools\toolsandutils\navigationpages\tools_sdk_eng_NavigationPages.mrp"/>
         </component>
         <component name="PRODUCTINSTALLER" filter="gt">
-          <unit bldFile="os\buildtools\toolsandutils\productinstaller\group" mrp="os\buildtools\toolsandutils\productinstaller\group\tools_custkits_productinstaller.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\toolsandutils\productinstaller\group" mrp="os\buildtools\toolsandutils\productinstaller\group\tools_custkits_productinstaller.mrp"/> -->
         </component>
         <component name="REDISTRIBUTION_WINC_EKA2">
-          <unit bldFile="os\buildtools\dist_os\redistributionwinceka2" mrp="os\buildtools\dist_os\redistributionwinceka2\tools_redistribution_cedar.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\dist_os\redistributionwinceka2" mrp="os\buildtools\dist_os\redistributionwinceka2\tools_redistribution_cedar.mrp"/> -->
         </component>
         <component name="MakeKeys" filter="gt" introduced="6.0" class="PC">
           <unit bldFile="mw\appinstall\secureswitools\makekeys\group" mrp="mw\appinstall\secureswitools\makekeys\group\security_makekeys.mrp"/>
         </component>
         <component name="CAPTOOLS">
-          <unit bldFile="os\buildtools\binanamdw_os\captools\group" mrp="os\buildtools\binanamdw_os\captools\group\testtools_captools.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\binanamdw_os\captools\group" mrp="os\buildtools\binanamdw_os\captools\group\testtools_captools.mrp"/> -->
         </component>
         <component name="Packet Loopback CSY" introduced="8.1" class="test">
           <unit bldFile="os\commsfw\serialserver\packetloopbackcsy\group" mrp="os\commsfw\serialserver\packetloopbackcsy\group\PacketLoopbackCSY.mrp"/>
@@ -237,7 +258,8 @@
           <unit bldFile="os\persistentdata\traceservices\utrace\group" mrp="os\persistentdata\traceservices\utrace\group\testtools_utrace_api.mrp"/>
         </component>
         <component name="STLPORT">
-          <unit bldFile="os\buildtools\toolsandutils\stlport\group" mrp="os\buildtools\toolsandutils\stlport\group\tools_stlport.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\toolsandutils\stlport\group" mrp="os\buildtools\toolsandutils\stlport\group\tools_stlport.mrp"/> -->
         </component>
       </collection>
       <collection name="Developer Library" level="test">
@@ -245,10 +267,12 @@
           <!-- placeholder for  mrp="os/buildtools/devlib/devlibhelp/tools/developerlibrary_tools.mrp" -->
         </component>
         <component name="Developer Library Help">
-          <unit version="9.4" bldFile="os\buildtools\devlib\devlibhelp\group\devlib94" mrp="os\buildtools\devlib\devlibhelp\group\devlib94\developerlibrary_doc_html.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit version="9.4" bldFile="os\buildtools\devlib\devlibhelp\group\devlib94" mrp="os\buildtools\devlib\devlibhelp\group\devlib94\developerlibrary_doc_html.mrp"/> -->
         </component>
         <component name="Developer Library Source" filter="gt">
-          <unit bldFile="os\buildtools\devlib\devlibhelp\securitysupplement\doc_source" mrp="os\buildtools\devlib\devlibhelp\developerlibrary_doc_source.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\devlib\devlibhelp\securitysupplement\doc_source" mrp="os\buildtools\devlib\devlibhelp\developerlibrary_doc_source.mrp"/> -->
         </component>
         <component name="Developer Library HTML">
           <unit mrp="os\buildtools\devlib\devlibhelp\group\shared\developerlibrary_doc_plain_html.mrp"/>
@@ -308,70 +332,92 @@
       </collection>
       <collection name="SDKENG" level="SDK">
         <component name="RUNPERL" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\runperl\group" mrp="os\buildtools\misccomponents\runperl\group\tools_sdk_eng_runperl.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\runperl\group" mrp="os\buildtools\misccomponents\runperl\group\tools_sdk_eng_runperl.mrp"/> -->
         </component>
         <component name="BUILD-TOOLS" filter="gt">
-          <unit bldFile="os\buildtools\sbsv1_os\bldtools\group" mrp="os\buildtools\sbsv1_os\bldtools\group\tools_sdk_eng_build-tools.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\sbsv1_os\bldtools\group" mrp="os\buildtools\sbsv1_os\bldtools\group\tools_sdk_eng_build-tools.mrp"/> -->
         </component>
         <component name="JAVALIBRARY" filter="gt">
-          <unit bldFile="os\buildtools\javatoolsplat\javalib\group" mrp="os\buildtools\javatoolsplat\javalib\group\tools_sdk_eng_javalibrary.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\javatoolsplat\javalib\group" mrp="os\buildtools\javatoolsplat\javalib\group\tools_sdk_eng_javalibrary.mrp"/> -->
         </component>
         <component name="ASSERTION" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\assertion\group" mrp="os\buildtools\misccomponents\assertion\group\tools_sdk_eng_assertion.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\assertion\group" mrp="os\buildtools\misccomponents\assertion\group\tools_sdk_eng_assertion.mrp"/> -->
         </component>
         <component name="ENUM" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\enum\group" mrp="os\buildtools\misccomponents\enum\group\tools_sdk_eng_enum.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\enum\group" mrp="os\buildtools\misccomponents\enum\group\tools_sdk_eng_enum.mrp"/> -->
         </component>
         <component name="LOGGER" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\logger\group" mrp="os\buildtools\misccomponents\logger\group\tools_sdk_eng_logger.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\logger\group" mrp="os\buildtools\misccomponents\logger\group\tools_sdk_eng_logger.mrp"/> -->
         </component>
         <component name="FILESYS" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\filesys\group" mrp="os\buildtools\misccomponents\filesys\group\tools_sdk_eng_filesys.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\filesys\group" mrp="os\buildtools\misccomponents\filesys\group\tools_sdk_eng_filesys.mrp"/> -->
         </component>
         <component name="ENVVAR" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\envvar\group" mrp="os\buildtools\misccomponents\envvar\group\tools_sdk_eng_envvar.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\envvar\group" mrp="os\buildtools\misccomponents\envvar\group\tools_sdk_eng_envvar.mrp"/> -->
         </component>
         <component name="INSTALLUTILS" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\installutils\group" mrp="os\buildtools\misccomponents\installutils\group\tools_sdk_eng_installutils.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\installutils\group" mrp="os\buildtools\misccomponents\installutils\group\tools_sdk_eng_installutils.mrp"/> -->
         </component>
         <component name="MNEMONICFIX" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\mnemonicfix\group" mrp="os\buildtools\misccomponents\mnemonicfix\group\tools_sdk_eng_mnemonicfix.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\mnemonicfix\group" mrp="os\buildtools\misccomponents\mnemonicfix\group\tools_sdk_eng_mnemonicfix.mrp"/> -->
         </component>
         <component name="PATHBROWSER" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\pathbrowser\group" mrp="os\buildtools\misccomponents\pathbrowser\group\tools_sdk_eng_pathbrowser.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\pathbrowser\group" mrp="os\buildtools\misccomponents\pathbrowser\group\tools_sdk_eng_pathbrowser.mrp"/> -->
         </component>
         <component name="SHELLEXEC" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\shellexec\group" mrp="os\buildtools\misccomponents\shellexec\group\tools_sdk_eng_shellexec.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\shellexec\group" mrp="os\buildtools\misccomponents\shellexec\group\tools_sdk_eng_shellexec.mrp"/> -->
         </component>
         <component name="SWINGWORKER" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\swingworker\group" mrp="os\buildtools\misccomponents\swingworker\group\tools_sdk_eng_swingworker.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\swingworker\group" mrp="os\buildtools\misccomponents\swingworker\group\tools_sdk_eng_swingworker.mrp"/> -->
         </component>
         <component name="TESTCASERUNNER" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\testcaserunner\group" mrp="os\buildtools\misccomponents\testcaserunner\group\tools_sdk_eng_testcaserunner.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\testcaserunner\group" mrp="os\buildtools\misccomponents\testcaserunner\group\tools_sdk_eng_testcaserunner.mrp"/> -->
         </component>
         <component name="TOOLBARPANEL" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\toolbarpanel\group" mrp="os\buildtools\misccomponents\toolbarpanel\group\tools_sdk_eng_toolbarpanel.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\toolbarpanel\group" mrp="os\buildtools\misccomponents\toolbarpanel\group\tools_sdk_eng_toolbarpanel.mrp"/> -->
         </component>
         <component name="JAVAHELP" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\javahelp\group" mrp="os\buildtools\misccomponents\javahelp\group\tools_sdk_eng_javahelp.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\javahelp\group" mrp="os\buildtools\misccomponents\javahelp\group\tools_sdk_eng_javahelp.mrp"/> -->
         </component>
         <component name="LANGCONFIG" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\langconfig\group" mrp="os\buildtools\misccomponents\langconfig\group\tools_sdk_eng_langconfig.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\langconfig\group" mrp="os\buildtools\misccomponents\langconfig\group\tools_sdk_eng_langconfig.mrp"/> -->
         </component>
         <component name="MBMCODEC" filter="gt">
-          <unit bldFile="app\helps\symhelp\mbmcodec\group" mrp="app\helps\symhelp\mbmcodec\group\tools_sdk_eng_mbmcodec.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="app\helps\symhelp\mbmcodec\group" mrp="app\helps\symhelp\mbmcodec\group\tools_sdk_eng_mbmcodec.mrp"/> -->
         </component>
         <component name="SDKINFO" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\sdkinfo\group" mrp="os\buildtools\misccomponents\sdkinfo\group\tools_sdk_eng_sdkinfo.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\sdkinfo\group" mrp="os\buildtools\misccomponents\sdkinfo\group\tools_sdk_eng_sdkinfo.mrp"/> -->
         </component>
         <component name="JADE" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\jade\group" mrp="os\buildtools\misccomponents\jade\group\tools_sdk_eng_jade.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\jade\group" mrp="os\buildtools\misccomponents\jade\group\tools_sdk_eng_jade.mrp"/> -->
         </component>
         <component name="CSHLPCMP_GUI" filter="gt">
-          <unit bldFile="app\helps\symhelp\cshlpcmpgui\group" mrp="app\helps\symhelp\cshlpcmpgui\group\tools_sdk_eng_cshlpcmp_gui.mrp" priority="1010"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="app\helps\symhelp\cshlpcmpgui\group" mrp="app\helps\symhelp\cshlpcmpgui\group\tools_sdk_eng_cshlpcmp_gui.mrp" priority="1010"/> -->
         </component>
         <component name="SDK Package Manager" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\sdkpackagemgr\group" mrp="os\buildtools\misccomponents\sdkpackagemgr\group\tools_sdk_eng_sdkpkg-manager.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\sdkpackagemgr\group" mrp="os\buildtools\misccomponents\sdkpackagemgr\group\tools_sdk_eng_sdkpkg-manager.mrp"/> -->
         </component>
         <component name="Production Build Tools" filter="gt">
           <unit mrp="os\buildtools\toolsandutils\productionbldtools\product_tools.mrp"/>
@@ -380,49 +426,62 @@
           <unit mrp="os\deviceplatformrelease\symbianosbld\productionbldcbrconfig\product_cbr_config.mrp"/>
         </component>
         <component name="SDKPKG-TOOLS" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\sdkpkgtools\group" mrp="os\buildtools\misccomponents\sdkpkgtools\group\tools_sdk_eng_sdkpkg-tools.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\sdkpkgtools\group" mrp="os\buildtools\misccomponents\sdkpkgtools\group\tools_sdk_eng_sdkpkg-tools.mrp"/> -->
         </component>
         <component name="EMULATOR_LAUNCHER" filter="gt">
           <unit bldFile="os\buildtools\misccomponents\emulatorlauncher\group" mrp="os\buildtools\misccomponents\emulatorlauncher\group\tools_sdk_eng_emulator_launcher.mrp"/>
         </component>
         <component name="PKGMGRGUI" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\pkgmgrgui\group" mrp="os\buildtools\misccomponents\pkgmgrgui\group\tools_sdk_eng_pkgmgrgui.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\pkgmgrgui\group" mrp="os\buildtools\misccomponents\pkgmgrgui\group\tools_sdk_eng_pkgmgrgui.mrp"/> -->
         </component>
         <component name="LAUNCH" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\launch\group" mrp="os\buildtools\misccomponents\launch\group\tools_sdk_eng_launch.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\launch\group" mrp="os\buildtools\misccomponents\launch\group\tools_sdk_eng_launch.mrp"/> -->
         </component>
         <component name="TOOLS_STUBS" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\toolsstubs\group" mrp="os\buildtools\misccomponents\toolsstubs\group\tools_sdk_eng_tools_stubs.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\toolsstubs\group" mrp="os\buildtools\misccomponents\toolsstubs\group\tools_sdk_eng_tools_stubs.mrp"/> -->
         </component>
         <component name="BSPBUILDER" filter="gt">
-          <unit bldFile="os\buildtools\misccomponents\bspbuilder\group" mrp="os\buildtools\misccomponents\bspbuilder\group\tools_bspbuilder.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\bspbuilder\group" mrp="os\buildtools\misccomponents\bspbuilder\group\tools_bspbuilder.mrp"/> -->
         </component>
         <component name="ALP2CSH">
-          <unit bldFile="os\buildtools\fileconv\alp2csh\group" mrp="os\buildtools\fileconv\alp2csh\group\tools_sdk_eng_alp2csh.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\fileconv\alp2csh\group" mrp="os\buildtools\fileconv\alp2csh\group\tools_sdk_eng_alp2csh.mrp"/> -->
         </component>
         <component name="CJPEG">
-          <unit bldFile="os\buildtools\fileconv\cjpeg\group" mrp="os\buildtools\fileconv\cjpeg\group\tools_sdk_eng_cjpeg.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\fileconv\cjpeg\group" mrp="os\buildtools\fileconv\cjpeg\group\tools_sdk_eng_cjpeg.mrp"/> -->
         </component>
         <component name="CSHLPCMP Frontend">
-          <unit bldFile="app\helps\symhelp\cshlpcmpfrontend\group" mrp="app\helps\symhelp\cshlpcmpfrontend\group\tools_sdk_eng_cshlpcmp_frontend.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="app\helps\symhelp\cshlpcmpfrontend\group" mrp="app\helps\symhelp\cshlpcmpfrontend\group\tools_sdk_eng_cshlpcmp_frontend.mrp"/> -->
         </component>
         <component name="CSHLPCMP Backend">
           <unit mrp="app\helps\symhelp\cshlpcmpbackend\group\tools_sdk_eng_cshlpcmp_backend_srconly.mrp"/>
         </component>
         <component name="PERLLIBRARY">
-          <unit bldFile="os\buildtools\perltoolsplat_os\legacycommonperl\group" mrp="os\buildtools\perltoolsplat_os\legacycommonperl\group\tools_sdk_eng_perllibrary.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\perltoolsplat_os\legacycommonperl\group" mrp="os\buildtools\perltoolsplat_os\legacycommonperl\group\tools_sdk_eng_perllibrary.mrp"/> -->
         </component>
         <component name="Perl Shared Libraries">
-          <unit bldFile="os\buildtools\perltoolsplat_os\commonperl\group" mrp="os\buildtools\perltoolsplat_os\commonperl\group\tools_sdk_eng_perl_shared.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\perltoolsplat_os\commonperl\group" mrp="os\buildtools\perltoolsplat_os\commonperl\group\tools_sdk_eng_perl_shared.mrp"/> -->
         </component>
         <component name="RTF2PTML">
-          <unit bldFile="os\buildtools\fileconv\rtf2ptml\group" mrp="os\buildtools\fileconv\rtf2ptml\group\tools_sdk_eng_rtf2ptml.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\fileconv\rtf2ptml\group" mrp="os\buildtools\fileconv\rtf2ptml\group\tools_sdk_eng_rtf2ptml.mrp"/> -->
         </component>
         <component name="SPLASH">
-          <unit bldFile="os\buildtools\misccomponents\splash\group" mrp="os\buildtools\misccomponents\splash\group\tools_sdk_eng_splash.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\splash\group" mrp="os\buildtools\misccomponents\splash\group\tools_sdk_eng_splash.mrp"/> -->
         </component>
         <component name="SDK Builder">
-          <unit bldFile="os\buildtools\misccomponents\sdkbuilder\group" mrp="os\buildtools\misccomponents\sdkbuilder\group\tools_sdk_eng_sdk_builder.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\misccomponents\sdkbuilder\group" mrp="os\buildtools\misccomponents\sdkbuilder\group\tools_sdk_eng_sdk_builder.mrp"/> -->
         </component>
       </collection>
       <collection name="Test Product" level="test">
@@ -462,35 +521,44 @@
             <unit bldFile="os\boardsupport\emulator\emulatorbsp" mrp="os\boardsupport\emulator\emulatorbsp\base_wins.mrp"/>
           </component>
           <component name="Unistore2 Emulator Support" contract="NAND_Flash_XSR_Unistore_2_Other_Portions" filter="gt" introduced="9.4">
-            <unit bldFile="os\boardsupport\emulator\unistore2emulatorsupport" mrp="os\boardsupport\emulator\unistore2emulatorsupport\base_wins_unistore2.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\boardsupport\emulator\unistore2emulatorsupport" mrp="os\boardsupport\emulator\unistore2emulatorsupport\base_wins_unistore2.mrp"/> -->
           </component>
         </collection>
         <collection name="OMAP H2">
           <component name="OMAP H2 BSP" introduced="9.0">
-            <unit bldFile="os\boardsupport\omaph2\omaph2bsp\h2" mrp="os\boardsupport\omaph2\omaph2bsp\h2\base_omaph2.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\boardsupport\omaph2\omaph2bsp\h2" mrp="os\boardsupport\omaph2\omaph2bsp\h2\base_omaph2.mrp"/> -->
           </component>
           <component name="OMAP H2 Unistore2" contract="NAND_Flash_XSR_Unistore_2_Other_Portions" filter="gt" introduced="9.1">
-            <unit bldFile="os\boardsupport\omaph2\omaph2unistore2" mrp="os\boardsupport\omaph2\omaph2unistore2\base_h2_unistore2.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\boardsupport\omaph2\omaph2unistore2" mrp="os\boardsupport\omaph2\omaph2unistore2\base_h2_unistore2.mrp"/> -->
           </component>
           <component name="OMAP H2 SDIO" filter="gt" introduced="9.2">
-            <unit bldFile="os\boardsupport\omaph2\omaph2sdio" mrp="os\boardsupport\omaph2\omaph2sdio\base_h2_sdio.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\boardsupport\omaph2\omaph2sdio" mrp="os\boardsupport\omaph2\omaph2sdio\base_h2_sdio.mrp"/> -->
           </component>
         </collection>
         <collection name="OMAP H4">
           <component name="OMAP H4 BSP">
-            <unit bldFile="os\boardsupport\omaph4\omaph4bsp\h4" mrp="os\boardsupport\omaph4\omaph4bsp\h4\base_omaph4hrp.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\boardsupport\omaph4\omaph4bsp\h4" mrp="os\boardsupport\omaph4\omaph4bsp\h4\base_omaph4hrp.mrp"/> -->
           </component>
           <component name="H4 Boot Loader" introduced="9.1">
-            <unit mrp="os\boardsupport\omaph4\h4bootloader\base_omaph4hrp_bootldr.mrp" bldFile="os\boardsupport\omaph4\h4bootloader"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit mrp="os\boardsupport\omaph4\h4bootloader\base_omaph4hrp_bootldr.mrp" bldFile="os\boardsupport\omaph4\h4bootloader"/> -->
           </component>
           <component name="OMAP H4 Mini Environment Boot Loader" introduced="9.2">
-            <unit mrp="os\boardsupport\omaph4\omaph4minienvbootloader\base_omaph4hrp_mebootldr.mrp" bldFile="os\boardsupport\omaph4\omaph4minienvbootloader"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit mrp="os\boardsupport\omaph4\omaph4minienvbootloader\base_omaph4hrp_mebootldr.mrp" bldFile="os\boardsupport\omaph4\omaph4minienvbootloader"/> -->
           </component>
           <component name="OMAP H4 Unistore2" contract="NAND_Flash_XSR_Unistore_2_Other_Portions" filter="gt" introduced="9.2">
-            <unit bldFile="os\boardsupport\omaph4\omaph4unistore2" mrp="os\boardsupport\omaph4\omaph4unistore2\base_omaph4hrp_unistore2.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\boardsupport\omaph4\omaph4unistore2" mrp="os\boardsupport\omaph4\omaph4unistore2\base_omaph4hrp_unistore2.mrp"/> -->
           </component>
           <component name="OMAP H4 SDIO" filter="gt" introduced="9.2">
-            <unit bldFile="os\boardsupport\omaph4\omaph4sdio" mrp="os\boardsupport\omaph4\omaph4sdio\base_omaph4hrp_sdio.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\boardsupport\omaph4\omaph4sdio" mrp="os\boardsupport\omaph4\omaph4sdio\base_omaph4hrp_sdio.mrp"/> -->
           </component>
         </collection>
         <collection name="Generic BSP">
@@ -524,16 +592,19 @@
         </collection>
         <collection name="Flash Translation Layer" level="generic">
           <component name="Unistore2 Drivers" contract="NAND_Flash_XSR_Unistore_2_Other_Portions" filter="gt" introduced="9.1">
-            <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\unistore2" mrp="os\kernelhwsrv\kernel\eka\drivers\unistore2\base_drivers_unistore2.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\unistore2" mrp="os\kernelhwsrv\kernel\eka\drivers\unistore2\base_drivers_unistore2.mrp"/> -->
           </component>
           <component name="Unistore2 Core" contract="NAND_Flash_XSR_Unistore_2_Core_Portion" filter="gt" introduced="9.1">
             <unit mrp="os\kernelhwsrv\kernel\eka\drivers\unistore2\base_drivers_unistore2_undeliverable.mrp"/>
           </component>
           <component name="Unistore2 Crash Logger" contract="NAND_Flash_XSR_Unistore_2_Other_Portions" filter="gt" introduced="9.1">
-            <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\crashflash\unistore2" mrp="os\kernelhwsrv\kernel\eka\drivers\crashflash\unistore2\base_crashflash_unistore2.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\crashflash\unistore2" mrp="os\kernelhwsrv\kernel\eka\drivers\crashflash\unistore2\base_crashflash_unistore2.mrp"/> -->
           </component>
           <component name="Unistore2 Boot Support" contract="NAND_Flash_XSR_Unistore_2_Other_Portions" filter="gt" introduced="9.1">
-            <unit bldFile="os\kernelhwsrv\unistore2\uiibootsupport\nandloader\unistore2" mrp="os\kernelhwsrv\unistore2\uiibootsupport\base_nandboot_unistore2.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\kernelhwsrv\unistore2\uiibootsupport\nandloader\unistore2" mrp="os\kernelhwsrv\unistore2\uiibootsupport\base_nandboot_unistore2.mrp"/> -->
           </component>
         </collection>
         <collection name="Logical Device Drivers" level="specific">
@@ -562,14 +633,17 @@
         </collection>
         <collection name="Generic Driver Support" level="generic">
           <component name="SD Card 3C Driver" contract="SD_Card_SD3C" filter="gt" introduced="9.1">
-            <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\pbus\mmc\sdcard\sdcard3c" mrp="os\kernelhwsrv\kernel\eka\drivers\pbus\mmc\sdcard\sdcard3c\base_e32_sd3c.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\pbus\mmc\sdcard\sdcard3c" mrp="os\kernelhwsrv\kernel\eka\drivers\pbus\mmc\sdcard\sdcard3c\base_e32_sd3c.mrp"/> -->
           </component>
           <component name="SD Card 4C Driver" contract="SD_Card_SD4C" filter="gt" introduced="9.1">
-            <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\pbus\mmc\sdcard\sdcard4c" mrp="os\kernelhwsrv\kernel\eka\drivers\pbus\mmc\sdcard\sdcard4c\base_e32_sd4c.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\pbus\mmc\sdcard\sdcard4c" mrp="os\kernelhwsrv\kernel\eka\drivers\pbus\mmc\sdcard\sdcard4c\base_e32_sd4c.mrp"/> -->
           </component>
           <component name="Media Drivers">
             <!-- these are for storage media-->
-            <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\media" mrp="os\kernelhwsrv\kernel\eka\drivers\media\base_e32_drivers_media.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\media" mrp="os\kernelhwsrv\kernel\eka\drivers\media\base_e32_drivers_media.mrp"/> -->
           </component>
           <component name="Generic Board Support Packages">
             <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\bsp" mrp="os\kernelhwsrv\kernel\eka\drivers\bsp\base_e32_drivers_bsp.mrp"/>
@@ -601,7 +675,8 @@
             <unit bldFile="os\kernelhwsrv\kernel\eka\euser" mrp="os\kernelhwsrv\kernel\eka\euser\base_e32_euser.mrp"/>
           </component>
           <component name="Compiler Runtime Support" filter="gt">
-            <unit bldFile="os\kernelhwsrv\kernel\eka\compsupp" mrp="os\kernelhwsrv\kernel\eka\compsupp\base_e32_compsupp.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\kernelhwsrv\kernel\eka\compsupp" mrp="os\kernelhwsrv\kernel\eka\compsupp\base_e32_compsupp.mrp"/> -->
           </component>
           <component name="File Server" filter="gt">
             <unit bldFile="os\kernelhwsrv\userlibandfileserver\fileserver\group" mrp="os\kernelhwsrv\userlibandfileserver\fileserver\group\base_f32.mrp"/>
@@ -610,7 +685,8 @@
             <unit bldFile="os\kernelhwsrv\userlibandfileserver\fatfilenameconversionplugins\group" mrp="os\kernelhwsrv\userlibandfileserver\fatfilenameconversionplugins\group\syslibs_FATCharsetConv.mrp"/>
           </component>
           <component name="NAND Flash Translation Layer" filter="gt" introduced="7.0s" deprecated="9.1">
-            <unit bldFile="os\kernelhwsrv\userlibandfileserver\fileserver\sftl" mrp="os\kernelhwsrv\userlibandfileserver\fileserver\sftl\base_f32_sftl.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\kernelhwsrv\userlibandfileserver\fileserver\sftl" mrp="os\kernelhwsrv\userlibandfileserver\fileserver\sftl\base_f32_sftl.mrp"/> -->
           </component>
           <component name="Base Starter" filter="gt">
             <unit bldFile="os\kernelhwsrv\userlibandfileserver\fileserver\estart" mrp="os\kernelhwsrv\userlibandfileserver\fileserver\estart\base_f32_estart.mrp"/>
@@ -636,10 +712,12 @@
             <unit bldFile="os\kernelhwsrv\userlibandfileserver\fileserver\scomp" mrp="os\kernelhwsrv\userlibandfileserver\fileserver\scomp\base_f32_scomp.mrp"/>
           </component>
           <component name="NTFS" filter="gt" plugin="Y">
-            <unit bldFile="os\kernelhwsrv\userlibandfileserver\fileserver\ntfs" mrp="os\kernelhwsrv\userlibandfileserver\fileserver\ntfs\base_f32_sntfs.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\kernelhwsrv\userlibandfileserver\fileserver\ntfs" mrp="os\kernelhwsrv\userlibandfileserver\fileserver\ntfs\base_f32_sntfs.mrp"/> -->
           </component>
           <component name="ISO9660 File System" filter="gt" plugin="Y" introduced="8.1b">
-            <unit bldFile="os\kernelhwsrv\userlibandfileserver\fileserver\iso9660" mrp="os\kernelhwsrv\userlibandfileserver\fileserver\iso9660\base_f32_siso9660.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\kernelhwsrv\userlibandfileserver\fileserver\iso9660" mrp="os\kernelhwsrv\userlibandfileserver\fileserver\iso9660\base_f32_siso9660.mrp"/> -->
           </component>
         </collection>
         <collection name="HAL Services">
@@ -702,7 +780,8 @@
           </collection>
           <collection name="Generic Open Libraries" level="translation">
             <component name="C Standard Library" introduced="ER5">
-              <unit bldFile="os\ossrv\genericopenlibs\cstdlib\group" mrp="os\ossrv\genericopenlibs\cstdlib\group\syslibs_stdlib.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\ossrv\genericopenlibs\cstdlib\group" mrp="os\ossrv\genericopenlibs\cstdlib\group\syslibs_stdlib.mrp"/> -->
             </component>
             <component name="Open Environment Core" introduced="9.4">
               <unit bldFile="os\ossrv\genericopenlibs\openenvcore\group" mrp="os\ossrv\genericopenlibs\openenvcore\group\openenv.mrp"/>
@@ -710,10 +789,12 @@
           </collection>
           <collection name="Compression and Crypto Libraries" level="translation">
             <component name="Zip Compression Library" introduced="6.0">
-              <unit bldFile="os\ossrv\compressionlibs\ziplib\group" mrp="os\ossrv\compressionlibs\ziplib\group\syslibs_ezlib.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\ossrv\compressionlibs\ziplib\group" mrp="os\ossrv\compressionlibs\ziplib\group\syslibs_ezlib.mrp"/> -->
             </component>
             <component name="Weak Cryptography Library" filter="gt">
-              <unit bldFile="os\security\crypto\weakcrypto\group" mrp="os\security\crypto\weakcrypto\group\security_crypto_weak.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\security\crypto\weakcrypto\group" mrp="os\security\crypto\weakcrypto\group\security_crypto_weak.mrp"/> -->
             </component>
             <component name="Strong Cryptography Library" contract="Symbian_Strong_Cryptography" filter="gt">
               <unit bldFile="os\security\crypto\weakcrypto\strong" mrp="os\security\crypto\weakcrypto\group\security_crypto_strong.mrp"/>
@@ -770,7 +851,8 @@
               <unit bldFile="os\security\contentmgmt\contentaccessfwfordrm\group" mrp="os\security\contentmgmt\contentaccessfwfordrm\group\security_caf2.mrp"/>
             </component>
             <component name="CAF Recogniser Config" introduced="9.1">
-              <unit bldFile="os\security\contentmgmt\cafrecogniserconfig" mrp="os\security\contentmgmt\cafrecogniserconfig\security_reccafconfig.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\security\contentmgmt\cafrecogniserconfig" mrp="os\security\contentmgmt\cafrecogniserconfig\security_reccafconfig.mrp"/> -->
             </component>
           </collection>
           <collection name="XML" level="translation">
@@ -912,7 +994,8 @@
               <unit bldFile="os\cellularsrv\telephonyserver\etelsimtoolkit\group" mrp="os\cellularsrv\telephonyserver\etelsimtoolkit\group\telephony_etelsat.mrp"/>
             </component>
             <component name="ETel CDMA" introduced="7.0s">
-              <unit bldFile="os\cellularsrv\telephonyserver\etelcdma\group" mrp="os\cellularsrv\telephonyserver\etelcdma\group\telephony_etelcdma.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\cellularsrv\telephonyserver\etelcdma\group" mrp="os\cellularsrv\telephonyserver\etelcdma\group\telephony_etelcdma.mrp"/> -->
             </component>
           </collection>
           <collection name="SMS Protocols" level="internal-utils">
@@ -920,7 +1003,8 @@
               <unit bldFile="os\cellularsrv\smsprotocols\smsstack\group" mrp="os\cellularsrv\smsprotocols\smsstack\group\nbprotocols_smsstackv2.mrp"/>
             </component>
             <component name="CDMA SMS Stack" plugin="Y" introduced="8.0">
-              <unit bldFile="os\cellularsrv\smsprotocols\cdmasmsstack\group" mrp="os\cellularsrv\smsprotocols\cdmasmsstack\group\nbprotocols_cdmasmsstack.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\cellularsrv\smsprotocols\cdmasmsstack\group" mrp="os\cellularsrv\smsprotocols\cdmasmsstack\group\nbprotocols_cdmasmsstack.mrp"/> -->
             </component>
           </collection>
           <collection name="Telephony Server Plugins" level="physical-abstraction">
@@ -1037,13 +1121,15 @@
           </collection>
           <collection name="Link Layer Protocols" level="bearer-manager">
             <component name="Ethernet NIF" plugin="Y">
-              <unit bldFile="os\networkingsrv\linklayerprotocols\ethernetnif\group" mrp="os\networkingsrv\linklayerprotocols\ethernetnif\group\networking_ether802.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\networkingsrv\linklayerprotocols\ethernetnif\group" mrp="os\networkingsrv\linklayerprotocols\ethernetnif\group\networking_ether802.mrp"/> -->
             </component>
             <component name="Ethernet Packet Driver" plugin="Y">
               <unit mrp="os\networkingsrv\linklayerprotocols\ethernetpacketdriver\group\networking_etherdrv_srconly.mrp"/>
             </component>
             <component name="PPP NIF" plugin="Y">
-              <unit version="1" bldFile="os\networkingsrv\linklayerprotocols\pppnif\group" mrp="os\networkingsrv\linklayerprotocols\pppnif\group\networking_ppp.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit version="1" bldFile="os\networkingsrv\linklayerprotocols\pppnif\group" mrp="os\networkingsrv\linklayerprotocols\pppnif\group\networking_ppp.mrp"/> -->
             </component>
          <component name="PPP Config">
               <unit version="1" mrp="os\networkingsrv\linklayerprotocols\pppnif\group\networking_ppp-config.mrp"/>
@@ -1112,7 +1198,8 @@
               <unit bldFile="os\shortlinksrv\bluetooth\btextnotifiers" mrp="os\shortlinksrv\bluetooth\btextnotifiers\bluetooth_btextnotifiers.mrp"/>
             </component>
             <component name="Bluetooth Config" class="config">
-              <unit bldFile="os\shortlinksrv\bluetoothmgmt\btconfig" mrp="os\shortlinksrv\bluetoothmgmt\btconfig\bluetooth_config.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\shortlinksrv\bluetoothmgmt\btconfig" mrp="os\shortlinksrv\bluetoothmgmt\btconfig\bluetooth_config.mrp"/> -->
             </component>
             <component name="Bluetooth GAVDP" introduced="8.1">
               <unit bldFile="os\shortlinksrv\bluetooth\gavdp\group" mrp="os\shortlinksrv\bluetooth\gavdp\group\bluetooth_gavdp.mrp"/>
@@ -1197,7 +1284,8 @@
         </collection>
         <collection name="Multimedia Device Framework" level="device-fw">
           <component name="Media Device Framework" introduced="9.2">
-            <unit bldFile="os\mm\mmdevicefw\mdf\group" mrp="os\mm\mmdevicefw\mdf\group\multimedia_mdf.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\mm\mmdevicefw\mdf\group" mrp="os\mm\mmdevicefw\mdf\group\multimedia_mdf.mrp"/> -->
           </component>
           <component name="Speech Recognition Controller" introduced="7.0s">
             <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\ASR\group" mrp="mw\mmmw\mmmiddlewarefws\mmfw\ASR\group\multimedia_mmf_ASR.mrp"/>
@@ -1282,18 +1370,21 @@
             <unit bldFile="os\textandloc\fontservices\freetypefontrasteriser\group" mrp="os\textandloc\fontservices\freetypefontrasteriser\group\graphics_freetype.mrp"/>
           </component>
           <component name="iType Font Rasteriser" contract="Monotype_iType_Rasteriser" filter="gt" plugin="Y" introduced="9.5">
-            <unit bldFile="os\graphics\fbs\itypefontrasteriser\group" mrp="os\graphics\fbs\itypefontrasteriser\group\graphics_itype.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\graphics\fbs\itypefontrasteriser\group" mrp="os\graphics\fbs\itypefontrasteriser\group\graphics_itype.mrp"/> -->
           </component>
           <component name="Reference Fonts">
             <unit bldFile="os\textandloc\fontservices\referencefonts\group" mrp="os\textandloc\fontservices\referencefonts\group\graphics_fonts.mrp"/>
           </component>
           <component name="Graphics Test Fonts" filter="gt">
-            <unit bldFile="os\textandloc\fontservices\graphicstestfonts\group" mrp="os\textandloc\fontservices\graphicstestfonts\group\graphics_testfonts.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\textandloc\fontservices\graphicstestfonts\group" mrp="os\textandloc\fontservices\graphicstestfonts\group\graphics_testfonts.mrp"/> -->
           </component>
         </collection>
         <collection name="Khronos APIs" level="device-interface">
           <component name="OpenGL ES Framework" introduced="8.0">
-            <unit bldFile="os\graphics\opengles\openglesdisplayproperties\group" mrp="os\graphics\opengles\openglesdisplayproperties\group\graphics_openglesdisplayproperty.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\graphics\opengles\openglesdisplayproperties\group" mrp="os\graphics\opengles\openglesdisplayproperties\group\graphics_openglesdisplayproperty.mrp"/> -->
           </component>
           <component name="OpenGL ES API" introduced="8.0">
             <unit bldFile="os\graphics\opengles\openglesinterface\group" mrp="os\graphics\opengles\openglesinterface\group\graphics_openglesheaders.mrp"/>
@@ -1307,10 +1398,12 @@
         </collection>
         <collection name="Khronos Implementation" level="internal-adaptations">
           <component name="OpenGL ES Implementation" contract="OPENGL" filter="gt" introduced="8.0">
-            <unit bldFile="os\graphics\opengles\openglesimplementation\group\" mrp="os\graphics\opengles\openglesimplementation\group\graphics_opengles.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\graphics\opengles\openglesimplementation\group\" mrp="os\graphics\opengles\openglesimplementation\group\graphics_opengles.mrp"/> -->
           </component>
           <component name="EGL Implementation" contract="Symbian_Exclude" introduced="9.4">
-            <unit bldFile="os\graphics\egl\eglimplementation\group\" mrp="os\graphics\egl\eglimplementation\group\graphics_egl.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\graphics\egl\eglimplementation\group\" mrp="os\graphics\egl\eglimplementation\group\graphics_egl.mrp"/> -->
           </component>
         </collection>
         <collection name="Graphics Device Interface" level="device-interface">
@@ -1356,7 +1449,8 @@
             <unit bldFile="os\lbs\networkprotocolmodules\privacyprotocolmodule\group" mrp="os\lbs\networkprotocolmodules\privacyprotocolmodule\group\lbs_privacyprotocolmodule.mrp"/>
           </component>
           <component name="SUPL Protocol Module" plugin="Y" introduced="9.4">
-		  <unit bldFile="os\lbs\networkprotocolmodules\suplprotocolmodule\group" mrp="os\lbs\networkprotocolmodules\suplprotocolmodule\group\lbs_suplprotocolmodule.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\lbs\networkprotocolmodules\suplprotocolmodule\group" mrp="os\lbs\networkprotocolmodules\suplprotocolmodule\group\lbs_suplprotocolmodule.mrp"/> -->
 			</component>
         </collection>
         <collection name="Data Source Modules" level="data-acquisition">
@@ -1372,7 +1466,8 @@
 		 </collection>
         <collection name="Data Source Adaptation" level="adaptation">
           <component name="A-GPS Integration Module" plugin="Y" introduced="9.2">
-            <unit bldFile="os\lbs\datasourcemodules\agpsintegrationmodule\group" mrp="os\lbs\datasourcemodules\agpsintegrationmodule\group\lbs_datasourceplugins.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\lbs\datasourcemodules\agpsintegrationmodule\group" mrp="os\lbs\datasourcemodules\agpsintegrationmodule\group\lbs_datasourceplugins.mrp"/> -->
           </component>
           <component name="GPS Data Source Adaptation" plugin="Y" introduced="9.4">
             <unit bldFile="os\lbs\datasourceadaptation\gpsdatasourceadaptation\group" mrp="os\lbs\datasourceadaptation\gpsdatasourceadaptation\group\lbs_gps_data_source_adaptation.mrp"/>
@@ -1434,7 +1529,8 @@
             <unit bldFile="mw\appsupport\contenthandling\webrecognisers\group" mrp="mw\appsupport\contenthandling\webrecognisers\group\application-protocols_recognisers.mrp"/>
           </component>
           <component name="Reference DRM Agent" introduced="8.0">
-            <unit bldFile="mw\appsupport\contenthandling\referencedrmagent\RefTestAgent\group" mrp="mw\appsupport\contenthandling\referencedrmagent\RefTestAgent\group\security_rta.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\appsupport\contenthandling\referencedrmagent\RefTestAgent\group" mrp="mw\appsupport\contenthandling\referencedrmagent\RefTestAgent\group\security_rta.mrp"/> -->
           </component>
         </collection>
         <collection name="Printing Support" level="specific">
@@ -1481,13 +1577,16 @@
         </collection>
         <collection name="Network Security" level="generic">
           <component name="TLS" introduced="6.0">
-            <unit bldFile="os\networkingsrv\networksecurity\tls\group" mrp="os\networkingsrv\networksecurity\tls\group\networking_tls.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\networkingsrv\networksecurity\tls\group" mrp="os\networkingsrv\networksecurity\tls\group\networking_tls.mrp"/> -->
           </component>
           <component name="TLS Provider" introduced="8.1">
-            <unit bldFile="os\networkingsrv\networksecurity\tlsprovider\group" mrp="os\networkingsrv\networksecurity\tlsprovider\group\security_tlsprovider.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\networkingsrv\networksecurity\tlsprovider\group" mrp="os\networkingsrv\networksecurity\tlsprovider\group\security_tlsprovider.mrp"/> -->
           </component>
           <component name="IPsec" contract="IPSec_Protocol_Stack" introduced="7.0">
-            <unit bldFile="os\networkingsrv\networksecurity\ipsec\group" mrp="os\networkingsrv\networksecurity\ipsec\group\networking_ipsec.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\networkingsrv\networksecurity\ipsec\group" mrp="os\networkingsrv\networksecurity\ipsec\group\networking_ipsec.mrp"/> -->
           </component>
         </collection>
       </block>
@@ -1503,10 +1602,12 @@
             <unit bldFile="mw\messagingmw\messagingfw\wappushfw\group" mrp="mw\messagingmw\messagingfw\wappushfw\group\wap-browser_wappush.mrp"/>
           </component>
 		  <component name="SUPL SMS Handler" plugin="Y" introduced="9.4">
-			<unit bldFile="mw\messagingmw\messagingfw\suplsmshandler\group" mrp="mw\messagingmw\messagingfw\suplsmshandler\group\lbs_suplsmstrigger.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\messagingmw\messagingfw\suplsmshandler\group" mrp="mw\messagingmw\messagingfw\suplsmshandler\group\lbs_suplsmstrigger.mrp"/> -->
 		  </component>
 		  <component name="SUPL WAP Push Handler" plugin="Y" introduced="9.4">
-			<unit bldFile="mw\messagingmw\messagingfw\suplwappushhandler\group" mrp="mw\messagingmw\messagingfw\suplwappushhandler\group\lbs_suplwappush.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\messagingmw\messagingfw\suplwappushhandler\group" mrp="mw\messagingmw\messagingfw\suplwappushhandler\group\lbs_suplwappush.mrp"/> -->
 		  </component>
           <component name="WAP Push Support" introduced="6.2">
             <unit bldFile="mw\netprotocols\applayerprotocols\wappushsupport\Group" mrp="mw\netprotocols\applayerprotocols\wappushsupport\Group\wap-browser_wappushsupport.mrp"/>
@@ -1557,12 +1658,14 @@
         </collection>
         <collection name="WAP Stack" level="generic">
           <component name="WAP Message API">
-            <unit bldFile="mw\netprotocols\wapstack\wapmessageapi\group" mrp="mw\netprotocols\wapstack\wapmessageapi\group\wap-stack_wapmessage.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\netprotocols\wapstack\wapmessageapi\group" mrp="mw\netprotocols\wapstack\wapmessageapi\group\wap-stack_wapmessage.mrp"/> -->
           </component>
         </collection>
         <collection name="Connectivity Transports" level="generic">
           <component name="m-Router" contract="MRouter" filter="gt">
-            <unit bldFile="mw\remoteconn\connectivitytransports\mrouter\group" mrp="mw\remoteconn\connectivitytransports\mrouter\group\connectivity_mRouterSecure.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\remoteconn\connectivitytransports\mrouter\group" mrp="mw\remoteconn\connectivitytransports\mrouter\group\connectivity_mRouterSecure.mrp"/> -->
           </component>
           <component name="PLP Remote Link" deprecated="9.0">
             <unit bldFile="mw\remoteconn\connectivitytransports\plpremotelink\plpgrp" mrp="mw\remoteconn\connectivitytransports\plpremotelink\plpgrp\connectivity_legacy_plp_plpgrp.mrp"/>
@@ -1583,7 +1686,8 @@
       <block name="Multimedia Middleware" levels="protocols plugins">
         <collection name="Multimedia Protocols" level="protocols">
           <component name="MTP Framework" introduced="9.4">
-            <unit bldFile="mw\remoteconn\mtpfws\mtpfw\group" mrp="mw\remoteconn\mtpfws\mtpfw\group\mtp_framework.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\remoteconn\mtpfws\mtpfw\group" mrp="mw\remoteconn\mtpfws\mtpfw\group\mtp_framework.mrp"/> -->
           </component>
           <component name="RTP" introduced="9.0">
             <!-- Real Time Data Protocol -->
@@ -1670,27 +1774,32 @@
       <block name="PIM" levels="utilities engines">
         <collection name="PIM App Services" level="engines">
           <component name="Calendar" introduced="9.5">
-            <unit version="2" bldFile="app\organizer\pimappservices\calendar\group" mrp="app\organizer\pimappservices\calendar\group\app-engines_calendar.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit version="2" bldFile="app\organizer\pimappservices\calendar\group" mrp="app\organizer\pimappservices\calendar\group\app-engines_calendar.mrp"/> -->
           </component>
           <component name="Agenda Versit Plugin" plugin="Y" introduced="9.5">
             <unit version="2" bldFile="app\organizer\pimappservices\calendarvcalplugin\group" mrp="app\organizer\pimappservices\calendarvcalplugin\group\app-engines_agnversit2.mrp"/>
           </component>
           <component name="Contacts Model" introduced="5.0">
-            <unit version="1" bldFile="app\contacts\phonebookengines\contactsmodel\group" mrp="app\contacts\phonebookengines\contactsmodel\group\app-engines_cntmodel.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit version="1" bldFile="app\contacts\phonebookengines\contactsmodel\group" mrp="app\contacts\phonebookengines\contactsmodel\group\app-engines_cntmodel.mrp"/> -->
           </component>
           <component name="Phonebook Sync" plugin="Y">
-            <unit bldFile="app\contacts\pimprotocols\phonebooksync\group" mrp="app\contacts\pimprotocols\phonebooksync\group\telephony_phbksync.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="app\contacts\pimprotocols\phonebooksync\group" mrp="app\contacts\pimprotocols\phonebooksync\group\telephony_phbksync.mrp"/> -->
           </component>
         </collection>
         <collection name="PIM Application Support" level="utilities">
           <component name="vCard and vCal" introduced="5.0">
-            <unit bldFile="app\organizer\pimappsupport\vcardandvcal\group" mrp="app\organizer\pimappsupport\vcardandvcal\group\app-services_versit.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="app\organizer\pimappsupport\vcardandvcal\group" mrp="app\organizer\pimappsupport\vcardandvcal\group\app-services_versit.mrp"/> -->
           </component>
           <component name="Chinese Calendar Converter" introduced="6.1">
             <unit bldFile="app\organizer\pimappsupport\chinesecalendarconverter\group" mrp="app\organizer\pimappsupport\chinesecalendarconverter\group\app-services_calcon.mrp"/>
           </component>
           <component name="Chinese Calendar Algorithm" introduced="tb91">
-            <unit bldFile="app\organizer\pimappsupport\chinesecalendaralg\group" mrp="app\organizer\pimappsupport\chinesecalendaralg\group\app-services_chinesecalendaralgorithm.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="app\organizer\pimappsupport\chinesecalendaralg\group" mrp="app\organizer\pimappsupport\chinesecalendaralg\group\app-services_chinesecalendaralgorithm.mrp"/> -->
           </component>
           <component name="Backup Restore Notification" introduced="8.1">
             <unit bldFile="mw\appsupport\commonappservices\backuprestorenotification\group" mrp="mw\appsupport\commonappservices\backuprestorenotification\group\app-services_BackupRestoreNotification.mrp"/>
@@ -1698,7 +1807,8 @@
         </collection>
         <collection name="Office App Engines" level="engines">
           <component name="Data Engine" introduced="5.0" deprecated="9.3">
-            <unit bldFile="app\organizer\officeappeng\datamodel\group" mrp="app\organizer\officeappeng\datamodel\group\app-engines_damodel.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="app\organizer\officeappeng\datamodel\group" mrp="app\organizer\officeappeng\datamodel\group\app-engines_damodel.mrp"/> -->
           </component>
           <component name="Sheet Engine" introduced="5.0" deprecated="9.3">
             <unit bldFile="app\organizer\officeappeng\sheeteng\group" mrp="app\organizer\officeappeng\sheeteng\group\app-engines_sheng.mrp"/>
@@ -1717,7 +1827,8 @@
             <unit bldFile="mw\messagingmw\messagingfw\msgsrvnstore\group" mrp="mw\messagingmw\messagingfw\msgsrvnstore\group\messaging_framework.mrp"/>
           </component>
           <component name="BIO Messaging Framework" introduced="6.0">
-            <unit bldFile="mw\messagingmw\messagingfw\biomsgfw\group" mrp="mw\messagingmw\messagingfw\biomsgfw\group\messaging_biomsg.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\messagingmw\messagingfw\biomsgfw\group" mrp="mw\messagingmw\messagingfw\biomsgfw\group\messaging_biomsg.mrp"/> -->
           </component>
           <component name="MMS Settings" introduced="9.2">
             <unit bldFile="app\messaging\mmsengine\mmssettings\group\" mrp="app\messaging\mmsengine\mmssettings\group\messaging_mmssettings.mrp"/>
@@ -1765,22 +1876,28 @@
             <unit bldFile="app\techview\connectivityapps\connectivityfw\group" mrp="app\techview\connectivityapps\connectivityfw\group\connectivity_framework.mrp"/>
           </component>
           <component name="OMA SyncML Data Sync" introduced="7.0s">
-            <unit bldFile="mw\remotemgmt\syncandremotemgmtfw\omasyncmldatasync\Group" mrp="mw\remotemgmt\syncandremotemgmtfw\omasyncmldatasync\Group\oma_syncml_datasync.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\remotemgmt\syncandremotemgmtfw\omasyncmldatasync\Group" mrp="mw\remotemgmt\syncandremotemgmtfw\omasyncmldatasync\Group\oma_syncml_datasync.mrp"/> -->
           </component>
           <component name="OMA SyncML Common Framework" introduced="7.0s">
-            <unit bldFile="mw\remotemgmt\syncandremotemgmtfw\omasyncmlcommonfw\Group" mrp="mw\remotemgmt\syncandremotemgmtfw\omasyncmlcommonfw\Group\oma_syncml_common_framework.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\remotemgmt\syncandremotemgmtfw\omasyncmlcommonfw\Group" mrp="mw\remotemgmt\syncandremotemgmtfw\omasyncmlcommonfw\Group\oma_syncml_common_framework.mrp"/> -->
           </component>
           <component name="OMA SyncML DM Interface" introduced="7.0s">
-            <unit bldFile="mw\remotemgmt\syncandremotemgmtfw\omasyncmldminterface\group" mrp="mw\remotemgmt\syncandremotemgmtfw\omasyncmldminterface\group\oma_syncml_dm_interface.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\remotemgmt\syncandremotemgmtfw\omasyncmldminterface\group" mrp="mw\remotemgmt\syncandremotemgmtfw\omasyncmldminterface\group\oma_syncml_dm_interface.mrp"/> -->
           </component>
           <component name="OMA SyncML Config" introduced="9.4">
-            <unit bldFile="mw\remotemgmt\syncandremotemgmtfw\omasyncmlconfig\group" mrp="mw\remotemgmt\syncandremotemgmtfw\omasyncmlconfig\group\oma_syncml_config.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\remotemgmt\syncandremotemgmtfw\omasyncmlconfig\group" mrp="mw\remotemgmt\syncandremotemgmtfw\omasyncmlconfig\group\oma_syncml_config.mrp"/> -->
           </component>
           <component name="Device Management Framework" introduced="8.0">
-            <unit bldFile="mw\remotemgmt\syncandremotemgmtfw\devicemgmtfw\group" mrp="mw\remotemgmt\syncandremotemgmtfw\devicemgmtfw\group\devprov_devman_framework.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\remotemgmt\syncandremotemgmtfw\devicemgmtfw\group" mrp="mw\remotemgmt\syncandremotemgmtfw\devicemgmtfw\group\devprov_devman_framework.mrp"/> -->
           </component>
           <component name="Client Provisioning Framework" introduced="9.1">
-            <unit bldFile="mw\remotemgmt\syncandremotemgmtfw\clientprovisioningfw\Group" mrp="mw\remotemgmt\syncandremotemgmtfw\clientprovisioningfw\Group\devprov_clientprov_framework.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\remotemgmt\syncandremotemgmtfw\clientprovisioningfw\Group" mrp="mw\remotemgmt\syncandremotemgmtfw\clientprovisioningfw\Group\devprov_clientprov_framework.mrp"/> -->
           </component>
         </collection>
         <collection name="Sync and Remote Management Services" level="services">
@@ -1788,13 +1905,16 @@
             <unit bldFile="app\techview\connectivityapps\connectivityservices\group" mrp="app\techview\connectivityapps\connectivityservices\group\connectivity_services.mrp"/>
           </component>
           <component name="Data Sync Adaptors" plugin="Y" introduced="7.0s">
-            <unit bldFile="mw\remotemgmt\syncandremotemgmtservices\datasyncadaptors\group" mrp="mw\remotemgmt\syncandremotemgmtservices\datasyncadaptors\group\data_sync_adaptors.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\remotemgmt\syncandremotemgmtservices\datasyncadaptors\group" mrp="mw\remotemgmt\syncandremotemgmtservices\datasyncadaptors\group\data_sync_adaptors.mrp"/> -->
           </component>
           <component name="Device Management Adaptors" plugin="Y" introduced="9.1">
-            <unit bldFile="mw\remotemgmt\syncandremotemgmtservices\devicemgmtadaptors\devman\Group" mrp="mw\remotemgmt\syncandremotemgmtservices\devicemgmtadaptors\devman\Group\devprov_devman_adapters.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\remotemgmt\syncandremotemgmtservices\devicemgmtadaptors\devman\Group" mrp="mw\remotemgmt\syncandremotemgmtservices\devicemgmtadaptors\devman\Group\devprov_devman_adapters.mrp"/> -->
           </component>
           <component name="Client Provisioning Adaptors" plugin="Y" introduced="9.1">
-            <unit bldFile="mw\remotemgmt\syncandremotemgmtservices\clientprovisioningadaptors\group" mrp="mw\remotemgmt\syncandremotemgmtservices\clientprovisioningadaptors\group\devprov_clientprov_adapters.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\remotemgmt\syncandremotemgmtservices\clientprovisioningadaptors\group" mrp="mw\remotemgmt\syncandremotemgmtservices\clientprovisioningadaptors\group\devprov_clientprov_adapters.mrp"/> -->
           </component>
         </collection>
         <collection name="MTP Data Providers" level="services">
@@ -1805,12 +1925,12 @@
 				<collection name="Bluetooth Application Profiles" level="services"> 
 					<component name="Bluetooth AD2P" class="placeholder" introduced="9.4">
 					  <!-- PLACEHOLDER="DS.862"
-						<unit bldFile="os/shortlinksrv/bluetoothmgmt/btcommon/profiles/a2dp/group" mrp="os/shortlinksrv/bluetoothmgmt/btcommon/profiles/a2dp/group/bluetooth_a2dp.mrp"/>
+          <unit bldFile="os/shortlinksrv/bluetoothmgmt/btcommon/profiles/a2dp/group" mrp="os/shortlinksrv/bluetoothmgmt/btcommon/profiles/a2dp/group/bluetooth_a2dp.mrp"/>
 					    -->
 					</component>
 					<component name="Bluetooth SBC Encoder" class="placeholder" introduced="9.4" plugin="Y">
 					  <!-- PLACEHOLDER="DS.862"
-					  <unit bldFile="os/shortlinksrv/bluetoothmgmt/btcommon/profiles/a2dp/sbcencoder/implementation" mrp="os/shortlinksrv/bluetoothmgmt/btcommon/profiles/a2dp/sbcencoder/implementation/bluetooth_sbc.mrp"/>
+          <unit bldFile="os/shortlinksrv/bluetoothmgmt/btcommon/profiles/a2dp/sbcencoder/implementation" mrp="os/shortlinksrv/bluetoothmgmt/btcommon/profiles/a2dp/sbcencoder/implementation/bluetooth_sbc.mrp"/>
 					  -->
 					</component>
         </collection>
@@ -1838,10 +1958,12 @@
       </collection>
       <collection name="Remote Management Test" level="test">
         <component name="OMA SyncML Integration Test" introduced="7.0s" class="test">
-          <unit bldFile="mw\remotemgmt\remotemgmttest\omasyncmlintegrationtest\group" mrp="mw\remotemgmt\remotemgmttest\omasyncmlintegrationtest\group\oma_syncml_integtest.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\remotemgmt\remotemgmttest\omasyncmlintegrationtest\group" mrp="mw\remotemgmt\remotemgmttest\omasyncmlintegrationtest\group\oma_syncml_integtest.mrp"/> -->
         </component>
         <component name="OMA Device Management Integration Test" introduced="9.1" class="test">
-          <unit bldFile="mw\remotemgmt\remotemgmttest\omadevicemgmtintegrationtest\group" mrp="mw\remotemgmt\remotemgmttest\omadevicemgmtintegrationtest\group\devprov_integtest.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\remotemgmt\remotemgmttest\omadevicemgmtintegrationtest\group" mrp="mw\remotemgmt\remotemgmttest\omadevicemgmtintegrationtest\group\devprov_integtest.mrp"/> -->
         </component>
       </collection>
       <collection name="Time Zone PC Side" level="pc-tools">
@@ -1849,7 +1971,8 @@
           <unit bldFile="mw\appsupport\tzpcside\tzcompiler\group" mrp="mw\appsupport\tzpcside\tzcompiler\group\app-services_tzcompiler.mrp"/>
         </component>
         <component name="World Database Kit" introduced="6.0" deprecated="9.1" class="config PC">
-          <unit bldFile="mw\appsupport\tzpcside\worlddatabasekit\group" mrp="mw\appsupport\tzpcside\worlddatabasekit\group\app-services_wlddatabasekit_cedar.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\appsupport\tzpcside\worlddatabasekit\group" mrp="mw\appsupport\tzpcside\worlddatabasekit\group\app-services_wlddatabasekit_cedar.mrp"/> -->
         </component>
         <component name="World Tools" introduced="5.0" deprecated="9.1" class="config PC">
           <unit bldFile="mw\appsupport\tzpcside\worldtools\group" mrp="mw\appsupport\tzpcside\worldtools\group\app-services_wldtools.mrp"/>
@@ -1857,7 +1980,8 @@
       </collection>
       <collection name="Secure Software Install Tools" level="pc-tools">
         <component name="SWI Analysis Toolkit" class="PC">
-          <unit bldFile="mw\appinstall\secureswitools\swianalysistoolkit\group" mrp="mw\appinstall\secureswitools\swianalysistoolkit\group\security_switools.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\appinstall\secureswitools\swianalysistoolkit\group" mrp="mw\appinstall\secureswitools\swianalysistoolkit\group\security_switools.mrp"/> -->
         </component>
         <component name="Secure Software Install SIS Tools" class="PC">
           <unit bldFile="mw\appinstall\secureswitools\swisistools\group" mrp="mw\appinstall\secureswitools\swisistools\group\security_sistools.mrp"/>
@@ -1889,16 +2013,20 @@
       </collection>
       <collection name="Kernel Test" level="test">
         <component name="E32 Tests" class="test">
-          <unit bldFile="os\kernelhwsrv\kerneltest\e32test\group" mrp="os\kernelhwsrv\kerneltest\e32test\group\base_e32test.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\kernelhwsrv\kerneltest\e32test\group" mrp="os\kernelhwsrv\kerneltest\e32test\group\base_e32test.mrp"/> -->
         </component>
         <component name="SDIO Tests" filter="gt" introduced="9.2" class="test">
-          <unit bldFile="os\kernelhwsrv\kerneltest\sdiotest" mrp="os\kernelhwsrv\kerneltest\sdiotest\base_sdiotests.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\kernelhwsrv\kerneltest\sdiotest" mrp="os\kernelhwsrv\kerneltest\sdiotest\base_sdiotests.mrp"/> -->
         </component>
         <component name="E32 Utilities" contract="NAND_Flash_XSR_Unistore_2_Other_Portions">
-          <unit bldFile="os\kernelhwsrv\kerneltest\e32utils\group" mrp="os\kernelhwsrv\kerneltest\e32utils\group\base_e32utils.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\kernelhwsrv\kerneltest\e32utils\group" mrp="os\kernelhwsrv\kerneltest\e32utils\group\base_e32utils.mrp"/> -->
         </component>
         <component name="File Server Tests" class="test">
-          <unit bldFile="os\kernelhwsrv\kerneltest\f32test\group" mrp="os\kernelhwsrv\kerneltest\f32test\group\base_f32test.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\kernelhwsrv\kerneltest\f32test\group" mrp="os\kernelhwsrv\kerneltest\f32test\group\base_f32test.mrp"/> -->
         </component>
       </collection>
       <collection name="Applications Test" level="test">
@@ -1931,7 +2059,8 @@
           <unit bldFile="os\networkingsrv\networkingtestandutils\networkingintegrationtest\Group" mrp="os\networkingsrv\networkingtestandutils\networkingintegrationtest\Group\networking_integrationtest.mrp"/>
         </component>
         <component name="MTP Integration Test" introduced="9.4" class="test">
-          <unit bldFile="mw\remoteconn\mtpfws\mtpintegrationtest\group" mrp="mw\remoteconn\mtpfws\mtpintegrationtest\group\mtp_test.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="mw\remoteconn\mtpfws\mtpintegrationtest\group" mrp="mw\remoteconn\mtpfws\mtpintegrationtest\group\mtp_test.mrp"/> -->
         </component>
         <component name="Base Integration Test">
           <unit bldFile="os\kernelhwsrv\baseintegtests\baseintegrationtest\group" mrp="os\kernelhwsrv\baseintegtests\baseintegrationtest\group\base_integration_test.mrp"/>
@@ -2019,11 +2148,13 @@
       </collection>
       <collection name="Comms Test" level="test">
         <component name="Networking Dialog Stub" introduced="6.1">
-          <unit bldFile="os\commsfw\datacommsserver\networkingdialogapi\default" mrp="os\commsfw\datacommsserver\networkingdialogapi\default\networking_dialog_default.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\commsfw\datacommsserver\networkingdialogapi\default" mrp="os\commsfw\datacommsserver\networkingdialogapi\default\networking_dialog_default.mrp"/> -->
         </component>
         <component name="Networking ROM">
           <!--  production component: contains the IBY files -->
-          <unit bldFile="os\networkingsrv\networkingsrv_info\networkingrom\group" mrp="os\networkingsrv\networkingsrv_info\networkingrom\group\networking_general.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\networkingsrv\networkingsrv_info\networkingrom\group" mrp="os\networkingsrv\networkingsrv_info\networkingrom\group\networking_general.mrp"/> -->
         </component>
         <component name="Networking Unit Test" introduced="7.0" class="test">
           <unit mrp="os\networkingsrv\networkingtestandutils\networkingunittest\group\networking_unittest.mrp"/>
@@ -2054,7 +2185,8 @@
       </collection>
       <collection name="Miscellaneous" level="test">
         <component name="SYSTEMMONITOR">
-          <unit bldFile="os\buildtools\toolsandutils\systemmonitor\group" mrp="os\buildtools\toolsandutils\systemmonitor\group\testtools_systemmonitor.mrp"/>
+          <!-- Following line commented out: NON-CONTRIBUTED -->
+          <!-- <unit bldFile="os\buildtools\toolsandutils\systemmonitor\group" mrp="os\buildtools\toolsandutils\systemmonitor\group\testtools_systemmonitor.mrp"/> -->
         </component>
         <component name="TESTTOOLS_UTILITIES">
           <unit bldFile="os\persistentdata\loggingservices\rfilelogger\group" mrp="os\persistentdata\loggingservices\rfilelogger\group\testtools_utilities.mrp"/>
