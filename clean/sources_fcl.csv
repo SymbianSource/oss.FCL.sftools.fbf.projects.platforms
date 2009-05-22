@@ -90,7 +90,7 @@ source,dst,tag,type,branch,pattern
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/os/cellularsrv/,/sf/os/cellularsrv,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/os/commsfw/,/sf/os/commsfw,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,tip,tag,default,layers.sysdef.xml
-//lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/os/devicesrv/,/sf/os/devicesrv,tip,tag,default,layers.sysdef.xml
+//lon-engbuild87/d$/mercurial_master_prod/sfl/FCL/sf/os/devicesrv/,/sf/os/devicesrv,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/os/graphics/,/sf/os/graphics,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/os/imagingext/,/sf/os/imagingext,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,tip,tag,default,layers.sysdef.xml
