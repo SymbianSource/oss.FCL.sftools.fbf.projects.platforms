@@ -110,6 +110,6 @@ source,dst,tag,type,branch,pattern
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/tools/buildplatforms/,/sf/tools/buildplatforms,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/tools/homescreentools/,/sf/tools/homescreentools,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/tools/makefile_templates/,/sf/tools/makefile_templates,tip,tag,default,layers.sysdef.xml
-//lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/tools/platformtools/,/sf/tools/platformtools,tip,tag,default,layers.sysdef.xml
+//lon-engbuild87/d$/mercurial_development/sfl/FCL/sf/tools/platformtools/,/sf/tools/platformtools,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/tools/rndtools/,/sf/tools/rndtools,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/tools/swconfigtools/,/sf/tools/swconfigtools,tip,tag,default,layers.sysdef.xml
