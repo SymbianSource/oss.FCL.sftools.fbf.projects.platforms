@@ -76,7 +76,7 @@ source,dst,tag,type,branch,pattern
 //lon-engbuild87/d$/mercurial_master_prod/oss/MCL/sf/mw/serviceapi/,/sf/mw/serviceapi,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/oss/MCL/sf/mw/serviceapifw/,/sf/mw/serviceapifw,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/mw/shortlinkconn/,/sf/mw/shortlinkconn,tip,tag,default,layers.sysdef.xml
-//lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/mw/svgt/,/sf/mw/svgt,tip,tag,default,layers.sysdef.xml
+//lon-engbuild87/d$/mercurial_development/sfl/FCL/sf/mw/svgt/,/sf/mw/svgt,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/mw/uiaccelerator/,/sf/mw/uiaccelerator,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_development/sfl/FCL/sf/mw/uiresources/,/sf/mw/uiresources,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/mw/uitools/,/sf/mw/uitools,tip,tag,default,layers.sysdef.xml
