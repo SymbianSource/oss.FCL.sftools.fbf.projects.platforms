@@ -1,5 +1,6 @@
 source,dst,tag,type,branch,pattern
 //lon-engbuild87/d$/mercurial_development/rnd/internal/initial/,/rnd/internal/initial,tip,tag,default,layers.sysdef.xml
+//lon-engbuild87/d$/mercurial_internal/rnd/rndonly/monotype/,/rnd/rndonly/monotype,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/adaptation/stubs/,/sf/adaptation/stubs,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/app/camera/,/sf/app/camera,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/app/commonemail/,/sf/app/commonemail,tip,tag,default,layers.sysdef.xml
@@ -101,7 +102,7 @@ source,dst,tag,type,branch,pattern
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/os/persistentdata/,/sf/os/persistentdata,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/os/security/,/sf/os/security,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_development/sfl/FCL/sf/os/shortlinksrv_2/,/sf/os/shortlinksrv,tip,tag,default,layers.sysdef.xml
-//lon-engbuild87/d$/mercurial/Temp/textandloc/,/sf/os/textandloc,tip,tag,default,layers.sysdef.xml
+//lon-engbuild87/d$/mercurial/Temp/sfl/FCL/sf/os/textandloc,/sf/os/textandloc,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/os/unref/,/sf/os/unref,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/os/wlan/,/sf/os/wlan,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/os/xmlsrv/,/sf/os/xmlsrv,tip,tag,default,layers.sysdef.xml
