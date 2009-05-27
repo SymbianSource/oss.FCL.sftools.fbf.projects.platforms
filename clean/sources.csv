@@ -1,5 +1,6 @@
 source,dst,tag,type,branch,pattern
 //lon-engbuild87/d$/mercurial_development/rnd/internal/initial/,/rnd/internal/initial,tip,tag,default,layers.sysdef.xml
+//lon-engbuild87/d$/mercurial_internal/rnd/rndonly/monotype/,/rnd/rndonly/monotype,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/adaptation/stubs/,/sf/adaptation/stubs,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/app/camera/,/sf/app/camera,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/app/commonemail/,/sf/app/commonemail,tip,tag,default,layers.sysdef.xml
