@@ -62,4 +62,7 @@
     <property name="sf.spec.package.src.enable"  value="true"/>
     
     <property name="sf.spec.test.sendpkg.enable" value="true"/>
+
+    <property name="sf.spec.md5.enable"          value="true"/>
+
 </project>
