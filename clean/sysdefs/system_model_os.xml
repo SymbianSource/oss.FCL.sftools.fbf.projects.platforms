@@ -731,9 +731,9 @@
             <component name="Feature Registry" introduced="9.2" deprecated="9.6">
               <unit bldFile="os\persistentdata\featuremgmt\featureregistry\group" mrp="os\persistentdata\featuremgmt\featureregistry\group\syslibs_featreg.mrp"/>
             </component>
-            <component name="Hardware Resources Manager" introduced="9.5">
+            <!-- component name="Hardware Resources Manager" introduced="9.5">
               <unit bldFile="os\devicesrv\resourcemgmt\hwresourcesmgr\group" mrp="os\devicesrv\resourcemgmt\hwresourcesmgr\group\telephony_hwrm.mrp"/>
-            </component>
+            </component -->
             <component name="Power and Memory Notification Service" introduced="6.0">
               <unit bldFile="os\devicesrv\resourcemgmt\powerandmemorynotificationservice\group" mrp="os\devicesrv\resourcemgmt\powerandmemorynotificationservice\group\syslibs_pwrcli.mrp"/>
             </component>
