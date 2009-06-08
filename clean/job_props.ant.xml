@@ -22,10 +22,14 @@
     <property name="sf.spec.baseline.getenv_options" value="-I src"/>
     <property name="sf.spec.baseline.enable"         value="false"/>     
     <property name="sf.spec.baseline.clean"          value="false"/>
+    <property name="sf.spec.baseline.select"         value="location" />
+    <property name="sf.spec.baseline.location"       value="D:\PDK\PDK_20090507\" />
     
-    <property name="sf.spec.baseline.select" value="location" />
-    <property name="sf.spec.baseline.location" value="D:\PDK\PDK_20090507\" />  
-    <property name="sf.spec.toolsbaseline.enable" value="true"/>
+    <property name="sf.spec.toolsbaseline.enable"    value="true"/>
+    <property name="sf.spec.toolsbaseline.getenv_options" value="-i emu"/>
+    <property name="sf.spec.toolsbaseline.select"         value="location" />
+    <property name="sf.spec.toolsbaseline.location"       value="D:\PDT\PDT_b50\" /> <!-- for TEF etc -->
+
     <property name="sf.spec.publish.rootdir" value="D:\SF_Builds"/>
     
     <!-- platform build specific properties -->
