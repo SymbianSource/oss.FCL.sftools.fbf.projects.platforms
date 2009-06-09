@@ -63,7 +63,7 @@ source,dst,tag,type,branch,pattern
 //lon-engbuild87/d$/mercurial_development/sfl/FCL/sf/mw/messagingmw/,/sf/mw/messagingmw,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/mw/metadatasrv/,/sf/mw/metadatasrv,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/mw/mmappfw/,/sf/mw/mmappfw,tip,tag,default,layers.sysdef.xml
-//lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/mw/mmmw/,/sf/mw/mmmw,tip,tag,default,layers.sysdef.xml
+//lon-engbuild87/d$/mercurial_development/sfl/FCL/sf/mw/mmmw/,/sf/mw/mmmw,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/mw/mmuifw/,/sf/mw/mmuifw,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/mw/mobiletv/,/sf/mw/mobiletv,tip,tag,default,layers.sysdef.xml
 //lon-engbuild87/d$/mercurial_master_prod/sfl/MCL/sf/mw/netprotocols/,/sf/mw/netprotocols,tip,tag,default,layers.sysdef.xml
