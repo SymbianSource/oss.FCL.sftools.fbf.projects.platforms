@@ -28,7 +28,7 @@
     <property name="sf.spec.toolsbaseline.enable"    value="true"/>
     <property name="sf.spec.toolsbaseline.getenv_options" value="-i emu"/>
     <property name="sf.spec.toolsbaseline.select"         value="location" />
-    <property name="sf.spec.toolsbaseline.location"       value="D:\PDT\PDT_b50\" /> <!-- for TEF etc -->
+    <property name="sf.spec.toolsbaseline.location"       value="\\LON-ENGBUILD87\D$\PDT\PDT_b50" /> <!-- for TEF etc -->
 
     <property name="sf.spec.publish.rootdir" value="D:\SF_Builds"/>
     
