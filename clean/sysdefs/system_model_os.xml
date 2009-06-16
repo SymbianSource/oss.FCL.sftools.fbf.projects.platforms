@@ -91,6 +91,11 @@
   <systemModel>
     <layer name="Tools and Utils and SDKENG" levels="SDK tools test">
       <collection name="Build System Tools" level="tools">
+    
+        <component name="E32 ToolP">
+          <unit bldFile="os\buildtools\sbsv1_os\e32toolp\group" mrp="os\buildtools\sbsv1_os\e32toolp\group\tools_e32toolp.mrp"/>
+        </component>
+  
         <component name="BUILDSYSTEMTOOLS">
           <unit bldFile="os\buildtools\bldsystemtools\buildsystemtools\group" mrp="os\buildtools\bldsystemtools\buildsystemtools\group\tools_build.mrp"/>
         </component>
