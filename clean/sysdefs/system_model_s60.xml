@@ -916,6 +916,15 @@
 </component>
 </module>
 </logicalsubset>
+
+<logicalsubset name="homescreentools">
+<module name="homescreentools">
+<component name="homescreentools">
+<unit unitID="sf_tools_homescreentools" name="homescreentools" bldFile="\sf\tools\homescreentools\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
+
 <logicalsubset name="rndtools">
 <module name="rndtools">
 <component name="rndtools">
