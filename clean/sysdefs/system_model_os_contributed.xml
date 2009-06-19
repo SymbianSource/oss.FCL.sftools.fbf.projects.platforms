@@ -93,6 +93,11 @@
             <unit bldFile="os/kernelhwsrv/kernel/eka" mrp="os/kernelhwsrv/kernel/eka/base_e32.mrp"/>
           </component>
         </collection>
+		<collection name="kerneltest" long-name="Kernel Test" level="hw-if" contributed="no">
+		  <component name="e32test" long-name="E32 Tests" class="test" purpose="development" contributed="no">
+			<unit bldFile="os/kernelhwsrv/kerneltest/e32test/group" mrp="os/kernelhwsrv/kerneltest/e32test/group/base_e32test.mrp"/>
+		  </component>
+		</collection>
         <collection name="ldds" long-name="Logical Device Drivers" level="adaptation">
           <component name="ethernetldd" long-name="Ethernet Drivers" purpose="optional">
             <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/ethernet" mrp="os/kernelhwsrv/kernel/eka/drivers/ethernet/base_e32_drivers_ethernet.mrp"/>
@@ -118,9 +123,10 @@
           </component>
         </collection>
         <collection name="driversupport" long-name="Generic Driver Support" level="hw-if">
-          <component name="mediadrivers" long-name="Media Drivers" purpose="optional">
-<!-- these are for storage media-->
-          </component>
+          <component name="mediadrivers" long-name="Media Drivers" purpose="optional" contributed="no">
+			<!-- these are for storage media-->
+			<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/media" mrp="os/kernelhwsrv/kernel/eka/drivers/media/base_e32_drivers_media.mrp"/>
+		  </component>
           <component name="genericboardsupport" long-name="Generic Board Support" purpose="optional">
             <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/bsp" mrp="os/kernelhwsrv/kernel/eka/drivers/bsp/base_e32_drivers_bsp.mrp"/>
           </component>
@@ -129,6 +135,9 @@
           <component name="euser" long-name="User Library" purpose="mandatory">
             <unit bldFile="os/kernelhwsrv/kernel/eka/euser" mrp="os/kernelhwsrv/kernel/eka/euser/base_e32_euser.mrp"/>
           </component>
+		  <component name="compsupp" long-name="Compiler Runtime Support" filter="gt" purpose="mandatory" contributed="no">
+			<unit bldFile="os/kernelhwsrv/kernel/eka/compsupp" mrp="os/kernelhwsrv/kernel/eka/compsupp/base_e32_compsupp.mrp"/>
+		  </component>
           <component name="fileserver" long-name="File Server" filter="gt" purpose="mandatory">
             <unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/group" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/group/base_f32.mrp"/>
           </component>
@@ -234,7 +243,7 @@
         </collection>
         <collection name="sbsv1_os" long-name="Symbian Build System v1" level="fw">
           <component name="e32toolp" long-name="E32 Perl Tools" purpose="development" class="PC">
-            <unit mrp="os/buildtools/sbsv1_os/e32toolp/group/tools_e32toolp.mrp"/>
+            <unit bldFile="os\buildtools\sbsv1_os\e32toolp\group" mrp="os/buildtools/sbsv1_os/e32toolp/group/tools_e32toolp.mrp"/>
           </component>
         </collection>
         <collection name="imgtools_os" long-name="Image Tools" level="fw">
@@ -280,7 +289,15 @@
             <unit bldFile="os/ossrv/genericservices/httputils/group" mrp="os/ossrv/genericservices/httputils/group/application-protocols_inetprotutil.mrp"/>
           </component>
         </collection>
+		<collection name="compressionlibs" long-name="Compression Libraries" level="data-services" contributed="no">
+		  <component name="ziplib" long-name="Zip Compression Library" introduced="6.0" purpose="optional" contributed="no">
+			<unit bldFile="os/ossrv/compressionlibs/ziplib/group" mrp="os/ossrv/compressionlibs/ziplib/group/syslibs_ezlib.mrp"/>
+		  </component>
+		</collection>
         <collection name="genericopenlibs" long-name="Generic Open Libraries" level="translation">
+		  <component name="cstdlib" long-name="C Standard Library" introduced="ER5" purpose="optional" contributed="no">
+			<unit bldFile="os/ossrv/genericopenlibs/cstdlib/group" mrp="os/ossrv/genericopenlibs/cstdlib/group/syslibs_stdlib.mrp"/>
+		  </component>
           <component name="openenvcore" long-name="Open Environment Core" introduced="tb91" purpose="mandatory">
             <unit bldFile="os/ossrv/genericopenlibs/openenvcore/group" mrp="os/ossrv/genericopenlibs/openenvcore/group/openenv.mrp"/>
           </component>
@@ -299,8 +316,14 @@
           <component name="contentaccessfwfordrm" long-name="Content Access Framework for DRM" introduced="9.1" purpose="mandatory">
             <unit bldFile="os/security/contentmgmt/contentaccessfwfordrm/group" mrp="os/security/contentmgmt/contentaccessfwfordrm/group/security_caf2.mrp"/>
           </component>
+		  <component name="cafrecogniserconfig" long-name="CAF Recogniser Config" introduced="9.1" purpose="mandatory" contributed="no">
+			<unit bldFile="os/security/contentmgmt/cafrecogniserconfig" mrp="os/security/contentmgmt/cafrecogniserconfig/security_reccafconfig.mrp"/>
+		  </component>
         </collection>
         <collection name="crypto" long-name="Crypto Libraries" level="libraries">
+		  <component name="weakcrypto" long-name="Weak Cryptography Library" filter="gt" purpose="optional" contributed="no">
+			<unit bldFile="os/security/crypto/weakcrypto/group" mrp="os/security/crypto/weakcrypto/group/security_crypto_weak.mrp"/>
+		  </component>
           <component name="strongcrypto" long-name="Strong Cryptography Library" filter="gt" purpose="optional">
             <unit bldFile="os/security/crypto/weakcrypto/strong" mrp="os/security/crypto/weakcrypto/group/security_crypto_strong.mrp"/>
           </component>
@@ -392,9 +415,9 @@
           </component>
         </collection>
         <collection name="resourcemgmt" long-name="Resource Management" level="hw-if">
-          <component name="hwresourcesmgr" long-name="Hardware Resources Manager" introduced="tb91" purpose="optional">
+          <!-- <component name="hwresourcesmgr" long-name="Hardware Resources Manager" introduced="tb91" purpose="optional">
             <unit bldFile="os/devicesrv/resourcemgmt/hwresourcesmgr/group" mrp="os/devicesrv/resourcemgmt/hwresourcesmgr/group/telephony_hwrm.mrp"/>
-          </component>
+          </component> -->
           <component name="powerandmemorynotificationservice" long-name="Power and Memory Notification Service" introduced="6.0" purpose="mandatory">
             <unit bldFile="os/devicesrv/resourcemgmt/powerandmemorynotificationservice/group" mrp="os/devicesrv/resourcemgmt/powerandmemorynotificationservice/group/syslibs_pwrcli.mrp"/>
           </component>
@@ -488,14 +511,14 @@
           <component name="networkingdialogapi" long-name="Networking Dialog API" introduced="6.1" purpose="optional">
             <unit bldFile="os/commsfw/datacommsserver/networkingdialogapi/group" mrp="os/commsfw/datacommsserver/networkingdialogapi/group/networking_dialog.mrp"/>
           </component>
+		  <component name="networkingdialogstub" long-name="Networking Dialog Stub" introduced="6.1" purpose="optional" contributed="no">
+			<unit bldFile="os/commsfw/datacommsserver/networkingdialogapi/default" mrp="os/commsfw/datacommsserver/networkingdialogapi/default/networking_dialog_default.mrp"/>
+		  </component>
           <component name="networkcontroller" long-name="Network Controller" introduced="7.0s" purpose="optional" plugin="Y">
             <unit bldFile="os/commsfw/datacommsserver/networkcontroller/group" mrp="os/commsfw/datacommsserver/networkcontroller/group/networking_netcon.mrp"/>
           </component>
         </collection>
         <collection name="serialserver" long-name="Serial Server" level="server">
-          <component name="serialportcsy" long-name="Serial Port CSY" introduced="ER5" purpose="optional" plugin="Y" class="placeholder">
-<!-- placeholder for ser-comms_serialportcsy, currently built by C32 -->
-          </component>
           <component name="packetloopbackcsy" long-name="Packet Loopback CSY" introduced="8.1" purpose="development">
             <unit bldFile="os/commsfw/serialserver/packetloopbackcsy/group" mrp="os/commsfw/serialserver/packetloopbackcsy/group/PacketLoopbackCSY.mrp"/>
           </component>
@@ -573,9 +596,15 @@
           </component>
         </collection>
         <collection name="linklayerprotocols" long-name="Link Layer Protocols" level="hw-if">
+		  <component name="ethernetnif" long-name="Ethernet NIF" plugin="Y" purpose="optional" contributed="no">
+			<unit bldFile="os/networkingsrv/linklayerprotocols/ethernetnif/group" mrp="os/networkingsrv/linklayerprotocols/ethernetnif/group/networking_ether802.mrp"/>
+		  </component>
           <component name="ethernetpacketdriver" long-name="Ethernet Packet Driver" introduced="7.0" purpose="optional" plugin="Y">
             <unit mrp="os/networkingsrv/linklayerprotocols/ethernetpacketdriver/group/networking_etherdrv_srconly.mrp"/>
           </component>
+		  <component name="pppnif" long-name="PPP NIF" plugin="Y" introduced="ER5" purpose="optional" contributed="no">
+			<unit version="1" bldFile="os/networkingsrv/linklayerprotocols/pppnif/group" mrp="os/networkingsrv/linklayerprotocols/pppnif/group/networking_ppp.mrp"/>
+		  </component>
           <component name="pppconfig" long-name="PPP Config" introduced="ER5" purpose="optional">
             <unit mrp="os/networkingsrv/linklayerprotocols/pppnif/group/networking_ppp-config.mrp" version="1"/>
           </component>
@@ -631,6 +660,17 @@
             <unit bldFile="os/networkingsrv/networkprotocols/mobileip/group" mrp="os/networkingsrv/networkprotocols/mobileip/group/networking_mobileip.mrp"/>
           </component>
         </collection>
+		<collection name="networksecurity" long-name="Network Security" level="framework" contributed="no">
+		  <component name="tls" long-name="TLS" introduced="6.0" purpose="mandatory" contributed="no">
+			<unit bldFile="os/networkingsrv/networksecurity/tls/group" mrp="os/networkingsrv/networksecurity/tls/group/networking_tls.mrp"/>
+		  </component>
+		  <component name="tlsprovider" long-name="TLS Provider" introduced="8.1" purpose="mandatory" contributed="no">
+			<unit bldFile="os/networkingsrv/networksecurity/tlsprovider/group" mrp="os/networkingsrv/networksecurity/tlsprovider/group/security_tlsprovider.mrp"/>
+		  </component>
+		  <component name="ipsec" long-name="IPsec" introduced="7.0" purpose="optional" contributed="no">
+			<unit bldFile="os/networkingsrv/networksecurity/ipsec/group" mrp="os/networkingsrv/networksecurity/ipsec/group/networking_ipsec.mrp"/>
+		  </component>
+		</collection>
         <collection name="networkingtestandutils" long-name="Networking Test and Utils" level="app-if">
           <component name="networkingunittest" long-name="Networking Unit Test" introduced="7.0" purpose="development">
             <unit mrp="os/networkingsrv/networkingtestandutils/networkingunittest/group/networking_unittest.mrp"/>
@@ -1232,6 +1272,9 @@
           <component name="webrecognisers" long-name="Web Recognisers" purpose="optional" plugin="Y">
             <unit bldFile="mw/appsupport/contenthandling/webrecognisers/group" mrp="mw/appsupport/contenthandling/webrecognisers/group/application-protocols_recognisers.mrp"/>
           </component>
+		  <component name="referencedrmagent" long-name="Reference DRM Agent" introduced="8.0" purpose="development" contributed="no">
+			<unit bldFile="mw/appsupport/contenthandling/referencedrmagent/RefTestAgent/group" mrp="mw/appsupport/contenthandling/referencedrmagent/RefTestAgent/group/security_rta.mrp"/>
+		  </component>
         </collection>
         <collection name="printingsupport" long-name="Printing Support" level="generic">
           <component name="printinguisupport" long-name="Printing UI Support" purpose="optional">
@@ -1253,6 +1296,9 @@
           <component name="tzcompiler" long-name="Time Zone Compiler" introduced="9.1" purpose="optional" class="config PC">
             <unit bldFile="mw/appsupport/tzpcside/tzcompiler/group" mrp="mw/appsupport/tzpcside/tzcompiler/group/app-services_tzcompiler.mrp"/>
           </component>
+		  <component name="worlddatabasekit" long-name="World Database Kit" introduced="6.0" deprecated="9.1" class="config PC" purpose="development" contributed="no">
+			<unit bldFile="mw/appsupport/tzpcside/worlddatabasekit/group" mrp="mw/appsupport/tzpcside/worlddatabasekit/group/app-services_wlddatabasekit_cedar.mrp"/>
+		  </component>
           <component name="worldtools" long-name="World Tools" introduced="ER5" deprecated="9.1" purpose="development" class="config PC">
             <unit bldFile="mw/appsupport/tzpcside/worldtools/group" mrp="mw/appsupport/tzpcside/worldtools/group/app-services_wldtools.mrp"/>
           </component>
@@ -1330,6 +1376,9 @@
           <component name="msgsrvnstore" long-name="Message Server and Store" purpose="optional">
             <unit bldFile="mw/messagingmw/messagingfw/msgsrvnstore/group" mrp="mw/messagingmw/messagingfw/msgsrvnstore/group/messaging_framework.mrp"/>
           </component>
+		  <component name="biomsgfw" long-name="BIO Messaging Framework" introduced="6.0" purpose="optional" contributed="no">
+			<unit bldFile="mw/messagingmw/messagingfw/biomsgfw/group" mrp="mw/messagingmw/messagingfw/biomsgfw/group/messaging_biomsg.mrp"/>
+		  </component>
           <component name="msgconf" long-name="Messaging Config" introduced="tb91" purpose="optional" class="config">
             <unit bldFile="mw/messagingmw/messagingfw/msgconf/group" mrp="mw/messagingmw/messagingfw/msgconf/group/messaging_config.mrp"/>
           </component>
@@ -1379,6 +1428,11 @@
             <unit bldFile="mw/remoteconn/mtptransports/mtpusbtransport/group" mrp="mw/remoteconn/mtptransports/mtpusbtransport/group/mtp_usbsic.mrp"/>
           </component>
         </collection>
+		<collection name="mtpfws" long-name="MTP Frameworks" level="framework" contributed="no">
+		  <component name="mtpintegrationtest" long-name="MTP Integration Test" introduced="tb91" class="test" purpose="development" contributed="no">
+			<unit bldFile="mw/remoteconn/mtpfws/mtpintegrationtest/group" mrp="mw/remoteconn/mtpfws/mtpintegrationtest/group/mtp_test.mrp"/>
+		  </component>
+		</collection>
         <collection name="mtpdataproviders" long-name="MTP Data Providers" level="generic">
           <component name="mtpfileandfolderdp" long-name="MTP File and Folder Provider" introduced="tb91" purpose="optional" plugin="Y">
             <unit bldFile="mw/remoteconn/mtpdataproviders/mtpfileandfolderdp/group" mrp="mw/remoteconn/mtpdataproviders/mtpfileandfolderdp/group/mtp_filedp.mrp"/>
@@ -1531,7 +1585,15 @@
     </layer>
     <layer name="app" long-name="Applications" levels="services apps">
       <block name="contacts" level="apps" span="2" long-name="Contacts Apps" levels="engine support services ui">
+		<collection name="phonebookengines" long-name="Phonebook Engines" level="engine" contributed="no">
+		  <component name="contactsmodel" long-name="Contacts Model" introduced="ER5" purpose="optional" contributed="no">
+			<unit version="1" bldFile="app/contacts/phonebookengines/contactsmodel/group" mrp="app/contacts/phonebookengines/contactsmodel/group/app-engines_cntmodel.mrp"/>
+		  </component>
+		</collection>
         <collection name="pimprotocols" long-name="PIM Protocols" level="services">
+		  <component name="phonebooksync" long-name="Phonebook Sync" plugin="Y" purpose="optional" contributed="no">
+			<unit bldFile="app/contacts/pimprotocols/phonebooksync/group" mrp="app/contacts/pimprotocols/phonebooksync/group/telephony_phbksync.mrp"/>
+		  </component>
           <component name="pbap" long-name="Bluetooth PBAP" introduced="9.2" purpose="optional">
             <unit bldFile="app/contacts/pimprotocols/pbap/group" mrp="app/contacts/pimprotocols/pbap/group/bluetooth_accesshost.mrp"/>
           </component>
@@ -1539,6 +1601,9 @@
       </block>
       <block name="organizer" level="apps" span="2" long-name="Organizer Application Suite" levels="support services engine ui">
         <collection name="pimappservices" long-name="PIM App Services" level="services">
+		  <component name="calendar" long-name="Calendar" introduced="9.2" purpose="optional" contributed="no">
+			<unit version="2" bldFile="app/organizer/pimappservices/calendar/group" mrp="app/organizer/pimappservices/calendar/group/app-engines_calendar.mrp"/>
+		  </component>
           <component name="calendarvcalplugin" long-name="Calendar vCal Plugin" introduced="8.1" purpose="optional" plugin="Y">
             <unit bldFile="app/organizer/pimappservices/calendarvcalplugin/group" mrp="app/organizer/pimappservices/calendarvcalplugin/group/app-engines_agnversit2.mrp" version="2"/>
           </component>
@@ -1550,6 +1615,9 @@
           </component>
         </collection>
         <collection name="officeappeng" long-name="Office App Engines" level="engine">
+		  <component name="datamodel" long-name="Data Engine" introduced="ER5" deprecated="9.3" purpose="optional" contributed="no">
+			<unit bldFile="app/organizer/officeappeng/datamodel/group" mrp="app/organizer/officeappeng/datamodel/group/app-engines_damodel.mrp"/>
+		  </component>
           <component name="sheeteng" long-name="Sheet Engine" introduced="ER5" deprecated="9.3" purpose="optional">
             <unit bldFile="app/organizer/officeappeng/sheeteng/group" mrp="app/organizer/officeappeng/sheeteng/group/app-engines_sheng.mrp"/>
           </component>
@@ -1561,6 +1629,9 @@
           </component>
         </collection>
         <collection name="pimappsupport" long-name="PIM Application Support" level="support">
+		  <component name="vcardandvcal" long-name="vCard and vCal" introduced="ER5" purpose="optional" contributed="no">
+			<unit bldFile="app/organizer/pimappsupport/vcardandvcal/group" mrp="app/organizer/pimappsupport/vcardandvcal/group/app-services_versit.mrp"/>
+		  </component>
           <component name="chinesecalendarconverter" long-name="Chinese Calendar Converter" introduced="6.1" purpose="optional">
             <unit bldFile="app/organizer/pimappsupport/chinesecalendarconverter/group" mrp="app/organizer/pimappsupport/chinesecalendarconverter/group/app-services_calcon.mrp"/>
           </component>

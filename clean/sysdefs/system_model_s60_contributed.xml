@@ -1021,6 +1021,16 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
    </block>
+			<block name="homescreentools" long-name="Home Screen Tools" tech_domain="ui" level="services" levels="tool install">
+	  <!-- Following Collection added by SF via autopopulating script from S60 Model -->
+    <collection name="homescreentools" long-name="Home Screen Tools">
+     <!-- Following Component added by SF via autopopulating script from S60 Model -->
+     <component name="homescreentools" long-name="Home Screen Tools">
+      <!-- Unit added by SF via autopopulating script from S60 Model -->
+      <unit bldFile="tools\homescreentools\group"/>
+     </component>
+    </collection>
+   </block>
 			<block name="webuis" long-name="Web UIs" tech_domain="rt" level="services" levels="plugin app">
     <!-- Following Collection added by SF via autopopulating script from S60 Model -->
     <collection name="webuis" long-name="webuis">
