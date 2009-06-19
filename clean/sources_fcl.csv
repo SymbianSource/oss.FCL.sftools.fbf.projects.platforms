@@ -95,7 +95,7 @@ source,dst,tag,type,branch,pattern
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/os/devicesrv/,/sf/os/devicesrv,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/graphics/,/sf/os/graphics,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/imagingext/,/sf/os/imagingext,tip,tag,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_development/sfl/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,tip,tag,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_master_prod/sfl/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/lbs/,/sf/os/lbs,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/os/mm/,/sf/os/mm,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/os/networkingsrv/,/sf/os/networkingsrv,tip,tag,default,layers.sysdef.xml
