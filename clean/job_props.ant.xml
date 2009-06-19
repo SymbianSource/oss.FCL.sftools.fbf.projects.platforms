@@ -14,7 +14,7 @@
     <property name="sf.spec.sbs.config" value="winscw.whatlog,armv5.whatlog"/> <!-- both _urel and _udeb -->
     <property name="sf.spec.sbs.tools.config" value="tools_rel.whatlog,tools2_rel.whatlog"/>
     
-    <property name="sf.spec.sourcesync.usecache" value="true"/>
+    <property name="sf.spec.sourcesync.usecache" value="false"/>
             
 
     <!-- get full source env and binaries from pdk -->
