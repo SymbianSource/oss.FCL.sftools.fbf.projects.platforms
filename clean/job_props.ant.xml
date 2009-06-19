@@ -15,15 +15,18 @@
     <property name="sf.spec.sbs.tools.config" value="tools_rel.whatlog,tools2_rel.whatlog"/>
     
     <property name="sf.spec.sourcesync.usecache" value="true"/>
-            
+    
+    <!-- To sync the tools instead of building them, change sf.spec.sbs.tools.config to tools2_rel.whatlog  -->
+    <!-- check that sf.spec.baseline.getenv_options includes 'tools'                                        -->
+    <!-- and set sf.spec.baseline.enable to 'true'                                                          -->        
 
     <!-- get full source env and binaries from pdk -->
     <property name="sf.spec.sourcesync.enable"       value="true"/>
-    <property name="sf.spec.baseline.getenv_options" value="-I src"/>
+    <property name="sf.spec.baseline.getenv_options" value="-I tools"/> <!-- Sync the tools... -->
     <property name="sf.spec.baseline.enable"         value="false"/>     
     <property name="sf.spec.baseline.clean"          value="false"/>
     <property name="sf.spec.baseline.select"         value="location" />
-    <property name="sf.spec.baseline.location"       value="D:\PDK\PDK_20090507\" />
+    <property name="sf.spec.baseline.location"       value="\\v800008\builds01\Releases\PDK_build_tools_test\" />
     
     <property name="sf.spec.toolsbaseline.enable"    value="true"/>
     <property name="sf.spec.toolsbaseline.getenv_options" value="-i emu"/>
