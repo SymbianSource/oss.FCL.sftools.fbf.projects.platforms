@@ -32,8 +32,6 @@
     <property name="sf.spec.toolsbaseline.getenv_options" value="-i emu"/>
     <property name="sf.spec.toolsbaseline.select"         value="location" />
     <property name="sf.spec.toolsbaseline.location"       value="\\v800008\Builds01\PDT\PDT_b50" /> <!-- for TEF etc -->
-
-    <property name="sf.spec.publish.rootdir" value="D:\SF_Builds"/>
     
     <!-- platform build specific properties -->
     <property name="sf.spec.s60.sysdef.clean.configurations.list"  value="S60_5_1_sf" />
