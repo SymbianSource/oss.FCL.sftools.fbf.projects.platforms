@@ -91,11 +91,6 @@
   <systemModel>
     <layer name="Tools and Utils and SDKENG" levels="SDK tools test">
       <collection name="Build System Tools" level="tools">
-    
-        <component name="E32 ToolP">
-          <unit bldFile="os\buildtools\sbsv1_os\e32toolp\group" mrp="os\buildtools\sbsv1_os\e32toolp\group\tools_e32toolp.mrp"/>
-        </component>
-  
         <component name="BUILDSYSTEMTOOLS">
           <unit bldFile="os\buildtools\bldsystemtools\buildsystemtools\group" mrp="os\buildtools\bldsystemtools\buildsystemtools\group\tools_build.mrp"/>
         </component>
@@ -180,6 +175,9 @@
         </component>
         <component name="S60 Compatibility Headers" filter="gt">
           <unit version="9.4" bldFile="os\ossrv\genericservices\s60compatibilityheaders\group94" mrp="os\ossrv\genericservices\s60compatibilityheaders\group94\tools_s60_header_compat94.mrp"/>
+          <unit version="9.5" bldFile="os\ossrv\genericservices\s60compatibilityheaders\group95" mrp="os\ossrv\genericservices\s60compatibilityheaders\group95\tools_s60_header_compat95.mrp" filter="!tb91sf"/>
+          <unit version="9.6" bldFile="os\ossrv\genericservices\s60compatibilityheaders\group96" mrp="os\ossrv\genericservices\s60compatibilityheaders\group96\tools_s60_header_compat96.mrp" filter="!tb91sf"/>
+          <unit version="Future" bldFile="os\ossrv\genericservices\s60compatibilityheaders\groupfuture" mrp="os\ossrv\genericservices\s60compatibilityheaders\groupfuture\tools_s60_header_compatfuture.mrp" filter="!tb91sf"/>
         </component>
         <component name="SMOKETEST" filter="gt">
           <unit bldFile="app\techview\buildverification\smoketest\Group" mrp="app\techview\buildverification\smoketest\Group\testtools_smoketest.mrp"/>
@@ -251,6 +249,7 @@
         </component>
         <component name="Developer Library Help">
           <unit version="9.4" bldFile="os\buildtools\devlib\devlibhelp\group\devlib94" mrp="os\buildtools\devlib\devlibhelp\group\devlib94\developerlibrary_doc_html.mrp"/>
+          <unit version="9.5" bldFile="os\buildtools\devlib\devlibhelp\group\devlib95" mrp="os\buildtools\devlib\devlibhelp\group\devlib95\developerlibrary_doc_html.mrp" filter="!tb91sf"/>
         </component>
         <component name="Developer Library Source" filter="gt">
           <unit bldFile="os\buildtools\devlib\devlibhelp\securitysupplement\doc_source" mrp="os\buildtools\devlib\devlibhelp\developerlibrary_doc_source.mrp"/>
@@ -513,6 +512,9 @@
         <component name="Baseband Channel Adaptor for C32" plugin="Y" introduced="8.1">
           <unit bldFile="os\cellularsrv\basebandadaptationplugins\basebandchanneladaptorforc32\group" mrp="os\cellularsrv\basebandadaptationplugins\basebandchanneladaptorforc32\group\networking_c32bca.mrp"/>
         </component>
+        <component name="Baseband Channel Adaptor for ISC" plugin="Y" filter="!tb91sf">
+          <unit bldFile="os\cellularsrv\basebandadaptationplugins\basebandchanneladaptorforisc\group" mrp="os\cellularsrv\basebandadaptationplugins\basebandchanneladaptorforisc\group\networking_bcatoisc.mrp"/>
+        </component>
       </collection>
     </layer>
     <layer name="Kernel Services" levels="kernel user">
@@ -583,6 +585,11 @@
         <collection name="Shortlink Logical Device Drivers" level="specific">
           <component name="USB Client Driver" introduced="8.1b">
             <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\usbc" mrp="os\kernelhwsrv\kernel\eka\drivers\usbc\base_e32_drivers_usbcli.mrp"/>
+          </component>
+        </collection>
+        <collection name="Graphics LDDs" level="specific">
+          <component name="Surface Manager LDD" introduced="9.5" filter="!tb91sf">
+            <unit bldFile="os\graphics\graphicshwdrivers\surfacemgr\group" mrp="os\graphics\graphicshwdrivers\surfacemgr\group\graphics_surfacemanager.mrp"/>
           </component>
         </collection>
         <collection name="Localisation" level="specific">
@@ -704,6 +711,14 @@
             <component name="File-based Certificate and Key Stores" introduced="8.0">
               <unit bldFile="os\security\cryptoservices\filebasedcertificateandkeystores\group" mrp="os\security\cryptoservices\filebasedcertificateandkeystores\group\security_filetokens.mrp"/>
             </component>
+            <component name="Security Common Utils" introduced="8.0" filter="!tb91sf">
+              <unit bldFile="os\security\cryptomgmtlibs\securitycommonutils\group" mrp="os\security\cryptomgmtlibs\securitycommonutils\group\security_commonutils.mrp"/>
+            </component>            
+          </collection>
+          <collection name="Authorisation" level="data-services">
+            <component name="User Prompt Service" introduced="9.5" filter="!tb91sf">
+              <unit bldFile="os\security\authorisation\userpromptservice\group" mrp="os\security\authorisation\userpromptservice\group\security_ups.mrp"/>
+            </component>
           </collection>
           <collection name="Generic Open Libraries" level="translation">
             <component name="C Standard Library" introduced="ER5">
@@ -723,6 +738,15 @@
             <component name="Strong Cryptography Library" contract="Symbian_Strong_Cryptography" filter="gt">
               <unit bldFile="os\security\crypto\weakcrypto\strong" mrp="os\security\crypto\weakcrypto\group\security_crypto_strong.mrp"/>
             </component>
+            <component name="Weak Crypto SPI" filter="gt,!tb91sf" introduced="9.5">
+              <unit bldFile="os\security\crypto\weakcryptospi\group" mrp="os\security\crypto\weakcryptospi\group\security_cryptospi_weak.mrp"/>
+            </component>
+            <component name="Strong Crypto SPI" contract="Symbian_Strong_Cryptography" filter="gt,!tb91sf" introduced="9.5">
+              <unit bldFile="os\security\crypto\weakcryptospi\strong" mrp="os\security\crypto\weakcryptospi\group\security_cryptospi_strong.mrp"/>
+            </component>
+            <component name="Crypto SPI Plugins" contract="Symbian_Strong_Cryptography" filter="gt,!tb91sf" plugin="Y" introduced="9.5">
+              <unit bldFile="os\security\cryptoplugins\cryptospiplugins\group" mrp="os\security\cryptoplugins\cryptospiplugins\group\security_cryptospi_plugins.mrp"/>
+            </component>
           </collection>
           <collection name="Low Level Libraries and Frameworks" level="app-libs">
            <component name="Plugin Framework" introduced="6.2">
@@ -733,12 +757,15 @@
             </component>
           </collection>
           <collection name="Resource Management" level="physical-abstraction">
+            <component name="Feature Manager" introduced="9.6" filter="!tb91sf">
+              <unit bldFile="os\persistentdata\featuremgmt\featuremgr\group" mrp="os\persistentdata\featuremgmt\featuremgr\group\syslibs_featmgr.mrp"/>
+            </component>
             <component name="Feature Registry" introduced="9.2" deprecated="9.6">
               <unit bldFile="os\persistentdata\featuremgmt\featureregistry\group" mrp="os\persistentdata\featuremgmt\featureregistry\group\syslibs_featreg.mrp"/>
             </component>
-            <!-- component name="Hardware Resources Manager" introduced="9.5">
+            <component name="Hardware Resources Manager" introduced="9.5">
               <unit bldFile="os\devicesrv\resourcemgmt\hwresourcesmgr\group" mrp="os\devicesrv\resourcemgmt\hwresourcesmgr\group\telephony_hwrm.mrp"/>
-            </component -->
+            </component>
             <component name="Power and Memory Notification Service" introduced="6.0">
               <unit bldFile="os\devicesrv\resourcemgmt\powerandmemorynotificationservice\group" mrp="os\devicesrv\resourcemgmt\powerandmemorynotificationservice\group\syslibs_pwrcli.mrp"/>
             </component>
@@ -833,12 +860,15 @@
           <collection name="Data Comms Server" level="servers_and_extensions">
             <component name="ESock Server">
               <unit version="2" bldFile="os\commsfw\datacommsserver\esockserver\group" mrp="os\commsfw\datacommsserver\esockserver\group\comms-infras_esock.mrp"/>
+              <unit version="3" bldFile="os\unref\orphan\comgen\comms-infras\esock\group" mrp="os\unref\orphan\comgen\comms-infras\esock\group\comms-infras_esock.mrp" filter="!tb91sf"/>
             </component>
             <component name="ESock Server Config" introduced="9.1" class="config">
               <unit version="2" mrp="os\commsfw\datacommsserver\esockserver\group\comms-infras_esock-config.mrp"/>
+              <unit version="3" mrp="os\unref\orphan\comgen\comms-infras\esock\group\comms-infras_esock-config.mrp" filter="!tb91sf"/>
             </component>
             <component name="Network Interface Manager" introduced="ER5U">
               <unit version="1" bldFile="os\commsfw\datacommsserver\networkinterfacemgr\group" mrp="os\commsfw\datacommsserver\networkinterfacemgr\group\comms-infras_nifman.mrp"/>
+              <unit version="2" bldFile="os\unref\orphan\comgen\comms-infras\nifman\group" mrp="os\unref\orphan\comgen\comms-infras\nifman\group\comms-infras_nifman.mrp" filter="!tb91sf"/>
             </component>
             <component name="Networking Dialog API" introduced="6.1">
               <unit bldFile="os\commsfw\datacommsserver\networkingdialogapi\group" mrp="os\commsfw\datacommsserver\networkingdialogapi\group\networking_dialog.mrp"/>
@@ -1007,6 +1037,15 @@
             <component name="IP SCPR" plugin="Y" introduced="9.1">
               <unit bldFile="os\networkingsrv\networkcontrol\ipscpr\group" mrp="os\networkingsrv\networkcontrol\ipscpr\group\networking_ipscpr.mrp"/>
             </component>
+            <component name="QoS IP SCPR" plugin="Y" filter="!tb91sf">
+              <unit bldFile="os\networkingsrv\networkcontrol\qosipscpr\group" mrp="os\networkingsrv\networkcontrol\qosipscpr\group\networking_qosipscpr.mrp"/>
+            </component>
+            <component name="IP Network Layer" plugin="Y" introduced="9.5" filter="!tb91sf">
+              <unit bldFile="os\networkingsrv\networkcontrol\ipnetworklayer\group" mrp="os\networkingsrv\networkcontrol\ipnetworklayer\group\networking_ipproto.mrp"/>
+            </component>
+            <component name="IP Transport Layer" plugin="Y" filter="!tb91sf">
+              <unit bldFile="os\networkingsrv\networkcontrol\iptransportlayer\group" mrp="os\networkingsrv\networkcontrol\iptransportlayer\group\networking_iptransport.mrp"/>
+            </component>
             <component name="IP CPR Shim" plugin="Y" deprecated="9.6">
               <unit bldFile="os\networkingsrv\networkcontrol\ipcprshim\group" mrp="os\networkingsrv\networkcontrol\ipcprshim\group\networking_shimcpr.mrp"/>
             </component>
@@ -1039,6 +1078,9 @@
             <component name="QoS 3GPP CPR" plugin="Y" introduced="9.2">
               <unit bldFile="os\cellularsrv\telephonyprotocols\qos3gppcpr\group" mrp="os\cellularsrv\telephonyprotocols\qos3gppcpr\group\networking_Qos3GPP.mrp"/>
             </component>
+            <component name="PDP Layer" plugin="Y" introduced="9.5" filter="!tb91sf">
+              <unit bldFile="os\cellularsrv\telephonyprotocols\pdplayer\group" mrp="os\cellularsrv\telephonyprotocols\pdplayer\group\networking_pdp.mrp"/>
+            </component>
           </collection>
           <collection name="Link Layer Protocols" level="bearer-manager">
             <component name="Ethernet NIF" plugin="Y">
@@ -1049,9 +1091,11 @@
             </component>
             <component name="PPP NIF" plugin="Y">
               <unit version="1" bldFile="os\networkingsrv\linklayerprotocols\pppnif\group" mrp="os\networkingsrv\linklayerprotocols\pppnif\group\networking_ppp.mrp"/>
+              <unit version="2" bldFile="os\unref\orphan\comgen\networking\ppp\group" mrp="os\unref\orphan\comgen\networking\ppp\group\networking_ppp.mrp" filter="!tb91sf"/>
             </component>
          <component name="PPP Config">
               <unit version="1" mrp="os\networkingsrv\linklayerprotocols\pppnif\group\networking_ppp-config.mrp"/>
+              <unit version="2" mrp="os\unref\orphan\comgen\networking\ppp\group\networking_ppp-config.mrp" filter="!tb91sf"/>
             </component>
             <component name="SLIP NIF" plugin="Y">
               <unit bldFile="os\networkingsrv\linklayerprotocols\slipnif\group" mrp="os\networkingsrv\linklayerprotocols\slipnif\group\networking_slip.mrp"/>
@@ -1084,7 +1128,13 @@
 		</collection>
           <collection name="USB Management" level="utilities">
             <component name="USB Manager">
+              <unit version="1" bldFile="os\unref\orphan\comgen\ser-comms\usb\group" mrp="os\unref\orphan\comgen\ser-comms\usb\group\ser-comms_usb.mrp" filter="!tb91sf"/>
               <unit version="2" bldFile="os\shortlinksrv\usbmgmt\usbmgr\group" mrp="os\shortlinksrv\usbmgmt\usbmgr\group\usb_manager.mrp"/>
+            </component>
+          </collection>
+          <collection name="USB Function Drivers" level="utilities">
+            <component name="Mass Storage Driver" introduced="9.5" filter="!tb91sf">
+              <unit bldFile="mw\remoteconn\usbfunctiondrivers\massstoragemgr\group" mrp="mw\remoteconn\usbfunctiondrivers\massstoragemgr\group\connectivity_usbms.mrp"/>
             </component>
           </collection>
           <collection name="Short Link" level="servers_and_extensions">
@@ -1314,6 +1364,9 @@
           <component name="OpenGL ES Implementation" contract="OPENGL" filter="gt" introduced="8.0">
             <unit bldFile="os\graphics\opengles\openglesimplementation\group\" mrp="os\graphics\opengles\openglesimplementation\group\graphics_opengles.mrp"/>
           </component>
+          <component name="OpenVG Implementation" contract="Symbian_Exclude" introduced="9.5" filter="!tb91sf">
+            <unit bldFile="os\graphics\openvg\openvgimplementation\group\" mrp="os\graphics\openvg\openvgimplementation\group\graphics_openvg.mrp"/>
+          </component>
           <component name="EGL Implementation" contract="Symbian_Exclude" introduced="9.4">
             <unit bldFile="os\graphics\egl\eglimplementation\group\" mrp="os\graphics\egl\eglimplementation\group\graphics_egl.mrp"/>
           </component>
@@ -1327,6 +1380,22 @@
           </component>
           <component name="Colour Palette" introduced="7.0s">
             <unit bldFile="os\graphics\graphicsdeviceinterface\colourpalette\group" mrp="os\graphics\graphicsdeviceinterface\colourpalette\group\graphics_palette.mrp"/>
+          </component>
+        </collection>
+        <collection name="Core Graphics Resources" level="internal-adaptations">
+          <component name="Common Graphics Headers" introduced="9.5" filter="!tb91sf">
+            <unit bldFile="os\graphics\graphicsutils\commongraphicsheaders\group" mrp="os\graphics\graphicsutils\commongraphicsheaders\group\graphics_commonheader.mrp"/>
+          </component>
+        </collection>
+        <collection name="Graphics Surface Composition" level="engines">
+          <component name="Graphics Composition Engine" introduced="9.5" filter="!tb91sf">
+            <unit bldFile="os\graphics\graphicscomposition\graphicscompositionengine\group" mrp="os\graphics\graphicscomposition\graphicscompositionengine\group\graphics_gce.mrp"/>
+          </component>
+          <component name="Composition Engine Adaptation" introduced="9.5" filter="!tb91sf">
+            <unit bldFile="os\graphics\graphicscomposition\compositionengineadaptation\group" mrp="os\graphics\graphicscomposition\compositionengineadaptation\group\graphics_compositionbackend.mrp"/>
+          </component>
+          <component name="Graphics Resource Content Update" introduced="9.5" filter="!tb91sf">
+            <unit bldFile="os\graphics\graphicscomposition\surfaceupdate\group" mrp="os\graphics\graphicscomposition\surfaceupdate\group\graphics_surfaceupdate.mrp"/>
           </component>
         </collection>
       </block>
@@ -1441,10 +1510,21 @@
           <component name="Reference DRM Agent" introduced="8.0">
             <unit bldFile="mw\appsupport\contenthandling\referencedrmagent\RefTestAgent\group" mrp="mw\appsupport\contenthandling\referencedrmagent\RefTestAgent\group\security_rta.mrp"/>
           </component>
+          <component name="CAF Streaming Support" introduced="9.5" filter="!tb91sf">
+             <unit bldFile="os\security\contentmgmt\cafstreamingsupport\group" mrp="os\security\contentmgmt\cafstreamingsupport\group\security_streamingcaf.mrp"/>            
+          </component>                  
         </collection>
         <collection name="Printing Support" level="specific">
           <component name="Printing UI Support">
             <unit bldFile="mw\appsupport\printingsupport\printinguisupport\group" mrp="mw\appsupport\printingsupport\printinguisupport\group\app-framework_print.mrp"/>
+          </component>
+        </collection>
+        <collection name="Open Environment Utilities" level="generic">
+          <component name="Command Shell" filter="!tb91sf">
+            <unit bldFile="mw\appsupport\openenvutils\commandshell\group" mrp="mw\appsupport\openenvutils\commandshell\group\oetools_zsh.mrp"/>
+          </component>
+          <component name="Telnet Server" filter="!tb91sf">
+            <unit bldFile="mw\appsupport\openenvutils\telnetserver\group" mrp="mw\appsupport\openenvutils\telnetserver\group\oetools_telnetd.mrp"/>
           </component>
         </collection>
 				<collection name="Hardware Resource Adaptation">
@@ -1614,6 +1694,9 @@
           <component name="SIP Subconnection Provider" plugin="Y" introduced="9.2" filter="gt">
             <unit bldFile="mw\ipappprotocols\sipconnproviderplugins\sipsubconnprovider\group" mrp="mw\ipappprotocols\sipconnproviderplugins\sipsubconnprovider\group\mm-protocols_SIPSCPR.mrp"/>
           </component>
+          <component name="SIP Connection Plugins" plugin="Y" introduced="9.5" filter="gt,!tb91sf">
+            <unit bldFile="mw\ipappprotocols\sipconnproviderplugins\sipconnectionplugins\group" mrp="mw\ipappprotocols\sipconnproviderplugins\sipconnectionplugins\group\mm-protocols_sipproviders.mrp"/>
+          </component>
         </collection>
       </block>
       <block name="System GUI Framework" levels="structure presentation">
@@ -1675,13 +1758,19 @@
       <block name="PIM" levels="utilities engines">
         <collection name="PIM App Services" level="engines">
           <component name="Calendar" introduced="9.5">
+            <unit version="1" bldFile="app\organizer\pimappservices\calendar\group" mrp="app\organizer\pimappservices\calendar\group\app-engines_calinterimapi.mrp" filter="!tb91sf"/>
             <unit version="2" bldFile="app\organizer\pimappservices\calendar\group" mrp="app\organizer\pimappservices\calendar\group\app-engines_calendar.mrp"/>
           </component>
+          <component name="Agenda Model" introduced="5.0" deprecated="9.1" filter="!tb91sf">
+            <unit bldFile="app\organizer\pimappservices\agnmodel\group" mrp="app\organizer\pimappservices\agnmodel\group\app-engines_agnmodel.mrp"/>
+          </component>
           <component name="Agenda Versit Plugin" plugin="Y" introduced="9.5">
+            <unit version="1" bldFile="app\organizer\pimappservices\calendarvcalplugin\group" mrp="app\organizer\pimappservices\calendarvcalplugin\group\app-engines_agnversit.mrp" filter="!tb91sf"/>
             <unit version="2" bldFile="app\organizer\pimappservices\calendarvcalplugin\group" mrp="app\organizer\pimappservices\calendarvcalplugin\group\app-engines_agnversit2.mrp"/>
           </component>
           <component name="Contacts Model" introduced="5.0">
             <unit version="1" bldFile="app\contacts\phonebookengines\contactsmodel\group" mrp="app\contacts\phonebookengines\contactsmodel\group\app-engines_cntmodel.mrp"/>
+            <unit version="2" bldFile="app\contacts\phonebookengines\contactsmodel\groupsql" mrp="app\contacts\phonebookengines\contactsmodel\groupsql\app-engines_cntmodel.mrp" filter="!tb91sf"/>
           </component>
           <component name="Phonebook Sync" plugin="Y">
             <unit bldFile="app\contacts\pimprotocols\phonebooksync\group" mrp="app\contacts\pimprotocols\phonebooksync\group\telephony_phbksync.mrp"/>
@@ -1834,12 +1923,9 @@
         <component name="Prepare Default Comms Database" filter="gt" class="config PC">
           <unit bldFile="os\commsfw\commsfwtools\preparedefaultcommsdatabase\defaultcommdb\group" mrp="os\commsfw\commsfwtools\preparedefaultcommsdatabase\defaultcommdb\group\comms-infras_defaultcommdb.mrp"/>
         </component>
-<!--  Bug 146 -  commdb export collision causes emulator instability -->
-<!--
         <component name="Install Default Comms Database" class="PC">
           <unit bldFile="os\commsfw\commsfwtools\preparedefaultcommsdatabase\installdefaultcommdb\group" mrp="os\commsfw\commsfwtools\preparedefaultcommsdatabase\installdefaultcommdb\group\comms-infras_installdefaultcommdb.mrp" priority="1010"/>
         </component>
--->        
         <component name="Comms Tools" introduced="9.4" class="PC">
           <unit mrp="os\commsfw\commsfwtools\commstools\group\comms-infras_tools.mrp"/>
         </component>
@@ -2019,6 +2105,7 @@
       </collection>
       <collection name="Shortlink Test" level="test">
          <component name="USB Manager Tests" introduced="7.0" class="test">
+          <unit version="1" mrp="os\unref\orphan\comgen\ser-comms\usb_test\group\ser-comms_usb_test.mrp" filter="!tb91sf"/>
           <unit version="2" mrp="os\shortlinksrv\usbmgmt\usbmgrtest\group\usb_test.mrp"/>
         </component>
         <component name="Bluetooth Examples and Tests" introduced="6.1" class="test">
@@ -2104,7 +2191,7 @@
   <!-- 9.4 configuration -->
     <!-- tb91 configuration -->
     <!-- tb91sf configuration -->
-  <configuration name="GT_tb91sf" description="tb91sf GT build" filter="raptor_tb91sf,gt">
+  <configuration name="GT_tb91sf" description="tb91sf GT build" filter="GT_tb91sf,gt">
     <ref item="Tools and Utils and SDKENG"/>
     <ref item="HAL"/>
     <ref item="Kernel Services"/>
