@@ -91,6 +91,11 @@
   <systemModel>
     <layer name="Tools and Utils and SDKENG" levels="SDK tools test">
       <collection name="Build System Tools" level="tools">
+    
+        <component name="E32 ToolP">
+          <unit bldFile="os\buildtools\sbsv1_os\e32toolp\group" mrp="os\buildtools\sbsv1_os\e32toolp\group\tools_e32toolp.mrp"/>
+        </component>
+  
         <component name="BUILDSYSTEMTOOLS">
           <unit bldFile="os\buildtools\bldsystemtools\buildsystemtools\group" mrp="os\buildtools\bldsystemtools\buildsystemtools\group\tools_build.mrp"/>
         </component>
@@ -763,9 +768,9 @@
             <component name="Feature Registry" introduced="9.2" deprecated="9.6">
               <unit bldFile="os\persistentdata\featuremgmt\featureregistry\group" mrp="os\persistentdata\featuremgmt\featureregistry\group\syslibs_featreg.mrp"/>
             </component>
-            <component name="Hardware Resources Manager" introduced="9.5">
+            <!-- component name="Hardware Resources Manager" introduced="9.5">
               <unit bldFile="os\devicesrv\resourcemgmt\hwresourcesmgr\group" mrp="os\devicesrv\resourcemgmt\hwresourcesmgr\group\telephony_hwrm.mrp"/>
-            </component>
+            </component -->
             <component name="Power and Memory Notification Service" introduced="6.0">
               <unit bldFile="os\devicesrv\resourcemgmt\powerandmemorynotificationservice\group" mrp="os\devicesrv\resourcemgmt\powerandmemorynotificationservice\group\syslibs_pwrcli.mrp"/>
             </component>
@@ -1923,9 +1928,12 @@
         <component name="Prepare Default Comms Database" filter="gt" class="config PC">
           <unit bldFile="os\commsfw\commsfwtools\preparedefaultcommsdatabase\defaultcommdb\group" mrp="os\commsfw\commsfwtools\preparedefaultcommsdatabase\defaultcommdb\group\comms-infras_defaultcommdb.mrp"/>
         </component>
+<!--  Bug 146 -  commdb export collision causes emulator instability -->
+<!--
         <component name="Install Default Comms Database" class="PC">
           <unit bldFile="os\commsfw\commsfwtools\preparedefaultcommsdatabase\installdefaultcommdb\group" mrp="os\commsfw\commsfwtools\preparedefaultcommsdatabase\installdefaultcommdb\group\comms-infras_installdefaultcommdb.mrp" priority="1010"/>
         </component>
+-->        
         <component name="Comms Tools" introduced="9.4" class="PC">
           <unit mrp="os\commsfw\commsfwtools\commstools\group\comms-infras_tools.mrp"/>
         </component>

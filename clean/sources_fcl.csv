@@ -6,7 +6,7 @@ source,dst,tag,type,branch,pattern
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/camera/,/sf/app/camera,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/commonemail/,/sf/app/commonemail,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/conntools/,/sf/app/conntools,tip,tag,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/contacts/,/sf/app/contacts,tip,tag,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/app/contacts/,/sf/app/contacts,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/contentcontrol/,/sf/app/contentcontrol,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/conversations/,/sf/app/conversations,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/devicecontrol/,/sf/app/devicecontrol,tip,tag,default,layers.sysdef.xml
@@ -27,7 +27,7 @@ source,dst,tag,type,branch,pattern
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/musicplayer/,/sf/app/musicplayer,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/organizer/,/sf/app/organizer,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/phone/,/sf/app/phone,tip,tag,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/photos/,/sf/app/photos,tip,tag,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/app/photos/,/sf/app/photos,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/poc/,/sf/app/poc,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/printing/,/sf/app/printing,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/profile/,/sf/app/profile,tip,tag,default,layers.sysdef.xml
@@ -66,7 +66,6 @@ source,dst,tag,type,branch,pattern
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/mmappfw/,/sf/mw/mmappfw,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/FCL/sf/mw/mmmw/,/sf/mw/mmmw,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/mmuifw/,/sf/mw/mmuifw,tip,tag,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/mobiletv/,/sf/mw/mobiletv,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/netprotocols/,/sf/mw/netprotocols,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/networkingdm/,/sf/mw/networkingdm,tip,tag,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/opensrv/,/sf/mw/opensrv,tip,tag,default,layers.sysdef.xml
