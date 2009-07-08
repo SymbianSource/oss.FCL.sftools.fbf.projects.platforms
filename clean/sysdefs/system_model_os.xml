@@ -1381,7 +1381,7 @@
             <unit bldFile="os\graphics\graphicsdeviceinterface\bitgdi\group" mrp="os\graphics\graphicsdeviceinterface\bitgdi\group\graphics_bitgdi.mrp"/>
           </component>
           <component name="GDI">
-            <unit bldFile="os\textandloc\graphicsdevif\gdi\group" mrp="os\textandloc\graphicsdevif\gdi\group\graphics_gdi.mrp"/>
+            <unit bldFile="os\graphics\graphicsdeviceinterface\gdi\group" mrp="os\graphics\graphicsdeviceinterface\gdi\group\graphics_gdi.mrp"/>
           </component>
           <component name="Colour Palette" introduced="7.0s">
             <unit bldFile="os\graphics\graphicsdeviceinterface\colourpalette\group" mrp="os\graphics\graphicsdeviceinterface\colourpalette\group\graphics_palette.mrp"/>
