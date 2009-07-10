@@ -1,4 +1,4 @@
-source,dst,type,branch,pattern
+source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_development/rnd/internal/updated/,/rnd/internal/updated,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/rnd/internal/bldmefirst/,/rnd/internal/bldmefirst,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_internal/rnd/rndonly/monotype/,/rnd/rndonly/monotype,branch,default,layers.sysdef.xml
