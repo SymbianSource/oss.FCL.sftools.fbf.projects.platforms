@@ -365,7 +365,7 @@
 <logicalsubset name="rndtools">
 <module name="rndtools">
 <component name="rndtools">
-<unit unitID="sf_app_rndtools" name="rndtools" bldFile="\sf\app\rndtools\group" mrp=""/>
+<unit unitID="sf_app_rndtools" name="rndtools" bldFile="\sf\tools\rndtools\group" mrp=""/>
 </component>
 </module>
 </logicalsubset>
@@ -650,7 +650,7 @@
 <logicalsubset name="platformtools">
 <module name="platformtools">
 <component name="platformtools">
-<unit unitID="sf_mw_platformtools" name="platformtools" bldFile="\sf\mw\platformtools\group" mrp=""/>
+<unit unitID="sf_mw_platformtools" name="platformtools" bldFile="\sf\tools\platformtools\group" mrp=""/>
 </component>
 </module>
 </logicalsubset>
@@ -855,17 +855,17 @@
 <logicalsubset name="osrndtools">
 <module name="osrndtools">
 <component name="osrndtools">
-<unit unitID="sf_os_osrndtools" name="osrndtools" bldFile="\sf\os\osrndtools\group" mrp=""/>
+<unit unitID="sf_os_osrndtools" name="osrndtools" bldFile="\sf\ostools\osrndtools\group" mrp=""/>
 </component>
 </module>
 <module name="hti">
 <component name="hti">
-<unit unitID="sf_os_osrndtools_hti" name="hti" bldFile="\sf\os\osrndtools\hti\group" mrp=""/>
+<unit unitID="sf_os_osrndtools_hti" name="hti" bldFile="\sf\ostools\osrndtools\hti\group" mrp=""/>
 </component>
 </module>
 <module name="osrndtools_plat">
 <component name="hti_api">
-<unit unitID="sf_os_osrndtools_osrndtools_plat_hti_api" name="hti_api" bldFile="\sf\os\osrndtools\osrndtools_plat\hti_api\group" mrp=""/>
+<unit unitID="sf_os_osrndtools_osrndtools_plat_hti_api" name="hti_api" bldFile="\sf\ostools\osrndtools\osrndtools_plat\hti_api\group" mrp=""/>
 </component>
 </module>
 </logicalsubset>
