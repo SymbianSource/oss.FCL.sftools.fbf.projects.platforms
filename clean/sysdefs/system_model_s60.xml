@@ -922,6 +922,11 @@
 <unit unitID="sf_tools_homescreentools" name="homescreentools" bldFile="\sf\tools\homescreentools\group" mrp=""/>
 </component>
 </module>
+<module name="htiui">
+<component name="htiui">
+<unit unitID="sf_tools_rndtools_htiui" name="htiui" bldFile="\sf\tools\rndtools\htiui\group" mrp=""/>
+</component>
+</module>
 </logicalsubset>
 <logicalsubset name="swconfigtools">
 <module name="swconfigtools">
