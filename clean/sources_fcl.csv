@@ -1,5 +1,5 @@
 source,dst,type,pattern,sysdef
-//v800008/Builds01/mercurial_development/rnd/internal/updated/,/rnd/internal/updated,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/rnd/internal/epoc_additional/,/rnd/internal/epoc_additional,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/rnd/internal/bldmefirst/,/rnd/internal/bldmefirst,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_internal/rnd/rndonly/monotype/,/rnd/rndonly/monotype,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/adaptation/stubs/,/sf/adaptation/stubs,branch,default,layers.sysdef.xml
@@ -8,7 +8,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/conntools/,/sf/app/conntools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/app/contacts/,/sf/app/contacts,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/contentcontrol/,/sf/app/contentcontrol,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/conversations/,/sf/app/conversations,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/app/conversations/,/sf/app/conversations,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/devicecontrol/,/sf/app/devicecontrol,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/dictionary/,/sf/app/dictionary,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/files/,/sf/app/files,branch,default,layers.sysdef.xml

@@ -1,5 +1,5 @@
 source,dst,type,pattern,sysdef
-//v800008/Builds01/mercurial_development/rnd/internal/updated/,/rnd/internal/updated,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/rnd/internal/epoc_additional/,/rnd/internal/epoc_additional,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/rnd/internal/bldmefirst/,/rnd/internal/bldmefirst,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_internal/rnd/rndonly/monotype/,/rnd/rndonly/monotype,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/adaptation/stubs/,/sf/adaptation/stubs,branch,default,layers.sysdef.xml
@@ -8,7 +8,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/conntools/,/sf/app/conntools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/app/contacts/,/sf/app/contacts,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/contentcontrol/,/sf/app/contentcontrol,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/conversations/,/sf/app/conversations,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/app/conversations/,/sf/app/conversations,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/devicecontrol/,/sf/app/devicecontrol,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/dictionary/,/sf/app/dictionary,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/files/,/sf/app/files,branch,default,layers.sysdef.xml
@@ -26,7 +26,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/mmsharinguis/,/sf/app/mmsharinguis,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/musicplayer/,/sf/app/musicplayer,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/organizer/,/sf/app/organizer,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/phone/,/sf/app/phone,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/app/phone/,/sf/app/phone,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/app/photos/,/sf/app/photos,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/poc/,/sf/app/poc,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/printing/,/sf/app/printing,branch,default,layers.sysdef.xml
@@ -87,11 +87,11 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/websrv/,/sf/mw/websrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/wirelessacc/,/sf/mw/wirelessacc,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/boardsupport/,/sf/os/boardsupport,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/buildtools/,/sf/os/buildtools,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/os/buildtools/,/sf/os/buildtools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/cellularsrv/,/sf/os/cellularsrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/commsfw/,/sf/os/commsfw,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/devicesrv/,/sf/os/devicesrv,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/os/devicesrv/,/sf/os/devicesrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/graphics/,/sf/os/graphics,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/imagingext/,/sf/os/imagingext,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,branch,default,layers.sysdef.xml
