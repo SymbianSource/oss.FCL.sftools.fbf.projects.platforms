@@ -98,7 +98,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/lbs/,/sf/os/lbs,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/os/mm/,/sf/os/mm,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/FCL/sf/os/networkingsrv/,/sf/os/networkingsrv,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/FCL/sf/os/ossrv/,/sf/os/ossrv,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/os/ossrv/,/sf/os/ossrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/persistentdata/,/sf/os/persistentdata,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/os/security/,/sf/os/security,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/shortlinksrv/,/sf/os/shortlinksrv,branch,default,layers.sysdef.xml

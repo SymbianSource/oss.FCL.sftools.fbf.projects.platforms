@@ -612,9 +612,9 @@
 <component name="apputils" long-name="Application Utilities" introduced="ER5" purpose="mandatory">
 <unit bldFile="os/ossrv/lowlevellibsandfws/apputils/group" mrp="os/ossrv/lowlevellibsandfws/apputils/group/syslibs_bafl.mrp"/>
 </component>
-<component name="sysutil" long-name="System Utilities" introduced="ER5" purpose="mandatory">
+<!--<component name="sysutil" long-name="System Utilities" introduced="ER5" purpose="mandatory">
 <unit bldFile="os/ossrv/lowlevellibsandfws/apputils/sysutil/group" />
-</component>
+</component>-->
 </collection>
 <collection name="ossrv_info" long-name="Generic OS Services Info" level="utilities">
 <component name="ossrv_metadata" long-name="Generic OS Services Metadata" introduced="tb91" purpose="development" class="config PC">
