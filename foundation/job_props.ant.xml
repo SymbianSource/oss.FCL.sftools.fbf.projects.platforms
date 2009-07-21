@@ -23,7 +23,7 @@
     <!-- get full source env and binaries from pdk -->
     <property name="sf.spec.sourcesync.enable"       value="true"/>
     <property name="sf.spec.baseline.getenv_options" value="-I tools"/> <!-- Sync the tools... -->
-    <property name="sf.spec.baseline.enable"         value="true"/>     
+    <property name="sf.spec.baseline.enable"         value="false"/>     
     <property name="sf.spec.baseline.clean"          value="false"/>
     <property name="sf.spec.baseline.select"         value="location" />
     <property name="sf.spec.baseline.location"       value="\\v800008\builds01\Releases\PDK_build_tools_test\" />
@@ -49,7 +49,7 @@
     
     <!-- build os and s60 by default -->
     <property name="sf.spec.os.skipbuild"   value="false"/>
-    <property name="sf.spec.s60.skipbuild"  value="false"/>
+    <property name="sf.spec.s60.skipbuild"  value="true"/>
     <property name="sf.spec.splitbuild"     value="true"/> <!-- *this* platform build defines two steps -->
 
     <!-- generate dir list(s) of epoc32 tree -->
