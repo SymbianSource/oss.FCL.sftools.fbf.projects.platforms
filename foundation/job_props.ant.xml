@@ -50,7 +50,7 @@
     <!-- build os and s60 by default -->
     <property name="sf.spec.os.skipbuild"   value="false"/>
     <property name="sf.spec.s60.skipbuild"  value="true"/>
-    <property name="sf.spec.splitbuild"     value="true"/> <!-- *this* platform build defines two steps -->
+    <property name="sf.spec.splitbuild"     value="false"/> <!-- *this* platform build defines two steps -->
 
     <!-- generate dir list(s) of epoc32 tree -->
     <property name="sf.spec.dirlist.enable"  value="true"/>

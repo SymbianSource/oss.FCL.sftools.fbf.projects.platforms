@@ -21,6 +21,7 @@ Operator Complementary Packages		ocp
    <block name="stubs" long-name="Stubs" tech_domain="hb" levels="adaptation plugin mid engine">
     <collection name="audiostubs" long-name="Audio Stubs" level="adaptation">
      <component name="devsoundextensions_stubs" long-name="Devsound Extensions Stubs">
+      <!-- <unit bldFile="adaptation/stubs/audiostubs/devsoundextensions_stubs/audiocodeccistubs/audiovibracontrolcistub/group"/> -->
       <!-- <unit bldFile="adaptation/stubs/audiostubs/devsoundextensions_stubs/audioenhancementfactorystubs/custominterfaceproxyfactory_stub/group"/> -->
       <!-- <unit bldFile="adaptation/stubs/audiostubs/devsoundextensions_stubs/audioenhancementfactorystubs/messagehandlerfactory_stub/group"/> -->
       <unit bldFile="adaptation/stubs/audiostubs/devsoundextensions_stubs/group"/>
@@ -568,16 +569,17 @@ Operator Complementary Packages		ocp
       <unit bldFile="os/devicesrv/accessoryservices/tspclientmapper/group"/>
       <!-- <unit bldFile="os/devicesrv/accessoryservices/tspclientmapper/tsrc/public/basic/group"/> -->
      </component>
-     <component name="remotecontrolfw">
-      <unit bldFile="os/devicesrv/accessoryservices/remotecontrolfw/bearerplugin/group"/>
-      <unit bldFile="os/devicesrv/accessoryservices/remotecontrolfw/client"/>
-      <unit bldFile="os/devicesrv/accessoryservices/remotecontrolfw/converterplugin/group"/>
-      <unit bldFile="os/devicesrv/accessoryservices/remotecontrolfw/reference"/>
-      <unit bldFile="os/devicesrv/accessoryservices/remotecontrolfw/server/group"/>
-      <unit bldFile="os/devicesrv/accessoryservices/remotecontrolfw/targetselectorplugin/group"/>
-      <unit bldFile="os/devicesrv/accessoryservices/remotecontrolfw/test"/>
-      <unit bldFile="os/devicesrv/accessoryservices/remotecontrolfw/types/group"/>
-     </component>
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="remotecontrolfw">
+       <unit bldFile="os/devicesrv/accessoryservices/remotecontrolfw/bearerplugin/group"/>
+       <unit bldFile="os/devicesrv/accessoryservices/remotecontrolfw/client"/>
+       <unit bldFile="os/devicesrv/accessoryservices/remotecontrolfw/converterplugin/group"/>
+       <unit bldFile="os/devicesrv/accessoryservices/remotecontrolfw/reference"/>
+       <unit bldFile="os/devicesrv/accessoryservices/remotecontrolfw/server/group"/>
+       <unit bldFile="os/devicesrv/accessoryservices/remotecontrolfw/targetselectorplugin/group"/>
+       <unit bldFile="os/devicesrv/accessoryservices/remotecontrolfw/test"/>
+       <unit bldFile="os/devicesrv/accessoryservices/remotecontrolfw/types/group"/>
+     </component>-->
      <component name="reftsp"/>
      <component unofficial="yes" name="accessoryservices_build" long-name="Accessory Services Build">
       <unit bldFile="os/devicesrv/accessoryservices/group"/>
@@ -667,7 +669,8 @@ Operator Complementary Packages		ocp
       <unit bldFile="os/devicesrv/resourcemgmt/hwresourcesmgr/test/group"/>
       <unit bldFile="os/devicesrv/resourcemgmt/hwresourcesmgr/test/plugins/targetmodifierplugin/group"/>
      </component>
-     <component name="powerandmemorynotificationservice"/>
+     <!--Component manually removed as empty and name conflicts with an OS component-->
+     <!--<component name="powerandmemorynotificationservice"/>-->
      <component unofficial="yes" name="resourcemgmt_build" long-name="Resource Management Build">
       <unit bldFile="os/devicesrv/resourcemgmt/group"/>
      </component>
@@ -747,24 +750,25 @@ Operator Complementary Packages		ocp
       <!-- <unit bldFile="os/devicesrv/sysstatemgmt/starter/strtsecnote/group"/> -->
       <!-- <unit bldFile="os/devicesrv/sysstatemgmt/starter/strtsecobs/group"/> -->
      </component>
-     <component name="systemstarter">
-      <!-- <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/sysmondemo/group"/> -->
-      <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/tamastarter/group"/>
-      <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/tapstart/group"/>
-      <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/tdscstore/group"/>
-      <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/testappgood"/>
-      <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/testappnorv"/>
-      <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/testapprvafterretry"/>
-      <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/testapprverror"/>
-      <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/testappslow"/>
-      <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/testprocgood"/>
-      <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/trestartsys/group"/>
-      <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/tstartsafe/group"/>
-      <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/tstartupproperties/group"/>
-      <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/tsysmon/group"/>
-      <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/tsysstart/group"/>
-      <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/tsysstart2/group"/>
-     </component>
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="systemstarter">
+       -  <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/sysmondemo/group"/>  -
+       <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/tamastarter/group"/>
+       <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/tapstart/group"/>
+       <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/tdscstore/group"/>
+       <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/testappgood"/>
+       <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/testappnorv"/>
+       <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/testapprvafterretry"/>
+       <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/testapprverror"/>
+       <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/testappslow"/>
+       <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/testprocgood"/>
+       <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/trestartsys/group"/>
+       <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/tstartsafe/group"/>
+       <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/tstartupproperties/group"/>
+       <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/tsysmon/group"/>
+       <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/tsysstart/group"/>
+       <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/tsysstart2/group"/>
+     </component>-->
      <component unofficial="yes" name="sysstatemgmt_build" long-name="System State Management Build">
       <unit bldFile="os/devicesrv/sysstatemgmt/group"/>
      </component>
@@ -789,6 +793,7 @@ Operator Complementary Packages		ocp
       <!-- <unit bldFile="os/devicesrv/devicesrv_pub/phone_parser_api/tsrc/bc/phoneparser/group"/> -->
      </component>
      <component unofficial="yes" name="sensor_data_compensator_api">
+      <!-- <unit bldFile="os/devicesrv/devicesrv_pub/sensor_data_compensator_api/tsrc/bc/sensordatacompensatortest/group"/> -->
       <unit bldFile="os/devicesrv/devicesrv_pub/sensor_data_compensator_api/group"/>
      </component>
      <component unofficial="yes" name="version_info_api">
@@ -1197,23 +1202,22 @@ Operator Complementary Packages		ocp
     </collection>
    </block>
    <block name="cellularsrv" long-name="Cellular Baseband Services" tech_domain="vc" level="services" levels="adaptation hw-if plugin framework server app-if">
-    <collection name="telephonyserverplugins" long-name="Telephony Server Plugins" level="app-if">
-     <component name="common_tsy" long-name="Common TSY">
-	  <unit bldFile="os/cellularsrv/telephonyserverplugins/common_tsy/group"/>
-      <!-- <unit bldFile="os/cellularsrv/telephonyserverplugins/common_tsy/test/component/group"/> -->
-      <!-- <unit bldFile="os/cellularsrv/telephonyserverplugins/common_tsy/test/component/mockltsy/group"/> -->
-      <!-- <unit bldFile="os/cellularsrv/telephonyserverplugins/common_tsy/test/component/mockltsy/mockltsy/group"/> -->
-      <!-- <unit bldFile="os/cellularsrv/telephonyserverplugins/common_tsy/test/component/mockltsy/mockltsydll/group"/> -->
-      <!-- <unit bldFile="os/cellularsrv/telephonyserverplugins/common_tsy/test/devlon_93"/> -->
-      <!-- <unit bldFile="os/cellularsrv/telephonyserverplugins/common_tsy/test/integration/group"/> -->
-      <!-- <unit bldFile="os/cellularsrv/telephonyserverplugins/common_tsy/test/integration/testsuites/group"/> -->
-     </component>
-	 <component name="licenseetsystub" long-name="Licensee TSY Stub">
-	  <unit bldFile="os/cellularsrv/telephonyserverplugins/licenseetsystub/group"/>
-	 </component>
-     <component name="multimodetsy"/>
-     <component name="cdmatsy"/>
-     <component name="simtsy"/>
+    <collection name="telephonyserverplugins" long-name="Telephony Server Plugins">
+     <!--Component manually removed, already declared in OS-->
+     <!--<component name="common_tsy">
+       -  <unit bldFile="os/cellularsrv/telephonyserverplugins/common_tsy/test/component/group"/>  -
+       -  <unit bldFile="os/cellularsrv/telephonyserverplugins/common_tsy/test/component/mockltsy/group"/>  -
+       -  <unit bldFile="os/cellularsrv/telephonyserverplugins/common_tsy/test/component/mockltsy/mockltsy/group"/>  -
+       -  <unit bldFile="os/cellularsrv/telephonyserverplugins/common_tsy/test/component/mockltsy/mockltsydll/group"/>  -
+       -  <unit bldFile="os/cellularsrv/telephonyserverplugins/common_tsy/test/integration/group"/>  -
+       -  <unit bldFile="os/cellularsrv/telephonyserverplugins/common_tsy/test/integration/testsuites/group"/>  -
+     </component>-->
+     <!--Component manually removed as empty and name conflicts with an OS component-->
+     <!--<component name="multimodetsy"/>-->
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="cdmatsy"/>-->
+     <!--Component manually removed as empty and name conflicts with an OS component-->
+     <!--<component name="simtsy"/>-->
     </collection>
     <collection name="commonnetworkinterface" long-name="Common Network Interface" level="hw-if">
      <component name="gennif" long-name="Generic NIF">
@@ -1230,10 +1234,12 @@ Operator Complementary Packages		ocp
      <component name="isc_if" long-name="ISC Interface">
       <unit bldFile="os/cellularsrv/basebandabstraction/isc_if/group"/>
      </component>
-     <component name="basebandchanneladaptor">
-      <!-- <unit bldFile="os/cellularsrv/basebandabstraction/basebandchanneladaptor/test/te_bca/group"/> -->
-     </component>
-     <component name="intersystemcomm"/>
+     <!--Component manually removed and merged to OS, unit originately commented out by Bob's script-->
+     <!--<component name="basebandchanneladaptor">
+       -  <unit bldFile="os/cellularsrv/basebandabstraction/basebandchanneladaptor/test/te_bca/group"/>  -
+     </component>-->
+     <!--Component manually removed as empty and name conflicts with an OS component-->
+     <!--<component name="intersystemcomm"/>-->
     </collection>
     <collection name="cellularsrv_info" long-name="Cellular Baseband Services Info" level="app-if">
      <component unofficial="yes" name="cellularsrv_build" long-name="Cellular Baseband Services Build">
@@ -1366,9 +1372,6 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="ilbc_decoder_interface_api">
       <unit bldFile="os/mm/mm_plat/ilbc_decoder_interface_api/group"/>
      </component>
-     <component unofficial="yes" name="audio_server_factory_api">
-      <unit bldFile="os/mm/mm_plat/audio_server_factory_api/group"/>
-     </component>
      <component unofficial="yes" name="g711_decoder_interface_proxy_api">
       <unit bldFile="os/mm/mm_plat/g711_decoder_interface_proxy_api/group"/>
      </component>
@@ -1386,9 +1389,6 @@ Operator Complementary Packages		ocp
      </component>
      <component unofficial="yes" name="g711_encoder_interface_proxy_api">
       <unit bldFile="os/mm/mm_plat/g711_encoder_interface_proxy_api/group"/>
-     </component>
-     <component unofficial="yes" name="audio_vibra_control_msg_hdlr_api">
-      <unit bldFile="os/mm/mm_plat/audio_vibra_control_msg_hdlr_api/group"/>
      </component>
      <component unofficial="yes" name="speech_encoder_config_msg_hdlr_api">
       <unit bldFile="os/mm/mm_plat/speech_encoder_config_msg_hdlr_api/group"/>
@@ -1428,9 +1428,6 @@ Operator Complementary Packages		ocp
      </component>
      <component unofficial="yes" name="ilbc_encoder_interface_proxy_api">
       <unit bldFile="os/mm/mm_plat/ilbc_encoder_interface_proxy_api/group"/>
-     </component>
-     <component unofficial="yes" name="audio_vibra_control_api">
-      <unit bldFile="os/mm/mm_plat/audio_vibra_control_api/group"/>
      </component>
      <component unofficial="yes" name="sbc_encoder_interface_msg_hdlr_api">
       <unit bldFile="os/mm/mm_plat/sbc_encoder_interface_msg_hdlr_api/group"/>
@@ -1561,9 +1558,6 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="wma_decoder_interface_api">
       <unit bldFile="os/mm/mm_plat/wma_decoder_interface_api/group"/>
      </component>
-     <component unofficial="yes" name="audio_vibra_control_proxy_api">
-      <unit bldFile="os/mm/mm_plat/audio_vibra_control_proxy_api/group"/>
-     </component>
      <component unofficial="yes" name="video_decoder_rotation_mdf_custom_interface">
       <unit bldFile="os/mm/mm_plat/video_decoder_rotation_mdf_custom_interface/group"/>
      </component>
@@ -1656,6 +1650,10 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="graphics_info" long-name="Graphics Info" level="app-if">
+     <component unofficial="yes" name="graphicssvs">
+      <!-- <unit bldFile="os/graphics/graphicsapitest/graphicssvs/wserv/twsgraphicshare"/> -->
+      <!-- <unit bldFile="os/graphics/graphicsapitest/graphicssvs/wserv/animplugin/group"/> -->
+     </component>
      <component unofficial="yes" name="graphics_build" long-name="Graphics Build">
       <unit bldFile="os/graphics/group"/>
      </component>
@@ -1678,7 +1676,8 @@ Operator Complementary Packages		ocp
       <unit bldFile="os/textandloc/charconvfw/charconvplugin/group"/>
      </component>
      <component name="charconv_fw"/>
-     <component name="charconvplugins"/>
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="charconvplugins"/>-->
     </collection>
     <collection name="textandlocutils" level="util">
      <component name="Localizer" long-name="Localizer">
@@ -1801,6 +1800,9 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="libxml2_xml_schemas_api">
       <unit bldFile="os/xmlsrv/xmlsrv_plat/libxml2_xml_schemas_api/group"/>
      </component>
+     <component unofficial="yes" name="xmlsrv_plat_build" long-name="XML Services Platform API Build">
+      <unit bldFile="os/xmlsrv/xmlsrv_plat/group"/>
+     </component>
      <component unofficial="yes" name="xml_engine_xpath_api">
       <unit bldFile="os/xmlsrv/xmlsrv_plat/xml_engine_xpath_api/group"/>
       <!-- <unit bldFile="os/xmlsrv/xmlsrv_plat/xml_engine_xpath_api/tsrc/group"/> -->
@@ -1838,6 +1840,9 @@ Operator Complementary Packages		ocp
       <unit bldFile="os/xmlsrv/xmlsrv_pub/xml_engine_dom_api/group"/>
       <!-- <unit bldFile="os/xmlsrv/xmlsrv_pub/xml_engine_dom_api/tsrc/group"/> -->
      </component>
+     <component unofficial="yes" name="xmlsrv_pub_build" long-name="XML Services Public API Build">
+      <unit bldFile="os/xmlsrv/xmlsrv_pub/group"/>
+     </component>
     </collection>
    </block>
    <block name="deviceplatformrelease" long-name="Device Platform Release" tech_domain="to" level="services" levels="bld mid top">
@@ -1864,13 +1869,8 @@ Operator Complementary Packages		ocp
       <!-- <unit bldFile="os/deviceplatformrelease/sf_config/config/western/group"/> -->
      </component>
     </collection>
-    <collection name="deviceplatformrelease_info" long-name="Device Platform Release Info" level="top">
-     <component unofficial="yes" name="s60helps">
-      <unit bldFile="os/deviceplatformrelease/s60helps/group"/>
-     </component>
-    </collection>
-    <collection name="s60bld" long-name="S60 Build" level="bld">
-     <component unofficial="yes" name="buildplatforms" long-name="Build Platforms">
+    <collection name="s60bld">
+     <component unofficial="yes" name="buildplatforms">
       <unit bldFile="tools/buildplatforms/group"/>
      </component>
     </collection>
@@ -2323,12 +2323,6 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="appsupport_info" long-name="Generic Application Support Info" level="specific">
-     <component unofficial="yes" name="flashliteapi_3_0">
-      <unit bldFile="mw/appsupport/flashliteapi_3_0/group"/>
-     </component>
-     <component unofficial="yes" name="flashliteapi_3_0_compo">
-      <!-- <unit bldFile="mw/appsupport/flashliteapi_3_0/flashliteapi_3_0_compo/group"/> -->
-     </component>
      <component unofficial="yes" name="appsupport_build" long-name="Generic Application Support Build">
       <unit bldFile="mw/appsupport/group"/>
      </component>
@@ -2337,19 +2331,19 @@ Operator Complementary Packages		ocp
    <block name="securitysrv" long-name="Security Services" tech_domain="se" level="generic" levels="plugin framework server generic specific">
     <collection name="gba" long-name="Generic Boot Architecture" level="specific">
      <component name="uicc" long-name="Uicc">
-      <!-- <unit bldFile="mw/securitysrv/gba/uicc/group"/> -->
+      <unit bldFile="mw/securitysrv/gba/uicc/group"/>
      </component>
      <component name="bootstrap" long-name="Bootstrap">
-      <!-- <unit bldFile="mw/securitysrv/gba/bootstrap/group"/> -->
+      <unit bldFile="mw/securitysrv/gba/bootstrap/group"/>
      </component>
      <component name="gbaserver" long-name="GBA Server">
-      <!-- <unit bldFile="mw/securitysrv/gba/gbaserver/group"/> -->
+      <unit bldFile="mw/securitysrv/gba/gbaserver/group"/>
      </component>
      <component name="gbaapi" long-name="GBA API">
-      <!-- <unit bldFile="mw/securitysrv/gba/gbaapi/group"/> -->
+      <unit bldFile="mw/securitysrv/gba/gbaapi/group"/>
      </component>
      <component name="gbafilter" long-name="GBA Filter">
-      <!-- <unit bldFile="mw/securitysrv/gba/gbafilter/group"/> -->
+      <unit bldFile="mw/securitysrv/gba/gbafilter/group"/>
      </component>
      <component unofficial="yes" name="gba_build" long-name="Generic Boot Architecture Build">
       <unit bldFile="mw/securitysrv/gba/group"/>
@@ -2497,7 +2491,9 @@ Operator Complementary Packages		ocp
     <collection name="commondrm" long-name="Common DRM" level="generic">
      <component name="drmencryptor" long-name="DRM Encryptor"/>
      <component name="drmsettingsplugin" long-name="DRM Settings Plugin"/>
-     <component name="drmrightsmanagerui" long-name="DRM Rights Manager UI"/>
+     <component name="drmrightsmanagerui" long-name="DRM Rights Manager UI">
+      <unit bldFile="mw/drm/commondrm/drmrightsmanagerui/help/group"/>
+     </component>
      <component name="drmutility" long-name="DRM Utility">
       <unit bldFile="mw/drm/commondrm/drmutility/group"/>
      </component>
@@ -2568,6 +2564,7 @@ Operator Complementary Packages		ocp
       <unit bldFile="mw/drm/drm_pub/drm_license_checker_api/group"/>
      </component>
      <component unofficial="yes" name="drm_helper_api">
+      <!-- <unit bldFile="mw/drm/drm_pub/drm_helper_api/tsrc/group"/> -->
       <unit bldFile="mw/drm/drm_pub/drm_helper_api/group"/>
      </component>
     </collection>
@@ -2592,6 +2589,7 @@ Operator Complementary Packages		ocp
      </component>
      <component unofficial="yes" name="roap_api">
       <unit bldFile="mw/drm/drm_plat/roap_api/group"/>
+      <!-- <unit bldFile="mw/drm/drm_plat/roap_api/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="drm_license_manager_api">
       <unit bldFile="mw/drm/drm_plat/drm_license_manager_api/group"/>
@@ -2613,6 +2611,7 @@ Operator Complementary Packages		ocp
      </component>
      <component unofficial="yes" name="drm_rights_api">
       <unit bldFile="mw/drm/drm_plat/drm_rights_api/group"/>
+      <!-- <unit bldFile="mw/drm/drm_plat/drm_rights_api/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="wmdrm_core_api">
       <unit bldFile="mw/drm/drm_plat/wmdrm_core_api/group"/>
@@ -2807,6 +2806,9 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="location_notation_preferences_settings_api">
       <unit bldFile="mw/locationsrv/locsrv_plat/location_notation_preferences_settings_api/group"/>
      </component>
+     <component unofficial="yes" name="location_local_variation_api">
+      <unit bldFile="mw/locationsrv/locsrv_plat/location_local_variation_api/group"/>
+     </component>
      <component unofficial="yes" name="supl_settings_api">
       <!-- <unit bldFile="mw/locationsrv/locsrv_plat/supl_settings_api/tsrc/group"/> -->
       <unit bldFile="mw/locationsrv/locsrv_plat/supl_settings_api/group"/>
@@ -2878,6 +2880,7 @@ Operator Complementary Packages		ocp
      </component>
      <component unofficial="yes" name="oma_supl_asn_codec_plugin_api">
       <unit bldFile="mw/locationsrv/locsrv_plat/oma_supl_asn_codec_plugin_api/group"/>
+      <!-- <unit bldFile="mw/locationsrv/locsrv_plat/oma_supl_asn_codec_plugin_api/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="geocoding_api">
       <unit bldFile="mw/locationsrv/locsrv_plat/geocoding_api/group"/>
@@ -3162,23 +3165,8 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="ipappprotocols_info" long-name="IP App Protocols Info" level="server">
-     <component unofficial="yes" name="sipconnprovider">
-      <!-- <unit bldFile="mw/ipappprotocols/sipconnproviderplugins/sipconnprovider/group"/> -->
-     </component>
-     <component unofficial="yes" name="sipsubconnprovider">
-      <!-- <unit bldFile="mw/ipappprotocols/sipconnproviderplugins/sipsubconnprovider/group"/> -->
-     </component>
-     <component unofficial="yes" name="sipparams">
-      <!-- <unit bldFile="mw/ipappprotocols/sipconnproviderplugins/sipparams/group"/> -->
-     </component>
      <component unofficial="yes" name="ipappprotocols_build" long-name="IP App Protocols Build">
       <unit bldFile="mw/ipappprotocols/group"/>
-     </component>
-     <component unofficial="yes" name="sipstatemachine">
-      <!-- <unit bldFile="mw/ipappprotocols/sipconnproviderplugins/sipstatemachine/group"/> -->
-     </component>
-     <component unofficial="yes" name="sipdummyprt">
-      <!-- <unit bldFile="mw/ipappprotocols/sipconnproviderplugins/sipdummyprt/group"/> -->
      </component>
     </collection>
     <collection name="ipappprotocols_plat" long-name="IP App Protocols Platform Interfaces" level="server">
@@ -3394,6 +3382,9 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="vpnclient_info" long-name="VPN Client Info" level="api">
+     <component unofficial="yes" name="vpnclient_help" long-name="VPN Client Help">
+      <unit bldFile="mw/vpnclient/help/group"/>
+     </component>
      <component unofficial="yes" name="vpnclient_build" long-name="VPN Client Build">
       <unit bldFile="mw/vpnclient/group"/>
      </component>
@@ -3775,6 +3766,7 @@ Operator Complementary Packages		ocp
       <unit bldFile="mw/phonesrv/phonesrv_plat/phone_client_command_handler_api/group"/>
      </component>
      <component unofficial="yes" name="phone_client_emergency_call_api">
+      <!-- <unit bldFile="mw/phonesrv/phonesrv_plat/phone_client_emergency_call_api/tsrc/group"/> -->
       <unit bldFile="mw/phonesrv/phonesrv_plat/phone_client_emergency_call_api/group"/>
      </component>
      <component unofficial="yes" name="phone_client_messenger_api">
@@ -3883,81 +3875,91 @@ Operator Complementary Packages		ocp
       <!-- <unit bldFile="mw/messagingmw/messagingfw/senduiservices/serviceresolver/group"/> -->
       <!-- <unit bldFile="mw/messagingmw/messagingfw/senduiservices/watcher/group"/> -->
      </component>
-     <component name="scheduledsendmtm">
-      <unit bldFile="mw/messagingmw/messagingfw/scheduledsendmtm/schedulesendexe/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/scheduledsendmtm/schedulesendmtm/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/scheduledsendmtm/test/group"/>
-     </component>
-     <component name="msgsrvnstore">
-      <unit bldFile="mw/messagingmw/messagingfw/msgsrvnstore/mtmbase/group"/>
-      <!-- <unit bldFile="mw/messagingmw/messagingfw/msgsrvnstore/mtmbase/test/group"/> -->
-      <unit bldFile="mw/messagingmw/messagingfw/msgsrvnstore/server/group"/>
-      <!-- <unit bldFile="mw/messagingmw/messagingfw/msgsrvnstore/server/test/testrom"/> -->
-      <unit bldFile="mw/messagingmw/messagingfw/msgsrvnstore/serverexe/group"/>
-     </component>
-     <component name="biomsgfw">
-      <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/bdb"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/bifu"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/bioc"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/bios"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/biowatchers"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/bits"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/biut"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/cbcp"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/enp"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/gfp"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/iacp"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/rom"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/t_biomsg/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/wapp"/>
-     </component>
-     <component name="msgconf"/>
-     <component name="watcherfw">
-      <unit bldFile="mw/messagingmw/messagingfw/watcherfw/test/group"/>
-     </component>
-     <component name="msgtest">
-      <unit bldFile="mw/messagingmw/messagingfw/msgtest/integration/group"/>
-      <!-- <unit bldFile="mw/messagingmw/messagingfw/msgtest/targetautomation"/> -->
-      <unit bldFile="mw/messagingmw/messagingfw/msgtest/testsuites/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/msgtest/testutils/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/msgtest/tools/group"/>
-     </component>
-     <component name="biowatchers">
-      <unit bldFile="mw/messagingmw/messagingfw/biowatchers/cdmanbswatcher/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biowatchers/cdmasocketwatcher/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biowatchers/cdmawatchervmn/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biowatchers/cdmawatcherwemt/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biowatchers/cdmawatcherwmt/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biowatchers/cdmawatcherwpt/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/biowatchers/test/group"/>
-     </component>
-     <component name="sendas">
-      <unit bldFile="mw/messagingmw/messagingfw/sendas/client/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/sendas/editutils/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/sendas/server/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/sendas/test/group"/>
-     </component>
-     <component name="msgurlhandler">
-      <unit bldFile="mw/messagingmw/messagingfw/msgurlhandler/test/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/msgurlhandler/urlhandler/group"/>
-     </component>
-     <component name="wappushfw">
-      <!-- <unit bldFile="mw/messagingmw/messagingfw/wappushfw/examples/pushapphandlerex"/> -->
-      <unit bldFile="mw/messagingmw/messagingfw/wappushfw/miscpushmsgutils/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/wappushfw/plugins/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/wappushfw/plugins/wapurilookup/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/wappushfw/pushmsgentry/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/wappushfw/pushmtm/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/wappushfw/pushutils/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/wappushfw/pushwatcher/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/wappushfw/roaptcontenthandler/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/wappushfw/rocontenthandler/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/wappushfw/rom"/>
-      <unit bldFile="mw/messagingmw/messagingfw/wappushfw/sislcontenthandlers/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/wappushfw/sislpushmsgutils/group"/>
-      <unit bldFile="mw/messagingmw/messagingfw/wappushfw/tpush"/>
-      <unit bldFile="mw/messagingmw/messagingfw/wappushfw/tpushscriptbased"/>
-     </component>
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="scheduledsendmtm">
+       <unit bldFile="mw/messagingmw/messagingfw/scheduledsendmtm/schedulesendexe/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/scheduledsendmtm/schedulesendmtm/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/scheduledsendmtm/test/group"/>
+     </component>-->
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="msgsrvnstore">
+       <unit bldFile="mw/messagingmw/messagingfw/msgsrvnstore/mtmbase/group"/>
+       -  <unit bldFile="mw/messagingmw/messagingfw/msgsrvnstore/mtmbase/test/group"/>  -
+       <unit bldFile="mw/messagingmw/messagingfw/msgsrvnstore/server/group"/>
+       -  <unit bldFile="mw/messagingmw/messagingfw/msgsrvnstore/server/test/testrom"/>  -
+       <unit bldFile="mw/messagingmw/messagingfw/msgsrvnstore/serverexe/group"/>
+     </component>-->
+     <!--Component manually removed as empty and name conflicts with an OS component-->
+     <!--<component name="biomsgfw">
+       <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/bdb"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/bifu"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/bioc"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/bios"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/biowatchers"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/bits"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/biut"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/cbcp"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/enp"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/gfp"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/iacp"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/rom"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/t_biomsg/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/wapp"/>
+     </component>-->
+     <!--Component manually removed as empty and name conflicts with an OS component-->
+     <!--<component name="msgconf"/>-->
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="watcherfw">
+       <unit bldFile="mw/messagingmw/messagingfw/watcherfw/test/group"/>
+     </component>-->
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="msgtest">
+       <unit bldFile="mw/messagingmw/messagingfw/msgtest/integration/group"/>
+       -  <unit bldFile="mw/messagingmw/messagingfw/msgtest/targetautomation"/>  -
+       <unit bldFile="mw/messagingmw/messagingfw/msgtest/testsuites/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/msgtest/testutils/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/msgtest/tools/group"/>
+     </component>-->
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="biowatchers">
+       <unit bldFile="mw/messagingmw/messagingfw/biowatchers/cdmanbswatcher/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biowatchers/cdmasocketwatcher/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biowatchers/cdmawatchervmn/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biowatchers/cdmawatcherwemt/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biowatchers/cdmawatcherwmt/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biowatchers/cdmawatcherwpt/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/biowatchers/test/group"/>
+     </component>-->
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="sendas">
+       <unit bldFile="mw/messagingmw/messagingfw/sendas/client/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/sendas/editutils/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/sendas/server/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/sendas/test/group"/>
+     </component>-->
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="msgurlhandler">
+       <unit bldFile="mw/messagingmw/messagingfw/msgurlhandler/test/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/msgurlhandler/urlhandler/group"/>
+     </component>-->
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="wappushfw">
+       -  <unit bldFile="mw/messagingmw/messagingfw/wappushfw/examples/pushapphandlerex"/>  -
+       <unit bldFile="mw/messagingmw/messagingfw/wappushfw/miscpushmsgutils/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/wappushfw/plugins/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/wappushfw/plugins/wapurilookup/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/wappushfw/pushmsgentry/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/wappushfw/pushmtm/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/wappushfw/pushutils/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/wappushfw/pushwatcher/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/wappushfw/roaptcontenthandler/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/wappushfw/rocontenthandler/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/wappushfw/rom"/>
+       <unit bldFile="mw/messagingmw/messagingfw/wappushfw/sislcontenthandlers/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/wappushfw/sislpushmsgutils/group"/>
+       <unit bldFile="mw/messagingmw/messagingfw/wappushfw/tpush"/>
+       <unit bldFile="mw/messagingmw/messagingfw/wappushfw/tpushscriptbased"/>
+     </component>-->
      <component name="suplsmshandler"/>
      <component name="suplwappushhandler"/>
     </collection>
@@ -4004,13 +4006,16 @@ Operator Complementary Packages		ocp
      </component>
      <component name="xmppsettingsapi" long-name="XMPP Setting Sapi">
       <unit bldFile="mw/imsrv/imservices/xmppsettingsapi/group"/>
+      <!-- <unit bldFile="mw/imsrv/imservices/xmppsettingsapi/tsrc/group"/> -->
      </component>
      <component name="xmppsettingsfetcher" long-name="XMPP Settingsfetcher">
       <unit bldFile="mw/imsrv/imservices/xmppsettingsfetcher/group"/>
+      <!-- <unit bldFile="mw/imsrv/imservices/xmppsettingsfetcher/tsrc/xmppsettingsfetchermt/group"/> -->
      </component>
      <component name="ossprotocoladaptation" long-name="OSS Protocol Adaptation">
       <!-- <unit bldFile="mw/imsrv/imservices/ossprotocoladaptation/dataconvlib/group"/> -->
       <unit bldFile="mw/imsrv/imservices/ossprotocoladaptation/group"/>
+      <!-- <unit bldFile="mw/imsrv/imservices/ossprotocoladaptation/tsrc/ossadapmt/group"/> -->
      </component>
      <component name="instantmessagingcache" long-name="Instant Messaging Cache">
       <unit bldFile="mw/imsrv/imservices/instantmessagingcache/group"/>
@@ -4178,7 +4183,9 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="xdmsettingsui" long-name="XDM Settings UI" level="ui">
-     <component name="xdmsettingsui_help" long-name="Help"/>
+     <component name="xdmsettingsui_help" long-name="Help">
+      <unit bldFile="mw/legacypresence/xdmsettingsui/help/group"/>
+     </component>
      <component unofficial="yes" name="xdmsettingsui_build" long-name="XDM Settings UI Build">
       <unit bldFile="mw/legacypresence/xdmsettingsui/group"/>
      </component>
@@ -4194,7 +4201,9 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="presencesettingsui" long-name="Presence Settings UI" level="ui">
-     <component name="presencesettingsui_help" long-name="Help"/>
+     <component name="presencesettingsui_help" long-name="Help">
+      <unit bldFile="mw/legacypresence/presencesettingsui/help/group"/>
+     </component>
      <component unofficial="yes" name="presencesettingsui_build" long-name="Presence Settings UI Build">
       <unit bldFile="mw/legacypresence/presencesettingsui/group"/>
      </component>
@@ -4261,6 +4270,9 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="messaging_connection_manager_api">
       <unit bldFile="mw/legacypresence/pressrv_plat/messaging_connection_manager_api/group"/>
      </component>
+     <component unofficial="yes" name="simple_instant_msg_api">
+      <unit bldFile="mw/legacypresence/pressrv_plat/simple_instant_msg_api/group"/>
+     </component>
      <component unofficial="yes" name="simple_settings_api">
       <unit bldFile="mw/legacypresence/pressrv_plat/simple_settings_api/group"/>
      </component>
@@ -4300,8 +4312,11 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="libtelepathy" long-name="Telepathy Library" level="lib">
-     <component name="libtelepathy.dll=binary">
+     <component unofficial="yes" name="libtelepathy_build" long-name="Telepathy Library Build">
       <unit bldFile="mw/opensrv/libtelepathy/group"/>
+     </component>
+     <component unofficial="yes" name="libtelepathy_test" long-name="Telepathy Library Test">
+      <!-- <unit bldFile="mw/opensrv/libtelepathy/tsrc/group"/> -->
      </component>
     </collection>
     <collection name="telepathygabble" long-name="Telepathy Gabble" level="eng">
@@ -4342,6 +4357,7 @@ Operator Complementary Packages		ocp
     <collection name="omaprovisioning" long-name="OMA Provisioning" level="specific">
      <component name="pnputil" long-name="PnP Util">
       <unit bldFile="mw/remotemgmt/omaprovisioning/pnputil/group"/>
+      <!-- <unit bldFile="mw/remotemgmt/omaprovisioning/pnputil/tsrc/moduletest/group"/> -->
      </component>
      <component name="provisioning" long-name="provisioning">
       <unit bldFile="mw/remotemgmt/omaprovisioning/provisioning/group"/>
@@ -4349,11 +4365,17 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="policymanagement" long-name="Policy Management" level="generic">
-     <component name="pmdmadapter" long-name="PMDM Adapter"/>
-     <component name="dmutilserver" long-name="DM Util Server"/>
-     <component name="policyengine" long-name="Polic Eengine"/>
-     <component unofficial="yes" name="tarmpolicymng">
-      <unit bldFile="mw/remotemgmt/policymanagement/tarmpolicymng/group"/>
+     <component name="pmdmadapter" long-name="PMDM Adapter">
+      <unit bldFile="mw/remotemgmt/policymanagement/pmdmadapter/group"/>
+     </component>
+     <component name="dmutilserver" long-name="DM Util Server">
+      <unit bldFile="mw/remotemgmt/policymanagement/dmutilserver/group"/>
+     </component>
+     <component name="policyengine" long-name="Polic Eengine">
+      <unit bldFile="mw/remotemgmt/policymanagement/policyengine/group"/>
+     </component>
+     <component unofficial="yes" name="policymanagement_build" long-name="Policy Management Build">
+      <unit bldFile="mw/remotemgmt/policymanagement/group"/>
      </component>
     </collection>
     <collection name="syncmlfw" long-name="SyncML Framework" level="server">
@@ -4416,6 +4438,7 @@ Operator Complementary Packages		ocp
       <unit bldFile="mw/remotemgmt/syncmlfw/dm/treedbclient/bld"/>
       <unit bldFile="mw/remotemgmt/syncmlfw/dm/treedbhandler/bld"/>
       <unit bldFile="mw/remotemgmt/syncmlfw/dm/treemodule/bld"/>
+      <!-- <unit bldFile="mw/remotemgmt/syncmlfw/dm/tsrc/group"/> -->
       <unit bldFile="mw/remotemgmt/syncmlfw/dm/wappushalert/bld"/>
      </component>
      <component name="syncmlnotifier" long-name="SyncML Notifier">
@@ -4429,12 +4452,24 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="terminalsecurity" long-name="Terminal Security" level="specific">
-     <component name="SCP"/>
-     <component name="terminalsecurity_client" long-name="Client"/>
-     <component name="terminalsecurity_server" long-name="Server"/>
-     <component name="tcadapter" long-name="TC Adapter"/>
-     <component unofficial="yes" name="tarmterminalcontrol">
-      <unit bldFile="mw/remotemgmt/terminalsecurity/tarmterminalcontrol/group"/>
+     <component name="SCP">
+      <unit bldFile="mw/remotemgmt/terminalsecurity/scp/scpclient/group"/>
+      <unit bldFile="mw/remotemgmt/terminalsecurity/scp/scphistoryplugin/group"/>
+      <unit bldFile="mw/remotemgmt/terminalsecurity/scp/scppatternplugin/group"/>
+      <unit bldFile="mw/remotemgmt/terminalsecurity/scp/scpserver/group"/>
+      <unit bldFile="mw/remotemgmt/terminalsecurity/scp/scptimestampplugin/group"/>
+     </component>
+     <component name="terminalsecurity_client" long-name="Client">
+      <unit bldFile="mw/remotemgmt/terminalsecurity/client/group"/>
+     </component>
+     <component name="terminalsecurity_server" long-name="Server">
+      <unit bldFile="mw/remotemgmt/terminalsecurity/server/group"/>
+     </component>
+     <component name="tcadapter" long-name="TC Adapter">
+      <unit bldFile="mw/remotemgmt/terminalsecurity/tcadapter/bld"/>
+     </component>
+     <component unofficial="yes" name="terminalsecurity_build" long-name="Terminal Security Build">
+      <unit bldFile="mw/remotemgmt/terminalsecurity/group"/>
      </component>
     </collection>
     <collection name="devicediagnosticsfw" long-name="Device Diagnostics Framework" level="framework">
@@ -4453,15 +4488,8 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="ahle" long-name="Adaptive History List" level="generic">
-     <component name="ahleserver" long-name="Adaptive History List Server">
-      <unit bldFile="mw/remotemgmt/ahle/ahleserver/group"/>
-     </component>
-     <component name="ahleclient" long-name="Adaptive History List Client">
-      <unit bldFile="mw/remotemgmt/ahle/ahleclient/group"/>
-     </component>
-     <component unofficial="yes" name="ahle_build" long-name="Adaptive History List Build">
-      <unit bldFile="mw/remotemgmt/ahle/group"/>
-     </component>
+     <component name="ahleserver" long-name="Adaptive History List Server"/>
+     <component name="ahleclient" long-name="Adaptive History List Client"/>
     </collection>
     <collection name="remotemgmt_info" long-name="Remote Management Info" level="specific">
      <component unofficial="yes" name="remotemgmt_build" long-name="Remote Management Build">
@@ -4481,6 +4509,7 @@ Operator Complementary Packages		ocp
       <unit bldFile="mw/remotemgmt/remotemgmt_plat/adaptive_history_list_api/group"/>
      </component>
      <component unofficial="yes" name="pnpms_utils_api">
+      <!-- <unit bldFile="mw/remotemgmt/remotemgmt_plat/pnpms_utils_api/tsrc/group"/> -->
       <unit bldFile="mw/remotemgmt/remotemgmt_plat/pnpms_utils_api/group"/>
      </component>
      <component unofficial="yes" name="diagnostics_framework_api">
@@ -4491,6 +4520,7 @@ Operator Complementary Packages		ocp
      </component>
      <component unofficial="yes" name="dm_utils_api">
       <unit bldFile="mw/remotemgmt/remotemgmt_plat/dm_utils_api/group"/>
+      <!-- <unit bldFile="mw/remotemgmt/remotemgmt_plat/dm_utils_api/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="diagnostics_plugin_utility_api">
       <unit bldFile="mw/remotemgmt/remotemgmt_plat/diagnostics_plugin_utility_api/group"/>
@@ -4500,20 +4530,25 @@ Operator Complementary Packages		ocp
      </component>
      <component unofficial="yes" name="scp_server_api">
       <unit bldFile="mw/remotemgmt/remotemgmt_plat/scp_server_api/group"/>
+      <!-- <unit bldFile="mw/remotemgmt/remotemgmt_plat/scp_server_api/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="syncml_client_api">
       <unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_client_api/group"/>
+      <!-- <unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_client_api/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="obex_client_session_api">
       <unit bldFile="mw/remotemgmt/remotemgmt_plat/obex_client_session_api/group"/>
      </component>
      <component unofficial="yes" name="policy_management_request_api">
+      <!-- <unit bldFile="mw/remotemgmt/remotemgmt_plat/policy_management_request_api/tsrc/group"/> -->
       <unit bldFile="mw/remotemgmt/remotemgmt_plat/policy_management_request_api/group"/>
      </component>
      <component unofficial="yes" name="oma_ds_extensions_api">
+      <!-- <unit bldFile="mw/remotemgmt/remotemgmt_plat/oma_ds_extensions_api/tsrc/group"/> -->
       <unit bldFile="mw/remotemgmt/remotemgmt_plat/oma_ds_extensions_api/group"/>
      </component>
      <component unofficial="yes" name="dm_tree_apis">
+      <!-- <unit bldFile="mw/remotemgmt/remotemgmt_plat/dm_tree_apis/tsrc/group"/> -->
       <unit bldFile="mw/remotemgmt/remotemgmt_plat/dm_tree_apis/group"/>
      </component>
      <component unofficial="yes" name="dm_constant_definitions_api">
@@ -4528,17 +4563,20 @@ Operator Complementary Packages		ocp
      </component>
      <component unofficial="yes" name="setting_enforcement_info_api">
       <unit bldFile="mw/remotemgmt/remotemgmt_plat/setting_enforcement_info_api/group"/>
+      <!-- <unit bldFile="mw/remotemgmt/remotemgmt_plat/setting_enforcement_info_api/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="device_management_parameter_api">
       <unit bldFile="mw/remotemgmt/remotemgmt_plat/device_management_parameter_api/group"/>
      </component>
      <component unofficial="yes" name="syncml_alert_api">
+      <!-- <unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_alert_api/tsrc/group"/> -->
       <unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_alert_api/group"/>
      </component>
      <component unofficial="yes" name="sync_service_api">
       <unit bldFile="mw/remotemgmt/remotemgmt_plat/sync_service_api/group"/>
      </component>
      <component unofficial="yes" name="policy_management_certificate_api">
+      <!-- <unit bldFile="mw/remotemgmt/remotemgmt_plat/policy_management_certificate_api/tsrc/group"/> -->
       <unit bldFile="mw/remotemgmt/remotemgmt_plat/policy_management_certificate_api/group"/>
      </component>
      <component unofficial="yes" name="oma_provisioning_engine_api">
@@ -4564,6 +4602,7 @@ Operator Complementary Packages		ocp
       <unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_notifier_roaming_api/group"/>
      </component>
      <component unofficial="yes" name="terminal_security_device_lock_api">
+      <!-- <unit bldFile="mw/remotemgmt/remotemgmt_plat/terminal_security_device_lock_api/tsrc/group"/> -->
       <unit bldFile="mw/remotemgmt/remotemgmt_plat/terminal_security_device_lock_api/group"/>
      </component>
      <component unofficial="yes" name="common_agent_util_and_definitions_api">
@@ -4581,6 +4620,7 @@ Operator Complementary Packages		ocp
      </component>
      <component unofficial="yes" name="fota_engine_api">
       <unit bldFile="mw/remotemgmt/remotemgmt_plat/fota_engine_api/group"/>
+      <!-- <unit bldFile="mw/remotemgmt/remotemgmt_plat/fota_engine_api/tsrc/group"/> -->
      </component>
     </collection>
    </block>
@@ -4868,6 +4908,9 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="upnp_plugin_api">
       <unit bldFile="mw/dlnasrv/dlnasrv_plat/upnp_plugin_api/group"/>
      </component>
+     <component unofficial="yes" name="upnp_http_transfer_api">
+      <unit bldFile="mw/dlnasrv/dlnasrv_plat/upnp_http_transfer_api/group"/>
+     </component>
      <component unofficial="yes" name="upnp_media_server_metadata_api">
       <unit bldFile="mw/dlnasrv/dlnasrv_plat/upnp_media_server_metadata_api/group"/>
      </component>
@@ -4876,6 +4919,9 @@ Operator Complementary Packages		ocp
      </component>
      <component unofficial="yes" name="upnp_command_api">
       <unit bldFile="mw/dlnasrv/dlnasrv_plat/upnp_command_api/group"/>
+     </component>
+     <component unofficial="yes" name="upnp_httpserver_api">
+      <unit bldFile="mw/dlnasrv/dlnasrv_plat/upnp_httpserver_api/group"/>
      </component>
      <component unofficial="yes" name="upnp_common_api">
       <unit bldFile="mw/dlnasrv/dlnasrv_plat/upnp_common_api/group"/>
@@ -5411,12 +5457,6 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="mulwidgets_build" long-name="MUL Widgets Build">
       <unit bldFile="mw/mmuifw/mulwidgets/group"/>
      </component>
-     <component unofficial="yes" name="mulgridwidget">
-      <unit bldFile="mw/mmuifw/mulwidgets/mulgridwidget/group"/>
-     </component>
-     <component unofficial="yes" name="mullistwidget">
-      <unit bldFile="mw/mmuifw/mulwidgets/mullistwidget/group"/>
-     </component>
     </collection>
     <collection name="osncore" long-name="OSN Core" level="util">
      <component name="osncore" long-name="OSN Core">
@@ -5469,17 +5509,11 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="alf_widgetutils_api">
       <unit bldFile="mw/mmuifw/mmuifw_plat/alf_widgetutils_api/group"/>
      </component>
-     <component unofficial="yes" name="mul_listwidget_api">
-      <unit bldFile="mw/mmuifw/mmuifw_plat/mul_listwidget_api/group"/>
-     </component>
      <component unofficial="yes" name="mul_widget_api">
       <unit bldFile="mw/mmuifw/mmuifw_plat/mul_widget_api/group"/>
      </component>
      <component unofficial="yes" name="alf_scrollbarwidget_api">
       <unit bldFile="mw/mmuifw/mmuifw_plat/alf_scrollbarwidget_api/group"/>
-     </component>
-     <component unofficial="yes" name="mul_gridwidget_api">
-      <unit bldFile="mw/mmuifw/mmuifw_plat/mul_gridwidget_api/group"/>
      </component>
      <component unofficial="yes" name="alf_widgetfactory_api">
       <unit bldFile="mw/mmuifw/mmuifw_plat/alf_widgetfactory_api/group"/>
@@ -5544,6 +5578,7 @@ Operator Complementary Packages		ocp
      </component>
      <component unofficial="yes" name="videoscheduler_api">
       <unit bldFile="mw/videoutils/videoutils_plat/videoscheduler_api/group"/>
+      <!-- <unit bldFile="mw/videoutils/videoutils_plat/videoscheduler_api/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="videoutils_plat_build" long-name="Video Utils Platform API Build">
       <unit bldFile="mw/videoutils/videoutils_plat/group"/>
@@ -5673,26 +5708,12 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="mmfw" long-name="Multimedia Framework" level="framework">
-     <component name="gstreamer" long-name="GStreamer">
-      <!-- <unit bldFile="mw/mmmw/mmfw/gstreamer/group"/> -->
-      <!-- <unit bldFile="mw/mmmw/mmfw/gstreamer/gstreamer_core/tests/group"/> -->
-      <!-- <unit bldFile="mw/mmmw/mmfw/gstreamer/gstreamer_core/tsrc/group"/> -->
-      <!-- <unit bldFile="mw/mmmw/mmfw/gstreamer/gst_plugins_base/tsrc/group"/> -->
-      <!-- <unit bldFile="mw/mmmw/mmfw/gstreamer/tsrc/gstapp/group"/> -->
-      <!-- <unit bldFile="mw/mmmw/mmfw/gstreamer/tsrc/gstplayer/group"/> -->
-      <!-- <unit bldFile="mw/mmmw/mmfw/gstreamer/tsrc/plugins/gst_plugins_good/group"/> -->
-      <!-- <unit bldFile="mw/mmmw/mmfw/gstreamer/tsrc/plugins/gst_plugins_good/gst/wavparse"/> -->
-     </component>
+     <component name="gstreamer" long-name="GStreamer"/>
      <component name="helix_stub" long-name="Helix Stub">
       <unit bldFile="mw/mmmw/mmfw/helix_stub/group"/>
      </component>
      <component unofficial="yes" name="mmfw_build" long-name="Multimedia Framework Build">
       <unit bldFile="mw/mmmw/mmfw/group"/>
-     </component>
-    </collection>
-    <collection name="mmmiddlewarefws">
-     <component unofficial="yes" name="mmutilitylib">
-      <!-- <unit bldFile="mw/mmmw/mmmiddlewarefws/mmutilitylib/group"/> -->
      </component>
     </collection>
     <collection name="mmmw_info" long-name="Multimedia Middleware Info" level="specific">
@@ -5701,9 +5722,6 @@ Operator Complementary Packages		ocp
      </component>
      <component unofficial="yes" name="mmmw_test" long-name="Multimedia Middleware Test">
       <!-- <unit bldFile="mw/mmmw/tsrc/group"/> -->
-     </component>
-     <component unofficial="yes" name="drmmmfapitestapp">
-      <unit bldFile="mw/mmmw/drmmmfapitestapp/group"/>
      </component>
     </collection>
     <collection name="mmmw_plat" long-name="Multimedia Middleware Platform Interfaces" level="specific">
@@ -6040,9 +6058,10 @@ Operator Complementary Packages		ocp
       <!-- <unit bldFile="mw/inputmethods/fep/aknfep/uiplugins/aknfepuiinterface/avkonimpl/group"/> -->
       <!-- <unit bldFile="mw/inputmethods/fep/aknfep/uiplugins/aknfepuiinterface/group"/> -->
      </component>
-     <component name="frontendprocessor">
-      <unit bldFile="mw/inputmethods/fep/frontendprocessor/test/group"/>
-     </component>
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="frontendprocessor">
+       <unit bldFile="mw/inputmethods/fep/frontendprocessor/test/group"/>
+     </component>-->
     </collection>
     <collection name="inputmethods_info" long-name="Input Methods Info" level="framework">
      <component unofficial="yes" name="inputmethods_build" long-name="Input Methods Build">
@@ -6062,10 +6081,6 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="ptiengine_key_definations_api">
       <unit bldFile="mw/inputmethods/inputmethods_plat/ptiengine_key_definations_api/group"/>
       <!-- <unit bldFile="mw/inputmethods/inputmethods_plat/ptiengine_key_definations_api/tsrc/group"/> -->
-     </component>
-     <component unofficial="yes" name="ptiengine_core_api">
-      <unit bldFile="mw/inputmethods/inputmethods_plat/ptiengine_core_api/group"/>
-      <!-- <unit bldFile="mw/inputmethods/inputmethods_plat/ptiengine_core_api/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="ptiengine_hwr_api">
       <unit bldFile="mw/inputmethods/inputmethods_plat/ptiengine_hwr_api/group"/>
@@ -6116,7 +6131,9 @@ Operator Complementary Packages		ocp
      <component name="PslnGSPlugin" long-name="Personalizaion GS Plugin">
       <unit bldFile="mw/classicui/psln/pslngsplugin/group"/>
      </component>
-     <component name="psln_help" long-name="Help"/>
+     <component name="psln_help" long-name="Help">
+      <unit bldFile="mw/classicui/psln/help/group"/>
+     </component>
      <component unofficial="yes" name="psln_build" long-name="Personalization Build">
       <unit bldFile="mw/classicui/psln/group"/>
      </component>
@@ -6149,6 +6166,7 @@ Operator Complementary Packages		ocp
       <unit bldFile="mw/classicui/uifw/avkon/group"/>
       <unit bldFile="mw/classicui/uifw/avkon/odeconf/group"/>
       <!-- <unit bldFile="mw/classicui/uifw/avkon/prebuilder"/> -->
+      <!-- <unit bldFile="mw/classicui/uifw/avkon/tsrc/bc/s60_sdkmcl/bctestmixmcl/group"/> -->
      </component>
      <component name="EikStd" long-name="EikStd">
       <unit bldFile="mw/classicui/uifw/eikstd/group"/>
@@ -6203,6 +6221,9 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="volume_popup_api">
       <unit bldFile="mw/classicui/classicui_plat/volume_popup_api/group"/>
      </component>
+     <component unofficial="yes" name="touch_pane_observer_api">
+      <unit bldFile="mw/classicui/classicui_plat/touch_pane_observer_api/group"/>
+     </component>
      <component unofficial="yes" name="indicator_touch_observer_api">
       <unit bldFile="mw/classicui/classicui_plat/indicator_touch_observer_api/group"/>
      </component>
@@ -6219,6 +6240,7 @@ Operator Complementary Packages		ocp
       <unit bldFile="mw/classicui/classicui_plat/battery_pane_api/group"/>
      </component>
      <component unofficial="yes" name="extended_sounds_api">
+      <!-- <unit bldFile="mw/classicui/classicui_plat/extended_sounds_api/tsrc/group"/> -->
       <unit bldFile="mw/classicui/classicui_plat/extended_sounds_api/group"/>
      </component>
      <component unofficial="yes" name="generic_parameter_api">
@@ -6243,7 +6265,6 @@ Operator Complementary Packages		ocp
       <unit bldFile="mw/classicui/classicui_plat/pointer_event_modifier_api/group"/>
      </component>
      <component unofficial="yes" name="personalisation_framework_api">
-      <!-- <unit bldFile="mw/classicui/classicui_plat/personalisation_framework_api/tsrc/group"/> -->
       <unit bldFile="mw/classicui/classicui_plat/personalisation_framework_api/group"/>
      </component>
      <component unofficial="yes" name="text_scroller_api">
@@ -6327,6 +6348,9 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="phone_number_text_utilities_api">
       <unit bldFile="mw/classicui/classicui_plat/phone_number_text_utilities_api/group"/>
      </component>
+     <component unofficial="yes" name="touch_pane_api">
+      <unit bldFile="mw/classicui/classicui_plat/touch_pane_api/group"/>
+     </component>
      <component unofficial="yes" name="themes_settings_api">
       <unit bldFile="mw/classicui/classicui_plat/themes_settings_api/group"/>
      </component>
@@ -6409,6 +6433,7 @@ Operator Complementary Packages		ocp
       <unit bldFile="mw/classicui/classicui_plat/avkon_status_api/group"/>
      </component>
      <component unofficial="yes" name="avkon_testability_api">
+      <!-- <unit bldFile="mw/classicui/classicui_plat/avkon_testability_api/tsrc/group"/> -->
       <unit bldFile="mw/classicui/classicui_plat/avkon_testability_api/group"/>
      </component>
      <component unofficial="yes" name="key_rotator_api">
@@ -6437,11 +6462,32 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="classicui_pub" long-name="Classic UI Public Interfaces" level="specific">
+     <component unofficial="yes" name="window_server_event_observer_api">
+      <unit bldFile="mw/classicui/classicui_pub/window_server_event_observer_api/group"/>
+     </component>
+     <component unofficial="yes" name="info_popup_note_api">
+      <unit bldFile="mw/classicui/classicui_pub/info_popup_note_api/group"/>
+     </component>
+     <component unofficial="yes" name="labels_api">
+      <unit bldFile="mw/classicui/classicui_pub/labels_api/group"/>
+     </component>
+     <component unofficial="yes" name="uikon_core_controls">
+      <unit bldFile="mw/classicui/classicui_pub/uikon_core_controls/group"/>
+     </component>
+     <component unofficial="yes" name="intermediate_state_api">
+      <unit bldFile="mw/classicui/classicui_pub/intermediate_state_api/group"/>
+     </component>
+     <component unofficial="yes" name="common_file_dialogs_api">
+      <unit bldFile="mw/classicui/classicui_pub/common_file_dialogs_api/group"/>
+     </component>
+     <component unofficial="yes" name="buttons_api">
+      <unit bldFile="mw/classicui/classicui_pub/buttons_api/group"/>
+     </component>
+     <component unofficial="yes" name="aiw_service_handler_api">
+      <unit bldFile="mw/classicui/classicui_pub/aiw_service_handler_api/group"/>
+     </component>
      <component unofficial="yes" name="screen_saver_api">
       <unit bldFile="mw/classicui/classicui_pub/screen_saver_api/group"/>
-     </component>
-     <component unofficial="yes" name="touch_pane_observer_api">
-      <unit bldFile="mw/classicui/classicui_pub/touch_pane_observer_api/group"/>
      </component>
      <component unofficial="yes" name="form_api">
       <unit bldFile="mw/classicui/classicui_pub/form_api/group"/>
@@ -6449,20 +6495,59 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="generic_button_api">
       <unit bldFile="mw/classicui/classicui_pub/generic_button_api/group"/>
      </component>
+     <component unofficial="yes" name="keylock_api">
+      <unit bldFile="mw/classicui/classicui_pub/keylock_api/group"/>
+     </component>
      <component unofficial="yes" name="dialog_shutter_api">
       <unit bldFile="mw/classicui/classicui_pub/dialog_shutter_api/group"/>
+     </component>
+     <component unofficial="yes" name="navigation_pane_api">
+      <unit bldFile="mw/classicui/classicui_pub/navigation_pane_api/group"/>
+     </component>
+     <component unofficial="yes" name="context_pane_api">
+      <unit bldFile="mw/classicui/classicui_pub/context_pane_api/group"/>
+     </component>
+     <component unofficial="yes" name="ui_framework_definitions_api">
+      <unit bldFile="mw/classicui/classicui_pub/ui_framework_definitions_api/group"/>
+     </component>
+     <component unofficial="yes" name="aiw_generic_parameter_api">
+      <unit bldFile="mw/classicui/classicui_pub/aiw_generic_parameter_api/group"/>
+     </component>
+     <component unofficial="yes" name="slider_api">
+      <unit bldFile="mw/classicui/classicui_pub/slider_api/group"/>
      </component>
      <component unofficial="yes" name="application_framework_api">
       <unit bldFile="mw/classicui/classicui_pub/application_framework_api/group"/>
      </component>
+     <component unofficial="yes" name="base_controls_api">
+      <unit bldFile="mw/classicui/classicui_pub/base_controls_api/group"/>
+     </component>
+     <component unofficial="yes" name="touch_ui_utilities_api">
+      <unit bldFile="mw/classicui/classicui_pub/touch_ui_utilities_api/group"/>
+     </component>
      <component unofficial="yes" name="document_handler_api">
       <unit bldFile="mw/classicui/classicui_pub/document_handler_api/group"/>
+     </component>
+     <component unofficial="yes" name="ui_framework_utilities_api">
+      <unit bldFile="mw/classicui/classicui_pub/ui_framework_utilities_api/group"/>
      </component>
      <component unofficial="yes" name="tabs_api">
       <unit bldFile="mw/classicui/classicui_pub/tabs_api/group"/>
      </component>
+     <component unofficial="yes" name="input_frame_api">
+      <unit bldFile="mw/classicui/classicui_pub/input_frame_api/group"/>
+     </component>
      <component unofficial="yes" name="indicators_api">
       <unit bldFile="mw/classicui/classicui_pub/indicators_api/group"/>
+     </component>
+     <component unofficial="yes" name="classicui_pub_test">
+      <!-- <unit bldFile="mw/classicui/classicui_pub/tsrc/bc/apps/s60_sdk5.0/group"/> -->
+      <!-- <unit bldFile="mw/classicui/classicui_pub/tsrc/bc/apps/s60_sdk3.2/group"/> -->
+      <!-- <unit bldFile="mw/classicui/classicui_pub/tsrc/bc/apps/bctesttemplate/group"/> -->
+      <!-- <unit bldFile="mw/classicui/classicui_pub/tsrc/bc/group"/> -->
+      <!-- <unit bldFile="mw/classicui/classicui_pub/tsrc/bc/apps/s60_sdk3.1/group"/> -->
+      <!-- <unit bldFile="mw/classicui/classicui_pub/tsrc/bc/apps/s60_sdk5.0/bctestpane/group"/> -->
+      <!-- <unit bldFile="mw/classicui/classicui_pub/tsrc/bc/apps/s60_sdk3.0/group"/> -->
      </component>
      <component unofficial="yes" name="initialization_api">
       <unit bldFile="mw/classicui/classicui_pub/initialization_api/group"/>
@@ -6476,11 +6561,17 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="volume_control_api">
       <unit bldFile="mw/classicui/classicui_pub/volume_control_api/group"/>
      </component>
+     <component unofficial="yes" name="hotkeys_api">
+      <unit bldFile="mw/classicui/classicui_pub/hotkeys_api/group"/>
+     </component>
      <component unofficial="yes" name="notifiers_api">
       <unit bldFile="mw/classicui/classicui_pub/notifiers_api/group"/>
      </component>
      <component unofficial="yes" name="information_preview_popup_api">
       <unit bldFile="mw/classicui/classicui_pub/information_preview_popup_api/group"/>
+     </component>
+     <component unofficial="yes" name="error_ui_api">
+      <unit bldFile="mw/classicui/classicui_pub/error_ui_api/group"/>
      </component>
      <component unofficial="yes" name="screen_mode_api">
       <unit bldFile="mw/classicui/classicui_pub/screen_mode_api/group"/>
@@ -6488,11 +6579,23 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="aiw_criteria_api">
       <unit bldFile="mw/classicui/classicui_pub/aiw_criteria_api/group"/>
      </component>
+     <component unofficial="yes" name="popups_api">
+      <unit bldFile="mw/classicui/classicui_pub/popups_api/group"/>
+     </component>
+     <component unofficial="yes" name="choice_list_api">
+      <unit bldFile="mw/classicui/classicui_pub/choice_list_api/group"/>
+     </component>
+     <component unofficial="yes" name="notes_api">
+      <unit bldFile="mw/classicui/classicui_pub/notes_api/group"/>
+     </component>
      <component unofficial="yes" name="screen_clearer_api">
       <unit bldFile="mw/classicui/classicui_pub/screen_clearer_api/group"/>
      </component>
      <component unofficial="yes" name="grids_api">
       <unit bldFile="mw/classicui/classicui_pub/grids_api/group"/>
+     </component>
+     <component unofficial="yes" name="dialogs_api">
+      <unit bldFile="mw/classicui/classicui_pub/dialogs_api/group"/>
      </component>
      <component unofficial="yes" name="images_api">
       <unit bldFile="mw/classicui/classicui_pub/images_api/group"/>
@@ -6500,136 +6603,50 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="fonts_api">
       <unit bldFile="mw/classicui/classicui_pub/fonts_api/group"/>
      </component>
+     <component unofficial="yes" name="calendar_api">
+      <unit bldFile="mw/classicui/classicui_pub/calendar_api/group"/>
+     </component>
+     <component unofficial="yes" name="searchfield_api">
+      <unit bldFile="mw/classicui/classicui_pub/searchfield_api/group"/>
+     </component>
      <component unofficial="yes" name="private_ui_framework_api">
       <unit bldFile="mw/classicui/classicui_pub/private_ui_framework_api/group"/>
      </component>
      <component unofficial="yes" name="sounds_api">
       <unit bldFile="mw/classicui/classicui_pub/sounds_api/group"/>
      </component>
+     <component unofficial="yes" name="editors_api">
+      <unit bldFile="mw/classicui/classicui_pub/editors_api/group"/>
+     </component>
      <component unofficial="yes" name="misc_controls_api">
       <unit bldFile="mw/classicui/classicui_pub/misc_controls_api/group"/>
      </component>
+     <component unofficial="yes" name="stylus_popup_menu_api">
+      <unit bldFile="mw/classicui/classicui_pub/stylus_popup_menu_api/group"/>
+     </component>
+     <component unofficial="yes" name="queries_api">
+      <unit bldFile="mw/classicui/classicui_pub/queries_api/group"/>
+     </component>
+     <component unofficial="yes" name="title_pane_api">
+      <unit bldFile="mw/classicui/classicui_pub/title_pane_api/group"/>
+     </component>
+     <component unofficial="yes" name="toolbar_api">
+      <unit bldFile="mw/classicui/classicui_pub/toolbar_api/group"/>
+     </component>
      <component unofficial="yes" name="animation_api">
       <unit bldFile="mw/classicui/classicui_pub/animation_api/group"/>
+     </component>
+     <component unofficial="yes" name="options_menu_api">
+      <unit bldFile="mw/classicui/classicui_pub/options_menu_api/group"/>
+     </component>
+     <component unofficial="yes" name="lists_api">
+      <unit bldFile="mw/classicui/classicui_pub/lists_api/group"/>
      </component>
      <component unofficial="yes" name="server_application_api">
       <unit bldFile="mw/classicui/classicui_pub/server_application_api/group"/>
      </component>
      <component unofficial="yes" name="status_pane_api">
       <unit bldFile="mw/classicui/classicui_pub/status_pane_api/group"/>
-     </component>
-     <component unofficial="yes" name="info_popup_note_api">
-      <unit bldFile="mw/classicui/classicui_pub/info_popup_note_api/group"/>
-     </component>
-     <component unofficial="yes" name="window_server_event_observer_api">
-      <unit bldFile="mw/classicui/classicui_pub/window_server_event_observer_api/group"/>
-     </component>
-     <component unofficial="yes" name="intermediate_state_api">
-      <unit bldFile="mw/classicui/classicui_pub/intermediate_state_api/group"/>
-     </component>
-     <component unofficial="yes" name="uikon_core_controls">
-      <!-- <unit bldFile="mw/classicui/classicui_pub/uikon_core_controls/tsrc/group"/> -->
-      <unit bldFile="mw/classicui/classicui_pub/uikon_core_controls/group"/>
-     </component>
-     <component unofficial="yes" name="labels_api">
-      <unit bldFile="mw/classicui/classicui_pub/labels_api/group"/>
-     </component>
-     <component unofficial="yes" name="common_file_dialogs_api">
-      <unit bldFile="mw/classicui/classicui_pub/common_file_dialogs_api/group"/>
-     </component>
-     <component unofficial="yes" name="buttons_api">
-      <unit bldFile="mw/classicui/classicui_pub/buttons_api/group"/>
-     </component>
-     <component unofficial="yes" name="aiw_service_handler_api">
-      <unit bldFile="mw/classicui/classicui_pub/aiw_service_handler_api/group"/>
-     </component>
-     <component unofficial="yes" name="touch_pane_api">
-      <unit bldFile="mw/classicui/classicui_pub/touch_pane_api/group"/>
-     </component>
-     <component unofficial="yes" name="keylock_api">
-      <unit bldFile="mw/classicui/classicui_pub/keylock_api/group"/>
-     </component>
-     <component unofficial="yes" name="navigation_pane_api">
-      <unit bldFile="mw/classicui/classicui_pub/navigation_pane_api/group"/>
-     </component>
-     <component unofficial="yes" name="ui_framework_definitions_api">
-      <unit bldFile="mw/classicui/classicui_pub/ui_framework_definitions_api/group"/>
-     </component>
-     <component unofficial="yes" name="context_pane_api">
-      <unit bldFile="mw/classicui/classicui_pub/context_pane_api/group"/>
-     </component>
-     <component unofficial="yes" name="slider_api">
-      <unit bldFile="mw/classicui/classicui_pub/slider_api/group"/>
-     </component>
-     <component unofficial="yes" name="aiw_generic_parameter_api">
-      <unit bldFile="mw/classicui/classicui_pub/aiw_generic_parameter_api/group"/>
-     </component>
-     <component unofficial="yes" name="base_controls_api">
-      <unit bldFile="mw/classicui/classicui_pub/base_controls_api/group"/>
-     </component>
-     <component unofficial="yes" name="touch_ui_utilities_api">
-      <unit bldFile="mw/classicui/classicui_pub/touch_ui_utilities_api/group"/>
-     </component>
-     <component unofficial="yes" name="ui_framework_utilities_api">
-      <unit bldFile="mw/classicui/classicui_pub/ui_framework_utilities_api/group"/>
-     </component>
-     <component unofficial="yes" name="input_frame_api">
-      <unit bldFile="mw/classicui/classicui_pub/input_frame_api/group"/>
-     </component>
-     <component unofficial="yes" name="classicui_pub_test">
-      <!-- <unit bldFile="mw/classicui/classicui_pub/tsrc/bc/apps/s60_sdk5.0/group"/> -->
-      <!-- <unit bldFile="mw/classicui/classicui_pub/tsrc/bc/apps/s60_sdk3.2/group"/> -->
-      <!-- <unit bldFile="mw/classicui/classicui_pub/tsrc/bc/apps/bctesttemplate/group"/> -->
-      <!-- <unit bldFile="mw/classicui/classicui_pub/tsrc/bc/group"/> -->
-      <!-- <unit bldFile="mw/classicui/classicui_pub/tsrc/bc/apps/s60_sdk3.1/group"/> -->
-      <!-- <unit bldFile="mw/classicui/classicui_pub/tsrc/bc/apps/s60_sdk5.0/bctestpane/group"/> -->
-      <!-- <unit bldFile="mw/classicui/classicui_pub/tsrc/bc/apps/s60_sdk3.0/group"/> -->
-     </component>
-     <component unofficial="yes" name="hotkeys_api">
-      <unit bldFile="mw/classicui/classicui_pub/hotkeys_api/group"/>
-     </component>
-     <component unofficial="yes" name="error_ui_api">
-      <unit bldFile="mw/classicui/classicui_pub/error_ui_api/group"/>
-     </component>
-     <component unofficial="yes" name="choice_list_api">
-      <unit bldFile="mw/classicui/classicui_pub/choice_list_api/group"/>
-     </component>
-     <component unofficial="yes" name="popups_api">
-      <unit bldFile="mw/classicui/classicui_pub/popups_api/group"/>
-     </component>
-     <component unofficial="yes" name="notes_api">
-      <unit bldFile="mw/classicui/classicui_pub/notes_api/group"/>
-     </component>
-     <component unofficial="yes" name="dialogs_api">
-      <unit bldFile="mw/classicui/classicui_pub/dialogs_api/group"/>
-     </component>
-     <component unofficial="yes" name="searchfield_api">
-      <unit bldFile="mw/classicui/classicui_pub/searchfield_api/group"/>
-     </component>
-     <component unofficial="yes" name="calendar_api">
-      <unit bldFile="mw/classicui/classicui_pub/calendar_api/group"/>
-     </component>
-     <component unofficial="yes" name="stylus_popup_menu_api">
-      <unit bldFile="mw/classicui/classicui_pub/stylus_popup_menu_api/group"/>
-     </component>
-     <component unofficial="yes" name="editors_api">
-      <unit bldFile="mw/classicui/classicui_pub/editors_api/group"/>
-     </component>
-     <component unofficial="yes" name="queries_api">
-      <unit bldFile="mw/classicui/classicui_pub/queries_api/group"/>
-     </component>
-     <component unofficial="yes" name="toolbar_api">
-      <unit bldFile="mw/classicui/classicui_pub/toolbar_api/group"/>
-     </component>
-     <component unofficial="yes" name="title_pane_api">
-      <unit bldFile="mw/classicui/classicui_pub/title_pane_api/group"/>
-     </component>
-     <component unofficial="yes" name="options_menu_api">
-      <!-- <unit bldFile="mw/classicui/classicui_pub/options_menu_api/tsrc/group"/> -->
-      <unit bldFile="mw/classicui/classicui_pub/options_menu_api/group"/>
-     </component>
-     <component unofficial="yes" name="lists_api">
-      <unit bldFile="mw/classicui/classicui_pub/lists_api/group"/>
      </component>
      <component unofficial="yes" name="title_pane_touch_observer_api">
       <unit bldFile="mw/classicui/classicui_pub/title_pane_touch_observer_api/group"/>
@@ -6747,6 +6764,7 @@ Operator Complementary Packages		ocp
       <!-- <unit bldFile="mw/uiresources/layouts/aknlayout2/generated/vga3_akn_app"/> -->
       <!-- <unit bldFile="mw/uiresources/layouts/aknlayout2/generated/vga3_uiaccel"/> -->
       <!-- <unit bldFile="mw/uiresources/layouts/aknlayout2/generated/vga_akn_app"/> -->
+      <!-- <unit bldFile="mw/uiresources/layouts/aknlayout2/generated/vga_touch_akn_app"/> -->
       <!-- <unit bldFile="mw/uiresources/layouts/aknlayout2/generated/vga_uiaccel"/> -->
       <unit bldFile="mw/uiresources/layouts/aknlayout2/group"/>
      </component>
@@ -6803,7 +6821,9 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="helpthemes" long-name="Help Themes" level="data">
-     <component name="helpthemes compo"/>
+     <component name="helpthemes compo">
+      <unit bldFile="mw/uiresources/helpthemes/group"/>
+     </component>
     </collection>
     <collection name="aknlayoutcompiler" long-name="Avkon Layout Compiler" level="compile">
      <component name="aknlayoutcompiler compo" long-name="AKN Layout Compiler Component"/>
@@ -6996,14 +7016,6 @@ Operator Complementary Packages		ocp
       <unit bldFile="mw/homescreensrv/menucontentsrv/group"/>
      </component>
     </collection>
-    <collection name="homescreensrv_pub" long-name="Home Screen Services Public Interfaces" level="specific">
-     <component unofficial="yes" name="hs_widget_publisher_api">
-      <unit bldFile="mw/homescreensrv/homescreensrv_pub/hs_widget_publisher_api/group"/>
-     </component>
-     <component unofficial="yes" name="homescreensrv_pub_build" long-name="Home Screen Services Public API Build">
-      <unit bldFile="mw/homescreensrv/homescreensrv_pub/group"/>
-     </component>
-    </collection>
     <collection name="homescreensrv_plat" long-name="Home Screen Services Platform Interfaces" level="specific">
      <component unofficial="yes" name="sapi_backstepping">
       <unit bldFile="mw/homescreensrv/homescreensrv_plat/sapi_backstepping/group"/>
@@ -7015,6 +7027,7 @@ Operator Complementary Packages		ocp
       <unit bldFile="mw/homescreensrv/homescreensrv_plat/ai_content_model_api/group"/>
      </component>
      <component unofficial="yes" name="action_handler_plugin_api">
+      <!-- <unit bldFile="mw/homescreensrv/homescreensrv_plat/action_handler_plugin_api/tsrc/group"/> -->
       <unit bldFile="mw/homescreensrv/homescreensrv_plat/action_handler_plugin_api/group"/>
      </component>
      <component unofficial="yes" name="sapi_menucontent">
@@ -7024,9 +7037,11 @@ Operator Complementary Packages		ocp
       <unit bldFile="mw/homescreensrv/homescreensrv_plat/ai_plugin_management_api/group"/>
      </component>
      <component unofficial="yes" name="menu_sat_interface_api">
+      <!-- <unit bldFile="mw/homescreensrv/homescreensrv_plat/menu_sat_interface_api/tsrc/group"/> -->
       <unit bldFile="mw/homescreensrv/homescreensrv_plat/menu_sat_interface_api/group"/>
      </component>
      <component unofficial="yes" name="content_harvester_plugin_api">
+      <!-- <unit bldFile="mw/homescreensrv/homescreensrv_plat/content_harvester_plugin_api/tsrc/group"/> -->
       <unit bldFile="mw/homescreensrv/homescreensrv_plat/content_harvester_plugin_api/group"/>
      </component>
      <component unofficial="yes" name="external_home_screen_api">
@@ -7041,6 +7056,10 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="xcfw_api">
       <unit bldFile="mw/homescreensrv/homescreensrv_plat/xcfw_api/group"/>
      </component>
+     <component unofficial="yes" name="hs_widget_publisher_api">
+      <unit bldFile="mw/homescreensrv/homescreensrv_plat/hs_widget_publisher_api/group"/>
+      <!-- <unit bldFile="mw/homescreensrv/homescreensrv_plat/hs_widget_publisher_api/tsrc/group"/> -->
+     </component>
      <component unofficial="yes" name="menu_model_api">
       <unit bldFile="mw/homescreensrv/homescreensrv_plat/menu_model_api/group"/>
      </component>
@@ -7048,6 +7067,7 @@ Operator Complementary Packages		ocp
       <unit bldFile="mw/homescreensrv/homescreensrv_plat/ai_plugin_information_api/group"/>
      </component>
      <component unofficial="yes" name="menu_content_service_api">
+      <!-- <unit bldFile="mw/homescreensrv/homescreensrv_plat/menu_content_service_api/tsrc/group"/> -->
       <unit bldFile="mw/homescreensrv/homescreensrv_plat/menu_content_service_api/group"/>
      </component>
      <component unofficial="yes" name="ai_variation_api">
@@ -7099,7 +7119,9 @@ Operator Complementary Packages		ocp
      <component name="IAD">
       <unit bldFile="mw/appinstall/iaupdate/iad/group"/>
      </component>
-     <component name="iaupdate_help" long-name="Help"/>
+     <component name="iaupdate_help" long-name="Help">
+      <unit bldFile="mw/appinstall/iaupdate/help/group"/>
+     </component>
      <component unofficial="yes" name="iaupdate_build" long-name="IA Update Build">
       <unit bldFile="mw/appinstall/iaupdate/group"/>
      </component>
@@ -7150,9 +7172,10 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="secureswitools">
-     <component unofficial="yes" name="swisistools">
-      <!-- <unit bldFile="mw/appinstall/secureswitools/swisistools/test/tinterpretsisinteg/tintsistef"/> -->
-     </component>
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="swisistools">
+       -  <unit bldFile="mw/appinstall/secureswitools/swisistools/test/tinterpretsisinteg/tintsistef"/>  -
+      </component>-->
     </collection>
    </block>
    <block name="serviceapifw" long-name="Service API Framework" tech_domain="rt" level="specific" levels="plugin framework server generic specific">
@@ -7217,155 +7240,108 @@ Operator Complementary Packages		ocp
    </block>
    <block name="serviceapi" long-name="Service API" tech_domain="rt" level="specific" levels="os mw1 mw2 app">
     <collection name="sapi_applicationmanager" long-name="SAPI Application Manager" level="mw1">
-     <component name="appmanagerservice" long-name="App Manager Service">
-      <unit bldFile="mw/serviceapi/sapi_applicationmanager/appmanagerservice/group"/>
-     </component>
-     <component unofficial="yes" name="sapi_applicationmanager_test" long-name="SAPI Application Manager Test">
-      <!-- <unit bldFile="mw/serviceapi/sapi_applicationmanager/tsrc/dev/cruntimetest/group"/> -->
-      <unit bldFile="mw/serviceapi/sapi_applicationmanager/tsrc/group"/>
-     </component>
+     <component name="appmanagerservice" long-name="App Manager Service"/>
      <component unofficial="yes" name="sapi_applicationmanager_build" long-name="SAPI Application Manager Build">
-      <unit bldFile="mw/serviceapi/sapi_applicationmanager/group"/>
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_applicationmanager/tsrc/dev/cruntimetest/group"/> -->
+      <unit bldFile="mw/serviceapi/serviceproviders/sapi_applicationmanager/group"/>
      </component>
     </collection>
     <collection name="sapi_calendar" long-name="SAPI Calendar" level="app">
-     <component name="calendarservice" long-name="Calendar Service">
-      <unit bldFile="mw/serviceapi/sapi_calendar/calendarservice/group"/>
-     </component>
-     <component unofficial="yes" name="sapi_calendar_test" long-name="SAPI Calendar Test">
-      <unit bldFile="mw/serviceapi/sapi_calendar/tsrc/group"/>
-      <!-- <unit bldFile="mw/serviceapi/sapi_calendar/tsrc/testing/tcalprovider_combined/group"/> -->
-     </component>
+     <component name="calendarservice" long-name="Calendar Service"/>
      <component unofficial="yes" name="sapi_calendar_build" long-name="SAPI Calendar Build">
-      <unit bldFile="mw/serviceapi/sapi_calendar/group"/>
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_calendar/tsrc/testing/tcalprovider_combined/group"/> -->
+      <unit bldFile="mw/serviceapi/serviceproviders/sapi_calendar/group"/>
      </component>
     </collection>
     <collection name="sapi_contacts_vpbk" long-name="SAPI Contacts Vpbk" level="app">
-     <component name="contactservice" long-name="Contact Service">
-      <unit bldFile="mw/serviceapi/sapi_contacts_vpbk/contactservice/group"/>
-     </component>
+     <component name="contactservice" long-name="Contact Service"/>
      <component unofficial="yes" name="sapi_contacts_vpbk_build" long-name="SAPI Contacts Vpbk Build">
-      <unit bldFile="mw/serviceapi/sapi_contacts_vpbk/group"/>
-     </component>
-     <component unofficial="yes" name="sapi_contacts_vpbk_test" long-name="SAPI Contacts Vpbk Test">
-      <unit bldFile="mw/serviceapi/sapi_contacts_vpbk/tsrc/group"/>
+      <unit bldFile="mw/serviceapi/serviceproviders/sapi_contacts_vpbk/group"/>
      </component>
     </collection>
     <collection name="sapi_landmarks" long-name="SAPI Landmarks" level="mw2">
-     <component name="landmarksservice" long-name="Landmarks Service">
-      <unit bldFile="mw/serviceapi/sapi_landmarks/landmarksservice/group"/>
-     </component>
+     <component name="landmarksservice" long-name="Landmarks Service"/>
      <component unofficial="yes" name="sapi_landmarks_build" long-name="SAPI Landmarks Build">
-      <unit bldFile="mw/serviceapi/sapi_landmarks/group"/>
-     </component>
-     <component unofficial="yes" name="sapi_landmarks_test" long-name="SAPI Landmarks Test">
-      <!-- <unit bldFile="mw/serviceapi/sapi_landmarks/tsrc/testing/tlandmarkstest/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_landmarks/tsrc/testing/tlandmarksprovidertest/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_landmarks/tsrc/dev/landmarks_inputparams/group"/> -->
-      <unit bldFile="mw/serviceapi/sapi_landmarks/tsrc/group"/>
-      <!-- <unit bldFile="mw/serviceapi/sapi_landmarks/tsrc/dev/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_landmarks/tsrc/testing/tlandmarksprovidertest/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_landmarks/tsrc/dev/landmarks_inputparams/group"/> -->
+      <unit bldFile="mw/serviceapi/serviceproviders/sapi_landmarks/group"/>
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_landmarks/tsrc/testing/tlandmarkstest/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_landmarks/tsrc/dev/group"/> -->
      </component>
     </collection>
     <collection name="sapi_location" long-name="SAPI Location" level="mw2">
-     <component name="locationservice" long-name="Location Service">
-      <unit bldFile="mw/serviceapi/sapi_location/locationservice/group"/>
-     </component>
-     <component unofficial="yes" name="sapi_location_test" long-name="SAPI Location Test">
-      <!-- <unit bldFile="mw/serviceapi/sapi_location/tsrc/testing/performance/pgetlocopts/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_location/tsrc/testing/performance/pgetbearing/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_location/tsrc/dev/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_location/tsrc/testing/performance/pgetlocasync/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_location/tsrc/testing/performance/pgetdistance/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_location/tsrc/testing/performance/pgetloc/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_location/tsrc/testing/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_location/tsrc/testing/performance/pmove/group"/> -->
-      <unit bldFile="mw/serviceapi/sapi_location/tsrc/group"/>
-     </component>
+     <component name="locationservice" long-name="Location Service"/>
      <component unofficial="yes" name="sapi_location_build" long-name="SAPI Location Build">
-      <unit bldFile="mw/serviceapi/sapi_location/group"/>
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_location/tsrc/testing/performance/pgetloc/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_location/tsrc/testing/performance/pgetlocopts/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_location/tsrc/testing/performance/pgetlocasync/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_location/tsrc/testing/performance/pgetbearing/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_location/tsrc/testing/performance/pgetdistance/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_location/tsrc/testing/group"/> -->
+      <unit bldFile="mw/serviceapi/serviceproviders/sapi_location/group"/>
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_location/tsrc/dev/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_location/tsrc/testing/performance/pmove/group"/> -->
      </component>
     </collection>
     <collection name="sapi_logging" long-name="SAPI Logging" level="app">
-     <component name="loggingservice" long-name="Logging Service">
-      <unit bldFile="mw/serviceapi/sapi_logging/loggingservice/group"/>
-     </component>
-     <component unofficial="yes" name="sapi_logging_test" long-name="SAPI Logging Test">
-      <unit bldFile="mw/serviceapi/sapi_logging/tsrc/group"/>
-      <!-- <unit bldFile="mw/serviceapi/sapi_logging/tsrc/dev/group"/> -->
-     </component>
+     <component name="loggingservice" long-name="Logging Service"/>
      <component unofficial="yes" name="sapi_logging_build" long-name="SAPI Logging Build">
-      <unit bldFile="mw/serviceapi/sapi_logging/group"/>
+      <unit bldFile="mw/serviceapi/serviceproviders/sapi_logging/group"/>
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_logging/tsrc/dev/group"/> -->
      </component>
     </collection>
     <collection name="sapi_mediamanagement" long-name="SAPI Media Management" level="mw2">
-     <component name="mediamanagementservice" long-name="Media Management Service">
-      <unit bldFile="mw/serviceapi/sapi_mediamanagement/mediamanagementservice/group"/>
-     </component>
+     <component name="mediamanagementservice" long-name="Media Management Service"/>
      <component unofficial="yes" name="sapi_mediamanagement_build" long-name="SAPI Media Management Build">
-      <unit bldFile="mw/serviceapi/sapi_mediamanagement/group"/>
-     </component>
-     <component unofficial="yes" name="sapi_mediamanagement_test" long-name="SAPI Media Management Test">
-      <!-- <unit bldFile="mw/serviceapi/sapi_mediamanagement/tsrc/testing/performance/runtime_perf/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_mediamanagement/tsrc/dev/taiwmediamgmttest/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_mediamanagement/tsrc/testing/performance/s60_perf/group"/> -->
-      <unit bldFile="mw/serviceapi/sapi_mediamanagement/tsrc/group"/>
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_mediamanagement/tsrc/dev/taiwmediamgmttest/group"/> -->
+      <unit bldFile="mw/serviceapi/serviceproviders/sapi_mediamanagement/group"/>
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_mediamanagement/tsrc/testing/performance/runtime_perf/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_mediamanagement/tsrc/testing/performance/s60_perf/group"/> -->
      </component>
     </collection>
     <collection name="sapi_messaging" long-name="SAPI Messaging" level="mw2">
-     <component name="messagingservice" long-name="Messaging Service">
-      <unit bldFile="mw/serviceapi/sapi_messaging/messagingservice/group"/>
-     </component>
-     <component unofficial="yes" name="sapi_messaging_test" long-name="SAPI Messaging Test">
-      <!-- <unit bldFile="mw/serviceapi/sapi_messaging/tsrc/testing/performance/delete/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_messaging/tsrc/testing/tmessagingprovidertest/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_messaging/tsrc/testing/performance/send/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_messaging/tsrc/testing/performance/s60_asyncsend/group"/> -->
-      <unit bldFile="mw/serviceapi/sapi_messaging/tsrc/group"/>
-      <!-- <unit bldFile="mw/serviceapi/sapi_messaging/tsrc/testing/performance/getlist/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_messaging/tsrc/testing/performance/s60_notify/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_messaging/tsrc/testing/performance/s60_status/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_messaging/tsrc/testing/performance/s60_delete/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_messaging/tsrc/testing/performance/s60_getlist/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_messaging/tsrc/testing/performance/asyncsend/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_messaging/tsrc/testing/performance/s60_send/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_messaging/tsrc/testing/performance/notify/group"/> -->
-      <!-- <unit bldFile="mw/serviceapi/sapi_messaging/tsrc/testing/performance/status/group"/> -->
-     </component>
+     <component name="messagingservice" long-name="Messaging Service"/>
      <component unofficial="yes" name="sapi_messaging_build" long-name="SAPI Messaging Build">
-      <unit bldFile="mw/serviceapi/sapi_messaging/group"/>
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_messaging/tsrc/testing/performance/s60_asyncsend/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_messaging/tsrc/testing/performance/send/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_messaging/tsrc/testing/tmessagingprovidertest/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_messaging/tsrc/testing/performance/asyncsend/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_messaging/tsrc/testing/performance/notify/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_messaging/tsrc/testing/performance/status/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_messaging/tsrc/testing/performance/delete/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_messaging/tsrc/testing/performance/getlist/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_messaging/tsrc/testing/performance/s60_getlist/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_messaging/tsrc/testing/performance/s60_notify/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_messaging/tsrc/testing/performance/s60_status/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_messaging/tsrc/testing/performance/s60_delete/group"/> -->
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_messaging/tsrc/testing/performance/s60_send/group"/> -->
+      <unit bldFile="mw/serviceapi/serviceproviders/sapi_messaging/group"/>
      </component>
     </collection>
     <collection name="sapi_sensor" long-name="SAPI Sensor" level="mw1">
-     <component name="sensorservice" long-name="Sensor Service">
-      <unit bldFile="mw/serviceapi/sapi_sensor/sensorservice/group"/>
-     </component>
-     <component unofficial="yes" name="sapi_sensor_test" long-name="SAPI Sensor Test">
-      <unit bldFile="mw/serviceapi/sapi_sensor/tsrc/group"/>
-     </component>
+     <component name="sensorservice" long-name="Sensor Service"/>
      <component unofficial="yes" name="sapi_sensor_build" long-name="SAPI Sensor Build">
-      <unit bldFile="mw/serviceapi/sapi_sensor/group"/>
+      <unit bldFile="mw/serviceapi/serviceproviders/sapi_sensor/group"/>
      </component>
     </collection>
     <collection name="sapi_sysinfo" long-name="SAPI Sysinfo" level="mw1">
-     <component name="sysinfoservice" long-name="Sysinfo Service">
-      <unit bldFile="mw/serviceapi/sapi_sysinfo/sysinfoservice/group"/>
-     </component>
+     <component name="sysinfoservice" long-name="Sysinfo Service"/>
      <component unofficial="yes" name="sapi_sysinfo_build" long-name="SAPI Sysinfo Build">
-      <unit bldFile="mw/serviceapi/sapi_sysinfo/group"/>
-     </component>
-     <component unofficial="yes" name="sapi_sysinfo_test" long-name="SAPI Sysinfo Test">
-      <unit bldFile="mw/serviceapi/sapi_sysinfo/tsrc/group"/>
+      <unit bldFile="mw/serviceapi/serviceproviders/sapi_sysinfo/group"/>
      </component>
     </collection>
     <collection name="sapi_serviceregistry" long-name="SAPI Service Registry" level="os">
-     <component name="serviceregistryprovider.dll=binary"/>
+     <component name="serviceregistryprovider.dll=binary">
+      <!-- <unit bldFile="mw/serviceapi/serviceproviders/sapi_serviceregistry/tsrc/dev/group"/> -->
+      <unit bldFile="mw/serviceapi/serviceproviders/sapi_serviceregistry/group"/>
+     </component>
     </collection>
     <collection name="serviceapi_info" long-name="Service API Info" level="app">
+     <component unofficial="yes" name="serviceproviders">
+      <unit bldFile="mw/serviceapi/serviceproviders/group"/>
+     </component>
      <component unofficial="yes" name="serviceapi_test" long-name="Service API Test">
       <!-- <unit bldFile="mw/serviceapi/tsrc/group"/> -->
-     </component>
-     <component unofficial="yes" name="serviceapi_build" long-name="Service API Build">
-      <unit bldFile="mw/serviceapi/group"/>
      </component>
     </collection>
    </block>
@@ -7448,9 +7424,10 @@ Operator Complementary Packages		ocp
      <component name="widgetengine" long-name="Widget Engine">
       <unit bldFile="mw/web/webengine/widgetengine/group"/>
      </component>
-     <component name="memoryplugin" long-name="Memory Plugin">
-      <unit bldFile="mw/web/webengine/memoryplugin/group"/>
-     </component>
+     <!--Component manually removed as empty and name conflicts with another component-->
+     <!--<component name="memoryplugin" long-name="Memory Plugin">
+       <unit bldFile="mw/web/webengine/memoryplugin/group"/>
+     </component>-->
      <component name="widgetmemoryplugin" long-name="Widget Memory Plugin">
       <unit bldFile="mw/web/webengine/widgetmemoryplugin/group"/>
      </component>
@@ -7844,18 +7821,13 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
    </block>
-   <block name="mobiletv">
-    <collection name="mobiletv_info">
-     <component unofficial="yes" name="mobiletv_build">
-      <unit bldFile="mw/mobiletv/group"/>
-     </component>
-    </collection>
-   </block>
   </layer>
   <layer name="app" long-name="Applications" levels="services apps">
    <block name="location" long-name="Location Apps" tech_domain="lo" level="apps" levels="engine ui apps">
     <collection name="landmarksui" long-name="Landmarks UI" level="ui">
-     <component name="landmarksui_help" long-name="Help"/>
+     <component name="landmarksui_help" long-name="Help">
+      <unit bldFile="app/location/landmarksui/help/group"/>
+     </component>
      <component name="landmarksui_engine" long-name="Engine">
       <unit bldFile="app/location/landmarksui/engine/group"/>
      </component>
@@ -7884,7 +7856,9 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="eventsui" long-name="Events UI" level="ui">
-     <component name="eventsui_help" long-name="Help"/>
+     <component name="eventsui_help" long-name="Help">
+      <unit bldFile="app/location/eventsui/help/group"/>
+     </component>
      <component name="eventsutils" long-name="Events Utils">
       <unit bldFile="app/location/eventsui/eventsutils/group"/>
      </component>
@@ -7973,6 +7947,7 @@ Operator Complementary Packages		ocp
      </component>
      <component name="mmshui" long-name="Multimedia Sharing UI">
       <unit bldFile="app/mmsharinguis/mmsharing/mmshui/group"/>
+      <unit bldFile="app/mmsharinguis/mmsharing/mmshui/help/group"/>
       <!-- <unit bldFile="app/mmsharinguis/mmsharing/mmshui/tsrc/ut_ui/group"/> -->
      </component>
      <component unofficial="yes" name="mmsharing_build" long-name="MM Sharing Build">
@@ -8092,7 +8067,9 @@ Operator Complementary Packages		ocp
      <component name="loghandling" long-name="Log Handling">
       <unit bldFile="app/phone/phoneengine/loghandling/group"/>
      </component>
-     <component name="engineinfo" long-name="Engine Info"/>
+     <component name="engineinfo" long-name="Engine Info">
+      <unit bldFile="app/phone/phoneengine/engineinfo/group"/>
+     </component>
      <component name="phonemodel" long-name="Phone Model">
       <unit bldFile="app/phone/phoneengine/phonemodel/group"/>
      </component>
@@ -8283,6 +8260,9 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="poc_build" long-name="PoC Build">
       <unit bldFile="app/poc/group"/>
      </component>
+     <component unofficial="yes" name="poc_help" long-name="PoC Help">
+      <unit bldFile="app/poc/help/group"/>
+     </component>
     </collection>
     <collection name="poc_plat" long-name="PoC Platform Interfaces" level="ui">
      <component unofficial="yes" name="poc_sessions_api">
@@ -8452,6 +8432,7 @@ Operator Complementary Packages		ocp
       <unit bldFile="app/settingsuis/group"/>
      </component>
      <component unofficial="yes" name="default_app_client_api">
+      <!-- <unit bldFile="app/settingsuis/devmngt_plat/default_app_client_api/tsrc/dasclientapitest/group"/> -->
       <unit bldFile="app/settingsuis/devmngt_plat/default_app_client_api/group"/>
      </component>
      <component unofficial="yes" name="settingsuis_test" long-name="Settings UIs Test">
@@ -8465,30 +8446,57 @@ Operator Complementary Packages		ocp
    </block>
    <block name="contentcontrol" long-name="Content Control Daemons" tech_domain="dm" level="services" levels="1 2">
     <collection name="applicationmanagement" long-name="Application Management" level="1">
-     <component name="options" long-name="Options"/>
-     <component name="applicationmanagement_client" long-name="Client"/>
-     <component name="applicationmanagement_server" long-name="Server"/>
-     <component name="RfsPlugin"/>
-     <component name="amadapter2" long-name="AM Adapter2"/>
+     <component name="options" long-name="Options">
+      <unit bldFile="app/devicecontrol/applicationmanagement/options/group"/>
+     </component>
+     <component name="applicationmanagement_client" long-name="Client">
+      <unit bldFile="app/devicecontrol/applicationmanagement/client/group"/>
+     </component>
+     <component name="applicationmanagement_server" long-name="Server">
+      <unit bldFile="app/devicecontrol/applicationmanagement/server/group"/>
+     </component>
+     <component name="RfsPlugin">
+      <unit bldFile="app/devicecontrol/applicationmanagement/rfsplugin/group"/>
+     </component>
+     <component name="amadapter2" long-name="AM Adapter2">
+      <unit bldFile="app/devicecontrol/applicationmanagement/amadapter2/group"/>
+     </component>
     </collection>
     <collection name="customization" long-name="Customization" level="2">
-     <component name="DMUtils"/>
-     <component name="UISettingsSrv"/>
-     <component name="isadapter" long-name="IS Adapter"/>
-     <component name="supadapter" long-name="SUPAdapter"/>
-     <component name="WallpaperAdapter"/>
-     <component name="OperatorLogoAdapter"/>
-     <component name="ScreenSaverAdapter"/>
-     <component name="ThemesAdapter"/>
-     <component name="EmbeddedLinkAdapter"/>
+     <component name="DMUtils">
+      <unit bldFile="app/devicecontrol/customization/dmutils/bld"/>
+     </component>
+     <component name="UISettingsSrv">
+      <unit bldFile="app/devicecontrol/customization/uisettingssrv/bld"/>
+     </component>
+     <component name="isadapter" long-name="IS Adapter">
+      <unit bldFile="app/devicecontrol/customization/isadapter/bld"/>
+     </component>
+     <component name="supadapter" long-name="SUPAdapter">
+      <unit bldFile="app/devicecontrol/customization/supadapter/bld"/>
+     </component>
+     <component name="WallpaperAdapter">
+      <unit bldFile="app/devicecontrol/customization/wallpaperadapter/bld"/>
+     </component>
+     <component name="OperatorLogoAdapter">
+      <unit bldFile="app/devicecontrol/customization/operatorlogoadapter/bld"/>
+     </component>
+     <component name="ScreenSaverAdapter">
+      <unit bldFile="app/devicecontrol/customization/screensaveradapter/bld"/>
+     </component>
+     <component name="ThemesAdapter">
+      <unit bldFile="app/devicecontrol/customization/themesadapter/bld"/>
+     </component>
+     <component name="EmbeddedLinkAdapter">
+      <unit bldFile="app/devicecontrol/customization/embeddedlinkadapter/bld"/>
+     </component>
     </collection>
     <collection name="omads" long-name="OMA DS" level="1">
      <component name="omadsappui" long-name="OMA DS App UI">
       <unit bldFile="app/contentcontrol/omads/omadsappui/group"/>
      </component>
      <component name="omadsextensions" long-name="OMA DS Extensions">
-      <!-- <unit bldFile="app/contentcontrol/omads/omadsextensions/adapters/contacts_old/bld"/> -->
-      <!-- <unit bldFile="app/contentcontrol/omads/omadsextensions/adapters/email/bld"/> -->
+      <!-- <unit bldFile="app/contentcontrol/omads/omadsextensions/dsutils/emailxmlutils/bld"/> -->
       <unit bldFile="app/contentcontrol/omads/omadsextensions/group"/>
      </component>
     </collection>
@@ -8498,9 +8506,6 @@ Operator Complementary Packages		ocp
      </component>
      <component unofficial="yes" name="oma_ds_presync_plugin_api">
       <unit bldFile="app/contentcontrol/contentctrl_plat/oma_ds_presync_plugin_api/group"/>
-     </component>
-     <component unofficial="yes" name="oma_ds_email_client_mtm_api">
-      <unit bldFile="app/contentcontrol/contentctrl_plat/oma_ds_email_client_mtm_api/group"/>
      </component>
     </collection>
    </block>
@@ -8548,6 +8553,7 @@ Operator Complementary Packages		ocp
     <collection name="pnpmobileservices" long-name="PnP Mobile Services" level="mid">
      <component name="pnpms" long-name="PnP MS">
       <unit bldFile="app/devicecontrol/pnpmobileservices/pnpms/group"/>
+      <!-- <unit bldFile="app/devicecontrol/pnpmobileservices/pnpms/tsrc/group"/> -->
      </component>
     </collection>
     <collection name="omacp" long-name="OMA Content Provisioning" level="oma">
@@ -8559,11 +8565,17 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="devicecontrol_build" long-name="Device Control Daemons Build">
       <unit bldFile="app/devicecontrol/group"/>
      </component>
-     <component unofficial="yes" name="tarmcustomization">
-      <unit bldFile="app/devicecontrol/customization/tarmcustomization/group"/>
+     <component unofficial="yes" name="customization_test">
+      <!-- <unit bldFile="app/devicecontrol/customization/tsrc/tarmcustomization/group"/> -->
      </component>
-     <component unofficial="yes" name="tarmappmng">
-      <unit bldFile="app/devicecontrol/applicationmanagement/tarmappmng/group"/>
+     <component unofficial="yes" name="applicationmanagement">
+      <unit bldFile="app/devicecontrol/applicationmanagement/group"/>
+     </component>
+     <component unofficial="yes" name="customization">
+      <unit bldFile="app/devicecontrol/customization/group"/>
+     </component>
+     <component unofficial="yes" name="applicationmanagement_test">
+      <!-- <unit bldFile="app/devicecontrol/applicationmanagement/tsrc/tarmappmng/group"/> -->
      </component>
     </collection>
    </block>
@@ -8596,7 +8608,9 @@ Operator Complementary Packages		ocp
    </block>
    <block name="files" long-name="File Manager Apps" tech_domain="pr" level="apps" levels="support apps">
     <collection name="filemanager" long-name="File Manager" level="apps">
-     <component name="filemanager_help" long-name="Help"/>
+     <component name="filemanager_help" long-name="Help">
+      <unit bldFile="app/files/filemanager/help/group"/>
+     </component>
      <component unofficial="yes" name="filemanager_build" long-name="File Manager Build">
       <unit bldFile="app/files/filemanager/group"/>
      </component>
@@ -8633,7 +8647,9 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="logsui" long-name="Logs UI" level="ui">
-     <component name="logsui_help" long-name="Help"/>
+     <component name="logsui_help" long-name="Help">
+      <unit bldFile="app/contacts/logsui/help/group"/>
+     </component>
      <component name="logsserviceextension" long-name="Logs Service Extension">
       <unit bldFile="app/contacts/logsui/logsserviceextension/group"/>
      </component>
@@ -8671,22 +8687,19 @@ Operator Complementary Packages		ocp
       <!-- <unit bldFile="app/contacts/phonebookengines/virtualphonebook/tsrc/mt_vpbkeng_selectorfactory/group"/> -->
       <!-- <unit bldFile="app/contacts/phonebookengines/virtualphonebook/tsrc/mt_vpbkeng_strcntanalyzer/group"/> -->
      </component>
-     <component name="contactsmodel">
-      <!-- <unit bldFile="app/contacts/phonebookengines/contactsmodel/cntmatchlog/group"/> -->
-      <!-- <unit bldFile="app/contacts/phonebookengines/contactsmodel/group"/> -->
-      <!-- <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/cntmatchlog/group"/> -->
-      <!-- <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/fuzztest/group"/> -->
-      <!-- <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/cntperftest/group"/> -->
-      <!-- <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/cntperftest/groupsql"/> -->
-      <!-- <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/perffuncsuite/group"/> -->
-      <!-- <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/perffuncsuite/groupsql"/> -->
-      <!-- <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/tcntpolice/group"/> -->
-      <!-- <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/tcntpolice/groupsql"/> -->
-      <!-- <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/testcontactsuite/group"/> -->
-      <!-- <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/testimpexvcard/group"/> -->
-      <!-- <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/testimpexvcard/groupsql"/> -->
-      <!-- <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/teststartup/group"/> -->
-     </component>
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="contactsmodel">
+       -  <unit bldFile="app/contacts/phonebookengines/contactsmodel/cntmatchlog/group"/>  -
+       -  <unit bldFile="app/contacts/phonebookengines/contactsmodel/group"/>  -
+       -  <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/cntmatchlog/group"/>  -
+       -  <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/fuzztest/group"/>  -
+       <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/cntperftest/groupsql"/>
+       <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/perffuncsuite/groupsql"/>
+       <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/tcntpolice/groupsql"/>
+       -  <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/testcontactsuite/group"/>  -
+       <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/testimpexvcard/groupsql"/>
+       -  <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/teststartup/group"/>  -
+     </component>-->
      <component unofficial="yes" name="phonebookengines_build" long-name="Phonebook Engines Build">
       <unit bldFile="app/contacts/phonebookengines/group"/>
      </component>
@@ -8730,7 +8743,7 @@ Operator Complementary Packages		ocp
       <unit bldFile="app/contacts/predictivesearch/adapters/contacts/group"/>
      </component>
      <component name="PcsAlgorithm" long-name="PCS Algorithm">
-      <unit bldFile="app/contacts/predictivesearch/pcsalgorithm/algorithm1/group"/>
+      <unit bldFile="app/contacts/predictivesearch/pcsalgorithm/group"/>
      </component>
      <component unofficial="yes" name="predictivesearch_build" long-name="Predictive Search Build">
       <unit bldFile="app/contacts/predictivesearch/group"/>
@@ -8743,6 +8756,7 @@ Operator Complementary Packages		ocp
     </collection>
     <collection name="contacts_plat" long-name="Contacts Apps Platform Interfaces" level="ui">
      <component unofficial="yes" name="speed_dial_dialogs_api">
+      <!-- <unit bldFile="app/contacts/contacts_plat/speed_dial_dialogs_api/tsrc/bc/group"/> -->
       <unit bldFile="app/contacts/contacts_plat/speed_dial_dialogs_api/group"/>
      </component>
      <component unofficial="yes" name="phonebook_2_ui_controls_api">
@@ -8808,9 +8822,6 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="phonebook_internal_common_api">
       <unit bldFile="app/contacts/contacts_plat/phonebook_internal_common_api/group"/>
      </component>
-     <component unofficial="yes" name="logs_application_engine_api">
-      <unit bldFile="app/contacts/contacts_plat/logs_application_engine_api/group"/>
-     </component>
      <component unofficial="yes" name="phonebook_2_ui_utilities_api">
       <unit bldFile="app/contacts/contacts_plat/phonebook_2_ui_utilities_api/group"/>
      </component>
@@ -8852,9 +8863,6 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="cca_view_plugin_api">
       <unit bldFile="app/contacts/contacts_plat/cca_view_plugin_api/group"/>
       <!-- <unit bldFile="app/contacts/contacts_plat/cca_view_plugin_api/tsrc/group"/> -->
-     </component>
-     <component unofficial="yes" name="cms_client_api">
-      <unit bldFile="app/contacts/contacts_plat/cms_client_api/group"/>
      </component>
      <component unofficial="yes" name="predictivesearch_adapters_api">
       <unit bldFile="app/contacts/contacts_plat/predictivesearch_adapters_api/group"/>
@@ -8934,7 +8942,9 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="calendarui" long-name="Calendar UI" level="ui">
-     <component name="calendarui_help" long-name="Help"/>
+     <component name="calendarui_help" long-name="Help">
+      <unit bldFile="app/organizer/calendarui/help/group"/>
+     </component>
      <component name="commonutils" long-name="Common Utils">
       <unit bldFile="app/organizer/calendarui/commonutils/group"/>
      </component>
@@ -8989,7 +8999,9 @@ Operator Complementary Packages		ocp
       <unit bldFile="app/organizer/clock2/clockui/group"/>
       <!-- <unit bldFile="app/organizer/clock2/clockui/plugins/datetimeviewplugin/group"/> -->
      </component>
-     <component name="clock2_help" long-name="Help"/>
+     <component name="clock2_help" long-name="Help">
+      <unit bldFile="app/organizer/clock2/help/group"/>
+     </component>
      <component unofficial="yes" name="clock2_build" long-name="Clock2 Build">
       <unit bldFile="app/organizer/clock2/group"/>
      </component>
@@ -9012,7 +9024,9 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="notepad" long-name="Notepad" level="ui">
-     <component name="notepad_help" long-name="Help"/>
+     <component name="notepad_help" long-name="Help">
+      <unit bldFile="app/organizer/notepad/help/group"/>
+     </component>
      <component name="notepad1" long-name="Notepad1">
       <unit bldFile="app/organizer/notepad/notepad1/group"/>
       <!-- <unit bldFile="app/organizer/notepad/notepad1/syncmladapter/group"/> -->
@@ -9025,7 +9039,9 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="searchui" long-name="Search UI" level="ui">
-     <component name="searchui_help" long-name="Help"/>
+     <component name="searchui_help" long-name="Help">
+      <unit bldFile="app/organizer/searchui/help/group"/>
+     </component>
      <component name="searchapp" long-name="Search App">
       <unit bldFile="app/organizer/searchui/searchapp/group"/>
       <!-- <unit bldFile="app/organizer/searchui/searchapp/plugins/searchsettingsplugin/group"/> -->
@@ -9056,7 +9072,9 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="meetingrequestengines" long-name="Meeting Request Engines" level="engine">
-     <component name="mrmailbox" long-name="MR Mailbox"/>
+     <component name="mrmailbox" long-name="MR Mailbox">
+      <unit bldFile="app/organizer/meetingrequestengines/mrmailbox/group"/>
+     </component>
      <component name="mrmailboxutils" long-name="MR Mailbox Utils">
       <unit bldFile="app/organizer/meetingrequestengines/mrmailboxutils/group"/>
      </component>
@@ -9109,6 +9127,9 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="alarm_ui_external_control_api">
       <unit bldFile="app/organizer/organizer_plat/alarm_ui_external_control_api/group"/>
      </component>
+     <component unofficial="yes" name="calendar_custamization_api">
+      <unit bldFile="app/organizer/organizer_plat/calendar_custamization_api/group"/>
+     </component>
      <component unofficial="yes" name="searchui_launcher_api">
       <unit bldFile="app/organizer/organizer_plat/searchui_launcher_api/group"/>
      </component>
@@ -9136,6 +9157,9 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="meeting_request_mailbox_utilities_api">
       <!-- <unit bldFile="app/organizer/organizer_plat/meeting_request_mailbox_utilities_api/tsrc/group"/> -->
       <unit bldFile="app/organizer/organizer_plat/meeting_request_mailbox_utilities_api/group"/>
+     </component>
+     <component unofficial="yes" name="calendar_common_utils_api">
+      <unit bldFile="app/organizer/organizer_plat/calendar_common_utils_api/group"/>
      </component>
      <component unofficial="yes" name="meeting_request_uids_api">
       <unit bldFile="app/organizer/organizer_plat/meeting_request_uids_api/group"/>
@@ -9184,10 +9208,11 @@ Operator Complementary Packages		ocp
       <unit bldFile="app/messaging/mobilemessaging/smsui/group"/>
       <!-- <unit bldFile="app/messaging/mobilemessaging/smsui/viewer"/> -->
      </component>
-     <component name="smsmtm">
-      <unit bldFile="app/messaging/mobilemessaging/smsmtm/multimode/group"/>
-      <!-- <unit bldFile="app/messaging/mobilemessaging/smsmtm/test/testrom"/> -->
-     </component>
+     <!--Component manually removed as already declared in OS-->
+     <!--<component name="smsmtm">
+       <unit bldFile="app/messaging/mobilemessaging/smsmtm/multimode/group"/>
+       -  <unit bldFile="app/messaging/mobilemessaging/smsmtm/test/testrom"/>  -
+     </component>-->
     </collection>
     <collection name="mmsengine" long-name="MMS Engine" level="eng">
      <component name="mmsconninit" long-name="MMS Connection Init">
@@ -9226,10 +9251,10 @@ Operator Complementary Packages		ocp
      <component name="mmscodecclient" long-name="MMS Codec Client">
       <!-- <unit bldFile="app/messaging/mmsengine/mmscodecclient/bld"/> -->
      </component>
-     <component name="mmssettings">
-      <unit bldFile="app/messaging/mmsengine/mmssettings/etc"/>
-      <unit bldFile="app/messaging/mmsengine/mmssettings/test/group"/>
-     </component>
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="mmssettings">
+       <unit bldFile="app/messaging/mmsengine/mmssettings/test/group"/>
+     </component>-->
      <component unofficial="yes" name="mmsengine_build" long-name="MMS Engine Build">
       <unit bldFile="app/messaging/mmsengine/group"/>
      </component>
@@ -9274,26 +9299,28 @@ Operator Complementary Packages		ocp
      <component name="msgeditor" long-name="Messaging Editor">
       <unit bldFile="app/messaging/messagingappbase/msgeditor/group"/>
      </component>
-     <component name="smilparser">
-      <unit bldFile="app/messaging/messagingappbase/smilparser/rom"/>
-      <unit bldFile="app/messaging/messagingappbase/smilparser/smildtd/group"/>
-      <unit bldFile="app/messaging/messagingappbase/smilparser/xmldom/group"/>
-      <unit bldFile="app/messaging/messagingappbase/smilparser/xmlparser/group"/>
-     </component>
-     <component name="obexmtms">
-      <unit bldFile="app/messaging/messagingappbase/obexmtms/btmtm/btclient/group"/>
-      <unit bldFile="app/messaging/messagingappbase/obexmtms/btmtm/btserver/group"/>
-      <unit bldFile="app/messaging/messagingappbase/obexmtms/irmtm/irclient/group"/>
-      <unit bldFile="app/messaging/messagingappbase/obexmtms/irmtm/irserver/group"/>
-      <unit bldFile="app/messaging/messagingappbase/obexmtms/obexmtm/obexclient/group"/>
-      <unit bldFile="app/messaging/messagingappbase/obexmtms/obexmtm/obexserver/group"/>
-      <unit bldFile="app/messaging/messagingappbase/obexmtms/obexmtm/obexutil/group"/>
-      <unit bldFile="app/messaging/messagingappbase/obexmtms/rom"/>
-      <unit bldFile="app/messaging/messagingappbase/obexmtms/tobexmtm/group"/>
-      <!-- <unit bldFile="app/messaging/messagingappbase/obexmtms/tobexmtm/obexstub/bluetoothsdpstub/sdp"/> -->
-      <!-- <unit bldFile="app/messaging/messagingappbase/obexmtms/tobexmtm/obexstub/irobexstub/group"/> -->
-      <!-- <unit bldFile="app/messaging/messagingappbase/obexmtms/tobexmtm/testutils/msgth/group"/> -->
-     </component>
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="smilparser">
+       <unit bldFile="app/messaging/messagingappbase/smilparser/rom"/>
+       <unit bldFile="app/messaging/messagingappbase/smilparser/smildtd/group"/>
+       <unit bldFile="app/messaging/messagingappbase/smilparser/xmldom/group"/>
+       <unit bldFile="app/messaging/messagingappbase/smilparser/xmlparser/group"/>
+     </component>-->
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="obexmtms">
+       <unit bldFile="app/messaging/messagingappbase/obexmtms/btmtm/btclient/group"/>
+       <unit bldFile="app/messaging/messagingappbase/obexmtms/btmtm/btserver/group"/>
+       <unit bldFile="app/messaging/messagingappbase/obexmtms/irmtm/irclient/group"/>
+       <unit bldFile="app/messaging/messagingappbase/obexmtms/irmtm/irserver/group"/>
+       <unit bldFile="app/messaging/messagingappbase/obexmtms/obexmtm/obexclient/group"/>
+       <unit bldFile="app/messaging/messagingappbase/obexmtms/obexmtm/obexserver/group"/>
+       <unit bldFile="app/messaging/messagingappbase/obexmtms/obexmtm/obexutil/group"/>
+       <unit bldFile="app/messaging/messagingappbase/obexmtms/rom"/>
+       <unit bldFile="app/messaging/messagingappbase/obexmtms/tobexmtm/group"/>
+       -  <unit bldFile="app/messaging/messagingappbase/obexmtms/tobexmtm/obexstub/bluetoothsdpstub/sdp"/>  -
+       -  <unit bldFile="app/messaging/messagingappbase/obexmtms/tobexmtm/obexstub/irobexstub/group"/>  -
+       -  <unit bldFile="app/messaging/messagingappbase/obexmtms/tobexmtm/testutils/msgth/group"/>  -
+     </component>-->
     </collection>
     <collection name="email" long-name="Email" level="mail">
      <component name="alwaysonlineemailplugin" long-name="Always Online Mail Plugin">
@@ -9311,28 +9338,30 @@ Operator Complementary Packages		ocp
      <component name="mail" long-name="Mail">
       <unit bldFile="app/messaging/email/mail/group"/>
      </component>
-     <component name="pop3andsmtpmtm">
-      <unit bldFile="app/messaging/email/pop3andsmtpmtm/autosend/group"/>
-      <unit bldFile="app/messaging/email/pop3andsmtpmtm/clientmtms/group"/>
-      <!-- <unit bldFile="app/messaging/email/pop3andsmtpmtm/clientmtms/test/testrom"/> -->
-      <unit bldFile="app/messaging/email/pop3andsmtpmtm/popservermtm/group"/>
-      <!-- <unit bldFile="app/messaging/email/pop3andsmtpmtm/popservermtm/test/testrom"/> -->
-      <unit bldFile="app/messaging/email/pop3andsmtpmtm/servermtmutils/group"/>
-      <!-- <unit bldFile="app/messaging/email/pop3andsmtpmtm/servermtmutils/test/testrom"/> -->
-      <unit bldFile="app/messaging/email/pop3andsmtpmtm/smtpservermtm/group"/>
-      <!-- <unit bldFile="app/messaging/email/pop3andsmtpmtm/smtpservermtm/test/testrom"/> -->
-     </component>
-     <component name="imap4mtm">
-      <unit bldFile="app/messaging/email/imap4mtm/imapmailstore/group"/>
-      <unit bldFile="app/messaging/email/imap4mtm/imapofflinecontrol/group"/>
-      <unit bldFile="app/messaging/email/imap4mtm/imapprotocolcontroller/group"/>
-      <unit bldFile="app/messaging/email/imap4mtm/imapservermtm/group"/>
-      <unit bldFile="app/messaging/email/imap4mtm/imapsession/group"/>
-      <unit bldFile="app/messaging/email/imap4mtm/imapsettings/group"/>
-      <unit bldFile="app/messaging/email/imap4mtm/imapsyncmanager/group"/>
-      <unit bldFile="app/messaging/email/imap4mtm/imaptransporthandler/group"/>
-      <unit bldFile="app/messaging/email/imap4mtm/imaputils/group"/>
-     </component>
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="pop3andsmtpmtm">
+       <unit bldFile="app/messaging/email/pop3andsmtpmtm/autosend/group"/>
+       <unit bldFile="app/messaging/email/pop3andsmtpmtm/clientmtms/group"/>
+       -  <unit bldFile="app/messaging/email/pop3andsmtpmtm/clientmtms/test/testrom"/>  -
+       <unit bldFile="app/messaging/email/pop3andsmtpmtm/popservermtm/group"/>
+       -  <unit bldFile="app/messaging/email/pop3andsmtpmtm/popservermtm/test/testrom"/>  -
+       <unit bldFile="app/messaging/email/pop3andsmtpmtm/servermtmutils/group"/>
+       -  <unit bldFile="app/messaging/email/pop3andsmtpmtm/servermtmutils/test/testrom"/>  -
+       <unit bldFile="app/messaging/email/pop3andsmtpmtm/smtpservermtm/group"/>
+       -  <unit bldFile="app/messaging/email/pop3andsmtpmtm/smtpservermtm/test/testrom"/>  -
+     </component>-->
+     <!--Component manually removed and merged to OS-->
+     <!--<component name="imap4mtm">
+       <unit bldFile="app/messaging/email/imap4mtm/imapmailstore/group"/>
+       <unit bldFile="app/messaging/email/imap4mtm/imapofflinecontrol/group"/>
+       <unit bldFile="app/messaging/email/imap4mtm/imapprotocolcontroller/group"/>
+       <unit bldFile="app/messaging/email/imap4mtm/imapservermtm/group"/>
+       <unit bldFile="app/messaging/email/imap4mtm/imapsession/group"/>
+       <unit bldFile="app/messaging/email/imap4mtm/imapsettings/group"/>
+       <unit bldFile="app/messaging/email/imap4mtm/imapsyncmanager/group"/>
+       <unit bldFile="app/messaging/email/imap4mtm/imaptransporthandler/group"/>
+       <unit bldFile="app/messaging/email/imap4mtm/imaputils/group"/>
+     </component>-->
     </collection>
     <collection name="messaging_info" long-name="Messaging Apps Info" level="ui">
      <component unofficial="yes" name="mms_client_mtm_api">
@@ -9341,6 +9370,7 @@ Operator Complementary Packages		ocp
      </component>
      <component unofficial="yes" name="email_domain_utilities_api">
       <unit bldFile="app/messaging/msg_plat/email_domain_utilities_api/group"/>
+      <!-- <unit bldFile="app/messaging/msg_plat/email_domain_utilities_api/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="messaging_build" long-name="Messaging Apps Build">
       <unit bldFile="app/messaging/group"/>
@@ -9544,7 +9574,9 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="emailhelp" long-name="Email Help" level="support">
-     <component name="emailhelp compo"/>
+     <component name="emailhelp compo">
+      <!-- <unit bldFile="app/commonemail/emailhelp/group"/> -->
+     </component>
     </collection>
     <collection name="legacy" long-name="Legacy Email" level="support">
      <component name="iad_rofs" long-name="IAD ROFS"/>
@@ -9571,15 +9603,21 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="imstutils" long-name="IM Service Tab Utils" level="utils">
-     <component name="imstutils_help" long-name="Help"/>
+     <component name="imstutils_help" long-name="Help">
+      <unit bldFile="app/conversations/imstutils/help/group"/>
+     </component>
      <component name="imconnectionprovider" long-name="IM Connection Provider">
       <unit bldFile="app/conversations/imstutils/imconnectionprovider/group"/>
+      <!-- <unit bldFile="app/conversations/imstutils/imconnectionprovider/tsrc/imconnectionprovider_test/group"/> -->
      </component>
      <component name="xmppadapter" long-name="XMPP Adapter">
       <unit bldFile="app/conversations/imstutils/xmppadapter/group"/>
+      <!-- <unit bldFile="app/conversations/imstutils/xmppadapter/tsrc/xmppadapter_test/group"/> -->
      </component>
      <component name="imconversationview" long-name="IM Conversation View">
       <unit bldFile="app/conversations/imstutils/imconversationview/group"/>
+      <!-- <unit bldFile="app/conversations/imstutils/imconversationview/tsrc/imcvuiengine_test/dummytestadaptation/group"/> -->
+      <!-- <unit bldFile="app/conversations/imstutils/imconversationview/tsrc/imcvuiengine_test/group"/> -->
      </component>
      <component unofficial="yes" name="imstutils_build" long-name="IM Service Tab Utils Build">
       <unit bldFile="app/conversations/imstutils/group"/>
@@ -9591,7 +9629,9 @@ Operator Complementary Packages		ocp
      </component>
      <component name="vimpststorage" long-name="VIMP ST Storage">
       <unit bldFile="app/conversations/uiservicetab/vimpststorage/group"/>
-      <!-- <unit bldFile="app/conversations/uiservicetab/vimpststorage/tsrc/group"/> -->
+      <!-- <unit bldFile="app/conversations/uiservicetab/vimpststorage/tsrc/vimpststorage_ut/cvimpststoragecontactlist_ut/group"/> -->
+      <!-- <unit bldFile="app/conversations/uiservicetab/vimpststorage/tsrc/vimpststorage_ut/cvimpststoragecontactsorter_ut/group"/> -->
+      <!-- <unit bldFile="app/conversations/uiservicetab/vimpststorage/tsrc/vimpststorage_ut/cvimpststoragecontact_ut/group"/> -->
      </component>
      <component name="vimpstengine" long-name="VIMP ST Engine">
       <unit bldFile="app/conversations/uiservicetab/vimpstengine/group"/>
@@ -9799,6 +9839,9 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="im_build" long-name="Instant Messaging Apps Build">
       <unit bldFile="app/im/group"/>
      </component>
+     <component unofficial="yes" name="im_help" long-name="Instant Messaging Apps Help">
+      <unit bldFile="app/im/help/group"/>
+     </component>
     </collection>
     <collection name="im_plat" long-name="Instant Messaging Apps Platform Interfaces" level="apps">
      <component unofficial="yes" name="wv_sap_settings_api">
@@ -9861,6 +9904,7 @@ Operator Complementary Packages		ocp
       <!-- <unit bldFile="app/camera/camerauis/cameraapp/generic/camerauiconfigmanager/group"/> -->
       <!-- <unit bldFile="app/camera/camerauis/cameraapp/generic/gscamcorderplugin/group"/> -->
       <unit bldFile="app/camera/camerauis/cameraapp/group"/>
+      <!-- <unit bldFile="app/camera/camerauis/cameraapp/help/group"/> -->
      </component>
     </collection>
     <collection name="camera_info" long-name="Camera Apps Info" level="1">
@@ -10094,6 +10138,9 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="videoplayer_info" long-name="Video Player Apps Info" level="apps">
+     <component unofficial="yes" name="videoplayer_help" long-name="Video Player Apps Help">
+      <unit bldFile="app/videoplayer/help/group"/>
+     </component>
      <component unofficial="yes" name="videoplayer_test" long-name="Video Player Apps Test">
       <!-- <unit bldFile="app/videoplayer/tsrc/group"/> -->
      </component>
@@ -10112,7 +10159,9 @@ Operator Complementary Packages		ocp
    </block>
    <block name="photos" long-name="Photos" tech_domain="ma" level="apps" levels="support fw ui app">
     <collection name="photosgallery" long-name="Photos Gallery" level="app">
-     <component name="photosgallery_help" long-name="Help"/>
+     <component name="photosgallery_help" long-name="Help">
+      <unit bldFile="app/photos/photosgallery/help/group"/>
+     </component>
      <component name="logging" long-name="Logging">
       <!-- <unit bldFile="app/photos/photosgallery/logging/app/group"/> -->
       <unit bldFile="app/photos/photosgallery/logging/group"/>
@@ -10128,6 +10177,16 @@ Operator Complementary Packages		ocp
       <!-- <unit bldFile="app/photos/photosgallery/collectionframework/plugins/glxcollectionpluginalbums/group"/> -->
      </component>
      <component name="viewframework" long-name="View Framework">
+      <!-- <unit bldFile="app/photos/photosgallery/viewframework/commandhandlers/commandhandlerbase/tsrc/group"/> -->
+      <!-- <unit bldFile="app/photos/photosgallery/viewframework/commandhandlers/commandhandlerupnp/tsrc/group"/> -->
+      <!-- <unit bldFile="app/photos/photosgallery/viewframework/commandhandlers/commandhandlerupnp/tsrc/t_glxupnprenderer/group"/> -->
+      <!-- <unit bldFile="app/photos/photosgallery/viewframework/commandhandlers/commoncommandhandlers/tsrc/group"/> -->
+      <!-- <unit bldFile="app/photos/photosgallery/viewframework/commandhandlers/commoncommandhandlers/tsrc/t_cglxaiwservicehandler/group"/> -->
+      <!-- <unit bldFile="app/photos/photosgallery/viewframework/commandhandlers/commoncommandhandlers/tsrc/t_glxcommandhandlerback/group"/> -->
+      <!-- <unit bldFile="app/photos/photosgallery/viewframework/commandhandlers/tsrc/group"/> -->
+      <!-- <unit bldFile="app/photos/photosgallery/viewframework/commandhandlers/tsrc/ut_commandhandlerdrm/group"/> -->
+      <!-- <unit bldFile="app/photos/photosgallery/viewframework/commandhandlers/tsrc/ut_commandhandlermoreinfo/group"/> -->
+      <!-- <unit bldFile="app/photos/photosgallery/viewframework/commandhandlers/tsrc/ut__commandhandlermarking/group"/> -->
       <unit bldFile="app/photos/photosgallery/viewframework/group"/>
       <!-- <unit bldFile="app/photos/photosgallery/viewframework/plugins/metadataviewplugin/group"/> -->
       <!-- <unit bldFile="app/photos/photosgallery/viewframework/views/listview/group"/> -->
@@ -10141,6 +10200,7 @@ Operator Complementary Packages		ocp
       <unit bldFile="app/photos/photosgallery/gallery/group"/>
      </component>
      <component name="slideshow" long-name="Slideshow">
+      <!-- <unit bldFile="app/photos/photosgallery/slideshow/engine/tsrc/group"/> -->
       <unit bldFile="app/photos/photosgallery/slideshow/group"/>
      </component>
      <component name="contentharvesterplugin" long-name="Content Harvester Plugin">
@@ -10149,7 +10209,10 @@ Operator Complementary Packages		ocp
      <component name="photossuite" long-name="Photos Suite">
       <unit bldFile="app/photos/photosgallery/photossuite/group"/>
      </component>
-     <component name="memoryplugin" long-name="Memory Plugin"/>
+     <!--Component manually removed as empty and name conflicts with another component-->
+     <!--<component name="memoryplugin" long-name="Memory Plugin">
+       <unit bldFile="app/photos/photosgallery/memoryplugin/group"/>
+     </component>-->
      <component unofficial="yes" name="icons">
       <unit bldFile="app/photos/photosgallery/icons"/>
      </component>
@@ -10170,6 +10233,9 @@ Operator Complementary Packages		ocp
       <unit bldFile="app/photos/photos_plat/collection_plugins_api/group"/>
      </component>
      <component unofficial="yes" name="controllers_collection_api">
+      <!-- <unit bldFile="app/photos/photos_plat/controllers_collection_api/tsrc/ui_metadatadialog/group"/> -->
+      <!-- <unit bldFile="app/photos/photos_plat/controllers_collection_api/tsrc/ut_collectionmanager/group"/> -->
+      <!-- <unit bldFile="app/photos/photos_plat/controllers_collection_api/tsrc/ut_collectioninfo/group"/> -->
       <unit bldFile="app/photos/photos_plat/controllers_collection_api/group"/>
      </component>
      <component unofficial="yes" name="photos_plat_build" long-name="Photos Platform API Build">
@@ -10192,6 +10258,9 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="mpxmyvideoscollection_build" long-name="MPX My Videos Collection Build">
       <unit bldFile="app/videocenter/mpxmyvideoscollection/group"/>
      </component>
+     <component unofficial="yes" name="mpxmyvideoscollection_test" long-name="MPX My Videos Collection Test">
+      <!-- <unit bldFile="app/videocenter/mpxmyvideoscollection/tsrc/group"/> -->
+     </component>
     </collection>
     <collection name="nsmyvideosview" long-name="NS My Videos View" level="app">
      <component name="hgmyvideos" long-name="HG My Videos">
@@ -10201,10 +10270,10 @@ Operator Complementary Packages		ocp
       <unit bldFile="app/videocenter/nsmyvideosview/hgmyvideosplugin/group"/>
      </component>
      <component name="nsmyvideos" long-name="NS Myvideos">
-      <unit bldFile="app/videocenter/nsmyvideosview/nsmyvideos/group"/>
+      <!-- <unit bldFile="app/videocenter/nsmyvideosview/nsmyvideos/group"/> -->
      </component>
      <component name="nsmyvideosplugin" long-name="NS Myvideos Plugin">
-      <unit bldFile="app/videocenter/nsmyvideosview/nsmyvideosplugin/group"/>
+      <!-- <unit bldFile="app/videocenter/nsmyvideosview/nsmyvideosplugin/group"/> -->
      </component>
     </collection>
     <collection name="vccommon" long-name="Video Center Common" level="eng">
@@ -10218,9 +10287,8 @@ Operator Complementary Packages		ocp
       <unit bldFile="app/videocenter/vccommon/notifierplugins/notifierplugin/group"/>
       <unit bldFile="app/videocenter/vccommon/notifierplugins/vcxnotifier/group"/>
      </component>
-     <component name="vccommon_help" long-name="Help"/>
-     <component unofficial="yes" name="help_rel6">
-      <unit bldFile="app/videocenter/vccommon/help_rel6/group"/>
+     <component name="vccommon_help" long-name="Help">
+      <unit bldFile="app/videocenter/vccommon/help/group"/>
      </component>
      <component unofficial="yes" name="sis">
       <!-- <unit bldFile="app/videocenter/vccommon/sis"/> -->
@@ -10291,9 +10359,9 @@ Operator Complementary Packages		ocp
      </component>
      <component name="vcnsvodui" long-name="VCNS VOD UI">
       <unit bldFile="app/videocenter/vcnsuis/vcnsvodui/plugins/hgvodplugin/group"/>
-      <unit bldFile="app/videocenter/vcnsuis/vcnsvodui/plugins/vcnsvodplugin/group"/>
+      <!-- <unit bldFile="app/videocenter/vcnsuis/vcnsvodui/plugins/vcnsvodplugin/group"/> -->
       <unit bldFile="app/videocenter/vcnsuis/vcnsvodui/views/hgvodui/group"/>
-      <unit bldFile="app/videocenter/vcnsuis/vcnsvodui/views/vcnsvodui/group"/>
+      <!-- <unit bldFile="app/videocenter/vcnsuis/vcnsvodui/views/vcnsvodui/group"/> -->
      </component>
      <component name="vcnslivetv" long-name="VCNS Live TV">
       <unit bldFile="app/videocenter/vcnsuis/vcnslivetv/remindernotifier/group"/>
@@ -10349,7 +10417,9 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="mpxmusicplayer" long-name="MPX Music Player" level="apps">
-     <component name="mpxmusicplayer_help" long-name="Help"/>
+     <component name="mpxmusicplayer_help" long-name="Help">
+      <unit bldFile="app/musicplayer/mpxmusicplayer/help/group"/>
+     </component>
      <component name="mpxmusicplayer_commonui" long-name="Common UI">
       <unit bldFile="app/musicplayer/mpxmusicplayer/commonui/group"/>
      </component>
@@ -10471,7 +10541,9 @@ Operator Complementary Packages		ocp
      <component name="gsplugin" long-name="GS Plugin">
       <!-- <unit bldFile="app/voicerec/voicerecorder/gsplugin/group"/> -->
      </component>
-     <component name="voicerecorder_help" long-name="Help"/>
+     <component name="voicerecorder_help" long-name="Help">
+      <unit bldFile="app/voicerec/voicerecorder/help/group"/>
+     </component>
      <component unofficial="yes" name="voicerecorder_build" long-name="Voice Recorder Build">
       <unit bldFile="app/voicerec/voicerecorder/group"/>
      </component>
@@ -10495,7 +10567,9 @@ Operator Complementary Packages		ocp
    </block>
    <block name="imgvieweruis" long-name="Image Viewer UIs" tech_domain="ma" level="services" levels="app">
     <collection name="imageviewer" long-name="Image Viewer" level="app">
-     <component name="imageviewer_help" long-name="Help"/>
+     <component name="imageviewer_help" long-name="Help">
+      <unit bldFile="app/imgvieweruis/imageviewer/help/group"/>
+     </component>
      <component unofficial="yes" name="imageviewer_build" long-name="Image Viewer Build">
       <unit bldFile="app/imgvieweruis/imageviewer/group"/>
      </component>
@@ -10533,12 +10607,15 @@ Operator Complementary Packages		ocp
       <unit bldFile="app/homescreen/idlehomescreen/exths/group"/>
      </component>
      <component name="activeidle3" long-name="Active Idle 3">
-      <!-- <unit bldFile="app/homescreen/idlehomescreen/activeidle3/data/themes/buzzidle/install/softindicator/group"/> -->
+      <!-- <unit bldFile="app/homescreen/idlehomescreen/activeidle3/data/group"/> -->
       <unit bldFile="app/homescreen/idlehomescreen/activeidle3/group"/>
       <!-- <unit bldFile="app/homescreen/idlehomescreen/activeidle3/xmluirendering/uiengine/group"/> -->
      </component>
      <component name="hsplugins" long-name="HS Plugins">
       <unit bldFile="app/homescreen/idlehomescreen/hsplugins/group"/>
+      <!-- <unit bldFile="app/homescreen/idlehomescreen/hsplugins/organizer/qhd_tch/organizer_2001f481/group"/> -->
+      <!-- <unit bldFile="app/homescreen/idlehomescreen/hsplugins/organizer/vga/organizer_2001f48d/group"/> -->
+      <!-- <unit bldFile="app/homescreen/idlehomescreen/hsplugins/organizer/vga/organizer_2001fdba/group"/> -->
      </component>
     </collection>
     <collection name="menufw" long-name="Menu Framework" level="fw">
@@ -10558,6 +10635,14 @@ Operator Complementary Packages		ocp
     <collection name="homescreen_info" long-name="Home Screen Apps Info" level="apps">
      <component unofficial="yes" name="homescreen_build" long-name="Home Screen Apps Build">
       <unit bldFile="app/homescreen/group"/>
+     </component>
+     <component unofficial="yes" name="homescreen_test" long-name="Home Screen Apps Test">
+      <!-- <unit bldFile="app/homescreen/tsrc/group"/> -->
+     </component>
+    </collection>
+    <collection name="homescreen_plat" long-name="Home Screen Apps Platform Interfaces" level="apps">
+     <component unofficial="yes" name="menu_settings_api">
+      <unit bldFile="app/homescreen/homescreen_plat/menu_settings_api/group"/>
      </component>
     </collection>
    </block>
@@ -10610,6 +10695,9 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="profile_test" long-name="Profile Test">
       <!-- <unit bldFile="app/profile/tsrc/group"/> -->
      </component>
+     <component unofficial="yes" name="profile_help" long-name="Profile Help">
+      <unit bldFile="app/profile/help/group"/>
+     </component>
      <component unofficial="yes" name="profile_build" long-name="Profile Build">
       <unit bldFile="app/profile/group"/>
      </component>
@@ -10658,7 +10746,7 @@ Operator Complementary Packages		ocp
      <component name="speechsynthesis" long-name="Speech Synthesis">
       <unit bldFile="app/speechsrv/srsf/speechsynthesis/client/group"/>
       <unit bldFile="app/speechsrv/srsf/speechsynthesis/server/group"/>
-      <!-- <unit bldFile="app/speechsrv/srsf/speechsynthesis/tsrc/speechsynthesistest/group"/> -->
+      <unit bldFile="app/speechsrv/srsf/speechsynthesis/tsrc/speechsynthesistest/group"/>
       <!-- <unit bldFile="app/speechsrv/srsf/speechsynthesis/tsrc/testapplication/group"/> -->
       <!-- <unit bldFile="app/speechsrv/srsf/speechsynthesis/tsrc/texttospeech/group"/> -->
      </component>
@@ -10705,9 +10793,6 @@ Operator Complementary Packages		ocp
      <component unofficial="yes" name="srsf_build" long-name="Speech Recognition and Synthesis Framework Build">
       <unit bldFile="app/speechsrv/srsf/group"/>
      </component>
-     <component unofficial="yes" name="srsf_test" long-name="Speech Recognition and Synthesis Framework Test">
-      <!-- <unit bldFile="app/speechsrv/srsf/tsrc/public/basic/group"/> -->
-     </component>
     </collection>
     <collection name="speechsrv_plat" long-name="Speech Recognition UIs Platform Interfaces" level="ui">
      <component unofficial="yes" name="voice_commands_resource_header_api">
@@ -10715,7 +10800,6 @@ Operator Complementary Packages		ocp
      </component>
      <component unofficial="yes" name="ui_voice_recognition_api">
       <unit bldFile="app/speechsrv/speechsrv_plat/ui_voice_recognition_api/group"/>
-      <!-- <unit bldFile="app/speechsrv/speechsrv_plat/ui_voice_recognition_api/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="nss_tts_common_api">
       <unit bldFile="app/speechsrv/speechsrv_plat/nss_tts_common_api/group"/>
@@ -10794,6 +10878,9 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="speechsrv_info" long-name="Speech Recognition UIs Info" level="ui">
+     <component unofficial="yes" name="speechsrv_test" long-name="Speech Recognition UIs Test">
+      <!-- <unit bldFile="app/speechsrv/tsrc/group"/> -->
+     </component>
      <component unofficial="yes" name="speechsrv_build" long-name="Speech Recognition UIs Build">
       <unit bldFile="app/speechsrv/group"/>
      </component>
@@ -10852,7 +10939,9 @@ Operator Complementary Packages		ocp
      </component>
     </collection>
     <collection name="pushmtm" long-name="Push MTM" level="plugin">
-     <component name="pushmtm_help" long-name="Help"/>
+     <component name="pushmtm_help" long-name="Help">
+      <unit bldFile="app/webuis/pushmtm/help/group"/>
+     </component>
      <component name="Plugins">
       <unit bldFile="app/webuis/pushmtm/plugins/group"/>
      </component>
@@ -10905,19 +10994,23 @@ Operator Complementary Packages		ocp
      <component name="javapackagelookup" long-name="Java Package Lookup"/>
      <component name="javautils_common" long-name="Common"/>
      <component name="integrityserver" long-name="Integrity Server"/>
-     <component name="javadrmutils" long-name="Java DRM Utils"/>
+     <!--component manually moved to javautils collection-->
+     <!--<component name="javadrmutils" long-name="Java DRM Utils"/>-->
      <component name="javarecognizer" long-name="Java Recognizer"/>
      <component name="iconconverter" long-name="Icon Converter"/>
      <component name="adt" long-name="ADT"/>
-     <component name="javaenvinfo" long-name="Java Environment Info"/>
+     <!--component manually moved to javautils collection-->
+     <!--<component name="javaenvinfo" long-name="Java Environment Info"/>-->
     </collection>
     <collection name="java_stubs" long-name="Java Stubs" level="util">
-     <component name="javadrmutils" long-name="Java DRM Utils">
-      <unit bldFile="app/java/java_stubs/javadrmutils/group"/>
-     </component>
-     <component name="javaenvinfo" long-name="Java Environment Info">
-      <unit bldFile="app/java/java_stubs/javaenvinfo/group"/>
-     </component>
+     <!--component manually moved to javautils collection-->
+     <!--<component name="javadrmutils" long-name="Java DRM Utils">
+       <unit bldFile="app/java/java_stubs/javadrmutils/group"/>
+     </component>-->
+     <!--component manually moved to javautils collection-->
+     <!--<component name="javaenvinfo" long-name="Java Environment Info">
+       <unit bldFile="app/java/java_stubs/javaenvinfo/group"/>
+     </component>-->
      <component name="javaregistry" long-name="Java Registry">
       <unit bldFile="app/java/java_stubs/javaregistry/clientserver/client/group"/>
      </component>
@@ -11022,13 +11115,6 @@ Operator Complementary Packages		ocp
      </component>
      <component unofficial="yes" name="csxhelp_build" long-name="Context Sensitive Extended Help Build">
       <unit bldFile="app/helps/csxhelp/group"/>
-     </component>
-    </collection>
-   </block>
-   <block name="techview">
-    <collection name="techview_info">
-     <component unofficial="yes" name="connectivityfw">
-      <!-- <unit bldFile="app/techview/connectivityapps/connectivityfw/bal/plugins/mrouter3/group"/> -->
      </component>
     </collection>
    </block>
