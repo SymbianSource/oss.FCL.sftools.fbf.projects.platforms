@@ -1178,7 +1178,7 @@
 <unit bldFile="os/cellularsrv/telephonyserverplugins/common_tsy/group" mrp="os/cellularsrv/telephonyserverplugins/common_tsy/group/telephony_commontsy.mrp"/>
 </component>
 <component name="licenseetsystub" long-name="Licensee TSY Stub" introduced="tb91" purpose="development" plugin="Y">
-<unit mrp="os/cellularsrv/telephonyserverplugins/licenseetsystub/group/licenseetsystub.mrp"/>
+<unit bldFile="os/cellularsrv/telephonyserverplugins/licenseetsystub/group" mrp="os/cellularsrv/telephonyserverplugins/licenseetsystub/group/licenseetsystub.mrp"/>
 </component>
 <component name="multimodetsy" long-name="Multimode TSY" purpose="development" plugin="Y">
 <unit bldFile="os/cellularsrv/telephonyserverplugins/multimodetsy/group" mrp="os/cellularsrv/telephonyserverplugins/multimodetsy/group/telephony_mmtsy.mrp"/>
