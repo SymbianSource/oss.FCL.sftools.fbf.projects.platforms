@@ -2096,6 +2096,20 @@
       <unit mrp="os/osrndtools/osrndtools_info/osrndtools_metadata/osrndtools_metadata.mrp"/>
      </component>
     </collection>
+	<collection name="osrndtools_plat" long-name="OS RD tools Platform Interfaces" level="trace">
+     <component unofficial="yes" name="memspy_api" origin-model="Foundation">
+      <unit bldFile="ostools/osrndtools/osrndtools_plat/memspy_api/group"/>
+     </component>
+     <component unofficial="yes" name="stif_api" origin-model="Foundation">
+      <unit bldFile="ostools/osrndtools/osrndtools_plat/stif_api/group"/>
+     </component>
+     <component unofficial="yes" name="hti_api" origin-model="Foundation">
+      <unit bldFile="ostools/osrndtools/osrndtools_plat/hti_api/group"/>
+     </component>
+     <component unofficial="yes" name="open_system_trace_api" origin-model="Foundation">
+      <unit bldFile="ostools/osrndtools/osrndtools_plat/open_system_trace_api/group"/>
+     </component>
+    </collection>
    </block>
    <block name="swconfigtools" long-name="Software Config Tools" tech_domain="to" level="services">
     <collection name="gid_pc_tool" long-name="GID PC Tool">
