@@ -136,35 +136,44 @@
       <unit bldFile="os/boardsupport/emulator/emulatorbsp" mrp="os/boardsupport/emulator/emulatorbsp/base_wins.mrp"/>
      </component>
      <component name="n:unistore2emulatorsupport" long-name="UniStore2 Emulator Support" filter="gt" introduced="tb91" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/boardsupport/emulator/unistore2emulatorsupport" mrp="os/boardsupport/emulator/unistore2emulatorsupport/base_wins_unistore2.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/boardsupport/emulator/unistore2emulatorsupport" mrp="os/boardsupport/emulator/unistore2emulatorsupport/base_wins_unistore2.mrp"/> -->
      </component>
     </collection>
     <collection name="n:omaph2" long-name="OMAP H2" level="bsp">
      <component name="n:omaph2bsp" long-name="OMAP H2 BSP" introduced="9.0" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/boardsupport/omaph2/omaph2bsp/h2" mrp="os/boardsupport/omaph2/omaph2bsp/h2/base_omaph2.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/boardsupport/omaph2/omaph2bsp/h2" mrp="os/boardsupport/omaph2/omaph2bsp/h2/base_omaph2.mrp"/> -->
      </component>
      <component name="n:omaph2unistore2" long-name="OMAP H2 UniStore2" filter="gt" introduced="9.1" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/boardsupport/omaph2/omaph2unistore2" mrp="os/boardsupport/omaph2/omaph2unistore2/base_h2_unistore2.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/boardsupport/omaph2/omaph2unistore2" mrp="os/boardsupport/omaph2/omaph2unistore2/base_h2_unistore2.mrp"/> -->
      </component>
      <component name="n:omaph2sdio" long-name="OMAP H2 SDIO" filter="gt" introduced="9.2" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/boardsupport/omaph2/omaph2sdio" mrp="os/boardsupport/omaph2/omaph2sdio/base_h2_sdio.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/boardsupport/omaph2/omaph2sdio" mrp="os/boardsupport/omaph2/omaph2sdio/base_h2_sdio.mrp"/> -->
      </component>
     </collection>
     <collection name="n:omaph4" long-name="OMAP H4" level="bsp">
      <component name="n:omaph4bsp" long-name="OMAP H4 BSP" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/boardsupport/omaph4/omaph4bsp/h4" mrp="os/boardsupport/omaph4/omaph4bsp/h4/base_omaph4hrp.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/boardsupport/omaph4/omaph4bsp/h4" mrp="os/boardsupport/omaph4/omaph4bsp/h4/base_omaph4hrp.mrp"/> -->
      </component>
      <component name="n:h4bootloader" long-name="H4 Boot Loader" introduced="9.1" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit mrp="os/boardsupport/omaph4/h4bootloader/base_omaph4hrp_bootldr.mrp" bldFile="os/boardsupport/omaph4/h4bootloader"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit mrp="os/boardsupport/omaph4/h4bootloader/base_omaph4hrp_bootldr.mrp" bldFile="os/boardsupport/omaph4/h4bootloader"/> -->
      </component>
      <component name="n:omaph4minienvbootloader" long-name="OMAP H4 Mini Environment Boot Loader" introduced="9.2" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit mrp="os/boardsupport/omaph4/omaph4minienvbootloader/base_omaph4hrp_mebootldr.mrp" bldFile="os/boardsupport/omaph4/omaph4minienvbootloader"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit mrp="os/boardsupport/omaph4/omaph4minienvbootloader/base_omaph4hrp_mebootldr.mrp" bldFile="os/boardsupport/omaph4/omaph4minienvbootloader"/> -->
      </component>
      <component name="n:omaph4unistore2" long-name="OMAP H4 Unistore2" filter="gt" introduced="9.2" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/boardsupport/omaph4/omaph4unistore2" mrp="os/boardsupport/omaph4/omaph4unistore2/base_omaph4hrp_unistore2.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/boardsupport/omaph4/omaph4unistore2" mrp="os/boardsupport/omaph4/omaph4unistore2/base_omaph4hrp_unistore2.mrp"/> -->
      </component>
      <component name="n:omaph4sdio" long-name="OMAP H4 SDIO" filter="gt" introduced="9.2" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/boardsupport/omaph4/omaph4sdio" mrp="os/boardsupport/omaph4/omaph4sdio/base_omaph4hrp_sdio.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/boardsupport/omaph4/omaph4sdio" mrp="os/boardsupport/omaph4/omaph4sdio/base_omaph4hrp_sdio.mrp"/> -->
      </component>
     </collection>
     <collection name="haitest" long-name="HAI Test Suites" level="test">
@@ -774,7 +783,8 @@
       <unit bldFile="os/lbs/datasourcemodules/simulationpositioningmodule/group" mrp="os/lbs/datasourcemodules/simulationpositioningmodule/group/lbs_simulation_positioning_module.mrp"/>
      </component>
      <component name="n:agpsintegrationmodule" long-name="A-GPS Integration Module" introduced="9.2" purpose="optional" plugin="Y" origin-model="Symbian">
-      <unit bldFile="os/lbs/datasourcemodules/agpsintegrationmodule/group" mrp="os/lbs/datasourcemodules/agpsintegrationmodule/group/lbs_datasourceplugins.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/lbs/datasourcemodules/agpsintegrationmodule/group" mrp="os/lbs/datasourcemodules/agpsintegrationmodule/group/lbs_datasourceplugins.mrp"/> -->
      </component>
     </collection>
     <collection name="datasourceadaptation" long-name="Data Source Adaptation" level="adaptation">
@@ -817,7 +827,8 @@
       <unit bldFile="os/lbs/networkprotocolmodules/privacyprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/privacyprotocolmodule/group/lbs_privacyprotocolmodule.mrp"/>
      </component>
      <component name="n:suplprotocolmodule" long-name="SUPL Protocol Module" introduced="tb91" deprecated="tb91" purpose="optional" plugin="Y" origin-model="Symbian">
-      <unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/> -->
      </component>
     </collection>
     <collection name="lbsapitest" long-name="Location API Tests" level="application-interface">
@@ -1163,7 +1174,8 @@
       <unit bldFile="os/cellularsrv/smsprotocols/smsstack/group" mrp="os/cellularsrv/smsprotocols/smsstack/group/nbprotocols_smsstackv2.mrp"/>
      </component>
      <component name="n:cdmasmsstack" long-name="CDMA SMS Stack" introduced="8.0" purpose="optional" plugin="Y" origin-model="Symbian">
-      <unit bldFile="os/cellularsrv/smsprotocols/cdmasmsstack/group" mrp="os/cellularsrv/smsprotocols/cdmasmsstack/group/nbprotocols_cdmasmsstack.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/cellularsrv/smsprotocols/cdmasmsstack/group" mrp="os/cellularsrv/smsprotocols/cdmasmsstack/group/nbprotocols_cdmasmsstack.mrp"/> -->
      </component>
     </collection>
     <collection name="telephonyprotocols" long-name="Telephony Protocols" level="framework">
@@ -1212,7 +1224,8 @@
       <unit bldFile="os/cellularsrv/telephonyserver/etelsimtoolkit/group" mrp="os/cellularsrv/telephonyserver/etelsimtoolkit/group/telephony_etelsat.mrp"/>
      </component>
      <component name="n:etelcdma" long-name="ETel CDMA" introduced="7.0s" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/cellularsrv/telephonyserver/etelcdma/group" mrp="os/cellularsrv/telephonyserver/etelcdma/group/telephony_etelcdma.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/cellularsrv/telephonyserver/etelcdma/group" mrp="os/cellularsrv/telephonyserver/etelcdma/group/telephony_etelcdma.mrp"/> -->
      </component>
     </collection>
     <collection name="telephonyserverplugins" long-name="Telephony Server Plugins" level="plugin">
@@ -1691,10 +1704,12 @@
       <unit bldFile="os/graphics/opengles/openglesinterface/group" mrp="os/graphics/opengles/openglesinterface/group/graphics_openglesheaders.mrp"/>
      </component>
      <component name="n:openglesimplementation" long-name="OpenGL ES Implementation" filter="gt" introduced="8.0" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/graphics/opengles/openglesimplementation/group/" mrp="os/graphics/opengles/openglesimplementation/group/graphics_opengles.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/graphics/opengles/openglesimplementation/group/" mrp="os/graphics/opengles/openglesimplementation/group/graphics_opengles.mrp"/> -->
      </component>
      <component name="n:openglesdisplayproperties" long-name="OpenGL ES Display Properties" introduced="8.0" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/graphics/opengles/openglesdisplayproperties/group" mrp="os/graphics/opengles/openglesdisplayproperties/group/graphics_openglesdisplayproperty.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/graphics/opengles/openglesdisplayproperties/group" mrp="os/graphics/opengles/openglesdisplayproperties/group/graphics_openglesdisplayproperty.mrp"/> -->
      </component>
     </collection>
     <collection name="openvg" long-name="OpenVG" level="internal-adaptations">
@@ -1710,7 +1725,8 @@
       <unit bldFile="os/graphics/egl/eglinterface/group" mrp="os/graphics/egl/eglinterface/group/graphics_eglheaders.mrp"/>
      </component>
      <component name="n:eglimplementation" long-name="EGL Implementation" introduced="tb91" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/graphics/egl/eglimplementation/group/" mrp="os/graphics/egl/eglimplementation/group/graphics_egl.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/graphics/egl/eglimplementation/group/" mrp="os/graphics/egl/eglimplementation/group/graphics_egl.mrp"/> -->
      </component>
     </collection>
     <collection name="graphicsdeviceinterface" long-name="Graphics Device Interface" level="device-interface">
@@ -1776,13 +1792,15 @@
       <unit bldFile="os/textandloc/fontservices/freetypefontrasteriser/group" mrp="os/textandloc/fontservices/freetypefontrasteriser/group/graphics_freetype.mrp"/>
      </component>
      <component name="n:itypefontrasteriser" long-name="iType Font Rasteriser" filter="gt" introduced="tb92" purpose="development" plugin="Y" origin-model="Symbian">
-      <unit bldFile="os/graphics/fbs/itypefontrasteriser/group" mrp="os/graphics/fbs/itypefontrasteriser/group/graphics_itype.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/graphics/fbs/itypefontrasteriser/group" mrp="os/graphics/fbs/itypefontrasteriser/group/graphics_itype.mrp"/> -->
      </component>
      <component name="referencefonts" long-name="Reference Fonts" introduced="6.0" purpose="optional" plugin="N" origin-model="Symbian">
       <unit bldFile="os/textandloc/fontservices/referencefonts/group" mrp="os/textandloc/fontservices/referencefonts/group/graphics_fonts.mrp"/>
      </component>
      <component name="n:testfonts" long-name="Test Fonts" filter="gt" introduced="tb91" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/textandloc/fontservices/graphicstestfonts/group" mrp="os/textandloc/fontservices/graphicstestfonts/group/graphics_testfonts.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/textandloc/fontservices/graphicstestfonts/group" mrp="os/textandloc/fontservices/graphicstestfonts/group/graphics_testfonts.mrp"/> -->
      </component>
     </collection>
     <collection name="textlayout" long-name="Text Layout" level="text">
@@ -2082,10 +2100,12 @@
     </collection>
     <collection name="testexecfw1" long-name="Test Execution Framework v1" level="fw">
      <component name="cinidata" long-name="CINI Data" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/osrndtools/testexecfw1/cinidata" mrp="os/osrndtools/testexecfw1/cinidata/tools_cinidata.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/osrndtools/testexecfw1/cinidata" mrp="os/osrndtools/testexecfw1/cinidata/tools_cinidata.mrp"/> -->
      </component>
      <component name="testexecute" long-name="Test Execute" deprecated="tb91" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/osrndtools/testexecfw1/testexecute/Group" mrp="os/osrndtools/testexecfw1/testexecute/Group/tools_testexecute.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/osrndtools/testexecfw1/testexecute/Group" mrp="os/osrndtools/testexecfw1/testexecute/Group/tools_testexecute.mrp"/> -->
      </component>
     </collection>
     <collection name="osrndtools_info" long-name="OS RD tools Info" level="trace">
@@ -2131,16 +2151,19 @@
     </collection>
     <collection name="n:unistore2" long-name="UniStore2 Flash Translation Layer" level="hw-if">
      <component name="n:uiidrivers" long-name="UniStore2 Drivers" filter="gt" introduced="9.1" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/unistore2" mrp="os/kernelhwsrv/kernel/eka/drivers/unistore2/base_drivers_unistore2.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/unistore2" mrp="os/kernelhwsrv/kernel/eka/drivers/unistore2/base_drivers_unistore2.mrp"/> -->
      </component>
      <component name="n:uiicore" long-name="UniStore2 Core" filter="gt" introduced="9.1" purpose="optional" plugin="N" origin-model="Symbian">
       <unit mrp="os/kernelhwsrv/kernel/eka/drivers/unistore2/base_drivers_unistore2_undeliverable.mrp"/>
      </component>
      <component name="n:uiicrashlogger" long-name="UniStore2 Crash Logger" filter="gt" introduced="9.1" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/crashflash/unistore2" mrp="os/kernelhwsrv/kernel/eka/drivers/crashflash/unistore2/base_crashflash_unistore2.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/crashflash/unistore2" mrp="os/kernelhwsrv/kernel/eka/drivers/crashflash/unistore2/base_crashflash_unistore2.mrp"/> -->
      </component>
      <component name="n:uiibootsupport" long-name="UniStore2 Boot Support" filter="gt" introduced="9.1" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/kernelhwsrv/unistore2/uiibootsupport/nandloader/unistore2" mrp="os/kernelhwsrv/unistore2/uiibootsupport/base_nandboot_unistore2.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/kernelhwsrv/unistore2/uiibootsupport/nandloader/unistore2" mrp="os/kernelhwsrv/unistore2/uiibootsupport/base_nandboot_unistore2.mrp"/> -->
      </component>
     </collection>
     <collection name="bsptemplate" long-name="BSP Template" level="hw-if">
@@ -2158,13 +2181,16 @@
       <unit bldFile="os/kernelhwsrv/kerneltest/e32test/group" mrp="os/kernelhwsrv/kerneltest/e32test/group/base_e32test.mrp"/>
      </component>
      <component name="n:sdiotest" long-name="SDIO Tests" filter="gt" introduced="9.2" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/kernelhwsrv/kerneltest/sdiotest" mrp="os/kernelhwsrv/kerneltest/sdiotest/base_sdiotests.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/kernelhwsrv/kerneltest/sdiotest" mrp="os/kernelhwsrv/kerneltest/sdiotest/base_sdiotests.mrp"/> -->
      </component>
      <component name="n:e32utils" long-name="E32 Utilities" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/kernelhwsrv/kerneltest/e32utils/group" mrp="os/kernelhwsrv/kerneltest/e32utils/group/base_e32utils.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/kernelhwsrv/kerneltest/e32utils/group" mrp="os/kernelhwsrv/kerneltest/e32utils/group/base_e32utils.mrp"/> -->
      </component>
      <component name="n:f32test" long-name="File Server Tests" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/kernelhwsrv/kerneltest/f32test/group" mrp="os/kernelhwsrv/kerneltest/f32test/group/base_f32test.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/kernelhwsrv/kerneltest/f32test/group" mrp="os/kernelhwsrv/kerneltest/f32test/group/base_f32test.mrp"/> -->
      </component>
     </collection>
     <collection name="ldds" long-name="Logical Device Drivers" level="adaptation">
@@ -2193,10 +2219,12 @@
     </collection>
     <collection name="driversupport" long-name="Generic Driver Support" level="hw-if">
      <component name="n:sdcard3c" long-name="SD Card 3C Driver" filter="gt" introduced="9.1" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/pbus/mmc/sdcard/sdcard3c" mrp="os/kernelhwsrv/kernel/eka/drivers/pbus/mmc/sdcard/sdcard3c/base_e32_sd3c.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/pbus/mmc/sdcard/sdcard3c" mrp="os/kernelhwsrv/kernel/eka/drivers/pbus/mmc/sdcard/sdcard3c/base_e32_sd3c.mrp"/> -->
      </component>
      <component name="n:sdcard4c" long-name="SD Card 4C Driver" filter="gt" introduced="9.1" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/pbus/mmc/sdcard/sdcard4c" mrp="os/kernelhwsrv/kernel/eka/drivers/pbus/mmc/sdcard/sdcard4c/base_e32_sd4c.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/pbus/mmc/sdcard/sdcard4c" mrp="os/kernelhwsrv/kernel/eka/drivers/pbus/mmc/sdcard/sdcard4c/base_e32_sd4c.mrp"/> -->
      </component>
      <component name="mediadrivers" long-name="Media Drivers" purpose="optional" plugin="N" origin-model="Symbian">
       <!-- these are for storage media-->
@@ -2217,7 +2245,8 @@
       <unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/group" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/group/base_f32.mrp"/>
      </component>
      <component name="n:nandftl" long-name="SSR Flash Translation Layer" filter="gt" introduced="7.0s" deprecated="9.1" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/sftl" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/sftl/base_f32_sftl.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/sftl" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/sftl/base_f32_sftl.mrp"/> -->
      </component>
      <component name="estart" long-name="Base Starter" filter="gt" purpose="optional" plugin="N" origin-model="Symbian">
       <unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/estart" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/estart/base_f32_estart.mrp"/>
@@ -2249,10 +2278,12 @@
       <unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/scomp" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/scomp/base_f32_scomp.mrp"/>
      </component>
      <component name="n:ntfs" long-name="NTFS" filter="gt" purpose="optional" plugin="Y" origin-model="Symbian">
-      <unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/ntfs" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/ntfs/base_f32_sntfs.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/ntfs" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/ntfs/base_f32_sntfs.mrp"/> -->
      </component>
      <component name="n:iso9660fs" long-name="ISO9660 File System" filter="gt" introduced="8.1b" purpose="optional" plugin="Y" origin-model="Symbian">
-      <unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/iso9660" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/iso9660/base_f32_siso9660.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/iso9660" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/iso9660/base_f32_siso9660.mrp"/> -->
      </component>
     </collection>
     <collection name="halservices" long-name="HAL Services" level="framework">
@@ -2412,22 +2443,27 @@
       <unit mrp="os/buildtools/toolsandutils/ctsfunctionalitycheckers/Group/testtools_cts_functionalitycheckers.mrp"/>
      </component>
      <component name="n:burtestserver" long-name="BUR Test Server" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/toolsandutils/burtestserver/Group" mrp="os/buildtools/toolsandutils/burtestserver/Group/testtools_burtestserver.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/toolsandutils/burtestserver/Group" mrp="os/buildtools/toolsandutils/burtestserver/Group/testtools_burtestserver.mrp"/> -->
      </component>
      <component name="n:cbrtools" long-name="Component Based Release (CBR) Tools" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/toolsandutils/cbrtools/group" mrp="os/buildtools/toolsandutils/cbrtools/group/tools_cbr_tools.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/toolsandutils/cbrtools/group" mrp="os/buildtools/toolsandutils/cbrtools/group/tools_cbr_tools.mrp"/> -->
      </component>
      <component name="n:prf" long-name="Product Realisation Framework" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/toolsandutils/prf/group" mrp="os/buildtools/toolsandutils/prf/group/tools_cbr_prf.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/toolsandutils/prf/group" mrp="os/buildtools/toolsandutils/prf/group/tools_cbr_prf.mrp"/> -->
      </component>
      <component name="n:cdb" long-name="Code Database" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/toolsandutils/cdb/group" mrp="os/buildtools/toolsandutils/cdb/group/testtools_cdb.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/toolsandutils/cdb/group" mrp="os/buildtools/toolsandutils/cdb/group/testtools_cdb.mrp"/> -->
      </component>
      <component name="e32tools" long-name="E32 Tools" deprecated="tb91" purpose="development" class="PC" plugin="N" origin-model="Symbian">
       <unit bldFile="os/buildtools/toolsandutils/e32tools/group" mrp="os/buildtools/toolsandutils/e32tools/group/tools_e32tools.mrp"/>
      </component>
      <component name="n:kitcomparator" long-name="Kit Comparator" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/toolsandutils/kitcomparator/group" mrp="os/buildtools/toolsandutils/kitcomparator/group/testtools_cts_kitcomparator.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/toolsandutils/kitcomparator/group" mrp="os/buildtools/toolsandutils/kitcomparator/group/testtools_cts_kitcomparator.mrp"/> -->
      </component>
      <component name="wincredistribution" long-name="WinC Redistribution" purpose="development" plugin="N" origin-model="Symbian">
       <unit mrp="os/buildtools/dist_os/redistributionwinceka2/tools_redistribution_winc.mrp"/>
@@ -2436,34 +2472,41 @@
       <unit mrp="os/buildtools/perltoolsplat_os/redistribution/additional_tools.mrp"/>
      </component>
      <component name="n:testdriver" long-name="Test Driver" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/toolsandutils/testdriver/Group" mrp="os/buildtools/toolsandutils/testdriver/Group/testtools_testdriver.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/toolsandutils/testdriver/Group" mrp="os/buildtools/toolsandutils/testdriver/Group/testtools_testdriver.mrp"/> -->
      </component>
      <component name="statapi" long-name="STAT API" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/toolsandutils/statapi/source/statapi/console" mrp="os/buildtools/toolsandutils/statapi/group/testtools_stat_device_gt.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/toolsandutils/statapi/source/statapi/console" mrp="os/buildtools/toolsandutils/statapi/group/testtools_stat_device_gt.mrp"/> -->
      </component>
      <component name="n:statsource" long-name="STAT Source" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
       <unit mrp="os/buildtools/toolsandutils/statsource/group/testtools_stat_common_source.mrp"/>
      </component>
      <component name="n:statdesktop" long-name="STAT Desktop" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/toolsandutils/statdesktop/group" mrp="os/buildtools/toolsandutils/statdesktop/group/testtools_stat_desktop.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/toolsandutils/statdesktop/group" mrp="os/buildtools/toolsandutils/statdesktop/group/testtools_stat_desktop.mrp"/> -->
      </component>
      <component name="n:systemmonitor" long-name="System Monitor" introduced="8.0" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/toolsandutils/systemmonitor/group" mrp="os/buildtools/toolsandutils/systemmonitor/group/testtools_systemmonitor.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/toolsandutils/systemmonitor/group" mrp="os/buildtools/toolsandutils/systemmonitor/group/testtools_systemmonitor.mrp"/> -->
      </component>
      <component name="n:testtoolsdesktop" long-name="Test Tools Desktop" filter="gt" deprecated="tb91" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/toolsandutils/testtoolsdesktop/group" mrp="os/buildtools/toolsandutils/testtoolsdesktop/group/testtools_desktop.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/toolsandutils/testtoolsdesktop/group" mrp="os/buildtools/toolsandutils/testtoolsdesktop/group/testtools_desktop.mrp"/> -->
      </component>
      <component name="wintunnel" long-name="Wintunnel" purpose="development" plugin="N" origin-model="Symbian">
       <unit mrp="os/buildtools/toolsandutils/wintunnel/group/testtools_WinTunnel_srconly.mrp"/>
      </component>
      <component name="n:usecasecontroller" long-name="Use Case Controller" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/toolsandutils/usecasecontroller/BuildScripts/group" mrp="os/buildtools/toolsandutils/usecasecontroller/BuildScripts/group/testtools_ucc.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/toolsandutils/usecasecontroller/BuildScripts/group" mrp="os/buildtools/toolsandutils/usecasecontroller/BuildScripts/group/testtools_ucc.mrp"/> -->
      </component>
      <component name="autotest" long-name="Autotest" purpose="development" plugin="N" origin-model="Symbian">
       <unit bldFile="os/buildtools/toolsandutils/autotest/group" mrp="os/buildtools/toolsandutils/autotest/group/tools_autotest.mrp"/>
      </component>
      <component name="n:testconfigfileparser" long-name="Test Config File Parser" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/toolsandutils/testconfigfileparser/group" mrp="os/buildtools/toolsandutils/testconfigfileparser/group/tools_testconfigfileparser.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/toolsandutils/testconfigfileparser/group" mrp="os/buildtools/toolsandutils/testconfigfileparser/group/tools_testconfigfileparser.mrp"/> -->
      </component>
      <component name="n:kitsetupapp" long-name="Kit Setup App" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
       <unit mrp="os/buildtools/toolsandutils/kitsetupapp/group/tools_devkits_kitsetupapp.mrp"/>
@@ -2472,10 +2515,12 @@
       <unit mrp="os/buildtools/toolsandutils/navigationpages/tools_sdk_eng_NavigationPages.mrp"/>
      </component>
      <component name="n:productinstaller" long-name="Product Installer" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/toolsandutils/productinstaller/group" mrp="os/buildtools/toolsandutils/productinstaller/group/tools_custkits_productinstaller.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/toolsandutils/productinstaller/group" mrp="os/buildtools/toolsandutils/productinstaller/group/tools_custkits_productinstaller.mrp"/> -->
      </component>
      <component name="n:stlport" long-name="STL Port" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/toolsandutils/stlport/group" mrp="os/buildtools/toolsandutils/stlport/group/tools_stlport.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/toolsandutils/stlport/group" mrp="os/buildtools/toolsandutils/stlport/group/tools_stlport.mrp"/> -->
      </component>
     </collection>
    <collection name="n:dist_os" long-name="Redistribution" level="mw">
@@ -2485,21 +2530,26 @@
     </collection>
     <collection name="n:bintools_os" long-name="Binary Tools" level="fw">
      <component name="n:rcomp" long-name="Resource Compiler" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/bintools_os/rcomp/group" mrp="os/buildtools/bintools_os/rcomp/group/tools_rcomp.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/bintools_os/rcomp/group" mrp="os/buildtools/bintools_os/rcomp/group/tools_rcomp.mrp"/> -->
      </component>
      <component name="n:evalid" long-name="Evalid" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/bintools_os/evalid" mrp="os/buildtools/bintools_os/evalid/tools_evalid.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/bintools_os/evalid" mrp="os/buildtools/bintools_os/evalid/tools_evalid.mrp"/> -->
      </component>
     </collection>
     <collection name="n:perltoolsplat_os" long-name="Perl Tools Platform" level="mw">
      <component name="n:redistribution" long-name="Redistribution" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/perltoolsplat_os/redistribution" mrp="os/buildtools/perltoolsplat_os/redistribution/tools_redistribution_common.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/perltoolsplat_os/redistribution" mrp="os/buildtools/perltoolsplat_os/redistribution/tools_redistribution_common.mrp"/> -->
      </component>
      <component name="n:legacycommonperl" long-name="Legacy Common Perl Libraries" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/perltoolsplat_os/legacycommonperl/group" mrp="os/buildtools/perltoolsplat_os/legacycommonperl/group/tools_sdk_eng_perllibrary.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/perltoolsplat_os/legacycommonperl/group" mrp="os/buildtools/perltoolsplat_os/legacycommonperl/group/tools_sdk_eng_perllibrary.mrp"/> -->
      </component>
      <component name="n:commonperl" long-name="Common Perl Libraries" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/perltoolsplat_os/commonperl/group" mrp="os/buildtools/perltoolsplat_os/commonperl/group/tools_sdk_eng_perl_shared.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/perltoolsplat_os/commonperl/group" mrp="os/buildtools/perltoolsplat_os/commonperl/group/tools_sdk_eng_perl_shared.mrp"/> -->
      </component>
     </collection>
     <collection name="sbsv1_os" long-name="Symbian Build System v1" level="fw">
@@ -2507,18 +2557,22 @@
       <unit bldFile="os/buildtools/sbsv1_os/e32toolp/group" mrp="os/buildtools/sbsv1_os/e32toolp/group/tools_e32toolp.mrp"/>
      </component>
      <component name="n:bldtools" long-name="Build Tools" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/sbsv1_os/bldtools/group" mrp="os/buildtools/sbsv1_os/bldtools/group/tools_sdk_eng_build-tools.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/sbsv1_os/bldtools/group" mrp="os/buildtools/sbsv1_os/bldtools/group/tools_sdk_eng_build-tools.mrp"/> -->
      </component>
     </collection>
     <collection name="n:srcanamdw_os" long-name="Source Analysis Middleware" level="fw">
      <component name="n:leavescan" long-name="Leavescan" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/srcanamdw_os/leavescan/group" mrp="os/buildtools/srcanamdw_os/leavescan/group/testtools_leavescan.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/srcanamdw_os/leavescan/group" mrp="os/buildtools/srcanamdw_os/leavescan/group/testtools_leavescan.mrp"/> -->
      </component>
      <component name="n:programchecker" long-name="Program Checker" deprecated="tb91" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/srcanamdw_os/programchecker/group" mrp="os/buildtools/srcanamdw_os/programchecker/group/testtools_programchecker.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/srcanamdw_os/programchecker/group" mrp="os/buildtools/srcanamdw_os/programchecker/group/testtools_programchecker.mrp"/> -->
      </component>
      <component name="n:migrationtool" long-name="Migration Tool" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/srcanamdw_os/migrationtool/group" mrp="os/buildtools/srcanamdw_os/migrationtool/group/testtools_migrationtool.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/srcanamdw_os/migrationtool/group" mrp="os/buildtools/srcanamdw_os/migrationtool/group/testtools_migrationtool.mrp"/> -->
      </component>
     </collection>
     <collection name="imgtools_os" long-name="Image Tools" level="fw">
@@ -2528,15 +2582,18 @@
     </collection>
     <collection name="n:binanamdw_os" long-name="Binary Analysis Middleware" level="fw">
      <component name="n:captools" long-name="Capability Tools" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/binanamdw_os/captools/group" mrp="os/buildtools/binanamdw_os/captools/group/testtools_captools.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/binanamdw_os/captools/group" mrp="os/buildtools/binanamdw_os/captools/group/testtools_captools.mrp"/> -->
      </component>
      <component name="n:depcheck" long-name="Dependency Checker" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/binanamdw_os/depcheck" mrp="os/buildtools/binanamdw_os/depcheck/tools_depcheck.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/binanamdw_os/depcheck" mrp="os/buildtools/binanamdw_os/depcheck/tools_depcheck.mrp"/> -->
      </component>
     </collection>
     <collection name="n:devlib" long-name="Developer Library" level="ui">
      <component name="n:devlibhelp" long-name="Developer Library Help" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/devlib/devlibhelp/group/devlib94" mrp="os/buildtools/devlib/devlibhelp/group/devlib94/developerlibrary_doc_html.mrp" version="9.4"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/devlib/devlibhelp/group/devlib94" mrp="os/buildtools/devlib/devlibhelp/group/devlib94/developerlibrary_doc_html.mrp" version="9.4"/> -->
      </component>
      <component name="n:toolsdocs" long-name="Tools Documentation" purpose="development" class="doc" plugin="N" origin-model="Symbian">
       <unit mrp="os/buildtools/devlib/toolsdocs/tools_documentation.mrp"/>
@@ -2544,98 +2601,127 @@
     </collection>
     <collection name="misccomponents" long-name="Misc Components" level="mw">
      <component name="n:runperl" long-name="Run PERL" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/runperl/group" mrp="os/buildtools/misccomponents/runperl/group/tools_sdk_eng_runperl.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/runperl/group" mrp="os/buildtools/misccomponents/runperl/group/tools_sdk_eng_runperl.mrp"/> -->
      </component>
      <component name="n:assertion" long-name="Assertion" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/assertion/group" mrp="os/buildtools/misccomponents/assertion/group/tools_sdk_eng_assertion.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/assertion/group" mrp="os/buildtools/misccomponents/assertion/group/tools_sdk_eng_assertion.mrp"/> -->
      </component>
      <component name="n:enum" long-name="Enum" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/enum/group" mrp="os/buildtools/misccomponents/enum/group/tools_sdk_eng_enum.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/enum/group" mrp="os/buildtools/misccomponents/enum/group/tools_sdk_eng_enum.mrp"/> -->
      </component>
      <component name="n:logger" long-name="Logger" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/logger/group" mrp="os/buildtools/misccomponents/logger/group/tools_sdk_eng_logger.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/logger/group" mrp="os/buildtools/misccomponents/logger/group/tools_sdk_eng_logger.mrp"/> -->
      </component>
      <component name="n:filesys" long-name="Filesys" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/filesys/group" mrp="os/buildtools/misccomponents/filesys/group/tools_sdk_eng_filesys.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/filesys/group" mrp="os/buildtools/misccomponents/filesys/group/tools_sdk_eng_filesys.mrp"/> -->
      </component>
      <component name="n:envvar" long-name="Envvar" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/envvar/group" mrp="os/buildtools/misccomponents/envvar/group/tools_sdk_eng_envvar.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/envvar/group" mrp="os/buildtools/misccomponents/envvar/group/tools_sdk_eng_envvar.mrp"/> -->
      </component>
      <component name="n:installutils" long-name="Install Utils" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/installutils/group" mrp="os/buildtools/misccomponents/installutils/group/tools_sdk_eng_installutils.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/installutils/group" mrp="os/buildtools/misccomponents/installutils/group/tools_sdk_eng_installutils.mrp"/> -->
      </component>
      <component name="n:mnemonicfix" long-name="Mnemonic Fix" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/mnemonicfix/group" mrp="os/buildtools/misccomponents/mnemonicfix/group/tools_sdk_eng_mnemonicfix.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/mnemonicfix/group" mrp="os/buildtools/misccomponents/mnemonicfix/group/tools_sdk_eng_mnemonicfix.mrp"/> -->
      </component>
      <component name="n:pathbrowser" long-name="Path Browser" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/pathbrowser/group" mrp="os/buildtools/misccomponents/pathbrowser/group/tools_sdk_eng_pathbrowser.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/pathbrowser/group" mrp="os/buildtools/misccomponents/pathbrowser/group/tools_sdk_eng_pathbrowser.mrp"/> -->
      </component>
      <component name="n:shellexec" long-name="Shell Exec" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/shellexec/group" mrp="os/buildtools/misccomponents/shellexec/group/tools_sdk_eng_shellexec.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/shellexec/group" mrp="os/buildtools/misccomponents/shellexec/group/tools_sdk_eng_shellexec.mrp"/> -->
      </component>
      <component name="n:swingworker" long-name="Swing Worker" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/swingworker/group" mrp="os/buildtools/misccomponents/swingworker/group/tools_sdk_eng_swingworker.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/swingworker/group" mrp="os/buildtools/misccomponents/swingworker/group/tools_sdk_eng_swingworker.mrp"/> -->
      </component>
      <component name="n:testcaserunner" long-name="Test Case Runner" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/testcaserunner/group" mrp="os/buildtools/misccomponents/testcaserunner/group/tools_sdk_eng_testcaserunner.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/testcaserunner/group" mrp="os/buildtools/misccomponents/testcaserunner/group/tools_sdk_eng_testcaserunner.mrp"/> -->
      </component>
      <component name="n:toolbarpanel" long-name="Tool Bar Panel" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/toolbarpanel/group" mrp="os/buildtools/misccomponents/toolbarpanel/group/tools_sdk_eng_toolbarpanel.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/toolbarpanel/group" mrp="os/buildtools/misccomponents/toolbarpanel/group/tools_sdk_eng_toolbarpanel.mrp"/> -->
      </component>
      <component name="n:javahelp" long-name="Java Help" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/javahelp/group" mrp="os/buildtools/misccomponents/javahelp/group/tools_sdk_eng_javahelp.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/javahelp/group" mrp="os/buildtools/misccomponents/javahelp/group/tools_sdk_eng_javahelp.mrp"/> -->
      </component>
      <component name="n:langconfig" long-name="Language Config" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/langconfig/group" mrp="os/buildtools/misccomponents/langconfig/group/tools_sdk_eng_langconfig.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/langconfig/group" mrp="os/buildtools/misccomponents/langconfig/group/tools_sdk_eng_langconfig.mrp"/> -->
      </component>
      <component name="n:sdkinfo" long-name="SDK Info" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/sdkinfo/group" mrp="os/buildtools/misccomponents/sdkinfo/group/tools_sdk_eng_sdkinfo.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/sdkinfo/group" mrp="os/buildtools/misccomponents/sdkinfo/group/tools_sdk_eng_sdkinfo.mrp"/> -->
      </component>
      <component name="n:jade" long-name="Jade " filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/jade/group" mrp="os/buildtools/misccomponents/jade/group/tools_sdk_eng_jade.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/jade/group" mrp="os/buildtools/misccomponents/jade/group/tools_sdk_eng_jade.mrp"/> -->
      </component>
      <component name="n:sdkpackagemgr" long-name="SDK Package Manager" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/sdkpackagemgr/group" mrp="os/buildtools/misccomponents/sdkpackagemgr/group/tools_sdk_eng_sdkpkg-manager.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/sdkpackagemgr/group" mrp="os/buildtools/misccomponents/sdkpackagemgr/group/tools_sdk_eng_sdkpkg-manager.mrp"/> -->
      </component>
      <component name="n:sdkpkgtools" long-name="SDK Package Tools" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/sdkpkgtools/group" mrp="os/buildtools/misccomponents/sdkpkgtools/group/tools_sdk_eng_sdkpkg-tools.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/sdkpkgtools/group" mrp="os/buildtools/misccomponents/sdkpkgtools/group/tools_sdk_eng_sdkpkg-tools.mrp"/> -->
      </component>
      <component name="emulatorlauncher" long-name="Emulator Launcher" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
       <unit bldFile="os/buildtools/misccomponents/emulatorlauncher/group" mrp="os/buildtools/misccomponents/emulatorlauncher/group/tools_sdk_eng_emulator_launcher.mrp"/>
      </component>
      <component name="n:pkgmgrgui" long-name="SDK Package Manager GUI" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/pkgmgrgui/group" mrp="os/buildtools/misccomponents/pkgmgrgui/group/tools_sdk_eng_pkgmgrgui.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/pkgmgrgui/group" mrp="os/buildtools/misccomponents/pkgmgrgui/group/tools_sdk_eng_pkgmgrgui.mrp"/> -->
      </component>
      <component name="n:launch" long-name="Launch" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/launch/group" mrp="os/buildtools/misccomponents/launch/group/tools_sdk_eng_launch.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/launch/group" mrp="os/buildtools/misccomponents/launch/group/tools_sdk_eng_launch.mrp"/> -->
      </component>
      <component name="n:toolsstubs" long-name="Devices Tools Stubs" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/toolsstubs/group" mrp="os/buildtools/misccomponents/toolsstubs/group/tools_sdk_eng_tools_stubs.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/toolsstubs/group" mrp="os/buildtools/misccomponents/toolsstubs/group/tools_sdk_eng_tools_stubs.mrp"/> -->
      </component>
      <component name="n:bspbuilder" long-name="BSP Builder" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/bspbuilder/group" mrp="os/buildtools/misccomponents/bspbuilder/group/tools_bspbuilder.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/bspbuilder/group" mrp="os/buildtools/misccomponents/bspbuilder/group/tools_bspbuilder.mrp"/> -->
      </component>
      <component name="n:splash" long-name="Splash Screen" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/splash/group" mrp="os/buildtools/misccomponents/splash/group/tools_sdk_eng_splash.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/splash/group" mrp="os/buildtools/misccomponents/splash/group/tools_sdk_eng_splash.mrp"/> -->
      </component>
      <component name="n:sdkbuilder" long-name="SDK Building Tools" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/misccomponents/sdkbuilder/group" mrp="os/buildtools/misccomponents/sdkbuilder/group/tools_sdk_eng_sdk_builder.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/misccomponents/sdkbuilder/group" mrp="os/buildtools/misccomponents/sdkbuilder/group/tools_sdk_eng_sdk_builder.mrp"/> -->
      </component>
     </collection>
     <collection name="n:javatoolsplat" long-name="Java Tools Platform" level="mw">
      <component name="n:javalib" long-name="Java Library " filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/javatoolsplat/javalib/group" mrp="os/buildtools/javatoolsplat/javalib/group/tools_sdk_eng_javalibrary.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/javatoolsplat/javalib/group" mrp="os/buildtools/javatoolsplat/javalib/group/tools_sdk_eng_javalibrary.mrp"/> -->
      </component>
     </collection>
     <collection name="n:fileconv" long-name="File Converters" level="mw">
      <component name="n:cjpeg" long-name="CJpeg" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/fileconv/cjpeg/group" mrp="os/buildtools/fileconv/cjpeg/group/tools_sdk_eng_cjpeg.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/fileconv/cjpeg/group" mrp="os/buildtools/fileconv/cjpeg/group/tools_sdk_eng_cjpeg.mrp"/> -->
      </component>
      <component name="n:alp2csh" long-name="ALP to CSH" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/fileconv/alp2csh/group" mrp="os/buildtools/fileconv/alp2csh/group/tools_sdk_eng_alp2csh.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/fileconv/alp2csh/group" mrp="os/buildtools/fileconv/alp2csh/group/tools_sdk_eng_alp2csh.mrp"/> -->
      </component>
      <component name="n:rtf2ptml" long-name="RTF to PTML" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/fileconv/rtf2ptml/group" mrp="os/buildtools/fileconv/rtf2ptml/group/tools_sdk_eng_rtf2ptml.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="os/buildtools/fileconv/rtf2ptml/group" mrp="os/buildtools/fileconv/rtf2ptml/group/tools_sdk_eng_rtf2ptml.mrp"/> -->
      </component>
     </collection>
     <collection name="buildtools_info" long-name="Build Tools Info" level="ui">
@@ -3470,7 +3556,8 @@
     </collection>
     <collection name="n:wapstack" long-name="WAP Stack" level="plugin">
      <component name="n:wapmessageapi" long-name="WAP Message API" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="mw/netprotocols/wapstack/wapmessageapi/group" mrp="mw/netprotocols/wapstack/wapmessageapi/group/wap-stack_wapmessage.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="mw/netprotocols/wapstack/wapmessageapi/group" mrp="mw/netprotocols/wapstack/wapmessageapi/group/wap-stack_wapmessage.mrp"/> -->
      </component>
     </collection>
     <collection name="netprotocols_info" long-name="High-level Internet Protocols Info" level="specific">
@@ -4233,10 +4320,12 @@
       <unit bldFile="mw/messagingmw/messagingfw/wappushfw/group" mrp="mw/messagingmw/messagingfw/wappushfw/group/wap-browser_wappush.mrp"/>
      </component>
      <component name="n:suplsmshandler" long-name="SUPL SMS Handler" introduced="tb91" purpose="development" plugin="Y" origin-model="Symbian">
-      <unit bldFile="mw/messagingmw/messagingfw/suplsmshandler/group" mrp="mw/messagingmw/messagingfw/suplsmshandler/group/lbs_suplsmstrigger.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="mw/messagingmw/messagingfw/suplsmshandler/group" mrp="mw/messagingmw/messagingfw/suplsmshandler/group/lbs_suplsmstrigger.mrp"/> -->
      </component>
      <component name="n:suplwappushhandler" long-name="SUPL WAP Push Handler" introduced="tb91" purpose="optional" plugin="Y" origin-model="Symbian">
-      <unit bldFile="mw/messagingmw/messagingfw/suplwappushhandler/group" mrp="mw/messagingmw/messagingfw/suplwappushhandler/group/lbs_suplwappush.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="mw/messagingmw/messagingfw/suplwappushhandler/group" mrp="mw/messagingmw/messagingfw/suplwappushhandler/group/lbs_suplwappush.mrp"/> -->
      </component>
     </collection>
     <collection name="messagingmw_info" long-name="Messaging Middleware Info" level="api">
@@ -4643,41 +4732,52 @@
     </collection>
     <collection name="n:remotemgmttest" long-name="Remote Management Test" level="specific">
      <component name="n:omasyncmlintegrationtest" long-name="OMA SyncML Integration Test" introduced="7.0s" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="mw/remotemgmt/remotemgmttest/omasyncmlintegrationtest/group" mrp="mw/remotemgmt/remotemgmttest/omasyncmlintegrationtest/group/oma_syncml_integtest.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="mw/remotemgmt/remotemgmttest/omasyncmlintegrationtest/group" mrp="mw/remotemgmt/remotemgmttest/omasyncmlintegrationtest/group/oma_syncml_integtest.mrp"/> -->
      </component>
      <component name="n:omadevicemgmtintegrationtest" long-name="OMA Device Management Integration Test" introduced="9.1" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="mw/remotemgmt/remotemgmttest/omadevicemgmtintegrationtest/group" mrp="mw/remotemgmt/remotemgmttest/omadevicemgmtintegrationtest/group/devprov_integtest.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="mw/remotemgmt/remotemgmttest/omadevicemgmtintegrationtest/group" mrp="mw/remotemgmt/remotemgmttest/omadevicemgmtintegrationtest/group/devprov_integtest.mrp"/> -->
      </component>
     </collection>
     <collection name="n:syncandremotemgmtfw" long-name="Sync and Remote Management Framework" level="framework">
      <component name="n:omasyncmldatasync" long-name="OMA SyncML Data Sync" introduced="7.0s" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="mw/remotemgmt/syncandremotemgmtfw/omasyncmldatasync/Group" mrp="mw/remotemgmt/syncandremotemgmtfw/omasyncmldatasync/Group/oma_syncml_datasync.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="mw/remotemgmt/syncandremotemgmtfw/omasyncmldatasync/Group" mrp="mw/remotemgmt/syncandremotemgmtfw/omasyncmldatasync/Group/oma_syncml_datasync.mrp"/> -->
      </component>
      <component name="n:omasyncmlcommonfw" long-name="OMA SyncML Common Framework" introduced="7.0s" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="mw/remotemgmt/syncandremotemgmtfw/omasyncmlcommonfw/Group" mrp="mw/remotemgmt/syncandremotemgmtfw/omasyncmlcommonfw/Group/oma_syncml_common_framework.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="mw/remotemgmt/syncandremotemgmtfw/omasyncmlcommonfw/Group" mrp="mw/remotemgmt/syncandremotemgmtfw/omasyncmlcommonfw/Group/oma_syncml_common_framework.mrp"/> -->
      </component>
      <component name="n:omasyncmldminterface" long-name="OMA SyncML DM Interface" introduced="7.0s" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="mw/remotemgmt/syncandremotemgmtfw/omasyncmldminterface/group" mrp="mw/remotemgmt/syncandremotemgmtfw/omasyncmldminterface/group/oma_syncml_dm_interface.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="mw/remotemgmt/syncandremotemgmtfw/omasyncmldminterface/group" mrp="mw/remotemgmt/syncandremotemgmtfw/omasyncmldminterface/group/oma_syncml_dm_interface.mrp"/> -->
      </component>
      <component name="n:omasyncmlconfig" long-name="OMA SyncML Config" introduced="tb91" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="mw/remotemgmt/syncandremotemgmtfw/omasyncmlconfig/group" mrp="mw/remotemgmt/syncandremotemgmtfw/omasyncmlconfig/group/oma_syncml_config.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="mw/remotemgmt/syncandremotemgmtfw/omasyncmlconfig/group" mrp="mw/remotemgmt/syncandremotemgmtfw/omasyncmlconfig/group/oma_syncml_config.mrp"/> -->
      </component>
      <component name="n:devicemgmtfw" long-name="Device Management Framework" introduced="8.0" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="mw/remotemgmt/syncandremotemgmtfw/devicemgmtfw/group" mrp="mw/remotemgmt/syncandremotemgmtfw/devicemgmtfw/group/devprov_devman_framework.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="mw/remotemgmt/syncandremotemgmtfw/devicemgmtfw/group" mrp="mw/remotemgmt/syncandremotemgmtfw/devicemgmtfw/group/devprov_devman_framework.mrp"/> -->
      </component>
      <component name="n:clientprovisioningfw" long-name="Client Provisioning Framework" introduced="9.1" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="mw/remotemgmt/syncandremotemgmtfw/clientprovisioningfw/Group" mrp="mw/remotemgmt/syncandremotemgmtfw/clientprovisioningfw/Group/devprov_clientprov_framework.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="mw/remotemgmt/syncandremotemgmtfw/clientprovisioningfw/Group" mrp="mw/remotemgmt/syncandremotemgmtfw/clientprovisioningfw/Group/devprov_clientprov_framework.mrp"/> -->
      </component>
     </collection>
     <collection name="n:syncandremotemgmtservices" long-name="Sync and Remote Management Services" level="plugin">
      <component name="n:datasyncadaptors" long-name="Data Sync Adaptors" introduced="7.0s" purpose="optional" plugin="Y" origin-model="Symbian">
-      <unit bldFile="mw/remotemgmt/syncandremotemgmtservices/datasyncadaptors/group" mrp="mw/remotemgmt/syncandremotemgmtservices/datasyncadaptors/group/data_sync_adaptors.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="mw/remotemgmt/syncandremotemgmtservices/datasyncadaptors/group" mrp="mw/remotemgmt/syncandremotemgmtservices/datasyncadaptors/group/data_sync_adaptors.mrp"/> -->
      </component>
      <component name="n:devicemgmtadaptors" long-name="Device Management Adaptors" introduced="9.1" purpose="optional" plugin="Y" origin-model="Symbian">
-      <unit bldFile="mw/remotemgmt/syncandremotemgmtservices/devicemgmtadaptors/devman/Group" mrp="mw/remotemgmt/syncandremotemgmtservices/devicemgmtadaptors/devman/Group/devprov_devman_adapters.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="mw/remotemgmt/syncandremotemgmtservices/devicemgmtadaptors/devman/Group" mrp="mw/remotemgmt/syncandremotemgmtservices/devicemgmtadaptors/devman/Group/devprov_devman_adapters.mrp"/> -->
      </component>
      <component name="n:clientprovisioningadaptors" long-name="Client Provisioning Adaptors" introduced="9.1" purpose="optional" plugin="Y" origin-model="Symbian">
-      <unit bldFile="mw/remotemgmt/syncandremotemgmtservices/clientprovisioningadaptors/group" mrp="mw/remotemgmt/syncandremotemgmtservices/clientprovisioningadaptors/group/devprov_clientprov_adapters.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="mw/remotemgmt/syncandremotemgmtservices/clientprovisioningadaptors/group" mrp="mw/remotemgmt/syncandremotemgmtservices/clientprovisioningadaptors/group/devprov_clientprov_adapters.mrp"/> -->
      </component>
     </collection>
     <collection name="remotemgmt_info" long-name="Remote Management Info" level="specific">
@@ -4807,7 +4907,8 @@
     </collection>
    <collection name="connectivitytransports" long-name="Connectivity Transports" level="plugin">
      <component name="n:mrouter" long-name="m-Router" filter="gt" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="mw/remoteconn/connectivitytransports/mrouter/group" mrp="mw/remoteconn/connectivitytransports/mrouter/group/connectivity_mRouterSecure.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="mw/remoteconn/connectivitytransports/mrouter/group" mrp="mw/remoteconn/connectivitytransports/mrouter/group/connectivity_mRouterSecure.mrp"/> -->
      </component>
      <component name="plpremotelink" long-name="PLP Remote Link" deprecated="9.0" purpose="optional" plugin="N" origin-model="Symbian">
       <unit bldFile="mw/remoteconn/connectivitytransports/plpremotelink/group" mrp="mw/remoteconn/connectivitytransports/plpremotelink/group/connectivity_legacy_plp_plpremotelink.mrp"/>
@@ -4826,7 +4927,8 @@
     </collection>
     <collection name="mtpfws" long-name="MTP Frameworks" level="framework">
      <component name="n:mtpfw" long-name="MTP Framework" introduced="tb91" purpose="optional" plugin="N" origin-model="Symbian">
-      <unit bldFile="mw/remoteconn/mtpfws/mtpfw/group" mrp="mw/remoteconn/mtpfws/mtpfw/group/mtp_framework.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="mw/remoteconn/mtpfws/mtpfw/group" mrp="mw/remoteconn/mtpfws/mtpfw/group/mtp_framework.mrp"/> -->
      </component>
      <component name="mtpintegrationtest" long-name="MTP Integration Test" introduced="tb91" purpose="development" plugin="N" origin-model="Symbian">
       <unit bldFile="mw/remoteconn/mtpfws/mtpintegrationtest/group" mrp="mw/remoteconn/mtpfws/mtpintegrationtest/group/mtp_test.mrp"/>
@@ -4837,7 +4939,8 @@
       <unit bldFile="mw/remoteconn/mtpdataproviders/mtpfileandfolderdp/group" mrp="mw/remoteconn/mtpdataproviders/mtpfileandfolderdp/group/mtp_filedp.mrp"/>
      </component>
      <component name="n:mtpwmpextndp" long-name="WMP Extension Data Provider" introduced="tb91" purpose="optional" plugin="Y" origin-model="Symbian">
-      <unit bldFile="mw/remoteconn/mtpdataproviders/mtpwmpextndp/group" mrp="mw/remoteconn/mtpdataproviders/mtpwmpextndp/group/mtp_wmpextndp.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="mw/remoteconn/mtpdataproviders/mtpwmpextndp/group" mrp="mw/remoteconn/mtpdataproviders/mtpwmpextndp/group/mtp_wmpextndp.mrp"/> -->
      </component>
     </collection>
     <collection name="backupandrestore" long-name="Backup and Restore" level="specific">
@@ -6541,7 +6644,8 @@
       <unit bldFile="mw/appinstall/secureswitools/makekeys/group" mrp="mw/appinstall/secureswitools/makekeys/group/security_makekeys.mrp"/>
      </component>
      <component name="n:swianalysistoolkit" long-name="SWI Analysis Toolkit" purpose="development" class="PC" plugin="N" origin-model="Symbian">
-      <unit bldFile="mw/appinstall/secureswitools/swianalysistoolkit/group" mrp="mw/appinstall/secureswitools/swianalysistoolkit/group/security_switools.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="mw/appinstall/secureswitools/swianalysistoolkit/group" mrp="mw/appinstall/secureswitools/swianalysistoolkit/group/security_switools.mrp"/> -->
      </component>
      <component name="openssllib" long-name="OpenSSL Library" purpose="optional" class="PC" plugin="N" origin-model="Symbian">
       <unit mrp="mw/appinstall/secureswitools/openssllib/security_openssl.mrp"/>
@@ -8141,7 +8245,8 @@
       <unit bldFile="app/organizer/pimappsupport/chinesecalendarconverter/group" mrp="app/organizer/pimappsupport/chinesecalendarconverter/group/app-services_calcon.mrp"/>
      </component>
      <component name="n:chinesecalendaralg" long-name="Chinese Calendar Algorithm" introduced="tb91" purpose="optional" plugin="Y" origin-model="Symbian">
-      <unit bldFile="app/organizer/pimappsupport/chinesecalendaralg/group" mrp="app/organizer/pimappsupport/chinesecalendaralg/group/app-services_chinesecalendaralgorithm.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="app/organizer/pimappsupport/chinesecalendaralg/group" mrp="app/organizer/pimappsupport/chinesecalendaralg/group/app-services_chinesecalendaralgorithm.mrp"/> -->
      </component>
     </collection>
     <collection name="organizer_info" long-name="Organizer Application Suite Info" level="ui">
@@ -9850,13 +9955,16 @@
     </collection>
    <collection name="n:symhelptools" long-name="Symbian Help Tools" level="tools">
      <component name="n:mbmcodec" long-name="MBM Codec" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="app/helps/symhelp/mbmcodec/group" mrp="app/helps/symhelp/mbmcodec/group/tools_sdk_eng_mbmcodec.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="app/helps/symhelp/mbmcodec/group" mrp="app/helps/symhelp/mbmcodec/group/tools_sdk_eng_mbmcodec.mrp"/> -->
      </component>
      <component name="n:cshlpcmpgui" long-name="CSHelp Compiler GUI" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="app/helps/symhelp/cshlpcmpgui/group" mrp="app/helps/symhelp/cshlpcmpgui/group/tools_sdk_eng_cshlpcmp_gui.mrp" priority="1010"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="app/helps/symhelp/cshlpcmpgui/group" mrp="app/helps/symhelp/cshlpcmpgui/group/tools_sdk_eng_cshlpcmp_gui.mrp" priority="1010"/> -->
      </component>
      <component name="n:cshlpcmpfrontend" long-name="CSHelp Compiler Frontend" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="app/helps/symhelp/cshlpcmpfrontend/group" mrp="app/helps/symhelp/cshlpcmpfrontend/group/tools_sdk_eng_cshlpcmp_frontend.mrp"/>
+      <!-- The following unit is removed as non-contributed -->
+      <!-- <unit bldFile="app/helps/symhelp/cshlpcmpfrontend/group" mrp="app/helps/symhelp/cshlpcmpfrontend/group/tools_sdk_eng_cshlpcmp_frontend.mrp"/> -->
      </component>
      <component name="n:cshlpcmpbackend" long-name="CSHelp Compiler Backend" purpose="development" plugin="N" origin-model="Symbian">
       <unit mrp="app/helps/symhelp/cshlpcmpbackend/group/tools_sdk_eng_cshlpcmp_backend_srconly.mrp"/>
