@@ -295,6 +295,26 @@
      </component>
     </collection>
    </block>
+   <block name="conntools" long-name="Conn Tools" tech_domain="to" level="generic" levels="1 2">
+    <collection name="nettools" long-name="Net Tools" level="2">
+     <component name="conntest" long-name="Connection Test" origin-model="foundation">
+      <unit bldFile="app/conntools/nettools/conntest/group"/>
+     </component>
+     <component unofficial="yes" name="nettools_build" long-name="Net Tools Build" origin-model="foundation">
+      <unit bldFile="app/conntools/nettools/group"/>
+     </component>
+    </collection>
+    <collection name="emulatorlan" long-name="Emulator Lan" level="1">
+     <component name="emulatorlan_build" long-name="Emulator LAN Component" origin-model="foundation">
+      <unit bldFile="app/conntools/emulatorlan/group"/>
+     </component>
+    </collection>
+    <collection name="conntools_info" long-name="Conn Tools Info" level="2">
+     <component unofficial="yes" name="conntools_build" long-name="Conn Tools Build" origin-model="foundation">
+      <unit bldFile="app/conntools/group"/>
+     </component>
+    </collection>
+   </block>
    <block name="contacts" long-name="Contacts Apps" tech_domain="pr" level="apps" span="2" levels="engine support services ui">
     <collection name="contactextensions" long-name="Contact Extensions" level="services">
      <component name="predefinedcontacts" long-name="Predefined Contacts" origin-model="foundation">
@@ -7384,26 +7404,6 @@
      </component>
      <component unofficial="yes" name="wirelessacc_build" long-name="Wireless Access Build" origin-model="foundation">
       <unit bldFile="mw/wirelessacc/group"/>
-     </component>
-    </collection>
-   </block>
-   <block name="conntools" long-name="Conn Tools" tech_domain="to" level="generic" levels="1 2">
-    <collection name="nettools" long-name="Net Tools" level="2">
-     <component name="conntest" long-name="Connection Test" origin-model="foundation">
-      <unit bldFile="app/conntools/nettools/conntest/group"/>
-     </component>
-     <component unofficial="yes" name="nettools_build" long-name="Net Tools Build" origin-model="foundation">
-      <unit bldFile="app/conntools/nettools/group"/>
-     </component>
-    </collection>
-    <collection name="emulatorlan" long-name="Emulator Lan" level="1">
-     <component name="emulatorlan_build" long-name="Emulator LAN Component" origin-model="foundation">
-      <unit bldFile="app/conntools/emulatorlan/group"/>
-     </component>
-    </collection>
-    <collection name="conntools_info" long-name="Conn Tools Info" level="2">
-     <component unofficial="yes" name="conntools_build" long-name="Conn Tools Build" origin-model="foundation">
-      <unit bldFile="app/conntools/group"/>
      </component>
     </collection>
    </block>
