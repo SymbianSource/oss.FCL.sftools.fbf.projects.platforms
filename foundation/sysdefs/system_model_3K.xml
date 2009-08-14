@@ -4325,7 +4325,7 @@
      </component>
     </collection>
    </block>
-   <block name="accesssec" long-name="Access Security" tech_domain="se" level="generic" levels="plugin framework server generic specific">
+   <block name="accesssec" long-name="Access Security" tech_domain="dc" level="generic" levels="plugin framework server generic specific">
     <collection name="wlansecuritysettings" long-name="WLAN Security Settings" level="specific">
      <component name="wapisecuritysettingsui" long-name="WAPI Security Settings UI" origin-model="Foundation">
       <unit bldFile="mw/accesssec/wlansecuritysettings/wapisecuritysettingsui/stub/group"/>
