@@ -33,7 +33,7 @@
      </component>
     </collection>
     <collection name="omasuplasnconverterstubimpl" long-name="OMA SUPL ASN Converter Stub Implementation" level="plugin">
-     <component name="asnimplementation" long-name="ASN Imple­ment­ation" origin-model="foundation">
+     <component name="asnimplementation" long-name="ASN Implementation" origin-model="foundation">
       <unit bldFile="adaptation/stubs/omasuplasnconverterstubimpl/group"/>
      </component>
     </collection>
@@ -130,7 +130,7 @@
    </block>
   </layer>
   <layer name="os" long-name="OS" levels="hw services">
-   <block name="boardsupport" level="hw" long-name="Board Support" levels="bsp test 2 3 4">
+   <block name="boardsupport" long-name="Board Support" level="hw" levels="bsp test 2 3 4">
     <collection name="emulator" long-name="Emulator" level="bsp">
      <component name="emulatorbsp" long-name="Emulator BSP" purpose="optional" plugin="N" origin-model="Symbian">
       <unit bldFile="os/boardsupport/emulator/emulatorbsp" mrp="os/boardsupport/emulator/emulatorbsp/base_wins.mrp"/>
@@ -346,7 +346,7 @@
      </component>
     </collection>
    </block>
-   <block name="security" level="services" long-name="OS Security" levels="physical-abstraction plugins libraries management services utilities">
+   <block name="security" long-name="OS Security" level="services" levels="physical-abstraction plugins libraries management services utilities">
     <collection name="contentmgmt" long-name="Content Management" level="utilities">
      <component name="contentaccessfwfordrm" long-name="Content Access Framework for DRM" introduced="9.1" purpose="mandatory" plugin="N" origin-model="Symbian">
       <unit bldFile="os/security/contentmgmt/contentaccessfwfordrm/group" mrp="os/security/contentmgmt/contentaccessfwfordrm/group/security_caf2.mrp"/>
@@ -427,7 +427,7 @@
      <component name="filelogger" long-name="File Logger" introduced="ER5" purpose="optional" plugin="N" origin-model="Symbian">
       <unit bldFile="os/persistentdata/loggingservices/filelogger/group" mrp="os/persistentdata/loggingservices/filelogger/group/comms-infras_flogger.mrp"/>
      </component>
-     <component name="rfilelogger" long-name="RFile Logger" deprecated="tb92" introduced="9.1" purpose="development" plugin="N" origin-model="Symbian">
+     <component name="rfilelogger" long-name="RFile Logger" introduced="9.1" deprecated="tb92" purpose="development" plugin="N" origin-model="Symbian">
       <unit bldFile="os/persistentdata/loggingservices/rfilelogger/group" mrp="os/persistentdata/loggingservices/rfilelogger/group/testtools_utilities.mrp"/>
      </component>
     </collection>
@@ -847,7 +847,7 @@
      </component>
     </collection>
    </block>
-   <block name="commsfw" level="services" long-name="Communications Framework" levels="server support framework process app-if">
+   <block name="commsfw" long-name="Communications Framework" level="services" levels="server support framework process app-if">
     <collection name="commsinfrastructureapitest" long-name="Comms-Infras API Tests" level="app-if">
      <component name="commsinfrastructuresvs" long-name="Comms Infrastructure Verification Suite" introduced="tb91" purpose="development" plugin="N" origin-model="Symbian">
       <unit mrp="os/commsfw/commsinfrastructureapitest/commsinfrastructuresvs/group/commsinfrastructuresvs.mrp"/>
@@ -891,7 +891,7 @@
      </component>
     </collection>
     <collection name="serialserver" long-name="Serial Server" level="server">
-     <component name="serialportcsy" long-name="Serial Port CSY" introduced="ER5" purpose="optional" plugin="Y" class="placeholder" origin-model="Symbian">
+     <component name="serialportcsy" long-name="Serial Port CSY" introduced="ER5" purpose="optional" class="placeholder" plugin="Y" origin-model="Symbian">
       <!-- placeholder for ser-comms_serialportcsy, currently built by C32 -->
      </component>
      <component name="packetloopbackcsy" long-name="Packet Loopback CSY" introduced="8.1" purpose="development" plugin="N" origin-model="Symbian">
@@ -1766,7 +1766,7 @@
      <component name="charconvplugin" long-name="Charconv Plugin" origin-model="foundation">
       <unit bldFile="os/textandloc/charconvfw/charconvplugin/group"/>
      </component>
-     <component name="charconv_fw" origin-model="foundation" long-name="Character Encoding and Conversion Framework" purpose="optional" plugin="N">
+     <component name="charconv_fw" long-name="Character Encoding and Conversion Framework" purpose="optional" plugin="N" origin-model="foundation">
       <unit bldFile="os/textandloc/charconvfw/charconv_fw/group" mrp="os/textandloc/charconvfw/charconv_fw/group/syslibs_charconv.mrp"/>
      </component>
      <!--Component manually removed and merged to OS-->
@@ -1814,7 +1814,7 @@
       <unit mrp="os/textandloc/textrendering/word/group/app-framework_word.mrp"/>
      </component>
     </collection>
-    <collection name="textandlocutils" level="util" long-name="Text and Localisation Utils">
+    <collection name="textandlocutils" long-name="Text and Localisation Utils" level="util">
      <component name="localizer" long-name="Localizer" origin-model="foundation">
       <unit bldFile="os/textandloc/charconvfw/localizer/group"/>
      </component>
@@ -2138,7 +2138,7 @@
      </component>
     </collection>
    </block>
-   <block name="kernelhwsrv" level="hw" long-name="Kernel and Hardware Services" levels="hw-if adaptation framework test">
+   <block name="kernelhwsrv" long-name="Kernel and Hardware Services" level="hw" levels="hw-if adaptation framework test">
     <collection name="baseintegtests" long-name="Base Integration Testing" level="test">
      <component name="baseintegrationtest" long-name="Base Integration Test" introduced="9.3" purpose="development" plugin="N" origin-model="Symbian">
       <unit bldFile="os/kernelhwsrv/baseintegtests/baseintegrationtest/group" mrp="os/kernelhwsrv/baseintegtests/baseintegrationtest/group/base_integration_test.mrp"/>
@@ -2313,7 +2313,7 @@
      </component>
     </collection>
    </block>
-   <block name="shortlinksrv" level="services" long-name="Short Link Services" levels="adaptation hw-if plugin framework server app-if">
+   <block name="shortlinksrv" long-name="Short Link Services" level="services" levels="adaptation hw-if plugin framework server app-if">
     <collection name="bluetoothapitest" long-name="Bluetooth API Tests" level="app-if">
      <component name="bluetoothsvs" long-name="Bluetooth Verification Suite" introduced="tb91" purpose="development" plugin="N" origin-model="Symbian">
       <unit mrp="os/shortlinksrv/bluetoothapitest/bluetoothsvs/group/bluetoothsvs.mrp"/>
@@ -2414,7 +2414,7 @@
      </component>
     </collection>
    </block>
-   <block name="buildtools" level="hw" long-name="Build Tools" levels="bld mw fw ui">
+   <block name="buildtools" long-name="Build Tools" level="hw" levels="bld mw fw ui">
     <collection name="bldsystemtools" long-name="Build System Tools" level="bld">
      <component name="buildsystemtools" long-name="Build System Tools" purpose="development" plugin="N" origin-model="Symbian">
       <unit bldFile="os/buildtools/bldsystemtools/buildsystemtools/group" mrp="os/buildtools/bldsystemtools/buildsystemtools/group/tools_build.mrp"/>
@@ -3608,12 +3608,12 @@
       <!-- Real Time Data Protocol -->
       <unit bldFile="mw/ipappprotocols/realtimenetprots/rtp/group" mrp="mw/ipappprotocols/realtimenetprots/rtp/group/mm-protocols_rtp.mrp"/>
      </component>
-     <component name="sipfw" long-name="SIP Framework" introduced="9.2" filter="gt" purpose="optional" plugin="N" origin-model="Symbian">
+     <component name="sipfw" long-name="SIP Framework" filter="gt" introduced="9.2" purpose="optional" plugin="N" origin-model="Symbian">
       <unit bldFile="mw/ipappprotocols/realtimenetprots/sipfw/Group" mrp="mw/ipappprotocols/realtimenetprots/sipfw/Group/mm-protocols_SIP2_Com.mrp" version="2"/>
      </component>
     </collection>
     <collection name="sipproviderplugins" long-name="SIP Provider Plugins" level="conn">
-     <component name="sipprovider" long-name="SIP Provider" introduced="tb91" filter="gt" purpose="optional" plugin="Y" origin-model="Symbian">
+     <component name="sipprovider" long-name="SIP Provider" filter="gt" introduced="tb91" purpose="optional" plugin="Y" origin-model="Symbian">
       <unit bldFile="mw/ipappprotocols/sipproviderplugins/sipprovider/group" mrp="mw/ipappprotocols/sipproviderplugins/sipprovider/group/mm-protocols_SipProvider.mrp"/>
      </component>
     </collection>
@@ -6628,7 +6628,7 @@
 	 <component name="swidevicetools" long-name="Secure Software Install Device Tools" introduced="8.1" purpose="development">
 	  <unit bldFile="mw/appinstall/installationservices/swidevicetools/group" mrp="mw/appinstall/installationservices/swidevicetools/group/security_switools_device.mrp"/>
 	 </component>
-	 <component name="switestfw" long-name="Software Install Test Framework" deprecated="tb92" introduced="7.0" purpose="development">
+	 <component name="switestfw" long-name="Software Install Test Framework" introduced="7.0" deprecated="tb92" purpose="development">
 	  <unit bldFile="mw/appinstall/installationservices/switestfw/group" mrp="mw/appinstall/installationservices/switestfw/group/install_testframework.mrp"/>
 	 </component>
 	 <component name="swiconfig" long-name="Software Install Config" introduced="9.1" purpose="optional" class="config">
@@ -9981,9 +9981,9 @@
      </component>
     </collection>
    </block>
-  <block name="techview" level="apps" span="2" long-name="Techview" levels="services ui utils apps1 apps2 apps3">
+   <block name="techview" long-name="Techview" level="apps" span="2" levels="services ui utils apps1 apps2 apps3">
     <collection name="buildverification" long-name="Build Verification" level="services">
-     <component name="autosmoketest" long-name="Auto Smoke Test" filter="gt" purpose="development" introduced="9.1" plugin="N" origin-model="Symbian">
+     <component name="autosmoketest" long-name="Auto Smoke Test" filter="gt" introduced="9.1" purpose="development" plugin="N" origin-model="Symbian">
       <unit bldFile="app/techview/buildverification/autosmoketest/Group" mrp="app/techview/buildverification/autosmoketest/Group/testtools_autosmoketest.mrp"/>
      </component>
      <component name="smoketest" long-name="Smoke Test" filter="gt" purpose="development" plugin="N" origin-model="Symbian">
