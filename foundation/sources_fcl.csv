@@ -61,6 +61,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/mmuifw/,/sf/mw/mmuifw,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/videoutils/,/sf/mw/videoutils,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/mmmw/,/sf/mw/mmmw,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/helix/,/sf/mw/helix,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/camerasrv/,/sf/mw/camerasrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/mmappfw/,/sf/mw/mmappfw,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/inputmethods/,/sf/mw/inputmethods,branch,default,layers.sysdef.xml
