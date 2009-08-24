@@ -50,7 +50,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/camerasrv/,/sf/mw/camerasrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/FCL/sf/mw/classicui/,/sf/mw/classicui,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/dlnasrv/,/sf/mw/dlnasrv,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/drm/,/sf/mw/drm,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/mw/drm/,/sf/mw/drm,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/hapticsservices/,/sf/mw/hapticsservices,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/homescreensrv/,/sf/mw/homescreensrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/imghandling/,/sf/mw/imghandling,branch,default,layers.sysdef.xml
