@@ -1,0 +1,840 @@
+<?xml version="1.0"?>
+<!DOCTYPE SystemDefinition [
+
+ <!ELEMENT SystemDefinition (systemModel?, build?)>
+ <!ATTLIST SystemDefinition
+  name CDATA #REQUIRED
+  schema CDATA #REQUIRED>
+ <!ELEMENT systemModel (layer+)>
+ <!ELEMENT layer (logicalset* | module*)*>
+ <!ATTLIST layer
+  name CDATA #REQUIRED
+  levels CDATA #IMPLIED
+  span CDATA #IMPLIED>
+ <!ELEMENT logicalset (logicalsubset* | module* | unit* | package* | prebuilt*)*>
+ <!ATTLIST logicalset 
+  name CDATA #REQUIRED
+  levels CDATA #IMPLIED  
+  span CDATA #IMPLIED
+  level CDATA #IMPLIED>
+ <!ELEMENT logicalsubset (module* | unit* | package* | prebuilt*)*>
+ <!ATTLIST logicalsubset name CDATA #REQUIRED>
+ <!ELEMENT module (component* | unit* | package* | prebuilt*)*>
+ <!ATTLIST module
+  name CDATA #REQUIRED
+  level CDATA #IMPLIED>
+ <!ELEMENT component (unit* | package* | prebuilt*)*>
+ <!ATTLIST component name CDATA #REQUIRED>
+ <!ELEMENT unit EMPTY>
+ <!ATTLIST unit
+  unitID ID #REQUIRED
+  name CDATA #REQUIRED
+  mrp CDATA #REQUIRED
+  filter CDATA #IMPLIED
+  bldFile CDATA #REQUIRED
+  priority CDATA #IMPLIED
+  contract CDATA #IMPLIED>
+ <!ELEMENT package EMPTY>
+ <!ATTLIST package
+  name CDATA #REQUIRED
+  mrp CDATA #REQUIRED
+  filter CDATA #IMPLIED
+  contract CDATA #IMPLIED>
+ <!ELEMENT prebuilt EMPTY>
+ <!ATTLIST prebuilt
+  name CDATA #REQUIRED
+  version CDATA #REQUIRED
+  late (Y|N) #IMPLIED
+  filter CDATA #IMPLIED
+  contract CDATA #IMPLIED>
+ <!ELEMENT build (option* | target+ | targetList+ | unitList+ | configuration+)*>
+ <!ELEMENT unitList (unitRef+)>
+ <!ATTLIST unitList
+  name ID #REQUIRED
+  description CDATA #REQUIRED>
+ <!ELEMENT unitRef EMPTY>
+ <!ATTLIST unitRef unit IDREF #REQUIRED>
+ <!ELEMENT targetList EMPTY>
+ <!ATTLIST targetList
+  name ID #REQUIRED
+  description CDATA #REQUIRED
+  target IDREFS #REQUIRED>
+ <!ELEMENT target EMPTY>
+ <!ATTLIST target
+  name ID #REQUIRED
+  abldTarget CDATA #REQUIRED
+  description CDATA #REQUIRED>
+ <!ELEMENT option EMPTY>
+ <!ATTLIST option
+  name ID #REQUIRED
+  abldOption CDATA #REQUIRED
+  description CDATA #REQUIRED
+  enable (Y | N | y | n) #REQUIRED>
+ <!ELEMENT configuration (unitListRef+ | layerRef+ | task+)*>
+ <!ATTLIST configuration
+  name ID #REQUIRED
+  description CDATA #REQUIRED
+  filter CDATA #REQUIRED>
+ <!ELEMENT task ( unitListRef* , (buildLayer | specialInstructions))>
+ <!ELEMENT unitListRef EMPTY>
+ <!ATTLIST unitListRef unitList IDREF #REQUIRED>
+ <!ELEMENT layerRef EMPTY>
+ <!ATTLIST layerRef layerName CDATA #REQUIRED>
+ <!ELEMENT buildLayer EMPTY>
+ <!ATTLIST buildLayer
+  command CDATA #REQUIRED
+  targetList IDREFS #IMPLIED
+  unitParallel (Y | N | y | n) #REQUIRED
+  targetParallel (Y | N | y | n) #IMPLIED>
+ <!ELEMENT specialInstructions EMPTY>
+ <!ATTLIST specialInstructions
+  name CDATA #REQUIRED
+  cwd CDATA #REQUIRED
+  command CDATA #REQUIRED>
+]>
+<SystemDefinition name="S60_SystemBuild" schema="1.4.0">
+<systemModel>
+<layer name="src">
+<module name="hlpmodel">
+<component name="hlpmodel">
+<unit unitID="S60_hlpmodel" name="hlpmodel" bldFile="\src\common\generic\app-services\hlpmodel\group" mrp=""/>
+</component>
+</module>
+</layer>
+<layer name="extra">
+	<module name="WlanEapSettingsUi_ccx">
+		<component name="WlanEapSettingsUi_ccx">
+			<unit unitID="s60_mw_networking_networkingutilities_WlanEapSettingsUi_group_ccx" name="WlanEapSettingsUi_ccx" bldFile="\sf\mw\accesssec\wlansecuritysettings\wlaneapsettingsui\group\ccx" mrp=""/>
+		</component>
+	</module>
+</layer>
+</systemModel>
+
+  <build>
+    <option name="KEEPGOING" abldOption="-keepgoing" description="Causes make to keepgoing on errors" enable="Y"/>
+<!--    <option name="SAVESPACE" abldOption="-savespace" description="Causes the removal of intermediate files" enable="Y"/> -->
+    <target name="WINS" abldTarget="wins" description="MSVC Compiler"/>
+    <target name="WINS_REL" abldTarget="wins urel" description="MSVC Compiler"/>
+    <target name="WINS_DEB" abldTarget="wins udeb" description="MSVC Compiler"/>
+    <target name="WINSCW" abldTarget="winscw" description="CodeWarrior Compiler"/>
+    <target name="WINSCW_REL" abldTarget="winscw urel" description="CodeWarrior Compiler"/>
+    <target name="WINSCW_DEB" abldTarget="winscw udeb" description="CodeWarrior Compiler"/>
+    <target name="TOOLS" abldTarget="tools" description="MSVC Compiler for Tools"/>
+    <target name="TOOLS_REL" abldTarget="tools rel" description="MSVC Compiler for Tools Release mode only"/>
+    <target name="ARMV5" abldTarget="armv5" description="RVCT Compiler"/>
+    <target name="ARMV5_REL" abldTarget="armv5 urel" description="RVCT Compiler"/>
+    <target name="ARMV5_DEB" abldTarget="armv5 udeb" description="RVCT Compiler"/>
+
+    <!-- Aditional Targets -->
+    <target name="CWTOOLS" abldTarget="cwtools" description="CodeWarrior Compiler for Tools"/> <!-- Not supported -->
+    <target name="CWTOOLS_REL" abldTarget="cwtools rel" description="CodeWarrior Compiler for Tools Release mode only"/> <!-- Not supported -->
+    
+    <targetList name="default" description="Main Targets" target="WINSCW ARMV5"/>
+    <targetList name="default_winscw" description="Main Targets" target="WINSCW"/>
+    <targetList name="default_armv5" description="Main Targets" target="ARMV5"/>
+    <targetList name="default_rel" description="Main Targets for rel" target="WINSCW_REL ARMV5_REL"/>
+    <targetList name="default_deb" description="Main Targets for deb" target="WINSCW_DEB ARMV5_DEB"/>
+    <targetList name="default_debrel" description="Main Targets for WINSCW deb and ARMV5 urel" target="WINSCW_DEB ARMV5_REL"/>
+    <targetList name="default_tools" description="tools Targets" target="TOOLS"/>
+    <targetList name="tools_rel" description="tools Release Targets" target="TOOLS_REL"/>
+    <targetList name="cwtools" description="cwtools Targets" target="CWTOOLS"/>
+    <targetList name="cwtools_rel" description="cwtools Release Targets" target="CWTOOLS_REL"/>
+  
+
+  	<configuration name="S60_bldmefirst" description="S60 bldmefirst part" filter="S60_5_0">
+      <unitListRef unitList="S60_BLDMEFIRST_EXPORT_OEM"/>
+
+			<!-- export platform_paths.hrh -->
+      <task><specialInstructions name="platform_path_definitions_api" cwd="\sf\os\devicesrv\devicesrv_pub\platform_path_definitions_api\group" command="bldmake bldfiles -k"/></task> 
+      <task><specialInstructions name="platform_path_definitions_api" cwd="\sf\os\devicesrv\devicesrv_pub\platform_path_definitions_api\group" command="abld export -k"/></task> 
+
+			<!-- export platform security headers -->
+      <task><specialInstructions name="common_platform_security_definitions_api" cwd="\sf\os\devicesrv\devicesrv_pub\common_platform_security_definitions_api\group" command="bldmake bldfiles -k"/></task> 
+      <task><specialInstructions name="common_platform_security_definitions_api" cwd="\sf\os\devicesrv\devicesrv_pub\common_platform_security_definitions_api\group" command="abld export -k"/></task> 
+
+			<!-- export common headers -->
+      <task><specialInstructions name="export_commonengine_platform_paths" cwd="\sf\os\devicesrv\commonservices\commonengine\group" command="bldmake bldfiles -k"/></task> 
+      <task><specialInstructions name="export_commonengine_platform_paths" cwd="\sf\os\devicesrv\commonservices\commonengine\group" command="abld export -k"/></task> 
+
+			<!-- export Browser_platform_variant.hrh -->
+      <task><specialInstructions name="browser_platform_api" cwd="\sf\mw\web\web_plat\browser_platform_api\group" command="bldmake bldfiles -k"/></task> 
+      <task><specialInstructions name="browser_platform_api" cwd="\sf\mw\web\web_plat\browser_platform_api\group" command="abld export -k"/></task> 
+
+  		<task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="N"/></task>
+
+			<!-- touch extracted bitmaps and icons  -->
+      <task><specialInstructions name="touch_bitmaps" cwd="\" command="toucher.exe \sf\mw\uiresources\uigraphics\Bitmaps2"/></task> 
+      <task><specialInstructions name="touch_bitmaps" cwd="\" command="toucher.exe \epoc32\s60\bitmaps"/></task> 
+      <task><specialInstructions name="touch_icons" cwd="\" command="toucher.exe \sf\mw\uiresources\uigraphics\Icons"/></task> 
+      <task><specialInstructions name="touch_icons" cwd="\" command="toucher.exe \epoc32\s60\icons"/></task> 
+
+			<!-- copy s60 makefile templates from s60\tools\makefile_templates to \epoc32\tools\makefile_templates. makefile templates are needed in current location before 'bldmake bldfiles' has launched -->
+      <task><specialInstructions name="copy_makefile" cwd="\" command="for /R \sf\tools\makefile_templates\ %a in (*) do xcopy /Y /R %a \epoc32\tools\makefile_templates\s60\"/></task> 
+      <task><specialInstructions name="copy_makefile" cwd="\" command="erase /F \epoc32\tools\makefile_templates\s60\Distribution.Policy.S60"/></task>
+      
+<!-- crete empty folders to get emulator work -->
+      <task><specialInstructions name="create_folder_emu" cwd="\" command="md \epoc32\wins\D"/></task> 
+      <task><specialInstructions name="create_folder_emu" cwd="\" command="md \epoc32\winscw\D"/></task> 
+  	</configuration>
+
+  	<configuration name="S60_bldmefirst_sf" description="S60 bldmefirst part" filter="S60_5_0">
+      <unitListRef unitList="S60_BLDMEFIRST_EXPORT"/>
+
+			<!-- export platform_paths.hrh -->
+      <task><specialInstructions name="platform_path_definitions_api" cwd="\sf\os\devicesrv\devicesrv_pub\platform_path_definitions_api\group" command="bldmake bldfiles -k"/></task> 
+      <task><specialInstructions name="platform_path_definitions_api" cwd="\sf\os\devicesrv\devicesrv_pub\platform_path_definitions_api\group" command="abld export -k"/></task> 
+
+			<!-- export platform security headers -->
+      <task><specialInstructions name="common_platform_security_definitions_api" cwd="\sf\os\devicesrv\devicesrv_pub\common_platform_security_definitions_api\group" command="bldmake bldfiles -k"/></task> 
+      <task><specialInstructions name="common_platform_security_definitions_api" cwd="\sf\os\devicesrv\devicesrv_pub\common_platform_security_definitions_api\group" command="abld export -k"/></task> 
+
+			<!-- export common headers -->
+      <task><specialInstructions name="export_commonengine_platform_paths" cwd="\sf\os\devicesrv\commonservices\commonengine\group" command="bldmake bldfiles -k"/></task> 
+      <task><specialInstructions name="export_commonengine_platform_paths" cwd="\sf\os\devicesrv\commonservices\commonengine\group" command="abld export -k"/></task> 
+
+			<!-- export Browser_platform_variant.hrh -->
+      <task><specialInstructions name="browser_platform_api" cwd="\sf\mw\web\web_plat\browser_platform_api\group" command="bldmake bldfiles -k"/></task> 
+      <task><specialInstructions name="browser_platform_api" cwd="\sf\mw\web\web_plat\browser_platform_api\group" command="abld export -k"/></task> 
+
+  		<task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="N"/></task>
+
+			<!-- touch extracted bitmaps and icons  -->
+      <task><specialInstructions name="touch_bitmaps" cwd="\" command="toucher.exe \sf\mw\uiresources\uigraphics\Bitmaps2"/></task> 
+      <task><specialInstructions name="touch_bitmaps" cwd="\" command="toucher.exe \epoc32\s60\bitmaps"/></task> 
+      <task><specialInstructions name="touch_icons" cwd="\" command="toucher.exe \sf\mw\uiresources\uigraphics\Icons"/></task> 
+      <task><specialInstructions name="touch_icons" cwd="\" command="toucher.exe \epoc32\s60\icons"/></task> 
+
+			<!-- copy s60 makefile templates from s60\tools\makefile_templates to \epoc32\tools\makefile_templates. makefile templates are needed in current location before 'bldmake bldfiles' has launched -->
+      <task><specialInstructions name="copy_makefile" cwd="\" command="for /R \sf\tools\makefile_templates\ %a in (*) do xcopy /Y /R %a \epoc32\tools\makefile_templates\s60\"/></task> 
+      <task><specialInstructions name="copy_makefile" cwd="\" command="erase /F \epoc32\tools\makefile_templates\s60\Distribution.Policy.S60"/></task>
+      
+<!-- crete empty folders to get emulator work -->
+      <task><specialInstructions name="create_folder_emu" cwd="\" command="md \epoc32\wins\D"/></task> 
+      <task><specialInstructions name="create_folder_emu" cwd="\" command="md \epoc32\winscw\D"/></task> 
+  	</configuration>
+  
+   	<configuration name="S60_bldmelast" description="S60 bldmelast part" filter="S60_5_0,western">
+      <unitListRef unitList="S60_BLDVARIANT"/>   		
+   		<unitListRef unitList="S60_REGIONALVARIANT"/>
+
+<!-- for target arm9e -->
+      <task><specialInstructions name="EAacPlusCodecPlugin" cwd="\sf\os\mm\audio\ARM_CMMF_codecs\EAacPlusCodecPlugin\Group" command="bldmake bldfiles -k"/></task> 
+      <task><specialInstructions name="EAacPlusCodecPlugin" cwd="\sf\os\mm\audio\ARM_CMMF_codecs\EAacPlusCodecPlugin\Group" command="abld build arm9e -k"/></task> 
+
+<!--new configuration tool cenrep generation western --> 
+    <task><specialInstructions name="cenrep_generation" cwd="\epoc32\tools" command="call cli_build.cmd -master_conf s60 -impl \epoc32\rom\config\confml_data\s60 -confml \epoc32\rom\config\confml_data\s60 -ignore_errors"/></task> 
+
+<!-- do what for regional variant that those can be zipped from bldmelast build log file -->
+  		<task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+  		<task><buildLayer command="abld makefile" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+  		<task><buildLayer command="abld -what build" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+
+  	</configuration>
+
+   	<configuration name="S60_bldmelast_sf" description="S60 bldmelast part" filter="S60_5_0,western">
+      <unitListRef unitList="S60_BLDVARIANT_SF"/>   		
+   		<unitListRef unitList="S60_REGIONALVARIANT"/>
+
+<!-- for target arm9e -->
+<!--
+      <task><specialInstructions name="EAacPlusCodecPlugin" cwd="\sf\os\mm\audio\ARM_CMMF_codecs\EAacPlusCodecPlugin\Group" command="bldmake bldfiles -k"/></task> 
+      <task><specialInstructions name="EAacPlusCodecPlugin" cwd="\sf\os\mm\audio\ARM_CMMF_codecs\EAacPlusCodecPlugin\Group" command="abld build arm9e -k"/></task> 
+-->
+<!--new configuration tool cenrep generation western --> 
+    <task><specialInstructions name="cenrep_generation" cwd="\epoc32\tools" command="call cli_build.cmd -master_conf s60 -impl \epoc32\rom\config\confml_data\s60 -confml \epoc32\rom\config\confml_data\s60 -ignore_errors"/></task> 
+
+<!-- do what for regional variant that those can be zipped from bldmelast build log file -->
+  		<task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+  		<task><buildLayer command="abld makefile" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+  		<task><buildLayer command="abld -what build" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+
+  	</configuration>
+
+   	<configuration name="S60_variant_china" description="S60 chinese regional variant" filter="S60_5_0,china">
+      <unitListRef unitList="S60_BLDVARIANT"/>
+      <unitListRef unitList="S60_REGIONALVARIANT"/>
+
+<!-- do what for regional variant that those can be zipped from bldmelast build log file -->
+  		<task><buildLayer command="toucher.exe ..\.." unitParallel="Y"/></task>
+  		<task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="N"/></task>
+      <task><specialInstructions name="clean_version" cwd="\sf\os\deviceplatformrelease\Version\group" command="abld cleanexport -k"/></task> 
+<!-- this is not a mistake, bldmake bldfiles and exports have to do twice because of changes in bldvariant.hrh -->
+  		<task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="N"/></task>
+      <task><buildLayer command="abld makefile" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default" unitParallel="Y" targetParallel="N"/></task>
+      <task><buildLayer command="abld target" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld final" targetList="default" unitParallel="Y" targetParallel="N"/></task>
+      <task><buildLayer command="abld -what build" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+  	</configuration>
+
+   	<configuration name="S60_variant_china_armv5" description="S60 chinese regional variant" filter="S60_5_0,china">
+      <unitListRef unitList="PF_BLDVARIANT"/>
+      <unitListRef unitList="S60_REGIONALVARIANT"/>
+
+<!-- do what for regional variant that those can be zipped from bldmelast build log file -->
+  		<task><buildLayer command="toucher.exe ..\.." unitParallel="Y"/></task>
+  		<task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="N"/></task>
+      <task><specialInstructions name="clean_version" cwd="\sf\os\deviceplatformrelease\Version\group" command="abld cleanexport -k"/></task> 
+<!-- this is not a mistake, bldmake bldfiles and exports have to do twice because of changes in bldvariant.hrh -->
+  		<task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="N"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_armv5" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default_armv5" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default_armv5" unitParallel="Y" targetParallel="N"/></task>
+      <task><buildLayer command="abld target" targetList="default_armv5" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld final" targetList="default_armv5" unitParallel="Y" targetParallel="N"/></task>
+      <task><buildLayer command="abld -what build" targetList="default_armv5" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="default_armv5" unitParallel="Y" targetParallel="Y"/></task>
+  	</configuration>
+
+   	<configuration name="S60_variant_china_winscw" description="S60 chinese regional variant" filter="S60_5_0,china">
+      <unitListRef unitList="PF_BLDVARIANT"/>
+      <unitListRef unitList="S60_REGIONALVARIANT"/>
+
+<!-- do what for regional variant that those can be zipped from bldmelast build log file -->
+  		<task><buildLayer command="toucher.exe ..\.." unitParallel="Y"/></task>
+  		<task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="N"/></task>
+      <task><specialInstructions name="clean_version" cwd="\sf\os\deviceplatformrelease\Version\group" command="abld cleanexport -k"/></task> 
+<!-- this is not a mistake, bldmake bldfiles and exports have to do twice because of changes in bldvariant.hrh -->
+  		<task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="N"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_winscw" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default_winscw" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default_winscw" unitParallel="Y" targetParallel="N"/></task>
+      <task><buildLayer command="abld target" targetList="default_winscw" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld final" targetList="default_winscw" unitParallel="Y" targetParallel="N"/></task>
+      <task><buildLayer command="abld -what build" targetList="default_winscw" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="default_winscw" unitParallel="Y" targetParallel="Y"/></task>
+  	</configuration>
+
+   	<configuration name="S60_variant_japan" description="S60 japanese regional variant" filter="S60_5_0,japan">
+      <unitListRef unitList="S60_BLDVARIANT"/>   
+      <unitListRef unitList="S60_REGIONALVARIANT"/>
+
+<!-- do what for regional variant that those can be zipped from bldmelast build log file -->
+  		<task><buildLayer command="toucher.exe ..\.." unitParallel="Y"/></task>
+  		<task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="N"/></task>
+      <task><specialInstructions name="clean_version" cwd="\sf\os\deviceplatformrelease\Version\group" command="abld cleanexport -k"/></task> 
+<!-- this is not a mistake, bldmake bldfiles and exports have to do twice because of changes in bldvariant.hrh -->
+  		<task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="N"/></task>
+      <task><buildLayer command="abld makefile" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default" unitParallel="Y" targetParallel="N"/></task>
+      <task><buildLayer command="abld target" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld final" targetList="default" unitParallel="Y" targetParallel="N"/></task>
+      <task><buildLayer command="abld -what build" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+  	</configuration>
+
+   	<configuration name="S60_variant_japan_winscw" description="S60 japanese regional variant" filter="S60_5_0,japan">
+      <unitListRef unitList="PF_BLDVARIANT"/>      
+      <unitListRef unitList="S60_REGIONALVARIANT"/>
+
+<!-- do what for regional variant that those can be zipped from bldmelast build log file -->
+  		<task><buildLayer command="toucher.exe ..\.." unitParallel="Y"/></task>
+  		<task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="N"/></task>
+      <task><specialInstructions name="clean_version" cwd="\sf\os\deviceplatformrelease\Version\group" command="abld cleanexport -k"/></task> 
+<!-- this is not a mistake, bldmake bldfiles and exports have to do twice because of changes in bldvariant.hrh -->
+  		<task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="N"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_winscw" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default_winscw" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default_winscw" unitParallel="Y" targetParallel="N"/></task>
+      <task><buildLayer command="abld target" targetList="default_winscw" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld final" targetList="default_winscw" unitParallel="Y" targetParallel="N"/></task>
+      <task><buildLayer command="abld -what build" targetList="default_winscw" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="default_winscw" unitParallel="Y" targetParallel="Y"/></task>
+  	</configuration>
+  	
+   	<configuration name="S60_variant_japan_armv5" description="S60 japanese regional variant" filter="S60_5_0,japan">
+      <unitListRef unitList="PF_BLDVARIANT"/>
+      <unitListRef unitList="S60_REGIONALVARIANT"/>
+
+<!-- do what for regional variant that those can be zipped from bldmelast build log file -->
+  		<task><buildLayer command="toucher.exe ..\.." unitParallel="Y"/></task>
+  		<task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="N"/></task>
+      <task><specialInstructions name="clean_version" cwd="\sf\os\deviceplatformrelease\Version\group" command="abld cleanexport -k"/></task> 
+<!-- this is not a mistake, bldmake bldfiles and exports have to do twice because of changes in bldvariant.hrh -->
+  		<task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="N"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_armv5" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default_armv5" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default_armv5" unitParallel="Y" targetParallel="N"/></task>
+      <task><buildLayer command="abld target" targetList="default_armv5" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld final" targetList="default_armv5" unitParallel="Y" targetParallel="N"/></task>
+      <task><buildLayer command="abld -what build" targetList="default_armv5" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="default_armv5" unitParallel="Y" targetParallel="Y"/></task>
+  	</configuration>  
+
+		<configuration name="S60_5_1_clean" description="S60 5.1 clean build" filter="raptor_S60_5_1_clean">
+    	<unitListRef unitList="S60_COMMON_OSEXTENSION"/>
+    	<unitListRef unitList="S60_COMMON_OSEXTENSION_OEM"/>
+      <unitListRef unitList="S60_COMMON"/>
+      <unitListRef unitList="S60_OEM_BUILD"/>
+      <unitListRef unitList="S60_COMMON_OSEXTENSION_STUBS"/>
+      <unitListRef unitList="S60_COMMON_STUBS"/>
+      <unitListRef unitList="S60_BINARY_ONLY"/>
+      
+      <task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="Y"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_tools" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld library" targetList="default_tools" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld target" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld final" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -what build" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_winscw" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default_winscw" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default_winscw" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_armv5" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default_armv5" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default_armv5" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld target" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld final" targetList="default" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld -what build" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+    </configuration>
+
+		<configuration name="S60_5_1_sf" description="S60 5.1 clean build" filter="S60_5_0">
+    	<unitListRef unitList="S60_COMMON_OSEXTENSION"/>
+      <unitListRef unitList="S60_COMMON"/>
+      <unitListRef unitList="S60_SF_BUILD"/>
+      <unitListRef unitList="S60_COMMON_OSEXTENSION_STUBS"/>
+      <unitListRef unitList="S60_COMMON_STUBS"/>
+      <unitListRef unitList="S60_BINARY_ONLY_SF"/>
+      
+      <task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="Y"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_tools" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld library" targetList="default_tools" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld target" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld final" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -what build" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_winscw" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default_winscw" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default_winscw" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_armv5" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default_armv5" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default_armv5" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld target" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld final" targetList="default" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld -what build" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+    </configuration>
+
+
+		<configuration name="S60_winscw" description="S60 winscw build" filter="S60_5_0">
+    	<unitListRef unitList="S60_COMMON_OSEXTENSION"/>
+      <unitListRef unitList="S60_COMMON"/>
+      <unitListRef unitList="S60_COMMON_OSEXTENSION_STUBS"/>
+      <unitListRef unitList="S60_COMMON_STUBS"/>
+      <unitListRef unitList="S60_BINARY_ONLY"/>
+      <unitListRef unitList="S60_WINSCW_EXTRA"/>
+
+      <task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="Y"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_tools" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld library" targetList="default_tools" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld target" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld final" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -what build" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_winscw" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default_winscw" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default_winscw" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld target" targetList="default_winscw" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld final" targetList="default_winscw" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld -what build" targetList="default_winscw" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="default_winscw" unitParallel="Y" targetParallel="Y"/></task>
+    </configuration>
+
+		<configuration name="S60_5_1_fast" description="S60 5.1 clean build for winscw udeb and armv5 urel" filter="S60_5_0">
+    	<unitListRef unitList="S60_COMMON_OSEXTENSION"/>
+    	<unitListRef unitList="S60_COMMON_OSEXTENSION_OEM"/>
+      <unitListRef unitList="S60_COMMON"/>
+      <unitListRef unitList="S60_OEM_BUILD"/>
+      <unitListRef unitList="S60_COMMON_OSEXTENSION_STUBS"/>
+      <unitListRef unitList="S60_COMMON_STUBS"/>
+      <unitListRef unitList="S60_BINARY_ONLY"/>
+      
+      <task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="Y"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_tools" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld library" targetList="default_tools" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld target" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld final" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -what build" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_winscw" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default_winscw" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default_winscw" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_armv5" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default_armv5" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default_armv5" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld target" targetList="default_debrel" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld final" targetList="default_debrel" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld -what build" targetList="default_debrel" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="default_debrel" unitParallel="Y" targetParallel="Y"/></task>
+      
+    </configuration>
+
+
+		<configuration name="S60_5_1_complementary" description="S60 5.1 complementary build" filter="raptor_S60_5_1_complementary">
+      <unitListRef unitList="S60_COMMON_COMPLEMENTARY"/>
+      <task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export" unitParallel="Y"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_tools" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld library" targetList="default_tools" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld target" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld final" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -what build" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="tools_rel" unitParallel="N" targetParallel="Y"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_winscw" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default_winscw" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default_winscw" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_armv5" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default_armv5" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default_armv5" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld target" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld final" targetList="default" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld -what build" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+    </configuration>
+
+<!--  
+launch -what command for binary only component so thosa can be zipped  
+this configuration can be used only when those components has built among normal build
+-->
+		<configuration name="binary_only_what" description="do what command for binary only components" filter="">
+      <unitListRef unitList="S60_BINARY_ONLY"/>
+      <task><buildLayer command="abld -what build" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+    </configuration>
+
+
+<!--  OS Extension build configurations start  -->
+
+  	<configuration name="OSExt_bldmefirst" description="S60 OS Extension bldmefirst part" filter="osext">
+        <task><specialInstructions name="platform_path_definitions_api" cwd="\sf\os\devicesrv\devicesrv_pub\platform_path_definitions_api\group" command="bldmake bldfiles -k"/></task> 
+        <task><specialInstructions name="platform_path_definitions_api" cwd="\sf\os\devicesrv\devicesrv_pub\platform_path_definitions_api\group" command="abld export -k"/></task> 
+        <task><specialInstructions name="common_platform_security_definitions_api" cwd="\sf\os\devicesrv\devicesrv_pub\common_platform_security_definitions_api\group" command="bldmake bldfiles -k"/></task> 
+        <task><specialInstructions name="common_platform_security_definitions_api" cwd="\sf\os\devicesrv\devicesrv_pub\common_platform_security_definitions_api\group" command="abld export -k"/></task> 
+  		<task><specialInstructions name="export feature.hrh" cwd="\sf\os\devicesrv\commonservices\commonengine\group" command="bldmake bldfiles -k"/></task>
+  		<task><specialInstructions name="export feature.hrh" cwd="\sf\os\devicesrv\commonservices\commonengine\group" command="abld export -k"/></task>
+  		<task><specialInstructions name="export platform_paths.hrh" cwd="\sf\os\devicesrv\featuremgmt\featuremanager\group" command="bldmake bldfiles -k"/></task>
+  		<task><specialInstructions name="export platform_paths.hrh" cwd="\sf\os\devicesrv\featuremgmt\featuremanager\group" command="abld export -k"/></task>
+  		<task><specialInstructions name="bldmake_S60_config" cwd="\config\s60_51_config\config\group" command="bldmake bldfiles -k"/></task>
+  		<task><specialInstructions name="bldmake_S60_config_oem" cwd="\config\s60_51_config\config\group\oem" command="bldmake bldfiles -k"/></task>
+  		<task><specialInstructions name="bldmake_S60_config_western" cwd="\config\s60_51_config\config\western\group" command="bldmake bldfiles -k"/></task>
+  		<task><specialInstructions name="export_S60_config" cwd="\config\s60_51_config\config\group" command="abld export -k"/></task>
+      <task><specialInstructions name="export_S60_config_oem" cwd="\config\s60_51_config\config\group\oem" command="abld export -k"/></task>
+      <task><specialInstructions name="export_S60_config_western" cwd="\config\s60_51_config\config\western\group" command="abld export -k"/></task>
+  	</configuration>
+
+	<configuration name="OSExt" description="S60 OS Extension build" filter="osext">
+	<unitListRef unitList="S60_COMMON_OSEXTENSION"/>
+	<unitListRef unitList="S60_COMMON_OSEXTENSION_STUBS"/>
+      <task><buildLayer command="bldmake bldfiles -k" unitParallel="Y"/></task>
+      <task><buildLayer command="abld export -k" unitParallel="Y"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_winscw" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default_winscw" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default_winscw" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld makefile" targetList="default_armv5" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld resource" targetList="default_armv5" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld library" targetList="default_armv5" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld target -k" targetList="default" unitParallel="Y" targetParallel="Y"/></task>
+  	  <task><buildLayer command="abld final" targetList="default_armv5" unitParallel="N" targetParallel="N"/></task>
+      <task><buildLayer command="abld -what build" targetList="default_armv5" unitParallel="Y" targetParallel="Y"/></task>
+      <task><buildLayer command="abld -check build" targetList="default_armv5" unitParallel="Y" targetParallel="Y"/></task>
+    </configuration>
+
+   
+    <unitList name="S60_COMMON_OSEXTENSION" description="S60 common OSExtension">
+				<unitRef unit="sf_os_cellularsrv"/>
+        <unitRef unit="sf_os_deviceplatformrelease_S60LocFiles"/>   			
+        <unitRef unit="sf_os_deviceplatformrelease_S60Extras"/>   			
+        <unitRef unit="sf_os_deviceplatformrelease_S60Helps"/>
+        <unitRef unit="sf_os_deviceplatformrelease_Version"/>
+				<unitRef unit="sf_os_devicesrv"/>
+				<unitRef unit="sf_os_graphics"/>
+				<unitRef unit="sf_os_imagingext"/>
+				<unitRef unit="sf_os_lbs"/>
+				<unitRef unit="sf_os_mm"/>
+				<unitRef unit="sf_os_networkingsrv"/>
+				<unitRef unit="sf_os_mm_devsoundextensions_mmfdevsoundserverplatsec"/>
+				<unitRef unit="sf_os_mm_devsoundextensions_addeddevsoundcontrol"/>
+				<unitRef unit="sf_os_shortlinksrv"/>
+				<unitRef unit="sf_os_wlan"/>
+				<unitRef unit="sf_ostools_osrndtools"/>
+			</unitList>
+
+    <unitList name="S60_COMMON_OSEXTENSION_OEM" description="S60 common OSExtension OEM">
+				<unitRef unit="sf_os_imagingext_imagingmodules_Build"/>
+				<unitRef unit="sf_os_imagingext_imagingmodules_H264AVCVideoEncARM"/>
+				<unitRef unit="sf_os_mm_audio_AacEncoderPlugin"/>
+				<unitRef unit="sf_os_mm_audio_AmrNbCodecPlugin"/>
+				<unitRef unit="sf_os_mm_audio_AmrWbCodecPlugin"/>
+				<unitRef unit="sf_os_mm_audio_EAacPlusCodecPlugin"/>
+				<unitRef unit="sf_os_mm_audio_MP3CodecPlugin"/>
+				<unitRef unit="sf_os_mm_audio_WMADecoderPlugin"/>
+				<unitRef unit="sf_os_mm_video_ARM_MDF_Decoders"/>
+	  </unitList>
+
+    <unitList name="S60_COMMON" description="S60 common">
+				<unitRef unit="sf_mw_classicui"/>
+				<unitRef unit="sf_mw_accesssec"/>
+				<unitRef unit="sf_mw_appinstall"/>
+				<unitRef unit="sf_mw_appsupport"/>
+				<unitRef unit="sf_mw_camerasrv"/>
+				<unitRef unit="sf_mw_dlnasrv"/>
+				<unitRef unit="sf_mw_drm"/>
+				<unitRef unit="sf_mw_helix"/>
+				<unitRef unit="sf_mw_homescreensrv"/>
+				<unitRef unit="sf_mw_imghandling"/>
+				<unitRef unit="sf_mw_imsrv"/>
+				<unitRef unit="sf_mw_inputmethods"/>
+				<unitRef unit="sf_mw_ipappprotocols"/>
+				<unitRef unit="sf_mw_ipappsrv"/>
+				<unitRef unit="sf_mw_ipconnmgmt"/>
+				<unitRef unit="sf_mw_legacypresence"/>
+				<unitRef unit="sf_mw_locationsrv"/>
+				<unitRef unit="sf_mw_mds"/>
+				<unitRef unit="sf_mw_messagingmw"/>
+				<unitRef unit="sf_mw_metadatasrv"/>
+				<unitRef unit="sf_mw_mmappfw"/>
+				<unitRef unit="sf_mw_mmmw"/>
+				<unitRef unit="sf_mw_mmuifw"/>
+				<unitRef unit="sf_mw_mobiletv"/>
+				<unitRef unit="sf_mw_netprotocols"/>
+				<unitRef unit="sf_mw_networkingdm"/>
+				<unitRef unit="sf_mw_opensrv"/>
+				<unitRef unit="sf_mw_phonesrv"/>
+				<unitRef unit="sf_mw_remoteconn"/>
+				<unitRef unit="sf_mw_remotemgmt"/>
+				<unitRef unit="sf_mw_remotestorage"/>
+				<unitRef unit="sf_mw_securitysrv"/>
+				<unitRef unit="sf_mw_serviceapi"/>
+				<unitRef unit="sf_mw_serviceapifw"/>
+				<unitRef unit="sf_mw_shortlinkconn"/>
+				<unitRef unit="sf_mw_svgt"/>
+				<unitRef unit="sf_mw_uiaccelerator"/>
+				<unitRef unit="sf_mw_uiresources"/>
+				<unitRef unit="sf_mw_uitools"/>
+				<unitRef unit="sf_mw_videoutils"/>
+				<unitRef unit="sf_mw_web"/>
+				<unitRef unit="sf_mw_websrv"/>
+				<unitRef unit="sf_mw_wirelessacc"/>
+				<unitRef unit="sf_app_camera"/>
+				<unitRef unit="sf_app_conntools"/>
+				<unitRef unit="sf_app_screensaver"/>
+				<unitRef unit="sf_app_contacts"/>
+				<unitRef unit="sf_app_contentcontrol"/>
+				<unitRef unit="sf_app_conversations"/>
+				<unitRef unit="sf_app_devicecontrol"/>
+				<unitRef unit="sf_app_dictionary"/>
+				<unitRef unit="sf_app_files"/>
+				<unitRef unit="sf_app_graphicsuis"/>
+				<unitRef unit="sf_app_helps"/>
+				<unitRef unit="sf_app_homescreen"/>
+				<unitRef unit="sf_app_im"/>
+				<unitRef unit="sf_app_imgeditor"/>
+				<unitRef unit="sf_app_imgvieweruis"/>
+				<unitRef unit="sf_app_iptelephony"/>
+				<unitRef unit="sf_app_location"/>
+				<unitRef unit="sf_app_messaging"/>
+				<unitRef unit="sf_app_mmsharinguis"/>
+				<unitRef unit="sf_app_musicplayer"/>
+				<unitRef unit="sf_app_organizer"/>
+				<unitRef unit="sf_app_phone"/>
+				<unitRef unit="sf_app_photos"/>
+				<unitRef unit="sf_app_poc"/>
+				<unitRef unit="sf_app_profile"/>
+				<unitRef unit="sf_app_settingsuis"/>
+				<unitRef unit="sf_app_speechsrv"/>
+				<unitRef unit="sf_app_utils"/>
+				<unitRef unit="sf_app_videoeditor"/>
+				<unitRef unit="sf_app_videoplayer"/>
+				<unitRef unit="sf_app_videocenter"/>
+				<unitRef unit="sf_app_videotelephony"/>
+				<unitRef unit="sf_app_voicerec"/>
+				<unitRef unit="sf_app_webuis"/>
+				<unitRef unit="sf_os_textandloc"/>
+				<unitRef unit="sf_os_xmlsrv"/>
+				<unitRef unit="sf_os_ossrv"/>
+				<unitRef unit="sf_tools_buildplatforms"/>
+				<!--unitRef unit="sf_tools_build_s60"/>
+				<unitRef unit="sf_tools_makefile_templates"/-->
+				<unitRef unit="sf_tools_platformtools"/>
+				<!--unitRef unit="sf_tools_platsim"/-->
+				<unitRef unit="sf_tools_rndtools"/>
+				<unitRef unit="sf_tools_swconfigtools"/>
+				<unitRef unit="ext_mw_websrvde"/>
+				<unitRef unit="ext_tools_oemrndtools"/>
+				<!--<unitRef unit="sf_tools_themeinstaller"/> -->
+				<unitRef unit="ext_tools_toolsextensions"/>
+				<unitRef unit="sf_app_commonemail"/>
+				<unitRef unit="sf_app_radio"/>
+				<unitRef unit="sf_app_printing"/>
+				<unitRef unit="sf_mw_hapticsservices"/>
+				<unitRef unit="sf_app_gallery"/>
+    </unitList>
+
+    <unitList name="S60_OEM_BUILD" description="S60 OEM build">
+				<unitRef unit="sf_mw_mmmw_mtp"/>
+				<unitRef unit="sf_mw_helix"/>
+				<unitRef unit="sf_mw_helix_helix_ren_src"/>
+				<unitRef unit="sf_mw_securitysrv_pkiutilities_Certificates_OEM"/>
+				<unitRef unit="sf_mw_shortlinkconn_usbclasses_usbosdescriptorhandler"/>
+				<unitRef unit="sf_app_videotelephony_packetvideoengine_PacketVideoEngineBinaries"/>
+				<unitRef unit="sf_app_videotelephony_vtprotocols"/>
+				<unitRef unit="sf_os_graphics_graphicsaccelaration"/>
+				<unitRef unit="sf_os_graphics_graphics_pub"/>
+				<unitRef unit="sf_app_java"/>
+				<unitRef unit="sf_mw_appsupport_appsupport_plat_flash_mmi_service_interface_custom_api"/>
+				<unitRef unit="sf_mw_appsupport_appsupport_plat_flash_netscape_plugin_command_api"/>
+    </unitList>
+
+    <unitList name="S60_SF_BUILD" description="S60 SF build">
+				<unitRef unit="sf_mw_mmmw_mmfw_helix_stub"/>
+				<unitRef unit="sf_mw_securitysrv_pkiutilities_Certificates"/>
+				<unitRef unit="sf_mw_vpnclient"/>
+				<unitRef unit="sf_app_videotelephony_vtprotocolsstub"/>
+				<unitRef unit="sf_app_java_java_plat"/>
+				<unitRef unit="sf_app_java_java_stubs"/>
+				<unitRef unit="sf_os_cellularsrv_commonnetworkinterface"/>
+				<unitRef unit="sf_os_cellularsrv_basebandabstraction"/>
+				<unitRef unit="sf_os_cellularsrv_cellularsrv_plat_primary_pdp_context_qos_parameter_setting_api"/>
+    </unitList>
+
+    <unitList name="S60_COMMON_OSEXTENSION_STUBS" description="S60 common OSExtension">
+    	<unitRef unit="sf_adaptation_stubs_licensee_tsy_stub"/>
+    	<unitRef unit="sf_adaptation_stubs_simatk_tsy_stub"/>
+    	<unitRef unit="sf_adaptation_stubs_audiostubs"/>
+    	<unitRef unit="sf_adaptation_stubs_wlanhwinit_stub"/>
+			<unitRef unit="sf_adaptation_stubs_systemswstubs"/>
+    </unitList>
+
+    <unitList name="S60_COMMON_STUBS" description="S60 common adaptation stubs">
+			<unitRef unit="sf_adaptation_stubs_btaudioadaptation_stub"/>
+			<unitRef unit="sf_adaptation_stubs_drm_stubs"/>
+			<unitRef unit="sf_adaptation_stubs_posmsgpluginreferenceimpl"/>
+			<unitRef unit="sf_adaptation_stubs_srsfenginestub"/>
+			<unitRef unit="sf_adaptation_stubs_ocrsrv_stub"/>
+			<unitRef unit="sf_adaptation_stubs_power_save_display_mode_stub"/>
+			<unitRef unit="sf_adaptation_stubs_tactileclickplugin_stub"/>
+			<unitRef unit="sf_adaptation_stubs_omasuplasnconverterstubimpl"/>			
+    </unitList>
+
+    <unitList name="S60_COMMON_COMPLEMENTARY" description="S60 common complementary components">
+			<unitRef unit="ext_complementary_contentdownload"/>
+			<unitRef unit="ext_complementary_tfxserver"/>
+			<unitRef unit="ext_complementary_webvideo"/>
+			<unitRef unit="ext_complementary_wmdrmkeystorage_dist"/>
+			<unitRef unit="ext_complementary_wmdrmpd_dist"/>
+      <unitRef unit="ext_complementary_zipviewer"/>
+      <unitRef unit="ext_complementary_QuickOffice"/>
+      <unitRef unit="ext_complementary_adobereader"/>
+    </unitList>
+
+<!--    
+binary only are components that sources can not be delivered for all lisencees
+but components should be built in S60 platform builds
+-->
+    <unitList name="S60_BINARY_ONLY" description="S60 build binary only components">
+      <!--<unitRef unit="sf_os_wlan_wlan_bearer_wlanengine_symbian_3.1"/>-->
+      <!--<unitRef unit="sf_mw_accesssec_eapol_eapol_symbian_ccxeapol"/>-->
+      <unitRef unit="sf_mw_helix_helix_ren_src"/>
+    </unitList>
+
+    <unitList name="S60_BINARY_ONLY_SF" description="S60 build binary only components">
+      <unitRef unit="sf_os_wlan_wlan_bearer_wlanengine_symbian_3.1"/>
+      <!--<unitRef unit="sf_mw_accesssec_eapol_eapol_symbian_ccxeapol"/>-->
+    </unitList>
+
+    <!--
+    extra components need to be build in winscw build
+    -->
+    <unitList name="S60_WINSCW_EXTRA" description="S60 build extra components">
+      <unitRef unit="sf_mw_accesssec_wlansecuritysettings_wlaneapsettingsui_ccx"/>
+    </unitList>
+
+    <unitList name="S60_BLDMEFIRST_EXPORT" description="S60 bldmefirst exports">
+      <unitRef unit="sf_os_devicesrv_featuremgmt_featuremanager"/>
+      <unitRef unit="sf_os_deviceplatformrelease_sf_config_config"/>
+      <unitRef unit="sf_os_deviceplatformrelease_sf_config_western"/>
+      <unitRef unit="sf_mw_uiresources_uigraphics_Bitmaps2"/>
+      <unitRef unit="sf_mw_uiresources_uigraphics_Icons"/>
+      <unitRef unit="sf_ostools_osrndtools_opensystemtrace"/>
+      <unitRef unit="sf_tools_buildplatforms"/>
+      <unitRef unit="sf_tools_homescreentools"/>
+    </unitList>
+
+    <unitList name="S60_BLDMEFIRST_EXPORT_OEM" description="S60 bldmefirst exports OEM">
+      <unitRef unit="sf_os_devicesrv_featuremgmt_featuremanager"/>
+      <unitRef unit="config_config"/>
+      <unitRef unit="config_config_oem"/>
+      <unitRef unit="config_config_western"/>
+      <unitRef unit="sf_mw_uiresources_uigraphics_Bitmaps2"/>
+      <unitRef unit="sf_mw_uiresources_uigraphics_Icons"/>
+      <unitRef unit="sf_ostools_osrndtools_opensystemtrace"/>
+      <unitRef unit="sf_tools_buildplatforms"/>
+      <unitRef unit="sf_tools_homescreentools"/>
+    </unitList>
+
+   <unitList name="S60_BLDVARIANT_SF" description="S60 bldvariant export">
+      <unitRef unit="sf_os_deviceplatformrelease_sf_config_config"/>
+      <unitRef unit="sf_os_deviceplatformrelease_sf_config_western"/>
+      <unitRef unit="sf_os_deviceplatformrelease_sf_config_apac"/>
+      <unitRef unit="sf_os_deviceplatformrelease_sf_config_japan"/>
+      <unitRef unit="sf_os_devicesrv_featuremgmt_featuremanager"/>
+    </unitList>
+
+   <unitList name="S60_BLDVARIANT" description="S60 bldvariant export">
+      <unitRef unit="config_config"/>
+      <unitRef unit="config_config_western"/>
+      <unitRef unit="config_config_apac"/>
+      <unitRef unit="config_config_japan"/>
+      <unitRef unit="sf_os_devicesrv_featuremgmt_featuremanager"/>
+    </unitList>
+
+    <unitList name="PF_BLDVARIANT" description="S60 bldvariant export">
+      <unitRef unit="pf_51_config_export"/>
+      <unitRef unit="config_config_western"/>
+      <unitRef unit="config_config_apac"/>
+      <unitRef unit="config_config_japan"/>
+      <unitRef unit="pf_51_featuremgr_var"/>
+    </unitList>
+    
+    <unitList name="S60_REGIONALVARIANT" description="S60 regional variant (western, china, japan) components">
+      <unitRef unit="sf_os_deviceplatformrelease_Version"/>
+      <unitRef unit="sf_os_textandloc_charconvfw_Findutil"/>
+      <unitRef unit="sf_os_textandloc_charconvfw_SortUtil"/>
+      <unitRef unit="sf_mw_uiresources_uigraphics_VariatedBitmaps"/>
+      <unitRef unit="sf_os_textandloc_charconvfw_ongoing"/>
+      <unitRef unit="sf_mw_uiresources_pictographs_AknPictograph"/>
+
+<!-- china specific components, should get rid of these --> 
+      <unitRef unit="sf_app_utils_extras_chinesedictionary"/>
+
+<!-- japan specific components, should get rid of these --> 
+      <unitRef unit="sf_app_dictionary_userdict"/>
+      <unitRef unit="sf_mw_inputmethods_textinput_Matsutake"/>
+      
+			<unitRef unit="sf_mw_inputmethods_textinput_peninputhwrboxjp"/> 
+      <unitRef unit="sf_mw_inputmethods_textinput_peninputvkbjp"/> 
+      <unitRef unit="sf_mw_inputmethods_textinput_PtiDecumaJpCore"/> 
+    </unitList>
+  </build>
+</SystemDefinition>

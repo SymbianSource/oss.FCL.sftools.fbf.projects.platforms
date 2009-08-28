@@ -362,6 +362,13 @@
 </component>
 </module>
 </logicalsubset>
+<logicalsubset name="rndtools">
+<module name="rndtools">
+<component name="rndtools">
+<unit unitID="sf_app_rndtools" name="rndtools" bldFile="\sf\tools\rndtools\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
 <logicalsubset name="screensaver">
 <module name="screensaver">
 <component name="screensaver">
@@ -640,6 +647,13 @@
 </component>
 </module>
 </logicalsubset>
+<logicalsubset name="platformtools">
+<module name="platformtools">
+<component name="platformtools">
+<unit unitID="sf_mw_platformtools" name="platformtools" bldFile="\sf\tools\platformtools\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
 <logicalsubset name="remoteconn">
 <module name="remoteconn">
 <component name="remoteconn">
@@ -782,11 +796,6 @@
 <unit unitID="sf_os_deviceplatformrelease_S60Extras" name="S60Extras" bldFile="\sf\os\deviceplatformrelease\S60Extras\group" mrp=""/>
 </component>
 </module>
-<module name="S60Helps">
-<component name="S60Helps">
-<unit unitID="sf_os_deviceplatformrelease_S60Helps" name="S60Helps" bldFile="\sf\os\deviceplatformrelease\S60Helps\Group" mrp=""/>
-</component>
-</module>
 <module name="S60LocFiles">
 <component name="S60LocFiles">
 <unit unitID="sf_os_deviceplatformrelease_S60LocFiles" name="S60LocFiles" bldFile="\sf\os\deviceplatformrelease\S60LocFiles\group" mrp=""/>
@@ -843,6 +852,23 @@
 </component>
 </module>
 </logicalsubset>
+<logicalsubset name="osrndtools">
+<module name="osrndtools">
+<component name="osrndtools">
+<unit unitID="sf_os_osrndtools" name="osrndtools" bldFile="\sf\ostools\osrndtools\group" mrp=""/>
+</component>
+</module>
+<module name="hti">
+<component name="hti">
+<unit unitID="sf_os_osrndtools_hti" name="hti" bldFile="\sf\ostools\osrndtools\hti\group" mrp=""/>
+</component>
+</module>
+<module name="osrndtools_plat">
+<component name="hti_api">
+<unit unitID="sf_os_osrndtools_osrndtools_plat_hti_api" name="hti_api" bldFile="\sf\ostools\osrndtools\osrndtools_plat\hti_api\group" mrp=""/>
+</component>
+</module>
+</logicalsubset>
 <logicalsubset name="ossrv">
 <module name="ossrv">
 <component name="ossrv">
@@ -884,42 +910,16 @@
 </module>
 </logicalsubset>
 </logicalset>
-<logicalset name="ostools">
-<logicalsubset name="osrndtools">
-<module name="osrndtools">
-<component name="osrndtools">
-<unit unitID="sf_ostools_osrndtools" name="osrndtools" bldFile="\sf\ostools\osrndtools\group" mrp=""/>
-</component>
-</module>
-<module name="hti">
-<component name="hti">
-<unit unitID="sf_ostools_osrndtools_hti" name="hti" bldFile="\sf\ostools\osrndtools\hti\group" mrp=""/>
-</component>
-</module>
-<module name="osrndtools_plat">
-<component name="hti_api">
-<unit unitID="sf_ostools_osrndtools_osrndtools_plat_hti_api" name="hti_api" bldFile="\sf\ostools\osrndtools\osrndtools_plat\hti_api\group" mrp=""/>
-</component>
-</module>
-</logicalsubset>
-</logicalset>
 <logicalset name="tools">
 <module name="buildplatforms">
 <component name="buildplatforms">
 <unit unitID="sf_tools_buildplatforms" name="buildplatforms" bldFile="\sf\tools\buildplatforms\group" mrp=""/>
 </component>
 </module>
-<logicalsubset name="platformtools">
-<module name="platformtools">
-<component name="platformtools">
-<unit unitID="sf_tools_platformtools" name="platformtools" bldFile="\sf\tools\platformtools\group" mrp=""/>
-</component>
-</module>
-</logicalsubset>
-<logicalsubset name="rndtools">
-<module name="rndtools">
-<component name="rndtools">
-<unit unitID="sf_tools_rndtools" name="rndtools" bldFile="\sf\tools\rndtools\group" mrp=""/>
+<logicalsubset name="homescreentools">
+<module name="homescreentools">
+<component name="homescreentools">
+<unit unitID="sf_tools_homescreentools" name="homescreentools" bldFile="\sf\tools\homescreentools\group" mrp=""/>
 </component>
 </module>
 <module name="htiui">
@@ -947,6 +947,8 @@
 </module>
 </logicalsubset>
 </logicalset>
+</layer>
+<layer name="os_layer">
 </layer>
 <layer name="SF_SOS">
 <module name="sf_licenseetsystub">
@@ -992,7 +994,7 @@
     <targetList name="tools_rel" description="tools Release Targets" target="TOOLS_REL"/>
     <targetList name="cwtools" description="cwtools Targets" target="CWTOOLS"/>
     <targetList name="cwtools_rel" description="cwtools Release Targets" target="CWTOOLS_REL"/>
-		<configuration name="S60_5_1_sf" description="S60 5.1 clean build" filter="S60_5_0,raptor_S60_5_1_sf">
+		<configuration name="S60_5_1_sf" description="S60 5.1 clean build" filter="S60_5_1_sf">
     	<unitListRef unitList="S60_COMMON_OSEXTENSION"/>
       <unitListRef unitList="S60_COMMON"/>
       <unitListRef unitList="S60_SF_BUILD"/>
@@ -1025,9 +1027,7 @@ this configuration can be used only when those components has built among normal
 <!--  OS Extension build configurations start  -->
     <unitList name="S60_COMMON_OSEXTENSION" description="S60 common OSExtension">
 				<unitRef unit="sf_os_cellularsrv_telephonyserverplugins_common_tsy"/>
-        <unitRef unit="sf_os_deviceplatformrelease_S60LocFiles"/>   			
         <unitRef unit="sf_os_deviceplatformrelease_S60Extras"/>   			
-        <unitRef unit="sf_os_deviceplatformrelease_S60Helps"/>
         <unitRef unit="sf_os_deviceplatformrelease_Version"/>
 				<unitRef unit="sf_os_devicesrv"/>
 				<unitRef unit="sf_os_graphics"/>
@@ -1038,7 +1038,7 @@ this configuration can be used only when those components has built among normal
 				<unitRef unit="sf_os_mm_devsoundextensions_addeddevsoundcontrol"/>
 				<unitRef unit="sf_os_shortlinksrv"/>
 				<unitRef unit="sf_os_wlan"/>
-				<unitRef unit="sf_ostools_osrndtools"/>
+				<unitRef unit="sf_os_osrndtools"/>
 			</unitList>
     <unitList name="S60_COMMON" description="S60 common">
 				<unitRef unit="sf_mw_classicui"/>
@@ -1123,19 +1123,21 @@ this configuration can be used only when those components has built among normal
 				<unitRef unit="sf_tools_buildplatforms"/>
 				<!--unitRef unit="sf_tools_build_s60"/>
 				<unitRef unit="sf_tools_makefile_templates"/-->
-				<unitRef unit="sf_tools_platformtools"/>
+				<unitRef unit="sf_mw_platformtools"/>
 				<!--unitRef unit="sf_tools_platsim"/-->
-				<unitRef unit="sf_tools_rndtools"/>
+				<unitRef unit="sf_app_rndtools"/>
 				<unitRef unit="sf_tools_swconfigtools"/>
 				<unitRef unit="sf_tools_themeinstaller"/>
+				<unitRef unit="ext_tools_toolsextensions"/>
+				<unitRef unit="sf_tools_homescreentools"/>
 				<unitRef unit="sf_app_commonemail"/>
 				<unitRef unit="sf_app_radio"/>
 				<unitRef unit="sf_app_printing"/>
 				<unitRef unit="sf_mw_hapticsservices"/>
 				<unitRef unit="sf_app_gallery"/>
-				<unitRef unit="ext_tools_toolsextensions"/>
     </unitList>
     <unitList name="S60_SF_BUILD" description="S60 SF build">
+    		<unitRef unit="sf_os_deviceplatformrelease_S60LocFiles"/>   			
 				<unitRef unit="sf_mw_mmmw_mmfw_helix_stub"/>
 				<unitRef unit="sf_mw_securitysrv_pkiutilities_Certificates"/>
 				<unitRef unit="sf_mw_vpnclient"/>
@@ -1146,8 +1148,8 @@ this configuration can be used only when those components has built among normal
 				<unitRef unit="sf_os_cellularsrv_basebandabstraction"/>
 				<unitRef unit="sf_os_cellularsrv_cellularsrv_plat_primary_pdp_context_qos_parameter_setting_api"/>
 				<unitRef unit="sf_tools_rndtools_htiui"/>
-				<unitRef unit="sf_ostools_osrndtools_osrndtools_plat_hti_api"/>
-				<unitRef unit="sf_ostools_osrndtools_hti"/>
+				<unitRef unit="sf_os_osrndtools_osrndtools_plat_hti_api"/>
+				<unitRef unit="sf_os_osrndtools_hti"/>
 				<unitRef unit="sf_os_graphics_openvg_openvginterface_group_openvg11"/>
     </unitList>
     <unitList name="S60_COMMON_OSEXTENSION_STUBS" description="S60 common OSExtension">

@@ -95,18 +95,18 @@
           <unit bldFile="os\buildtools\bldsystemtools\buildsystemtools\group" mrp="os\buildtools\bldsystemtools\buildsystemtools\group\tools_build.mrp"/>
         </component>
         <component name="GT Techview Baseline">
-          <unit mrp="os\buildtools\packaging\additionalutils\gt_techview_baseline.mrp"/>
+          <unit mrp="os\buildtools\bldsystemtools\gttechviewbaseline\gt_techview_baseline.mrp"/>
           <!-- DEF087736 This is needed for generating export tables but shouldn't appear otherwise it is included in techview and gt
-		     <package name="gt_only_baseline" mrp="os/buildtools/packaging/additionalutils/gt_only_baseline.mrp"/> -->
+		     <package name="gt_only_baseline" mrp="os/buildtools/bldsystemtools/gttechviewbaseline/gt_only_baseline.mrp"/> -->
         </component>
         <component name="Cedar Utils">
-          <unit mrp="os\deviceplatformrelease\symbianosbld\cedarutils\tools_utils_cedar.mrp"/>
+          <unit mrp="os\buildtools\bldsystemtools\cedarutils\tools_utils_cedar.mrp"/>
         </component>
         <component name="Common Utils">
           <unit mrp="os\buildtools\bldsystemtools\commonbldutils\tools_utils_common.mrp"/>
         </component>
         <component name="Additional Utils">
-          <unit mrp="os\buildtools\packaging\additionalutils\additional_unknown_cedar.mrp"/>
+          <unit mrp="os\buildtools\bldsystemtools\gttechviewbaseline\additional_unknown_cedar.mrp"/>
         </component>
       </collection>
       <collection name="Tools and Utils" level="tools">
@@ -129,46 +129,55 @@
           <unit bldFile="mw\remoteconn\connectivitypcside\chatscripts\group" mrp="mw\remoteconn\connectivitypcside\chatscripts\group\testtools_chatscripts.mrp"/>
         </component>
         <component name="DEPCHECK">
-          <unit bldFile="os\buildtools\binanamdw_os\depcheck" mrp="os\buildtools\binanamdw_os\depcheck\tools_depcheck.mrp"/>
+          <unit bldFile="os\buildtools\toolsandutils\depcheck" mrp="os\buildtools\toolsandutils\depcheck\tools_depcheck.mrp"/>
+        </component>
+        <component name="Dependency Modeller" introduced="9.2" class="test PC">
+          <unit bldFile="os\buildtools\toolsandutils\dependencymodeller\group" mrp="os\buildtools\toolsandutils\dependencymodeller\tools_depmodel.mrp"/>
         </component>
         <component name="E32 Tools" class="PC">
           <unit bldFile="os\buildtools\toolsandutils\e32tools\group" mrp="os\buildtools\toolsandutils\e32tools\group\tools_e32tools.mrp"/>
         </component>
         <component name="E32 Perl Tools" class="PC">
-          <unit mrp="os\buildtools\sbsv1_os\e32toolp\group\tools_e32toolp.mrp"/>
+          <unit mrp="os\buildtools\toolsandutils\e32toolp\group\tools_e32toolp.mrp"/>
         </component>
         <component name="EVALID">
-          <unit bldFile="os\buildtools\bintools_os\evalid" mrp="os\buildtools\bintools_os\evalid\tools_evalid.mrp"/>
+          <unit bldFile="os\buildtools\toolsandutils\evalid" mrp="os\buildtools\toolsandutils\evalid\tools_evalid.mrp"/>
         </component>
         <component name="KITCOMPARATOR">
           <unit bldFile="os\buildtools\toolsandutils\kitcomparator\group" mrp="os\buildtools\toolsandutils\kitcomparator\group\testtools_cts_kitcomparator.mrp"/>
         </component>
+        <component name="SYSTEMTEST_OS" filter="systemtest">
+          <unit bldFile="app\techview\sysvalidation\systemtestos\Group" mrp="app\techview\sysvalidation\systemtestos\Group\systemtest_os.mrp"/>
+        </component>
+        <component name="SYSTEMTEST_TOOLS" filter="systemtest">
+          <unit bldFile="app\techview\sysvalidation\systemtesttools\Group" mrp="app\techview\sysvalidation\systemtesttools\Group\systemtest_tools.mrp"/>
+        </component>
         <component name="LEAVESCAN">
-          <unit bldFile="os\buildtools\srcanamdw_os\leavescan\group" mrp="os\buildtools\srcanamdw_os\leavescan\group\testtools_leavescan.mrp"/>
+          <unit bldFile="os\buildtools\toolsandutils\leavescan\group" mrp="os\buildtools\toolsandutils\leavescan\group\testtools_leavescan.mrp"/>
         </component>
         <component name="PROGRAMCHECKER">
-          <unit bldFile="os\buildtools\srcanamdw_os\programchecker\group" mrp="os\buildtools\srcanamdw_os\programchecker\group\testtools_programchecker.mrp"/>
+          <unit bldFile="os\buildtools\toolsandutils\programchecker\group" mrp="os\buildtools\toolsandutils\programchecker\group\testtools_programchecker.mrp"/>
         </component>
         <component name="RCOMP">
-          <unit bldFile="os\buildtools\bintools_os\rcomp\group" mrp="os\buildtools\bintools_os\rcomp\group\tools_rcomp.mrp"/>
+          <unit bldFile="os\buildtools\toolsandutils\rcomp\group" mrp="os\buildtools\toolsandutils\rcomp\group\tools_rcomp.mrp"/>
         </component>
         <component name="Redistribution" filter="gt">
-          <unit bldFile="os\buildtools\perltoolsplat_os\redistribution" mrp="os\buildtools\perltoolsplat_os\redistribution\tools_redistribution_common.mrp"/>
+          <unit bldFile="os\buildtools\toolsandutils\redistribution" mrp="os\buildtools\toolsandutils\redistribution\tools_redistribution_common.mrp"/>
         </component>
         <component name="WinC Redistribution">
-          <unit mrp="os\buildtools\dist_os\redistributionwinceka2\tools_redistribution_winc.mrp"/>
+          <unit mrp="os\buildtools\toolsandutils\wincredistribution\tools_redistribution_winc.mrp"/>
         </component>
         <component name="Additional Redistribution">
-          <unit mrp="os\buildtools\perltoolsplat_os\redistribution\additional_tools.mrp"/>
+          <unit mrp="os\buildtools\toolsandutils\redistribution\additional_tools.mrp"/>
         </component>
         <component name="RESOURCE_HANDLER" contract="Symbian_Affiliate">
           <unit mrp="app\techview\testapps\rschandler\TVResourceHandler\group\Testtools_ResourceHandler_gt.mrp"/>
         </component>
         <component name="ROMKIT_EKA2">
-          <unit bldFile="os\buildtools\imgtools_os\romkiteka2\group" mrp="os\buildtools\imgtools_os\romkiteka2\group\tools_romkit.mrp"/>
+          <unit bldFile="os\buildtools\toolsandutils\romkiteka2\group" mrp="os\buildtools\toolsandutils\romkiteka2\group\tools_romkit.mrp"/>
         </component>
         <component name="MIGRATIONTOOL">
-          <unit bldFile="os\buildtools\srcanamdw_os\migrationtool\group" mrp="os\buildtools\srcanamdw_os\migrationtool\group\testtools_migrationtool.mrp"/>
+          <unit bldFile="os\buildtools\toolsandutils\migrationtool\group" mrp="os\buildtools\toolsandutils\migrationtool\group\testtools_migrationtool.mrp"/>
         </component>
         <component name="TESTDRIVER">
           <unit bldFile="os\buildtools\toolsandutils\testdriver\Group" mrp="os\buildtools\toolsandutils\testdriver\Group\testtools_testdriver.mrp"/>
@@ -192,7 +201,7 @@
           <unit bldFile="os\shortlinksrv\bluetooth\btlogger\group" mrp="os\shortlinksrv\bluetooth\btlogger\group\bluetooth_logger.mrp"/>
         </component>
         <component name="TESTEXECUTE">
-          <unit bldFile="os\osrndtools\testexecfw1\testexecute\Group" mrp="os\osrndtools\testexecfw1\testexecute\Group\tools_testexecute.mrp"/>
+          <unit bldFile="os\buildtools\toolsandutils\testexecute\Group" mrp="os\buildtools\toolsandutils\testexecute\Group\tools_testexecute.mrp"/>
         </component>
         <component name="Test Tools Desktop" filter="gt">
           <unit bldFile="os\buildtools\toolsandutils\testtoolsdesktop\group" mrp="os\buildtools\toolsandutils\testtoolsdesktop\group\testtools_desktop.mrp"/>
@@ -204,7 +213,7 @@
           <unit bldFile="os\buildtools\toolsandutils\usecasecontroller\BuildScripts\group" mrp="os\buildtools\toolsandutils\usecasecontroller\BuildScripts\group\testtools_ucc.mrp"/>
         </component>
         <component name="CINIDATA">
-          <unit bldFile="os\osrndtools\testexecfw1\cinidata" mrp="os\osrndtools\testexecfw1\cinidata\tools_cinidata.mrp"/>
+          <unit bldFile="os\buildtools\toolsandutils\cinidata" mrp="os\buildtools\toolsandutils\cinidata\tools_cinidata.mrp"/>
         </component>
         <component name="AUTOTEST">
           <unit bldFile="os\buildtools\toolsandutils\autotest\group" mrp="os\buildtools\toolsandutils\autotest\group\tools_autotest.mrp"/>
@@ -222,16 +231,16 @@
           <unit bldFile="os\buildtools\toolsandutils\productinstaller\group" mrp="os\buildtools\toolsandutils\productinstaller\group\tools_custkits_productinstaller.mrp"/>
         </component>
         <component name="REDISTRIBUTION_WINC_EKA2">
-          <unit bldFile="os\buildtools\dist_os\redistributionwinceka2" mrp="os\buildtools\dist_os\redistributionwinceka2\tools_redistribution_cedar.mrp"/>
+          <unit bldFile="os\buildtools\toolsandutils\wincredistribution" mrp="os\buildtools\toolsandutils\wincredistribution\tools_redistribution_cedar.mrp"/>
         </component>
         <component name="MakeKeys" filter="gt" introduced="6.0" class="PC">
-          <unit bldFile="mw\appinstall\secureswitools\makekeys\group" mrp="mw\appinstall\secureswitools\makekeys\group\security_makekeys.mrp"/>
+          <unit bldFile="os\misc\secureswitools\makekeys\group" mrp="os\misc\secureswitools\makekeys\group\security_makekeys.mrp"/>
         </component>
         <component name="CAPTOOLS">
-          <unit bldFile="os\buildtools\binanamdw_os\captools\group" mrp="os\buildtools\binanamdw_os\captools\group\testtools_captools.mrp"/>
+          <unit bldFile="os\buildtools\toolsandutils\captools\group" mrp="os\buildtools\toolsandutils\captools\group\testtools_captools.mrp"/>
         </component>
         <component name="Packet Loopback CSY" introduced="8.1" class="test">
-          <unit bldFile="os\commsfw\serialserver\packetloopbackcsy\group" mrp="os\commsfw\serialserver\packetloopbackcsy\group\PacketLoopbackCSY.mrp"/>
+          <unit bldFile="os\commsfw\serialcommsserverplugins\packetloopbackcsy\group" mrp="os\commsfw\serialcommsserverplugins\packetloopbackcsy\group\PacketLoopbackCSY.mrp"/>
         </component>
         <component name="UTRACE" introduced="9.3" deprecated="9.4">
           <unit bldFile="os\persistentdata\traceservices\utrace\group" mrp="os\persistentdata\traceservices\utrace\group\testtools_utrace_api.mrp"/>
@@ -269,17 +278,20 @@
         <component name="Bluetooth Documentation" class="doc">
           <unit mrp="os\shortlinksrv\bluetooth\btdocs\bluetooth_documentation.mrp"/>
         </component>
+        <component name="IrDA Documentation" class="doc">
+          <unit mrp="os\shortlinksrv\irda\irdadocs\infra-red_documentation.mrp"/>
+        </component>
         <component name="Comms Infrastructure Documentation" introduced="7.0" class="doc">
-          <unit mrp="os\commsfw\commsfw_info\commsinfrastructuredocs\comms-infras_documentation.mrp"/>
+          <unit mrp="os\commsfw\commsfwutils\commsinfrastructuredocs\comms-infras_documentation.mrp"/>
         </component>
         <component name="Graphics Documentation" contract="Symbian_Affiliate" class="doc">
-          <unit mrp="os\graphics\graphics_info\graphicsdocs\graphics_documentation.mrp"/>
+          <unit mrp="os\graphics\graphicstest\graphicsdocs\graphics_documentation.mrp"/>
         </component>
         <component name="Multimedia Documentation">
-          <unit mrp="os\mm\mm_info\mmdocs\multimedia_documentation.mrp"/>
+          <unit mrp="os\mm\imagingandcamerafws\mmdocs\multimedia_documentation.mrp"/>
         </component>
         <component name="Networking Documentation" class="doc">
-          <unit mrp="os\networkingsrv\networkingsrv_info\networkingdocs\networking_documentation.mrp"/>
+          <unit mrp="os\networkingsrv\networkingtestandutils\networkingdocs\networking_documentation.mrp"/>
         </component>
         <component name="Security Documentation">
           <unit mrp="os\security\cryptomgmtlibs\securitydocs\security_documentation.mrp"/>
@@ -291,13 +303,13 @@
           <unit mrp="os\ossrv\genericservices\syslibsdocs\syslibs_documentation.mrp"/>
         </component>
         <component name="System Documentation" class="doc">
-          <unit mrp="os\deviceplatformrelease\foundation_system\systemdocs\group\system.mrp"/>
+          <unit mrp="os\buildtools\devlib\systemdocs\group\system.mrp"/>
         </component>
         <component name="Telephony Confidential Documentation" class="doc">
-          <unit mrp="os\cellularsrv\cellularsrv_info\telephonyconfidentialdocs\telephony_confidential.mrp"/>
+          <unit mrp="os\cellularsrv\telephonyutils\telephonyconfidentialdocs\telephony_confidential.mrp"/>
         </component>
         <component name="Telephony Documentation" class="doc">
-          <unit mrp="os\cellularsrv\cellularsrv_info\telephonydocs\telephony_documentation.mrp"/>
+          <unit mrp="os\cellularsrv\telephonyutils\telephonydocs\telephony_documentation.mrp"/>
         </component>
         <component name="Tools Documentation">
           <unit mrp="os\buildtools\devlib\toolsdocs\tools_documentation.mrp"/>
@@ -311,10 +323,10 @@
           <unit bldFile="os\buildtools\misccomponents\runperl\group" mrp="os\buildtools\misccomponents\runperl\group\tools_sdk_eng_runperl.mrp"/>
         </component>
         <component name="BUILD-TOOLS" filter="gt">
-          <unit bldFile="os\buildtools\sbsv1_os\bldtools\group" mrp="os\buildtools\sbsv1_os\bldtools\group\tools_sdk_eng_build-tools.mrp"/>
+          <unit bldFile="os\buildtools\misccomponents\bldtools\group" mrp="os\buildtools\misccomponents\bldtools\group\tools_sdk_eng_build-tools.mrp"/>
         </component>
         <component name="JAVALIBRARY" filter="gt">
-          <unit bldFile="os\buildtools\javatoolsplat\javalib\group" mrp="os\buildtools\javatoolsplat\javalib\group\tools_sdk_eng_javalibrary.mrp"/>
+          <unit bldFile="os\buildtools\misccomponents\javalib\group" mrp="os\buildtools\misccomponents\javalib\group\tools_sdk_eng_javalibrary.mrp"/>
         </component>
         <component name="ASSERTION" filter="gt">
           <unit bldFile="os\buildtools\misccomponents\assertion\group" mrp="os\buildtools\misccomponents\assertion\group\tools_sdk_eng_assertion.mrp"/>
@@ -359,7 +371,7 @@
           <unit bldFile="os\buildtools\misccomponents\langconfig\group" mrp="os\buildtools\misccomponents\langconfig\group\tools_sdk_eng_langconfig.mrp"/>
         </component>
         <component name="MBMCODEC" filter="gt">
-          <unit bldFile="app\helps\symhelp\mbmcodec\group" mrp="app\helps\symhelp\mbmcodec\group\tools_sdk_eng_mbmcodec.mrp"/>
+          <unit bldFile="os\buildtools\misccomponents\mbmcodec\group" mrp="os\buildtools\misccomponents\mbmcodec\group\tools_sdk_eng_mbmcodec.mrp"/>
         </component>
         <component name="SDKINFO" filter="gt">
           <unit bldFile="os\buildtools\misccomponents\sdkinfo\group" mrp="os\buildtools\misccomponents\sdkinfo\group\tools_sdk_eng_sdkinfo.mrp"/>
@@ -368,16 +380,16 @@
           <unit bldFile="os\buildtools\misccomponents\jade\group" mrp="os\buildtools\misccomponents\jade\group\tools_sdk_eng_jade.mrp"/>
         </component>
         <component name="CSHLPCMP_GUI" filter="gt">
-          <unit bldFile="app\helps\symhelp\cshlpcmpgui\group" mrp="app\helps\symhelp\cshlpcmpgui\group\tools_sdk_eng_cshlpcmp_gui.mrp" priority="1010"/>
+          <unit bldFile="os\buildtools\misccomponents\cshlpcmpgui\group" mrp="os\buildtools\misccomponents\cshlpcmpgui\group\tools_sdk_eng_cshlpcmp_gui.mrp" priority="1010"/>
         </component>
         <component name="SDK Package Manager" filter="gt">
           <unit bldFile="os\buildtools\misccomponents\sdkpackagemgr\group" mrp="os\buildtools\misccomponents\sdkpackagemgr\group\tools_sdk_eng_sdkpkg-manager.mrp"/>
         </component>
         <component name="Production Build Tools" filter="gt">
-          <unit mrp="os\buildtools\toolsandutils\productionbldtools\product_tools.mrp"/>
+          <unit mrp="os\unref\comprd\tools\product_tools.mrp"/>
         </component>
         <component name="Production Build CBR Configuration Files" filter="gt">
-          <unit mrp="os\deviceplatformrelease\symbianosbld\productionbldcbrconfig\product_cbr_config.mrp"/>
+          <unit mrp="os\unref\cedprd\tools\makecbr\files\product_cbr_config.mrp"/>
         </component>
         <component name="SDKPKG-TOOLS" filter="gt">
           <unit bldFile="os\buildtools\misccomponents\sdkpkgtools\group" mrp="os\buildtools\misccomponents\sdkpkgtools\group\tools_sdk_eng_sdkpkg-tools.mrp"/>
@@ -398,25 +410,25 @@
           <unit bldFile="os\buildtools\misccomponents\bspbuilder\group" mrp="os\buildtools\misccomponents\bspbuilder\group\tools_bspbuilder.mrp"/>
         </component>
         <component name="ALP2CSH">
-          <unit bldFile="os\buildtools\fileconv\alp2csh\group" mrp="os\buildtools\fileconv\alp2csh\group\tools_sdk_eng_alp2csh.mrp"/>
+          <unit bldFile="os\buildtools\misccomponents\alp2csh\group" mrp="os\buildtools\misccomponents\alp2csh\group\tools_sdk_eng_alp2csh.mrp"/>
         </component>
         <component name="CJPEG">
-          <unit bldFile="os\buildtools\fileconv\cjpeg\group" mrp="os\buildtools\fileconv\cjpeg\group\tools_sdk_eng_cjpeg.mrp"/>
+          <unit bldFile="os\buildtools\misccomponents\cjpeg\group" mrp="os\buildtools\misccomponents\cjpeg\group\tools_sdk_eng_cjpeg.mrp"/>
         </component>
         <component name="CSHLPCMP Frontend">
-          <unit bldFile="app\helps\symhelp\cshlpcmpfrontend\group" mrp="app\helps\symhelp\cshlpcmpfrontend\group\tools_sdk_eng_cshlpcmp_frontend.mrp"/>
+          <unit bldFile="os\buildtools\misccomponents\cshlpcmpfrontend\group" mrp="os\buildtools\misccomponents\cshlpcmpfrontend\group\tools_sdk_eng_cshlpcmp_frontend.mrp"/>
         </component>
         <component name="CSHLPCMP Backend">
-          <unit mrp="app\helps\symhelp\cshlpcmpbackend\group\tools_sdk_eng_cshlpcmp_backend_srconly.mrp"/>
+          <unit mrp="os\buildtools\misccomponents\cshlpcmpbackend\group\tools_sdk_eng_cshlpcmp_backend_srconly.mrp"/>
         </component>
         <component name="PERLLIBRARY">
-          <unit bldFile="os\buildtools\perltoolsplat_os\legacycommonperl\group" mrp="os\buildtools\perltoolsplat_os\legacycommonperl\group\tools_sdk_eng_perllibrary.mrp"/>
+          <unit bldFile="os\buildtools\misccomponents\legacycommonperl\group" mrp="os\buildtools\misccomponents\legacycommonperl\group\tools_sdk_eng_perllibrary.mrp"/>
         </component>
         <component name="Perl Shared Libraries">
-          <unit bldFile="os\buildtools\perltoolsplat_os\commonperl\group" mrp="os\buildtools\perltoolsplat_os\commonperl\group\tools_sdk_eng_perl_shared.mrp"/>
+          <unit bldFile="os\buildtools\misccomponents\commonperl\group" mrp="os\buildtools\misccomponents\commonperl\group\tools_sdk_eng_perl_shared.mrp"/>
         </component>
         <component name="RTF2PTML">
-          <unit bldFile="os\buildtools\fileconv\rtf2ptml\group" mrp="os\buildtools\fileconv\rtf2ptml\group\tools_sdk_eng_rtf2ptml.mrp"/>
+          <unit bldFile="os\buildtools\misccomponents\rtf2ptml\group" mrp="os\buildtools\misccomponents\rtf2ptml\group\tools_sdk_eng_rtf2ptml.mrp"/>
         </component>
         <component name="SPLASH">
           <unit bldFile="os\buildtools\misccomponents\splash\group" mrp="os\buildtools\misccomponents\splash\group\tools_sdk_eng_splash.mrp"/>
@@ -426,43 +438,66 @@
         </component>
       </collection>
       <collection name="Test Product" level="test">
-		<!-- PLACEHOLDER="DS.1603" START REMOVE-->
         <component name="Bluetooth Test Product" introduced="9.2" class="test">
         </component>
         <component name="Multimedia Test Product">
         </component>
-		<!-- PLACEHOLDER="DS.1603" END REMOVE-->
         <component name="Messaging Test Product">
           <unit mrp="mw\messagingmw\messagingfw\msgtestproduct\group\messaging_testproduct.mrp"/>
         </component>
-		<!-- PLACEHOLDER="DS.1603" START REMOVE-->
         <component name="Syslibs Test Product">
         </component>
         <component name="Comms Infrastructure Test Product" introduced="9.2" class="test">
         </component>
         <component name="Graphics Test Product">
         </component>
-		<!-- PLACEHOLDER="DS.1603" END REMOVE-->
         <component name="LBS Test Product" introduced="9.2" class="test">
-          <unit mrp="os\lbs\lbstest\lbstestproduct\group\lbs_testproduct.mrp"/>
+          <unit mrp="os\lbs\locationrequestmgmt\lbstestproduct\group\lbs_testproduct.mrp"/>
         </component>
       </collection>
     </layer>
     <layer name="HAL" levels="Hardware-dependent">
       <block name="Board Support Packages" level="Hardware-dependent">
-			<collection name="HAI Test Suites">
-		<component name="BSP Verification Suite" class="placeholder" introduced="TB91">
-			<!-- PLACEHOLDER="DS.1603"
-			<unit mrp="os/boardsupport/haitest/group/bspsvs.mrp"/>
-			-->
-		</component>
-		</collection>
         <collection name="Emulator">
           <component name="Emulator BSP" contract="Symbian_SD4C">
             <unit bldFile="os\boardsupport\emulator\emulatorbsp" mrp="os\boardsupport\emulator\emulatorbsp\base_wins.mrp"/>
           </component>
           <component name="Unistore2 Emulator Support" contract="NAND_Flash_XSR_Unistore_2_Other_Portions" filter="gt" introduced="9.4">
             <unit bldFile="os\boardsupport\emulator\unistore2emulatorsupport" mrp="os\boardsupport\emulator\unistore2emulatorsupport\base_wins_unistore2.mrp"/>
+          </component>
+        </collection>
+        <collection name="Assabet">
+          <component name="Assabet BSP" deprecated="8.0">
+            <unit bldFile="os\boardsupport\assabet\assabetbsp" mrp="os\boardsupport\assabet\assabetbsp\base_assabet.mrp"/>
+          </component>
+          <component name="StrongArm 1100 ASSP" introduced="8.1">
+            <unit mrp="os\boardsupport\assabet\strongarm1100assp\base_sa1100.mrp"/>
+          </component>
+        </collection>
+        <collection name="Integrator BSP">
+          <component name="Integrator Motherboard" introduced="8.1b">
+            <unit bldFile="os\boardsupport\integratorbsp\integratormotherboard" mrp="os\boardsupport\integratorbsp\integratormotherboard\base_integrator_integratorap.mrp"/>
+          </component>
+          <component name="Integrator Core Modules">
+            <unit bldFile="os\boardsupport\integratorbsp\integratorcoremodules" mrp="os\boardsupport\integratorbsp\integratorcoremodules\base_integrator_core_8.1b.mrp"/>
+          </component>
+          <component name="Integrator ARM920 Core Module" introduced="8.1b">
+            <unit bldFile="os\boardsupport\integratorbsp\integratorarm920coremodule" mrp="os\boardsupport\integratorbsp\integratorarm920coremodule\base_integrator_core_cm920.mrp"/>
+          </component>
+          <component name="Integrator ARM1136 Core Module">
+            <unit bldFile="os\boardsupport\integratorbsp\integratorarm1136coremodule" mrp="os\boardsupport\integratorbsp\integratorarm1136coremodule\base_integrator_core_cm1136.mrp"/>
+          </component>
+          <component name="Integrator XX600 Logic Module" introduced="8.1b">
+            <unit bldFile="os\boardsupport\integratorbsp\integratorxx600logicmodule" mrp="os\boardsupport\integratorbsp\integratorxx600logicmodule\base_integrator_logic_lmxx600.mrp"/>
+          </component>
+          <component name="Integrator SSR NAND Logic Module" introduced="8.1b">
+            <unit bldFile="os\boardsupport\integratorbsp\integratorssrnandlogicmodule" mrp="os\boardsupport\integratorbsp\integratorssrnandlogicmodule\base_integrator_logic_lmnand.mrp"/>
+          </component>
+          <component name="Integrator Panasonic Logic Module" contract="SD_Card_PSL">
+            <unit mrp="os\boardsupport\integratorbsp\integratorpanasoniclogicmodule\base_integrator_logic_lm_pana.mrp"/>
+          </component>
+          <component name="Integrator Unistore2 NAND Logic Module" contract="NAND_Flash_XSR_Unistore_2_Other_Portions" filter="gt">
+            <unit bldFile="os\boardsupport\integratorbsp\integratorunistore2nandlogicmodule" mrp="os\boardsupport\integratorbsp\integratorunistore2nandlogicmodule\base_integrator_logic_lmnand2.mrp"/>
           </component>
         </collection>
         <collection name="OMAP H2">
@@ -574,6 +609,9 @@
           <component name="Generic Board Support Packages">
             <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\bsp" mrp="os\kernelhwsrv\kernel\eka\drivers\bsp\base_e32_drivers_bsp.mrp"/>
           </component>
+          <component name="System On Chip ASSP" contract="Symbian_SD4C">
+            <unit mrp="os\kernelhwsrv\driversupport\socassp\base_soc.mrp"/>
+          </component>
         </collection>
         <collection name="Shortlink Logical Device Drivers" level="specific">
           <component name="USB Client Driver" introduced="8.1b">
@@ -586,15 +624,6 @@
           </component>
         </collection>
       </block>
-	  <block name="Kernel and Hardware Services" level="kernel" levels="generic specific">
-	  <collection name="Base API Tests" level="user">
-			<component name="Base Verification Suite" class="placeholder" introduced="TB91">
-			<!-- PLACEHOLDER="DS.1603"
-			<unit mrp="os/kernelhwsrv/baseapitest/group/basesvs.mrp"/>
-			-->
-			</component>
-      </collection>
-	  </block>
       <block name="User-side Services" level="user">
         <collection name="User Library and File Server">
           <component name="User Library" contract="Symbian_Kernel">
@@ -626,7 +655,10 @@
           <component name="USB Mass Storage File System" filter="gt" plugin="Y">
             <unit bldFile="os\kernelhwsrv\userlibandfileserver\fileserver\smassstorage" mrp="os\kernelhwsrv\userlibandfileserver\fileserver\smassstorage\base_f32_smassstorage.mrp"/>
           </component>
-		  <component name="FAT32 File System" contract="FAT32" filter="gt" plugin="Y">
+          <component name="LFFS" filter="gt" plugin="Y">
+            <unit bldFile="os\kernelhwsrv\userlibandfileserver\fileserver\slffs" mrp="os\kernelhwsrv\userlibandfileserver\fileserver\slffs\base_f32_slffs.mrp"/>
+          </component>
+          <component name="FAT32 File System" contract="FAT32" filter="gt" plugin="Y">
             <unit bldFile="os\kernelhwsrv\userlibandfileserver\fileserver\sfat32" mrp="os\kernelhwsrv\userlibandfileserver\fileserver\sfat32\base_f32_sfat32.mrp"/>
           </component>
           <component name="FAT File System" filter="gt" plugin="Y">
@@ -660,13 +692,6 @@
     <layer name="OS Services">
       <block name="Base Services" levels="physical-abstraction app-libs translation data-services utilities">
         <subblock name="Generic OS Services">
-		<collection name="SysLibs API Tests" level="utilities">
-		<component name="Syslibs Verfication Suite" class="placeholder" introduced="TB91">
-			<!-- PLACEHOLDER="DS.1603"
-			<unit mrp="os/ossrv/syslibsapitest/group/syslibssvs.mrp"/>
-			-->
-		</component>
-		</collection>
           <collection name="Generic Services" level="utilities">
             <component name="MIME Recognition Framework">
               <unit bldFile="os\ossrv\genericservices\mimerecognitionfw\group" mrp="os\ossrv\genericservices\mimerecognitionfw\group\app-framework_emime.mrp"/>
@@ -691,7 +716,7 @@
               <unit bldFile="os\security\cryptomgmtlibs\securityutils\group" mrp="os\security\cryptomgmtlibs\securityutils\group\security_common.mrp"/>
             </component>
             <component name="Security Config" introduced="9.1">
-              <unit bldFile="os\security\securityanddataprivacytools\securityconfig\group" mrp="os\security\securityanddataprivacytools\securityconfig\group\security_config.mrp"/>
+              <unit bldFile="os\security\cryptomgmtlibs\securityconfig\group" mrp="os\security\cryptomgmtlibs\securityconfig\group\security_config.mrp"/>
             </component>
             <component name="Crypto Token Framework">
               <unit bldFile="os\security\cryptomgmtlibs\cryptotokenfw\group" mrp="os\security\cryptomgmtlibs\cryptotokenfw\group\security_cryptotokens.mrp"/>
@@ -713,10 +738,10 @@
               <unit bldFile="os\ossrv\compressionlibs\ziplib\group" mrp="os\ossrv\compressionlibs\ziplib\group\syslibs_ezlib.mrp"/>
             </component>
             <component name="Weak Cryptography Library" filter="gt">
-              <unit bldFile="os\security\crypto\weakcrypto\group" mrp="os\security\crypto\weakcrypto\group\security_crypto_weak.mrp"/>
+              <unit bldFile="os\security\cryptolibs\weakcryptolib\group" mrp="os\security\cryptolibs\weakcryptolib\group\security_crypto_weak.mrp"/>
             </component>
             <component name="Strong Cryptography Library" contract="Symbian_Strong_Cryptography" filter="gt">
-              <unit bldFile="os\security\crypto\weakcrypto\strong" mrp="os\security\crypto\weakcrypto\group\security_crypto_strong.mrp"/>
+              <unit bldFile="os\security\cryptolibs\weakcryptolib\strong" mrp="os\security\cryptolibs\weakcryptolib\group\security_crypto_strong.mrp"/>
             </component>
           </collection>
           <collection name="Low Level Libraries and Frameworks" level="app-libs">
@@ -729,7 +754,7 @@
           </collection>
           <collection name="Resource Management" level="physical-abstraction">
             <component name="Feature Registry" introduced="9.2" deprecated="9.6">
-              <unit bldFile="os\persistentdata\featuremgmt\featureregistry\group" mrp="os\persistentdata\featuremgmt\featureregistry\group\syslibs_featreg.mrp"/>
+              <unit bldFile="os\persistentdata\legacyfeaturemgmt\featureregistry\group" mrp="os\persistentdata\legacyfeaturemgmt\featureregistry\group\syslibs_featreg.mrp"/>
             </component>
             <component name="Hardware Resources Manager" introduced="9.5">
               <unit bldFile="os\devicesrv\resourcemgmt\hwresourcesmgr\group" mrp="os\devicesrv\resourcemgmt\hwresourcesmgr\group\telephony_hwrm.mrp"/>
@@ -791,7 +816,10 @@
             <component name="DBMS">
               <unit bldFile="os\persistentdata\persistentstorage\dbms\group" mrp="os\persistentdata\persistentstorage\dbms\group\syslibs_dbms.mrp"/>
             </component>
-			<component name="Central Repository" introduced="7.0s">
+            <component name="DBMS Emulation Library" introduced="9.3">
+              <unit bldFile="os\persistentdata\databaseabstraction\dbmsemulationlib\group" mrp="os\persistentdata\databaseabstraction\dbmsemulationlib\group\syslibs_dbmssql.mrp"/>
+            </component>
+            <component name="Central Repository" introduced="7.0s">
               <unit bldFile="os\persistentdata\persistentstorage\centralrepository\group" mrp="os\persistentdata\persistentstorage\centralrepository\group\syslibs_centralrepository.mrp"/>
             </component>
             <component name="SQL" introduced="9.3">
@@ -802,35 +830,28 @@
       </block>
       <block name="Comms Services" levels="physical-abstraction bearer-manager internal-utils servers_and_extensions utilities">
         <subblock name="Communications Framework">
-		<collection name="Comms-Infras API Tests" level="utilities">
-		<component name="Comms Infrastructure Verification Suite" class="placeholder" introduced="TB91">
-			<!-- PLACEHOLDER="DS.1603"
-			<unit mrp="os/commsfw/commsinfrastructureapitest/group/commsinfrastructuresvs.mrp"/>
-			-->
-		</component>
-		</collection>
           <collection name="Comms Process and Settings" level="utilities">
             <component name="Comms Root Server" introduced="7.0s">
-              <unit bldFile="os\commsfw\commsprocess\commsrootserverconfig\group" mrp="os\commsfw\commsprocess\commsrootserverconfig\group\comms-infras_rootserver.mrp"/>
+              <unit bldFile="os\commsfw\commsprocessandsettings\commsrootserver\group" mrp="os\commsfw\commsprocessandsettings\commsrootserver\group\comms-infras_rootserver.mrp"/>
             </component>
             <component name="Comms Root Server Config" introduced="9.1" class="config">
-              <unit mrp="os\commsfw\commsprocess\commsrootserverconfig\group\comms-infras_rootserver-config.mrp"/>
+              <unit mrp="os\commsfw\commsprocessandsettings\commsrootserver\group\comms-infras_rootserver-config.mrp"/>
             </component>
           </collection>
           <collection name="Comms Config. Utils" level="servers_and_extensions">
             <component name="Comms Database">
-              <unit bldFile="os\commsfw\commsfwtools\preparedefaultcommsdatabase\group" mrp="os\commsfw\commsfwtools\preparedefaultcommsdatabase\group\comms-infras_commsdat.mrp"/>
+              <unit bldFile="os\commsfw\commsconfigutils\commsdatabase\group" mrp="os\commsfw\commsconfigutils\commsdatabase\group\comms-infras_commsdat.mrp"/>
             </component>
             <component name="Comms Database Shim" introduced="8.1">
-              <unit bldFile="os\commsfw\commsconfig\commsdatabaseshim\group" mrp="os\commsfw\commsconfig\commsdatabaseshim\group\comms-infras_commdbshim.mrp"/>
+              <unit bldFile="os\commsfw\commsconfigutils\commsdatabaseshim\group" mrp="os\commsfw\commsconfigutils\commsdatabaseshim\group\comms-infras_commdbshim.mrp"/>
             </component>
           </collection>
           <collection name="Data Comms Server" level="servers_and_extensions">
             <component name="ESock Server">
-              <unit version="2" bldFile="os\commsfw\datacommsserver\esockserver\group" mrp="os\commsfw\datacommsserver\esockserver\group\comms-infras_esock.mrp"/>
+              <unit version="2" bldFile="os\commsfw\datacommsserver\esockserver\version2\group" mrp="os\commsfw\datacommsserver\esockserver\version2\group\comms-infras_esock.mrp"/>
             </component>
             <component name="ESock Server Config" introduced="9.1" class="config">
-              <unit version="2" mrp="os\commsfw\datacommsserver\esockserver\group\comms-infras_esock-config.mrp"/>
+              <unit version="2" mrp="os\commsfw\datacommsserver\esockserver\version2\group\comms-infras_esock-config.mrp"/>
             </component>
             <component name="Network Interface Manager" introduced="ER5U">
               <unit version="1" bldFile="os\commsfw\datacommsserver\networkinterfacemgr\group" mrp="os\commsfw\datacommsserver\networkinterfacemgr\group\comms-infras_nifman.mrp"/>
@@ -855,7 +876,7 @@
               <unit bldFile="os\commsfw\commsfwutils\commfw\group" mrp="os\commsfw\commsfwutils\commfw\group\comms-infras_commsfw.mrp" priority="10"/>
             </component>
             <component name="Comms Elements" introduced="8.0">
-              <unit bldFile="os\commsfw\commsfwsupport\commselements\group" mrp="os\commsfw\commsfwsupport\commselements\group\comms-infras_elements.mrp"/>
+              <unit bldFile="os\commsfw\commsfwutils\commselements\group" mrp="os\commsfw\commsfwutils\commselements\group\comms-infras_elements.mrp"/>
             </component>
             <component name="MBuf Manager" introduced="7.0s">
               <unit bldFile="os\commsfw\commsfwutils\mbufmgr\group" mrp="os\commsfw\commsfwutils\mbufmgr\group\comms-infras_mbufmgr.mrp"/>
@@ -936,13 +957,22 @@
             <component name="SIM TSY" plugin="Y" introduced="7.0" class="test">
               <unit bldFile="os\cellularsrv\telephonyserverplugins\simtsy\group" mrp="os\cellularsrv\telephonyserverplugins\simtsy\group\telephony_simtsy.mrp"/>
             </component>
-			<component name="LicenseeTSY Stub" plugin="Y" introduced="tb91" class="test"> 
-			<unit mrp="os\cellularsrv\telephonyserverplugins\licenseetsystub\group\licenseetsystub.mrp"/> 
-			</component>
           </collection>
+          <!-- PLACEHOLDER="DS.1577" START REMOVE -->
+		  <collection name="Telephony Reference Platform" level="physical-abstraction">
+            <component name="TRP TSY" plugin="Y">
+              <unit bldFile="os\cellularsrv\telephonyreferenceplatform\trptsy\group" mrp="os\cellularsrv\telephonyreferenceplatform\trptsy\group\telephony_trp.mrp"/>
+            </component>
+            <component name="TRP AGT" introduced="9.4" plugin="Y">
+              <unit bldFile="os\cellularsrv\telephonyreferenceplatform\trptsy\agt\trpagt\group" mrp="os\cellularsrv\telephonyreferenceplatform\trptsy\agt\trpagt\group\telephony_trpagt.mrp"/> 
+            </component>
+          </collection>
+		  <!-- PLACEHOLDER="DS.1577" END REMOVE -->
 		  <collection name="Hardware Plugin Simulation" level="physical-abstraction">
  	        <component name="MockSY" introduced="9.4" plugin="Y">
- 			  <unit bldFile="os\cellularsrv\hwpluginsimulation\mocksy\group" mrp="os\cellularsrv\hwpluginsimulation\mocksy\group\telephony_tools_mocksy.mrp"/>
+ 			<!-- PLACEHOLDER="PDEF130159"
+ 			  <unit bldFile="os/unref/orphan/comgen/telephony/tools/mocksy/group" mrp="os/unref/orphan/comgen/telephony/tools/mocksy/group/telephony_tools_mocksy.mrp"/>
+ 			  -->
  	        </component>
  	      </collection>
         </subblock>
@@ -1057,26 +1087,31 @@
             <component name="Raw IP NIF">
               <unit bldFile="os\cellularsrv\telephonyprotocols\rawipnif\group" mrp="os\cellularsrv\telephonyprotocols\rawipnif\group\networking_rawipnif.mrp"/>
             </component>
-		</collection>
+            <component name="Wireless LAN" filter="gt" introduced="9.3">
+              <unit bldFile="os\wlan\wlan_bearer\wirelesslan\group" mrp="os\wlan\wlan_bearer\wirelesslan\group\networking_802.11.mrp"/>
+            </component>
+          </collection>
           <collection name="PPP Compression Plugins" level="bearer-manager">
             <component name="Predictor Compression" plugin="Y">
               <unit bldFile="os\networkingsrv\pppcompressionplugins\predictorcompression\group" mrp="os\networkingsrv\pppcompressionplugins\predictorcompression\group\networking_predcomp.mrp"/>
             </component>
+            <component name="MPPC" contract="MPPC_LZS_Compression_Libraries" filter="gt" plugin="Y">
+              <unit bldFile="os\networkingsrv\pppcompressionplugins\mppc\group" mrp="os\networkingsrv\pppcompressionplugins\mppc\group\networking_mscomp.mrp"/>
+            </component>
+            <component name="Stac LZS Compression" contract="MPPC_LZS_Compression_Libraries" filter="gt" plugin="Y">
+              <unit bldFile="os\networkingsrv\pppcompressionplugins\staclzscompression\group" mrp="os\networkingsrv\pppcompressionplugins\staclzscompression\group\networking_staccomp.mrp"/>
+            </component>
           </collection>
           <collection name="Link Layer Utilities" level="bearer-manager">
-		  <component name="Packet Logger" introduced="8.1" class="test">
+            <component name="EAP Framework" filter="gt" introduced="9.3">
+              <unit bldFile="mw\accesssec\eapol\eapfw\group" mrp="mw\accesssec\eapol\eapfw\group\networking_eap.mrp"/>
+            </component>
+            <component name="Packet Logger" introduced="8.1" class="test">
               <unit bldFile="os\networkingsrv\linklayerutils\packetlogger\group" mrp="os\networkingsrv\linklayerutils\packetlogger\group\networking_packetlogger.mrp"/>
             </component>
           </collection>
         </subblock>
         <subblock name="Short Link Services">
-		<collection name="Bluetooth API Tests" level="utilities">
-			<component name="Bluetooth Verification Suite" class="placeholder" introduced="TB91">
-			<!-- PLACEHOLDER="DS.1603"
-			<unit mrp="os/shortlinksrv/bluetoothapitest/group/bluetoothsvs.mrp"/>
-			-->
-			</component>
-		</collection>
           <collection name="USB Management" level="utilities">
             <component name="USB Manager">
               <unit version="2" bldFile="os\shortlinksrv\usbmgmt\usbmgr\group" mrp="os\shortlinksrv\usbmgmt\usbmgr\group\usb_manager.mrp"/>
@@ -1134,6 +1169,9 @@
             <component name="IrDA Stack">
               <unit bldFile="os\shortlinksrv\irda\irdastack\group" mrp="os\shortlinksrv\irda\irdastack\group\infra-red_irda.mrp"/>
             </component>
+            <component name="IrDA Config" introduced="6.0" class="config">
+              <unit bldFile="os\shortlinksrv\irda\irdaconfig" mrp="os\shortlinksrv\irda\irdaconfig\infra-red_config.mrp"/>
+            </component>
           </collection>
           <collection name="Serial Comms Server Plugins" level="physical-abstraction">
             <component name="Serial Port CSY" class="placeholder" plugin="Y">
@@ -1142,17 +1180,15 @@
             <component name="Bluetooth CSY" plugin="Y">
               <unit bldFile="os\shortlinksrv\bluetooth\btcomm" mrp="os\shortlinksrv\bluetooth\btcomm\bluetooth_btcomm.mrp"/>
             </component>
+            <!-- PLACEHOLDER="DS.1577" START REMOVE -->
+			<component name="MUX CSY" introduced="9.4" plugin="Y">
+              <unit bldFile="os\cellularsrv\telephonyreferenceplatform\trptsy\csy\csy27010\group" mrp="os\cellularsrv\telephonyreferenceplatform\trptsy\csy\csy27010\group\telephony_muxcsy.mrp"/>
+            </component>
+			<!-- PLACEHOLDER="DS.1577" END REMOVE -->
           </collection>
         </subblock>
       </block>
       <block name="Multimedia" levels="device-fw devices middleware application-interface">
-		<collection name="Multimedia API Tests" level="application-interface">
-			<component name="Multimedia Verification Suite" class="placeholder" introduced="TB91">
-				<!-- PLACEHOLDER="DS.1603"
-				<unit mrp="os/mm/mmapitest/group/mmsvs.mrp"/>
-				-->
-				</component>
-		</collection>
         <collection name="Multimedia APIs and Frameworks" level="application-interface">
           <component name="Multimedia Framework" introduced="7.0s">
             <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\group" mrp="mw\mmmw\mmmiddlewarefws\mmfw\group\multimedia_mmf.mrp"/>
@@ -1166,6 +1202,11 @@
           <component name="Camera Framework" introduced="7.0s">
             <unit bldFile="os\mm\imagingandcamerafws\camerafw\framework\group" mrp="os\mm\imagingandcamerafws\camerafw\framework\group\multimedia_ecam_framework.mrp"/>
           </component>
+		  <!-- PLACEHOLDER="DS.1554" START REMOVE-->
+          <component name="Broadcast Radio Tuner" introduced="9.1" class="test">
+            <unit bldFile="mw\mmmw\mmmiddlewarefws\broadcastradiotuner\group" mrp="mw\mmmw\mmmiddlewarefws\broadcastradiotuner\group\multimedia_tuner.mrp"/>
+          </component>
+		  <!-- PLACEHOLDER="DS.1554" END REMOVE-->
         </collection>
         <collection name="Multimedia Plugins" level="middleware">
           <component name="Multimedia Framework Plugins" plugin="Y" introduced="7.0s">
@@ -1248,13 +1289,6 @@
         </collection>
       </block>
       <block name="Graphics" levels="engines internal-adaptations device-interface internal-utils application-interface">
-		<collection name="Graphics API Tests" level="application-interface">
-		<component name="Graphics Verification Suite" class="placeholder" introduced="TB91">
-			<!-- PLACEHOLDER="DS.1603"
-			<unit mrp="os/graphics/graphcisapitest/group/graphicssvs.mrp"/>
-			-->
-		</component>
-		</collection>
         <collection name="Windowing Framework" level="application-interface">
           <component name="Window Server">
             <unit bldFile="os\graphics\windowing\windowserver\group" mrp="os\graphics\windowing\windowserver\group\graphics_wserv.mrp"/>
@@ -1286,9 +1320,6 @@
           </component>
           <component name="Reference Fonts">
             <unit bldFile="os\textandloc\fontservices\referencefonts\group" mrp="os\textandloc\fontservices\referencefonts\group\graphics_fonts.mrp"/>
-          </component>
-          <component name="Graphics Test Fonts" filter="gt">
-            <unit bldFile="os\textandloc\fontservices\graphicstestfonts\group" mrp="os\textandloc\fontservices\graphicstestfonts\group\graphics_testfonts.mrp"/>
           </component>
         </collection>
         <collection name="Khronos APIs" level="device-interface">
@@ -1342,7 +1373,7 @@
             <unit bldFile="os\lbs\locationmgmt\networklocationmgr\group" mrp="os\lbs\locationmgmt\networklocationmgr\group\lbs_networklocationmanager.mrp"/>
           </component>
           <component name="Location Admin" contract="LBS" introduced="9.2">
-            <unit bldFile="os\lbs\locationmgmt\locationcore\group" mrp="os\lbs\locationmgmt\locationcore\group\lbs_admin.mrp"/>
+            <unit bldFile="os\lbs\locationmgmt\locationadmin\group" mrp="os\lbs\locationmgmt\locationadmin\group\lbs_admin.mrp"/>
           </component>
           <component name="Network Gateway" contract="LBS" introduced="9.2">
             <unit bldFile="os\lbs\locationmgmt\networkgateway\group" mrp="os\lbs\locationmgmt\networkgateway\group\lbs_networkgateway.mrp"/>
@@ -1350,7 +1381,7 @@
         </collection>
         <collection name="Network Adaptation" level="adaptation">
           <component name="Network Protocol Module" plugin="Y" introduced="9.2">
-            <unit bldFile="os\lbs\lbstest\locationprotocoltest\group" mrp="os\lbs\lbstest\locationprotocoltest\group\lbs_networktest.mrp"/>
+            <unit bldFile="os\lbs\networkprotocolmodules\networkprotocolmodule\group" mrp="os\lbs\networkprotocolmodules\networkprotocolmodule\group\lbs_networktest.mrp"/>
           </component>
           <component name="Privacy Protocol Module" plugin="Y" introduced="9.4">
             <unit bldFile="os\lbs\networkprotocolmodules\privacyprotocolmodule\group" mrp="os\lbs\networkprotocolmodules\privacyprotocolmodule\group\lbs_privacyprotocolmodule.mrp"/>
@@ -1417,7 +1448,7 @@
             <unit bldFile="mw\appsupport\tzservices\tzserver\group" mrp="mw\appsupport\tzservices\tzserver\group\app-services_tz.mrp"/>
           </component>
           <component name="Time Zone Localization" introduced="9.1">
-            <unit bldFile="mw\appsupport\tzservices\tzloc\group" mrp="mw\appsupport\tzservices\tzloc\group\app-services_timezonelocalization.mrp"/>
+            <unit bldFile="mw\appsupport\tzservices\tzlocalization\group" mrp="mw\appsupport\tzservices\tzlocalization\group\app-services_timezonelocalization.mrp"/>
           </component>
           <component name="World Server" introduced="7.0" deprecated="9.1">
             <unit bldFile="mw\appsupport\tzservices\worldserver\group" mrp="mw\appsupport\tzservices\worldserver\group\app-services_worldserver.mrp"/>
@@ -1442,14 +1473,9 @@
             <unit bldFile="mw\appsupport\printingsupport\printinguisupport\group" mrp="mw\appsupport\printingsupport\printinguisupport\group\app-framework_print.mrp"/>
           </component>
         </collection>
-				<collection name="Hardware Resource Adaptation">
-					<component name="Hardware Resource Manager UI Plugin" introduced="tb91">
-						<unit bldFile="mw\appsupport\hwresourceadaptation\hwresourcemgruiplugin\group" mrp="mw\appsupport\hwresourceadaptation\hwresourcemgruiplugin\group\telephony_hwrmuiplugin.mrp"/>
-					</component>
-				</collection>
         <collection name="Backup and Restore" level="generic">
           <component name="Backup Engine" introduced="9.0">
-            <unit bldFile="mw\remoteconn\backupandrestore\backupengine\group" mrp="mw\remoteconn\backupandrestore\backupengine\group\connectivity_backupengine.mrp"/>
+            <unit bldFile="mw\remoteconn\backup\backupengine\group" mrp="mw\remoteconn\backup\backupengine\group\connectivity_backupengine.mrp"/>
           </component>
         </collection>
       </block>
@@ -1460,12 +1486,6 @@
           </component>
           <component name="Secure Software Install Device Tools" introduced="8.1">
             <unit bldFile="mw\appinstall\installationservices\swidevicetools\group" mrp="mw\appinstall\installationservices\swidevicetools\group\security_switools_device.mrp"/>
-          </component>
-		  <component name="Software Install Test Framework">
-			<unit bldFile="mw\appinstall\installationservices\switestfw\group" mrp="mw\appinstall\installationservices\switestfw\group\install_testframework.mrp"/>
-          </component>
-		<component name="Software Install Config">
-			<unit bldFile="mw\appinstall\installationservices\swiconfig\group" mrp="mw\appinstall\installationservices\swiconfig\group\install_config.mrp"/>
           </component>
         </collection>
         <collection name="Crypto Services" level="generic">
@@ -1480,6 +1500,9 @@
           </component>
         </collection>
         <collection name="Network Security" level="generic">
+          <component name="EAP Plugins for WiFi" class="placeholder">
+            <!-- WiFi's Extensible Authentication Protocol plugins that rely on TLS -->
+          </component>
           <component name="TLS" introduced="6.0">
             <unit bldFile="os\networkingsrv\networksecurity\tls\group" mrp="os\networkingsrv\networksecurity\tls\group\networking_tls.mrp"/>
           </component>
@@ -1559,6 +1582,9 @@
           <component name="WAP Message API">
             <unit bldFile="mw\netprotocols\wapstack\wapmessageapi\group" mrp="mw\netprotocols\wapstack\wapmessageapi\group\wap-stack_wapmessage.mrp"/>
           </component>
+          <component name="WAP Short Stack" contract="Symbian_Affiliate" filter="gt" introduced="8.0">
+            <unit bldFile="mw\netprotocols\wapstack\wapshortstack\wapstack\group" mrp="mw\netprotocols\wapstack\wapshortstack\wapstack\group\wap-stack_wapstack.mrp"/>
+          </component>
         </collection>
         <collection name="Connectivity Transports" level="generic">
           <component name="m-Router" contract="MRouter" filter="gt">
@@ -1576,14 +1602,14 @@
         </collection>
         <collection name="MTP Transports" level="generic">
           <component name="MTP USB Transport" plugin="Y" introduced="9.4">
-            <unit bldFile="mw\remoteconn\mtptransports\mtpusbtransport\group" mrp="mw\remoteconn\mtptransports\mtpusbtransport\group\mtp_usbsic.mrp"/>
+            <unit bldFile="mw\remoteconn\mtptransfw\mtpusbtransport\group" mrp="mw\remoteconn\mtptransfw\mtpusbtransport\group\mtp_usbsic.mrp"/>
           </component>
         </collection>
       </block>
       <block name="Multimedia Middleware" levels="protocols plugins">
         <collection name="Multimedia Protocols" level="protocols">
           <component name="MTP Framework" introduced="9.4">
-            <unit bldFile="mw\remoteconn\mtpfws\mtpfw\group" mrp="mw\remoteconn\mtpfws\mtpfw\group\mtp_framework.mrp"/>
+            <unit bldFile="mw\remoteconn\mtptransfw\mtpfw\group" mrp="mw\remoteconn\mtptransfw\mtpfw\group\mtp_framework.mrp"/>
           </component>
           <component name="RTP" introduced="9.0">
             <!-- Real Time Data Protocol -->
@@ -1688,9 +1714,6 @@
           </component>
           <component name="Chinese Calendar Converter" introduced="6.1">
             <unit bldFile="app\organizer\pimappsupport\chinesecalendarconverter\group" mrp="app\organizer\pimappsupport\chinesecalendarconverter\group\app-services_calcon.mrp"/>
-          </component>
-          <component name="Chinese Calendar Algorithm" introduced="tb91">
-            <unit bldFile="app\organizer\pimappsupport\chinesecalendaralg\group" mrp="app\organizer\pimappsupport\chinesecalendaralg\group\app-services_chinesecalendaralgorithm.mrp"/>
           </component>
           <component name="Backup Restore Notification" introduced="8.1">
             <unit bldFile="mw\appsupport\commonappservices\backuprestorenotification\group" mrp="mw\appsupport\commonappservices\backuprestorenotification\group\app-services_BackupRestoreNotification.mrp"/>
@@ -1799,7 +1822,7 @@
         </collection>
         <collection name="MTP Data Providers" level="services">
           <component name="MTP File and Folder Provider" plugin="Y" introduced="9.4">
-            <unit bldFile="mw\remoteconn\mtpdataproviders\mtpfileandfolderdp\group" mrp="mw\remoteconn\mtpdataproviders\mtpfileandfolderdp\group\mtp_filedp.mrp"/>
+            <unit bldFile="mw\remoteconn\mtpdataproviders\mtpfileandfolderprovider\group" mrp="mw\remoteconn\mtpdataproviders\mtpfileandfolderprovider\group\mtp_filedp.mrp"/>
           </component>
         </collection>
 				<collection name="Bluetooth Application Profiles" level="services"> 
@@ -1816,6 +1839,125 @@
         </collection>
       </block>
     </layer>
+    <layer name="UI" levels="tools apps">
+      <block name="Techview">
+        <collection name="Apps" level="apps">
+          <component name="Simple App" filter="techview">
+            <unit bldFile="app\techview\testapps\simpleapp\group" mrp="app\techview\testapps\simpleapp\group\Techview_SimpleApp.mrp"/>
+          </component>
+          <component name="CONTACUI" filter="techview">
+            <unit bldFile="app\techview\pimapps\contacui\group" mrp="app\techview\pimapps\contacui\group\techview_contacui.mrp" priority="30"/>
+          </component>
+          <component name="AGENDA" filter="techview">
+            <unit bldFile="app\techview\pimapps\agenda\group" mrp="app\techview\pimapps\agenda\group\techview_agenda.mrp"/>
+          </component>
+          <component name="AUDIO" filter="techview">
+            <unit bldFile="app\techview\avapps\techviewaudio\Group" mrp="app\techview\avapps\techviewaudio\Group\techview_audio.mrp"/>
+          </component>
+          <component name="CONTACTS" filter="techview">
+            <unit bldFile="app\techview\pimapps\contactstechview\group" mrp="app\techview\pimapps\contactstechview\group\techview_contacts.mrp"/>
+          </component>
+          <component name="SYNCMLAPP" filter="techview">
+            <unit bldFile="app\techview\datasyncapps\syncmlapp\group" mrp="app\techview\datasyncapps\syncmlapp\group\techview_syncmlapp.mrp"/>
+          </component>
+          <component name="HELP" filter="techview">
+            <unit bldFile="app\techview\utilityapps\helptechview\group" mrp="app\techview\utilityapps\helptechview\group\techview_help.mrp"/>
+          </component>
+          <component name="TIMEW" filter="techview">
+            <unit bldFile="app\techview\utilityapps\timew\group" mrp="app\techview\utilityapps\timew\group\techview_timew.mrp"/>
+          </component>
+          <component name="SECUI" filter="techview">
+            <unit bldFile="app\techview\securityapps\secui\group" mrp="app\techview\securityapps\secui\group\techview_secui.mrp"/>
+          </component>
+          <component name="Bluetooth UI" filter="techview">
+            <unit bldFile="app\techview\shortlinkapps\bluetoothui\group" mrp="app\techview\shortlinkapps\bluetoothui\group\techview_bluetoothui.mrp"/>
+          </component>
+          <component name="Remote Control Reference TSP" filter="techview" plugin="Y" introduced="9.1">
+            <unit bldFile="os\devicesrv\accessoryservices\reftsp\group" mrp="os\devicesrv\accessoryservices\reftsp\group\bluetooth_remotecontrol_refTSP.mrp"/>
+          </component>
+          <component name="PHONEUI" filter="techview">
+            <unit bldFile="app\techview\telephonyapps\techviewphoneui\group" mrp="app\techview\telephonyapps\techviewphoneui\group\techview_phoneui.mrp"/>
+          </component>
+          <component name="IAPSTATUSAPP" filter="techview">
+            <unit bldFile="app\techview\networkingapps\iapstatusapp\group" mrp="app\techview\networkingapps\iapstatusapp\group\techview_iapstatusapp.mrp"/>
+          </component>
+          <component name="CONNECTUI" filter="techview">
+            <unit bldFile="app\techview\shortlinkapps\connectui\group" mrp="app\techview\shortlinkapps\connectui\group\techview_connectui.mrp"/>
+          </component>
+          <component name="USBUI" filter="techview">
+            <unit bldFile="app\techview\shortlinkapps\techviewusbui\group" mrp="app\techview\shortlinkapps\techviewusbui\group\techview_usbui.mrp"/>
+          </component>
+          <component name="MESSAGINGUI" filter="techview">
+            <unit bldFile="app\techview\messagingapps\messagingui\Group" mrp="app\techview\messagingapps\messagingui\Group\techview_messagingui.mrp"/>
+          </component>
+          <component name="Networking Agent Notifier" filter="techview" plugin="Y" introduced="7.0s">
+            <unit bldFile="app\techview\networkingapps\networkingagentnotifier\group" mrp="app\techview\networkingapps\networkingagentnotifier\group\techview_networking_agentnotifier.mrp"/>
+          </component>
+          <component name="VPN UI" filter="techview" introduced="7.0">
+            <unit bldFile="app\techview\networkingapps\techviewvpnui\group" mrp="app\techview\networkingapps\techviewvpnui\group\techview_networking_vpnui.mrp"/>
+          </component>
+          <component name="STAT_DEVICE" filter="techview">
+            <unit bldFile="os\buildtools\toolsandutils\statapi\source\statapi\Techview" mrp="os\buildtools\toolsandutils\statapi\group\testtools_stat_device_techview.mrp"/>
+          </component>
+          <component name="Install App" filter="techview">
+            <unit bldFile="app\techview\installationapps\installapp\group" mrp="app\techview\installationapps\installapp\group\techview_installapp.mrp"/>
+          </component>
+          <component name="RESOURCE_HANDLER_UI" filter="techview">
+            <unit bldFile="app\techview\testapps\rschandler\TVResourceHandler\group" mrp="app\techview\testapps\rschandler\TVResourceHandler\group\Testtools_ResourceHandler_techview.mrp"/>
+          </component>
+          <component name="MemSpy" filter="techview" introduced="9.2" class="test">
+            <unit bldFile="app\techview\testapps\memspy\group" mrp="app\techview\testapps\memspy\group\graphics_memspy.mrp"/>
+          </component>
+        </collection>
+        <collection name="Toolkit" level="tools">
+          <component name="UIKLAF" filter="techview">
+            <unit bldFile="app\techview\techviewplatform\techviewuiklaf\GROUP" mrp="app\techview\techviewplatform\techviewuiklaf\GROUP\techview_uiklaf.mrp" priority="10"/>
+          </component>
+          <component name="EIKSTD" filter="techview">
+            <unit bldFile="app\techview\techviewplatform\eikstd\group" mrp="app\techview\techviewplatform\eikstd\group\techview_eikstd.mrp" priority="20"/>
+          </component>
+          <component name="EXTRAS" filter="techview">
+            <unit bldFile="app\techview\techviewui\techviewextras\group" mrp="app\techview\techviewui\techviewextras\group\techview_extras.mrp"/>
+          </component>
+          <component name="STATUSPANE" filter="techview">
+            <unit bldFile="app\techview\techviewui\statuspane\group" mrp="app\techview\techviewui\statuspane\group\techview_statuspane.mrp"/>
+          </component>
+          <component name="SHELL" filter="techview">
+            <unit bldFile="app\techview\techviewui\shell\group" mrp="app\techview\techviewui\shell\group\techview_shell.mrp"/>
+          </component>
+          <component name="STARTUP" filter="techview">
+            <unit bldFile="app\techview\techviewui\startup\group" mrp="app\techview\techviewui\startup\group\techview_startup.mrp"/>
+          </component>
+          <component name="ROM Kit" filter="techview">
+            <unit bldFile="app\techview\toolkit\romkit\group" mrp="app\techview\toolkit\romkit\group\techview_romkit.mrp"/>
+          </component>
+          <component name="ROM Images" filter="techview">
+            <unit version="9.4" mrp="os\buildtools\bldsystemtools\cedarutils\techview_roms_9.4.mrp"/>
+          </component>
+          <component name="FEPSETUP" filter="techview">
+            <unit bldFile="app\techview\controlpanel\fepsetup\group" mrp="app\techview\controlpanel\fepsetup\group\techview_fepsetup.mrp"/>
+          </component>
+          <component name="FEPS" filter="techview">
+            <unit bldFile="app\techview\techviewplatform\feps\group" mrp="app\techview\techviewplatform\feps\group\techview_feps.mrp"/>
+          </component>
+          <component name="CCTLCOLSCHEME" filter="techview">
+            <unit bldFile="app\techview\controlpanel\cctlcolscheme\group" mrp="app\techview\controlpanel\cctlcolscheme\group\techview_cctlcolscheme.mrp"/>
+          </component>
+          <component name="SOUNDSETUP" filter="techview">
+            <unit bldFile="app\techview\controlpanel\soundsetup\group" mrp="app\techview\controlpanel\soundsetup\group\techview_soundsetup.mrp"/>
+          </component>
+          <component name="KEYCLICKREF" filter="techview">
+            <unit bldFile="app\techview\controlpanel\keyclickref\Group" mrp="app\techview\controlpanel\keyclickref\Group\techview_KeyClickRef.mrp"/>
+          </component>
+          <component name="Configuration Files" filter="techview">
+            <unit mrp="app\techview\toolkit\configurationfiles\techview_epoc_ini.mrp"/>
+          </component>
+          <component name="Additional Configuration Files" filter="techview">
+            <unit mrp="app\techview\toolkit\configurationfiles\techview_additional_cedar.mrp"/>
+          </component>
+        </collection>
+      </block>
+   </layer>
      <layer name="MISC" levels="test pc-tools">
       <collection name="Connectivity PC Side" level="pc-tools">
         <component name="ConnectQI" contract="MRouterSDK" introduced="9.1" class="PC">
@@ -1827,13 +1969,13 @@
       </collection>
       <collection name="Comms PC Side" level="pc-tools">
         <component name="Prepare Default Comms Database" filter="gt" class="config PC">
-          <unit bldFile="os\commsfw\commsfwtools\preparedefaultcommsdatabase\defaultcommdb\group" mrp="os\commsfw\commsfwtools\preparedefaultcommsdatabase\defaultcommdb\group\comms-infras_defaultcommdb.mrp"/>
+          <unit bldFile="os\commsfw\commsconfigutils\commsdatabase\defaultcommdb\group" mrp="os\commsfw\commsconfigutils\commsdatabase\defaultcommdb\group\comms-infras_defaultcommdb.mrp"/>
         </component>
         <component name="Install Default Comms Database" class="PC">
-          <unit bldFile="os\commsfw\commsfwtools\preparedefaultcommsdatabase\installdefaultcommdb\group" mrp="os\commsfw\commsfwtools\preparedefaultcommsdatabase\installdefaultcommdb\group\comms-infras_installdefaultcommdb.mrp" priority="1010"/>
+          <unit bldFile="os\commsfw\commsconfigutils\commsdatabase\installdefaultcommdb\group" mrp="os\commsfw\commsconfigutils\commsdatabase\installdefaultcommdb\group\comms-infras_installdefaultcommdb.mrp" priority="1010"/>
         </component>
         <component name="Comms Tools" introduced="9.4" class="PC">
-          <unit mrp="os\commsfw\commsfwtools\commstools\group\comms-infras_tools.mrp"/>
+          <unit mrp="os\commsfw\commspcside\commstools\group\comms-infras_tools.mrp"/>
         </component>
       </collection>
       <collection name="Remote Management Test" level="test">
@@ -1857,13 +1999,13 @@
       </collection>
       <collection name="Secure Software Install Tools" level="pc-tools">
         <component name="SWI Analysis Toolkit" class="PC">
-          <unit bldFile="mw\appinstall\secureswitools\swianalysistoolkit\group" mrp="mw\appinstall\secureswitools\swianalysistoolkit\group\security_switools.mrp"/>
+          <unit bldFile="os\misc\secureswitools\swianalysistoolkit\group" mrp="os\misc\secureswitools\swianalysistoolkit\group\security_switools.mrp"/>
         </component>
         <component name="Secure Software Install SIS Tools" class="PC">
-          <unit bldFile="mw\appinstall\secureswitools\swisistools\group" mrp="mw\appinstall\secureswitools\swisistools\group\security_sistools.mrp"/>
+          <unit bldFile="os\misc\secureswitools\swisistools\group" mrp="os\misc\secureswitools\swisistools\group\security_sistools.mrp"/>
         </component>
         <component name="OpenSSL Library" class="PC">
-          <unit mrp="mw\appinstall\secureswitools\openssllib\security_openssl.mrp"/>
+          <unit mrp="os\misc\secureswitools\openssllib\security_openssl.mrp"/>
         </component>
       </collection>
       <collection name="Security and Data Privacy Tools" level="pc-tools">
@@ -1907,13 +2049,13 @@
           <unit mrp="mw\appsupport\commonappservices\coreappstest\Group\app-services_CoreAppsTest.mrp"/>
         </component>
         <component name="Agenda Model Test" introduced="8.1" class="test">
-          <unit bldFile="app\organizer\pimappservices\agendamodeltest\TestAgendaSrv" mrp="app\organizer\pimappservices\agendamodeltest\TestAgendaSrv\app-engines_testagendasrv.mrp"/>
+          <unit bldFile="os\unref\comgen\app-engines\test_engineering\agendaserver\TestAgendaSrv" mrp="os\unref\comgen\app-engines\test_engineering\agendaserver\TestAgendaSrv\app-engines_testagendasrv.mrp"/>
         </component>
         <component name="Alarm Server Test" introduced="8.1" class="test">
           <unit bldFile="mw\appsupport\commonappservices\alarmservertest\TestAlarmSrv" mrp="mw\appsupport\commonappservices\alarmservertest\TestAlarmSrv\app-services_testalarmsrv.mrp"/>
         </component>
         <component name="Time Zone Localization Resource Factory" introduced="9.1" class="config">
-          <unit bldFile="mw\appsupport\tzservices\tzlocrscfactory\group" mrp="mw\appsupport\tzservices\tzlocrscfactory\group\app-services_tzlocalizationrscfactory.mrp"/>
+          <unit bldFile="mw\appsupport\tzservices\tzlocalizationrscfactory\group" mrp="mw\appsupport\tzservices\tzlocalizationrscfactory\group\app-services_tzlocalizationrscfactory.mrp"/>
         </component>
         <component name="Time Zone Database" introduced="9.1" class="config">
           <unit bldFile="mw\appsupport\tzservices\tzdatabase\group" mrp="mw\appsupport\tzservices\tzdatabase\group\app-services_tzdb.mrp"/>
@@ -1931,7 +2073,7 @@
           <unit bldFile="os\networkingsrv\networkingtestandutils\networkingintegrationtest\Group" mrp="os\networkingsrv\networkingtestandutils\networkingintegrationtest\Group\networking_integrationtest.mrp"/>
         </component>
         <component name="MTP Integration Test" introduced="9.4" class="test">
-          <unit bldFile="mw\remoteconn\mtpfws\mtpintegrationtest\group" mrp="mw\remoteconn\mtpfws\mtpintegrationtest\group\mtp_test.mrp"/>
+          <unit bldFile="mw\remoteconn\mtptransfw\mtpintegrationtest\group" mrp="mw\remoteconn\mtptransfw\mtpintegrationtest\group\mtp_test.mrp"/>
         </component>
         <component name="Base Integration Test">
           <unit bldFile="os\kernelhwsrv\baseintegtests\baseintegrationtest\group" mrp="os\kernelhwsrv\baseintegtests\baseintegrationtest\group\base_integration_test.mrp"/>
@@ -1982,6 +2124,9 @@
         <component name="Camera Unit Tests" introduced="9.2" class="test">
           <unit mrp="os\mm\imagingandcamerafws\cameraunittest\group\multimedia_unittest_ecam_source.mrp"/>
         </component>
+        <component name="Tuner Unit Tests" introduced="9.1" class="test">
+          <unit mrp="mw\mmmw\mmmiddlewarefws\tunerunittest\group\multimedia_unittest_tuner_source.mrp"/>
+        </component>
         <component name="Mobile TV DVB-H Unit Tests" introduced="9.5" class="test">
           <unit mrp="os\mm\mmhais\dvbhunittest\hai\dvbh\group\multimedia_unittest_dvbhhai.mrp"/>
         </component>
@@ -1991,7 +2136,7 @@
           <unit mrp="os\mm\devsound\a3fintegrationtest\group\multimedia_inttest_a3f_devsound_source.mrp"/>
 	    </component>
         <component name="A3F Characterisation Tests" introduced="9.4" class="test">
-          <unit mrp="os\mm\devsound\a3fcharacterisationtest\group\multimedia_a3f_devsound_char.mrp"/>
+          <unit mrp="os\unref\orphan\comgen\multimedia\char\a3f\devsound\group\multimedia_a3f_devsound_char.mrp"/>
         </component>
         <component name="Multimedia Test Agent" introduced="8.0" class="test">
           <unit mrp="os\mm\mmtestenv\mmtestagent\group\multimediatestagent_source.mrp"/>
@@ -2016,6 +2161,9 @@
         <component name="Bluetooth Examples and Tests" introduced="6.1" class="test">
           <unit mrp="os\shortlinksrv\bluetooth\btexample\test\bluetooth_tests_examples.mrp"/>
         </component>
+        <component name="IrDA Test" introduced="9.2" class="test">
+          <unit mrp="os\shortlinksrv\irda\irdatest\group\infra-red_irda_test.mrp"/>
+        </component>
       </collection>
       <collection name="Comms Test" level="test">
         <component name="Networking Dialog Stub" introduced="6.1">
@@ -2023,7 +2171,7 @@
         </component>
         <component name="Networking ROM">
           <!--  production component: contains the IBY files -->
-          <unit bldFile="os\networkingsrv\networkingsrv_info\networkingrom\group" mrp="os\networkingsrv\networkingsrv_info\networkingrom\group\networking_general.mrp"/>
+          <unit bldFile="os\networkingsrv\networkingtestandutils\networkingrom\group" mrp="os\networkingsrv\networkingtestandutils\networkingrom\group\networking_general.mrp"/>
         </component>
         <component name="Networking Unit Test" introduced="7.0" class="test">
           <unit mrp="os\networkingsrv\networkingtestandutils\networkingunittest\group\networking_unittest.mrp"/>
@@ -2053,6 +2201,9 @@
         </component>
       </collection>
       <collection name="Miscellaneous" level="test">
+        <component name="DUMMY">
+          <unit bldFile="os\misc\miscellaneous\dummy" mrp="os\misc\miscellaneous\dummy\additional_dummy.mrp"/>
+        </component>
         <component name="SYSTEMMONITOR">
           <unit bldFile="os\buildtools\toolsandutils\systemmonitor\group" mrp="os\buildtools\toolsandutils\systemmonitor\group\testtools_systemmonitor.mrp"/>
         </component>
@@ -2093,10 +2244,13 @@
   <targetList name="tools2_rel" description="tools Release Targets" target="TOOLS2_REL"/>
   <targetList name="gccxml" description="tools Targets" target="GCCXML"/>
   <targetList name="gccxml_rel" description="tools Release Targets" target="GCCXML_REL"/>
+  <list name="SYSTEMTEST_LIST" description="System Test Code">
+    <ref item="SYSTEMTEST_OS"/>
+    <ref item="SYSTEMTEST_TOOLS"/>
+  </list>
   <!-- 9.4 configuration -->
     <!-- tb91 configuration -->
-    <!-- tb91sf configuration -->
-  <configuration name="GT_tb91sf" description="tb91sf GT build" filter="raptor_tb91sf,gt">
+  <configuration name="Custkit_tb91sf" description="tb91sf Custkit build" filter="raptor_Custkit_tb91sf,custkit">
     <ref item="Tools and Utils and SDKENG"/>
     <ref item="HAL"/>
     <ref item="Kernel Services"/>
@@ -2105,8 +2259,41 @@
     <ref item="Application Services"/>
     <ref item="UI"/>
     <ref item="MISC"/>
-    <task><specialInstructions name="BootStrap1" cwd="os\buildtools\sbsv1_os\e32toolp\group" command="setupprj.bat secure"/></task>
-    <task><specialInstructions name="BootStrap2" cwd="os\buildtools\sbsv1_os\e32toolp\group" command="bld.bat rel"/></task>
+    <task><specialInstructions name="BootStrap1" cwd="os\buildtools\toolsandutils\e32toolp\group" command="setupprj.bat secure"/></task>
+    <task><specialInstructions name="BootStrap2" cwd="os\buildtools\toolsandutils\e32toolp\group" command="bld.bat rel"/></task>
+    <task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+    <task><buildLayer command="abld export" unitParallel="Y"/></task>
+    <task><buildLayer command="abld makefile" targetList="tools" unitParallel="Y" targetParallel="N"/></task>
+    <task><buildLayer command="abld library" targetList="tools" unitParallel="N" targetParallel="N"/></task>
+    <task><buildLayer command="abld target" targetList="tools_rel" unitParallel="N" targetParallel="N"/></task>
+    <task><buildLayer command="abld final" targetList="tools_rel" unitParallel="N" targetParallel="N"/></task>
+    <task><buildLayer command="abld -what build" targetList="tools_rel" unitParallel="N" targetParallel="N"/></task>
+    <task><buildLayer command="abld -check build" targetList="tools_rel" unitParallel="N" targetParallel="N"/></task>
+    <task><buildLayer command="abld makefile" targetList="tools2" unitParallel="Y" targetParallel="Y"/></task>
+    <task><buildLayer command="abld library" targetList="tools2" unitParallel="Y" targetParallel="Y"/></task>
+    <task><buildLayer command="abld target" targetList="tools2_rel" unitParallel="Y" targetParallel="Y"/></task>
+    <task><buildLayer command="abld final" targetList="tools2_rel" unitParallel="Y" targetParallel="Y"/></task>
+    <task><buildLayer command="abld -what build" targetList="tools2_rel" unitParallel="Y" targetParallel="Y"/></task>
+    <task><buildLayer command="abld -check build" targetList="tools2_rel" unitParallel="Y" targetParallel="Y"/></task>
+    <task><buildLayer command="abld makefile" targetList="default_9.0" unitParallel="Y" targetParallel="N"/></task>
+    <task><buildLayer command="abld resource" targetList="default_9.0" unitParallel="N" targetParallel="N"/></task>
+    <task><buildLayer command="abld library" targetList="default_9.0" unitParallel="N" targetParallel="N"/></task>
+    <task><buildLayer command="abld target" targetList="default_9.0" unitParallel="Y" targetParallel="Y"/></task>
+    <task><buildLayer command="abld final" targetList="default_9.0" unitParallel="N" targetParallel="N"/></task>
+    <task><buildLayer command="abld -what build" targetList="default_9.0" unitParallel="Y" targetParallel="Y"/></task>
+    <task><buildLayer command="abld -check build" targetList="default_9.0" unitParallel="Y" targetParallel="Y"/></task>
+  </configuration>
+  <configuration name="GT_tb91sf" description="tb91sf GT build" filter="raptor_GT_tb91sf,gt">
+    <ref item="Tools and Utils and SDKENG"/>
+    <ref item="HAL"/>
+    <ref item="Kernel Services"/>
+    <ref item="OS Services"/>
+    <ref item="Generic Middleware"/>
+    <ref item="Application Services"/>
+    <ref item="UI"/>
+    <ref item="MISC"/>
+    <task><specialInstructions name="BootStrap1" cwd="os\buildtools\toolsandutils\e32toolp\group" command="setupprj.bat secure"/></task>
+    <task><specialInstructions name="BootStrap2" cwd="os\buildtools\toolsandutils\e32toolp\group" command="bld.bat rel"/></task>
     <task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
     <task><buildLayer command="abld export" unitParallel="Y"/></task>
     <task><buildLayer command="abld makefile" targetList="tools" unitParallel="Y" targetParallel="N"/></task>
@@ -2131,6 +2318,73 @@
     <task><buildLayer command="abld -what target" targetList="default_9.0_deb" unitParallel="Y" targetParallel="Y"/></task>
     <task><buildLayer command="abld help" unitParallel="Y"/></task>
     <task><buildLayer command="abld -check build" targetList="default_9.0" unitParallel="Y" targetParallel="Y"/></task>
+  </configuration>
+  <configuration name="TV_tb91sf" description="tb91sf Techview build" filter="tb91sf,techview">
+    <ref item="UI"/>
+    <task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+    <task><buildLayer command="abld export" unitParallel="Y"/></task>
+    <task><buildLayer command="abld makefile" targetList="default_9.0" unitParallel="Y" targetParallel="N"/></task>
+    <task><buildLayer command="abld resource" targetList="default_9.0" unitParallel="N" targetParallel="N"/></task>
+    <task><buildLayer command="abld library" targetList="default_9.0" unitParallel="N" targetParallel="N"/></task>
+    <task><buildLayer command="abld target" targetList="default_9.0" unitParallel="Y" targetParallel="Y"/></task>
+    <task><buildLayer command="abld final" targetList="default_9.0" unitParallel="N" targetParallel="N"/></task>
+    <task><buildLayer command="abld -what export" unitParallel="Y"/></task>
+    <task><buildLayer command="abld -what target" targetList="default_9.0_rel" unitParallel="Y" targetParallel="Y"/></task>
+    <task><buildLayer command="abld -what target" targetList="default_9.0_deb" unitParallel="Y" targetParallel="Y"/></task>
+    <task><buildLayer command="abld help" unitParallel="Y"/></task>
+    <task><buildLayer command="abld -check build" targetList="default_9.0" unitParallel="Y" targetParallel="Y"/></task>
+  </configuration>
+  <configuration name="SystemTest_tb91sf" description="tb91sf System Test build" filter="tb91sf,systemtest">
+    <ref item="UI"/>
+    <task><specialInstructions name="Copy SystemTest Configuration" cwd="app\techview\sysvalidation\systemtestos\Group" command="copy tb91sf\configuration.cfg %CleanSourceDir%\app\techview\sysvalidation\systemtestos\Group\"/></task>
+    <task>
+      <listRef list="SYSTEMTEST_LIST"/>
+      <buildLayer command="bldmake bldfiles" unitParallel="Y"/>
+    </task>
+    <task>
+      <listRef list="SYSTEMTEST_LIST"/>
+      <buildLayer command="abld export" unitParallel="Y"/>
+    </task>
+    <task>
+      <listRef list="SYSTEMTEST_LIST"/>
+      <buildLayer command="abld export -what" unitParallel="N"/>
+    </task>
+    <task>
+      <listRef list="SYSTEMTEST_LIST"/>
+      <buildLayer command="abld export -check" unitParallel="N"/>
+    </task>
+    <task>
+      <listRef list="SYSTEMTEST_LIST"/>
+      <buildLayer command="abld test build" targetList="default_9.0" unitParallel="N" targetParallel="N"/>
+    </task>
+    <task>
+      <listRef list="SYSTEMTEST_LIST"/>
+      <buildLayer command="abld test -what build" targetList="default_9.0" unitParallel="N" targetParallel="N"/>
+    </task>
+    <task>
+      <listRef list="SYSTEMTEST_LIST"/>
+      <buildLayer command="abld test -check build" targetList="default_9.0" unitParallel="N" targetParallel="N"/>
+    </task>
+  </configuration>
+  <configuration name="GCCXML_tb91sf" description="tb91sf GCCXML build" filter="tb91sf,gt,techview">
+    <ref item="Tools and Utils and SDKENG"/>
+    <ref item="HAL"/>
+    <ref item="Kernel Services"/>
+    <ref item="OS Services"/>
+    <ref item="Generic Middleware"/>
+    <ref item="Application Services"/>
+    <ref item="UI"/>
+    <ref item="MISC"/>
+    <task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
+	<task><buildLayer command="abld makefile" targetList="gccxml" unitParallel="Y" targetParallel="N"/></task>
+    <task><buildLayer command="abld resource" targetList="gccxml_rel" unitParallel="N" targetParallel="N"/></task>
+    <task><buildLayer command="abld library" targetList="gccxml" unitParallel="N" targetParallel="N"/></task>
+    <task><buildLayer command="abld target" targetList="gccxml_rel" unitParallel="Y" targetParallel="Y"/></task>
+    <task><buildLayer command="abld final" targetList="gccxml_rel" unitParallel="N" targetParallel="N"/></task>
+    <task><buildLayer command="abld -what export" unitParallel="Y"/></task>
+    <task><buildLayer command="abld -what target" targetList="gccxml_rel" unitParallel="Y" targetParallel="Y"/></task>
+    <task><buildLayer command="abld help" unitParallel="Y"/></task>
+    <task><buildLayer command="abld -check build" targetList="gccxml_rel" unitParallel="Y" targetParallel="Y"/></task>
   </configuration>
     <!-- 9.5 configuration -->
     <!-- 9.6 configuration -->
