@@ -5,7 +5,7 @@
     <dirname property="sf.spec.job.dir" file="${ant.file.SF-JOB-PROPS}"/>
     <property name="sf.project.type" value="platform" />
 
-    <property name="sf.spec.job.name" value="platform"/>
+    <property name="sf.spec.job.name" value="symbian3"/>
     <property name="sf.spec.corebuildversion" value="week19"/>
     
     <property name="sf.spec.build.system" value="sbs"/>
