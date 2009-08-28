@@ -2295,13 +2295,11 @@
       <!-- The following unit is removed as non-contributed -->
       <!-- <unit bldFile="os/kernelhwsrv/kerneltest/sdiotest" mrp="os/kernelhwsrv/kerneltest/sdiotest/base_sdiotests.mrp"/> -->
      </component>
-     <component name="n:e32utils" long-name="E32 Utilities" purpose="development" plugin="N" origin-model="Symbian">
-      <!-- The following unit is removed as non-contributed -->
-      <!-- <unit bldFile="os/kernelhwsrv/kerneltest/e32utils/group" mrp="os/kernelhwsrv/kerneltest/e32utils/group/base_e32utils.mrp"/> -->
+     <component name="e32utils" long-name="E32 Utilities" purpose="development" plugin="N" origin-model="Symbian">
+      <unit bldFile="os/kernelhwsrv/kerneltest/e32utils/group" mrp="os/kernelhwsrv/kerneltest/e32utils/group/base_e32utils.mrp"/>
      </component>
-     <component name="n:f32test" long-name="File Server Tests" purpose="development" plugin="N" origin-model="Symbian">
-      <!-- The following unit is removed as non-contributed -->
-      <!-- <unit bldFile="os/kernelhwsrv/kerneltest/f32test/group" mrp="os/kernelhwsrv/kerneltest/f32test/group/base_f32test.mrp"/> -->
+     <component name="f32test" long-name="File Server Tests" purpose="development" plugin="N" origin-model="Symbian">
+      <unit bldFile="os/kernelhwsrv/kerneltest/f32test/group" mrp="os/kernelhwsrv/kerneltest/f32test/group/base_f32test.mrp"/>
      </component>
     </collection>
     <collection name="ldds" long-name="Logical Device Drivers" level="adaptation">
@@ -5905,7 +5903,9 @@
    </block>
    <block name="helix" long-name="Helix" tech_domain="mm" level="generic" levels="plugin framework server generic specific">
     <collection name="helix_ren" long-name="Helix" level="framework">
-     <component name="helixrfsplugin" long-name="Helix RFS Plugin" origin-model="foundation"/>
+     <component name="helixrfsplugin" long-name="Helix RFS Plugin" origin-model="foundation">
+       <unit bldFile="mw/helix/helix_ren/helixrfsplugin/group"/>
+     </component>
      <component name="helix_binary" long-name="Helix Binary" origin-model="foundation"/>
      <component name="src" long-name="Src" origin-model="foundation"/>
     </collection>
