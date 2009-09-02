@@ -93,7 +93,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/messaging/,/sf/app/messaging,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/commonemail/,/sf/app/commonemail,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/FCL/sf/app/conversations/,/sf/app/conversations,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/im/,/sf/app/im,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/app/im/,/sf/app/im,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/utils/,/sf/app/utils,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/dictionary/,/sf/app/dictionary,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/camera/,/sf/app/camera,branch,default,layers.sysdef.xml
@@ -102,7 +102,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/gallery/,/sf/app/gallery,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/videoplayer/,/sf/app/videoplayer,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/FCL/sf/app/photos/,/sf/app/photos,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/videocenter/,/sf/app/videocenter,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/app/videocenter/,/sf/app/videocenter,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/musicplayer/,/sf/app/musicplayer,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/radio/,/sf/app/radio,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/voicerec/,/sf/app/voicerec,branch,default,layers.sysdef.xml

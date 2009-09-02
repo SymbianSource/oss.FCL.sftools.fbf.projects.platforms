@@ -17,7 +17,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/graphicsuis/,/sf/app/graphicsuis,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/helps/,/sf/app/helps,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/homescreen/,/sf/app/homescreen,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/im/,/sf/app/im,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/app/im/,/sf/app/im,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/imgeditor/,/sf/app/imgeditor,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/imgvieweruis/,/sf/app/imgvieweruis,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/iptelephony/,/sf/app/iptelephony,branch,default,layers.sysdef.xml
@@ -38,7 +38,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/speechsrv/,/sf/app/speechsrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/techview/,/sf/app/techview,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/utils/,/sf/app/utils,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/videocenter/,/sf/app/videocenter,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/app/videocenter/,/sf/app/videocenter,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/videoeditor/,/sf/app/videoeditor,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/videoplayer/,/sf/app/videoplayer,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/videotelephony/,/sf/app/videotelephony,branch,default,layers.sysdef.xml
