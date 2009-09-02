@@ -1,34 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE SystemDefinition [
- <!ELEMENT SystemDefinition ( systemModel?, SystemBuild? )>
- <!ATTLIST SystemDefinition
+<!ELEMENT SystemDefinition ( systemModel )>
+<!ATTLIST SystemDefinition
   name CDATA #REQUIRED
-  schema CDATA #REQUIRED>
- <!ELEMENT systemModel (layer+)>
- <!ELEMENT layer (block* | collection*)*>
- <!ATTLIST layer
+  schema CDATA #REQUIRED
+>
+<!-- all paths are relative to the environment variable specified by the root attribute, or SOURCEROOT if not.  -->
+
+<!-- System Model Section of DTD -->
+<!ELEMENT systemModel (layer+)>
+
+<!ELEMENT layer (block* | collection*)*>
+<!-- Kernel Services, Base Services, OS Services, Etc -->
+<!ATTLIST layer
   name CDATA #REQUIRED
   long-name CDATA #IMPLIED
   levels NMTOKENS #IMPLIED
-  span CDATA #IMPLIED>
- <!ELEMENT block (subblock* | collection*)*>
- <!ATTLIST block
+  span CDATA #IMPLIED
+>
+
+<!ELEMENT block (subblock* | collection*)*>
+ <!-- Generic OS services, Comms Services, etc -->
+<!ATTLIST block
   levels NMTOKENS #IMPLIED
   span CDATA #IMPLIED
   level NMTOKEN #IMPLIED
   name CDATA #REQUIRED
-  long-name CDATA #IMPLIED>
- <!ELEMENT subblock (collection)*>
- <!ATTLIST subblock
-  name CDATA #REQUIRED
-  long-name CDATA #IMPLIED>
- <!ELEMENT collection (component)*>
- <!ATTLIST collection
+  long-name CDATA #IMPLIED
+>
+
+<!ELEMENT subblock (collection)*>
+<!-- Cellular Baseband Services, Networking Services, etc -->
+<!ATTLIST subblock
   name CDATA #REQUIRED
   long-name CDATA #IMPLIED
-  level NMTOKEN #IMPLIED>
- <!ELEMENT component (unit)*>
- <!ATTLIST component
+>
+
+<!ELEMENT collection (component)*>
+<!-- Screen Driver, Content Handling, etc -->
+<!ATTLIST collection
+  name CDATA #REQUIRED
+  long-name CDATA #IMPLIED
+  level NMTOKEN #IMPLIED
+>
+
+<!ELEMENT component (unit)*>
+<!-- contains units or is a  package or prebuilt -->
+<!ATTLIST component
   name CDATA #REQUIRED
   long-name CDATA #IMPLIED
   deprecated CDATA #IMPLIED
@@ -38,9 +56,13 @@
   filter CDATA #IMPLIED
   class NMTOKENS #IMPLIED
   supports CDATA #IMPLIED
-  purpose ( optional | mandatory | development ) "optional">
- <!ELEMENT unit EMPTY>
- <!ATTLIST unit
+  purpose ( optional | mandatory | development ) "optional"
+>
+
+<!ELEMENT unit EMPTY >
+<!-- must be buildable (bld.inf) -->
+<!-- bldFile  may someday be removed in favour of mrp -->
+<!ATTLIST unit
   mrp CDATA #IMPLIED
   filter CDATA #IMPLIED
   bldFile CDATA #IMPLIED
@@ -48,521 +70,15 @@
   version NMTOKEN #IMPLIED
   prebuilt NMTOKEN #IMPLIED
   late (Y|N) #IMPLIED
-  priority CDATA #IMPLIED>
- <!ELEMENT SystemBuild (option* | target+ | targetList+ | list+ | configuration+)*>
- <!ATTLIST SystemBuild schema CDATA #REQUIRED>
- <!ELEMENT list (ref+)>
- <!ATTLIST list
-  name ID #REQUIRED
-  description CDATA #REQUIRED>
- <!ELEMENT ref EMPTY>
- <!ATTLIST ref item CDATA #REQUIRED>
- <!ELEMENT targetList EMPTY>
- <!ATTLIST targetList
-  name ID #REQUIRED
-  description CDATA #REQUIRED
-  target IDREFS #REQUIRED>
- <!ELEMENT target EMPTY>
- <!ATTLIST target
-  name ID #REQUIRED
-  abldTarget CDATA #REQUIRED
-  description CDATA #REQUIRED>
- <!ELEMENT option EMPTY>
- <!ATTLIST option
-  name ID #REQUIRED
-  abldOption CDATA #REQUIRED
-  description CDATA #REQUIRED
-  enable (Y | N ) #REQUIRED>
- <!ELEMENT configuration (listRef+ | ref+ | task+)*>
- <!ATTLIST configuration
-  name ID #REQUIRED
-  description CDATA #REQUIRED
-  filter CDATA #REQUIRED>
- <!ELEMENT task (listRef* , (buildLayer | specialInstructions))>
- <!ELEMENT listRef EMPTY>
- <!ATTLIST listRef list CDATA #REQUIRED>
- <!ELEMENT buildLayer EMPTY>
- <!ATTLIST buildLayer
-  command CDATA #REQUIRED
-  targetList IDREFS #IMPLIED
-  unitParallel (Y | N ) #REQUIRED
-  targetParallel (Y | N ) "N">
- <!ELEMENT specialInstructions EMPTY>
- <!ATTLIST specialInstructions
-  name CDATA #REQUIRED
-  cwd CDATA #REQUIRED
-  root CDATA #IMPLIED
-  command CDATA #REQUIRED>
+  priority CDATA #IMPLIED
+>
 ]>
 <SystemDefinition schema="2.0.1" name="Symbian">
 <systemModel>
 <layer name="os" long-name="OS" levels="hw services">
-<block name="kernelhwsrv" level="hw" long-name="Kernel and Hardware Services" levels="hw-if adaptation framework test">
-<collection name="baseintegtests" long-name="Base Integration Testing" level="test">
-<component name="baseintegrationtest" long-name="Base Integration Test" introduced="9.3" purpose="development">
-<unit bldFile="os/kernelhwsrv/baseintegtests/baseintegrationtest/group" mrp="os/kernelhwsrv/baseintegtests/baseintegrationtest/group/base_integration_test.mrp"/>
-</component>
-</collection>
-<collection name="brdbootldr" long-name="Board Boot Loader" level="hw-if">
-<component name="ubootldr" long-name="Boot Loader" introduced="9.2" purpose="optional">
-<unit mrp="os/kernelhwsrv/brdbootldr/ubootldr/base_ubootldr.mrp"/>
-</component>
-</collection>
-<collection name="n:unistore2" long-name="UniStore2 Flash Translation Layer" level="hw-if">
-<component name="n:uiidrivers" long-name="UniStore2 Drivers" filter="gt" introduced="9.1" purpose="optional">
-<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/unistore2" mrp="os/kernelhwsrv/kernel/eka/drivers/unistore2/base_drivers_unistore2.mrp"/>
-</component>
-<component name="n:uiicore" long-name="UniStore2 Core" filter="gt" introduced="9.1" purpose="optional">
-<unit mrp="os/kernelhwsrv/kernel/eka/drivers/unistore2/base_drivers_unistore2_undeliverable.mrp"/>
-</component>
-<component name="n:uiicrashlogger" long-name="UniStore2 Crash Logger" filter="gt" introduced="9.1" purpose="optional">
-<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/crashflash/unistore2" mrp="os/kernelhwsrv/kernel/eka/drivers/crashflash/unistore2/base_crashflash_unistore2.mrp"/>
-</component>
-<component name="n:uiibootsupport" long-name="UniStore2 Boot Support" filter="gt" introduced="9.1" purpose="optional">
-<unit bldFile="os/kernelhwsrv/unistore2/uiibootsupport/nandloader/unistore2" mrp="os/kernelhwsrv/unistore2/uiibootsupport/base_nandboot_unistore2.mrp"/>
-</component>
-</collection>
-<collection name="bsptemplate" long-name="BSP Template" level="hw-if">
-<component name="asspandvariant" long-name="Template ASSP and Variant" introduced="6.0" purpose="development">
-<unit bldFile="os/kernelhwsrv/bsptemplate/asspandvariant/template_variant" mrp="os/kernelhwsrv/bsptemplate/asspandvariant/base_template.mrp"/>
-</component>
-</collection>
-<collection name="kernel" long-name="Kernel Architecture" level="adaptation">
-<component name="eka" long-name="Kernel Architecture" introduced="8.0" purpose="mandatory">
-<unit bldFile="os/kernelhwsrv/kernel/eka" mrp="os/kernelhwsrv/kernel/eka/base_e32.mrp"/>
-</component>
-</collection>
-<collection name="kerneltest" long-name="Kernel Test" level="hw-if">
-<component name="e32test" long-name="E32 Tests" purpose="development">
-<unit bldFile="os/kernelhwsrv/kerneltest/e32test/group" mrp="os/kernelhwsrv/kerneltest/e32test/group/base_e32test.mrp"/>
-</component>
-<component name="n:sdiotest" long-name="SDIO Tests" filter="gt" introduced="9.2" purpose="development">
-<unit bldFile="os/kernelhwsrv/kerneltest/sdiotest" mrp="os/kernelhwsrv/kerneltest/sdiotest/base_sdiotests.mrp"/>
-</component>
-<component name="n:e32utils" long-name="E32 Utilities" purpose="development">
-<unit bldFile="os/kernelhwsrv/kerneltest/e32utils/group" mrp="os/kernelhwsrv/kerneltest/e32utils/group/base_e32utils.mrp"/>
-</component>
-<component name="n:f32test" long-name="File Server Tests" purpose="development">
-<unit bldFile="os/kernelhwsrv/kerneltest/f32test/group" mrp="os/kernelhwsrv/kerneltest/f32test/group/base_f32test.mrp"/>
-</component>
-</collection>
-<collection name="ldds" long-name="Logical Device Drivers" level="adaptation">
-<component name="ethernetldd" long-name="Ethernet Drivers" purpose="optional">
-<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/ethernet" mrp="os/kernelhwsrv/kernel/eka/drivers/ethernet/base_e32_drivers_ethernet.mrp"/>
-</component>
-<component name="audioldd" long-name="Audio Drivers" introduced="8.1b" purpose="optional">
-<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/esound" mrp="os/kernelhwsrv/kernel/eka/drivers/esound/base_e32_drivers_sound.mrp"/>
-</component>
-<component name="serialldd" long-name="Serial Port Drivers" purpose="optional">
-<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/ecomm" mrp="os/kernelhwsrv/kernel/eka/drivers/ecomm/base_e32_drivers_ecomm.mrp"/>
-</component>
-<component name="legacydrivers" long-name="Legacy Drivers" purpose="optional">
-<unit mrp="os/kernelhwsrv/kernel/eka/drivers/adc/base_e32_drivers_adc.mrp"/>
-</component>
-<component name="locmedia" long-name="Local Media Subsystem" introduced="8.1b" purpose="mandatory">
-<!-- these are LDDs for storage media-->
-<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/locmedia" mrp="os/kernelhwsrv/kernel/eka/drivers/locmedia/base_e32_drivers_locmedia.mrp"/>
-</component>
-<component name="runmodedebugger" long-name="Run Mode Debugger" purpose="mandatory">
-<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/debug" mrp="os/kernelhwsrv/kernel/eka/drivers/debug/base_e32_drivers_debug.mrp"/>
-</component>
-<component name="btrace" long-name="Kernel Trace Tool" purpose="mandatory">
-<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/trace" mrp="os/kernelhwsrv/kernel/eka/drivers/trace/base_e32_drivers_trace.mrp"/>
-</component>
-</collection>
-<collection name="driversupport" long-name="Generic Driver Support" level="hw-if">
-<component name="n:sdcard3c" long-name="SD Card 3C Driver" filter="gt" introduced="9.1" purpose="optional">
-<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/pbus/mmc/sdcard/sdcard3c" mrp="os/kernelhwsrv/kernel/eka/drivers/pbus/mmc/sdcard/sdcard3c/base_e32_sd3c.mrp"/>
-</component>
-<component name="n:sdcard4c" long-name="SD Card 4C Driver" filter="gt" introduced="9.1" purpose="optional">
-<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/pbus/mmc/sdcard/sdcard4c" mrp="os/kernelhwsrv/kernel/eka/drivers/pbus/mmc/sdcard/sdcard4c/base_e32_sd4c.mrp"/>
-</component>
-<component name="mediadrivers" long-name="Media Drivers" purpose="optional">
-<!-- these are for storage media-->
-<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/media" mrp="os/kernelhwsrv/kernel/eka/drivers/media/base_e32_drivers_media.mrp"/>
-</component>
-<component name="genericboardsupport" long-name="Generic Board Support" purpose="optional">
-<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/bsp" mrp="os/kernelhwsrv/kernel/eka/drivers/bsp/base_e32_drivers_bsp.mrp"/>
-</component>
-</collection>
-<collection name="userlibandfileserver" long-name="User Library and File Server" level="framework">
-<component name="euser" long-name="User Library" purpose="mandatory">
-<unit bldFile="os/kernelhwsrv/kernel/eka/euser" mrp="os/kernelhwsrv/kernel/eka/euser/base_e32_euser.mrp"/>
-</component>
-<component name="compsupp" long-name="Compiler Runtime Support" filter="gt" purpose="mandatory">
-<unit bldFile="os/kernelhwsrv/kernel/eka/compsupp" mrp="os/kernelhwsrv/kernel/eka/compsupp/base_e32_compsupp.mrp"/>
-</component>
-<component name="fileserver" long-name="File Server" filter="gt" purpose="mandatory">
-<unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/group" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/group/base_f32.mrp"/>
-</component>
-<component name="n:nandftl" long-name="SSR Flash Translation Layer" filter="gt" introduced="7.0s" deprecated="9.1" purpose="optional">
-<unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/sftl" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/sftl/base_f32_sftl.mrp"/>
-</component>
-<component name="estart" long-name="Base Starter" filter="gt" purpose="optional">
-<unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/estart" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/estart/base_f32_estart.mrp"/>
-</component>
-<component name="domainmgr" long-name="Domain Manager" introduced="8.1b" purpose="mandatory">
-<unit bldFile="os/kernelhwsrv/userlibandfileserver/domainmgr/group" mrp="os/kernelhwsrv/userlibandfileserver/domainmgr/group/base_domain.mrp"/>
-</component>
-<component name="basedocs" long-name="Base Documentation" purpose="development">
-<unit mrp="os/kernelhwsrv/userlibandfileserver/basedocs/base_documentation.mrp"/>
-</component>
-</collection>
-<collection name="filesystems" long-name="File Systems" level="framework">
-<component name="romfs" long-name="ROM File System" filter="gt" purpose="optional" plugin="Y">
-<unit mrp="os/kernelhwsrv/userlibandfileserver/fileserver/srom/base_f32_srom.mrp"/>
-</component>
-<component name="rofs" long-name="ROFS" filter="gt" purpose="optional" plugin="Y">
-<unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/srofs" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/srofs/base_f32_srofs.mrp"/>
-</component>
-<component name="usbmsfs" long-name="USB Mass Storage File System" filter="gt" purpose="optional" plugin="Y">
-<unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/smassstorage" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/smassstorage/base_f32_smassstorage.mrp"/>
-</component>
-<component name="fat32fs" long-name="FAT32 File System" filter="gt" purpose="optional" plugin="Y">
-<unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/sfat32" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/sfat32/base_f32_sfat32.mrp"/>
-</component>
-<component name="fatfs" long-name="FAT File System" filter="gt" purpose="optional" plugin="Y">
-<unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/sfat" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/sfat/base_f32_sfat.mrp"/>
-</component>
-<component name="compfs" long-name="Composite File System" filter="gt" purpose="optional" plugin="Y">
-<unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/scomp" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/scomp/base_f32_scomp.mrp"/>
-</component>
-<component name="n:ntfs" long-name="NTFS" filter="gt" purpose="optional" plugin="Y">
-<unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/ntfs" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/ntfs/base_f32_sntfs.mrp"/>
-</component>
-<component name="n:iso9660fs" long-name="ISO9660 File System" filter="gt" introduced="8.1b" purpose="optional" plugin="Y">
-<unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/iso9660" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/iso9660/base_f32_siso9660.mrp"/>
-</component>
-</collection>
-<collection name="halservices" long-name="HAL Services" level="framework">
-<component name="hal" long-name="User-Side Hardware Abstraction" introduced="6.0" purpose="optional">
-<unit bldFile="os/kernelhwsrv/halservices/hal" mrp="os/kernelhwsrv/halservices/hal/base_hal.mrp"/>
-</component>
-</collection>
-<collection name="textmodeshell" long-name="Text Mode Shell" level="test">
-<component name="e32wsrv" long-name="Text Window Server" purpose="optional">
-<unit bldFile="os/kernelhwsrv/kernel/eka/ewsrv" mrp="os/kernelhwsrv/kernel/eka/ewsrv/base_e32_ewsrv.mrp"/>
-</component>
-<component name="textshell" long-name="Text Shell" filter="gt" purpose="development">
-<unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/etshell" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/etshell/base_f32_eshell.mrp"/>
-</component>
-</collection>
-<collection name="baseapitest" long-name="Base API Tests" level="test">
-<component name="basesvs" long-name="Base Verification Suite" introduced="tb91" purpose="development">
-<unit mrp="os/kernelhwsrv/baseapitest/basesvs/group/basesvs.mrp"/>
-</component>
-</collection>
-<collection name="kernelhwsrv_info" long-name="Kernel and Hardware Services Info" level="test">
-<component name="kernelhwsrv_metadata" long-name="Kernel and Hardware Services Metadata" introduced="tb91" purpose="development" class="config PC">
-<unit mrp="os/kernelhwsrv/kernelhwsrv_info/kernelhwsrv_metadata/kernelhwsrv_metadata.mrp"/>
-</component>
-</collection>
-</block>
-<block name="boardsupport" level="hw" long-name="Board Support" levels="bsp test 2 3 4">
-<collection name="emulator" long-name="Emulator" level="bsp">
-<component name="emulatorbsp" long-name="Emulator BSP" purpose="optional">
-<unit bldFile="os/boardsupport/emulator/emulatorbsp" mrp="os/boardsupport/emulator/emulatorbsp/base_wins.mrp"/>
-</component>
-<component name="n:unistore2emulatorsupport" long-name="UniStore2 Emulator Support" filter="gt" introduced="tb91" purpose="optional">
-<unit bldFile="os/boardsupport/emulator/unistore2emulatorsupport" mrp="os/boardsupport/emulator/unistore2emulatorsupport/base_wins_unistore2.mrp"/>
-</component>
-</collection>
-<collection name="n:omaph2" long-name="OMAP H2" level="bsp">
-<component name="n:omaph2bsp" long-name="OMAP H2 BSP" introduced="9.0" purpose="optional">
-<unit bldFile="os/boardsupport/omaph2/omaph2bsp/h2" mrp="os/boardsupport/omaph2/omaph2bsp/h2/base_omaph2.mrp"/>
-</component>
-<component name="n:omaph2unistore2" long-name="OMAP H2 UniStore2" filter="gt" introduced="9.1" purpose="optional">
-<unit bldFile="os/boardsupport/omaph2/omaph2unistore2" mrp="os/boardsupport/omaph2/omaph2unistore2/base_h2_unistore2.mrp"/>
-</component>
-<component name="n:omaph2sdio" long-name="OMAP H2 SDIO" filter="gt" introduced="9.2" purpose="optional">
-<unit bldFile="os/boardsupport/omaph2/omaph2sdio" mrp="os/boardsupport/omaph2/omaph2sdio/base_h2_sdio.mrp"/>
-</component>
-</collection>
-<collection name="n:omaph4" long-name="OMAP H4" level="bsp">
-<component name="n:omaph4bsp" long-name="OMAP H4 BSP" purpose="optional">
-<unit bldFile="os/boardsupport/omaph4/omaph4bsp/h4" mrp="os/boardsupport/omaph4/omaph4bsp/h4/base_omaph4hrp.mrp"/>
-</component>
-<component name="n:h4bootloader" long-name="H4 Boot Loader" introduced="9.1" purpose="optional">
-<unit mrp="os/boardsupport/omaph4/h4bootloader/base_omaph4hrp_bootldr.mrp" bldFile="os/boardsupport/omaph4/h4bootloader"/>
-</component>
-<component name="n:omaph4minienvbootloader" long-name="OMAP H4 Mini Environment Boot Loader" introduced="9.2" purpose="optional">
-<unit mrp="os/boardsupport/omaph4/omaph4minienvbootloader/base_omaph4hrp_mebootldr.mrp" bldFile="os/boardsupport/omaph4/omaph4minienvbootloader"/>
-</component>
-<component name="n:omaph4unistore2" long-name="OMAP H4 Unistore2" filter="gt" introduced="9.2" purpose="optional">
-<unit bldFile="os/boardsupport/omaph4/omaph4unistore2" mrp="os/boardsupport/omaph4/omaph4unistore2/base_omaph4hrp_unistore2.mrp"/>
-</component>
-<component name="n:omaph4sdio" long-name="OMAP H4 SDIO" filter="gt" introduced="9.2" purpose="optional">
-<unit bldFile="os/boardsupport/omaph4/omaph4sdio" mrp="os/boardsupport/omaph4/omaph4sdio/base_omaph4hrp_sdio.mrp"/>
-</component>
-</collection>
-<collection name="haitest" long-name="HAI Test Suites" level="test">
-<component name="bspsvs" long-name="BSP Verification Suite" introduced="tb91" purpose="development">
-<unit mrp="os/boardsupport/haitest/bspsvs/group/bspsvs.mrp"/>
-</component>
-</collection>
-<collection name="boardsupport_info" long-name="Board Support Info" level="4">
-<component name="boardsupport_metadata" long-name="Board Support Metadata" introduced="tb91" purpose="development" class="config PC">
-<unit mrp="os/boardsupport/boardsupport_info/boardsupport_metadata/boardsupport_metadata.mrp"/>
-</component>
-</collection>
-</block>
-<block name="buildtools" level="hw" long-name="Build Tools" levels="bld mw fw ui">
-<collection name="bldsystemtools" long-name="Build System Tools" level="bld">
-<component name="buildsystemtools" long-name="Build System Tools" purpose="development">
-<unit bldFile="os/buildtools/bldsystemtools/buildsystemtools/group" mrp="os/buildtools/bldsystemtools/buildsystemtools/group/tools_build.mrp"/>
-</component>
-<component name="gttechviewbaseline" long-name="GT Techview Baseline" purpose="development">
-<unit mrp="os/buildtools/packaging/additionalutils/gt_techview_baseline.mrp"/>
-</component>
-<component name="commonbldutils" long-name="Common Utils" purpose="development">
-<unit mrp="os/buildtools/bldsystemtools/commonbldutils/tools_utils_common.mrp"/>
-</component>
-</collection>
-<collection name="packaging" long-name="Packaging" level="ui">
-<component name="additionalutils" long-name="Additional Utils" purpose="development">
-<unit mrp="os/buildtools/packaging/additionalutils/additional_unknown_cedar.mrp"/>
-</component>
-</collection>
-<collection name="toolsandutils" long-name="Tools and Utils" level="mw">
-<component name="productionbldtools" long-name="Production Build Tools" filter="gt" purpose="development">
-<unit mrp="os/buildtools/toolsandutils/productionbldtools/product_tools.mrp"/>
-</component>
-<component name="n:ctsfunctionalitycheckers" long-name="CTS Functionality Checkers" purpose="development">
-<unit mrp="os/buildtools/toolsandutils/ctsfunctionalitycheckers/Group/testtools_cts_functionalitycheckers.mrp"/>
-</component>
-<component name="n:burtestserver" long-name="BUR Test Server" purpose="development">
-<unit bldFile="os/buildtools/toolsandutils/burtestserver/Group" mrp="os/buildtools/toolsandutils/burtestserver/Group/testtools_burtestserver.mrp"/>
-</component>
-<component name="n:cbrtools" long-name="Component Based Release (CBR) Tools" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/toolsandutils/cbrtools/group" mrp="os/buildtools/toolsandutils/cbrtools/group/tools_cbr_tools.mrp"/>
-</component>
-<component name="n:prf" long-name="Product Realisation Framework" purpose="development">
-<unit bldFile="os/buildtools/toolsandutils/prf/group" mrp="os/buildtools/toolsandutils/prf/group/tools_cbr_prf.mrp"/>
-</component>
-<component name="n:cdb" long-name="Code Database" purpose="development">
-<unit bldFile="os/buildtools/toolsandutils/cdb/group" mrp="os/buildtools/toolsandutils/cdb/group/testtools_cdb.mrp"/>
-</component>
-<component name="e32tools" long-name="E32 Tools" deprecated="tb91" purpose="development" class="PC">
-<unit bldFile="os/buildtools/toolsandutils/e32tools/group" mrp="os/buildtools/toolsandutils/e32tools/group/tools_e32tools.mrp"/>
-</component>
-<component name="n:kitcomparator" long-name="Kit Comparator" purpose="development">
-<unit bldFile="os/buildtools/toolsandutils/kitcomparator/group" mrp="os/buildtools/toolsandutils/kitcomparator/group/testtools_cts_kitcomparator.mrp"/>
-</component>
-<component name="wincredistribution" long-name="WinC Redistribution" purpose="development">
-<unit mrp="os/buildtools/dist_os/redistributionwinceka2/tools_redistribution_winc.mrp"/>
-</component>
-<component name="additionalredistribution" long-name="Additional Redistribution" purpose="development">
-<unit mrp="os/buildtools/perltoolsplat_os/redistribution/additional_tools.mrp"/>
-</component>
-<component name="n:testdriver" long-name="Test Driver" purpose="development">
-<unit bldFile="os/buildtools/toolsandutils/testdriver/Group" mrp="os/buildtools/toolsandutils/testdriver/Group/testtools_testdriver.mrp"/>
-</component>
-<component name="statapi" long-name="STAT API" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/toolsandutils/statapi/source/statapi/console" mrp="os/buildtools/toolsandutils/statapi/group/testtools_stat_device_gt.mrp"/>
-</component>
-<component name="n:statsource" long-name="STAT Source" filter="gt" purpose="development">
-<unit mrp="os/buildtools/toolsandutils/statsource/group/testtools_stat_common_source.mrp"/>
-</component>
-<component name="n:statdesktop" long-name="STAT Desktop" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/toolsandutils/statdesktop/group" mrp="os/buildtools/toolsandutils/statdesktop/group/testtools_stat_desktop.mrp"/>
-</component>
-<component name="n:systemmonitor" long-name="System Monitor" introduced="8.0" purpose="development">
-<unit bldFile="os/buildtools/toolsandutils/systemmonitor/group" mrp="os/buildtools/toolsandutils/systemmonitor/group/testtools_systemmonitor.mrp"/>
-</component>
-<component name="n:testtoolsdesktop" long-name="Test Tools Desktop" filter="gt" deprecated="tb91" purpose="development">
-<unit bldFile="os/buildtools/toolsandutils/testtoolsdesktop/group" mrp="os/buildtools/toolsandutils/testtoolsdesktop/group/testtools_desktop.mrp"/>
-</component>
-<component name="wintunnel" long-name="Wintunnel" purpose="development">
-<unit mrp="os/buildtools/toolsandutils/wintunnel/group/testtools_WinTunnel_srconly.mrp"/>
-</component>
-<component name="n:usecasecontroller" long-name="Use Case Controller" purpose="development">
-<unit bldFile="os/buildtools/toolsandutils/usecasecontroller/BuildScripts/group" mrp="os/buildtools/toolsandutils/usecasecontroller/BuildScripts/group/testtools_ucc.mrp"/>
-</component>
-<component name="autotest" long-name="Autotest" purpose="development">
-<unit bldFile="os/buildtools/toolsandutils/autotest/group" mrp="os/buildtools/toolsandutils/autotest/group/tools_autotest.mrp"/>
-</component>
-<component name="n:testconfigfileparser" long-name="Test Config File Parser" purpose="development">
-<unit bldFile="os/buildtools/toolsandutils/testconfigfileparser/group" mrp="os/buildtools/toolsandutils/testconfigfileparser/group/tools_testconfigfileparser.mrp"/>
-</component>
-<component name="n:kitsetupapp" long-name="Kit Setup App" filter="gt" purpose="development">
-<unit mrp="os/buildtools/toolsandutils/kitsetupapp/group/tools_devkits_kitsetupapp.mrp"/>
-</component>
-<component name="n:navigationpages" long-name="Navigation Pages" purpose="development">
-<unit mrp="os/buildtools/toolsandutils/navigationpages/tools_sdk_eng_NavigationPages.mrp"/>
-</component>
-<component name="n:productinstaller" long-name="Product Installer" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/toolsandutils/productinstaller/group" mrp="os/buildtools/toolsandutils/productinstaller/group/tools_custkits_productinstaller.mrp"/>
-</component>
-<component name="n:stlport" long-name="STL Port" purpose="development">
-<unit bldFile="os/buildtools/toolsandutils/stlport/group" mrp="os/buildtools/toolsandutils/stlport/group/tools_stlport.mrp"/>
-</component>
-</collection>
-<collection name="n:dist_os" long-name="Redistribution" level="mw">
-<component name="n:redistributionwinceka2" long-name="Redistribution WINC EKA2" purpose="development">
-<unit bldFile="os/buildtools/dist_os/redistributionwinceka2" mrp="os/buildtools/dist_os/redistributionwinceka2/tools_redistribution_cedar.mrp"/>
-</component>
-</collection>
-<collection name="n:bintools_os" long-name="Binary Tools" level="fw">
-<component name="n:rcomp" long-name="Resource Compiler" purpose="development">
-<unit bldFile="os/buildtools/bintools_os/rcomp/group" mrp="os/buildtools/bintools_os/rcomp/group/tools_rcomp.mrp"/>
-</component>
-<component name="n:evalid" long-name="Evalid" purpose="development">
-<unit bldFile="os/buildtools/bintools_os/evalid" mrp="os/buildtools/bintools_os/evalid/tools_evalid.mrp"/>
-</component>
-</collection>
-<collection name="n:perltoolsplat_os" long-name="Perl Tools Platform" level="mw">
-<component name="n:redistribution" long-name="Redistribution" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/perltoolsplat_os/redistribution" mrp="os/buildtools/perltoolsplat_os/redistribution/tools_redistribution_common.mrp"/>
-</component>
-<component name="n:legacycommonperl" long-name="Legacy Common Perl Libraries" purpose="development">
-<unit bldFile="os/buildtools/perltoolsplat_os/legacycommonperl/group" mrp="os/buildtools/perltoolsplat_os/legacycommonperl/group/tools_sdk_eng_perllibrary.mrp"/>
-</component>
-<component name="n:commonperl" long-name="Common Perl Libraries" purpose="development">
-<unit bldFile="os/buildtools/perltoolsplat_os/commonperl/group" mrp="os/buildtools/perltoolsplat_os/commonperl/group/tools_sdk_eng_perl_shared.mrp"/>
-</component>
-</collection>
-<collection name="sbsv1_os" long-name="Symbian Build System v1" level="fw">
-<component name="e32toolp" long-name="E32 Perl Tools" purpose="development" class="PC">
-<unit bldFile="os/buildtools/sbsv1_os/e32toolp/group" mrp="os/buildtools/sbsv1_os/e32toolp/group/tools_e32toolp.mrp"/>
-</component>
-<component name="n:bldtools" long-name="Build Tools" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/sbsv1_os/bldtools/group" mrp="os/buildtools/sbsv1_os/bldtools/group/tools_sdk_eng_build-tools.mrp"/>
-</component>
-</collection>
-<collection name="n:srcanamdw_os" long-name="Source Analysis Middleware" level="fw">
-<component name="n:leavescan" long-name="Leavescan" purpose="development">
-<unit bldFile="os/buildtools/srcanamdw_os/leavescan/group" mrp="os/buildtools/srcanamdw_os/leavescan/group/testtools_leavescan.mrp"/>
-</component>
-<component name="n:programchecker" long-name="Program Checker" deprecated="tb91" purpose="development">
-<unit bldFile="os/buildtools/srcanamdw_os/programchecker/group" mrp="os/buildtools/srcanamdw_os/programchecker/group/testtools_programchecker.mrp"/>
-</component>
-<component name="n:migrationtool" long-name="Migration Tool" purpose="development">
-<unit bldFile="os/buildtools/srcanamdw_os/migrationtool/group" mrp="os/buildtools/srcanamdw_os/migrationtool/group/testtools_migrationtool.mrp"/>
-</component>
-</collection>
-<collection name="imgtools_os" long-name="Image Tools" level="fw">
-<component name="romkiteka2" long-name="ROMKIT EKA2" deprecated="tb91" purpose="development">
-<unit bldFile="os/buildtools/imgtools_os/romkiteka2/group" mrp="os/buildtools/imgtools_os/romkiteka2/group/tools_romkit.mrp"/>
-</component>
-</collection>
-<collection name="n:binanamdw_os" long-name="Binary Analysis Middleware" level="fw">
-<component name="n:captools" long-name="Capability Tools" purpose="development">
-<unit bldFile="os/buildtools/binanamdw_os/captools/group" mrp="os/buildtools/binanamdw_os/captools/group/testtools_captools.mrp"/>
-</component>
-<component name="n:depcheck" long-name="Dependency Checker" purpose="development">
-<unit bldFile="os/buildtools/binanamdw_os/depcheck" mrp="os/buildtools/binanamdw_os/depcheck/tools_depcheck.mrp"/>
-</component>
-</collection>
-<collection name="n:devlib" long-name="Developer Library" level="ui">
-<component name="n:devlibhelp" long-name="Developer Library Help" purpose="development">
-<unit bldFile="os/buildtools/devlib/devlibhelp/group/devlib94" mrp="os/buildtools/devlib/devlibhelp/group/devlib94/developerlibrary_doc_html.mrp" version="9.4"/>
-</component>
-<component name="n:toolsdocs" long-name="Tools Documentation" purpose="development" class="doc">
-<unit mrp="os/buildtools/devlib/toolsdocs/tools_documentation.mrp"/>
-</component>
-</collection>
-<collection name="misccomponents" long-name="Misc Components" level="mw">
-<component name="n:runperl" long-name="Run PERL" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/runperl/group" mrp="os/buildtools/misccomponents/runperl/group/tools_sdk_eng_runperl.mrp"/>
-</component>
-<component name="n:assertion" long-name="Assertion" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/assertion/group" mrp="os/buildtools/misccomponents/assertion/group/tools_sdk_eng_assertion.mrp"/>
-</component>
-<component name="n:enum" long-name="Enum" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/enum/group" mrp="os/buildtools/misccomponents/enum/group/tools_sdk_eng_enum.mrp"/>
-</component>
-<component name="n:logger" long-name="Logger" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/logger/group" mrp="os/buildtools/misccomponents/logger/group/tools_sdk_eng_logger.mrp"/>
-</component>
-<component name="n:filesys" long-name="Filesys" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/filesys/group" mrp="os/buildtools/misccomponents/filesys/group/tools_sdk_eng_filesys.mrp"/>
-</component>
-<component name="n:envvar" long-name="Envvar" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/envvar/group" mrp="os/buildtools/misccomponents/envvar/group/tools_sdk_eng_envvar.mrp"/>
-</component>
-<component name="n:installutils" long-name="Install Utils" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/installutils/group" mrp="os/buildtools/misccomponents/installutils/group/tools_sdk_eng_installutils.mrp"/>
-</component>
-<component name="n:mnemonicfix" long-name="Mnemonic Fix" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/mnemonicfix/group" mrp="os/buildtools/misccomponents/mnemonicfix/group/tools_sdk_eng_mnemonicfix.mrp"/>
-</component>
-<component name="n:pathbrowser" long-name="Path Browser" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/pathbrowser/group" mrp="os/buildtools/misccomponents/pathbrowser/group/tools_sdk_eng_pathbrowser.mrp"/>
-</component>
-<component name="n:shellexec" long-name="Shell Exec" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/shellexec/group" mrp="os/buildtools/misccomponents/shellexec/group/tools_sdk_eng_shellexec.mrp"/>
-</component>
-<component name="n:swingworker" long-name="Swing Worker" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/swingworker/group" mrp="os/buildtools/misccomponents/swingworker/group/tools_sdk_eng_swingworker.mrp"/>
-</component>
-<component name="n:testcaserunner" long-name="Test Case Runner" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/testcaserunner/group" mrp="os/buildtools/misccomponents/testcaserunner/group/tools_sdk_eng_testcaserunner.mrp"/>
-</component>
-<component name="n:toolbarpanel" long-name="Tool Bar Panel" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/toolbarpanel/group" mrp="os/buildtools/misccomponents/toolbarpanel/group/tools_sdk_eng_toolbarpanel.mrp"/>
-</component>
-<component name="n:javahelp" long-name="Java Help" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/javahelp/group" mrp="os/buildtools/misccomponents/javahelp/group/tools_sdk_eng_javahelp.mrp"/>
-</component>
-<component name="n:langconfig" long-name="Language Config" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/langconfig/group" mrp="os/buildtools/misccomponents/langconfig/group/tools_sdk_eng_langconfig.mrp"/>
-</component>
-<component name="n:sdkinfo" long-name="SDK Info" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/sdkinfo/group" mrp="os/buildtools/misccomponents/sdkinfo/group/tools_sdk_eng_sdkinfo.mrp"/>
-</component>
-<component name="n:jade" long-name="Jade " filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/jade/group" mrp="os/buildtools/misccomponents/jade/group/tools_sdk_eng_jade.mrp"/>
-</component>
-<component name="n:sdkpackagemgr" long-name="SDK Package Manager" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/sdkpackagemgr/group" mrp="os/buildtools/misccomponents/sdkpackagemgr/group/tools_sdk_eng_sdkpkg-manager.mrp"/>
-</component>
-<component name="n:sdkpkgtools" long-name="SDK Package Tools" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/sdkpkgtools/group" mrp="os/buildtools/misccomponents/sdkpkgtools/group/tools_sdk_eng_sdkpkg-tools.mrp"/>
-</component>
-<component name="emulatorlauncher" long-name="Emulator Launcher" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/emulatorlauncher/group" mrp="os/buildtools/misccomponents/emulatorlauncher/group/tools_sdk_eng_emulator_launcher.mrp"/>
-</component>
-<component name="n:pkgmgrgui" long-name="SDK Package Manager GUI" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/pkgmgrgui/group" mrp="os/buildtools/misccomponents/pkgmgrgui/group/tools_sdk_eng_pkgmgrgui.mrp"/>
-</component>
-<component name="n:launch" long-name="Launch" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/launch/group" mrp="os/buildtools/misccomponents/launch/group/tools_sdk_eng_launch.mrp"/>
-</component>
-<component name="n:toolsstubs" long-name="Devices Tools Stubs" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/toolsstubs/group" mrp="os/buildtools/misccomponents/toolsstubs/group/tools_sdk_eng_tools_stubs.mrp"/>
-</component>
-<component name="n:bspbuilder" long-name="BSP Builder" filter="gt" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/bspbuilder/group" mrp="os/buildtools/misccomponents/bspbuilder/group/tools_bspbuilder.mrp"/>
-</component>
-<component name="n:splash" long-name="Splash Screen" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/splash/group" mrp="os/buildtools/misccomponents/splash/group/tools_sdk_eng_splash.mrp"/>
-</component>
-<component name="n:sdkbuilder" long-name="SDK Building Tools" purpose="development">
-<unit bldFile="os/buildtools/misccomponents/sdkbuilder/group" mrp="os/buildtools/misccomponents/sdkbuilder/group/tools_sdk_eng_sdk_builder.mrp"/>
-</component>
-</collection>
-<collection name="n:javatoolsplat" long-name="Java Tools Platform" level="mw">
-<component name="n:javalib" long-name="Java Library " filter="gt" purpose="development">
-<unit bldFile="os/buildtools/javatoolsplat/javalib/group" mrp="os/buildtools/javatoolsplat/javalib/group/tools_sdk_eng_javalibrary.mrp"/>
-</component>
-</collection>
-<collection name="n:fileconv" long-name="File Converters" level="mw">
-<component name="n:cjpeg" long-name="CJpeg" purpose="development">
-<unit bldFile="os/buildtools/fileconv/cjpeg/group" mrp="os/buildtools/fileconv/cjpeg/group/tools_sdk_eng_cjpeg.mrp"/>
-</component>
-<component name="n:alp2csh" long-name="ALP to CSH" purpose="development">
-<unit bldFile="os/buildtools/fileconv/alp2csh/group" mrp="os/buildtools/fileconv/alp2csh/group/tools_sdk_eng_alp2csh.mrp"/>
-</component>
-<component name="n:rtf2ptml" long-name="RTF to PTML" purpose="development">
-<unit bldFile="os/buildtools/fileconv/rtf2ptml/group" mrp="os/buildtools/fileconv/rtf2ptml/group/tools_sdk_eng_rtf2ptml.mrp"/>
-</component>
-</collection>
-<collection name="buildtools_info" long-name="Build Tools Info" level="ui">
-<component name="buildtools_metadata" long-name="Build Tools Metadata" introduced="tb91" purpose="development" class="config PC">
-<unit mrp="os/buildtools/buildtools_info/buildtools_metadata/buildtools_metadata.mrp"/>
-</component>
-</collection>
-</block>
+<block name="kernelhwsrv" level="hw"/>
+<block name="boardsupport" level="hw"/>
+<block name="buildtools" level="hw"/>
 <block name="ossrv" level="services" long-name="Generic OS Services" levels="physical-abstraction app-libs encoding translation data-services utilities">
 <collection name="genericservices" long-name="Generic Services" level="utilities">
 <component name="s60compatibilityheaders" long-name="S60 Compatibility Headers" filter="gt" purpose="development">
@@ -612,9 +128,6 @@
 <component name="apputils" long-name="Application Utilities" introduced="ER5" purpose="mandatory">
 <unit bldFile="os/ossrv/lowlevellibsandfws/apputils/group" mrp="os/ossrv/lowlevellibsandfws/apputils/group/syslibs_bafl.mrp"/>
 </component>
-<!--<component name="sysutil" long-name="System Utilities" introduced="ER5" purpose="mandatory">
-<unit bldFile="os/ossrv/lowlevellibsandfws/apputils/sysutil/group" />
-</component>-->
 </collection>
 <collection name="ossrv_info" long-name="Generic OS Services Info" level="utilities">
 <component name="ossrv_metadata" long-name="Generic OS Services Metadata" introduced="tb91" purpose="development" class="config PC">
@@ -681,54 +194,7 @@
 </component>
 </collection>
 </block>
-<block name="persistentdata" level="services" long-name="Persistent Data Services" levels="adaptation hw-if plugin framework server app-if">
-<collection name="featuremgmt" long-name="Feature Management" level="framework">
-<component name="featureregistry" long-name="Feature Registry" introduced="9.2" deprecated="tb92" purpose="mandatory">
-<unit bldFile="os/persistentdata/featuremgmt/featureregistry/group" mrp="os/persistentdata/featuremgmt/featureregistry/group/syslibs_featreg.mrp"/>
-</component>
-</collection>
-<collection name="loggingservices" long-name="Logging Services" level="server">
-<component name="eventlogger" long-name="Event Logger" introduced="6.0" purpose="optional">
-<unit bldFile="os/persistentdata/loggingservices/eventlogger/group" mrp="os/persistentdata/loggingservices/eventlogger/group/syslibs_logeng.mrp"/>
-</component>
-<component name="filelogger" long-name="File Logger" introduced="ER5" purpose="optional">
-<unit bldFile="os/persistentdata/loggingservices/filelogger/group" mrp="os/persistentdata/loggingservices/filelogger/group/comms-infras_flogger.mrp"/>
-</component>
-<component name="rfilelogger" long-name="RFile Logger" deprecated="tb92" introduced="9.1" purpose="development">
-<unit bldFile="os/persistentdata/loggingservices/rfilelogger/group" mrp="os/persistentdata/loggingservices/rfilelogger/group/testtools_utilities.mrp"/>
-</component>
-</collection>
-<collection name="traceservices" long-name="Trace Services" level="server">
-<component name="commsdebugutility" long-name="Comms Debug Utility" introduced="7.0s" purpose="optional">
-<unit bldFile="os/persistentdata/traceservices/commsdebugutility/group" mrp="os/persistentdata/traceservices/commsdebugutility/group/comms-infras_commsdebugutility.mrp"/>
-</component>
-<component name="tracefw" long-name="Trace Framework" introduced="9.2" purpose="development">
-<unit bldFile="os/persistentdata/traceservices/tracefw/ulogger/group" mrp="os/persistentdata/traceservices/tracefw/ulogger/group/tools_debug_trace.mrp"/>
-</component>
-<component name="utrace" long-name="UTrace" introduced="9.3" deprecated="tb91" purpose="development">
-<unit bldFile="os/persistentdata/traceservices/utrace/group" mrp="os/persistentdata/traceservices/utrace/group/testtools_utrace_api.mrp"/>
-</component>
-</collection>
-<collection name="persistentstorage" long-name="Persistent Storage" level="framework">
-<component name="store" long-name="Store" purpose="optional">
-<unit bldFile="os/persistentdata/persistentstorage/store/group" mrp="os/persistentdata/persistentstorage/store/group/syslibs_store.mrp"/>
-</component>
-<component name="dbms" long-name="DBMS" purpose="optional">
-<unit bldFile="os/persistentdata/persistentstorage/dbms/group" mrp="os/persistentdata/persistentstorage/dbms/group/syslibs_dbms.mrp"/>
-</component>
-<component name="centralrepository" long-name="Central Repository" introduced="7.0s" purpose="mandatory">
-<unit bldFile="os/persistentdata/persistentstorage/centralrepository/group" mrp="os/persistentdata/persistentstorage/centralrepository/group/syslibs_centralrepository.mrp"/>
-</component>
-<component name="sql" long-name="SQL" introduced="9.3" purpose="optional">
-<unit bldFile="os/persistentdata/persistentstorage/sql/GROUP" mrp="os/persistentdata/persistentstorage/sql/GROUP/syslibs_sql.mrp"/>
-</component>
-</collection>
-<collection name="persistentdata_info" long-name="Persistent Data Services Info" level="app-if">
-<component name="persistentdata_metadata" long-name="Persistent Data Services Metadata" introduced="tb91" purpose="development" class="config PC">
-<unit mrp="os/persistentdata/persistentdata_info/persistentdata_metadata/persistentdata_metadata.mrp"/>
-</component>
-</collection>
-</block>
+<block name="persistentdata" level="services"/>
 <block name="devicesrv" level="services" long-name="Device Services" levels="adaptation hw-if plugin framework server app-if">
 <collection name="accessoryservices" long-name="Accessory Services" level="framework">
 <component name="remotecontrolfw" long-name="Remote Control Framework" introduced="9.1" purpose="optional">
@@ -736,9 +202,12 @@
 </component>
 </collection>
 <collection name="resourcemgmt" long-name="Resource Management" level="hw-if">
-<!-- <component name="hwresourcesmgr" long-name="Hardware Resources Manager" introduced="tb91" purpose="optional">
+<component name="hwresourcesmgr" long-name="Hardware Resources Manager" introduced="tb91" purpose="optional">
 <unit bldFile="os/devicesrv/resourcemgmt/hwresourcesmgr/group" mrp="os/devicesrv/resourcemgmt/hwresourcesmgr/group/telephony_hwrm.mrp"/>
-</component> -->
+</component>
+<component name="hwresourcesmgrconfig" long-name="Hardware Resources Manager Config" introduced="tb92" purpose="optional" class="config">
+<unit bldFile="os/devicesrv/resourcemgmt/hwresourcesmgrconfig" mrp="os/devicesrv/resourcemgmt/hwresourcesmgrconfig/telephony_hwrm-config.mrp"/>
+</component>
 <component name="powerandmemorynotificationservice" long-name="Power and Memory Notification Service" introduced="6.0" purpose="mandatory">
 <unit bldFile="os/devicesrv/resourcemgmt/powerandmemorynotificationservice/group" mrp="os/devicesrv/resourcemgmt/powerandmemorynotificationservice/group/syslibs_pwrcli.mrp"/>
 </component>
@@ -747,15 +216,39 @@
 <component name="systemstarter" long-name="System Starter" introduced="9.1" deprecated="tb92" purpose="mandatory">
 <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/group" mrp="os/devicesrv/sysstatemgmt/systemstarter/group/app-framework_sysstart.mrp"/>
 </component>
+<component name="systemstatemgr" long-name="System State Manager" introduced="tb92" purpose="mandatory">
+<unit bldFile="os/devicesrv/sysstatemgmt/systemstatemgr/group" mrp="os/devicesrv/sysstatemgmt/systemstatemgr/group/app-framework_ssma.mrp"/>
+</component>
+<component name="systemstateplugins" long-name="System State Plugins" introduced="tb92" purpose="optional" plugin="Y">
+<unit bldFile="os/devicesrv/sysstatemgmt/systemstateplugins/group" mrp="os/devicesrv/sysstatemgmt/systemstateplugins/group/app-framework_ssplugins.mrp"/>
+</component>
+<component name="systemstatereferenceplugins" long-name="System State Reference Plugins" introduced="tb92" purpose="optional" plugin="Y">
+<unit bldFile="os/devicesrv/sysstatemgmt/systemstatereferenceplugins/group" mrp="os/devicesrv/sysstatemgmt/systemstatereferenceplugins/group/app-framework_ssrefplugins.mrp"/>
+</component>
+</collection>
+<collection name="resourceinterfaces" long-name="Resource Interfaces" level="hw-if">
+<component name="fmtransmittercontrol" long-name="FM Transmitter Control" introduced="tb92" purpose="optional">
+<unit bldFile="os/devicesrv/resourceinterfaces/fmtransmittercontrol/group" mrp="os/devicesrv/resourceinterfaces/fmtransmittercontrol/group/telephony_hwrmfmtx.mrp"/>
+</component>
+</collection>
+<collection name="systemhealthmanagement" long-name="System Health Management" level="server">
+<component name="systemhealthmgr" long-name="System Health Manager" introduced="tb92" purpose="optional">
+<unit bldFile="os/devicesrv/systemhealthmanagement/systemhealthmgr/group" mrp="os/devicesrv/systemhealthmanagement/systemhealthmgr/group/app-framework_shma.mrp"/>
+</component>
+</collection>
+<collection name="sensordrivers" long-name="Sensor Drivers" level="adaptation">
+<component name="proximitysensorldd" long-name="Proximity Sensor LDD" introduced="Future" purpose="optional">
+<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/sensors" mrp="os/kernelhwsrv/kernel/eka/drivers/sensors/base_drivers_sensors.mrp"/>
+</component>
 </collection>
 <collection name="devicesrvapitest" long-name="Devices Services API Tests" level="app-if">
 <component name="accessorieshaitest" long-name="Accessories HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1645"
+<!-- PLACEHOLDER="DS.1675"
 	<unit mrp="devicesrvapitest/accessorieshaitest/gropup/accessorieshai.mrp"/>
 	-->
 </component>
 <component name="hwrmhaitest" long-name="HWRM HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1645"
+<!-- PLACEHOLDER="DS.1675"
 	<unit mrp="devicesrvapitest/hwrmhaitest/group/hwrmhai.mrp"/>
 	-->
 </component>
@@ -777,8 +270,14 @@
 <component name="simulationpositioningmodule" long-name="Simulation Positioning Module" introduced="tb91" purpose="development" plugin="Y">
 <unit bldFile="os/lbs/datasourcemodules/simulationpositioningmodule/group" mrp="os/lbs/datasourcemodules/simulationpositioningmodule/group/lbs_simulation_positioning_module.mrp"/>
 </component>
-<component name="n:agpsintegrationmodule" long-name="A-GPS Integration Module" introduced="9.2" purpose="optional" plugin="Y">
+<component name="agpsintegrationmodule" long-name="A-GPS Integration Module" introduced="9.2" purpose="optional" plugin="Y">
 <unit bldFile="os/lbs/datasourcemodules/agpsintegrationmodule/group" mrp="os/lbs/datasourcemodules/agpsintegrationmodule/group/lbs_datasourceplugins.mrp"/>
+</component>
+<component name="gpspositioningmodule" long-name="GPS/A-GPS Positioning Module" introduced="Future" purpose="optional" plugin="Y">
+<unit bldFile="os/lbs/datasourcemodules/gpspositioningmodule/group" mrp="os/lbs/datasourcemodules/gpspositioningmodule/group/lbs_agps_positioning_module.mrp"/>
+</component>
+<component name="networkpositioningmodule" long-name="Network Positioning Module" introduced="Future" purpose="optional" plugin="Y">
+<unit bldFile="os/lbs/datasourcemodules/networkpositioningmodule/group" mrp="os/lbs/datasourcemodules/networkpositioningmodule/group/lbs_network_positioning_module.mrp"/>
 </component>
 </collection>
 <collection name="datasourceadaptation" long-name="Data Source Adaptation" level="adaptation">
@@ -803,6 +302,9 @@
 </component>
 </collection>
 <collection name="locationmgmt" long-name="Location Management" level="management">
+<component name="locmonitor" long-name="Location Monitor" introduced="tb92" purpose="optional">
+<unit bldFile="os/lbs/locationmgmt/locmonitor/lbslocmonitorserver/group" mrp="os/lbs/locationmgmt/locmonitor/lbslocmonitorserver/group/lbs_locationmonitor.mrp"/>
+</component>
 <component name="agpslocationmgr" long-name="A-GPS Location Manager" introduced="9.2" purpose="optional">
 <unit bldFile="os/lbs/locationmgmt/agpslocationmgr/group" mrp="os/lbs/locationmgmt/agpslocationmgr/group/lbs_agpslocationmanager.mrp"/>
 </component>
@@ -820,14 +322,14 @@
 <component name="privacyprotocolmodule" long-name="Privacy Protocol Module" introduced="tb91" purpose="optional" plugin="Y">
 <unit bldFile="os/lbs/networkprotocolmodules/privacyprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/privacyprotocolmodule/group/lbs_privacyprotocolmodule.mrp"/>
 </component>
-<component name="n:suplprotocolmodule" long-name="SUPL Protocol Module" introduced="tb91" deprecated="tb91" purpose="optional" plugin="Y">
+<component name="suplprotocolmodule" long-name="SUPL Protocol Module" introduced="tb91" deprecated="tb91" purpose="optional" plugin="Y">
 <unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
 </component>
 </collection>
 <collection name="lbsapitest" long-name="Location API Tests" level="application-interface">
 <component name="lbshaitest" long-name="Location HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1645"
-      <unit mrp="lbsapitest/lbshaitest/group/lbshai.mrp"/>
+<!-- PLACEHOLDER="DS.1675"
+	<unit mrp="lbsapitest/lbshaitest/group/lbshai.mrp"/>
 	-->
 </component>
 </collection>
@@ -837,108 +339,7 @@
 </component>
 </collection>
 </block>
-<block name="commsfw" level="services" long-name="Communications Framework" levels="server support framework process app-if">
-<collection name="commsinfrastructureapitest" long-name="Comms-Infras API Tests" level="app-if">
-<component name="commsinfrastructuresvs" long-name="Comms Infrastructure Verification Suite" introduced="tb91" purpose="development">
-<unit mrp="os/commsfw/commsinfrastructureapitest/commsinfrastructuresvs/group/commsinfrastructuresvs.mrp"/>
-</component>
-</collection>
-<collection name="commsprocess" long-name="Comms Process" level="process">
-<component name="commsrootserver" long-name="Comms Root Server" introduced="7.0s" purpose="mandatory">
-<unit bldFile="os/commsfw/commsprocess/commsrootserverconfig/group" mrp="os/commsfw/commsprocess/commsrootserverconfig/group/comms-infras_rootserver.mrp"/>
-</component>
-<component name="commsrootserverconfig" long-name="Comms Root Server Config" introduced="9.1" purpose="mandatory" class="config">
-<unit mrp="os/commsfw/commsprocess/commsrootserverconfig/group/comms-infras_rootserver-config.mrp"/>
-</component>
-</collection>
-<collection name="commsconfig" long-name="Comms Config" level="process">
-<component name="commsdatabase" long-name="Comms Database" purpose="mandatory">
-<unit bldFile="os/commsfw/commsfwtools/preparedefaultcommsdatabase/group" mrp="os/commsfw/commsfwtools/preparedefaultcommsdatabase/group/comms-infras_commsdat.mrp"/>
-</component>
-<component name="commsdatabaseshim" long-name="Comms Database Shim" introduced="8.1" purpose="mandatory">
-<unit bldFile="os/commsfw/commsconfig/commsdatabaseshim/group" mrp="os/commsfw/commsconfig/commsdatabaseshim/group/comms-infras_commdbshim.mrp"/>
-</component>
-</collection>
-<collection name="datacommsserver" long-name="Data Comms Server" level="framework">
-<component name="esockserver" long-name="ESock Server" purpose="mandatory">
-<unit bldFile="os/commsfw/datacommsserver/esockserver/group" mrp="os/commsfw/datacommsserver/esockserver/group/comms-infras_esock.mrp" version="2"/>
-</component>
-<component name="esockserverconfig" long-name="ESock Server Config" introduced="9.1" purpose="mandatory" class="config">
-<unit mrp="os/commsfw/datacommsserver/esockserver/group/comms-infras_esock-config.mrp" version="2"/>
-</component>
-<component name="networkinterfacemgr" long-name="Network Interface Manager" introduced="ER5U" purpose="mandatory">
-<unit bldFile="os/commsfw/datacommsserver/networkinterfacemgr/group" mrp="os/commsfw/datacommsserver/networkinterfacemgr/group/comms-infras_nifman.mrp" version="1"/>
-</component>
-<component name="networkingdialogapi" long-name="Networking Dialog API" introduced="6.1" purpose="optional">
-<unit bldFile="os/commsfw/datacommsserver/networkingdialogapi/group" mrp="os/commsfw/datacommsserver/networkingdialogapi/group/networking_dialog.mrp"/>
-</component>
-<component name="networkingdialogstub" long-name="Networking Dialog Stub" introduced="6.1" purpose="optional">
-<unit bldFile="os/commsfw/datacommsserver/networkingdialogapi/default" mrp="os/commsfw/datacommsserver/networkingdialogapi/default/networking_dialog_default.mrp"/>
-</component>
-<component name="networkcontroller" long-name="Network Controller" introduced="7.0s" purpose="optional" plugin="Y">
-<unit bldFile="os/commsfw/datacommsserver/networkcontroller/group" mrp="os/commsfw/datacommsserver/networkcontroller/group/networking_netcon.mrp"/>
-</component>
-</collection>
-<collection name="serialserver" long-name="Serial Server" level="server">
-<component name="serialportcsy" long-name="Serial Port CSY" introduced="ER5" purpose="optional" plugin="Y" class="placeholder">
-<!-- placeholder for ser-comms_serialportcsy, currently built by C32 -->
-</component>
-<component name="packetloopbackcsy" long-name="Packet Loopback CSY" introduced="8.1" purpose="development">
-<unit bldFile="os/commsfw/serialserver/packetloopbackcsy/group" mrp="os/commsfw/serialserver/packetloopbackcsy/group/PacketLoopbackCSY.mrp"/>
-</component>
-<component name="c32serialserver" long-name="C32 Serial Server" introduced="ER5" purpose="mandatory">
-<unit bldFile="os/commsfw/serialserver/c32serialserver/group" mrp="os/commsfw/serialserver/c32serialserver/group/ser-comms_c32.mrp"/>
-</component>
-<component name="c32serialserverconfig" long-name="C32 Serial Server Config" introduced="ER5" purpose="mandatory" class="config">
-<unit bldFile="os/commsfw/serialserver/c32serialserverconfig" mrp="os/commsfw/serialserver/c32serialserverconfig/ser-comms_c32-config.mrp"/>
-</component>
-<component name="c32serialserverdocs" long-name="C32 Serial Server Documentation" purpose="development" class="doc">
-<unit mrp="os/commsfw/serialserver/c32serialserverdocs/ser-comms_documentation.mrp"/>
-</component>
-</collection>
-<collection name="baseconnectionproviders" long-name="Base Connection Providers" level="framework">
-<component name="refcpr" long-name="Reference CPR" introduced="9.2" purpose="optional" plugin="Y">
-<unit bldFile="os/commsfw/baseconnectionproviders/refcpr/group" mrp="os/commsfw/baseconnectionproviders/refcpr/group/networking_ReferenceCPR.mrp"/>
-</component>
-<component name="refscpr" long-name="Reference SCPR" introduced="9.2" purpose="optional" plugin="Y">
-<unit bldFile="os/commsfw/baseconnectionproviders/refscpr/group" mrp="os/commsfw/baseconnectionproviders/refscpr/group/networking_ReferenceSCPR.mrp"/>
-</component>
-</collection>
-<collection name="commsfwutils" long-name="Comms Framework Utilities" level="framework">
-<component name="commfw" long-name="Comms Framework" introduced="7.0s" purpose="mandatory">
-<unit bldFile="os/commsfw/commsfwutils/commfw/group" mrp="os/commsfw/commsfwutils/commfw/group/comms-infras_commsfw.mrp" priority="10"/>
-</component>
-<component name="mbufmgr" long-name="MBuf Manager" introduced="7.0s" purpose="mandatory">
-<unit bldFile="os/commsfw/commsfwutils/mbufmgr/group" mrp="os/commsfw/commsfwutils/mbufmgr/group/comms-infras_mbufmgr.mrp"/>
-</component>
-</collection>
-<collection name="commsfw_info" long-name="Comms Framework Info" level="app-if">
-<component name="commsinfrastructuredocs" long-name="Comms Infrastructure Documentation" introduced="7.0" purpose="development" class="doc">
-<unit mrp="os/commsfw/commsfw_info/commsinfrastructuredocs/comms-infras_documentation.mrp"/>
-</component>
-<component name="commsfw_metadata" long-name="Communications Framework Metadata" introduced="tb91" purpose="development" class="config PC">
-<unit mrp="os/commsfw/commsfw_info/commsfw_metadata/commsfw_metadata.mrp"/>
-</component>
-</collection>
-<collection name="commsfwsupport" long-name="Comms Framework Support" level="support">
-<component name="commselements" long-name="Comms Elements" introduced="8.0" purpose="mandatory">
-<unit bldFile="os/commsfw/commsfwsupport/commselements/group" mrp="os/commsfw/commsfwsupport/commselements/group/comms-infras_elements.mrp"/>
-</component>
-</collection>
-<collection name="commsfwtools" long-name="Comms Framework Tools" level="app-if">
-<!-- Removing GT commdb
-<component name="preparedefaultcommsdatabase" long-name="Prepare Default Comms Database" filter="gt" purpose="mandatory" class="config PC">
-<unit bldFile="os/commsfw/commsfwtools/preparedefaultcommsdatabase/defaultcommdb/group" mrp="os/commsfw/commsfwtools/preparedefaultcommsdatabase/defaultcommdb/group/comms-infras_defaultcommdb.mrp"/>
-</component>
--->
-<!-- <component name="installdefaultcommsdatabase" long-name="Install Default Comms Database" purpose="mandatory" class="PC">
-<unit bldFile="os/commsfw/commsfwtools/preparedefaultcommsdatabase/installdefaultcommdb/group" mrp="os/commsfw/commsfwtools/preparedefaultcommsdatabase/installdefaultcommdb/group/comms-infras_installdefaultcommdb.mrp" priority="1010"/>
-</component> -->
-<component name="commstools" long-name="Comms Tools" introduced="tb91" purpose="development" class="PC">
-<unit mrp="os/commsfw/commsfwtools/commstools/group/comms-infras_tools.mrp"/>
-</component>
-</collection>
-</block>
+<block name="commsfw" level="services"/>
 <block name="networkingsrv" level="services" long-name="Networking Services" levels="adaptation hw-if plugin framework server app-if">
 <collection name="esockapiextensions" long-name="ESock API Extensions" level="app-if">
 <component name="internetsockets" long-name="Internet Sockets" introduced="ER5" purpose="mandatory">
@@ -958,10 +359,19 @@
 <component name="networkaddressandporttranslation" long-name="Network Address and Port Translation" introduced="tb91" purpose="mandatory" plugin="Y">
 <unit bldFile="os/networkingsrv/tcpiputils/networkaddressandporttranslation/group" mrp="os/networkingsrv/tcpiputils/networkaddressandporttranslation/group/networking_napt.mrp"/>
 </component>
+<component name="punycodeconv" long-name="Punycode Converter" introduced="tb92" purpose="mandatory">
+<unit bldFile="os/networkingsrv/tcpiputils/punycodeconv/group" mrp="os/networkingsrv/tcpiputils/punycodeconv/group/networking_punycodeconverter.mrp"/>
+</component>
 </collection>
 <collection name="linklayercontrol" long-name="Link Layer Control" level="hw-if">
 <component name="nullagt" long-name="NULL AGT" introduced="7.0s" purpose="optional" plugin="Y">
 <unit bldFile="os/networkingsrv/linklayercontrol/nullagt/group" mrp="os/networkingsrv/linklayercontrol/nullagt/group/networking_nullagt.mrp"/>
+</component>
+<component name="genericscprparameters" long-name="Generic SCPR Parameters" introduced="tb92" purpose="optional">
+<unit bldFile="os/networkingsrv/linklayercontrol/genericscprparameters/group" mrp="os/networkingsrv/linklayercontrol/genericscprparameters/group/networking_genericscprparams.mrp"/>
+</component>
+<component name="mbmsparameters" long-name="MBMS Parameters" introduced="tb92" purpose="optional" plugin="Y">
+<unit bldFile="os/networkingsrv/linklayercontrol/mbmsparameters/group" mrp="os/networkingsrv/linklayercontrol/mbmsparameters/group/networking_mbmsparams.mrp"/>
 </component>
 </collection>
 <collection name="linklayerprotocols" long-name="Link Layer Protocols" level="hw-if">
@@ -972,10 +382,10 @@
 <unit mrp="os/networkingsrv/linklayerprotocols/ethernetpacketdriver/group/networking_etherdrv_srconly.mrp"/>
 </component>
 <component name="pppnif" long-name="PPP NIF" introduced="ER5" purpose="optional" plugin="Y">
-<unit bldFile="os/networkingsrv/linklayerprotocols/pppnif/group" mrp="os/networkingsrv/linklayerprotocols/pppnif/group/networking_ppp.mrp" version="1"/>
+<unit bldFile="os/networkingsrv/linklayerprotocols/pppnif/group" mrp="os/networkingsrv/linklayerprotocols/pppnif/group/networking_ppp.mrp" version="2"/>
 </component>
-<component name="pppconfig" long-name="PPP Config" introduced="ER5" purpose="optional">
-<unit mrp="os/networkingsrv/linklayerprotocols/pppnif/group/networking_ppp-config.mrp" version="1"/>
+<component name="pppconfig" long-name="PPP Config" introduced="ER5" purpose="optional" class="config">
+<unit mrp="os/networkingsrv/linklayerprotocols/pppnif/group/networking_ppp-config.mrp" version="2"/>
 </component>
 <component name="slipnif" long-name="SLIP NIF" purpose="development" plugin="Y">
 <unit bldFile="os/networkingsrv/linklayerprotocols/slipnif/group" mrp="os/networkingsrv/linklayerprotocols/slipnif/group/networking_slip.mrp"/>
@@ -1002,14 +412,20 @@
 <component name="qosfwprt" long-name="QoS Framework PRT" introduced="7.0s" purpose="optional" plugin="Y">
 <unit bldFile="os/networkingsrv/networkcontrol/qosfwconfig/qos/group" mrp="os/networkingsrv/networkcontrol/qosfwconfig/qos/group/networking_qos.mrp"/>
 </component>
-<component name="ipcpr" long-name="IP CPR" introduced="8.1" purpose="optional" plugin="Y">
-<unit bldFile="os/networkingsrv/networkcontrol/ipcpr/group" mrp="os/networkingsrv/networkcontrol/ipcpr/group/networking_ipcpr.mrp"/>
+<component name="qosipscpr" long-name="QoS IP SCPR" purpose="optional" plugin="Y">
+<unit bldFile="os/networkingsrv/networkcontrol/qosipscpr/group" mrp="os/networkingsrv/networkcontrol/qosipscpr/group/networking_qosipscpr.mrp"/>
 </component>
-<component name="ipscpr" long-name="IP SCPR" introduced="9.1" purpose="optional" plugin="Y">
-<unit bldFile="os/networkingsrv/networkcontrol/ipscpr/group" mrp="os/networkingsrv/networkcontrol/ipscpr/group/networking_ipscpr.mrp"/>
+<component name="ipnetworklayer" long-name="IP Network Layer" introduced="tb92" purpose="optional" plugin="Y">
+<unit bldFile="os/networkingsrv/networkcontrol/ipnetworklayer/group" mrp="os/networkingsrv/networkcontrol/ipnetworklayer/group/networking_ipproto.mrp"/>
 </component>
-<component name="ipcprshim" long-name="IP CPR Shim" deprecated="Future" purpose="optional" plugin="Y">
-<unit bldFile="os/networkingsrv/networkcontrol/ipcprshim/group" mrp="os/networkingsrv/networkcontrol/ipcprshim/group/networking_shimcpr.mrp"/>
+<component name="iptransportlayer" long-name="IP Transport Layer" purpose="optional" plugin="Y">
+<unit bldFile="os/networkingsrv/networkcontrol/iptransportlayer/group" mrp="os/networkingsrv/networkcontrol/iptransportlayer/group/networking_iptransport.mrp"/>
+</component>
+<component name="commsuserpromptmgr" long-name="Comms User Prompt Manager" introduced="tb92" purpose="mandatory">
+<unit bldFile="os/networkingsrv/networkcontrol/commsuserpromptmgr/group" mrp="os/networkingsrv/networkcontrol/commsuserpromptmgr/group/networking_netups.mrp"/>
+</component>
+<component name="ipupsplugins" long-name="IP UPS Plugins" introduced="tb92" purpose="optional" plugin="Y">
+<unit bldFile="os/networkingsrv/networkcontrol/ipupsplugins/group" mrp="os/networkingsrv/networkcontrol/ipupsplugins/group/networking_ipups.mrp"/>
 </component>
 </collection>
 <collection name="networkprotocols" long-name="Network Protocols" level="plugin">
@@ -1028,6 +444,9 @@
 <component name="mobileip" long-name="Mobile IP" introduced="8.1" purpose="optional" plugin="Y">
 <unit bldFile="os/networkingsrv/networkprotocols/mobileip/group" mrp="os/networkingsrv/networkprotocols/mobileip/group/networking_mobileip.mrp"/>
 </component>
+<component name="dnsproxy" long-name="DNS Proxy" introduced="Future" purpose="optional">
+<unit bldFile="os/networkingsrv/networkprotocols/dnsproxy/group" mrp="os/networkingsrv/networkprotocols/dnsproxy/group/networking_dnsproxy.mrp"/>
+</component>
 </collection>
 <collection name="networksecurity" long-name="Network Security" level="framework">
 <component name="tls" long-name="TLS" introduced="6.0" purpose="mandatory">
@@ -1038,11 +457,6 @@
 </component>
 <component name="ipsec" long-name="IPsec" introduced="7.0" purpose="optional">
 <unit bldFile="os/networkingsrv/networksecurity/ipsec/group" mrp="os/networkingsrv/networksecurity/ipsec/group/networking_ipsec.mrp"/>
-</component>
-<component name="ipsecvpn" long-name="IPsec VPN" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DEF140049"
-        <unit bldFile="networksecurity/ipsecvpn/group" mrp="networksecurity/ipsecvpn/group/networking_ipsecvpn.mrp"/>
-		-->
 </component>
 </collection>
 <collection name="networkingtestandutils" long-name="Networking Test and Utils" level="app-if">
@@ -1061,11 +475,14 @@
 <component name="ipv6to4tunnel" long-name="IPv6 to 4 Tunnel" purpose="development" plugin="Y">
 <unit mrp="os/networkingsrv/networkingtestandutils/ipv6to4tunnel/group/networking_6to4.mrp"/>
 </component>
-<component name="ipanalyzer" long-name="IP Analyzer" introduced="7.0" deprecated="tb92" purpose="development">
+<component name="ipanalyzer" long-name="IP Analyzer" deprecated="tb92" introduced="7.0" purpose="development">
 <unit mrp="os/networkingsrv/networkingtestandutils/ipanalyzer/group/networking_iprotor.mrp"/>
 </component>
 <component name="networkingintegrationtest" long-name="Networking Integration Test" introduced="ER5" purpose="development">
 <unit bldFile="os/networkingsrv/networkingtestandutils/networkingintegrationtest/Group" mrp="os/networkingsrv/networkingtestandutils/networkingintegrationtest/Group/networking_integrationtest.mrp"/>
+</component>
+<component name="networkingperformancemeasurementtools" long-name="Networking Performance Measurement Tools" introduced="tb92" purpose="development">
+<unit bldFile="os/networkingsrv/networkingtestandutils/networkingperformancemeasurementtools/group" mrp="os/networkingsrv/networkingtestandutils/networkingperformancemeasurementtools/group/networking_netperf.mrp"/>
 </component>
 </collection>
 <collection name="networkingsrv_info" long-name="Networking Services Info" level="app-if">
@@ -1087,11 +504,12 @@
 </collection>
 </block>
 <block name="wlan" level="services" long-name="WLAN" levels="hw low mid high tools test">
+<collection name="wlan_bearer" long-name="WLAN Bearer" level="hw"/>
 <collection name="wlanapitest" long-name="WLAN API Tests" level="test">
 <component name="wlanhaitest" long-name="WLAN HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1645"
-	<unit mrp="wlanapitest/wlanhaitest/group/wlanhai.mrp"/>
-	-->
+<!-- PLACEHOLDER="DS.1675"
+			  <unit mrp="wlanapitest/wlanhaitest/group/wlanhai.mrp"/>
+			-->
 </component>
 </collection>
 <collection name="wlan_info" long-name="WLAN Info" level="test">
@@ -1104,9 +522,6 @@
 <collection name="basebandabstraction" long-name="Baseband Abstraction" level="hw-if">
 <component name="basebandchanneladaptor" long-name="Baseband Channel Adaptor" introduced="8.1" purpose="optional">
 <unit bldFile="os/cellularsrv/basebandabstraction/basebandchanneladaptor/group" mrp="os/cellularsrv/basebandabstraction/basebandchanneladaptor/group/networking_bca.mrp"/>
-</component>
-<component name="intersystemcomm" long-name="Inter-System Communication" filter="gt" introduced="tb92" purpose="optional">
-<unit bldFile="os/cellularsrv/basebandabstraction/intersystemcomm/group" mrp="os/cellularsrv/basebandabstraction/intersystemcomm/group/networking_isc.mrp"/>
 </component>
 </collection>
 <collection name="basebandadaptationplugins" long-name="Baseband Adaptation Plugins" level="adaptation">
@@ -1122,9 +537,6 @@
 <collection name="smsprotocols" long-name="SMS Protocols" level="framework">
 <component name="smsstack" long-name="SMS Stack" introduced="6.0" purpose="mandatory" plugin="Y">
 <unit bldFile="os/cellularsrv/smsprotocols/smsstack/group" mrp="os/cellularsrv/smsprotocols/smsstack/group/nbprotocols_smsstackv2.mrp"/>
-</component>
-<component name="n:cdmasmsstack" long-name="CDMA SMS Stack" introduced="8.0" purpose="optional" plugin="Y">
-<unit bldFile="os/cellularsrv/smsprotocols/cdmasmsstack/group" mrp="os/cellularsrv/smsprotocols/cdmasmsstack/group/nbprotocols_cdmasmsstack.mrp"/>
 </component>
 </collection>
 <collection name="telephonyprotocols" long-name="Telephony Protocols" level="framework">
@@ -1146,11 +558,11 @@
 <component name="secondarypdpcontextumtsdriver" long-name="Secondary PDP context UMTS Driver" introduced="8.1" purpose="optional">
 <unit bldFile="os/cellularsrv/telephonyprotocols/secondarypdpcontextumtsdriver/group" mrp="os/cellularsrv/telephonyprotocols/secondarypdpcontextumtsdriver/group/networking_spud.mrp"/>
 </component>
-<component name="umtsgprsscpr" long-name="UMTS/GPRS SCPR" introduced="8.1" purpose="optional" plugin="Y">
-<unit bldFile="os/cellularsrv/telephonyprotocols/umtsgprsscpr/group" mrp="os/cellularsrv/telephonyprotocols/umtsgprsscpr/group/networking_UmtsGprsSCPR.mrp"/>
-</component>
 <component name="qos3gppcpr" long-name="QoS 3GPP CPR" introduced="9.2" purpose="optional" plugin="Y">
 <unit bldFile="os/cellularsrv/telephonyprotocols/qos3gppcpr/group" mrp="os/cellularsrv/telephonyprotocols/qos3gppcpr/group/networking_Qos3GPP.mrp"/>
+</component>
+<component name="pdplayer" long-name="PDP Layer" introduced="tb92" purpose="optional" plugin="Y">
+<unit bldFile="os/cellularsrv/telephonyprotocols/pdplayer/group" mrp="os/cellularsrv/telephonyprotocols/pdplayer/group/networking_pdp.mrp"/>
 </component>
 <component name="rawipnif" long-name="Raw IP NIF" introduced="8.1" purpose="optional" plugin="Y">
 <unit bldFile="os/cellularsrv/telephonyprotocols/rawipnif/group" mrp="os/cellularsrv/telephonyprotocols/rawipnif/group/networking_rawipnif.mrp"/>
@@ -1172,25 +584,25 @@
 <component name="etelsimtoolkit" long-name="ETel SIM Toolkit" introduced="6.1" purpose="mandatory">
 <unit bldFile="os/cellularsrv/telephonyserver/etelsimtoolkit/group" mrp="os/cellularsrv/telephonyserver/etelsimtoolkit/group/telephony_etelsat.mrp"/>
 </component>
-<component name="n:etelcdma" long-name="ETel CDMA" introduced="7.0s" purpose="optional">
-<unit bldFile="os/cellularsrv/telephonyserver/etelcdma/group" mrp="os/cellularsrv/telephonyserver/etelcdma/group/telephony_etelcdma.mrp"/>
-</component>
 </collection>
 <collection name="telephonyserverplugins" long-name="Telephony Server Plugins" level="plugin">
 <component name="common_tsy" long-name="Common TSY" introduced="tb92" purpose="optional" plugin="Y">
 <unit bldFile="os/cellularsrv/telephonyserverplugins/common_tsy/group" mrp="os/cellularsrv/telephonyserverplugins/common_tsy/group/telephony_commontsy.mrp"/>
 </component>
-<component name="licenseetsystub" long-name="Licensee TSY Stub" introduced="tb91" purpose="development" plugin="Y">
+<component name="licenseetsystub" long-name="LicenseeTSY Stub" introduced="tb91" purpose="development" plugin="Y">
 <unit mrp="os/cellularsrv/telephonyserverplugins/licenseetsystub/group/licenseetsystub.mrp"/>
 </component>
 <component name="multimodetsy" long-name="Multimode TSY" purpose="development" plugin="Y">
 <unit bldFile="os/cellularsrv/telephonyserverplugins/multimodetsy/group" mrp="os/cellularsrv/telephonyserverplugins/multimodetsy/group/telephony_mmtsy.mrp"/>
 </component>
-<component name="cdmatsy" long-name="CDMA TSY" introduced="7.0" purpose="development" plugin="Y">
-<unit bldFile="os/cellularsrv/telephonyserverplugins/cdmatsy/group" mrp="os/cellularsrv/telephonyserverplugins/cdmatsy/group/telephony_cdmatsy.mrp"/>
-</component>
 <component name="simtsy" long-name="SIM TSY" introduced="7.0" purpose="development" plugin="Y">
 <unit bldFile="os/cellularsrv/telephonyserverplugins/simtsy/group" mrp="os/cellularsrv/telephonyserverplugins/simtsy/group/telephony_simtsy.mrp"/>
+</component>
+<component name="ctsydispatchlayer" long-name="C-TSY Dispatch Layer" introduced="Future" purpose="optional" plugin="Y">
+<unit bldFile="os/cellularsrv/telephonyserverplugins/ctsydispatchlayer/group" mrp="os/cellularsrv/telephonyserverplugins/ctsydispatchlayer/group/telephony_dispatcher.mrp"/>
+</component>
+<component name="simatktsy" long-name="SIMATK TSY" introduced="Future" purpose="optional" plugin="Y">
+<unit bldFile="os/cellularsrv/telephonyserverplugins/simatktsy/group" mrp="os/cellularsrv/telephonyserverplugins/simatktsy/group/commonsimatktsy.mrp"/>
 </component>
 </collection>
 <collection name="telephonyutils" long-name="Telephony Utilities" level="app-if">
@@ -1222,31 +634,37 @@
 </collection>
 <collection name="cellularsrvapitest" long-name="Telephony API Tests" level="app-if">
 <component name="datatransferhaitest" long-name="Data Transfer HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1645"
-	<unit mrp="cellularsrvapitest/datatransferhaitest/group/datatransferhai.mrp"/>
-	-->
+<!-- PLACEHOLDER="DS.1675"
+			  <unit mrp="cellularsrvapitest/datatransferhaitest/group/datatransferhai.mrp"/>
+			-->
 </component>
 <component name="telephonyhaitest" long-name="Telephony HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1645"
-	<unit mrp="cellularsrvapitest/telephonyhaitest/group/telephonyhai.mrp"/>
-	-->
+<!-- PLACEHOLDER="DS.1675"
+			  <unit mrp="cellularsrvapitest/telephonyhaitest/group/telephonyhai.mrp"/>
+			-->
 </component>
 <component name="telephonydevsoundhaitest" long-name="DevSound Telephony HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1645"
-	<unit mrp="cellularsrvapitest/telephonydevsoundhaitest/group/telephonydevsoundhai.mrp"/>
-	-->
+<!-- PLACEHOLDER="DS.1675"
+			  <unit mrp="cellularsrvapitest/telephonydevsoundhaitest/group/telephonydevsoundhai.mrp"/>
+			-->
 </component>
 </collection>
 </block>
 <block name="shortlinksrv" level="services" long-name="Short Link Services" levels="adaptation hw-if plugin framework server app-if">
-<collection name="bluetoothapitest" long-name="Bluetooth API Tests" level="app-if">
-<component name="bluetoothsvs" long-name="Bluetooth Verification Suite" introduced="tb91" purpose="development">
-<unit mrp="os/shortlinksrv/bluetoothapitest/bluetoothsvs/group/bluetoothsvs.mrp"/>
+<collection name="usbbsptemplate" long-name="USB BSP Template" level="adaptation">
+<component name="usbhostcntrldrivertemplate" long-name="OMAP USB Host Controller Driver Template" introduced="tb92" filter="gt" purpose="optional">
+<unit bldFile="os/shortlinksrv/usbbsptemplate/usbhostcntrldrivertemplate" mrp="os/shortlinksrv/usbbsptemplate/usbhostcntrldrivertemplate/base_template_usbhostotg.mrp"/>
 </component>
 </collection>
 <collection name="usbldd" long-name="Shortlink Logical Device Drivers" level="hw-if">
 <component name="usbclientdrivers" long-name="USB Client Drivers" introduced="8.1b" purpose="optional">
 <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/usbc" mrp="os/kernelhwsrv/kernel/eka/drivers/usbc/base_e32_drivers_usbcli.mrp"/>
+</component>
+<component name="usbhotgdrivers" long-name="USB Host and OTG Drivers" introduced="tb92" filter="gt" purpose="optional">
+<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/usbho" mrp="os/kernelhwsrv/kernel/eka/drivers/usbho/base_drivers_usbhostotg.mrp"/>
+</component>
+<component name="usbhostandotgstack" long-name="USB Host and OTG Stack" introduced="tb92" filter="gt" purpose="optional">
+<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/usbho/usbd" mrp="os/kernelhwsrv/kernel/eka/drivers/usbho/usbd/base_drivers_usbhostotg_usbware.mrp"/>
 </component>
 </collection>
 <collection name="bluetooth" long-name="Bluetooth" level="framework">
@@ -1298,9 +716,6 @@
 </component>
 </collection>
 <collection name="bthci" long-name="Host Controller Interface" level="server">
-<component name="bthci1" long-name="Bluetooth HCI Framework 1" introduced="6.0" purpose="optional">
-<unit bldFile="os/shortlinksrv/bthci/bthci1" mrp="os/shortlinksrv/bthci/bthci1/bluetooth_hci.mrp"/>
-</component>
 <component name="bthci2" long-name="Bluetooth HCI Framework 2" introduced="9.2" purpose="optional">
 <unit bldFile="os/shortlinksrv/bthci/bthci2/group" mrp="os/shortlinksrv/bthci/bthci2/group/bluetooth_hci_v2_framework.mrp"/>
 </component>
@@ -1321,10 +736,18 @@
 <component name="usbclassandmgrdocs" long-name="USB Class and Manager Documentation" purpose="development" class="doc">
 <unit mrp="os/shortlinksrv/usbmgmt/usbclassandmgrdocs/usb_documentation.mrp"/>
 </component>
+<component name="usbrndis" long-name="USB RNDIS" introduced="tb92" filter="gt" purpose="optional" plugin="Y">
+<unit bldFile="os/shortlinksrv/usbmgmt/usbrndis/group" mrp="os/shortlinksrv/usbmgmt/usbrndis/group/usb_rndis.mrp"/>
+</component>
 </collection>
 <collection name="irda" long-name="IrDA" level="plugin">
 <component name="irdastack" long-name="IrDA Stack" purpose="optional">
 <unit bldFile="os/shortlinksrv/irda/irdastack/group" mrp="os/shortlinksrv/irda/irdastack/group/infra-red_irda.mrp"/>
+</component>
+</collection>
+<collection name="bluetoothapitest" long-name="Bluetooth API Tests" level="app-if">
+<component name="bluetoothsvs" long-name="Bluetooth Verification Suite" introduced="tb91" purpose="development">
+<unit mrp="os/shortlinksrv/bluetoothapitest/bluetoothsvs/group/bluetoothsvs.mrp"/>
 </component>
 </collection>
 <collection name="shortlinksrv_info" long-name="Short Link Services Info" level="app-if">
@@ -1353,16 +776,20 @@
 </collection>
 <collection name="mmlibs" long-name="Multimedia Libraries" level="middleware">
 <component name="mmutilitylib" long-name="Multimedia Utility Library" introduced="8.1" purpose="mandatory">
-<unit bldFile="os/mm/mmlibs/mmutilitylib/group" mrp="os/mm/mmlibs/mmutilitylib/group/multimedia_common.mrp"/>
+<!-- PLACEHOLDER="DEF137894" START REMOVE -->
+<unit bldFile="mw/mmmw/mmmiddlewarefws/mmutilitylib/group" mrp="mw/mmmw/mmmiddlewarefws/mmutilitylib/group/multimedia_common.mrp"/>
+<!-- PLACEHOLDER="DEF137894" END REMOVE -->
+<!-- PLACEHOLDER="DEF137894"
+		<unit bldFile="mmlibs/mmutilitylib/group" mrp="mmlibs/mmutilitylib/group/multimedia_common.mrp"/>
+		-->
 </component>
 </collection>
 <collection name="mmplugins" long-name="Multimedia Plugins" level="middleware">
+<component name="capsadaptation" long-name="CAPS Adaptation" introduced="tb92" purpose="optional">
+<unit bldFile="os/mm/imagingandcamerafws/imagingfws/plugins/CAPSAdaptation/group" mrp="os/mm/imagingandcamerafws/imagingfws/plugins/CAPSAdaptation/group/multimedia_icl_capsadaptation.mrp"/>
+</component>
 <component name="imagingplugins" long-name="Imaging Plugins" introduced="7.0s" purpose="optional" plugin="Y">
 <unit bldFile="os/mm/imagingandcamerafws/imagingfws/plugins/group" mrp="os/mm/imagingandcamerafws/imagingfws/plugins/group/multimedia_icl_plugin.mrp"/>
-<!-- PLACEHOLDER="DEF137831" REMOVE -->
-<!-- PLACEHOLDER="DEF137831"
-		<unit bldFile="mmplugins/imagingplugins/plugins/group" mrp="mmplugins/imagingplugins/plugins/group/multimedia_icl_plugin.mrp"/>
-		-->
 </component>
 <component name="cameraplugins" long-name="Camera Plugins" introduced="7.0s" purpose="optional" plugin="Y">
 <unit bldFile="os/mm/mmplugins/cameraplugins/group" mrp="os/mm/mmplugins/cameraplugins/group/multimedia_ecam_plugins.mrp"/>
@@ -1386,16 +813,30 @@
 <component name="mmresctrl" long-name="Multimedia Resource Controller" introduced="tb92" purpose="development">
 <unit bldFile="os/mm/mmresourcemgmt/mmresctrl/group" mrp="os/mm/mmresourcemgmt/mmresctrl/group/multimedia_a3f_refmmrc.mrp"/>
 </component>
+<component name="decisionfw" long-name="Decision Framework" introduced="Future" purpose="optional">
+<unit bldFile="os/mm/mmresourcemgmt/decisionfw/group" mrp="os/mm/mmresourcemgmt/decisionfw/group/multimedia_mmrcfw.mrp"/>
+</component>
+<component name="mmmgmtengine" long-name="Multimedia Management Engine" introduced="Future" purpose="optional">
+<unit bldFile="os/mm/mmresourcemgmt/mmmgmtengine/group" mrp="os/mm/mmresourcemgmt/mmmgmtengine/group/multimedia_mgtengine.mrp"/>
+</component>
 </collection>
 <collection name="mmdevicefw" long-name="Multimedia Device Framework" level="device-fw">
-<component name="n:mdf" long-name="Media Device Framework" introduced="9.2" purpose="mandatory">
+<component name="mdf" long-name="Media Device Framework" introduced="9.2" purpose="mandatory">
 <unit bldFile="os/mm/mmdevicefw/mdf/group" mrp="os/mm/mmdevicefw/mdf/group/multimedia_mdf.mrp"/>
+</component>
+<component name="mdf2" long-name="Media Device Framework 2" introduced="Future" purpose="optional">
+<unit bldFile="os/mm/mmdevicefw/mdf2/group" mrp="os/mm/mmdevicefw/mdf2/group/multimedia_mm-infras.mrp"/>
 </component>
 <component name="mdfunittest" long-name="MDF Unit Tests" introduced="9.2" purpose="development">
 <unit mrp="os/mm/mmdevicefw/mdfunittest/group/multimedia_unittest_mdf_source.mrp"/>
 </component>
 <component name="asrcontroller" long-name="Speech Recognition Controller" introduced="7.0s" purpose="mandatory">
 <unit bldFile="mw/mmmw/mmmiddlewarefws/mmfw/ASR/group" mrp="mw/mmmw/mmmiddlewarefws/mmfw/ASR/group/multimedia_mmf_ASR.mrp"/>
+</component>
+</collection>
+<collection name="mmswadaptation" long-name="Multimedia Software Adaptation" level="adaptation">
+<component name="videorenderer" long-name="Video Renderer" introduced="tb92" purpose="optional">
+<unit bldFile="mw/mmmw/mmmiddlewarefws/mmfw/videorenderer/group" mrp="mw/mmmw/mmmiddlewarefws/mmfw/videorenderer/group/multimedia_videorenderer.mrp"/>
 </component>
 </collection>
 <collection name="mmtestenv" long-name="Multimedia Test Environment" level="device-fw">
@@ -1413,8 +854,29 @@
 </component>
 </collection>
 <collection name="omxil" long-name="OpenMAX IL" level="hw-if">
-<component name="openmax" long-name="OpenMAX" introduced="tb91" purpose="optional">
-<unit bldFile="os/mm/omxil/openmax/group" mrp="os/mm/omxil/openmax/group/multimedia_openmax.mrp"/>
+<component name="omxilapi" long-name="OpenMAX IL API" introduced="tb92" purpose="optional">
+<unit bldFile="os/mm/omxil/omxilapi/group" mrp="os/mm/omxil/omxilapi/group/multimedia_omx_il_api.mrp" version="1"/>
+<unit bldFile="os/mm/omxil/omxilapi2/group" mrp="os/mm/omxil/omxilapi2/group/multimedia_omx_il_api.mrp" version="2"/>
+</component>
+<component name="omxilcore" long-name="OpenMAX IL Core" introduced="tb92" purpose="optional">
+<unit bldFile="os/mm/omxil/omxilcore/group" mrp="os/mm/omxil/omxilcore/group/multimedia_omx_il_core.mrp" version="1"/>
+<unit bldFile="os/mm/omxil/omxilcore2/group" mrp="os/mm/omxil/omxilcore2/group/multimedia_omx_il_core.mrp" version="2"/>
+</component>
+<component name="omxilcompfw" long-name="OpenMAX IL Component Framework" introduced="Future" purpose="optional">
+<unit bldFile="os/mm/omxil/omxilcompfw/components/group" mrp="os/mm/omxil/omxilcompfw/components/group/multimedia_omx_il_comp.mrp"/>
+</component>
+<component name="omxilrefcomps" long-name="OpenMAX IL Reference Components" introduced="tb92" purpose="optional">
+<unit bldFile="os/mm/omxil/omxilrefcomps/ref_components/group" mrp="os/mm/omxil/omxilrefcomps/ref_components/group/multimedia_omx_il_comp_ref.mrp" version="1"/>
+<unit bldFile="os/mm/mmdataplane/omxiltranslators/group_omx_ref_components" mrp="os/mm/mmdataplane/omxiltranslators/group_omx_ref_components/multimedia_omx_il_comp_ref.mrp" version="2"/>
+</component>
+<component name="omxilunittest" long-name="OpenMAX IL Unit Tests" introduced="tb92" purpose="development">
+<unit mrp="os/mm/omxil/omxilunittest/group/multimedia_unittest_omx_il.mrp"/>
+</component>
+<component name="omxilcoreconftest" long-name="OpenMAX IL Core Conformance Suite" introduced="tb92" purpose="development">
+<unit mrp="os/mm/omxil/omxilcoreconftest/group/multimedia_omx_il_core_loader_conf_suite.mrp"/>
+</component>
+<component name="mmilapi" long-name="Multimedia Integration Layer API" introduced="tb92" purpose="development">
+<unit bldFile="os/mm/omxil/mmilapi/group" mrp="os/mm/omxil/mmilapi/group/multimedia_il_api.mrp"/>
 </component>
 </collection>
 <collection name="devsound" long-name="Sound Device" level="devices">
@@ -1442,9 +904,6 @@
 <component name="a3fintegrationtest" long-name="A3F Integration Tests" introduced="tb92" purpose="development">
 <unit mrp="os/mm/devsound/a3fintegrationtest/group/multimedia_inttest_a3f_devsound_source.mrp"/>
 </component>
-<component name="a3fcharacterisationtest" long-name="A3F Characterisation Tests" introduced="tb91" purpose="development">
-<unit mrp="os/mm/devsound/a3fcharacterisationtest/group/multimedia_a3f_devsound_char.mrp"/>
-</component>
 <component name="a3fsrvstart" long-name="A3F Server Start" introduced="tb92" purpose="optional" plugin="Y">
 <unit bldFile="os/mm/devsound/a3fsrvstart/group" mrp="os/mm/devsound/a3fsrvstart/group/multimedia_a3f_serverstart.mrp"/>
 </component>
@@ -1463,7 +922,11 @@
 <unit bldFile="os/mm/mmhais/refacladapt/group" mrp="os/mm/mmhais/refacladapt/group/multimedia_a3f_refacladaptation.mrp"/>
 </component>
 <component name="videohai" long-name="Video HAI" introduced="7.0s" purpose="mandatory">
-<unit bldFile="os/mm/mmhais/videohai/group" mrp="os/mm/mmhais/videohai/group/multimedia_videohai.mrp"/>
+<unit bldFile="mw/mmmw/mmmiddlewarefws/mmfw/DevVideo/group" mrp="mw/mmmw/mmmiddlewarefws/mmfw/DevVideo/group/multimedia_mdf_devvideo.mrp"/>
+<!-- PLACEHOLDER="DEF138192" REMOVE -->
+<!-- PLACEHOLDER="DEF138192"
+		<unit bldFile="mmhais/videohai/group" mrp="mmhais/videohai/group/multimedia_mdf_devvideo.mrp"/>
+		-->
 </component>
 <component name="dvbhreceiverhai" long-name="Mobile TV DVB-H Receiver HAI" introduced="tb92" purpose="optional">
 <unit bldFile="os/mm/mmhais/dvbhreceiverhai/hai/dvbh/group" mrp="os/mm/mmhais/dvbhreceiverhai/hai/dvbh/group/multimedia_mobiletv_dvbh_hai.mrp"/>
@@ -1472,116 +935,61 @@
 <unit mrp="os/mm/mmhais/dvbhunittest/hai/dvbh/group/multimedia_unittest_dvbhhai.mrp"/>
 </component>
 </collection>
+<collection name="mmhostprocess" long-name="Multimedia Host Process" level="devices">
+<component name="mmhpvideoclient" long-name="MMHP Video Client" introduced="Future" purpose="optional">
+<unit bldFile="os/mm/mmhostprocess/mmhpvideoclient/mmvideocomponents/group" mrp="os/mm/mmhostprocess/mmhpvideoclient/mmvideocomponents/group/multimedia_mmhp_video_client.mrp"/>
+</component>
+<component name="mmhpaudioclient" long-name="MMHP Audio Client" introduced="Future" purpose="optional">
+<unit bldFile="os/mm/mmhostprocess/mmhpaudioclient/mmaudiocomponents/group" mrp="os/mm/mmhostprocess/mmhpaudioclient/mmaudiocomponents/group/multimedia_mmhp_audio_client.mrp"/>
+</component>
+<component name="mmhpcameraclient" long-name="MMHP Camera Client" introduced="Future" purpose="optional">
+<unit bldFile="os/mm/mmhostprocess/mmhpcameraclient/mmcameracomponents/group" mrp="os/mm/mmhostprocess/mmhpcameraclient/mmcameracomponents/group/multimedia_mmhp_camera_client.mrp"/>
+</component>
+</collection>
+<collection name="mmdataplane" long-name="Multimedia Data Plane Adaptation" level="hw-if">
+<component name="omxilnodes" long-name="OpenMAX IL Data Plane Nodes" introduced="Future" purpose="optional" plugin="Y">
+<unit bldFile="os/mm/mmdataplane/omxilnodes/group" mrp="os/mm/mmdataplane/omxilnodes/group/multimedia_data_plane_nodes.mrp"/>
+</component>
+<component name="omxiltranslators" long-name="OpenMAX IL Translators" introduced="Future" purpose="optional" plugin="Y">
+<unit bldFile="os/mm/mmdataplane/omxiltranslators/group_translators" mrp="os/mm/mmdataplane/omxiltranslators/group_translators/multimedia_openmax_il_translators.mrp"/>
+</component>
+</collection>
+<collection name="mmpacketvideo" long-name="Multimedia PacketVideo" level="middleware">
+<component name="mmpvcodecs" long-name="PacketVideo Codecs" introduced="tb92" purpose="development" plugin="Y">
+<unit bldFile="os/mm/mmpacketvideo/mmpvcodecs/group" mrp="os/mm/mmpacketvideo/mmpvcodecs/group/multimedia_pv_aac.mrp"/>
+</component>
+<component name="omxilpvcomps" long-name="OpenMAX IL PacketVideo Components" introduced="tb92" purpose="development">
+<unit bldFile="os/mm/mmpacketvideo/omxilpvcomps/group" mrp="os/mm/mmpacketvideo/omxilpvcomps/group/multimedia_omx_il_pv_comps.mrp"/>
+</component>
+<component name="mmilapipv" long-name="Multimedia Integration Layer API PacketVideo" introduced="tb92" purpose="development">
+<unit bldFile="os/mm/mmpacketvideo/mmilapipv/group" mrp="os/mm/mmpacketvideo/mmilapipv/group/multimedia_il_api_pv.mrp"/>
+</component>
+<component name="a3fpvintegrationtest" long-name="A3F PacketVideo Integration Tests" introduced="tb92" purpose="development">
+<unit mrp="os/mm/mmpacketvideo/a3fpvintegrationtest/group/multimedia_inttest_pv_a3f_devsound_source.mrp"/>
+</component>
+</collection>
 <collection name="mmapitest" long-name="Multimedia API Tests" level="app-if">
 <component name="mmsvs" long-name="Multimedia Verification Suite" introduced="tb91" purpose="development">
 <unit mrp="os/mm/mmapitest/mmsvs/group/mmsvs.mrp"/>
 </component>
 <component name="devvideohaitest" long-name="DevVideo HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1645"
-      <unit mrp="mmapitest/devvideohaitest/group/devvideohai.mrp"/>
+<!-- PLACEHOLDER="DS.1675"
+	<unit mrp="mmapitest/devvideohaitest/group/devvideohai.mrp"/>
 	-->
 </component>
 <component name="devsoundhaitest" long-name="DevSound HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1645"
-      <unit mrp="mmapitest/devsoundhaitest/group/devsoundhai.mrp"/>
+<!-- PLACEHOLDER="DS.1675"
+	<unit mrp="mmapitest/devsoundhaitest/group/devsoundhai.mrp"/>
 	-->
 </component>
 <component name="devsoundexthaitest" long-name="DevSound Extensions HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1645"
-      <unit mrp="mmapitest/devsoundexthaitest/group/devsoundexthai.mrp"/>
+<!-- PLACEHOLDER="DS.1675"
+	<unit mrp="mmapitest/devsoundexthaitest/group/devsoundexthai.mrp"/>
 	-->
 </component>
 </collection>
 </block>
-<block name="graphics" level="services" long-name="Graphics" levels="adaptation engines internal-adaptations device-interface internal-utils app-if">
-<collection name="graphicstest" long-name="Graphics Test" level="app-if">
-<component name="graphicstestharness" long-name="Graphics Test Harness" introduced="8.1" purpose="development">
-<unit mrp="os/graphics/graphicstest/graphicstestharness/group/graphics_testharness.mrp"/>
-</component>
-<component name="uibench" long-name="UI Bench" introduced="9.2" purpose="development">
-<unit bldFile="os/graphics/graphicstest/uibench/group" mrp="os/graphics/graphicstest/uibench/group/graphics_ui_bench.mrp"/>
-</component>
-</collection>
-<collection name="graphics_info" long-name="Graphics Info" level="app-if">
-<component name="graphicsdocs" long-name="Graphics Documentation" purpose="development" class="doc">
-<unit mrp="os/graphics/graphics_info/graphicsdocs/graphics_documentation.mrp"/>
-</component>
-<component name="graphics_metadata" long-name="Graphics Metadata" introduced="tb91" purpose="development" class="config PC">
-<unit mrp="os/graphics/graphics_info/graphics_metadata/graphics_metadata.mrp"/>
-</component>
-</collection>
-<collection name="windowing" long-name="Windowing" level="app-if">
-<component name="windowserver" long-name="Window Server" purpose="mandatory">
-<unit bldFile="os/graphics/windowing/windowserver/group" mrp="os/graphics/windowing/windowserver/group/graphics_wserv.mrp"/>
-</component>
-</collection>
-<collection name="printingservices" long-name="Printing Services" level="app-if">
-<component name="printerdriversupport" long-name="Printer Driver Support" purpose="optional">
-<unit bldFile="os/graphics/printingservices/printerdriversupport/group" mrp="os/graphics/printingservices/printerdriversupport/group/graphics_pdrstore.mrp"/>
-</component>
-<component name="printerdrivers" long-name="Printer Drivers" purpose="optional" plugin="Y">
-<unit bldFile="os/graphics/printingservices/printerdrivers/group" mrp="os/graphics/printingservices/printerdrivers/group/graphics_printdrv.mrp"/>
-</component>
-</collection>
-<collection name="fbs" long-name="Font and Bitmap Server" level="device-interface">
-<component name="fontandbitmapserver" long-name="Font and Bitmap Server" purpose="mandatory">
-<unit bldFile="os/graphics/fbs/fontandbitmapserver/group" mrp="os/graphics/fbs/fontandbitmapserver/group/graphics_fbserv.mrp"/>
-</component>
-</collection>
-<collection name="opengles" long-name="OpenGLES" level="internal-adaptations">
-<component name="openglesinterface" long-name="OpenGL ES Interface" introduced="8.0" purpose="optional">
-<unit bldFile="os/graphics/opengles/openglesinterface/group" mrp="os/graphics/opengles/openglesinterface/group/graphics_openglesheaders.mrp"/>
-</component>
-<component name="n:openglesimplementation" long-name="OpenGL ES Implementation" filter="gt" introduced="8.0" purpose="development">
-<unit bldFile="os/graphics/opengles/openglesimplementation/group/" mrp="os/graphics/opengles/openglesimplementation/group/graphics_opengles.mrp"/>
-</component>
-<component name="n:openglesdisplayproperties" long-name="OpenGL ES Display Properties" introduced="8.0" purpose="optional">
-<unit bldFile="os/graphics/opengles/openglesdisplayproperties/group" mrp="os/graphics/opengles/openglesdisplayproperties/group/graphics_openglesdisplayproperty.mrp"/>
-</component>
-</collection>
-<collection name="openvg" long-name="OpenVG" level="internal-adaptations">
-<component name="openvginterface" long-name="OpenVG Interface" introduced="tb91" purpose="optional">
-<unit bldFile="os/graphics/openvg/openvginterface/group" mrp="os/graphics/openvg/openvginterface/group/graphics_openvgheaders.mrp"/>
-</component>
-</collection>
-<collection name="egl" long-name="EGL" level="internal-adaptations">
-<component name="eglinterface" long-name="EGL Interface" introduced="tb91" purpose="optional">
-<unit bldFile="os/graphics/egl/eglinterface/group" mrp="os/graphics/egl/eglinterface/group/graphics_eglheaders.mrp"/>
-</component>
-<component name="n:eglimplementation" long-name="EGL Implementation" introduced="tb91" purpose="optional">
-<unit bldFile="os/graphics/egl/eglimplementation/group/" mrp="os/graphics/egl/eglimplementation/group/graphics_egl.mrp"/>
-</component>
-</collection>
-<collection name="graphicsdeviceinterface" long-name="Graphics Device Interface" level="device-interface">
-<component name="gdi" long-name="GDI" purpose="mandatory">
-<unit bldFile="os/graphics/graphicsdeviceinterface/gdi/group" mrp="os/graphics/graphicsdeviceinterface/gdi/group/graphics_gdi.mrp"/>
-</component>
-<component name="bitgdi" long-name="BitGDI" purpose="mandatory">
-<unit bldFile="os/graphics/graphicsdeviceinterface/bitgdi/group" mrp="os/graphics/graphicsdeviceinterface/bitgdi/group/graphics_bitgdi.mrp"/>
-</component>
-<component name="colourpalette" long-name="Colour Palette" introduced="7.0s" purpose="optional">
-<unit bldFile="os/graphics/graphicsdeviceinterface/colourpalette/group" mrp="os/graphics/graphicsdeviceinterface/colourpalette/group/graphics_palette.mrp"/>
-</component>
-<component name="screendriver" long-name="Screen Driver" introduced="6.1" purpose="optional" plugin="Y">
-<unit bldFile="os/graphics/graphicsdeviceinterface/screendriver/group" mrp="os/graphics/graphicsdeviceinterface/screendriver/group/graphics_screendriver.mrp"/>
-</component>
-</collection>
-<collection name="graphicstools" long-name="Graphics Tools" level="internal-utils">
-<component name="gdi_tools" long-name="GDI Tools" purpose="development" class="PC">
-<unit bldFile="os/graphics/graphicstools/gdi_tools/group" mrp="os/graphics/graphicstools/gdi_tools/group/graphics_gditools.mrp"/>
-</component>
-</collection>
-<collection name="graphcisapitest" long-name="Graphics API Tests" level="app-if">
-<component name="graphicssvs" long-name="Graphics Verification Suite" introduced="tb91" purpose="development">
-<unit mrp="os/graphics/graphicsapitest/graphicssvs/group/graphicssvs.mrp"/>
-</component>
-<component name="screendriverhaitest" long-name="Screen Driver HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1645"
-      <unit mrp="graphicsapitest/screendriverhaitest/group/screendriverhai.mrp"/>
-	-->
-</component>
-</collection>
-</block>
+<block name="graphics" level="services"/>
 <block name="textandloc" level="services" long-name="Text and Localisation Services" levels="encoding util fonts tools text">
 <collection name="charconvfw" long-name="Character Conversion" level="encoding">
 <component name="charconv_fw" long-name="Character Encoding and Conversion Framework" purpose="optional">
@@ -1607,14 +1015,16 @@
 <component name="freetypefontrasteriser" long-name="FreeType Font Rasteriser" purpose="optional" plugin="Y">
 <unit bldFile="os/textandloc/fontservices/freetypefontrasteriser/group" mrp="os/textandloc/fontservices/freetypefontrasteriser/group/graphics_freetype.mrp"/>
 </component>
-<component name="n:itypefontrasteriser" long-name="iType Font Rasteriser" filter="gt" introduced="tb92" purpose="development" plugin="Y">
+<component name="itypefontrasteriser" long-name="iType Font Rasteriser" filter="gt" introduced="tb92" purpose="development" plugin="Y">
 <unit bldFile="os/graphics/fbs/itypefontrasteriser/group" mrp="os/graphics/fbs/itypefontrasteriser/group/graphics_itype.mrp"/>
 </component>
 <component name="referencefonts" long-name="Reference Fonts" introduced="6.0" purpose="optional">
 <unit bldFile="os/textandloc/fontservices/referencefonts/group" mrp="os/textandloc/fontservices/referencefonts/group/graphics_fonts.mrp"/>
 </component>
-<component name="n:testfonts" long-name="Test Fonts" filter="gt" introduced="tb91" purpose="development">
-<unit bldFile="os/textandloc/fontservices/graphicstestfonts/group" mrp="os/textandloc/fontservices/graphicstestfonts/group/graphics_testfonts.mrp"/>
+<component name="testfonts" long-name="Test Fonts" filter="gt" introduced="tb91" purpose="development" class="placeholder">
+<!-- placeholder 
+        <unit bldFile="fontservices/graphicstestfonts/group" mrp="fontservices/graphicstestfonts/group/graphics_testfonts.mrp"/>
+        -->
 </component>
 </collection>
 <collection name="textlayout" long-name="Text Layout" level="text">
@@ -1663,8 +1073,17 @@
 <component name="xmlfw" long-name="XML Framework" introduced="7.0s" purpose="optional">
 <unit bldFile="os/xmlsrv/xml/xmlfw/group" mrp="os/xmlsrv/xml/xmlfw/group/syslibs_xml.mrp"/>
 </component>
+<component name="libxml2libs" long-name="Libxml2 Libraries" introduced="tb92" purpose="optional">
+<unit bldFile="os/xmlsrv/xml/libxml2libs/group" mrp="os/xmlsrv/xml/libxml2libs/group/syslibs_libxml2.mrp"/>
+</component>
+<component name="xmldomandxpath" long-name="XML DOM and XPath" introduced="tb92" purpose="optional">
+<unit bldFile="os/xmlsrv/xml/xmldomandxpath/group" mrp="os/xmlsrv/xml/xmldomandxpath/group/syslibs_xmldom.mrp"/>
+</component>
 <component name="xmlexpatparser" long-name="XML Expat Parser" introduced="7.0s" purpose="optional" plugin="Y">
 <unit bldFile="os/xmlsrv/xml/xmlexpatparser/group" mrp="os/xmlsrv/xml/xmlexpatparser/group/syslibs_xmlparser.mrp"/>
+</component>
+<component name="xmllibxml2parser" long-name="XML Libxml2 Parser" introduced="tb92" purpose="optional" plugin="Y">
+<unit bldFile="os/xmlsrv/xml/xmllibxml2parser/group" mrp="os/xmlsrv/xml/xmllibxml2parser/group/syslibs_xmlparser2.mrp"/>
 </component>
 <component name="wbxmlparser" long-name="WBXML Parser" introduced="7.0s" purpose="optional" plugin="Y">
 <unit bldFile="os/xmlsrv/xml/wbxmlparser/group" mrp="os/xmlsrv/xml/wbxmlparser/group/syslibs_wbxmlparser.mrp"/>
@@ -1699,30 +1118,13 @@
 </component>
 </collection>
 </block>
-<block name="osrndtools" level="services" long-name="OS RD tools" levels="fw trace">
-<collection name="testexecfw1" long-name="Test Execution Framework v1" level="fw">
-<component name="cinidata" long-name="CINI Data" purpose="development">
-<unit bldFile="os/osrndtools/testexecfw1/cinidata" mrp="os/osrndtools/testexecfw1/cinidata/tools_cinidata.mrp"/>
-</component>
-<component name="testexecute" long-name="Test Execute" deprecated="tb91" purpose="development">
-<unit bldFile="os/osrndtools/testexecfw1/testexecute/Group" mrp="os/osrndtools/testexecfw1/testexecute/Group/tools_testexecute.mrp"/>
-</component>
-</collection>
-<collection name="osrndtools_info" long-name="OS RD tools Info" level="trace">
-<component name="osrndtools_metadata" long-name="OS RD tools Metadata" introduced="tb91" purpose="development" class="config PC">
-<unit mrp="os/osrndtools/osrndtools_info/osrndtools_metadata/osrndtools_metadata.mrp"/>
-</component>
-</collection>
-</block>
+<block name="osrndtools" level="services"/>
 </layer>
 <layer name="mw" long-name="Middleware" levels="generic specific">
 <block name="appsupport" level="generic" long-name="Generic Application Support" levels="system plugin framework server generic specific">
 <collection name="filehandling" long-name="File Handling" level="server">
 <component name="fileconverterfw" long-name="File Converter Framework" purpose="optional">
 <unit bldFile="mw/appsupport/filehandling/fileconverterfw/group" mrp="mw/appsupport/filehandling/fileconverterfw/group/app-framework_conarc.mrp"/>
-</component>
-<component name="fileconverterplugins" long-name="Other File Converter Plugins" introduced="ER5" deprecated="9.3" purpose="optional" plugin="Y">
-<unit bldFile="mw/appsupport/filehandling/fileconverterplugins/group" mrp="mw/appsupport/filehandling/fileconverterplugins/group/app-engines_convert.mrp"/>
 </component>
 <component name="htmltorichtextconverter" long-name="HTML to RichText Converter" introduced="7.0" purpose="optional" plugin="Y">
 <unit bldFile="mw/appsupport/filehandling/htmltorichtextconverter/group" mrp="mw/appsupport/filehandling/htmltorichtextconverter/group/app-services_chtmltocrtconv.mrp"/>
@@ -1740,7 +1142,7 @@
 <component name="alarmserver" long-name="Alarm Server" introduced="7.0" purpose="optional">
 <unit bldFile="mw/appsupport/commonappservices/alarmserver/Group" mrp="mw/appsupport/commonappservices/alarmserver/Group/app-services_alarmserver.mrp"/>
 </component>
-<component name="alarmservertest" long-name="Alarm Server Test" introduced="8.1" deprecated="tb92" purpose="development">
+<component name="alarmservertest" long-name="Alarm Server Test" deprecated="tb92" introduced="8.1" purpose="development">
 <unit bldFile="mw/appsupport/commonappservices/alarmservertest/TestAlarmSrv" mrp="mw/appsupport/commonappservices/alarmservertest/TestAlarmSrv/app-services_testalarmsrv.mrp"/>
 </component>
 <component name="coreappstest" long-name="Core Apps Test" introduced="8.1" purpose="development">
@@ -1774,14 +1176,19 @@
 </component>
 </collection>
 <collection name="contenthandling" long-name="Content Handling" level="plugin">
-<component name="contenthandlingfw" long-name="Content Handling Framework" introduced="8.0" purpose="optional">
-<unit bldFile="mw/appsupport/contenthandling/contenthandlingfw/Group" mrp="mw/appsupport/contenthandling/contenthandlingfw/Group/content-handling.mrp"/>
-</component>
 <component name="webrecognisers" long-name="Web Recognisers" purpose="optional" plugin="Y">
 <unit bldFile="mw/appsupport/contenthandling/webrecognisers/group" mrp="mw/appsupport/contenthandling/webrecognisers/group/application-protocols_recognisers.mrp"/>
 </component>
 <component name="referencedrmagent" long-name="Reference DRM Agent" introduced="8.0" purpose="development">
 <unit bldFile="mw/appsupport/contenthandling/referencedrmagent/RefTestAgent/group" mrp="mw/appsupport/contenthandling/referencedrmagent/RefTestAgent/group/security_rta.mrp"/>
+</component>
+</collection>
+<collection name="openenvutils" long-name="Open Environment Utilities" level="specific">
+<component name="commandshell" long-name="Command Shell" introduced="tb92" purpose="development">
+<unit bldFile="mw/appsupport/openenvutils/commandshell/group" mrp="mw/appsupport/openenvutils/commandshell/group/oetools_zsh.mrp"/>
+</component>
+<component name="telnetserver" long-name="Telnet Server" introduced="tb92" purpose="development">
+<unit bldFile="mw/appsupport/openenvutils/telnetserver/group" mrp="mw/appsupport/openenvutils/telnetserver/group/oetools_telnetd.mrp"/>
 </component>
 </collection>
 <collection name="printingsupport" long-name="Printing Support" level="generic">
@@ -1800,6 +1207,14 @@
 <unit mrp="mw/appsupport/appfw/uiftestfw/group/app-framework_testframework.mrp"/>
 </component>
 </collection>
+<collection name="applaunchservices" long-name="Application Launch Services" level="generic">
+<component name="aftermarketappstarter" long-name="After Market Application Starter" introduced="tb92" purpose="optional">
+<unit bldFile="mw/appsupport/applaunchservices/aftermarketappstarter/group" mrp="mw/appsupport/applaunchservices/aftermarketappstarter/group/app-framework_amastart.mrp"/>
+</component>
+<component name="applaunchplugins" long-name="Application Launch Plugins" introduced="tb92" purpose="optional">
+<unit bldFile="mw/appsupport/applaunchservices/applaunchplugins/group" mrp="mw/appsupport/applaunchservices/applaunchplugins/group/app-framework_aplp.mrp"/>
+</component>
+</collection>
 <collection name="tzpcside" long-name="Time Zone PC Side" level="plugin">
 <component name="tzcompiler" long-name="Time Zone Compiler" introduced="9.1" purpose="optional" class="config PC">
 <unit bldFile="mw/appsupport/tzpcside/tzcompiler/group" mrp="mw/appsupport/tzpcside/tzcompiler/group/app-services_tzcompiler.mrp"/>
@@ -1814,18 +1229,6 @@
 <collection name="appsupport_info" long-name="Generic Application Support Info" level="specific">
 <component name="appsupport_metadata" long-name="Generic Application Support Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="mw/appsupport/appsupport_info/appsupport_metadata/appsupport_metadata.mrp"/>
-</component>
-</collection>
-</block>
-<block name="securitysrv" level="generic" long-name="Security Services" levels="plugin framework server generic specific">
-<collection name="pkiutilities" long-name="PKI Utilities" level="plugin">
-<component name="ocsp" long-name="Online Certificate Status Protocol" introduced="tb91" purpose="optional">
-<unit bldFile="mw/securitysrv/pkiutilities/ocsp/group" mrp="mw/securitysrv/pkiutilities/ocsp/group/securitysrv_ocsp.mrp"/>
-</component>
-</collection>
-<collection name="securitysrv_info" long-name="Security Services Info" level="specific">
-<component name="securitysrv_metadata" long-name="Security Services Metadata" introduced="tb91" purpose="development" class="config PC">
-<unit mrp="mw/securitysrv/securitysrv_info/securitysrv_metadata/securitysrv_metadata.mrp"/>
 </component>
 </collection>
 </block>
@@ -1864,8 +1267,8 @@
 <unit bldFile="mw/netprotocols/applayerpluginsandutils/httptransportplugins/group" mrp="mw/netprotocols/applayerpluginsandutils/httptransportplugins/group/http_transport-plugin.mrp"/>
 </component>
 </collection>
-<collection name="n:wapstack" long-name="WAP Stack" level="plugin">
-<component name="n:wapmessageapi" long-name="WAP Message API" purpose="optional">
+<collection name="wapstack" long-name="WAP Stack" level="plugin">
+<component name="wapmessageapi" long-name="WAP Message API" purpose="optional">
 <unit bldFile="mw/netprotocols/wapstack/wapmessageapi/group" mrp="mw/netprotocols/wapstack/wapmessageapi/group/wap-stack_wapmessage.mrp"/>
 </component>
 </collection>
@@ -1881,18 +1284,33 @@
 <!-- Real Time Data Protocol -->
 <unit bldFile="mw/ipappprotocols/realtimenetprots/rtp/group" mrp="mw/ipappprotocols/realtimenetprots/rtp/group/mm-protocols_rtp.mrp"/>
 </component>
-<component name="sipfw" long-name="SIP Framework" introduced="9.2" filter="gt" purpose="optional">
+<component name="srtp" long-name="Secure RTP" introduced="tb92" purpose="optional">
+<unit bldFile="mw/ipappprotocols/realtimenetprots/srtp/group" mrp="mw/ipappprotocols/realtimenetprots/srtp/group/mm-protocols_srtp.mrp"/>
+</component>
+<component name="sipfw" long-name="SIP Framework" introduced="9.2" purpose="optional">
 <unit bldFile="mw/ipappprotocols/realtimenetprots/sipfw/Group" mrp="mw/ipappprotocols/realtimenetprots/sipfw/Group/mm-protocols_SIP2_Com.mrp" version="2"/>
 </component>
 </collection>
 <collection name="sipproviderplugins" long-name="SIP Provider Plugins" level="conn">
-<component name="sipprovider" long-name="SIP Provider" introduced="tb91" filter="gt" purpose="optional" plugin="Y">
+<component name="sipprovider" long-name="SIP Provider" introduced="tb91" purpose="optional" plugin="Y">
 <unit bldFile="mw/ipappprotocols/sipproviderplugins/sipprovider/group" mrp="mw/ipappprotocols/sipproviderplugins/sipprovider/group/mm-protocols_SipProvider.mrp"/>
 </component>
 </collection>
 <collection name="ipappprotocols_info" long-name="IP App Protocols Info" level="server">
 <component name="ipappprotocols_metadata" long-name="IP App Protocols Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="mw/ipappprotocols/ipappprotocols_info/ipappprotocols_metadata/ipappprotocols_metadata.mrp"/>
+</component>
+</collection>
+</block>
+<block name="ipappsrv" level="specific" long-name="IP App Services" levels="framework generic server conn plugin">
+<collection name="multimediacommscontroller" long-name="Multimedia Comms Controller" level="conn">
+<component name="amrpayloadformatter" long-name="AMR Payload Formatter" introduced="tb92" purpose="optional">
+<unit bldFile="mw/ipappsrv/multimediacommscontroller/amrpayloadformatter/group" mrp="mw/ipappsrv/multimediacommscontroller/amrpayloadformatter/group/mm-protocols_rtpamr.mrp"/>
+</component>
+</collection>
+<collection name="ipappsrv_info" long-name="IP App Services Info" level="plugin">
+<component name="ipappsrv_metadata" long-name="IP App Services Metadata" introduced="tb91" purpose="development" class="config PC">
+<unit mrp="mw/ipappsrv/ipappsrv_info/ipappsrv_metadata/ipappsrv_metadata.mrp"/>
 </component>
 </collection>
 </block>
@@ -1925,9 +1343,6 @@
 <component name="msgtestproduct" long-name="Messaging Test Product" purpose="development">
 <unit mrp="mw/messagingmw/messagingfw/msgtestproduct/group/messaging_testproduct.mrp"/>
 </component>
-<component name="biowatchers" long-name="BIO Watchers" introduced="8.0" purpose="optional" plugin="Y">
-<unit bldFile="mw/messagingmw/messagingfw/biowatchers/Group" mrp="mw/messagingmw/messagingfw/biowatchers/Group/messaging_biomsg_biowatchers_cdma.mrp"/>
-</component>
 <component name="sendas" long-name="Send As" purpose="optional">
 <unit bldFile="mw/messagingmw/messagingfw/sendas/group" mrp="mw/messagingmw/messagingfw/sendas/group/messaging_sendas2.mrp"/>
 </component>
@@ -1937,10 +1352,10 @@
 <component name="wappushfw" long-name="WAP Push Framework" introduced="6.1" purpose="optional">
 <unit bldFile="mw/messagingmw/messagingfw/wappushfw/group" mrp="mw/messagingmw/messagingfw/wappushfw/group/wap-browser_wappush.mrp"/>
 </component>
-<component name="n:suplsmshandler" long-name="SUPL SMS Handler" introduced="tb91" purpose="development" plugin="Y">
+<component name="suplsmshandler" long-name="SUPL SMS Handler" introduced="tb91" purpose="development" plugin="Y">
 <unit bldFile="mw/messagingmw/messagingfw/suplsmshandler/group" mrp="mw/messagingmw/messagingfw/suplsmshandler/group/lbs_suplsmstrigger.mrp"/>
 </component>
-<component name="n:suplwappushhandler" long-name="SUPL WAP Push Handler" introduced="tb91" purpose="optional" plugin="Y">
+<component name="suplwappushhandler" long-name="SUPL WAP Push Handler" introduced="tb91" purpose="optional" plugin="Y">
 <unit bldFile="mw/messagingmw/messagingfw/suplwappushhandler/group" mrp="mw/messagingmw/messagingfw/suplwappushhandler/group/lbs_suplwappush.mrp"/>
 </component>
 </collection>
@@ -1950,66 +1365,25 @@
 </component>
 </collection>
 </block>
-<block name="remotemgmt" level="specific" long-name="Remote Management" levels="plugin framework server generic specific">
-<collection name="n:remotemgmttest" long-name="Remote Management Test" level="specific">
-<component name="n:omasyncmlintegrationtest" long-name="OMA SyncML Integration Test" introduced="7.0s" purpose="development">
-<unit bldFile="mw/remotemgmt/remotemgmttest/omasyncmlintegrationtest/group" mrp="mw/remotemgmt/remotemgmttest/omasyncmlintegrationtest/group/oma_syncml_integtest.mrp"/>
-</component>
-<component name="n:omadevicemgmtintegrationtest" long-name="OMA Device Management Integration Test" introduced="9.1" purpose="development">
-<unit bldFile="mw/remotemgmt/remotemgmttest/omadevicemgmtintegrationtest/group" mrp="mw/remotemgmt/remotemgmttest/omadevicemgmtintegrationtest/group/devprov_integtest.mrp"/>
-</component>
-</collection>
-<collection name="n:syncandremotemgmtfw" long-name="Sync and Remote Management Framework" level="framework">
-<component name="n:omasyncmldatasync" long-name="OMA SyncML Data Sync" introduced="7.0s" purpose="optional">
-<unit bldFile="mw/remotemgmt/syncandremotemgmtfw/omasyncmldatasync/Group" mrp="mw/remotemgmt/syncandremotemgmtfw/omasyncmldatasync/Group/oma_syncml_datasync.mrp"/>
-</component>
-<component name="n:omasyncmlcommonfw" long-name="OMA SyncML Common Framework" introduced="7.0s" purpose="optional">
-<unit bldFile="mw/remotemgmt/syncandremotemgmtfw/omasyncmlcommonfw/Group" mrp="mw/remotemgmt/syncandremotemgmtfw/omasyncmlcommonfw/Group/oma_syncml_common_framework.mrp"/>
-</component>
-<component name="n:omasyncmldminterface" long-name="OMA SyncML DM Interface" introduced="7.0s" purpose="optional">
-<unit bldFile="mw/remotemgmt/syncandremotemgmtfw/omasyncmldminterface/group" mrp="mw/remotemgmt/syncandremotemgmtfw/omasyncmldminterface/group/oma_syncml_dm_interface.mrp"/>
-</component>
-<component name="n:omasyncmlconfig" long-name="OMA SyncML Config" introduced="tb91" purpose="optional">
-<unit bldFile="mw/remotemgmt/syncandremotemgmtfw/omasyncmlconfig/group" mrp="mw/remotemgmt/syncandremotemgmtfw/omasyncmlconfig/group/oma_syncml_config.mrp"/>
-</component>
-<component name="n:devicemgmtfw" long-name="Device Management Framework" introduced="8.0" purpose="optional">
-<unit bldFile="mw/remotemgmt/syncandremotemgmtfw/devicemgmtfw/group" mrp="mw/remotemgmt/syncandremotemgmtfw/devicemgmtfw/group/devprov_devman_framework.mrp"/>
-</component>
-<component name="n:clientprovisioningfw" long-name="Client Provisioning Framework" introduced="9.1" purpose="optional">
-<unit bldFile="mw/remotemgmt/syncandremotemgmtfw/clientprovisioningfw/Group" mrp="mw/remotemgmt/syncandremotemgmtfw/clientprovisioningfw/Group/devprov_clientprov_framework.mrp"/>
-</component>
-</collection>
-<collection name="n:syncandremotemgmtservices" long-name="Sync and Remote Management Services" level="plugin">
-<component name="n:datasyncadaptors" long-name="Data Sync Adaptors" introduced="7.0s" purpose="optional" plugin="Y">
-<unit bldFile="mw/remotemgmt/syncandremotemgmtservices/datasyncadaptors/group" mrp="mw/remotemgmt/syncandremotemgmtservices/datasyncadaptors/group/data_sync_adaptors.mrp"/>
-</component>
-<component name="n:devicemgmtadaptors" long-name="Device Management Adaptors" introduced="9.1" purpose="optional" plugin="Y">
-<unit bldFile="mw/remotemgmt/syncandremotemgmtservices/devicemgmtadaptors/devman/Group" mrp="mw/remotemgmt/syncandremotemgmtservices/devicemgmtadaptors/devman/Group/devprov_devman_adapters.mrp"/>
-</component>
-<component name="n:clientprovisioningadaptors" long-name="Client Provisioning Adaptors" introduced="9.1" purpose="optional" plugin="Y">
-<unit bldFile="mw/remotemgmt/syncandremotemgmtservices/clientprovisioningadaptors/group" mrp="mw/remotemgmt/syncandremotemgmtservices/clientprovisioningadaptors/group/devprov_clientprov_adapters.mrp"/>
-</component>
-</collection>
-<collection name="remotemgmt_info" long-name="Remote Management Info" level="specific">
-<component name="n:remotemgmt_metadata" long-name="Remote Management Metadata" introduced="tb91" purpose="development" class="config PC">
-<unit mrp="mw/remotemgmt/remotemgmt_info/remotemgmt_metadata/remotemgmt_metadata.mrp"/>
-</component>
-</collection>
-</block>
 <block name="remoteconn" level="generic" long-name="Remote Connectivity" levels="plugin framework server generic specific">
 <collection name="remoteconn_info" long-name="Remote Connectivity Info" level="specific">
 <component name="remoteconn_metadata" long-name="Remote Connectivity Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="mw/remoteconn/remoteconn_info/remoteconn_metadata/remoteconn_metadata.mrp"/>
 </component>
-<component name="n:connectivitydoc" long-name="Connectivity Documentation" introduced="tb91" purpose="optional" class="doc">
+<component name="connectivitydoc" long-name="Connectivity Documentation" introduced="tb91" purpose="optional" class="doc">
 <unit mrp="mw/remoteconn/remoteconn_info/connectivitydoc/group/connectivity_documentation.mrp"/>
 </component>
-<component name="n:mtpdoc" long-name="MTP Documentation" introduced="tb91" purpose="optional" class="doc">
+<component name="mtpdoc" long-name="MTP Documentation" introduced="tb91" purpose="optional" class="doc">
 <unit mrp="mw/remoteconn/remoteconn_info/mtpdoc/group/mtp_documentation.mrp"/>
 </component>
 </collection>
+<collection name="usbfunctiondrivers" long-name="USB Function Drivers" level="server">
+<component name="massstoragemgr" long-name="Mass Storage Manager" introduced="tb92" purpose="optional">
+<unit bldFile="mw/remoteconn/usbfunctiondrivers/massstoragemgr/group" mrp="mw/remoteconn/usbfunctiondrivers/massstoragemgr/group/connectivity_usbms.mrp"/>
+</component>
+</collection>
 <collection name="connectivitytransports" long-name="Connectivity Transports" level="plugin">
-<component name="n:mrouter" long-name="m-Router" filter="gt" purpose="optional">
+<component name="mrouter" long-name="m-Router" filter="gt" purpose="optional">
 <unit bldFile="mw/remoteconn/connectivitytransports/mrouter/group" mrp="mw/remoteconn/connectivitytransports/mrouter/group/connectivity_mRouterSecure.mrp"/>
 </component>
 <component name="plpremotelink" long-name="PLP Remote Link" deprecated="9.0" purpose="optional">
@@ -2018,17 +1392,20 @@
 <component name="plpvariant" long-name="PLP Variant" deprecated="9.0" purpose="optional">
 <unit bldFile="mw/remoteconn/connectivitytransports/plpvariant/group" mrp="mw/remoteconn/connectivitytransports/plpvariant/group/connectivity_legacy_plp_plpvariant.mrp"/>
 </component>
-<component name="eventbroadcast" long-name="Event Broadcast" deprecated="9.0" purpose="optional">
-<unit bldFile="mw/remoteconn/connectivitytransports/eventbroadcast/group" mrp="mw/remoteconn/connectivitytransports/eventbroadcast/group/connectivity_legacy_brdcst.mrp"/>
-</component>
 </collection>
 <collection name="mtptransports" long-name="MTP Transports" level="plugin">
 <component name="mtpusbtransport" long-name="MTP USB Transport" introduced="tb91" purpose="optional" plugin="Y">
 <unit bldFile="mw/remoteconn/mtptransports/mtpusbtransport/group" mrp="mw/remoteconn/mtptransports/mtpusbtransport/group/mtp_usbsic.mrp"/>
 </component>
+<component name="mtpptpiptransport" long-name="MTP PTP-IP Transport" introduced="tb92" purpose="optional" plugin="Y">
+<unit bldFile="mw/remoteconn/mtptransports/mtpptpiptransport/group" mrp="mw/remoteconn/mtptransports/mtpptpiptransport/group/mtp_ptpip.mrp"/>
+</component>
+<component name="mtbttransport" long-name="MTP Bluetooth Transport" introduced="tb92" purpose="optional" plugin="Y">
+<unit bldFile="mw/remoteconn/mtptransports/mtpbttransport/group" mrp="mw/remoteconn/mtptransports/mtpbttransport/group/mtp_bt.mrp"/>
+</component>
 </collection>
 <collection name="mtpfws" long-name="MTP Frameworks" level="framework">
-<component name="n:mtpfw" long-name="MTP Framework" introduced="tb91" purpose="optional">
+<component name="mtpfw" long-name="MTP Framework" introduced="tb91" purpose="optional">
 <unit bldFile="mw/remoteconn/mtpfws/mtpfw/group" mrp="mw/remoteconn/mtpfws/mtpfw/group/mtp_framework.mrp"/>
 </component>
 <component name="mtpintegrationtest" long-name="MTP Integration Test" introduced="tb91" purpose="development">
@@ -2039,15 +1416,21 @@
 <component name="mtpfileandfolderdp" long-name="MTP File and Folder Provider" introduced="tb91" purpose="optional" plugin="Y">
 <unit bldFile="mw/remoteconn/mtpdataproviders/mtpfileandfolderdp/group" mrp="mw/remoteconn/mtpdataproviders/mtpfileandfolderdp/group/mtp_filedp.mrp"/>
 </component>
-<component name="n:mtpwmpextndp" long-name="WMP Extension Data Provider" introduced="tb91" purpose="optional" plugin="Y">
-<unit bldFile="mw/remoteconn/mtpdataproviders/mtpwmpextndp/group" mrp="mw/remoteconn/mtpdataproviders/mtpwmpextndp/group/mtp_wmpextndp.mrp"/>
+<component name="mtpbackupandrestoredp" long-name="Backup and Restore Provider" introduced="Future" purpose="optional" plugin="Y">
+<unit bldFile="mw/remoteconn/mtpdataproviders/mtpbackupandrestoredp/group" mrp="mw/remoteconn/mtpdataproviders/mtpbackupandrestoredp/group/mtp_backupnrestoredp.mrp"/>
+</component>
+<component name="mtptaskdp" long-name="MTP Task Provider" introduced="tb92" purpose="optional" plugin="Y">
+<unit bldFile="mw/remoteconn/mtpdataproviders/mtptaskdp/group" mrp="mw/remoteconn/mtpdataproviders/mtptaskdp/group/mtp_taskdp.mrp"/>
+</component>
+<component name="mtpcalendardp" long-name="MTP Calendar Provider" introduced="tb92" purpose="optional" plugin="Y">
+<unit bldFile="mw/remoteconn/mtpdataproviders/mtpcalendardp/group" mrp="mw/remoteconn/mtpdataproviders/mtpcalendardp/group/mtp_calendardp.mrp"/>
 </component>
 </collection>
 <collection name="backupandrestore" long-name="Backup and Restore" level="specific">
 <component name="backupengine" long-name="Backup Engine" introduced="9.0" purpose="optional">
 <unit bldFile="mw/remoteconn/backupandrestore/backupengine/group" mrp="mw/remoteconn/backupandrestore/backupengine/group/connectivity_backupengine.mrp"/>
 </component>
-<component name="backuptest" long-name="Backup Test" introduced="tb91" purpose="development">
+<component name="backuptest" long-name="Backup Test" introduced="tb92" purpose="development">
 <unit bldFile="mw/remoteconn/backupandrestore/backuptest/group" mrp="mw/remoteconn/backupandrestore/backuptest/group/connectivity_backuptest.mrp"/>
 </component>
 </collection>
@@ -2055,11 +1438,8 @@
 <component name="chatscripts" long-name="Chat Scripts" purpose="development">
 <unit bldFile="mw/remoteconn/connectivitypcside/chatscripts/group" mrp="mw/remoteconn/connectivitypcside/chatscripts/group/testtools_chatscripts.mrp"/>
 </component>
-<component name="n:connectqi" long-name="ConnectQI" introduced="9.1" purpose="optional" class="PC">
+<component name="connectqi" long-name="ConnectQI" introduced="9.1" purpose="optional" class="PC">
 <unit mrp="mw/remoteconn/connectivitypcside/connectqi/connectqisdk_mr3.mrp"/>
-</component>
-<component name="n:connectqisdk" long-name="ConnectQI SDK" introduced="9.1" purpose="optional" class="PC">
-<unit mrp="mw/remoteconn/connectivitypcside/connectqisdk/connectqisdk_public.mrp"/>
 </component>
 </collection>
 <collection name="connectivitydevicefws" long-name="Connectivity Device Frameworks" level="framework">
@@ -2071,6 +1451,7 @@
 </component>
 </collection>
 </block>
+<block name="srvdiscovery" level="generic"/>
 <block name="shortlinkconn" level="generic" long-name="Shortlink Connectivity" levels="framework server generic specific plugin">
 <collection name="obex" long-name="OBEX" level="generic">
 <component name="obexprotocol" long-name="OBEX Protocol" introduced="9.1" purpose="optional">
@@ -2194,8 +1575,23 @@
 <component name="swidevicetools" long-name="Secure Software Install Device Tools" introduced="8.1" purpose="development">
 <unit bldFile="mw/appinstall/installationservices/swidevicetools/group" mrp="mw/appinstall/installationservices/swidevicetools/group/security_switools_device.mrp"/>
 </component>
+<component name="swcomponentregistry" long-name="Software Component Registry" introduced="Future" purpose="mandatory">
+<unit bldFile="mw/appinstall/installationservices/swcomponentregistry/group" mrp="mw/appinstall/installationservices/swcomponentregistry/group/security_softwarecomponentregistry.mrp"/>
+</component>
+<component name="swinstallationfw" long-name="Software Installation Framework" introduced="Future" purpose="optional">
+<unit bldFile="mw/appinstall/installationservices/swinstallationfw/group" mrp="mw/appinstall/installationservices/swinstallationfw/group/security_softwareinstallframework.mrp"/>
+</component>
+<component name="swtransactionservices" long-name="Software Transaction Services" introduced="Future" purpose="optional">
+<unit bldFile="mw/appinstall/installationservices/swtransactionservices/group" mrp="mw/appinstall/installationservices/swtransactionservices/group/security_softwaretransactionservices.mrp"/>
+</component>
+<component name="refswinstallationplugin" long-name="Reference Software Installation Plugin" introduced="Future" purpose="development" plugin="Y">
+<unit bldFile="mw/appinstall/installationservices/refswinstallationplugin/group" mrp="mw/appinstall/installationservices/refswinstallationplugin/group/security_sifrefplugin.mrp"/>
+</component>
+<component name="refsoftwareappmgr" long-name="Reference Software Application Manager" introduced="Future" purpose="development">
+<unit bldFile="mw/appinstall/installationservices/refsoftwareappmgr/group" mrp="mw/appinstall/installationservices/refsoftwareappmgr/group/security_referenceapplicationmanager.mrp"/>
+</component>
 <component name="switestfw" long-name="Software Install Test Framework" deprecated="tb92" introduced="7.0" purpose="development">
-<unit bldFile="mw/appinstall/installationservices/switestfw/group" mrp="mw/appinstall/installationservices/switestfw/group/install_testframework.mrp"/>
+<unit mrp="mw/appinstall/installationservices/switestfw/group/install_testframework.mrp"/>
 </component>
 <component name="swiconfig" long-name="Software Install Config" introduced="9.1" purpose="optional" class="config">
 <unit bldFile="mw/appinstall/installationservices/swiconfig/group" mrp="mw/appinstall/installationservices/swiconfig/group/install_config.mrp"/>
@@ -2205,7 +1601,7 @@
 <component name="makekeys" long-name="MakeKeys" filter="gt" introduced="6.0" purpose="optional" class="PC">
 <unit bldFile="mw/appinstall/secureswitools/makekeys/group" mrp="mw/appinstall/secureswitools/makekeys/group/security_makekeys.mrp"/>
 </component>
-<component name="n:swianalysistoolkit" long-name="SWI Analysis Toolkit" purpose="development" class="PC">
+<component name="swianalysistoolkit" long-name="SWI Analysis Toolkit" purpose="development" class="PC">
 <unit bldFile="mw/appinstall/secureswitools/swianalysistoolkit/group" mrp="mw/appinstall/secureswitools/swianalysistoolkit/group/security_switools.mrp"/>
 </component>
 <component name="openssllib" long-name="OpenSSL Library" purpose="optional" class="PC">
@@ -2223,7 +1619,7 @@
 <block name="contacts" level="apps" span="2" long-name="Contacts Apps" levels="engine support services ui">
 <collection name="phonebookengines" long-name="Phonebook Engines" level="engine">
 <component name="contactsmodel" long-name="Contacts Model" introduced="ER5" purpose="optional">
-<unit bldFile="app/contacts/phonebookengines/contactsmodel/group" mrp="app/contacts/phonebookengines/contactsmodel/group/app-engines_cntmodel.mrp" version="1"/>
+<unit bldFile="app/contacts/phonebookengines/contactsmodel/groupsql" mrp="app/contacts/phonebookengines/contactsmodel/groupsql/app-engines_cntmodel.mrp" version="2"/>
 </component>
 </collection>
 <collection name="pimprotocols" long-name="PIM Protocols" level="services">
@@ -2248,25 +1644,8 @@
 <component name="calendarvcalplugin" long-name="Calendar vCal Plugin" introduced="8.1" purpose="optional" plugin="Y">
 <unit bldFile="app/organizer/pimappservices/calendarvcalplugin/group" mrp="app/organizer/pimappservices/calendarvcalplugin/group/app-engines_agnversit2.mrp" version="2"/>
 </component>
-<component name="agendamodeltest" long-name="Agenda Model Test" introduced="8.1" purpose="development">
-<unit bldFile="app/organizer/pimappservices/agendamodeltest/TestAgendaSrv" mrp="app/organizer/pimappservices/agendamodeltest/TestAgendaSrv/app-engines_testagendasrv.mrp"/>
-</component>
 <component name="appenginesdocs" long-name="Application Engines Documentation" purpose="development" class="doc">
 <unit mrp="app/organizer/pimappservices/appenginesdocs/app-engines_documentation.mrp"/>
-</component>
-</collection>
-<collection name="officeappeng" long-name="Office App Engines" level="engine">
-<component name="datamodel" long-name="Data Engine" introduced="ER5" deprecated="9.3" purpose="optional">
-<unit bldFile="app/organizer/officeappeng/datamodel/group" mrp="app/organizer/officeappeng/datamodel/group/app-engines_damodel.mrp"/>
-</component>
-<component name="sheeteng" long-name="Sheet Engine" introduced="ER5" deprecated="9.3" purpose="optional">
-<unit bldFile="app/organizer/officeappeng/sheeteng/group" mrp="app/organizer/officeappeng/sheeteng/group/app-engines_sheng.mrp"/>
-</component>
-<component name="charteng" long-name="Chart" introduced="ER5" deprecated="9.3" purpose="optional">
-<unit mrp="app/organizer/officeappeng/charteng/group/app-engines_chart.mrp"/>
-</component>
-<component name="wordeng" long-name="Word Engine" introduced="ER5" deprecated="9.3" purpose="optional">
-<unit bldFile="app/organizer/officeappeng/wordeng/group" mrp="app/organizer/officeappeng/wordeng/group/app-engines_wpeng.mrp"/>
 </component>
 </collection>
 <collection name="pimappsupport" long-name="PIM Application Support" level="support">
@@ -2276,7 +1655,7 @@
 <component name="chinesecalendarconverter" long-name="Chinese Calendar Converter" introduced="6.1" purpose="optional">
 <unit bldFile="app/organizer/pimappsupport/chinesecalendarconverter/group" mrp="app/organizer/pimappsupport/chinesecalendarconverter/group/app-services_calcon.mrp"/>
 </component>
-<component name="n:chinesecalendaralg" long-name="Chinese Calendar Algorithm" introduced="tb91" purpose="optional" plugin="Y">
+<component name="chinesecalendaralg" long-name="Chinese Calendar Algorithm" introduced="tb91" purpose="optional" plugin="Y">
 <unit bldFile="app/organizer/pimappsupport/chinesecalendaralg/group" mrp="app/organizer/pimappsupport/chinesecalendaralg/group/app-services_chinesecalendaralgorithm.mrp"/>
 </component>
 </collection>
@@ -2289,15 +1668,19 @@
 <block name="messaging" level="apps" span="2" long-name="Messaging Apps" levels="mail eng base ui">
 <collection name="mobilemessaging" long-name="Mobile Messaging" level="ui">
 <component name="smsmtm" long-name="SMS MTM" purpose="optional" plugin="Y">
-<unit bldFile="app/messaging/mobilemessaging/smsmtm/multimode/Group" mrp="app/messaging/mobilemessaging/smsmtm/multimode/Group/messaging_sms_multimode.mrp"/>
+<unit bldFile="app/messaging/mobilemessaging/smsmtm/group" mrp="app/messaging/mobilemessaging/smsmtm/group/messaging_sms.mrp"/>
 </component>
 </collection>
 <collection name="mmsengine" long-name="MMS Engine" level="eng">
 <component name="mmssettings" long-name="MMS Settings" introduced="9.2" purpose="optional">
-<unit bldFile="app/messaging/mmsengine/mmssettings/group" mrp="app/messaging/mmsengine/mmssettings/group/messaging_mmssettings.mrp"/>
+<unit bldFile="app/messaging/mmsengine/mmssettings/group/" mrp="app/messaging/mmsengine/mmssettings/group/messaging_mmssettings.mrp"/>
 </component>
 <component name="mmsconf" long-name="MMS Configuration" purpose="optional">
-<unit bldFile="app/messaging/mmsengine/mmsconf" mrp="app/messaging/mmsengine/mmsconf/messaging_mmssettings-config.mrp"/>
+<unit mrp="app/messaging/mmsengine/mmssettings/group/messaging_mmssettings-config.mrp"/>
+<!--PLACEHOLDER="DEF139515" REMOVE-->
+<!-- PLACEHOLDER="DEF139515"
+		<unit bldFile="mmsengine/mmsconf/" mrp="mmsengine/mmsconf/messaging_mmssettings-config.mrp"/>
+		-->
 </component>
 </collection>
 <collection name="messagingappbase" long-name="Messaging App Base" level="base">
@@ -2323,17 +1706,17 @@
 </collection>
 </block>
 <block name="helps" level="apps" span="2" long-name="Help Apps" levels="eng tools unused ui">
-<collection name="n:symhelptools" long-name="Symbian Help Tools" level="tools">
-<component name="n:mbmcodec" long-name="MBM Codec" filter="gt" purpose="development">
+<collection name="symhelptools" long-name="Symbian Help Tools" level="tools">
+<component name="mbmcodec" long-name="MBM Codec" filter="gt" purpose="development">
 <unit bldFile="app/helps/symhelp/mbmcodec/group" mrp="app/helps/symhelp/mbmcodec/group/tools_sdk_eng_mbmcodec.mrp"/>
 </component>
-<component name="n:cshlpcmpgui" long-name="CSHelp Compiler GUI" filter="gt" purpose="development">
+<component name="cshlpcmpgui" long-name="CSHelp Compiler GUI" filter="gt" purpose="development">
 <unit bldFile="app/helps/symhelp/cshlpcmpgui/group" mrp="app/helps/symhelp/cshlpcmpgui/group/tools_sdk_eng_cshlpcmp_gui.mrp" priority="1010"/>
 </component>
-<component name="n:cshlpcmpfrontend" long-name="CSHelp Compiler Frontend" purpose="development">
+<component name="cshlpcmpfrontend" long-name="CSHelp Compiler Frontend" purpose="development">
 <unit bldFile="app/helps/symhelp/cshlpcmpfrontend/group" mrp="app/helps/symhelp/cshlpcmpfrontend/group/tools_sdk_eng_cshlpcmp_frontend.mrp"/>
 </component>
-<component name="n:cshlpcmpbackend" long-name="CSHelp Compiler Backend" purpose="development">
+<component name="cshlpcmpbackend" long-name="CSHelp Compiler Backend" purpose="development">
 <unit mrp="app/helps/symhelp/cshlpcmpbackend/group/tools_sdk_eng_cshlpcmp_backend_srconly.mrp"/>
 </component>
 </collection>
@@ -2348,116 +1731,7 @@
 </component>
 </collection>
 </block>
-<block name="techview" level="apps" span="2" long-name="Techview" levels="services ui utils apps1 apps2 apps3">
-<collection name="buildverification" long-name="Build Verification" level="services">
-<component name="autosmoketest" long-name="Auto Smoke Test" filter="gt" purpose="development" introduced="9.1">
-<unit bldFile="app/techview/buildverification/autosmoketest/Group" mrp="app/techview/buildverification/autosmoketest/Group/testtools_autosmoketest.mrp"/>
-</component>
-<component name="smoketest" long-name="Smoke Test" filter="gt" purpose="development">
-<unit bldFile="app/techview/buildverification/smoketest/Group" mrp="app/techview/buildverification/smoketest/Group/testtools_smoketest.mrp"/>
-</component>
-</collection>
-<collection name="sysvalidation" long-name="System Validation" level="services">
-<component name="integtestltsy" long-name="Integration Test Licensee TSY" filter="systemtest" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DEF140073" 
-        <unit bldFile="sysvalidation/integtestltsy/group" mrp="sysvalidation/integtestltsy/group/integtestltsy.mrp"/>
-        -->
-</component>
-<!--PLACEHOLDER="DEF140016" START REMOVE -->
-<!--PLACEHOLDER="DEF140016" END REMOVE -->
-</collection>
-<collection name="installationapps" long-name="Installation Apps" level="apps2">
-<component name="swisistools" long-name="Secure Software Install SIS Tools" purpose="optional" class="PC">
-<unit bldFile="mw/appinstall/secureswitools/swisistools/group" mrp="mw/appinstall/secureswitools/swisistools/group/security_sistools.mrp"/>
-</component>
-</collection>
-<collection name="networkingutils" long-name="Networking Utils" level="utils">
-<component name="ipadministrationtool" long-name="IP Administration Tool" introduced="7.0" purpose="development">
-<unit mrp="app/techview/networkingutils/ipadministrationtool/group/networking_ipadm.mrp"/>
-</component>
-<component name="nameresolverutility" long-name="Name Resolver Utility" introduced="7.0s" purpose="development">
-<unit mrp="app/techview/networkingutils/nameresolverutility/group/networking_nslookup.mrp"/>
-</component>
-</collection>
-<collection name="testapps" long-name="Test Apps" level="utils">
-<component name="rschandler" long-name="Resource Handler" deprecated="tb92" purpose="development">
-<unit mrp="app/techview/testapps/rschandler/TVResourceHandler/group/Testtools_ResourceHandler_gt.mrp"/>
-</component>
-</collection>
-<collection name="techview_info" long-name="Techview Info" level="apps3">
-<component name="techview_metadata" long-name="Techview Metadata" introduced="tb91" purpose="development" class="config PC">
-<unit mrp="app/techview/techview_info/techview_metadata/techview_metadata.mrp"/>
-</component>
-</collection>
-</block>
+<block name="techview" level="apps" span="2"/>
 </layer>
 </systemModel>
-<SystemBuild schema="1.0.0">
-  <option name="KEEPGOING" abldOption="-keepgoing" description="Causes make to keepgoing on errors" enable="Y"/>
-  <option name="SAVESPACE" abldOption="-savespace" description="Causes the removal of intermediate files" enable="Y"/>
-  <option name="NO_DEBUG" abldOption="-no_debug" description="Causes the toolchain not to generate debug tables" enable="N"/>
-  <target name="WINS" abldTarget="wins" description="MSVC Compiler"/>
-  <target name="WINS_REL" abldTarget="wins urel" description="MSVC Compiler"/>
-  <target name="WINS_DEB" abldTarget="wins udeb" description="MSVC Compiler"/>
-  <target name="WINSCW" abldTarget="winscw" description="CodeWarrior Compiler"/>
-  <target name="WINSCW_REL" abldTarget="winscw urel" description="CodeWarrior Compiler"/>
-  <target name="WINSCW_DEB" abldTarget="winscw udeb" description="CodeWarrior Compiler"/>
-  <target name="TOOLS" abldTarget="tools" description="MSVC Compiler for Tools"/>
-  <target name="TOOLS_REL" abldTarget="tools rel" description="MSVC Compiler for Tools Release mode only"/>
-  <target name="TOOLS2" abldTarget="tools2" description="MinGW GCC Compiler for Tools"/>
-  <target name="TOOLS2_REL" abldTarget="tools2 rel" description="MinGW GCC Compiler for Tools Release mode only"/>
-  <target name="ARMV5" abldTarget="armv5" description="RVCT Compiler"/>
-  <target name="ARMV5_REL" abldTarget="armv5 urel" description="RVCT Compiler"/>
-  <target name="ARMV5_DEB" abldTarget="armv5 udeb" description="RVCT Compiler"/>
-  <!-- Aditional Targets -->
-  <target name="CWTOOLS" abldTarget="cwtools" description="CodeWarrior Compiler for Tools"/> <!-- Not supported -->
-  <target name="CWTOOLS_REL" abldTarget="cwtools rel" description="CodeWarrior Compiler for Tools Release mode only"/> <!-- Not supported -->
-  <target name="GCCXML" abldTarget="gccxml" description="GCCXML for Code comparision tools"/>
-  <target name="GCCXML_REL" abldTarget="gccxml urel" description="GCCXML for Code comparision tools release mode only"/>
-  <targetList name="default_9.0" description="Main Targets for 9.0" target="WINSCW ARMV5"/>
-  <targetList name="default_9.0_rel" description="Main Targets for 9.0_rel" target="WINSCW_REL ARMV5_REL"/>
-  <targetList name="default_9.0_deb" description="Main Targets for 9.0_deb" target="WINSCW_DEB ARMV5_DEB"/>
-  <targetList name="tools" description="tools Targets" target="TOOLS"/>
-  <targetList name="tools_rel" description="tools Release Targets" target="TOOLS_REL"/>
-  <targetList name="tools2" description="tools Targets" target="TOOLS2"/>
-  <targetList name="tools2_rel" description="tools Release Targets" target="TOOLS2_REL"/>
-  <targetList name="gccxml" description="tools Targets" target="GCCXML"/>
-  <targetList name="gccxml_rel" description="tools Release Targets" target="GCCXML_REL"/>
-  <!-- 9.4 configuration -->
-    <!-- tb91 configuration -->
-    <!-- tb91sf configuration -->
-  <configuration name="GT_tb91sf" description="tb91sf GT build" filter="tb91sf,gt">
-    <ref item="os"/>
-    <ref item="mw"/>
-    <ref item="app"/>
-    <task><specialInstructions name="BootStrap1" cwd="os/buildtools/sbsv1_os/e32toolp/group" command="setupprj.bat secure"/></task>
-    <task><specialInstructions name="BootStrap2" cwd="os/buildtools/sbsv1_os/e32toolp/group" command="bld.bat rel"/></task>
-    <task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
-    <task><buildLayer command="abld export" unitParallel="Y"/></task>
-    <task><buildLayer command="abld makefile" targetList="tools" unitParallel="Y" targetParallel="N"/></task>
-    <task><buildLayer command="abld library" targetList="tools" unitParallel="N" targetParallel="N"/></task>
-    <task><buildLayer command="abld target" targetList="tools_rel" unitParallel="N" targetParallel="N"/></task>
-    <task><buildLayer command="abld final" targetList="tools_rel" unitParallel="N" targetParallel="N"/></task>
-    <task><buildLayer command="abld -what build" targetList="tools_rel" unitParallel="N" targetParallel="N"/></task>
-    <task><buildLayer command="abld -check build" targetList="tools_rel" unitParallel="N" targetParallel="N"/></task>
-    <task><buildLayer command="abld makefile" targetList="tools2" unitParallel="Y" targetParallel="Y"/></task>
-    <task><buildLayer command="abld library" targetList="tools2" unitParallel="Y" targetParallel="Y"/></task>
-    <task><buildLayer command="abld target" targetList="tools2_rel" unitParallel="Y" targetParallel="Y"/></task> 
-    <task><buildLayer command="abld final" targetList="tools2_rel" unitParallel="Y" targetParallel="Y"/></task>
-    <task><buildLayer command="abld -what build" targetList="tools2_rel" unitParallel="Y" targetParallel="Y"/></task>
-    <task><buildLayer command="abld -check build" targetList="tools2_rel" unitParallel="Y" targetParallel="Y"/></task>
-    <task><buildLayer command="abld makefile" targetList="default_9.0" unitParallel="Y" targetParallel="N"/></task>
-    <task><buildLayer command="abld resource" targetList="default_9.0" unitParallel="N" targetParallel="N"/></task>
-    <task><buildLayer command="abld library" targetList="default_9.0" unitParallel="N" targetParallel="N"/></task>
-    <task><buildLayer command="abld target" targetList="default_9.0" unitParallel="Y" targetParallel="Y"/></task>
-    <task><buildLayer command="abld final" targetList="default_9.0" unitParallel="N" targetParallel="N"/></task>
-    <task><buildLayer command="abld -what export" unitParallel="Y"/></task>
-    <task><buildLayer command="abld -what target" targetList="default_9.0_rel" unitParallel="Y" targetParallel="Y"/></task>
-    <task><buildLayer command="abld -what target" targetList="default_9.0_deb" unitParallel="Y" targetParallel="Y"/></task>
-    <task><buildLayer command="abld help" unitParallel="Y"/></task>
-    <task><buildLayer command="abld -check build" targetList="default_9.0" unitParallel="Y" targetParallel="Y"/></task>
-  </configuration>
-    <!-- 9.5 configuration -->
-    <!-- 9.6 configuration -->
- <!-- Future configuration -->
-</SystemBuild></SystemDefinition>
+</SystemDefinition>

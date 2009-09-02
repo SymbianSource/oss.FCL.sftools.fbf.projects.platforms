@@ -91,8 +91,27 @@
   cwd CDATA #REQUIRED
   command CDATA #REQUIRED>
 ]>
-<SystemDefinition name="S60_SystemModel + S60_SystemBuild" schema="1.4.0">
+<SystemDefinition name="S60_SystemBuild + S60_SystemModel" schema="1.4.0">
 <systemModel>
+<layer name="os_layer">
+</layer>
+<layer name="SF_SOS">
+<module name="sf_licenseetsystub">
+<component name="sf_licenseetsystub">
+<unit unitID="sf_os_cellularsrv_telephonyserverplugins_licenseetsystub" name="sf_licenseetsystub" bldFile="\sf\os\cellularsrv\telephonyserverplugins\licenseetsystub\group" mrp="" filter="!no_stubs"/>
+</component>
+</module>
+<module name="sf_common_tsy">
+<component name="sf_common_tsy">
+<unit unitID="sf_os_cellularsrv_telephonyserverplugins_common_tsy" name="sf_common_tsy" bldFile="\sf\os\cellularsrv\telephonyserverplugins\common_tsy\group" mrp="" filter=""/>
+</component>
+</module>
+<module name="sf_openvg11">
+<component name="sf_openvg11">
+<unit unitID="sf_os_graphics_openvg_openvginterface_group_openvg11" name="sf_openvg11" bldFile="\sf\os\graphics\openvg\openvginterface\group\openvg11" mrp="" filter=""/>
+</component>
+</module>
+</layer>
 <layer name="sf">
 <logicalset name="adaptation">
 <logicalsubset name="stubs">
@@ -365,7 +384,7 @@
 <logicalsubset name="rndtools">
 <module name="rndtools">
 <component name="rndtools">
-<unit unitID="sf_app_rndtools" name="rndtools" bldFile="\sf\tools\rndtools\group" mrp=""/>
+<unit unitID="sf_app_rndtools" name="rndtools" bldFile="\sf\app\rndtools\group" mrp=""/>
 </component>
 </module>
 </logicalsubset>
@@ -650,7 +669,7 @@
 <logicalsubset name="platformtools">
 <module name="platformtools">
 <component name="platformtools">
-<unit unitID="sf_mw_platformtools" name="platformtools" bldFile="\sf\tools\platformtools\group" mrp=""/>
+<unit unitID="sf_mw_platformtools" name="platformtools" bldFile="\sf\mw\platformtools\group" mrp=""/>
 </component>
 </module>
 </logicalsubset>
@@ -855,17 +874,17 @@
 <logicalsubset name="osrndtools">
 <module name="osrndtools">
 <component name="osrndtools">
-<unit unitID="sf_os_osrndtools" name="osrndtools" bldFile="\sf\ostools\osrndtools\group" mrp=""/>
+<unit unitID="sf_os_osrndtools" name="osrndtools" bldFile="\sf\os\osrndtools\group" mrp=""/>
 </component>
 </module>
 <module name="hti">
 <component name="hti">
-<unit unitID="sf_os_osrndtools_hti" name="hti" bldFile="\sf\ostools\osrndtools\hti\group" mrp=""/>
+<unit unitID="sf_os_osrndtools_hti" name="hti" bldFile="\sf\os\osrndtools\hti\group" mrp=""/>
 </component>
 </module>
 <module name="osrndtools_plat">
 <component name="hti_api">
-<unit unitID="sf_os_osrndtools_osrndtools_plat_hti_api" name="hti_api" bldFile="\sf\ostools\osrndtools\osrndtools_plat\hti_api\group" mrp=""/>
+<unit unitID="sf_os_osrndtools_osrndtools_plat_hti_api" name="hti_api" bldFile="\sf\os\osrndtools\osrndtools_plat\hti_api\group" mrp=""/>
 </component>
 </module>
 </logicalsubset>
@@ -922,11 +941,6 @@
 <unit unitID="sf_tools_homescreentools" name="homescreentools" bldFile="\sf\tools\homescreentools\group" mrp=""/>
 </component>
 </module>
-<module name="htiui">
-<component name="htiui">
-<unit unitID="sf_tools_rndtools_htiui" name="htiui" bldFile="\sf\tools\rndtools\htiui\group" mrp=""/>
-</component>
-</module>
 </logicalsubset>
 <logicalsubset name="swconfigtools">
 <module name="swconfigtools">
@@ -947,27 +961,8 @@
 </module>
 </logicalsubset>
 </logicalset>
-</layer>
-<layer name="os_layer">
-</layer>
-<layer name="SF_SOS">
-<module name="sf_licenseetsystub">
-<component name="sf_licenseetsystub">
-<unit unitID="sf_os_cellularsrv_telephonyserverplugins_licenseetsystub" name="sf_licenseetsystub" bldFile="\sf\os\cellularsrv\telephonyserverplugins\licenseetsystub\group" mrp="" filter="!no_stubs"/>
-</component>
-</module>
-<module name="sf_common_tsy">
-<component name="sf_common_tsy">
-<unit unitID="sf_os_cellularsrv_telephonyserverplugins_common_tsy" name="sf_common_tsy" bldFile="\sf\os\cellularsrv\telephonyserverplugins\common_tsy\group" mrp="" filter=""/>
-</component>
-</module>
-<module name="sf_openvg11">
-<component name="sf_openvg11">
-<unit unitID="sf_os_graphics_openvg_openvginterface_group_openvg11" name="sf_openvg11" bldFile="\sf\os\graphics\openvg\openvginterface\group\openvg11" mrp="" filter=""/>
-</component>
-</module>
 </layer></systemModel>
-<build>
+  <build>
     <option name="KEEPGOING" abldOption="-keepgoing" description="Causes make to keepgoing on errors" enable="Y"/>
 <!--    <option name="SAVESPACE" abldOption="-savespace" description="Causes the removal of intermediate files" enable="Y"/> -->
     <target name="WINS" abldTarget="wins" description="MSVC Compiler"/>
@@ -994,7 +989,7 @@
     <targetList name="tools_rel" description="tools Release Targets" target="TOOLS_REL"/>
     <targetList name="cwtools" description="cwtools Targets" target="CWTOOLS"/>
     <targetList name="cwtools_rel" description="cwtools Release Targets" target="CWTOOLS_REL"/>
-		<configuration name="S60_5_1_sf" description="S60 5.1 clean build" filter="S60_5_1_sf">
+		<configuration name="S60_5_1_sf" description="S60 5.1 clean build" filter="raptor_S60_5_1_sf">
     	<unitListRef unitList="S60_COMMON_OSEXTENSION"/>
       <unitListRef unitList="S60_COMMON"/>
       <unitListRef unitList="S60_SF_BUILD"/>
@@ -1179,4 +1174,5 @@ but components should be built in S60 platform builds
     <!--
     extra components need to be build in winscw build
     -->
-  </build></SystemDefinition>
+  </build>
+</SystemDefinition>
