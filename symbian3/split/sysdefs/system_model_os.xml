@@ -46,7 +46,7 @@
   bldFile CDATA #IMPLIED
   root CDATA #IMPLIED
   version NMTOKEN #IMPLIED
-  prebuilt NMTOKEN #IMPLIED
+  prebuilt NMTOKEN #IMPLIEDa
   late (Y|N) #IMPLIED
   priority CDATA #IMPLIED>
  <!ELEMENT SystemBuild (option* | target+ | targetList+ | list+ | configuration+)*>
@@ -108,17 +108,17 @@
 <unit mrp="os\kernelhwsrv\brdbootldr\ubootldr\base_ubootldr.mrp"/>
 </component>
 </collection>
-<collection name="unistore2" long-name="UniStore2 Flash Translation Layer" level="hw-if">
-<component name="uiidrivers" long-name="UniStore2 Drivers" filter="gt" introduced="9.1" purpose="optional">
+<collection name="n:unistore2" long-name="UniStore2 Flash Translation Layer" level="hw-if">
+<component name="n:uiidrivers" long-name="UniStore2 Drivers" filter="gt" introduced="9.1" purpose="optional">
 <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\unistore2" mrp="os\kernelhwsrv\kernel\eka\drivers\unistore2\base_drivers_unistore2.mrp"/>
 </component>
-<component name="uiicore" long-name="UniStore2 Core" filter="gt" introduced="9.1" purpose="optional">
+<component name="n:uiicore" long-name="UniStore2 Core" filter="gt" introduced="9.1" purpose="optional">
 <unit mrp="os\kernelhwsrv\kernel\eka\drivers\unistore2\base_drivers_unistore2_undeliverable.mrp"/>
 </component>
-<component name="uiicrashlogger" long-name="UniStore2 Crash Logger" filter="gt" introduced="9.1" purpose="optional">
+<component name="n:uiicrashlogger" long-name="UniStore2 Crash Logger" filter="gt" introduced="9.1" purpose="optional">
 <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\crashflash\unistore2" mrp="os\kernelhwsrv\kernel\eka\drivers\crashflash\unistore2\base_crashflash_unistore2.mrp"/>
 </component>
-<component name="uiibootsupport" long-name="UniStore2 Boot Support" filter="gt" introduced="9.1" purpose="optional">
+<component name="n:uiibootsupport" long-name="UniStore2 Boot Support" filter="gt" introduced="9.1" purpose="optional">
 <unit bldFile="os\kernelhwsrv\unistore2\uiibootsupport" mrp="os\kernelhwsrv\unistore2\uiibootsupport\base_nandboot_unistore2.mrp"/>
 </component>
 </collection>
@@ -133,14 +133,17 @@
 </component>
 </collection>
 <collection name="kerneltest" long-name="Kernel Test" level="hw-if">
-<component name="e32test" long-name="E32 Tests" purpose="development">
-<unit bldFile="os\kernelhwsrv\kerneltest\e32test\group" mrp="os\kernelhwsrv\kerneltest\e32test\group\base_e32test.mrp"/>
-</component>
-<component name="sdiotest" long-name="SDIO Tests" filter="gt" introduced="9.2" purpose="development">
+<component name="n:sdiotest" long-name="SDIO Tests" filter="gt" introduced="9.2" purpose="development">
 <unit bldFile="os\kernelhwsrv\kerneltest\sdiotest" mrp="os\kernelhwsrv\kerneltest\sdiotest\base_sdiotests.mrp"/>
 </component>
 <component name="e32utils" long-name="E32 Utilities" purpose="development">
 <unit bldFile="os\kernelhwsrv\kerneltest\e32utils\group" mrp="os\kernelhwsrv\kerneltest\e32utils\group\base_e32utils.mrp"/>
+</component>
+<component name="e32test" long-name="E32 Tests" purpose="development">
+<unit bldFile="os\kernelhwsrv\kerneltest\e32test\group" mrp="os\kernelhwsrv\kerneltest\e32test\group\base_e32test.mrp"/>
+</component>
+<component name="n:e32utils_restricted" long-name="Restricted E32 Utilities" purpose="development">
+<unit bldFile="os\kernelhwsrv\kerneltest\e32utils\group\restricted" mrp="os\kernelhwsrv\kerneltest\e32utils\group\restricted\base_e32utils_restricted.mrp"/>
 </component>
 <component name="f32test" long-name="File Server Tests" purpose="development">
 <unit bldFile="os\kernelhwsrv\kerneltest\f32test\group" mrp="os\kernelhwsrv\kerneltest\f32test\group\base_f32test.mrp"/>
@@ -151,7 +154,7 @@
 <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\ethernet" mrp="os\kernelhwsrv\kernel\eka\drivers\ethernet\base_e32_drivers_ethernet.mrp"/>
 </component>
 <component name="audioldd" long-name="Audio Drivers" introduced="8.1b" purpose="optional">
-<unit bldFile="os\kernelhwsrv\kernel\eka\drivers\esound" mrp="os\kernelhwsrv\kernel\eka\drivers\esound\base_e32_drivers_sound.mrp"/>
+<unit bldFile="os\kernelhwsrv\kernel\eka\drivers\soundsc" mrp="os\kernelhwsrv\kernel\eka\drivers\soundsc\base_e32_drivers_sound.mrp"/>
 </component>
 <component name="serialldd" long-name="Serial Port Drivers" purpose="optional">
 <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\ecomm" mrp="os\kernelhwsrv\kernel\eka\drivers\ecomm\base_e32_drivers_ecomm.mrp"/>
@@ -164,20 +167,20 @@
 <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\locmedia" mrp="os\kernelhwsrv\kernel\eka\drivers\locmedia\base_e32_drivers_locmedia.mrp"/>
 </component>
 <component name="runmodedebugger" long-name="Run Mode Debugger" purpose="mandatory">
-<unit bldFile="os\kernelhwsrv\kernel\eka\drivers\debug" mrp="os\kernelhwsrv\kernel\eka\drivers\debug\base_e32_drivers_debug.mrp"/>
+<unit bldFile="os\kernelhwsrv\kernel\eka\drivers\debug\group" mrp="os\kernelhwsrv\kernel\eka\drivers\debug\group\base_e32_drivers_debug.mrp"/>
 </component>
 <component name="btrace" long-name="Kernel Trace Tool" purpose="mandatory">
 <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\trace" mrp="os\kernelhwsrv\kernel\eka\drivers\trace\base_e32_drivers_trace.mrp"/>
 </component>
-<component name="cameraldd" long-name="Camera Drivers" introduced="Future" purpose="optional">
+<component name="cameraldd" long-name="Camera Drivers" introduced="tb92" purpose="optional">
 <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\camerasc" mrp="os\kernelhwsrv\kernel\eka\drivers\camerasc\base_drivers_camerasc.mrp"/>
 </component>
 </collection>
 <collection name="driversupport" long-name="Generic Driver Support" level="hw-if">
-<component name="sdcard3c" long-name="SD Card 3C Driver" filter="gt" introduced="9.1" purpose="optional">
+<component name="n:sdcard3c" long-name="SD Card 3C Driver" filter="gt" introduced="9.1" purpose="optional">
 <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\medsd3c" mrp="os\kernelhwsrv\kernel\eka\drivers\medsd3c\base_e32_sd3c.mrp"/>
 </component>
-<component name="sdcard4c" long-name="SD Card 4C Driver" filter="gt" introduced="9.1" purpose="optional">
+<component name="n:sdcard4c" long-name="SD Card 4C Driver" filter="gt" introduced="9.1" purpose="optional">
 <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\pbus\mmc\sdcard\sdcard4c" mrp="os\kernelhwsrv\kernel\eka\drivers\pbus\mmc\sdcard\sdcard4c\base_e32_sd4c.mrp"/>
 </component>
 <component name="mediadrivers" long-name="Media Drivers" purpose="optional">
@@ -204,7 +207,7 @@
 <component name="domainmgr" long-name="Domain Manager" introduced="8.1b" purpose="mandatory">
 <unit bldFile="os\kernelhwsrv\userlibandfileserver\domainmgr\group" mrp="os\kernelhwsrv\userlibandfileserver\domainmgr\group\base_domain.mrp"/>
 </component>
-<component name="basedocs" long-name="Base Documentation" purpose="development" class="doc">
+<component name="n:basedocs" long-name="Base Documentation" purpose="development" class="doc">
 <unit mrp="os\kernelhwsrv\userlibandfileserver\basedocs\base_documentation.mrp"/>
 </component>
 </collection>
@@ -230,16 +233,14 @@
 <component name="compfs" long-name="Composite File System" filter="gt" purpose="optional" plugin="Y">
 <unit bldFile="os\kernelhwsrv\userlibandfileserver\fileserver\scomp" mrp="os\kernelhwsrv\userlibandfileserver\fileserver\scomp\base_f32_scomp.mrp"/>
 </component>
-<component name="ntfs" long-name="NTFS" filter="gt" purpose="optional" plugin="Y">
+<component name="n:ntfs" long-name="NTFS" filter="gt" purpose="optional" plugin="Y">
 <unit bldFile="os\kernelhwsrv\userlibandfileserver\fileserver\ntfs" mrp="os\kernelhwsrv\userlibandfileserver\fileserver\ntfs\base_f32_sntfs.mrp"/>
 </component>
-<component name="iso9660fs" long-name="ISO9660 File System" filter="gt" introduced="8.1b" purpose="optional" plugin="Y">
+<component name="n:iso9660fs" long-name="ISO9660 File System" filter="gt" introduced="8.1b" purpose="optional" plugin="Y">
 <unit bldFile="os\kernelhwsrv\userlibandfileserver\fileserver\iso9660" mrp="os\kernelhwsrv\userlibandfileserver\fileserver\iso9660\base_f32_siso9660.mrp"/>
 </component>
-<component name="exfatfs" long-name="exFAT File System" filter="gt" introduced="tb92" purpose="optional" plugin="Y" class="placeholder">
-<!-- PLACEHOLDER="DS.1749"
-        <unit bldFile="userlibandfileserver/fileserver/exfat" mrp="userlibandfileserver/fileserver/exfat/base_f32_exfat.mrp"/>
-		-->
+<component name="n:exfatfs" long-name="exFAT File System" filter="gt" introduced="tb92" purpose="optional" plugin="Y">
+<unit bldFile="os\kernelhwsrv\userlibandfileserver\fileserver\internal\exfat" mrp="os\kernelhwsrv\userlibandfileserver\fileserver\internal\exfat\base_f32_exfat.mrp"/>
 </component>
 </collection>
 <collection name="halservices" long-name="HAL Services" level="framework">
@@ -264,87 +265,86 @@
 <component name="kernelhwsrv_metadata" long-name="Kernel and Hardware Services Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="os\kernelhwsrv\kernelhwsrv_info\kernelhwsrv_metadata\kernelhwsrv_metadata.mrp"/>
 </component>
+<component name="n:nokia_kernelhwsrv_metadata" long-name="Nokia Kernel and Hardware Services Metadata" introduced="tb91" purpose="development" class="config PC">
+<unit mrp="os\kernelhwsrv\kernelhwsrv_info\nokia_kernelhwsrv_metadata\nokia_kernelhwsrv_metadata.mrp"/>
+</component>
 </collection>
 </block>
-<block name="boardsupport" level="hw" long-name="Board Support" levels="bsp test 2 3 4">
+<block name="boardsupport" level="hw" long-name="Board Support" levels="bsp test 2 3 config">
 <collection name="emulator" long-name="Emulator" level="bsp">
 <component name="emulatorbsp" long-name="Emulator BSP" purpose="optional">
 <unit bldFile="os\boardsupport\emulator\emulatorbsp" mrp="os\boardsupport\emulator\emulatorbsp\base_wins.mrp"/>
 </component>
-<component name="unistore2emulatorsupport" long-name="UniStore2 Emulator Support" filter="gt" introduced="tb91" purpose="optional">
+<component name="n:unistore2emulatorsupport" long-name="UniStore2 Emulator Support" filter="gt" introduced="tb91" purpose="optional">
 <unit bldFile="os\boardsupport\emulator\unistore2emulatorsupport" mrp="os\boardsupport\emulator\unistore2emulatorsupport\base_wins_unistore2.mrp"/>
 </component>
 </collection>
-<collection name="omaph4" long-name="OMAP H4" level="bsp">
-<component name="omapusbhotgdrivers" long-name="OMAP USB Host and OTG Controller Drivers" introduced="tb92" filter="gt" purpose="optional">
+<collection name="n:omaph4" long-name="OMAP H4" level="bsp">
+<component name="n:omapusbhotgdrivers" long-name="OMAP USB Host and OTG Controller Drivers" introduced="tb92" filter="gt" purpose="optional">
 <unit bldFile="os\boardsupport\omaph4\omapusbhotgdrivers" mrp="os\boardsupport\omaph4\omapusbhotgdrivers\base_omaph4hrp_usbhostotg_usbware.mrp"/>
 </component>
-<component name="omaph4bsp" long-name="OMAP H4 BSP" purpose="optional">
+<component name="n:omaph4bsp" long-name="OMAP H4 BSP" purpose="optional">
 <unit bldFile="os\boardsupport\omaph4\omaph4bsp\h4" mrp="os\boardsupport\omaph4\omaph4bsp\h4\base_omaph4hrp.mrp"/>
 </component>
-<component name="h4bootloader" long-name="H4 Boot Loader" introduced="9.1" purpose="optional">
+<component name="n:h4bootloader" long-name="H4 Boot Loader" introduced="9.1" purpose="optional">
 <unit mrp="os\boardsupport\omaph4\h4bootloader\base_omaph4hrp_bootldr.mrp" bldFile="os\boardsupport\omaph4\h4bootloader"/>
 </component>
-<component name="omaph4flexible" long-name="OMAP H4 Flexible" introduced="tb92" purpose="optional">
+<component name="n:omaph4flexible" long-name="OMAP H4 Flexible" introduced="tb92" purpose="optional">
 <unit bldFile="os\boardsupport\omaph4\omaph4bsp\h4\flexible" mrp="os\boardsupport\omaph4\omaph4bsp\h4\flexible\base_omaph4hrp_flexible.mrp"/>
 </component>
-<component name="omaph4minienvbootloader" long-name="OMAP H4 Mini Environment Boot Loader" introduced="9.2" purpose="optional">
+<component name="n:omaph4minienvbootloader" long-name="OMAP H4 Mini Environment Boot Loader" introduced="9.2" purpose="optional">
 <unit mrp="os\boardsupport\omaph4\omaph4minienvbootloader\base_omaph4hrp_mebootldr.mrp" bldFile="os\boardsupport\omaph4\omaph4minienvbootloader"/>
 </component>
-<component name="omaph4unistore2" long-name="OMAP H4 Unistore2" filter="gt" introduced="9.2" purpose="optional">
+<component name="n:omaph4unistore2" long-name="OMAP H4 Unistore2" filter="gt" introduced="9.2" purpose="optional">
 <unit bldFile="os\boardsupport\omaph4\omaph4unistore2" mrp="os\boardsupport\omaph4\omaph4unistore2\base_omaph4hrp_unistore2.mrp"/>
 </component>
-<component name="omaph4sdio" long-name="OMAP H4 SDIO" filter="gt" introduced="9.2" purpose="optional">
+<component name="n:omaph4sdio" long-name="OMAP H4 SDIO" filter="gt" introduced="9.2" purpose="optional">
 <unit bldFile="os\boardsupport\omaph4\omaph4sdio" mrp="os\boardsupport\omaph4\omaph4sdio\base_omaph4hrp_sdio.mrp"/>
 </component>
 </collection>
-<collection name="omap3variants" long-name="OMAP3 Variants" level="bsp">
-<component name="tiomap3bsp" long-name="TI OMAP3 BSP" introduced="Future" purpose="optional">
+<collection name="n:omap3variants" long-name="OMAP3 Variants" level="bsp">
+<component name="n:tiomap3bsp" long-name="TI OMAP3 BSP" introduced="Future" purpose="optional">
 <unit bldFile="os\boardsupport\omap3variants\tiomap3bsp\variant\34xx_sdp" mrp="os\boardsupport\omap3variants\tiomap3bsp\base_tiomap3.mrp"/>
 </component>
-<component name="tiomap3unistore2" long-name="TI OMAP3 UniStore2" filter="gt" introduced="Future" purpose="optional">
+<component name="n:tiomap3unistore2" long-name="TI OMAP3 UniStore2" filter="gt" introduced="Future" purpose="optional">
 <unit bldFile="os\boardsupport\omap3variants\tiomap3bsp\variant\34xx_sdp_restricted\unistore2" mrp="os\boardsupport\omap3variants\tiomap3bsp\base_tiomap3_unistore2.mrp"/>
 </component>
-<component name="omap3h6flexible" long-name="OMAP3 H6 Flexible" introduced="tb92" purpose="optional" class="placeholder">
-<!-- PLACEHOLDER="DEF130160"
-		<unit bldFile="omap3variants/tiomap3bsp/variant/34xx_sdp/flexible" mrp="omap3variants/tiomap3bsp/variant/34xx_sdp/flexible/base_tiomap3_flexible.mrp"/>
-	     -->
+<component name="n:omap3h6flexible" long-name="OMAP3 H6 Flexible" introduced="tb92" purpose="optional">
+<unit bldFile="os\boardsupport\omap3variants\tiomap3bsp\variant\34xx_sdp\flexible" mrp="os\boardsupport\omap3variants\tiomap3bsp\variant\34xx_sdp\flexible\base_tiomap3_flexible.mrp"/>
 </component>
-<component name="omap3h6uiiflexible" long-name="OMAP3 H6 UniStore2 Flexible" filter="gt" introduced="tb92" purpose="optional" class="placeholder">
-<!-- PLACEHOLDER="DEF130160"
-		<unit bldFile="omap3variants/tiomap3bsp/variant/34xx_sdp_restricted/unistore2/flexible" mrp="omap3variants/tiomap3bsp/variant/34xx_sdp_restricted/unistore2/flexible/base_tiomap3_unistore2_flexible.mrp"/>
-	     -->
+<component name="n:omap3h6uiiflexible" long-name="OMAP3 H6 UniStore2 Flexible" filter="gt" introduced="tb92" purpose="optional">
+<unit bldFile="os\boardsupport\omap3variants\tiomap3bsp\variant\34xx_sdp_restricted\unistore2\flexible" mrp="os\boardsupport\omap3variants\tiomap3bsp\variant\34xx_sdp_restricted\unistore2\flexible\base_tiomap3_unistore2_flexible.mrp"/>
 </component>
-<component name="tiomap3h6sdio" long-name="TI OMAP3 H6 SDIO" filter="gt" introduced="tb92" purpose="optional">
+<component name="n:tiomap3h6sdio" long-name="TI OMAP3 H6 SDIO" filter="gt" introduced="tb92" purpose="optional">
 <unit bldFile="os\boardsupport\omap3variants\tiomap3bsp\variant\34xx_sdp_restricted\sdio" mrp="os\boardsupport\omap3variants\tiomap3bsp\variant\34xx_sdp_restricted\sdio\base_tiomap3_sdio.mrp"/>
 </component>
-<component name="tiomap3labbsp" long-name="TI OMAP3 LAB Baseport" filter="gt" introduced="tb92" purpose="optional">
+<component name="n:tiomap3labbsp" long-name="TI OMAP3 LAB Baseport" filter="gt" introduced="tb92" purpose="optional">
 <unit bldFile="os\boardsupport\omap3variants\tiomap3bsp\variant\lab" mrp="os\boardsupport\omap3variants\tiomap3bsp\variant\lab\base_tiomap3_lab.mrp"/>
 </component>
-<component name="tiomap3labsdio" long-name="TI OMAP3 LAB SDIO" filter="gt" introduced="tb92" purpose="optional">
+<component name="n:tiomap3labsdio" long-name="TI OMAP3 LAB SDIO" filter="gt" introduced="tb92" purpose="optional">
 <unit bldFile="os\boardsupport\omap3variants\tiomap3bsp\variant\lab_restricted\sdio" mrp="os\boardsupport\omap3variants\tiomap3bsp\variant\lab_restricted\sdio\base_tiomap3_lab_sdio.mrp"/>
 </component>
-<component name="tiomap3labuii" long-name="TI OMAP3 LAB UniStore2" filter="gt" introduced="tb92" purpose="optional">
+<component name="n:tiomap3labuii" long-name="TI OMAP3 LAB UniStore2" filter="gt" introduced="tb92" purpose="optional">
 <unit bldFile="os\boardsupport\omap3variants\tiomap3bsp\variant\lab_restricted\unistore2" mrp="os\boardsupport\omap3variants\tiomap3bsp\variant\lab_restricted\unistore2\base_tiomap3_lab_unistore2.mrp"/>
 </component>
 </collection>
-<collection name="naviengine" long-name="NaviEngine Baseport" level="bsp">
-<component name="naviengineusbhcd" long-name="NaviEngine USB Host Controller Driver" introduced="tb92" filter="gt" purpose="optional">
+<collection name="n:naviengine" long-name="NaviEngine Baseport" level="bsp">
+<component name="n:naviengineusbhcd" long-name="NaviEngine USB Host Controller Driver" introduced="tb92" filter="gt" purpose="optional">
 <unit bldFile="os\boardsupport\naviengine\naviengineusbhcd" mrp="os\boardsupport\naviengine\naviengineusbhcd\base_naviengine_usbhost.mrp"/>
 </component>
-<component name="navienginebsp" long-name="NaviEngine BSP" introduced="tb92" filter="gt" purpose="optional">
+<component name="n:navienginebsp" long-name="NaviEngine BSP" introduced="tb92" filter="gt" purpose="optional">
 <unit bldFile="os\boardsupport\naviengine\navienginebsp\ne1_tb" mrp="os\boardsupport\naviengine\navienginebsp\base_naviengine.mrp" version="Built"/>
 </component>
-<component name="navienginebspflexible" long-name="NaviEngine BSP flexible" introduced="tb92" filter="gt" purpose="optional">
+<component name="n:navienginebspflexible" long-name="NaviEngine BSP flexible" introduced="tb92" filter="gt" purpose="optional">
 <unit bldFile="os\boardsupport\naviengine\navienginebspflexible" mrp="os\boardsupport\naviengine\navienginebspflexible\base_naviengine_flexible.mrp" version="Built"/>
 </component>
-<component name="navienginebootldr" long-name="NaviEngine Boot Loader" introduced="tb92" filter="gt" purpose="optional">
+<component name="n:navienginebootldr" long-name="NaviEngine Boot Loader" introduced="tb92" filter="gt" purpose="optional">
 <unit bldFile="os\boardsupport\naviengine\navienginebootldr" mrp="os\boardsupport\naviengine\navienginebootldr\base_ne1_tb_bootldr.mrp" version="Built"/>
 </component>
-<component name="naviengineunistore2" long-name="NaviEngine UniStore2" filter="gt" introduced="tb92" purpose="optional">
+<component name="n:naviengineunistore2" long-name="NaviEngine UniStore2" filter="gt" introduced="tb92" purpose="optional">
 <unit bldFile="os\boardsupport\naviengine\naviengineunistore2" mrp="os\boardsupport\naviengine\naviengineunistore2\base_nec_naviengine_unistore2.mrp" version="Built"/>
 </component>
-<component name="naviengineunistore2flex" long-name="NaviEngine UniStore2 Flexible" filter="gt" introduced="tb92" purpose="optional">
+<component name="n:naviengineunistore2flex" long-name="NaviEngine UniStore2 Flexible" filter="gt" introduced="tb92" purpose="optional">
 <unit bldFile="os\boardsupport\naviengine\naviengineunistore2flex" mrp="os\boardsupport\naviengine\naviengineunistore2flex\base_nec_naviengine_unistore2_flexible.mrp" version="Built"/>
 </component>
 </collection>
@@ -353,9 +353,12 @@
 <unit mrp="os\boardsupport\haitest\bspsvs\group\bspsvs.mrp"/>
 </component>
 </collection>
-<collection name="boardsupport_info" long-name="Board Support Info" level="4">
+<collection name="boardsupport_info" long-name="Board Support Info" level="config">
 <component name="boardsupport_metadata" long-name="Board Support Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="os\boardsupport\boardsupport_info\boardsupport_metadata\boardsupport_metadata.mrp"/>
+</component>
+<component name="n:nokia_boardsupport_metadata" long-name="Nokia Board Support Metadata" introduced="tb91" purpose="development" class="config PC">
+<unit mrp="os\boardsupport\boardsupport_info\nokia_boardsupport_metadata\nokia_boardsupport_metadata.mrp"/>
 </component>
 </collection>
 </block>
@@ -383,25 +386,30 @@
 <component name="productionbldtools" long-name="Production Build Tools" filter="gt" purpose="development">
 <unit mrp="os\buildtools\toolsandutils\productionbldtools\product_tools.mrp"/>
 </component>
-<component name="ctsfunctionalitycheckers" long-name="CTS Functionality Checkers" purpose="development">
+<component name="n:ctsfunctionalitycheckers" long-name="CTS Functionality Checkers" purpose="development">
 <unit mrp="os\buildtools\toolsandutils\ctsfunctionalitycheckers\Group\testtools_cts_functionalitycheckers.mrp"/>
 </component>
-<component name="burtestserver" long-name="BUR Test Server" purpose="development">
+<component name="n:burtestserver" long-name="BUR Test Server" purpose="development">
 <unit bldFile="os\buildtools\toolsandutils\burtestserver\Group" mrp="os\buildtools\toolsandutils\burtestserver\Group\testtools_burtestserver.mrp"/>
 </component>
-<component name="cbrtools" long-name="Component Based Release (CBR) Tools" filter="gt" purpose="development">
+<component name="n:cbrtools" long-name="Component Based Release (CBR) Tools" filter="gt" purpose="development">
+<!-- PLACEHOLDER="DS.1756" START REMOVE -->
 <unit bldFile="os\buildtools\toolsandutils\cbrtools\group" mrp="os\buildtools\toolsandutils\cbrtools\group\tools_cbr_tools.mrp"/>
+<!-- PLACEHOLDER="DS.1756" END REMOVE -->
+<!-- PLACEHOLDER="DS.1756"
+      <unit prebuilt="depl_sdkcreationmdw_packaging_cbrtools"/>
+     -->
 </component>
-<component name="prf" long-name="Product Realisation Framework" purpose="development">
+<component name="n:prf" long-name="Product Realisation Framework" purpose="development">
 <unit bldFile="os\buildtools\toolsandutils\prf\group" mrp="os\buildtools\toolsandutils\prf\group\tools_cbr_prf.mrp"/>
 </component>
-<component name="cdb" long-name="Code Database" purpose="development">
+<component name="n:cdb" long-name="Code Database" purpose="development">
 <unit bldFile="os\buildtools\toolsandutils\cdb\group" mrp="os\buildtools\toolsandutils\cdb\group\testtools_cdb.mrp"/>
 </component>
 <component name="e32tools" long-name="E32 Tools" deprecated="tb91" purpose="development" class="PC">
 <unit bldFile="os\buildtools\toolsandutils\e32tools\group" mrp="os\buildtools\toolsandutils\e32tools\group\tools_e32tools.mrp"/>
 </component>
-<component name="kitcomparator" long-name="Kit Comparator" purpose="development">
+<component name="n:kitcomparator" long-name="Kit Comparator" purpose="development">
 <unit bldFile="os\buildtools\toolsandutils\kitcomparator\group" mrp="os\buildtools\toolsandutils\kitcomparator\group\testtools_cts_kitcomparator.mrp"/>
 </component>
 <component name="wincredistribution" long-name="WinC Redistribution" purpose="development">
@@ -410,72 +418,145 @@
 <component name="additionalredistribution" long-name="Additional Redistribution" purpose="development">
 <unit mrp="os\buildtools\perltoolsplat_os\redistribution\additional_tools.mrp"/>
 </component>
-<component name="testdriver" long-name="Test Driver" purpose="development">
+<component name="n:testdriver" long-name="Test Driver" purpose="development">
 <unit bldFile="os\buildtools\toolsandutils\testdriver\Group" mrp="os\buildtools\toolsandutils\testdriver\Group\testtools_testdriver.mrp"/>
 </component>
 <component name="statapi" long-name="STAT API" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\toolsandutils\statapi\source\statapi\console" mrp="os\buildtools\toolsandutils\statapi\group\testtools_stat_device_gt.mrp"/>
 </component>
-<component name="statsource" long-name="STAT Source" filter="gt" purpose="development">
+<component name="n:statsource" long-name="STAT Source" filter="gt" purpose="development">
 <unit mrp="os\buildtools\toolsandutils\statsource\group\testtools_stat_common_source.mrp"/>
 </component>
-<component name="statdesktop" long-name="STAT Desktop" filter="gt" purpose="development">
+<component name="n:statdesktop" long-name="STAT Desktop" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\toolsandutils\statdesktop\group" mrp="os\buildtools\toolsandutils\statdesktop\group\testtools_stat_desktop.mrp"/>
 </component>
-<component name="systemmonitor" long-name="System Monitor" introduced="8.0" purpose="development">
+<component name="n:systemmonitor" long-name="System Monitor" introduced="8.0" purpose="development">
 <unit bldFile="os\buildtools\toolsandutils\systemmonitor\group" mrp="os\buildtools\toolsandutils\systemmonitor\group\testtools_systemmonitor.mrp"/>
 </component>
-<component name="testtoolsdesktop" long-name="Test Tools Desktop" filter="gt" deprecated="tb91" purpose="development">
+<component name="n:testtoolsdesktop" long-name="Test Tools Desktop" filter="gt" deprecated="tb91" purpose="development">
 <unit bldFile="os\buildtools\toolsandutils\testtoolsdesktop\group" mrp="os\buildtools\toolsandutils\testtoolsdesktop\group\testtools_desktop.mrp"/>
 </component>
 <component name="wintunnel" long-name="Wintunnel" purpose="development">
 <unit mrp="os\buildtools\toolsandutils\wintunnel\group\testtools_WinTunnel_srconly.mrp"/>
 </component>
-<component name="usecasecontroller" long-name="Use Case Controller" purpose="development">
+<component name="n:usecasecontroller" long-name="Use Case Controller" purpose="development">
 <unit bldFile="os\buildtools\toolsandutils\usecasecontroller\BuildScripts\group" mrp="os\buildtools\toolsandutils\usecasecontroller\BuildScripts\group\testtools_ucc.mrp"/>
 </component>
 <component name="autotest" long-name="Autotest" purpose="development">
 <unit bldFile="os\buildtools\toolsandutils\autotest\group" mrp="os\buildtools\toolsandutils\autotest\group\tools_autotest.mrp"/>
 </component>
-<component name="testconfigfileparser" long-name="Test Config File Parser" purpose="development">
+<component name="n:unzip-5.40" long-name="Unzip 5.40" purpose="development" class="placeholder">
+<!-- PLACEHOLDER="DS.1756"
+      <unit prebuilt="dev_hostenv_dist_unzip-5.40"/>
+     -->
+</component>
+<component name="n:zip-2.2" long-name="Zip 2.2" purpose="development" class="placeholder">
+<!-- PLACEHOLDER="DS.1756"
+      <unit prebuilt="dev_hostenv_dist_zip-2.2"/>
+     -->
+</component>
+<component name="n:zdelta-2.1" long-name="Zdelta 2.1" purpose="development" class="placeholder">
+<!-- PLACEHOLDER="DS.1756"
+      <unit prebuilt="dev_hostenv_dist_zdelta-2.1"/>
+     -->
+</component>
+<component name="n:testconfigfileparser" long-name="Test Config File Parser" purpose="development">
 <unit bldFile="os\buildtools\toolsandutils\testconfigfileparser\group" mrp="os\buildtools\toolsandutils\testconfigfileparser\group\tools_testconfigfileparser.mrp"/>
 </component>
-<component name="kitsetupapp" long-name="Kit Setup App" filter="gt" purpose="development">
+<component name="n:kitsetupapp" long-name="Kit Setup App" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\toolsandutils\kitsetupapp\group" mrp="os\buildtools\toolsandutils\kitsetupapp\group\tools_devkits_kitsetupapp.mrp" priority="1020"/>
 </component>
-<component name="navigationpages" long-name="Navigation Pages" purpose="development">
+<component name="n:navigationpages" long-name="Navigation Pages" purpose="development">
 <unit mrp="os\buildtools\toolsandutils\navigationpages\tools_sdk_eng_NavigationPages.mrp"/>
 </component>
-<component name="productinstaller" long-name="Product Installer" filter="gt" purpose="development">
+<component name="n:productinstaller" long-name="Product Installer" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\toolsandutils\productinstaller\group" mrp="os\buildtools\toolsandutils\productinstaller\group\tools_custkits_productinstaller.mrp"/>
 </component>
-<component name="stlport" long-name="STL Port" purpose="development">
+<component name="n:stlport" long-name="STL Port" purpose="development">
+<!-- PLACEHOLDER="DS.1756" START REMOVE -->
 <unit bldFile="os\buildtools\toolsandutils\stlport\group" mrp="os\buildtools\toolsandutils\stlport\group\tools_stlport.mrp"/>
+<!-- PLACEHOLDER="DS.1756" END REMOVE -->
+<!-- PLACEHOLDER="DS.1756"
+      <unit prebuilt="dev_hostenv_cpptoolsplat_stlport"/>
+     -->
+</component>
+<component name="n:elf2e32" long-name="ELF to e32 (Postlinker)" purpose="development" class="placeholder">
+<!-- PLACEHOLDER="DS.1756"
+      <unit prebuilt="dev_build_e32tools_elf2e32"/>
+     -->
+</component>
+<component name="n:tranasm" long-name="Translate ASM" purpose="development" class="placeholder">
+<!-- PLACEHOLDER="DS.1756"
+      <unit prebuilt="dev_build_srctools_tranasm"/>
+     -->
+</component>
+<component name="n:e32lib" long-name="E32 Image Library" purpose="development" class="placeholder">
+<!-- PLACEHOLDER="DS.1756"
+      <unit prebuilt="dev_build_e32tools_e32lib"/>
+     -->
 </component>
 </collection>
-<collection name="dist_os" long-name="Redistribution" level="mw">
-<component name="redistributionwinceka2" long-name="Redistribution WINC EKA2" purpose="development">
+<collection name="n:dist_os" long-name="Redistribution" level="mw">
+<component name="n:redistributionwinceka2" long-name="Redistribution WINC EKA2" purpose="development">
 <unit bldFile="os\buildtools\dist_os\redistributionwinceka2" mrp="os\buildtools\dist_os\redistributionwinceka2\tools_redistribution_cedar.mrp"/>
 </component>
 </collection>
-<collection name="bintools_os" long-name="Binary Tools" level="fw">
-<!-- PLACEHOLDER="DS.1735" ; START REMOVE -->
-<component name="rcomp" long-name="Resource Compiler" purpose="development">
-<unit bldFile="os\buildtools\bintools_os\rcomp\group" mrp="os\buildtools\bintools_os\rcomp\group\tools_rcomp.mrp"/>
+<collection name="n:bintools_os" long-name="Binary Tools" level="fw">
+<component name="n:rcomp" long-name="Resource Compiler" purpose="development">
+<unit prebuilt="dev_build_bintools_rcomp"/>
 </component>
-<!-- PLACEHOLDER="DS.1735" ; END REMOVE -->
-<component name="evalid" long-name="Evalid" purpose="development">
+<component name="n:evalid" long-name="Evalid" purpose="development">
+<!-- PLACEHOLDER="DS.1756" START REMOVE -->
 <unit bldFile="os\buildtools\bintools_os\evalid" mrp="os\buildtools\bintools_os\evalid\tools_evalid.mrp"/>
+<!-- PLACEHOLDER="DS.1756" END REMOVE -->
+<!-- PLACEHOLDER="DS.1756"
+      <unit prebuilt="dev_build_bintools_evalid"/>
+     -->
+</component>
+<component name="n:elftools" long-name="ELF Tools" purpose="development" class="placeholder">
+<!-- PLACEHOLDER="DS.1756"
+      <unit prebuilt="dev_build_bintools_elftools"/>
+     -->
+</component>
+<component name="n:checklib" long-name="Checklib" purpose="development" class="placeholder">
+<!-- PLACEHOLDER="DS.1756"
+      <unit prebuilt="dev_build_bintools_checklib"/>
+     -->
 </component>
 </collection>
-<collection name="perltoolsplat_os" long-name="Perl Tools Platform" level="mw">
-<component name="redistribution" long-name="Redistribution" filter="gt" purpose="development">
+<collection name="n:perltoolsplat_os" long-name="Perl Tools Platform" level="mw">
+<component name="n:redistribution" long-name="Redistribution" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\perltoolsplat_os\redistribution" mrp="os\buildtools\perltoolsplat_os\redistribution\tools_redistribution_common.mrp"/>
 </component>
-<component name="legacycommonperl" long-name="Legacy Common Perl Libraries" purpose="development">
+<component name="n:cpp-2.9-psion-98r2" long-name="CPP 2.9-psion-98r2" purpose="development" class="placeholder">
+<!-- PLACEHOLDER="DS.1756"
+      <unit prebuilt="dev_hostenv_cpptoolsplat_cpp-2.9-psion-98r2"/>
+     -->
+</component>
+<component name="n:mingw-gcc-3.4.5" long-name="MinGW GCC 3.4.5" purpose="development" class="placeholder">
+<!-- PLACEHOLDER="DS.1756"
+      <unit prebuilt="dev_hostenv_cpptoolsplat_mingw-gcc-3.4.5"/>
+     -->
+</component>
+<component name="n:gccxml-cdb" long-name="GCCXML (cdb)" purpose="development" class="placeholder">
+<!-- PLACEHOLDER="DS.1756"
+      <unit prebuilt="dev_hostenv_compilationtoolchains_gccxml-cdb"/>
+     -->
+</component>
+<component name="n:gcce-3.4.3" long-name="GCCE 3.4.3" purpose="development" class="placeholder">
+<!-- PLACEHOLDER="DS.1756"
+      <unit prebuilt="dev_hostenv_compilationtoolchains_gcce-3.4.3"/>
+     -->
+</component>
+<component name="n:gcce-4.3.2" long-name="GCCE 4.3.2" purpose="development" class="placeholder">
+<!-- PLACEHOLDER="DS.1756"
+      <unit prebuilt="dev_hostenv_compilationtoolchains_gcce-4.3.2"/>
+     -->
+</component>
+<component name="n:legacycommonperl" long-name="Legacy Common Perl Libraries" purpose="development">
 <unit bldFile="os\buildtools\perltoolsplat_os\legacycommonperl\group" mrp="os\buildtools\perltoolsplat_os\legacycommonperl\group\tools_sdk_eng_perllibrary.mrp"/>
 </component>
-<component name="commonperl" long-name="Common Perl Libraries" purpose="development">
+<component name="n:commonperl" long-name="Common Perl Libraries" purpose="development">
 <unit bldFile="os\buildtools\perltoolsplat_os\commonperl\group" mrp="os\buildtools\perltoolsplat_os\commonperl\group\tools_sdk_eng_perl_shared.mrp"/>
 </component>
 </collection>
@@ -483,21 +564,21 @@
 <component name="e32toolp" long-name="E32 Perl Tools" purpose="development" class="PC">
 <unit mrp="os\buildtools\sbsv1_os\e32toolp\group\tools_e32toolp.mrp"/>
 </component>
-<component name="bldtools" long-name="Build Tools" filter="gt" purpose="development">
+<component name="n:bldtools" long-name="Build Tools" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\sbsv1_os\bldtools\group" mrp="os\buildtools\sbsv1_os\bldtools\group\tools_sdk_eng_build-tools.mrp"/>
 </component>
 <component name="romutils" long-name="ROM Utilities" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\sbsv1_os\romutils\group" mrp="os\buildtools\sbsv1_os\romutils\group\tools_romutils.mrp"/>
 </component>
 </collection>
-<collection name="srcanamdw_os" long-name="Source Analysis Middleware" level="fw">
-<component name="leavescan" long-name="Leavescan" purpose="development">
+<collection name="n:srcanamdw_os" long-name="Source Analysis Middleware" level="fw">
+<component name="n:leavescan" long-name="Leavescan" purpose="development">
 <unit bldFile="os\buildtools\srcanamdw_os\leavescan\group" mrp="os\buildtools\srcanamdw_os\leavescan\group\testtools_leavescan.mrp"/>
 </component>
-<component name="programchecker" long-name="Program Checker" deprecated="tb91" purpose="development">
+<component name="n:programchecker" long-name="Program Checker" deprecated="tb91" purpose="development">
 <unit bldFile="os\buildtools\srcanamdw_os\programchecker\group" mrp="os\buildtools\srcanamdw_os\programchecker\group\testtools_programchecker.mrp"/>
 </component>
-<component name="migrationtool" long-name="Migration Tool" purpose="development">
+<component name="n:migrationtool" long-name="Migration Tool" purpose="development">
 <unit bldFile="os\buildtools\srcanamdw_os\migrationtool\group" mrp="os\buildtools\srcanamdw_os\migrationtool\group\testtools_migrationtool.mrp"/>
 </component>
 </collection>
@@ -505,128 +586,151 @@
 <component name="romkiteka2" long-name="ROMKIT EKA2" deprecated="tb91" purpose="development">
 <unit bldFile="os\buildtools\imgtools_os\romkiteka2\group" mrp="os\buildtools\imgtools_os\romkiteka2\group\tools_romkit.mrp"/>
 </component>
+<component name="n:romtools" long-name="ROM Tools" purpose="development" class="placeholder">
+<!-- PLACEHOLDER="DS.1756"
+     <unit prebuilt="dev_build_imgtools_romtools"/>
+     -->
+</component>
+<component name="n:buildrom" long-name="Build ROM" purpose="development" class="placeholder">
+<!-- PLACEHOLDER="DS.1756"
+     <unit prebuilt="dev_build_imgtools_buildrom"/>
+     -->
+</component>
+<component name="n:imglib" long-name="ROM/ROFS Image Library" purpose="development" class="placeholder">
+<!-- PLACEHOLDER="DS.1756"
+     <unit prebuilt="dev_build_imgtools_imglib"/>
+     -->
+</component>
+<component name="n:sisutils" long-name="SIS Utility Library" purpose="development" class="placeholder">
+<!-- PLACEHOLDER="DS.1756"
+     <unit prebuilt="dev_build_imgtools_sisutils"/>
+     -->
+</component>
 </collection>
-<collection name="binanamdw_os" long-name="Binary Analysis Middleware" level="fw">
-<component name="captools" long-name="Capability Tools" purpose="development">
+<collection name="n:binanamdw_os" long-name="Binary Analysis Middleware" level="fw">
+<component name="n:captools" long-name="Capability Tools" purpose="development">
 <unit bldFile="os\buildtools\binanamdw_os\captools\group" mrp="os\buildtools\binanamdw_os\captools\group\testtools_captools.mrp"/>
 </component>
-<component name="depcheck" long-name="Dependency Checker" purpose="development">
+<component name="n:depcheck" long-name="Dependency Checker" purpose="development">
 <unit bldFile="os\buildtools\binanamdw_os\depcheck" mrp="os\buildtools\binanamdw_os\depcheck\tools_depcheck.mrp"/>
 </component>
 </collection>
-<collection name="devlib" long-name="Developer Library" level="ui">
-<component name="devlibhelp" long-name="Developer Library Help" purpose="development" class="doc">
+<collection name="n:devlib" long-name="Developer Library" level="ui">
+<component name="n:devlibhelp" long-name="Developer Library Help" purpose="development" class="doc">
 <unit bldFile="os\buildtools\devlib\devlibhelp\group\devlib96" mrp="os\buildtools\devlib\devlibhelp\group\devlib96\developerlibrary_doc_html.mrp" version="9.6"/>
 </component>
-<component name="devlibsrc" long-name="Developer Library Source" filter="gt" purpose="development" class="doc">
+<component name="n:devlibsrc" long-name="Developer Library Source" filter="gt" purpose="development" class="doc">
 <unit bldFile="os\buildtools\devlib\devlibhelp\securitysupplement\doc_source" mrp="os\buildtools\devlib\devlibhelp\developerlibrary_doc_source.mrp"/>
 </component>
-<component name="devlibhtml" long-name="Developer Library HTML" purpose="development" class="doc">
+<component name="n:devlibhtml" long-name="Developer Library HTML" purpose="development" class="doc">
 <unit mrp="os\buildtools\devlib\devlibhelp\group\shared\developerlibrary_doc_plain_html.mrp"/>
 </component>
-<component name="toolsdocs" long-name="Tools Documentation" purpose="development" class="doc">
+<component name="n:toolsdocs" long-name="Tools Documentation" purpose="development" class="doc">
 <unit mrp="os\buildtools\devlib\toolsdocs\tools_documentation.mrp"/>
 </component>
 </collection>
 <collection name="misccomponents" long-name="Misc Components" level="mw">
-<component name="runperl" long-name="Run PERL" filter="gt" purpose="development">
+<component name="n:runperl" long-name="Run PERL" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\runperl\group" mrp="os\buildtools\misccomponents\runperl\group\tools_sdk_eng_runperl.mrp"/>
 </component>
-<component name="assertion" long-name="Assertion" filter="gt" purpose="development">
+<component name="n:assertion" long-name="Assertion" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\assertion\group" mrp="os\buildtools\misccomponents\assertion\group\tools_sdk_eng_assertion.mrp"/>
 </component>
-<component name="enum" long-name="Enum" filter="gt" purpose="development">
+<component name="n:enum" long-name="Enum" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\enum\group" mrp="os\buildtools\misccomponents\enum\group\tools_sdk_eng_enum.mrp"/>
 </component>
-<component name="logger" long-name="Logger" filter="gt" purpose="development">
+<component name="n:logger" long-name="Logger" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\logger\group" mrp="os\buildtools\misccomponents\logger\group\tools_sdk_eng_logger.mrp"/>
 </component>
-<component name="filesys" long-name="Filesys" filter="gt" purpose="development">
+<component name="n:filesys" long-name="Filesys" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\filesys\group" mrp="os\buildtools\misccomponents\filesys\group\tools_sdk_eng_filesys.mrp"/>
 </component>
-<component name="envvar" long-name="Envvar" filter="gt" purpose="development">
+<component name="n:envvar" long-name="Envvar" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\envvar\group" mrp="os\buildtools\misccomponents\envvar\group\tools_sdk_eng_envvar.mrp"/>
 </component>
-<component name="installutils" long-name="Install Utils" filter="gt" purpose="development">
+<component name="n:installutils" long-name="Install Utils" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\installutils\group" mrp="os\buildtools\misccomponents\installutils\group\tools_sdk_eng_installutils.mrp"/>
 </component>
-<component name="mnemonicfix" long-name="Mnemonic Fix" filter="gt" purpose="development">
+<component name="n:mnemonicfix" long-name="Mnemonic Fix" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\mnemonicfix\group" mrp="os\buildtools\misccomponents\mnemonicfix\group\tools_sdk_eng_mnemonicfix.mrp"/>
 </component>
-<component name="pathbrowser" long-name="Path Browser" filter="gt" purpose="development">
+<component name="n:pathbrowser" long-name="Path Browser" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\pathbrowser\group" mrp="os\buildtools\misccomponents\pathbrowser\group\tools_sdk_eng_pathbrowser.mrp"/>
 </component>
-<component name="shellexec" long-name="Shell Exec" filter="gt" purpose="development">
+<component name="n:shellexec" long-name="Shell Exec" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\shellexec\group" mrp="os\buildtools\misccomponents\shellexec\group\tools_sdk_eng_shellexec.mrp"/>
 </component>
-<component name="swingworker" long-name="Swing Worker" filter="gt" purpose="development">
+<component name="n:swingworker" long-name="Swing Worker" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\swingworker\group" mrp="os\buildtools\misccomponents\swingworker\group\tools_sdk_eng_swingworker.mrp"/>
 </component>
-<component name="testcaserunner" long-name="Test Case Runner" filter="gt" purpose="development">
+<component name="n:testcaserunner" long-name="Test Case Runner" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\testcaserunner\group" mrp="os\buildtools\misccomponents\testcaserunner\group\tools_sdk_eng_testcaserunner.mrp"/>
 </component>
-<component name="toolbarpanel" long-name="Tool Bar Panel" filter="gt" purpose="development">
+<component name="n:toolbarpanel" long-name="Tool Bar Panel" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\toolbarpanel\group" mrp="os\buildtools\misccomponents\toolbarpanel\group\tools_sdk_eng_toolbarpanel.mrp"/>
 </component>
-<component name="javahelp" long-name="Java Help" filter="gt" purpose="development">
+<component name="n:javahelp" long-name="Java Help" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\javahelp\group" mrp="os\buildtools\misccomponents\javahelp\group\tools_sdk_eng_javahelp.mrp"/>
 </component>
-<component name="langconfig" long-name="Language Config" filter="gt" purpose="development">
+<component name="n:langconfig" long-name="Language Config" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\langconfig\group" mrp="os\buildtools\misccomponents\langconfig\group\tools_sdk_eng_langconfig.mrp"/>
 </component>
-<component name="sdkinfo" long-name="SDK Info" filter="gt" purpose="development">
+<component name="n:sdkinfo" long-name="SDK Info" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\sdkinfo\group" mrp="os\buildtools\misccomponents\sdkinfo\group\tools_sdk_eng_sdkinfo.mrp"/>
 </component>
-<component name="jade" long-name="Jade " filter="gt" purpose="development">
+<component name="n:jade" long-name="Jade " filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\jade\group" mrp="os\buildtools\misccomponents\jade\group\tools_sdk_eng_jade.mrp"/>
 </component>
-<component name="sdkpackagemgr" long-name="SDK Package Manager" filter="gt" purpose="development">
+<component name="n:sdkpackagemgr" long-name="SDK Package Manager" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\sdkpackagemgr\group" mrp="os\buildtools\misccomponents\sdkpackagemgr\group\tools_sdk_eng_sdkpkg-manager.mrp"/>
 </component>
-<component name="sdkpkgtools" long-name="SDK Package Tools" filter="gt" purpose="development">
+<component name="n:sdkpkgtools" long-name="SDK Package Tools" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\sdkpkgtools\group" mrp="os\buildtools\misccomponents\sdkpkgtools\group\tools_sdk_eng_sdkpkg-tools.mrp"/>
 </component>
 <component name="emulatorlauncher" long-name="Emulator Launcher" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\emulatorlauncher\group" mrp="os\buildtools\misccomponents\emulatorlauncher\group\tools_sdk_eng_emulator_launcher.mrp"/>
 </component>
-<component name="pkgmgrgui" long-name="SDK Package Manager GUI" filter="gt" purpose="development">
+<component name="n:pkgmgrgui" long-name="SDK Package Manager GUI" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\pkgmgrgui\group" mrp="os\buildtools\misccomponents\pkgmgrgui\group\tools_sdk_eng_pkgmgrgui.mrp"/>
 </component>
-<component name="launch" long-name="Launch" filter="gt" purpose="development">
+<component name="n:launch" long-name="Launch" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\launch\group" mrp="os\buildtools\misccomponents\launch\group\tools_sdk_eng_launch.mrp"/>
 </component>
-<component name="toolsstubs" long-name="Devices Tools Stubs" filter="gt" purpose="development">
+<component name="n:toolsstubs" long-name="Devices Tools Stubs" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\toolsstubs\group" mrp="os\buildtools\misccomponents\toolsstubs\group\tools_sdk_eng_tools_stubs.mrp"/>
 </component>
-<component name="bspbuilder" long-name="BSP Builder" filter="gt" purpose="development">
+<component name="n:bspbuilder" long-name="BSP Builder" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\bspbuilder\group" mrp="os\buildtools\misccomponents\bspbuilder\group\tools_bspbuilder.mrp"/>
 </component>
-<component name="splash" long-name="Splash Screen" purpose="development">
+<component name="n:splash" long-name="Splash Screen" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\splash\group" mrp="os\buildtools\misccomponents\splash\group\tools_sdk_eng_splash.mrp"/>
 </component>
-<component name="sdkbuilder" long-name="SDK Building Tools" purpose="development">
+<component name="n:sdkbuilder" long-name="SDK Building Tools" purpose="development">
 <unit bldFile="os\buildtools\misccomponents\sdkbuilder\group" mrp="os\buildtools\misccomponents\sdkbuilder\group\tools_sdk_eng_sdk_builder.mrp"/>
 </component>
 </collection>
-<collection name="javatoolsplat" long-name="Java Tools Platform" level="mw">
-<component name="javalib" long-name="Java Library " filter="gt" purpose="development">
+<collection name="n:javatoolsplat" long-name="Java Tools Platform" level="mw">
+<component name="n:javalib" long-name="Java Library " filter="gt" purpose="development">
 <unit bldFile="os\buildtools\javatoolsplat\javalib\group" mrp="os\buildtools\javatoolsplat\javalib\group\tools_sdk_eng_javalibrary.mrp"/>
 </component>
 </collection>
-<collection name="fileconv" long-name="File Converters" level="mw">
-<component name="cjpeg" long-name="CJpeg" purpose="development">
+<collection name="n:fileconv" long-name="File Converters" level="mw">
+<component name="n:cjpeg" long-name="CJpeg" purpose="development">
 <unit bldFile="os\buildtools\fileconv\cjpeg\group" mrp="os\buildtools\fileconv\cjpeg\group\tools_sdk_eng_cjpeg.mrp"/>
 </component>
-<component name="alp2csh" long-name="ALP to CSH" purpose="development">
+<component name="n:alp2csh" long-name="ALP to CSH" purpose="development">
 <unit bldFile="os\buildtools\fileconv\alp2csh\group" mrp="os\buildtools\fileconv\alp2csh\group\tools_sdk_eng_alp2csh.mrp"/>
 </component>
-<component name="rtf2ptml" long-name="RTF to PTML" purpose="development">
+<component name="n:rtf2ptml" long-name="RTF to PTML" purpose="development">
 <unit bldFile="os\buildtools\fileconv\rtf2ptml\group" mrp="os\buildtools\fileconv\rtf2ptml\group\tools_sdk_eng_rtf2ptml.mrp"/>
 </component>
 </collection>
 <collection name="buildtools_info" long-name="Build Tools Info" level="ui">
 <component name="buildtools_metadata" long-name="Build Tools Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="os\buildtools\buildtools_info\buildtools_metadata\buildtools_metadata.mrp"/>
+</component>
+<component name="n:nokia_buildtools_metadata" long-name="Nokia Build Tools Metadata" introduced="tb91" purpose="development" class="config PC">
+<unit mrp="os\buildtools\buildtools_info\nokia_buildtools_metadata\nokia_buildtools_metadata.mrp"/>
 </component>
 </collection>
 </block>
@@ -685,7 +789,7 @@
 <component name="apputils" long-name="Application Utilities" introduced="ER5" purpose="mandatory">
 <unit bldFile="os\ossrv\lowlevellibsandfws\apputils\group" mrp="os\ossrv\lowlevellibsandfws\apputils\group\syslibs_bafl.mrp"/>
 </component>
-<component name="genericusabilitylib" long-name="Generic Usability Library" introduced="Future" purpose="mandatory">
+<component name="genericusabilitylib" long-name="Generic Usability Library" introduced="tb92" purpose="mandatory">
 <unit bldFile="os\ossrv\lowlevellibsandfws\genericusabilitylib\group" mrp="os\ossrv\lowlevellibsandfws\genericusabilitylib\group\syslibs_euserhl.mrp"/>
 </component>
 </collection>
@@ -705,7 +809,7 @@
 </component>
 </collection>
 <collection name="contentmgmt" long-name="Content Management" level="utilities">
-<component name="cafstreamingsupport" long-name="CAF Streaming Support" introduced="tb92" purpose="optional">
+<component name="n:cafstreamingsupport" long-name="CAF Streaming Support" introduced="tb92" purpose="optional">
 <unit bldFile="os\security\contentmgmt\cafstreamingsupport\group" mrp="os\security\contentmgmt\cafstreamingsupport\group\security_streamingcaf.mrp"/>
 </component>
 <component name="contentaccessfwfordrm" long-name="Content Access Framework for DRM" introduced="9.1" purpose="mandatory">
@@ -713,6 +817,9 @@
 </component>
 <component name="cafrecogniserconfig" long-name="CAF Recogniser Config" introduced="9.1" purpose="mandatory">
 <unit bldFile="os\security\contentmgmt\cafrecogniserconfig" mrp="os\security\contentmgmt\cafrecogniserconfig\security_reccafconfig.mrp"/>
+</component>
+<component name="referencedrmagent" long-name="Reference DRM Agent" introduced="8.0" purpose="development">
+<unit bldFile="os\security\contentmgmt\referencedrmagent\RefTestAgent\group" mrp="os\security\contentmgmt\referencedrmagent\RefTestAgent\group\security_rta.mrp"/>
 </component>
 </collection>
 <collection name="crypto" long-name="Crypto Libraries" level="libraries">
@@ -722,7 +829,7 @@
 <component name="strongcryptospi" long-name="Strong Crypto SPI" filter="gt" introduced="tb92" purpose="optional">
 <unit bldFile="os\security\crypto\weakcryptospi\strong" mrp="os\security\crypto\weakcryptospi\group\security_cryptospi_strong.mrp"/>
 </component>
-<component name="opencryptolibs" long-name="Open Crypto Libraries" introduced="tb92" purpose="optional">
+<component name="n:opencryptolibs" long-name="Open Crypto Libraries" introduced="tb92" purpose="optional">
 <unit bldFile="os\security\crypto\opencryptolibs\group" mrp="os\security\crypto\opencryptolibs\group\oeaddons_crypto.mrp"/>
 </component>
 </collection>
@@ -763,19 +870,27 @@
 <component name="filebasedcertificateandkeystores" long-name="File-based Certificate and Key Stores" introduced="8.0" purpose="optional">
 <unit bldFile="os\security\cryptoservices\filebasedcertificateandkeystores\group" mrp="os\security\cryptoservices\filebasedcertificateandkeystores\group\security_filetokens.mrp"/>
 </component>
-<component name="rootcertificates" long-name="Root Certificates" introduced="7.0s" purpose="optional">
+<component name="n:rootcertificates" long-name="Root Certificates" introduced="7.0s" purpose="optional">
 <unit mrp="os\security\cryptoservices\rootcertificates\rootcerts.mrp"/>
 </component>
 <component name="asnpkcs" long-name="ASN PKCS" introduced="8.0" purpose="optional">
 <unit bldFile="os\security\cryptoservices\asnpkcs\group" mrp="os\security\cryptoservices\asnpkcs\group\security_asnpkcs.mrp"/>
 </component>
-<component name="openssl" long-name="OpenSSL" introduced="tb92" purpose="optional">
+<component name="n:openssl" long-name="OpenSSL" introduced="tb92" purpose="optional">
 <unit bldFile="os\security\cryptoservices\openssl\group" mrp="os\security\cryptoservices\openssl\group\oeaddons_ssl.mrp"/>
+</component>
+</collection>
+<collection name="authenticationservices" long-name="Authentication Services" level="utilities">
+<component name="n:authenticationserver" long-name="Authentication Server" introduced="tb92" purpose="optional">
+<unit bldFile="os\security\authenticationservices\authenticationserver\group" mrp="os\security\authenticationservices\authenticationserver\group\security_authserver.mrp"/>
 </component>
 </collection>
 <collection name="security_info" long-name="OS Security Info" level="utilities">
 <component name="security_metadata" long-name="OS Security Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="os\security\security_info\security_metadata\security_metadata.mrp"/>
+</component>
+<component name="n:nokia_security_metadata" long-name="Nokia OS Security Metadata" introduced="tb91" purpose="development" class="config PC">
+<unit mrp="os\security\security_info\nokia_security_metadata\nokia_security_metadata.mrp"/>
 </component>
 </collection>
 </block>
@@ -872,15 +987,11 @@
 </component>
 </collection>
 <collection name="devicesrvapitest" long-name="Devices Services API Tests" level="app-if">
-<component name="accessorieshaitest" long-name="Accessories HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1675"
-	<unit mrp="devicesrvapitest/accessorieshaitest/gropup/accessorieshai.mrp"/>
-	-->
+<component name="accessorieshaitest" long-name="Accessories HAI Tests" introduced="tb91" purpose="development">
+<unit mrp="os\devicesrv\devicesrvapitest\accessorieshaitest\group\accessorieshaitest.mrp"/>
 </component>
-<component name="hwrmhaitest" long-name="HWRM HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1675"
-	<unit mrp="devicesrvapitest/hwrmhaitest/group/hwrmhai.mrp"/>
-	-->
+<component name="hwrmhaitest" long-name="HWRM HAI Tests" introduced="tb91" purpose="development">
+<unit mrp="os\devicesrv\devicesrvapitest\hwrmhaitest\group\hwrmhaitest.mrp"/>
 </component>
 </collection>
 <collection name="devicesrv_info" long-name="Device Services Info" level="app-if">
@@ -900,13 +1011,13 @@
 <component name="simulationpositioningmodule" long-name="Simulation Positioning Module" introduced="tb91" purpose="development" plugin="Y">
 <unit bldFile="os\lbs\datasourcemodules\simulationpositioningmodule\group" mrp="os\lbs\datasourcemodules\simulationpositioningmodule\group\lbs_simulation_positioning_module.mrp"/>
 </component>
-<component name="agpsintegrationmodule" long-name="A-GPS Integration Module" introduced="9.2" purpose="optional" plugin="Y">
+<component name="n:agpsintegrationmodule" long-name="A-GPS Integration Module" introduced="9.2" purpose="optional" plugin="Y">
 <unit bldFile="os\lbs\datasourcemodules\agpsintegrationmodule\group" mrp="os\lbs\datasourcemodules\agpsintegrationmodule\group\lbs_datasourceplugins.mrp"/>
 </component>
-<component name="gpspositioningmodule" long-name="GPS/A-GPS Positioning Module" introduced="Future" purpose="optional" plugin="Y">
+<component name="gpspositioningmodule" long-name="GPS/A-GPS Positioning Module" introduced="tb92" purpose="optional" plugin="Y">
 <unit bldFile="os\lbs\datasourcemodules\gpspositioningmodule\group" mrp="os\lbs\datasourcemodules\gpspositioningmodule\group\lbs_agps_positioning_module.mrp"/>
 </component>
-<component name="networkpositioningmodule" long-name="Network Positioning Module" introduced="Future" purpose="optional" plugin="Y">
+<component name="networkpositioningmodule" long-name="Network Positioning Module" introduced="tb92" purpose="optional" plugin="Y">
 <unit bldFile="os\lbs\datasourcemodules\networkpositioningmodule\group" mrp="os\lbs\datasourcemodules\networkpositioningmodule\group\lbs_network_positioning_module.mrp"/>
 </component>
 </collection>
@@ -952,20 +1063,26 @@
 <component name="privacyprotocolmodule" long-name="Privacy Protocol Module" introduced="tb91" purpose="optional" plugin="Y">
 <unit bldFile="os\lbs\networkprotocolmodules\privacyprotocolmodule\group" mrp="os\lbs\networkprotocolmodules\privacyprotocolmodule\group\lbs_privacyprotocolmodule.mrp"/>
 </component>
-<component name="suplprotocolmodule" long-name="SUPL Protocol Module" introduced="tb91" deprecated="tb91" purpose="optional" plugin="Y">
+<component name="suplproxyprotocolmodule" long-name="SUPL Proxy Protocol Module" introduced="tb92" purpose="optional" plugin="Y" class="placeholder">
+<!-- PLACEHOLDER="DS.1806"
+        <unit bldFile="networkprotocolmodules/suplproxyprotocolmodule/group" mrp="networkprotocolmodules/suplproxyprotocolmodule/group/lbs_suplproxyprotocolmodule.mrp"/>
+		-->
+</component>
+<component name="n:suplprotocolmodule" long-name="SUPL Protocol Module" introduced="tb91" deprecated="tb91" purpose="optional" plugin="Y">
 <unit bldFile="os\lbs\networkprotocolmodules\suplprotocolmodule\group" mrp="os\lbs\networkprotocolmodules\suplprotocolmodule\group\lbs_suplprotocolmodule.mrp"/>
 </component>
 </collection>
 <collection name="lbsapitest" long-name="Location API Tests" level="application-interface">
-<component name="lbshaitest" long-name="Location HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1675"
-	<unit mrp="lbsapitest/lbshaitest/group/lbshai.mrp"/>
-	-->
+<component name="lbshaitest" long-name="Location HAI Tests" introduced="tb91" purpose="development">
+<unit mrp="os\lbs\lbsapitest\lbshaitest\group\lbshaitest.mrp"/>
 </component>
 </collection>
 <collection name="lbs_info" long-name="Locating Services Info" level="application-interface">
 <component name="lbs_metadata" long-name="Locating Services Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="os\lbs\lbs_info\lbs_metadata\lbs_metadata.mrp"/>
+</component>
+<component name="n:nokia_lbs_metadata" long-name="Nokia Locating Services Metadata" introduced="tb91" purpose="development" class="config PC">
+<unit mrp="os\lbs\lbs_info\nokia_lbs_metadata\nokia_lbs_metadata.mrp"/>
 </component>
 </collection>
 </block>
@@ -1046,7 +1163,7 @@
 </component>
 </collection>
 <collection name="commsinfrastructureapitest" long-name="Comms-Infras API Tests" level="app-if">
-<component name="commsinfrastructuresvs" long-name="Comms Infrastructure Verification Suite" introduced="tb91" purpose="development">
+<component name="commsinfrastructuresvs" long-name="Comms Infrastructure Verification Suite" introduced="tb92" purpose="development">
 <unit mrp="os\commsfw\commsinfrastructureapitest\commsinfrastructuresvs\group\commsinfrastructuresvs.mrp"/>
 </component>
 </collection>
@@ -1140,7 +1257,7 @@
 <component name="ipnetworklayer" long-name="IP Network Layer" introduced="tb92" purpose="optional" plugin="Y">
 <unit bldFile="os\networkingsrv\networkcontrol\ipnetworklayer\group" mrp="os\networkingsrv\networkcontrol\ipnetworklayer\group\networking_ipproto.mrp"/>
 </component>
-<component name="iptransportlayer" long-name="IP Transport Layer" purpose="optional" plugin="Y">
+<component name="iptransportlayer" long-name="IP Transport Layer" introduced="tb92" purpose="optional" plugin="Y">
 <unit bldFile="os\networkingsrv\networkcontrol\iptransportlayer\group" mrp="os\networkingsrv\networkcontrol\iptransportlayer\group\networking_iptransport.mrp"/>
 </component>
 <component name="commsuserpromptmgr" long-name="Comms User Prompt Manager" introduced="tb92" purpose="mandatory">
@@ -1166,7 +1283,7 @@
 <component name="mobileip" long-name="Mobile IP" introduced="8.1" purpose="optional" plugin="Y">
 <unit bldFile="os\networkingsrv\networkprotocols\mobileip\group" mrp="os\networkingsrv\networkprotocols\mobileip\group\networking_mobileip.mrp"/>
 </component>
-<component name="dnsproxy" long-name="DNS Proxy" introduced="Future" purpose="optional">
+<component name="dnsproxy" long-name="DNS Proxy" introduced="tb92" purpose="optional">
 <unit bldFile="os\networkingsrv\networkprotocols\dnsproxy\group" mrp="os\networkingsrv\networkprotocols\dnsproxy\group\networking_dnsproxy.mrp"/>
 </component>
 </collection>
@@ -1179,6 +1296,9 @@
 </component>
 <component name="ipsec" long-name="IPsec" introduced="7.0" purpose="optional">
 <unit bldFile="os\networkingsrv\networksecurity\ipsec\group" mrp="os\networkingsrv\networksecurity\ipsec\group\networking_ipsec.mrp"/>
+</component>
+<component name="n:ipsecvpn" long-name="IPsec VPN" introduced="tb91" purpose="development">
+<unit bldFile="os\networkingsrv\networksecurity\ipsecvpn\group" mrp="os\networkingsrv\networksecurity\ipsecvpn\group\networking_ipsecvpn.mrp"/>
 </component>
 </collection>
 <collection name="networkingtestandutils" long-name="Networking Test and Utils" level="app-if">
@@ -1218,6 +1338,9 @@
 <component name="networkingsrv_metadata" long-name="Networking Services Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="os\networkingsrv\networkingsrv_info\networkingsrv_metadata\networkingsrv_metadata.mrp"/>
 </component>
+<component name="n:nokia_networkingsrv_metadata" long-name="Nokia Networking Services Metadata" introduced="tb91" purpose="development" class="config PC">
+<unit mrp="os\networkingsrv\networkingsrv_info\nokia_networkingsrv_metadata\nokia_networkingsrv_metadata.mrp"/>
+</component>
 </collection>
 <collection name="pppcompressionplugins" long-name="PPP Compression Plugins" level="plugin">
 <component name="predictorcompression" long-name="Predictor Compression" introduced="6.0" purpose="optional" plugin="Y">
@@ -1226,12 +1349,9 @@
 </collection>
 </block>
 <block name="wlan" level="services" long-name="WLAN" levels="hw low mid high tools test">
-<collection name="wlan_bearer" long-name="WLAN Bearer" level="hw"/>
 <collection name="wlanapitest" long-name="WLAN API Tests" level="test">
-<component name="wlanhaitest" long-name="WLAN HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1675"
-			  <unit mrp="wlanapitest/wlanhaitest/group/wlanhai.mrp"/>
-			-->
+<component name="wlanhaitest" long-name="WLAN HAI Tests" introduced="tb91" purpose="development">
+<unit mrp="os\wlan\wlanapitest\wlanhaitest\group\wlanhaitest.mrp"/>
 </component>
 </collection>
 <collection name="wlan_info" long-name="WLAN Info" level="test">
@@ -1308,10 +1428,10 @@
 </component>
 </collection>
 <collection name="telephonyserverplugins" long-name="Telephony Server Plugins" level="plugin">
-<component name="common_tsy" long-name="Common TSY" introduced="tb92" purpose="optional" plugin="Y">
+<component name="common_tsy" long-name="Common TSY" introduced="tb91" purpose="optional" plugin="Y">
 <unit bldFile="os\cellularsrv\telephonyserverplugins\common_tsy\group" mrp="os\cellularsrv\telephonyserverplugins\common_tsy\group\telephony_commontsy.mrp"/>
 </component>
-<component name="licenseetsystub" long-name="LicenseeTSY Stub" introduced="tb91" purpose="development" plugin="Y">
+<component name="licenseetsystub" long-name="Licensee TSY Stub" introduced="tb91" purpose="development" plugin="Y">
 <unit mrp="os\cellularsrv\telephonyserverplugins\licenseetsystub\group\licenseetsystub.mrp"/>
 </component>
 <component name="multimodetsy" long-name="Multimode TSY" purpose="development" plugin="Y">
@@ -1320,10 +1440,10 @@
 <component name="simtsy" long-name="SIM TSY" introduced="7.0" purpose="development" plugin="Y">
 <unit bldFile="os\cellularsrv\telephonyserverplugins\simtsy\group" mrp="os\cellularsrv\telephonyserverplugins\simtsy\group\telephony_simtsy.mrp"/>
 </component>
-<component name="ctsydispatchlayer" long-name="C-TSY Dispatch Layer" introduced="Future" purpose="optional" plugin="Y">
+<component name="ctsydispatchlayer" long-name="C-TSY Dispatch Layer" introduced="tb92" purpose="optional" plugin="Y">
 <unit bldFile="os\cellularsrv\telephonyserverplugins\ctsydispatchlayer\group" mrp="os\cellularsrv\telephonyserverplugins\ctsydispatchlayer\group\telephony_dispatcher.mrp"/>
 </component>
-<component name="simatktsy" long-name="SIMATK TSY" introduced="Future" purpose="optional" plugin="Y">
+<component name="simatktsy" long-name="SIMATK TSY" introduced="tb92" purpose="optional" plugin="Y">
 <unit bldFile="os\cellularsrv\telephonyserverplugins\simatktsy\group" mrp="os\cellularsrv\telephonyserverplugins\simatktsy\group\commonsimatktsy.mrp"/>
 </component>
 </collection>
@@ -1355,126 +1475,130 @@
 </component>
 </collection>
 <collection name="cellularsrvapitest" long-name="Telephony API Tests" level="app-if">
-<component name="datatransferhaitest" long-name="Data Transfer HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1675"
-			  <unit mrp="cellularsrvapitest/datatransferhaitest/group/datatransferhai.mrp"/>
-			-->
+<component name="datatransferhaitest" long-name="Data Transfer HAI Tests" introduced="tb91" purpose="development">
+<unit mrp="os\cellularsrv\cellularsrvapitest\datatransferhaitest\group\datatransferhaitest.mrp"/>
 </component>
-<component name="telephonyhaitest" long-name="Telephony HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1675"
-			  <unit mrp="cellularsrvapitest/telephonyhaitest/group/telephonyhai.mrp"/>
-			-->
+<component name="telephonyhaitest" long-name="Telephony HAI Tests" introduced="tb91" purpose="development">
+<unit mrp="os\cellularsrv\cellularsrvapitest\telephonyhaitest\group\telephonyhaitest.mrp"/>
 </component>
-<component name="telephonydevsoundhaitest" long-name="DevSound Telephony HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1675"
-			  <unit mrp="cellularsrvapitest/telephonydevsoundhaitest/group/telephonydevsoundhai.mrp"/>
-			-->
+<component name="telephonydevsoundhaitest" long-name="DevSound Telephony HAI Tests" introduced="tb91" purpose="development">
+<unit mrp="os\cellularsrv\cellularsrvapitest\telephonydevsoundhaitest\group\telephonydevsoundhaitest.mrp"/>
 </component>
 </collection>
 </block>
-<block name="shortlinksrv" level="services" long-name="Short Link Services" levels="adaptation hw-if plugin framework server app-if">
-<collection name="usbbsptemplate" long-name="USB BSP Template" level="adaptation">
-<component name="usbhostcntrldrivertemplate" long-name="OMAP USB Host Controller Driver Template" introduced="tb92" filter="gt" purpose="optional">
-<unit bldFile="os\shortlinksrv\usbbsptemplate\usbhostcntrldrivertemplate" mrp="os\shortlinksrv\usbbsptemplate\usbhostcntrldrivertemplate\base_template_usbhostotg.mrp"/>
-</component>
-</collection>
-<collection name="usbldd" long-name="Shortlink Logical Device Drivers" level="hw-if">
-<component name="usbclientdrivers" long-name="USB Client Drivers" introduced="8.1b" purpose="optional">
-<unit bldFile="os\kernelhwsrv\kernel\eka\drivers\usbc" mrp="os\kernelhwsrv\kernel\eka\drivers\usbc\base_e32_drivers_usbcli.mrp"/>
-</component>
-<component name="usbhotgdrivers" long-name="USB Host and OTG Drivers" introduced="tb92" filter="gt" purpose="optional">
-<unit bldFile="os\kernelhwsrv\kernel\eka\drivers\usbho" mrp="os\kernelhwsrv\kernel\eka\drivers\usbho\base_drivers_usbhostotg.mrp"/>
-</component>
-<component name="usbhostandotgstack" long-name="USB Host and OTG Stack" introduced="tb92" filter="gt" purpose="optional">
-<unit bldFile="os\kernelhwsrv\kernel\eka\drivers\usbho\usbd" mrp="os\kernelhwsrv\kernel\eka\drivers\usbho\usbd\base_drivers_usbhostotg_usbware.mrp"/>
-</component>
-</collection>
-<collection name="bluetooth" long-name="Bluetooth" level="framework">
+<block name="bt" level="services" long-name="Bluetooth" levels="adaptation hw-if plugin framework server app-if">
+<collection name="bluetooth" long-name="Bluetooth Core" level="framework">
 <component name="btstack" long-name="Bluetooth Stack" introduced="6.0" purpose="optional">
-<unit bldFile="os\shortlinksrv\bluetooth\btstack" mrp="os\shortlinksrv\bluetooth\btstack\bluetooth_stack.mrp"/>
+<unit bldFile="os\bt\bluetooth\btstack" mrp="os\bt\bluetooth\btstack\bluetooth_stack.mrp"/>
 </component>
 <component name="btcomm" long-name="Bluetooth CSY" introduced="6.0" purpose="optional" plugin="Y">
-<unit bldFile="os\shortlinksrv\bluetooth\btcomm" mrp="os\shortlinksrv\bluetooth\btcomm\bluetooth_btcomm.mrp"/>
+<unit bldFile="os\bt\bluetooth\btcomm" mrp="os\bt\bluetooth\btcomm\bluetooth_btcomm.mrp"/>
 </component>
 <component name="btsdp" long-name="Bluetooth SDP" introduced="6.1" purpose="optional">
-<unit bldFile="os\shortlinksrv\bluetooth\btsdp" mrp="os\shortlinksrv\bluetooth\btsdp\bluetooth_sdp.mrp"/>
+<unit bldFile="os\bt\bluetooth\btsdp" mrp="os\bt\bluetooth\btsdp\bluetooth_sdp.mrp"/>
 </component>
 <component name="btextnotifiers" long-name="Bluetooth Notifiers Support" introduced="6.1" purpose="optional">
-<unit bldFile="os\shortlinksrv\bluetooth\btextnotifiers" mrp="os\shortlinksrv\bluetooth\btextnotifiers\bluetooth_btextnotifiers.mrp"/>
+<unit bldFile="os\bt\bluetooth\btextnotifiers" mrp="os\bt\bluetooth\btextnotifiers\bluetooth_btextnotifiers.mrp"/>
 </component>
 <component name="gavdp" long-name="Bluetooth GAVDP" introduced="8.1" purpose="optional">
-<unit bldFile="os\shortlinksrv\bluetooth\gavdp\group" mrp="os\shortlinksrv\bluetooth\gavdp\group\bluetooth_gavdp.mrp"/>
+<unit bldFile="os\bt\bluetooth\gavdp\group" mrp="os\bt\bluetooth\gavdp\group\bluetooth_gavdp.mrp"/>
 </component>
 <component name="btexample" long-name="Bluetooth Examples and Tests" introduced="6.1" purpose="development">
-<unit mrp="os\shortlinksrv\bluetooth\btexample\test\bluetooth_tests_examples.mrp"/>
+<unit mrp="os\bt\bluetooth\btexample\test\bluetooth_tests_examples.mrp"/>
 </component>
 <component name="btlogger" long-name="Bluetooth Logging Engine" introduced="9.2" purpose="optional">
-<unit bldFile="os\shortlinksrv\bluetooth\btlogger\group" mrp="os\shortlinksrv\bluetooth\btlogger\group\bluetooth_logger.mrp"/>
+<unit bldFile="os\bt\bluetooth\btlogger\group" mrp="os\bt\bluetooth\btlogger\group\bluetooth_logger.mrp"/>
 </component>
 <component name="btdocs" long-name="Bluetooth Documentation" purpose="development" class="doc">
-<unit mrp="os\shortlinksrv\bluetooth\btdocs\bluetooth_documentation.mrp"/>
+<unit mrp="os\bt\bluetooth\btdocs\bluetooth_documentation.mrp"/>
 </component>
 </collection>
 <collection name="bluetoothmgmt" long-name="Bluetooth Management" level="plugin">
 <component name="btmgr" long-name="Bluetooth Manager" introduced="6.0" purpose="optional">
-<unit bldFile="os\shortlinksrv\bluetoothmgmt\btmgr" mrp="os\shortlinksrv\bluetoothmgmt\btmgr\bluetooth_manager.mrp"/>
+<unit bldFile="os\bt\bluetoothmgmt\btmgr" mrp="os\bt\bluetoothmgmt\btmgr\bluetooth_manager.mrp"/>
 </component>
 <component name="btconfig" long-name="Bluetooth Config" purpose="optional" class="config">
-<unit bldFile="os\shortlinksrv\bluetoothmgmt\btconfig" mrp="os\shortlinksrv\bluetoothmgmt\btconfig\bluetooth_config.mrp"/>
+<unit bldFile="os\bt\bluetoothmgmt\btconfig" mrp="os\bt\bluetoothmgmt\btconfig\bluetooth_config.mrp"/>
 </component>
 <component name="btrom" long-name="Bluetooth ROM" introduced="9.1" purpose="optional">
-<unit bldFile="os\shortlinksrv\bluetoothmgmt\btrom" mrp="os\shortlinksrv\bluetoothmgmt\btrom\bluetooth_rom.mrp"/>
+<unit bldFile="os\bt\bluetoothmgmt\btrom" mrp="os\bt\bluetoothmgmt\btrom\bluetooth_rom.mrp"/>
 </component>
 <component name="bluetoothclientlib" long-name="Bluetooth Client Library" introduced="6.0" purpose="optional">
-<unit bldFile="os\shortlinksrv\bluetoothmgmt\bluetoothclientlib" mrp="os\shortlinksrv\bluetoothmgmt\bluetoothclientlib\bluetooth_user.mrp"/>
+<unit bldFile="os\bt\bluetoothmgmt\bluetoothclientlib" mrp="os\bt\bluetoothmgmt\bluetoothclientlib\bluetooth_user.mrp"/>
 </component>
 <component name="btcommon" long-name="Bluetooth Build Utilities" purpose="optional">
-<unit mrp="os\shortlinksrv\bluetoothmgmt\btcommon\bluetooth_common.mrp"/>
+<unit mrp="os\bt\bluetoothmgmt\btcommon\bluetooth_common.mrp"/>
 </component>
 </collection>
 <collection name="bluetoothcommsprofiles" long-name="Bluetooth Comms Profiles" level="app-if">
 <component name="btpan" long-name="Bluetooth PAN Profile" introduced="8.1" purpose="optional" plugin="Y">
-<unit bldFile="os\shortlinksrv\bluetoothcommsprofiles\btpan\group" mrp="os\shortlinksrv\bluetoothcommsprofiles\btpan\group\bluetooth_pan.mrp"/>
+<unit bldFile="os\bt\bluetoothcommsprofiles\btpan\group" mrp="os\bt\bluetoothcommsprofiles\btpan\group\bluetooth_pan.mrp"/>
 </component>
 </collection>
 <collection name="bthci" long-name="Host Controller Interface" level="server">
 <component name="bthci2" long-name="Bluetooth HCI Framework 2" introduced="9.2" purpose="optional">
-<unit bldFile="os\shortlinksrv\bthci\bthci2\group" mrp="os\shortlinksrv\bthci\bthci2\group\bluetooth_hci_v2_framework.mrp"/>
+<unit bldFile="os\bt\bthci\bthci2\group" mrp="os\bt\bthci\bthci2\group\bluetooth_hci_v2_framework.mrp"/>
 </component>
 <component name="hciextensioninterface" long-name="Bluetooth HCI Extension Interface" introduced="6.1" purpose="optional">
-<unit bldFile="os\shortlinksrv\bthci\hciextensioninterface" mrp="os\shortlinksrv\bthci\hciextensioninterface\bluetooth_hciproxy.mrp"/>
+<unit bldFile="os\bt\bthci\hciextensioninterface" mrp="os\bt\bthci\hciextensioninterface\bluetooth_hciproxy.mrp"/>
 </component>
 <component name="hci2implementations" long-name="Bluetooth HCI 2 Reference Implementations" introduced="9.2" purpose="optional" plugin="Y">
-<unit bldFile="os\shortlinksrv\bthci\hci2implementations\group" mrp="os\shortlinksrv\bthci\hci2implementations\group\bluetooth_hci_v2_implementations.mrp"/>
-</component>
-</collection>
-<collection name="usbmgmt" long-name="USB Management" level="server">
-<component name="usbmgr" long-name="USB Manager" purpose="optional">
-<unit bldFile="os\shortlinksrv\usbmgmt\usbmgr\group" mrp="os\shortlinksrv\usbmgmt\usbmgr\group\usb_manager.mrp" version="2"/>
-</component>
-<component name="usbmgrtest" long-name="USB Manager Tests" introduced="7.0" purpose="development">
-<unit mrp="os\shortlinksrv\usbmgmt\usbmgrtest\group\usb_test.mrp" version="2"/>
-</component>
-<component name="usbclassandmgrdocs" long-name="USB Class and Manager Documentation" purpose="development" class="doc">
-<unit mrp="os\shortlinksrv\usbmgmt\usbclassandmgrdocs\usb_documentation.mrp"/>
-</component>
-<component name="usbrndis" long-name="USB RNDIS" introduced="tb92" filter="gt" purpose="optional" plugin="Y">
-<unit bldFile="os\shortlinksrv\usbmgmt\usbrndis\group" mrp="os\shortlinksrv\usbmgmt\usbrndis\group\usb_rndis.mrp"/>
+<unit bldFile="os\bt\bthci\hci2implementations\group" mrp="os\bt\bthci\hci2implementations\group\bluetooth_hci_v2_implementations.mrp"/>
 </component>
 </collection>
 <collection name="irda" long-name="IrDA" level="plugin">
 <component name="irdastack" long-name="IrDA Stack" purpose="optional">
-<unit bldFile="os\shortlinksrv\irda\irdastack\group" mrp="os\shortlinksrv\irda\irdastack\group\infra-red_irda.mrp"/>
+<unit bldFile="os\bt\irda\irdastack\group" mrp="os\bt\irda\irdastack\group\infra-red_irda.mrp"/>
 </component>
 </collection>
 <collection name="bluetoothapitest" long-name="Bluetooth API Tests" level="app-if">
-<component name="bluetoothsvs" long-name="Bluetooth Verification Suite" introduced="tb91" purpose="development">
-<unit mrp="os\shortlinksrv\bluetoothapitest\bluetoothsvs\group\bluetoothsvs.mrp"/>
+<component name="bluetoothsvs" long-name="Bluetooth Verification Suite" introduced="tb92" purpose="development">
+<unit mrp="os\bt\bluetoothapitest\bluetoothsvs\group\bluetoothsvs.mrp"/>
 </component>
 </collection>
-<collection name="shortlinksrv_info" long-name="Short Link Services Info" level="app-if">
-<component name="shortlinksrv_metadata" long-name="Short Link Services Metadata" introduced="tb91" purpose="development" class="config PC">
-<unit mrp="os\shortlinksrv\shortlinksrv_info\shortlinksrv_metadata\shortlinksrv_metadata.mrp"/>
+<collection name="bt_info" long-name="Bluetooth Info" level="app-if">
+<component name="bt_metadata" long-name="Bluetooth Metadata" introduced="tb92" purpose="development" class="config PC">
+<unit mrp="os\bt\bt_info\bt_metadata\bt_metadata.mrp"/>
+</component>
+</collection>
+</block>
+<block name="usb" level="services" long-name="USB" levels="adaptation hw-if plugin framework server app-if">
+<collection name="n:usbbsptemplate" long-name="USB BSP Template" level="adaptation">
+<component name="n:usbhostcntrldrivertemplate" long-name="OMAP USB Host Controller Driver Template" introduced="tb92" filter="gt" purpose="optional">
+<unit bldFile="os\usb\usbbsptemplate\usbhostcntrldrivertemplate" mrp="os\usb\usbbsptemplate\usbhostcntrldrivertemplate\base_template_usbhostotg.mrp"/>
+</component>
+</collection>
+<collection name="usbldd" long-name="USB Logical Device Drivers" level="hw-if">
+<component name="usbclientdrivers" long-name="USB Client Drivers" introduced="8.1b" purpose="optional">
+<unit bldFile="os\kernelhwsrv\kernel\eka\drivers\usbc" mrp="os\kernelhwsrv\kernel\eka\drivers\usbc\base_e32_drivers_usbcli.mrp"/>
+</component>
+<component name="n:usbhotgdrivers" long-name="USB Host and OTG Drivers" introduced="tb92" filter="gt" purpose="optional">
+<unit bldFile="os\kernelhwsrv\kernel\eka\drivers\usbho" mrp="os\kernelhwsrv\kernel\eka\drivers\usbho\base_drivers_usbhostotg.mrp"/>
+</component>
+<component name="n:usbhostandotgstack" long-name="USB Host and OTG Stack" introduced="tb92" filter="gt" purpose="optional">
+<unit bldFile="os\kernelhwsrv\kernel\eka\drivers\usbho\usbd" mrp="os\kernelhwsrv\kernel\eka\drivers\usbho\usbd\base_drivers_usbhostotg_usbware.mrp"/>
+</component>
+</collection>
+<collection name="usbmgmt" long-name="USB Management" level="server">
+<component name="usbmgr" long-name="USB Manager" purpose="optional">
+<unit bldFile="os\usb\usbmgmt\usbmgr\group" mrp="os\usb\usbmgmt\usbmgr\group\usb_manager.mrp" version="2"/>
+</component>
+<component name="usbmgrtest" long-name="USB Manager Tests" introduced="7.0" purpose="development">
+<unit mrp="os\usb\usbmgmt\usbmgrtest\group\usb_test.mrp" version="2"/>
+</component>
+<component name="usbclassandmgrdocs" long-name="USB Class and Manager Documentation" purpose="development" class="doc">
+<unit mrp="os\usb\usbmgmt\usbclassandmgrdocs\usb_documentation.mrp"/>
+</component>
+<component name="n:usbrndis" long-name="USB RNDIS" introduced="tb92" filter="gt" purpose="optional" plugin="Y">
+<unit bldFile="os\usb\usbmgmt\usbrndis\group" mrp="os\usb\usbmgmt\usbrndis\group\usb_rndis.mrp"/>
+</component>
+</collection>
+<collection name="usb_info" long-name="USB Info" level="app-if">
+<component name="usb_metadata" long-name="USB Metadata" introduced="tb92" purpose="development" class="config PC">
+<unit mrp="os\usb\usb_info\usb_metadata\usb_metadata.mrp"/>
+</component>
+<component name="n:nokia_usb_metadata" long-name="Nokia USB Metadata" introduced="tb91" purpose="development" class="config PC">
+<unit mrp="os\usb\usb_info\nokia_usb_metadata\nokia_usb_metadata.mrp"/>
 </component>
 </collection>
 </block>
@@ -1507,7 +1631,7 @@
 </component>
 </collection>
 <collection name="mmplugins" long-name="Multimedia Plugins" level="middleware">
-<component name="capsadaptation" long-name="CAPS Adaptation" introduced="tb92" purpose="optional">
+<component name="n:capsadaptation" long-name="CAPS Adaptation" introduced="tb92" purpose="optional">
 <unit bldFile="os\mm\imagingandcamerafws\imagingfws\plugins\CAPSAdaptation\group" mrp="os\mm\imagingandcamerafws\imagingfws\plugins\CAPSAdaptation\group\multimedia_icl_capsadaptation.mrp"/>
 </component>
 <component name="imagingplugins" long-name="Imaging Plugins" introduced="7.0s" purpose="optional" plugin="Y">
@@ -1516,11 +1640,11 @@
 <component name="cameraplugins" long-name="Camera Plugins" introduced="7.0s" purpose="optional" plugin="Y">
 <unit bldFile="os\mm\mmplugins\cameraplugins\group" mrp="os\mm\mmplugins\cameraplugins\group\multimedia_ecam_plugins.mrp"/>
 </component>
-<component name="3gplib" long-name="3GP Library" introduced="Future" purpose="optional">
-<unit bldFile="os\mm\mmplugins\3gplib\group" mrp="os\mm\mmplugins\3gplib\group\multimedia_3gplibrary.mrp"/>
+<component name="lib3gp" long-name="3GP Library" introduced="tb91" purpose="optional">
+<unit bldFile="os\mm\mmplugins\lib3gp\group" mrp="os\mm\mmplugins\lib3gp\group\multimedia_3gplibrary.mrp"/>
 </component>
-<component name="3gpunittest" long-name="3GP Unit Tests" introduced="Future" purpose="development">
-<unit mrp="os\mm\mmplugins\3gpunittest\group\multimedia_unittest_3gplibrary_source.mrp"/>
+<component name="lib3gpunittest" long-name="3GP Unit Tests" introduced="tb91" purpose="development">
+<unit mrp="os\mm\mmplugins\lib3gpunittest\group\multimedia_unittest_3gplibrary_source.mrp"/>
 </component>
 </collection>
 <collection name="mm_info" long-name="Multimedia Info" level="app-if">
@@ -1530,16 +1654,34 @@
 <component name="mm_metadata" long-name="Multimedia Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="os\mm\mm_info\mm_metadata\mm_metadata.mrp"/>
 </component>
+<component name="n:nokia_mm_metadata" long-name="Nokia Multimedia Metadata" introduced="tb91" purpose="development" class="config PC">
+<unit mrp="os\mm\mm_info\nokia_mm_metadata\nokia_mm_metadata.mrp"/>
+</component>
 </collection>
 <collection name="mmresourcemgmt" long-name="Multimedia Resource Management" level="middleware">
-<component name="mmresctrl" long-name="Multimedia Resource Controller" introduced="tb92" purpose="development">
+<component name="mmresctrl" long-name="Multimedia Resource Controller" introduced="tb91" purpose="development">
 <unit bldFile="os\mm\mmresourcemgmt\mmresctrl\group" mrp="os\mm\mmresourcemgmt\mmresctrl\group\multimedia_a3f_refmmrc.mrp"/>
 </component>
+<!-- decsionfw is not used in any active configuration yet
+      <component id="decisionfw" name="Decision Framework" introduced="Future" purpose="optional">
+        <unit bldFile="mmresourcemgmt/decisionfw/group" mrp="mmresourcemgmt/decisionfw/group/multimedia_mmrcfw.mrp"/>
+      </component>
+      -->
+<!-- mmgmtengine in not used in any active configuration yet
+	  <component id="mmmgmtengine" name="Multimedia Management Engine" introduced="Future" purpose="optional">
+        <unit bldFile="mmresourcemgmt/mmmgmtengine/group" mrp="mmresourcemgmt/mmmgmtengine/group/multimedia_mgtengine.mrp"/>
+      </component>
+	  -->
 </collection>
 <collection name="mmdevicefw" long-name="Multimedia Device Framework" level="device-fw">
 <component name="mdf" long-name="Media Device Framework" introduced="9.2" purpose="mandatory">
 <unit bldFile="os\mm\mmdevicefw\mdf\group" mrp="os\mm\mmdevicefw\mdf\group\multimedia_mdf.mrp"/>
 </component>
+<!-- mdf2 is not used in any active configuration yet
+      <component id="mdf2" name="Media Device Framework 2" introduced="Future" purpose="optional">
+        <unit bldFile="mmdevicefw/mdf2/group" mrp="mmdevicefw/mdf2/group/multimedia_mm-infras.mrp"/>
+      </component>
+	  -->
 <component name="mdfunittest" long-name="MDF Unit Tests" introduced="9.2" purpose="development">
 <unit mrp="os\mm\mmdevicefw\mdfunittest\group\multimedia_unittest_mdf_source.mrp"/>
 </component>
@@ -1549,7 +1691,7 @@
 </collection>
 <collection name="mmswadaptation" long-name="Multimedia Software Adaptation" level="adaptation">
 <component name="videorenderer" long-name="Video Renderer" introduced="tb92" purpose="optional">
-<unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\videorenderer\group" mrp="mw\mmmw\mmmiddlewarefws\mmfw\videorenderer\group\multimedia_videorenderer.mrp"/>
+<unit bldFile="os\mm\mmswadaptation\videorenderer\group" mrp="os\mm\mmswadaptation\videorenderer\group\multimedia_videorenderer.mrp"/>
 </component>
 </collection>
 <collection name="mmtestenv" long-name="Multimedia Test Environment" level="device-fw">
@@ -1569,12 +1711,26 @@
 <collection name="omxil" long-name="OpenMAX IL" level="hw-if">
 <component name="omxilapi" long-name="OpenMAX IL API" introduced="tb92" purpose="optional">
 <unit bldFile="os\mm\omxil\omxilapi\group" mrp="os\mm\omxil\omxilapi\group\multimedia_omx_il_api.mrp" version="1"/>
+<!-- not used in an active conifguration
+        <unit version="2" bldFile="omxil/omxilapi2/group" mrp="omxil/omxilapi2/group/multimedia_omx_il_api.mrp"/>
+        -->
 </component>
 <component name="omxilcore" long-name="OpenMAX IL Core" introduced="tb92" purpose="optional">
 <unit bldFile="os\mm\omxil\omxilcore\group" mrp="os\mm\omxil\omxilcore\group\multimedia_omx_il_core.mrp" version="1"/>
+<!-- not used in an active conifguration
+        <unit version="2" bldFile="omxil/omxilcore2/group" mrp="omxil/omxilcore2/group/multimedia_omx_il_core.mrp"/>
+		-->
 </component>
+<!-- not used in an active conifguration
+      <component id="omxilcompfw" name="OpenMAX IL Component Framework" introduced="Future" purpose="optional">
+        <unit bldFile="omxil/omxilcompfw/components/group" mrp="omxil/omxilcompfw/components/group/multimedia_omx_il_comp.mrp"/>
+      </component>
+	  -->
 <component name="omxilrefcomps" long-name="OpenMAX IL Reference Components" introduced="tb92" purpose="optional">
 <unit bldFile="os\mm\omxil\omxilrefcomps\ref_components\group" mrp="os\mm\omxil\omxilrefcomps\ref_components\group\multimedia_omx_il_comp_ref.mrp" version="1"/>
+<!-- not used in an active conifguration
+		<unit version="2" bldFile="mmdataplane/omxiltranslators/group_omx_ref_components" mrp="mmdataplane/omxiltranslators/group_omx_ref_components/multimedia_omx_il_comp_ref.mrp"/>
+		-->
 </component>
 <component name="omxilunittest" long-name="OpenMAX IL Unit Tests" introduced="tb92" purpose="development">
 <unit mrp="os\mm\omxil\omxilunittest\group\multimedia_unittest_omx_il.mrp"/>
@@ -1588,71 +1744,115 @@
 </collection>
 <collection name="devsound" long-name="Sound Device" level="devices">
 <component name="devsoundapi" long-name="DevSound API" introduced="7.0s" purpose="mandatory">
+<!-- PLACEHOLDER="DEF137592" START REMOVE -->
 <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\SoundDev\group_api" mrp="mw\mmmw\mmmiddlewarefws\mmfw\SoundDev\group_api\multimedia_mdf_devsound_api.mrp"/>
+<!-- PLACEHOLDER="DEF137592" END REMOVE -->
+<!-- PLACEHOLDER="DEF137592"
+        <unit bldFile="devsound/devsoundapi/group" mrp="devsound/devsoundapi/group/multimedia_mdf_devsound_api.mrp"/>
+      -->
 </component>
-<component name="a3fdevsound" long-name="A3F DevSound" introduced="tb92" purpose="optional">
+<component name="a3fdevsound" long-name="A3F DevSound" introduced="tb91" purpose="optional">
 <unit bldFile="os\mm\devsound\a3fdevsound\group" mrp="os\mm\devsound\a3fdevsound\group\multimedia_a3f_devsound.mrp"/>
 </component>
-<component name="a3facf" long-name="A3F Audio Component Framework" introduced="tb92" purpose="optional">
+<component name="a3facf" long-name="A3F Audio Component Framework" introduced="tb91" purpose="optional">
 <unit bldFile="os\mm\devsound\a3facf\group" mrp="os\mm\devsound\a3facf\group\multimedia_a3f_acf.mrp"/>
 </component>
 <component name="devsoundpluginsupport" long-name="DevSound Plugin Support" introduced="7.0s" purpose="optional">
+<!-- PLACEHOLDER="DEF137592" START REMOVE -->
 <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\SoundDev\group_pluginsupport" mrp="mw\mmmw\mmmiddlewarefws\mmfw\SoundDev\group_pluginsupport\multimedia_mdf_devsound_pluginsupport.mrp"/>
+<!-- PLACEHOLDER="DEF137592" END REMOVE -->
+<!-- PLACEHOLDER="DEF137592"
+        <unit bldFile="devsound/devsoundpluginsupport/group" mrp="devsound/devsoundpluginsupport/group/multimedia_mdf_devsound_pluginsupport.mrp"/>
+      -->
 </component>
 <component name="refdevsound" long-name="Reference DevSound Plugins" introduced="7.0s" purpose="optional">
+<!-- PLACEHOLDER="DEF137592" START REMOVE -->
 <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\SoundDev\group_refplugin" mrp="mw\mmmw\mmmiddlewarefws\mmfw\SoundDev\group_refplugin\multimedia_mdf_devsound_refplugin.mrp"/>
+<!-- PLACEHOLDER="DEF137592" END REMOVE -->
+<!-- PLACEHOLDER="DEF137592"
+        <unit bldFile="devsound/devsoundrefplugin/group" mrp="devsound/devsoundrefplugin/group/multimedia_mdf_devsound_refplugin.mrp"/>
+      -->
 </component>
 <component name="btdevsound" long-name="Bluetooth DevSound Plugin" introduced="7.0s" purpose="development" plugin="Y">
+<!-- PLACEHOLDER="DEF137592" START REMOVE -->
 <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\sounddevbt\group" mrp="mw\mmmw\mmmiddlewarefws\mmfw\sounddevbt\group\multimedia_mdf_devsound_refbtplugin.mrp"/>
+<!-- PLACEHOLDER="DEF137592" END REMOVE -->
+<!-- PLACEHOLDER="DEF137592"
+        <unit bldFile="devsound/sounddevbt/group" mrp="devsound/sounddevbt/group/multimedia_mdf_devsound_refbtplugin.mrp"/>
+      -->
 </component>
-<component name="a3ftrace" long-name="A3F Trace Utility" introduced="tb92" purpose="development">
+<component name="a3ftrace" long-name="A3F Trace Utility" introduced="tb91" purpose="development">
 <unit bldFile="os\mm\devsound\a3ftrace\group" mrp="os\mm\devsound\a3ftrace\group\multimedia_a3f_traces.mrp"/>
 </component>
-<component name="a3fintegrationtest" long-name="A3F Integration Tests" introduced="tb92" purpose="development">
+<component name="a3fintegrationtest" long-name="A3F Integration Tests" introduced="tb91" purpose="development">
 <unit mrp="os\mm\devsound\a3fintegrationtest\group\multimedia_inttest_a3f_devsound_source.mrp"/>
 </component>
-<component name="a3fsrvstart" long-name="A3F Server Start" introduced="tb92" purpose="optional" plugin="Y">
+<component name="a3fsrvstart" long-name="A3F Server Start" introduced="tb91" purpose="optional" plugin="Y">
 <unit bldFile="os\mm\devsound\a3fsrvstart\group" mrp="os\mm\devsound\a3fsrvstart\group\multimedia_a3f_serverstart.mrp"/>
 </component>
 </collection>
 <collection name="mmhais" long-name="Multimedia Hardware Adaptation Interfaces" level="adaptation">
 <component name="devsoundhwdeviceapi" long-name="DevSound Hardware Device API" introduced="7.0s" purpose="optional">
+<!-- PLACEHOLDER="DEF137592" START REMOVE -->
 <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\SoundDev\group_hwdev" mrp="mw\mmmw\mmmiddlewarefws\mmfw\SoundDev\group_hwdev\multimedia_mdf_devsound_hwdev.mrp"/>
+<!-- PLACEHOLDER="DEF137592" END REMOVE -->
+<!-- PLACEHOLDER="DEF137592"
+        <unit bldFile="devsound/hwdevapi/group" mrp="devsound/sounddevbt/group/devsound/hwdevapi/group/multimedia_mdf_devsound_hwdev.mrp"/>
+      -->
 </component>
-<component name="a3facl" long-name="A3F Audio Component Library" introduced="tb92" purpose="development">
+<component name="a3facl" long-name="A3F Audio Component Library" introduced="tb91" purpose="development">
 <unit bldFile="os\mm\mmhais\a3facl\group" mrp="os\mm\mmhais\a3facl\group\multimedia_a3f_acl.mrp"/>
 </component>
-<component name="a3fdevsoundcustomisation" long-name="A3F DevSound Customisation" introduced="tb92" purpose="optional">
+<component name="a3fdevsoundcustomisation" long-name="A3F DevSound Customisation" introduced="tb91" purpose="optional">
 <unit bldFile="os\mm\mmhais\a3fdevsoundcustomisation\group" mrp="os\mm\mmhais\a3fdevsoundcustomisation\group\multimedia_a3f_devsoundadaptationinfo.mrp"/>
 </component>
-<component name="refacladapt" long-name="Reference ACL Adaptation" introduced="tb92" purpose="optional">
+<component name="refacladapt" long-name="Reference ACL Adaptation" introduced="tb91" purpose="optional">
 <unit bldFile="os\mm\mmhais\refacladapt\group" mrp="os\mm\mmhais\refacladapt\group\multimedia_a3f_refacladaptation.mrp"/>
 </component>
 <component name="videohai" long-name="Video HAI" introduced="7.0s" purpose="mandatory">
-<unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\DevVideo\group" mrp="mw\mmmw\mmmiddlewarefws\mmfw\DevVideo\group\multimedia_mdf_devvideo.mrp"/>
-<!-- PLACEHOLDER="DEF138192" REMOVE -->
-<!-- PLACEHOLDER="DEF138192"
-		<unit bldFile="mmhais/videohai/group" mrp="mmhais/videohai/group/multimedia_mdf_devvideo.mrp"/>
-		-->
+<unit bldFile="os\mm\mmhais\videohai\group" mrp="os\mm\mmhais\videohai\group\multimedia_videohai.mrp"/>
 </component>
-<component name="dvbhreceiverhai" long-name="Mobile TV DVB-H Receiver HAI" introduced="tb92" purpose="optional">
+<component name="dvbhreceiverhai" long-name="Mobile TV DVB-H Receiver HAI" introduced="tb91" purpose="optional">
 <unit bldFile="os\mm\mmhais\dvbhreceiverhai\hai\dvbh\group" mrp="os\mm\mmhais\dvbhreceiverhai\hai\dvbh\group\multimedia_mobiletv_dvbh_hai.mrp"/>
 </component>
-<component name="dvbhunittest" long-name="Mobile TV DVB-H Unit Tests" introduced="tb92" purpose="development">
+<component name="dvbhunittest" long-name="Mobile TV DVB-H Unit Tests" introduced="tb91" purpose="development">
 <unit mrp="os\mm\mmhais\dvbhunittest\hai\dvbh\group\multimedia_unittest_dvbhhai.mrp"/>
 </component>
 </collection>
-<collection name="mmpacketvideo" long-name="Multimedia PacketVideo" level="middleware">
-<component name="mmpvcodecs" long-name="PacketVideo Codecs" introduced="tb92" purpose="development" plugin="Y">
+<!-- not used in an active configuration
+    <collection id="mmhostprocess" name="Multimedia Host Process" level="devices">
+      <component id="mmhpvideoclient" name="MMHP Video Client" introduced="Future" purpose="optional">
+        <unit bldFile="mmhostprocess/mmhpvideoclient/mmvideocomponents/group" mrp="mmhostprocess/mmhpvideoclient/mmvideocomponents/group/multimedia_mmhp_video_client.mrp"/>
+      </component>
+      <component id="mmhpaudioclient" name="MMHP Audio Client" introduced="Future" purpose="optional">
+        <unit bldFile="mmhostprocess/mmhpaudioclient/mmaudiocomponents/group" mrp="mmhostprocess/mmhpaudioclient/mmaudiocomponents/group/multimedia_mmhp_audio_client.mrp"/>
+      </component>
+      <component id="mmhpcameraclient" name="MMHP Camera Client" introduced="Future" purpose="optional">
+        <unit bldFile="mmhostprocess/mmhpcameraclient/mmcameracomponents/group" mrp="mmhostprocess/mmhpcameraclient/mmcameracomponents/group/multimedia_mmhp_camera_client.mrp"/>
+      </component>
+    </collection>
+	-->
+<!-- not used in an active configuraiton
+    <collection id="mmdataplane" name="Multimedia Data Plane Adaptation" level="hw-if">
+      <component id="omxilnodes" name="OpenMAX IL Data Plane Nodes" introduced="Future" purpose="optional" class="plugin">
+        <unit bldFile="mmdataplane/omxilnodes/group" mrp="mmdataplane/omxilnodes/group/multimedia_data_plane_nodes.mrp"/>
+      </component>
+      <component id="omxiltranslators" name="OpenMAX IL Translators" introduced="Future" purpose="optional" class="plugin">
+        <unit bldFile="mmdataplane/omxiltranslators/group_translators" mrp="mmdataplane/omxiltranslators/group_translators/multimedia_openmax_il_translators.mrp"/>
+      </component>
+    </collection>
+	-->
+<collection name="n:mmpacketvideo" long-name="Multimedia PacketVideo" level="middleware">
+<component name="n:mmpvcodecs" long-name="PacketVideo Codecs" introduced="tb92" purpose="development" plugin="Y">
 <unit bldFile="os\mm\mmpacketvideo\mmpvcodecs\group" mrp="os\mm\mmpacketvideo\mmpvcodecs\group\multimedia_pv_aac.mrp"/>
 </component>
-<component name="omxilpvcomps" long-name="OpenMAX IL PacketVideo Components" introduced="tb92" purpose="development">
+<component name="n:omxilpvcomps" long-name="OpenMAX IL PacketVideo Components" introduced="tb92" purpose="development">
 <unit bldFile="os\mm\mmpacketvideo\omxilpvcomps\group" mrp="os\mm\mmpacketvideo\omxilpvcomps\group\multimedia_omx_il_pv_comps.mrp"/>
 </component>
-<component name="mmilapipv" long-name="Multimedia Integration Layer API PacketVideo" introduced="tb92" purpose="development">
+<component name="n:mmilapipv" long-name="Multimedia Integration Layer API PacketVideo" introduced="tb92" purpose="development">
 <unit bldFile="os\mm\mmpacketvideo\mmilapipv\group" mrp="os\mm\mmpacketvideo\mmilapipv\group\multimedia_il_api_pv.mrp"/>
 </component>
-<component name="a3fpvintegrationtest" long-name="A3F PacketVideo Integration Tests" introduced="tb92" purpose="development">
+<component name="n:a3fpvintegrationtest" long-name="A3F PacketVideo Integration Tests" introduced="tb92" purpose="development">
 <unit mrp="os\mm\mmpacketvideo\a3fpvintegrationtest\group\multimedia_inttest_pv_a3f_devsound_source.mrp"/>
 </component>
 </collection>
@@ -1660,20 +1860,14 @@
 <component name="mmsvs" long-name="Multimedia Verification Suite" introduced="tb91" purpose="development">
 <unit mrp="os\mm\mmapitest\mmsvs\group\mmsvs.mrp"/>
 </component>
-<component name="devvideohaitest" long-name="DevVideo HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1675"
-	<unit mrp="mmapitest/devvideohaitest/group/devvideohai.mrp"/>
-	-->
+<component name="devvideohaitest" long-name="DevVideo HAI Tests" introduced="tb91" purpose="development">
+<unit mrp="os\mm\mmapitest\devvideohaitest\group\devvideohaitest.mrp"/>
 </component>
-<component name="devsoundhaitest" long-name="DevSound HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1675"
-	<unit mrp="mmapitest/devsoundhaitest/group/devsoundhai.mrp"/>
-	-->
+<component name="devsoundhaitest" long-name="DevSound HAI Tests" introduced="tb91" purpose="development">
+<unit mrp="os\mm\mmapitest\devsoundhaitest\group\devsoundhaitest.mrp"/>
 </component>
-<component name="devsoundexthaitest" long-name="DevSound Extensions HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1675"
-	<unit mrp="mmapitest/devsoundexthaitest/group/devsoundexthai.mrp"/>
-	-->
+<component name="devsoundexthaitest" long-name="DevSound Extensions HAI Tests" introduced="tb91" purpose="development">
+<unit mrp="os\mm\mmapitest\devsoundexthaitest\group\devsoundexthaitest.mrp"/>
 </component>
 </collection>
 </block>
@@ -1699,24 +1893,24 @@
 <unit bldFile="os\graphics\graphicshwdrivers\surfacemgr\group" mrp="os\graphics\graphicshwdrivers\surfacemgr\group\graphics_surfacemanager.mrp"/>
 </component>
 </collection>
-<collection name="graphicscomposition" long-name="Graphics Composition" level="engines">
-<component name="graphicscompositionengine" long-name="Graphics Composition Engine" introduced="tb92" purpose="optional">
+<collection name="n:graphicscomposition" long-name="Graphics Composition" level="engines">
+<component name="n:graphicscompositionengine" long-name="Graphics Composition Engine" introduced="tb92" purpose="optional">
 <unit bldFile="os\graphics\graphicscomposition\graphicscompositionengine\group" mrp="os\graphics\graphicscomposition\graphicscompositionengine\group\graphics_gce.mrp"/>
 </component>
-<component name="compositionengineadaptation" long-name="Composition Engine Adaptation" introduced="tb92" purpose="optional">
+<component name="n:compositionengineadaptation" long-name="Composition Engine Adaptation" introduced="tb92" purpose="optional">
 <unit bldFile="os\graphics\graphicscomposition\compositionengineadaptation\group" mrp="os\graphics\graphicscomposition\compositionengineadaptation\group\graphics_compositionbackend.mrp"/>
 </component>
-<component name="compositionengineadaptationsgx" long-name="SGX Composition Engine Adaptation" introduced="tb92" purpose="optional" class="placeholder">
+<component name="n:compositionengineadaptationsgx" long-name="SGX Backend" introduced="tb92" purpose="optional" class="placeholder">
 <!-- PLACEHOLDER="DS.1539"
-         <unit mrp="graphicscomposition/compositionengineadaptationsgx/group/compositionengineadaptationsgx.mrp"/>
+         <unit mrp="../../graphicscomposition/compositionengineadaptationsgx/group/compositionengineadaptationsgx.mrp"/>
      -->
 </component>
-<component name="compositionengineadaptationmbx" long-name="MBX Backend" introduced="tb92" purpose="optional" class="placeholder">
+<component name="n:compositionengineadaptationmbx" long-name="MBX Backend" introduced="tb92" purpose="optional" class="placeholder">
 <!-- PLACEHOLDER="DS.1724"
-         <unit mrp="graphicscomposition/compositionengineadaptationmbx/group/compositionengineadaptationmbx.mrp"/>
+         <unit mrp="../../graphicscomposition/compositionengineadaptationmbx/group/compositionengineadaptationmbx.mrp"/>
      -->
 </component>
-<component name="surfaceupdate" long-name="Surface Update" introduced="tb92" purpose="optional">
+<component name="n:surfaceupdate" long-name="Surface Update" introduced="tb92" purpose="optional">
 <unit bldFile="os\graphics\graphicscomposition\surfaceupdate\group" mrp="os\graphics\graphicscomposition\surfaceupdate\group\graphics_surfaceupdate.mrp"/>
 </component>
 </collection>
@@ -1735,12 +1929,16 @@
 <component name="graphics_metadata" long-name="Graphics Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="os\graphics\graphics_info\graphics_metadata\graphics_metadata.mrp"/>
 </component>
+<component name="n:nokia_graphics_metadata" long-name="Nokia Graphics Metadata" introduced="tb91" purpose="development" class="config PC">
+<unit mrp="os\graphics\graphics_info\nokia_graphics_metadata\nokia_graphics_metadata.mrp"/>
+</component>
 </collection>
 <collection name="windowing" long-name="Windowing" level="app-if">
-<component name="windowserver" long-name="Window Server" purpose="mandatory">
+<component name="n:windowserver" long-name="Window Server" purpose="mandatory">
+<!-- intentionally not for the foundation despite being a mandatory component -->
 <unit bldFile="os\graphics\windowing\windowserver\group" mrp="os\graphics\windowing\windowserver\group\graphics_wserv.mrp"/>
 </component>
-<component name="windowserverplugins" long-name="Window Server Plugins" introduced="tb92" purpose="optional" plugin="Y">
+<component name="n:windowserverplugins" long-name="Window Server Plugins" introduced="tb92" purpose="optional" plugin="Y">
 <unit bldFile="os\graphics\windowing\windowserverplugins\group" mrp="os\graphics\windowing\windowserverplugins\group\graphics_wserv_std_plugins.mrp"/>
 </component>
 </collection>
@@ -1761,10 +1959,10 @@
 <component name="openglesinterface" long-name="OpenGL ES Interface" introduced="8.0" purpose="optional">
 <unit bldFile="os\graphics\opengles\openglesinterface\group" mrp="os\graphics\opengles\openglesinterface\group\graphics_openglesheaders.mrp"/>
 </component>
-<component name="openglesimplementation" long-name="OpenGL ES Implementation" filter="gt" introduced="8.0" purpose="development">
-<unit bldFile="os\graphics\opengles\openglesimplementation\group\" mrp="os\graphics\opengles\openglesimplementation\group\graphics_opengles.mrp"/>
+<component name="n:openglesimplementation" long-name="OpenGL ES Implementation" filter="gt" introduced="8.0" purpose="development">
+<unit bldFile="os\graphics\opengles\openglesimplementation\group" mrp="os\graphics\opengles\openglesimplementation\group\graphics_opengles.mrp"/>
 </component>
-<component name="openglesdisplayproperties" long-name="OpenGL ES Display Properties" introduced="8.0" purpose="optional">
+<component name="n:openglesdisplayproperties" long-name="OpenGL ES Display Properties" introduced="8.0" purpose="optional">
 <unit bldFile="os\graphics\opengles\openglesdisplayproperties\group" mrp="os\graphics\opengles\openglesdisplayproperties\group\graphics_openglesdisplayproperty.mrp"/>
 </component>
 </collection>
@@ -1772,16 +1970,16 @@
 <component name="openvginterface" long-name="OpenVG Interface" introduced="tb91" purpose="optional">
 <unit bldFile="os\graphics\openvg\openvginterface\group" mrp="os\graphics\openvg\openvginterface\group\graphics_openvgheaders.mrp"/>
 </component>
-<component name="openvgimplementation" long-name="OpenVG Implementation" introduced="tb91" purpose="optional">
-<unit bldFile="os\graphics\openvg\openvgimplementation\group\" mrp="os\graphics\openvg\openvgimplementation\group\graphics_openvg.mrp"/>
+<component name="n:openvgimplementation" long-name="OpenVG Implementation" introduced="tb92" purpose="optional">
+<unit bldFile="os\graphics\openvg\openvgimplementation\group" mrp="os\graphics\openvg\openvgimplementation\group\graphics_openvg.mrp"/>
 </component>
 </collection>
 <collection name="egl" long-name="EGL" level="internal-adaptations">
 <component name="eglinterface" long-name="EGL Interface" introduced="tb91" purpose="optional">
 <unit bldFile="os\graphics\egl\eglinterface\group" mrp="os\graphics\egl\eglinterface\group\graphics_eglheaders.mrp"/>
 </component>
-<component name="eglimplementation" long-name="EGL Implementation" introduced="tb91" purpose="optional">
-<unit bldFile="os\graphics\egl\eglimplementation\group\" mrp="os\graphics\egl\eglimplementation\group\graphics_egl.mrp"/>
+<component name="n:eglimplementation" long-name="EGL Implementation" introduced="tb91" purpose="optional">
+<unit bldFile="os\graphics\egl\eglimplementation\group" mrp="os\graphics\egl\eglimplementation\group\graphics_egl.mrp"/>
 </component>
 </collection>
 <collection name="graphicsdeviceinterface" long-name="Graphics Device Interface" level="device-interface">
@@ -1812,14 +2010,12 @@
 <unit bldFile="os\graphics\graphicstools\gdi_tools\group" mrp="os\graphics\graphicstools\gdi_tools\group\graphics_gditools.mrp"/>
 </component>
 </collection>
-<collection name="graphcisapitest" long-name="Graphics API Tests" level="app-if">
+<collection name="graphicsapitest" long-name="Graphics API Tests" level="app-if">
 <component name="graphicssvs" long-name="Graphics Verification Suite" introduced="tb91" purpose="development">
 <unit mrp="os\graphics\graphicsapitest\graphicssvs\group\graphicssvs.mrp"/>
 </component>
-<component name="screendriverhaitest" long-name="Screen Driver HAI Tests" introduced="tb91" purpose="development" class="placeholder">
-<!-- PLACEHOLDER="DS.1675"
-	<unit mrp="graphicsapitest/screendriverhaitest/group/screendriverhai.mrp"/>
-	-->
+<component name="screendriverhaitest" long-name="Screen Driver HAI Tests" introduced="tb91" purpose="development">
+<unit mrp="os\graphics\graphicsapitest\screendriverhaitest\group\screendriverhaitest.mrp"/>
 </component>
 </collection>
 </block>
@@ -1848,15 +2044,15 @@
 <component name="freetypefontrasteriser" long-name="FreeType Font Rasteriser" purpose="optional" plugin="Y">
 <unit bldFile="os\textandloc\fontservices\freetypefontrasteriser\group" mrp="os\textandloc\fontservices\freetypefontrasteriser\group\graphics_freetype.mrp"/>
 </component>
-<component name="itypefontrasteriser" long-name="iType Font Rasteriser" filter="gt" introduced="tb92" purpose="development" plugin="Y">
+<component name="n:itypefontrasteriser" long-name="iType Font Rasteriser" filter="gt" introduced="tb91" purpose="development" plugin="Y">
 <unit bldFile="os\graphics\fbs\itypefontrasteriser\group" mrp="os\graphics\fbs\itypefontrasteriser\group\graphics_itype.mrp"/>
 </component>
 <component name="referencefonts" long-name="Reference Fonts" introduced="6.0" purpose="optional">
 <unit bldFile="os\textandloc\fontservices\referencefonts\group" mrp="os\textandloc\fontservices\referencefonts\group\graphics_fonts.mrp"/>
 </component>
-<component name="testfonts" long-name="Test Fonts" filter="gt" introduced="tb91" purpose="development" class="placeholder">
+<component name="n:testfonts" long-name="Test Fonts" filter="gt" introduced="tb91" purpose="development" class="placeholder">
 <!-- placeholder 
-        <unit bldFile="fontservices/graphicstestfonts/group" mrp="fontservices/graphicstestfonts/group/graphics_testfonts.mrp"/>
+        <unit bldFile="../../fontservices/graphicstestfonts/group" mrp="../../fontservices/graphicstestfonts/group/graphics_testfonts.mrp"/>
         -->
 </component>
 </collection>
@@ -1898,6 +2094,9 @@
 <collection name="textandloc_info" long-name="Text and Localisation Info" level="text">
 <component name="textandloc_metadata" long-name="Text and Localisation Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="os\textandloc\textandloc_info\textandloc_metadata\textandloc_metadata.mrp"/>
+</component>
+<component name="n:nokia_textandloc_metadata" long-name="Nokia Text and Localisation Services Metadata" introduced="tb91" purpose="development" class="config PC">
+<unit mrp="os\textandloc\textandloc_info\nokia_textandloc_metadata\nokia_textandloc_metadata.mrp"/>
 </component>
 </collection>
 </block>
@@ -1945,9 +2144,17 @@
 <unit mrp="os\deviceplatformrelease\foundation_system\system_model\system_model.mrp"/>
 </component>
 </collection>
+<collection name="n:nokia_system" long-name="Nokia System" level="top">
+<component name="n:nokia_model" long-name="Nokia Model" introduced="tb91" purpose="development" class="config PC">
+<unit mrp="os\deviceplatformrelease\nokia_system\nokia_model\nokia_model.mrp"/>
+</component>
+</collection>
 <collection name="deviceplatformrelease_info" long-name="Device Platform Release Info" level="top">
 <component name="deviceplatformrelease_metadata" long-name="Device Platform Release Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="os\deviceplatformrelease\deviceplatformrelease_info\deviceplatformrelease_metadata\deviceplatformrelease_metadata.mrp"/>
+</component>
+<component name="n:nokia_deviceplatformrelease_metadata" long-name="Nokia Device Platform Release Metadata" introduced="tb91" purpose="development" class="config PC">
+<unit mrp="os\deviceplatformrelease\deviceplatformrelease_info\nokia_deviceplatformrelease_metadata\nokia_deviceplatformrelease_metadata.mrp"/>
 </component>
 </collection>
 </block>
@@ -2015,19 +2222,18 @@
 <component name="tzdatabase" long-name="Time Zone Database" introduced="9.1" purpose="optional" class="config">
 <unit bldFile="mw\appsupport\tzservices\tzdatabase\group" mrp="mw\appsupport\tzservices\tzdatabase\group\app-services_tzdb.mrp"/>
 </component>
+<!--PLACEHOLDER="DS.1802" START REMOVE -->
 <component name="worldserver" long-name="World Server" introduced="7.0" deprecated="9.1" purpose="optional">
 <unit bldFile="mw\appsupport\tzservices\worldserver\group" mrp="mw\appsupport\tzservices\worldserver\group\app-services_worldserver.mrp"/>
 </component>
 <component name="worldservertest" long-name="World Server Test" introduced="8.1" deprecated="9.1" purpose="development">
 <unit bldFile="mw\appsupport\tzservices\worldservertest\TestWorldSrv" mrp="mw\appsupport\tzservices\worldservertest\TestWorldSrv\app-services_testworldsrv.mrp"/>
 </component>
+<!--PLACEHOLDER="DS.1802" END REMOVE -->
 </collection>
 <collection name="contenthandling" long-name="Content Handling" level="plugin">
 <component name="webrecognisers" long-name="Web Recognisers" purpose="optional" plugin="Y">
 <unit bldFile="mw\appsupport\contenthandling\webrecognisers\group" mrp="mw\appsupport\contenthandling\webrecognisers\group\application-protocols_recognisers.mrp"/>
-</component>
-<component name="referencedrmagent" long-name="Reference DRM Agent" introduced="8.0" purpose="development">
-<unit bldFile="mw\appsupport\contenthandling\referencedrmagent\RefTestAgent\group" mrp="mw\appsupport\contenthandling\referencedrmagent\RefTestAgent\group\security_rta.mrp"/>
 </component>
 </collection>
 <collection name="openenvutils" long-name="Open Environment Utilities" level="specific">
@@ -2066,16 +2272,30 @@
 <component name="tzcompiler" long-name="Time Zone Compiler" introduced="9.1" purpose="optional" class="config PC">
 <unit bldFile="mw\appsupport\tzpcside\tzcompiler\group" mrp="mw\appsupport\tzpcside\tzcompiler\group\app-services_tzcompiler.mrp"/>
 </component>
+<!--PLACEHOLDER="DS.1802" START REMOVE -->
 <component name="worlddatabasekit" long-name="World Database Kit" introduced="6.0" deprecated="9.1" purpose="development" class="config PC">
 <unit bldFile="mw\appsupport\tzpcside\worlddatabasekit\group" mrp="mw\appsupport\tzpcside\worlddatabasekit\group\app-services_wlddatabasekit_cedar.mrp"/>
 </component>
 <component name="worldtools" long-name="World Tools" introduced="ER5" deprecated="9.1" purpose="development" class="config PC">
 <unit bldFile="mw\appsupport\tzpcside\worldtools\group" mrp="mw\appsupport\tzpcside\worldtools\group\app-services_wldtools.mrp"/>
 </component>
+<!--PLACEHOLDER="DS.1802" END REMOVE -->
 </collection>
 <collection name="appsupport_info" long-name="Generic Application Support Info" level="specific">
 <component name="appsupport_metadata" long-name="Generic Application Support Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="mw\appsupport\appsupport_info\appsupport_metadata\appsupport_metadata.mrp"/>
+</component>
+</collection>
+</block>
+<block name="securitysrv" level="generic" long-name="Security Services" levels="plugin framework server generic specific">
+<collection name="pkiutilities" long-name="PKI Utilities" level="plugin">
+<component name="ocsp" long-name="Online Certificate Status Protocol" introduced="tb91" purpose="optional">
+<unit bldFile="mw\securitysrv\pkiutilities\ocsp\group" mrp="mw\securitysrv\pkiutilities\ocsp\group\securitysrv_ocsp.mrp"/>
+</component>
+</collection>
+<collection name="securitysrv_info" long-name="Security Services Info" level="specific">
+<component name="securitysrv_metadata" long-name="Security Services Metadata" introduced="tb91" purpose="development" class="config PC">
+<unit mrp="mw\securitysrv\securitysrv_info\securitysrv_metadata\securitysrv_metadata.mrp"/>
 </component>
 </collection>
 </block>
@@ -2114,14 +2334,17 @@
 <unit bldFile="mw\netprotocols\applayerpluginsandutils\httptransportplugins\group" mrp="mw\netprotocols\applayerpluginsandutils\httptransportplugins\group\http_transport-plugin.mrp"/>
 </component>
 </collection>
-<collection name="wapstack" long-name="WAP Stack" level="plugin">
-<component name="wapmessageapi" long-name="WAP Message API" purpose="optional">
+<collection name="n:wapstack" long-name="WAP Stack" level="plugin">
+<component name="n:wapmessageapi" long-name="WAP Message API" purpose="optional">
 <unit bldFile="mw\netprotocols\wapstack\wapmessageapi\group" mrp="mw\netprotocols\wapstack\wapmessageapi\group\wap-stack_wapmessage.mrp"/>
 </component>
 </collection>
 <collection name="netprotocols_info" long-name="High-level Internet Protocols Info" level="specific">
 <component name="netprotocols_metadata" long-name="High-level Internet Protocols Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="mw\netprotocols\netprotocols_info\netprotocols_metadata\netprotocols_metadata.mrp"/>
+</component>
+<component name="n:nokia_netprotocols_metadata" long-name="Nokia High-level Internet Protocols Metadata" introduced="tb91" purpose="development" class="config PC">
+<unit mrp="mw\netprotocols\netprotocols_info\nokia_netprotocols_metadata\nokia_netprotocols_metadata.mrp"/>
 </component>
 </collection>
 </block>
@@ -2159,7 +2382,7 @@
 </collection>
 </block>
 <block name="messagingmw" level="specific" long-name="Messaging Middleware" levels="stack fw api">
-<collection name="messagingfw" long-name="Messaging FW" level="fw">
+<collection name="messagingfw" long-name="Messaging Framework" level="fw">
 <component name="scheduledsendmtm" long-name="Scheduled Send MTM" introduced="6.0" purpose="optional" plugin="Y">
 <unit bldFile="mw\messagingmw\messagingfw\scheduledsendmtm\group" mrp="mw\messagingmw\messagingfw\scheduledsendmtm\group\messaging_schedulesend.mrp"/>
 </component>
@@ -2214,10 +2437,13 @@
 <component name="remoteconn_metadata" long-name="Remote Connectivity Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="mw\remoteconn\remoteconn_info\remoteconn_metadata\remoteconn_metadata.mrp"/>
 </component>
-<component name="connectivitydoc" long-name="Connectivity Documentation" introduced="tb91" purpose="optional" class="doc">
+<component name="n:nokia_remoteconn_metadata" long-name="Nokia Remote Connectivity Metadata" introduced="tb91" purpose="development" class="config PC">
+<unit mrp="mw\remoteconn\remoteconn_info\nokia_remoteconn_metadata\nokia_remoteconn_metadata.mrp"/>
+</component>
+<component name="n:connectivitydoc" long-name="Connectivity Documentation" introduced="tb91" purpose="optional" class="doc">
 <unit mrp="mw\remoteconn\remoteconn_info\connectivitydoc\group\connectivity_documentation.mrp"/>
 </component>
-<component name="mtpdoc" long-name="MTP Documentation" introduced="tb91" purpose="optional" class="doc">
+<component name="n:mtpdoc" long-name="MTP Documentation" introduced="tb91" purpose="optional" class="doc">
 <unit mrp="mw\remoteconn\remoteconn_info\mtpdoc\group\mtp_documentation.mrp"/>
 </component>
 </collection>
@@ -2227,9 +2453,6 @@
 </component>
 </collection>
 <collection name="connectivitytransports" long-name="Connectivity Transports" level="plugin">
-<component name="mrouter" long-name="m-Router" filter="gt" purpose="optional">
-<unit bldFile="mw\remoteconn\connectivitytransports\mrouter\group" mrp="mw\remoteconn\connectivitytransports\mrouter\group\connectivity_mRouterSecure.mrp"/>
-</component>
 <component name="plpremotelink" long-name="PLP Remote Link" deprecated="9.0" purpose="optional">
 <unit bldFile="mw\remoteconn\connectivitytransports\plpremotelink\group" mrp="mw\remoteconn\connectivitytransports\plpremotelink\group\connectivity_legacy_plp_plpremotelink.mrp"/>
 </component>
@@ -2244,7 +2467,7 @@
 <component name="mtpptpiptransport" long-name="MTP PTP-IP Transport" introduced="tb92" purpose="optional" plugin="Y">
 <unit bldFile="mw\remoteconn\mtptransports\mtpptpiptransport\group" mrp="mw\remoteconn\mtptransports\mtpptpiptransport\group\mtp_ptpip.mrp"/>
 </component>
-<component name="mtbttransport" long-name="MTP Bluetooth Transport" introduced="tb92" purpose="optional" plugin="Y">
+<component name="n:mtpbttransport" long-name="MTP Bluetooth Transport" introduced="tb92" purpose="optional" plugin="Y">
 <unit bldFile="mw\remoteconn\mtptransports\mtpbttransport\group" mrp="mw\remoteconn\mtptransports\mtpbttransport\group\mtp_bt.mrp"/>
 </component>
 </collection>
@@ -2260,21 +2483,44 @@
 <component name="mtpfileandfolderdp" long-name="MTP File and Folder Provider" introduced="tb91" purpose="optional" plugin="Y">
 <unit bldFile="mw\remoteconn\mtpdataproviders\mtpfileandfolderdp\group" mrp="mw\remoteconn\mtpdataproviders\mtpfileandfolderdp\group\mtp_filedp.mrp"/>
 </component>
-<component name="mtpbackupandrestoredp" long-name="Backup and Restore Provider" introduced="Future" purpose="optional" plugin="Y">
+<component name="mtpbackupandrestoredp" long-name="Backup and Restore Provider" introduced="tb92" purpose="optional" plugin="Y">
 <unit bldFile="mw\remoteconn\mtpdataproviders\mtpbackupandrestoredp\group" mrp="mw\remoteconn\mtpdataproviders\mtpbackupandrestoredp\group\mtp_backupnrestoredp.mrp"/>
 </component>
-<component name="mtptaskdp" long-name="MTP Task Provider" introduced="tb92" purpose="optional" plugin="Y">
+<component name="n:mtptaskdp" long-name="MTP Task Provider" introduced="tb92" purpose="optional" plugin="Y">
 <unit bldFile="mw\remoteconn\mtpdataproviders\mtptaskdp\group" mrp="mw\remoteconn\mtpdataproviders\mtptaskdp\group\mtp_taskdp.mrp"/>
 </component>
-<component name="mtpcalendardp" long-name="MTP Calendar Provider" introduced="tb92" purpose="optional" plugin="Y">
+<component name="n:mtpcalendardp" long-name="MTP Calendar Provider" introduced="tb92" purpose="optional" plugin="Y">
 <unit bldFile="mw\remoteconn\mtpdataproviders\mtpcalendardp\group" mrp="mw\remoteconn\mtpdataproviders\mtpcalendardp\group\mtp_calendardp.mrp"/>
+</component>
+<component name="n:mtpwmpextndp" long-name="WMP Extension Data Provider" introduced="tb91" purpose="optional" plugin="Y">
+<unit bldFile="mw\remoteconn\mtpdataproviders\mtpwmpextndp\group" mrp="mw\remoteconn\mtpdataproviders\mtpwmpextndp\group\mtp_wmpextndp.mrp"/>
+</component>
+<component name="n:mtpimagedp" long-name="MTP Image Data Provider" introduced="tb92" purpose="optional" plugin="Y" class="placeholder">
+<!-- PLACEHOLDER="DS.1819"
+      <unit bldFile="../../mtpdataproviders/mtpimagedp/group" mrp="../../mtpdataproviders/mtpimagedp/group/mtp_imagedp.mrp"/>
+     -->
+</component>
+<component name="n:mtppictbridgedp" long-name="MTP PictBridge Data Provider" introduced="tb92" purpose="optional" plugin="Y" class="placeholder">
+<!-- PLACEHOLDER="DS.1828"
+      <unit bldFile="../../mtpdataproviders/mtppictbridgedp/group" mrp="../../mtpdataproviders/mtppictbridgedp/group/mtp_pictbridgedp.mrp"/>
+     -->
+</component>
+<component name="n:mtpmetadatadp" long-name="MTP Device Metadata Data Provider" introduced="tb92" purpose="optional" plugin="Y" class="placeholder">
+<!-- PLACEHOLDER="DS.1822"
+      <unit bldFile="../../mtpdataproviders/mtpmetadatadp/group" mrp="../../mtpdataproviders/mtpmetadatadp/group/mtp_metadatadp.mrp"/>
+     -->
+</component>
+<component name="n:mtpstatusdp" long-name="MTP Status Data Provider" introduced="tb92" purpose="optional" plugin="Y" class="placeholder">
+<!-- PLACEHOLDER="DS.1821"
+      <unit bldFile="../../mtpdataproviders/mtpstatusdp/group" mrp="../../mtpdataproviders/mtpstatusdp/group/mtp_statusdp.mrp"/>
+     -->
 </component>
 </collection>
 <collection name="backupandrestore" long-name="Backup and Restore" level="specific">
 <component name="backupengine" long-name="Backup Engine" introduced="9.0" purpose="optional">
 <unit bldFile="mw\remoteconn\backupandrestore\backupengine\group" mrp="mw\remoteconn\backupandrestore\backupengine\group\connectivity_backupengine.mrp"/>
 </component>
-<component name="backuptest" long-name="Backup Test" introduced="tb92" purpose="development">
+<component name="backuptest" long-name="Backup Test" introduced="tb91" purpose="development">
 <unit bldFile="mw\remoteconn\backupandrestore\backuptest\group" mrp="mw\remoteconn\backupandrestore\backuptest\group\connectivity_backuptest.mrp"/>
 </component>
 </collection>
@@ -2282,7 +2528,7 @@
 <component name="chatscripts" long-name="Chat Scripts" purpose="development">
 <unit bldFile="mw\remoteconn\connectivitypcside\chatscripts\group" mrp="mw\remoteconn\connectivitypcside\chatscripts\group\testtools_chatscripts.mrp"/>
 </component>
-<component name="connectqi" long-name="ConnectQI" introduced="9.1" purpose="optional" class="PC">
+<component name="n:connectqi" long-name="ConnectQI" introduced="9.1" purpose="optional" class="PC">
 <unit mrp="mw\remoteconn\connectivitypcside\connectqi\connectqisdk_mr3.mrp"/>
 </component>
 </collection>
@@ -2294,11 +2540,19 @@
 <unit bldFile="mw\remoteconn\connectivitydevicefws\connectivityservices\group" mrp="mw\remoteconn\connectivitydevicefws\connectivityservices\group\connectivity_services.mrp"/>
 </component>
 </collection>
+<collection name="obex" long-name="OBEX" level="generic">
+<component name="obexprotocol" long-name="OBEX Protocol" introduced="9.1" purpose="optional">
+<unit bldFile="mw\remoteconn\obex\obexprotocol\group" mrp="mw\remoteconn\obex\obexprotocol\group\obex.mrp"/>
+</component>
+<component name="obexextensionapi" long-name="OBEX Extension API" introduced="9.2" purpose="optional">
+<unit bldFile="mw\remoteconn\obex\obexextensionapi\group" mrp="mw\remoteconn\obex\obexextensionapi\group\obex_extensionapis.mrp"/>
+</component>
+</collection>
 </block>
 <block name="srvdiscovery" level="generic" long-name="Service Discovery and Usage" levels="plugin framework server generic specific">
 <collection name="servicediscoveryandcontrol" long-name="Service Discovery and Control" level="framework">
 <component name="servicediscoveryfw" long-name="Service Discovery Framework" introduced="tb92" purpose="optional">
-<unit bldFile="mw\srvdiscovery\servicediscoveryandcontrol\pnp\group\" mrp="mw\srvdiscovery\servicediscoveryandcontrol\pnp\group\servicediscoveryframework.mrp"/>
+<unit bldFile="mw\srvdiscovery\servicediscoveryandcontrol\pnp\group" mrp="mw\srvdiscovery\servicediscoveryandcontrol\pnp\group\servicediscoveryframework.mrp"/>
 </component>
 </collection>
 <collection name="srvdiscovery_info" long-name="Service Discovery and Usage Info" level="specific">
@@ -2307,23 +2561,15 @@
 </component>
 </collection>
 </block>
-<block name="shortlinkconn" level="generic" long-name="Shortlink Connectivity" levels="framework server generic specific plugin">
-<collection name="obex" long-name="OBEX" level="generic">
-<component name="obexprotocol" long-name="OBEX Protocol" introduced="9.1" purpose="optional">
-<unit bldFile="mw\shortlinkconn\obex\obexprotocol\group" mrp="mw\shortlinkconn\obex\obexprotocol\group\obex.mrp"/>
-</component>
-<component name="obexextensionapi" long-name="OBEX Extension API" introduced="9.2" purpose="optional">
-<unit bldFile="mw\shortlinkconn\obex\obexextensionapi\group" mrp="mw\shortlinkconn\obex\obexextensionapi\group\obex_extensionapis.mrp"/>
-</component>
-</collection>
+<block name="btservices" level="generic" long-name="Bluetooth Services" levels="framework server generic specific plugin">
 <collection name="bluetoothappprofiles" long-name="Bluetooth Application Profiles" level="plugin">
 <component name="avrcp" long-name="Bluetooth AVRCP" introduced="9.1" purpose="optional">
-<unit bldFile="mw\shortlinkconn\bluetoothappprofiles\avrcp" mrp="mw\shortlinkconn\bluetoothappprofiles\avrcp\bluetooth_avrcp.mrp"/>
+<unit bldFile="mw\btservices\bluetoothappprofiles\avrcp" mrp="mw\btservices\bluetoothappprofiles\avrcp\bluetooth_avrcp.mrp"/>
 </component>
 </collection>
-<collection name="shortlinkconn_info" long-name="Shortlink Connectivity Info" level="plugin">
-<component name="shortlinkconn_metadata" long-name="Shortlink Connectivity Metadata" introduced="tb91" purpose="development" class="config PC">
-<unit mrp="mw\shortlinkconn\shortlinkconn_info\shortlinkconn_metadata\shortlinkconn_metadata.mrp"/>
+<collection name="btservices_info" long-name="BT Services Info" level="plugin">
+<component name="btservices_metadata" long-name="BT Services Metadata" introduced="tb92" purpose="development" class="config PC">
+<unit mrp="mw\btservices\btservices_info\btservices_metadata\btservices_metadata.mrp"/>
 </component>
 </collection>
 </block>
@@ -2469,10 +2715,18 @@
 <component name="pbap" long-name="Bluetooth PBAP" introduced="9.2" purpose="optional">
 <unit bldFile="app\contacts\pimprotocols\pbap\group" mrp="app\contacts\pimprotocols\pbap\group\bluetooth_accesshost.mrp"/>
 </component>
+<component name="n:mtpcontactdp" long-name="MTP Contact Data Provider" purpose="optional" introduced="tb92" plugin="Y" class="placeholder">
+<!-- PLACEHOLDER="DS.1824"
+      <unit bldFile="../../pimprotocols/mtpcontactdp/group" mrp="../../pimprotocols/mtpcontactdp/group/mtp_contactdp.mrp"/>
+     -->
+</component>
 </collection>
 <collection name="contacts_info" long-name="Contacts Apps Info" level="ui">
 <component name="contacts_metadata" long-name="Contacts Apps Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="app\contacts\contacts_info\contacts_metadata\contacts_metadata.mrp"/>
+</component>
+<component name="n:nokia_contacts_metadata" long-name="Nokia Contacts Apps Metadata" introduced="tb92" purpose="development" class="config PC">
+<unit mrp="app\contacts\contacts_info\nokia_contacts_metadata\nokia_contacts_metadata.mrp"/>
 </component>
 </collection>
 </block>
@@ -2495,13 +2749,16 @@
 <component name="chinesecalendarconverter" long-name="Chinese Calendar Converter" introduced="6.1" purpose="optional">
 <unit bldFile="app\organizer\pimappsupport\chinesecalendarconverter\group" mrp="app\organizer\pimappsupport\chinesecalendarconverter\group\app-services_calcon.mrp"/>
 </component>
-<component name="chinesecalendaralg" long-name="Chinese Calendar Algorithm" introduced="tb91" purpose="optional" plugin="Y">
+<component name="n:chinesecalendaralg" long-name="Chinese Calendar Algorithm" introduced="tb91" purpose="optional" plugin="Y">
 <unit bldFile="app\organizer\pimappsupport\chinesecalendaralg\group" mrp="app\organizer\pimappsupport\chinesecalendaralg\group\app-services_chinesecalendaralgorithm.mrp"/>
 </component>
 </collection>
 <collection name="organizer_info" long-name="Organizer Application Suite Info" level="ui">
 <component name="organizer_metadata" long-name="Organizer Application Suite Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="app\organizer\organizer_info\organizer_metadata\organizer_metadata.mrp"/>
+</component>
+<component name="n:nokia_organizer_metadata" long-name="Nokia Organizer Application Suite Metadata" introduced="tb91" purpose="development" class="config PC">
+<unit mrp="app\organizer\organizer_info\nokia_organizer_metadata\nokia_organizer_metadata.mrp"/>
 </component>
 </collection>
 </block>
@@ -2513,14 +2770,10 @@
 </collection>
 <collection name="mmsengine" long-name="MMS Engine" level="eng">
 <component name="mmssettings" long-name="MMS Settings" introduced="9.2" purpose="optional">
-<unit bldFile="app\messaging\mmsengine\mmssettings\group\" mrp="app\messaging\mmsengine\mmssettings\group\messaging_mmssettings.mrp"/>
+<unit bldFile="app\messaging\mmsengine\mmssettings\group" mrp="app\messaging\mmsengine\mmssettings\group\messaging_mmssettings.mrp"/>
 </component>
 <component name="mmsconf" long-name="MMS Configuration" purpose="optional">
-<unit mrp="app\messaging\mmsengine\mmssettings\group\messaging_mmssettings-config.mrp"/>
-<!--PLACEHOLDER="DEF139515" REMOVE-->
-<!-- PLACEHOLDER="DEF139515"
-		<unit bldFile="mmsengine/mmsconf/" mrp="mmsengine/mmsconf/messaging_mmssettings-config.mrp"/>
-		-->
+<unit bldFile="app\messaging\mmsengine\mmsconf" mrp="app\messaging\mmsengine\mmsconf\messaging_mmssettings-config.mrp"/>
 </component>
 </collection>
 <collection name="messagingappbase" long-name="Messaging App Base" level="base">
@@ -2546,17 +2799,17 @@
 </collection>
 </block>
 <block name="helps" level="apps" span="2" long-name="Help Apps" levels="eng tools unused ui">
-<collection name="symhelptools" long-name="Symbian Help Tools" level="tools">
-<component name="mbmcodec" long-name="MBM Codec" filter="gt" purpose="development">
+<collection name="n:symhelptools" long-name="Symbian Help Tools" level="tools">
+<component name="n:mbmcodec" long-name="MBM Codec" filter="gt" purpose="development">
 <unit bldFile="app\helps\symhelp\mbmcodec\group" mrp="app\helps\symhelp\mbmcodec\group\tools_sdk_eng_mbmcodec.mrp"/>
 </component>
-<component name="cshlpcmpgui" long-name="CSHelp Compiler GUI" filter="gt" purpose="development">
+<component name="n:cshlpcmpgui" long-name="CSHelp Compiler GUI" filter="gt" purpose="development">
 <unit bldFile="app\helps\symhelp\cshlpcmpgui\group" mrp="app\helps\symhelp\cshlpcmpgui\group\tools_sdk_eng_cshlpcmp_gui.mrp" priority="1010"/>
 </component>
-<component name="cshlpcmpfrontend" long-name="CSHelp Compiler Frontend" purpose="development">
+<component name="n:cshlpcmpfrontend" long-name="CSHelp Compiler Frontend" purpose="development">
 <unit bldFile="app\helps\symhelp\cshlpcmpfrontend\group" mrp="app\helps\symhelp\cshlpcmpfrontend\group\tools_sdk_eng_cshlpcmp_frontend.mrp"/>
 </component>
-<component name="cshlpcmpbackend" long-name="CSHelp Compiler Backend" purpose="development">
+<component name="n:cshlpcmpbackend" long-name="CSHelp Compiler Backend" purpose="development">
 <unit mrp="app\helps\symhelp\cshlpcmpbackend\group\tools_sdk_eng_cshlpcmp_backend_srconly.mrp"/>
 </component>
 </collection>
@@ -2569,11 +2822,14 @@
 <component name="helps_metadata" long-name="Help Apps Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="app\helps\helps_info\helps_metadata\helps_metadata.mrp"/>
 </component>
+<component name="n:nokia_helps_metadata" long-name="Nokia Help Apps Metadata" introduced="tb91" purpose="development" class="config PC">
+<unit mrp="app\helps\helps_info\nokia_helps_metadata\nokia_helps_metadata.mrp"/>
+</component>
 </collection>
 </block>
 <block name="techview" level="apps" span="2" long-name="Techview" levels="services ui utils apps1 apps2 apps3">
 <collection name="buildverification" long-name="Build Verification" level="services">
-<component name="autosmoketest" long-name="Auto Smoke Test" filter="gt" purpose="development">
+<component name="autosmoketest" long-name="Auto Smoke Test" filter="gt" purpose="development" introduced="9.1">
 <unit bldFile="app\techview\buildverification\autosmoketest\Group" mrp="app\techview\buildverification\autosmoketest\Group\testtools_autosmoketest.mrp"/>
 </component>
 <component name="smoketest" long-name="Smoke Test" filter="gt" purpose="development">
