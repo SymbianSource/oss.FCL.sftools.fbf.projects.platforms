@@ -47,12 +47,14 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/accesssec/,/sf/mw/accesssec,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/appinstall/,/sf/mw/appinstall,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/appsupport/,/sf/mw/appsupport,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/btservices/,/sf/mw/btservices,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/camerasrv/,/sf/mw/camerasrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/classicui/,/sf/mw/classicui,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/dlnasrv/,/sf/mw/dlnasrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/drm/,/sf/mw/drm,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/gsprofilesrv,/sf/mw/gsprofilesrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/hapticsservices/,/sf/mw/hapticsservices,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/helix/,/sf/mw/helix,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/homescreensrv/,/sf/mw/homescreensrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/imghandling/,/sf/mw/imghandling,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/imsrv/,/sf/mw/imsrv,branch,default,layers.sysdef.xml
@@ -79,6 +81,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/serviceapi/,/sf/mw/serviceapi,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/serviceapifw/,/sf/mw/serviceapifw,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/shortlinkconn/,/sf/mw/shortlinkconn,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/srvdiscovery/,/sf/mw/srvdiscovery,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/svgt/,/sf/mw/svgt,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/uiaccelerator/,/sf/mw/uiaccelerator,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/uiresources/,/sf/mw/uiresources,branch,default,layers.sysdef.xml
