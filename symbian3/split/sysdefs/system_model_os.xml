@@ -46,7 +46,7 @@
   bldFile CDATA #IMPLIED
   root CDATA #IMPLIED
   version NMTOKEN #IMPLIED
-  prebuilt NMTOKEN #IMPLIEDa
+  prebuilt NMTOKEN #IMPLIED
   late (Y|N) #IMPLIED
   priority CDATA #IMPLIED>
  <!ELEMENT SystemBuild (option* | target+ | targetList+ | list+ | configuration+)*>
