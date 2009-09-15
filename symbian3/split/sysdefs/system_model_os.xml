@@ -46,7 +46,7 @@
   bldFile CDATA #IMPLIED
   root CDATA #IMPLIED
   version NMTOKEN #IMPLIED
-  prebuilt NMTOKEN #IMPLIED
+  prebuilt NMTOKEN #IMPLIEDa
   late (Y|N) #IMPLIED
   priority CDATA #IMPLIED>
  <!ELEMENT SystemBuild (option* | target+ | targetList+ | list+ | configuration+)*>
@@ -562,7 +562,7 @@
 </collection>
 <collection name="sbsv1_os" long-name="Symbian Build System v1" level="fw">
 <component name="e32toolp" long-name="E32 Perl Tools" purpose="development" class="PC">
-<unit mrp="os\buildtools\sbsv1_os\e32toolp\group\tools_e32toolp.mrp"/>
+<unit bldFile="os\buildtools\sbsv1_os\e32toolp\group" mrp="os\buildtools\sbsv1_os\e32toolp\group\tools_e32toolp.mrp"/>
 </component>
 <component name="n:bldtools" long-name="Build Tools" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\sbsv1_os\bldtools\group" mrp="os\buildtools\sbsv1_os\bldtools\group\tools_sdk_eng_build-tools.mrp"/>
