@@ -14,7 +14,7 @@
     <property name="sf.spec.sbs.tools.config" value="tools_rel.whatlog,tools2_rel.whatlog"/>
 
     <property name="sf.spec.bldmefirst.gt.variant" value="sf/os/deviceplatformrelease/symbianosbld/cedarutils/Symbian_OS_vtb91sf.cfg" />
-    <property name="sf.spec.bldmefirst.gt.hrh" value="sf/os/deviceplatformrelease/symbianosbld/cedarutils/Symbian_OS.hrh" />
+    <property name="sf.spec.bldmefirst.gt.hrh" value="sf/os/deviceplatformrelease/symbianosbld/cedarutils/" />
     
     <property name="sf.spec.bldmefirst.s60.variant" value="western" /> <!-- western|apac|japan but only western is used at the moment -->
     <property name="sf.spec.bldmefirst.s60.config.root" value="sf/os/deviceplatformrelease/sf_config/config" />
