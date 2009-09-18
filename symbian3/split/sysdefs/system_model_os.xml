@@ -368,6 +368,9 @@
 <component name="apputils" long-name="Application Utilities" introduced="ER5" purpose="mandatory">
 <unit bldFile="os\ossrv\lowlevellibsandfws\apputils\group" mrp="os\ossrv\lowlevellibsandfws\apputils\group\syslibs_bafl.mrp"/>
 </component>
+<component name="sysutil" long-name="System Utilities" introduced="ER5" purpose="mandatory">
+<unit bldFile="os\ossrv\lowlevellibsandfws\apputils\sysutil\group"/>
+</component>
 <component name="genericusabilitylib" long-name="Generic Usability Library" introduced="tb92" purpose="mandatory">
 <unit bldFile="os\ossrv\lowlevellibsandfws\genericusabilitylib\group" mrp="os\ossrv\lowlevellibsandfws\genericusabilitylib\group\syslibs_euserhl.mrp"/>
 </component>
