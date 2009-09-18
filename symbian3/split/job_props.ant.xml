@@ -33,7 +33,7 @@
     <property name="sf.spec.baseline.enable"         value="true"/>     
     <property name="sf.spec.baseline.clean"          value="false"/>
     <property name="sf.spec.baseline.select"         value="location" />
-    <property name="sf.spec.baseline.location"       value="\\v800008\Builds01\Releases\PDK_candidate_2.0.d_flat\" />
+    <property name="sf.spec.baseline.location"       value="\\v800008\Builds01\Releases\PDK_3.0.a_tools_baseline" />
     
     <property name="sf.spec.toolsbaseline.enable"    value="true"/>
     <property name="sf.spec.toolsbaseline.getenv_options" value="-i emu"/>
@@ -42,7 +42,7 @@
     
     <!-- platform build specific properties -->
     <property name="sf.spec.s60.sysdef.clean.configurations.list"  value="S60_5_1_sf" />
-    <property name="sf.spec.os.sysdef.clean.configurations.list"   value="GT_tb91sf" />
+    <property name="sf.spec.os.sysdef.clean.configurations.list"   value="GT_tb92sf" />
     
     <!-- provide dtd location as os and s60 layers will be different -->
     <property name="sf.spec.s60.sysdef.dtd"  value="${sf.spec.job.dir}\sysdefs\sysdef_dtd_1_4_0.xml"/>
