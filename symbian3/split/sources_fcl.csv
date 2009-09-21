@@ -83,9 +83,9 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/serviceapifw/,/sf/mw/serviceapifw,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/shortlinkconn/,/sf/mw/shortlinkconn,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/srvdiscovery/,/sf/mw/srvdiscovery,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/svgt/,/sf/mw/svgt,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/uiaccelerator/,/sf/mw/uiaccelerator,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/uiresources/,/sf/mw/uiresources,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development_staging/sfl/FCL/sf/mw/svgt/,/sf/mw/svgt,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development_staging/sfl/FCL/sf/mw/uiaccelerator/,/sf/mw/uiaccelerator,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development_staging/sfl/FCL/sf/mw/uiresources/,/sf/mw/uiresources,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/uitools/,/sf/mw/uitools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/videoutils/,/sf/mw/videoutils,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/vpnclient/,/sf/mw/vpnclient,branch,default,layers.sysdef.xml
@@ -99,7 +99,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/commsfw/,/sf/os/commsfw,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development_staging/sfl/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/devicesrv/,/sf/os/devicesrv,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/graphics/,/sf/os/graphics,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development_staging/sfl/FCL/sf/os/graphics/,/sf/os/graphics,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/imagingext/,/sf/os/imagingext,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/lbs/,/sf/os/lbs,branch,default,layers.sysdef.xml

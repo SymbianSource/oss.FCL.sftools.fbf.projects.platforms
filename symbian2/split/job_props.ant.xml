@@ -10,10 +10,11 @@
     
     <property name="sf.spec.build.system" value="sbs"/>
     
+    <property name="sf.spec.sbs.variant" value="tb91sf"/>  
     <property name="sf.spec.sbs.config" value="winscw.whatlog,armv5.whatlog"/> <!-- both _urel and _udeb -->
     <property name="sf.spec.sbs.tools.config" value="tools_rel.whatlog,tools2_rel.whatlog"/>
 
-    <property name="sf.spec.bldmefirst.gt.variant" value="sf/os/deviceplatformrelease/symbianosbld/cedarutils/Symbian_OS_vtb91sf.cfg" />
+    <property name="sf.spec.bldmefirst.gt.variant" value="sf/os/deviceplatformrelease/symbianosbld/cedarutils/Symbian_OS_v${sf.spec.sbs.variant}.cfg" />
     <property name="sf.spec.bldmefirst.gt.hrh" value="sf/os/deviceplatformrelease/symbianosbld/cedarutils/" />
     
     <property name="sf.spec.bldmefirst.s60.variant" value="western" /> <!-- western|apac|japan but only western is used at the moment -->
@@ -42,7 +43,7 @@
     
     <!-- platform build specific properties -->
     <property name="sf.spec.s60.sysdef.clean.configurations.list"  value="S60_5_1_sf" />
-    <property name="sf.spec.os.sysdef.clean.configurations.list"   value="GT_tb91sf" />
+    <property name="sf.spec.os.sysdef.clean.configurations.list"   value="GT_${sf.spec.sbs.variant}" />
     
     <!-- provide dtd location as os and s60 layers will be different -->
     <property name="sf.spec.s60.sysdef.dtd"  value="${sf.spec.job.dir}\sysdefs\sysdef_dtd_1_4_0.xml"/>
