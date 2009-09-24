@@ -1422,6 +1422,10 @@
 </component>
 </collection>
 <collection name="windowing" long-name="Windowing" level="app-if">
+<component name="n:windowserver" long-name="Window Server" purpose="mandatory">
+<!-- intentionally not for the foundation despite being a mandatory component -->
+<unit bldFile="os\graphics\windowing\windowserver\group" mrp="os\graphics\windowing\windowserver\group\graphics_wserv.mrp"/>
+</component>
 </collection>
 <collection name="printingservices" long-name="Printing Services" level="app-if">
 <component name="printerdriversupport" long-name="Printer Driver Support" purpose="optional">
