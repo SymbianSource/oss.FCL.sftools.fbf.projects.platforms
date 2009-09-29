@@ -99,7 +99,7 @@ http://v800050/master_stage/sfl/MCL/sf/os/cellularsrv/,/sf/os/cellularsrv,branch
 http://v800050/master_stage/sfl/MCL/sf/os/commsfw/,/sf/os/commsfw,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development_staging/sfl/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development_staging/sfl/FCL/sf/os/devicesrv/,/sf/os/devicesrv,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_development_staging/sfl/FCL/sfl/MCL/sf/os/graphics/,/sf/os/graphics,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development_staging/sfl/FCL/sf/os/graphics/,/sf/os/graphics,branch,default,layers.sysdef.xml
 http://v800050/master_stage/sfl/MCL/sf/os/imagingext/,/sf/os/imagingext,branch,default,layers.sysdef.xml
 http://v800050/master_stage/sfl/MCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,branch,default,layers.sysdef.xml
 http://v800050/master_stage/sfl/MCL/sf/os/lbs/,/sf/os/lbs,branch,default,layers.sysdef.xml
