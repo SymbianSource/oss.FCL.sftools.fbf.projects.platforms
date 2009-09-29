@@ -15,6 +15,8 @@
     <property name="sf.spec.sbs.tools.config" value="tools_rel.whatlog,tools2_rel.whatlog"/>
 
     <property name="sf.spec.bldmefirst.gt.variant" value="sf/os/deviceplatformrelease/symbianosbld/cedarutils/Symbian_OS_v${sf.spec.sbs.variant}.cfg" />
+	<!-- Location of Symbian_OS.hrh changed for Symbian3 to an inc directory -->
+	<property name="sf.spec.bldmefirst.gt.hrh.os" value="sf/os/deviceplatformrelease/symbianosbld/cedarutils/inc/Symbian_OS_${sf.spec.sbs.variant}.hrh" />
     <property name="sf.spec.bldmefirst.gt.hrh" value="sf/os/deviceplatformrelease/symbianosbld/cedarutils/" />
     
     <property name="sf.spec.bldmefirst.s60.variant" value="western" /> <!-- western|apac|japan but only western is used at the moment -->
@@ -34,7 +36,7 @@
     
     <property name="sf.spec.toolsbaseline.getenv_options" value="-i emu"/>
     <property name="sf.spec.toolsbaseline.select"         value="location" />
-    <property name="sf.spec.toolsbaseline.location"       value="\\v800008\Builds01\PDT\PDT_b50" /> <!-- for TEF etc -->
+    <property name="sf.spec.toolsbaseline.location"       value="\\v800008\Builds01\PDT\PDT_1.1_patched" /> <!-- for TEF etc -->
     
     <!-- platform build specific properties -->
     <property name="sf.spec.s60.sysdef.clean.configurations.list"  value="S60_5_1_sf" />
