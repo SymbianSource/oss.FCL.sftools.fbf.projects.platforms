@@ -37,7 +37,7 @@
 		<verify version="5.6.1" showstopper="true" >
 			<check name="version" execute="%location% -v" values="v5\.6\.1" locator="This is perl, (.*) built"/>
 			<check name="build" execute="%location% -v" values="build 633|build 635|build 638" locator="Binary (.*) provided by ActiveState" log="true"/>
-			<check name="module SAX version" execute="ppm query sax" values="0\.15" locator="XML-SAX \[(.*)\] Simple API" />
+<!--			<check name="module SAX version" execute="ppm query sax" values="0\.15" locator="XML-SAX \[(.*)\] Simple API" /> -->
         </verify>
     </tool>
     <tool name="Mercurial">
@@ -83,7 +83,7 @@
 	<tool name="Helium">
 		<location strict="false" value="C:\Symbian\Tools\PDT_1.0\helium\hlm.bat"/>
 		<verify version="5.0" showstopper="true">
-			<check var="HELIUM_HOME" values="[CD]:\\Symbian\\Tools\\PDT_1.0\\helium"/>
+			<check var="HELIUM_HOME" values="[CD]:\\Symbian\\Tools\\PDT_1.\d\\helium"/>
 			<check name="version" execute="%HELIUM_HOME%\hlm.bat -f %HELIUM_HOME%\build.xml version" values="5\.0" locator="Helium version: ([\d\.]+)"/>
 		</verify>
     </tool>
