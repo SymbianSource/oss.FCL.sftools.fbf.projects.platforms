@@ -91,7 +91,7 @@
   cwd CDATA #REQUIRED
   command CDATA #REQUIRED>
 ]>
-<SystemDefinition name="S60_SystemBuild + sysdef_dtd_1_4_0_xml + devicesync + eas + QuickOffice + adobereader + tfxserver + webvideo + wmdrmkeystorage_dist + wmdrmpd_dist + zipviewer + webservde + oemrndtools + swconfigapps + toolsextensions + avdomain + btaudioadaptation_stub + drm_stub + ocrsrv_stub + omasuplasnconverterstubimpl + posmsgpluginreferenceimpl + power_save_display_mode_stub + srsfenginestub + systemswstubs + tactileclickplugin_stub + wlanhwinit_stub + camera + commonemail + conntools + contacts + contentcontrol + conversations + devicecontrol + systemswextensions + files + gallery + graphicsuis + helps + homescreen + im + imgeditor + imgvieweruis + iptelephony + java + location + messaging + mmsharinguis + avdomain + organizer + phone + photos + printing + profile + radio + rndtools + screensaver + settingsuis + speechsrv + utils + videocenter + videoeditor + avdomain + videotelephony + avdomain + webuis + accesssec + appinstall + appsupport + btservices + camerasrv + classicui + dlnasrv + drm + hapticsservices + avdomain + homescreensrv + imghandling + imsrv + inputmethods + ipappprotocols + ipappservices + ipconnmgmt + legacypresence + locationsrv + mds + messagingmw + metadatasrv + avdomain + avdomain + mmuifw + netprotocols + networkingdm + opensrv + phonesrv + platformtools + remoteconn + remotemgmt + remotestorage + securitysrv + serviceapi + serviceapifw + shortlinkconn + ossrv + svgt + uiaccelerator + uiresources + uitools + usbservices + videoutils + vpnclient + web + websrv + wirelessacc + cellularsrv + S60Extras + devicesrv + graphics + imagingext + lbs + avdomainosext + networkingsrv + osrndtools + ossrv + shortlinksrv + systemswextensions + wlan + xmlsrv + buildplatforms + homescreentools + swconfigtools" schema="1.4.0">
+<SystemDefinition name="S60_SystemBuild + sysdef_dtd_1_4_0_xml + QuickOffice + adobereader + tfxserver + webvideo + wmdrmkeystorage_dist + wmdrmpd_dist + zipviewer + oemrndtools + swconfigapps + toolsextensions + avdomain + btaudioadaptation_stub + drm_stub + ocrsrv_stub + omasuplasnconverterstubimpl + posmsgpluginreferenceimpl + power_save_display_mode_stub + srsfenginestub + systemswstubs + tactileclickplugin_stub + wlanhwinit_stub + camera + commonemail + conntools + contacts + contentcontrol + conversations + devicecontrol + systemswextensions + files + gallery + graphicsuis + helps + homescreen + im + imgvieweruis + iptelephony + java + location + messaging + mmsharinguis + avdomain + organizer + phone + photos + printing + profile + radio + rndtools + screensaver + settingsuis + speechsrv + utils + video + videotelephony + avdomain + webuis + accesssec + appinstall + appsupport + btservices + camerasrv + classicui + dlnasrv + drm + gsprofilesrv + hapticsservices + avdomain + homescreensrv + imghandling + imsrv + inputmethods + ipappprotocols + ipappservices + ipconnmgmt + legacypresence + locationsrv + mds + messagingmw + metadatasrv + avdomain + avdomain + mmuifw + netprotocols + networkingdm + opensrv + phonesrv + platformtools + remoteconn + remotemgmt + remotestorage + securitysrv + serviceapi + serviceapifw + shortlinkconn + ossrv + svgt + uiaccelerator + uiresources + uitools + usbservices + videoutils + vpnclient + web + websrv + wirelessacc + cellularsrv + S60Extras + devicesrv + graphics + imagingext + lbs + avdomainosext + networkingsrv + osrndtools + ossrv + shortlinksrv + systemswextensions + wlan + xmlsrv + buildplatforms + homescreentools + swconfigtools" schema="1.4.0">
 <systemModel>
 	<layer name="os_layer">
 <module name="toolsextensions">
@@ -139,9 +139,6 @@
 <module name="shortlinksrv">
         <unit unitID="lcdo.shortlinksrv" mrp="" bldFile="sf/os/shortlinksrv/group" name="shortlinksrv"/>
       </module>
-<module name="textandloc">
-        <unit unitID="abs.textandloc" mrp="" bldFile="sf/os/textandloc/group" name="textandloc"/>
-      </module>
 <module name="wlan">
         <unit unitID="netdo.wlan" mrp="" bldFile="sf/os/wlan/group" name="wlan"/>
       </module>
@@ -161,6 +158,9 @@
 	<layer name="bldfirst_mw_layer">
 <module name="classicui">
         <unit unitID="abs.classicui" mrp="" bldFile="sf/mw/classicui/group" name="classicui"/>
+      </module>
+<module name="gsprofilesrv">
+        <unit name="gsprofilesrv" unitID="presdo.gsprofilesrv" bldFile="sf/mw/gsprofilesrv/group" mrp=""/>
       </module></layer>
 	<layer name="mw_layer">
 <module name="accesssec">
@@ -173,7 +173,6 @@
         <unit unitID="sydo.appsupport" name="appsupport" bldFile="sf/mw/appsupport/group" mrp=""/>
       </module>
 <module name="">
-<unit unitID="helix_stub" mrp="" bldFile="sf/mw/mmmw/mmfw/helix_stub/group" filter="sf_build" name="helix_stub"/>
 <unit unitID="sedo.securitysrv.pkiutilities.Certificates" bldFile="sf/mw/securitysrv/pkiutilities/Certificates/group" mrp="" filter="sf_build" name="sedo_securitysrv_pkiutilities_Certificates"/>
 </module>
 <module name="btservices">
@@ -201,6 +200,9 @@
 <module name="hapticsservices">
         <unit unitID="abs.hapticsservices" mrp="" bldFile="sf/mw/hapticsservices/group" name="hapticsservices"/>
       </module>
+<module name="helix">
+				<unit unitID="helix_stub" mrp="" bldFile="sf/mw/helix/helix_ren/helix_stub/group" filter="sf_build" name="helix_stub"/>
+			</module>
 <module name="homescreensrv">
         <unit unitID="hs.homescreensrv" mrp="" bldFile="sf/mw/homescreensrv/group" name="homescreensrv"/>
       </module>
@@ -333,6 +335,9 @@
       </module>
 <module name="wirelessacc">
         <unit unitID="netdo.wirelessacc" mrp="" bldFile="sf/mw/wirelessacc/group" name="wirelessacc"/>
+      </module>
+<module name="textandloc">
+        <unit unitID="abs.textandloc" mrp="" bldFile="sf/os/textandloc/group" name="textandloc"/>
       </module></layer>
 	<layer name="bldfirst_app_layer">
 <module name="contacts">
@@ -372,7 +377,7 @@
         <unit unitID="abs.dictionary" mrp="" bldFile="sf/app/dictionary/group" name="dictionary"/>
       </module>
 <module name="files">
-        <unit name="files" unitID="sydo.files" bldFile="sf/app/files/group" mrp=""/>
+        <unit name="files" unitID="presdo.files" bldFile="sf/app/files/group" mrp=""/>
       </module>
 <module name="gallery">
         <unit unitID="imm.gallery" mrp="" bldFile="sf/app/gallery/group" name="gallery"/>
@@ -388,9 +393,6 @@
       </module>
 <module name="im">
         <unit unitID="impp.im" mrp="" bldFile="sf/app/im/group" name="im"/>
-      </module>
-<module name="imgeditor">
-        <unit unitID="imm.imgeditor" mrp="" bldFile="sf/app/imgeditor/group" name="imgeditor"/>
       </module>
 <module name="imgvieweruis">
         <unit unitID="imm.imgvieweruis" mrp="" bldFile="sf/app/imgvieweruis/group" name="imgvieweruis"/>
@@ -443,15 +445,9 @@
 <module name="utils">
         <unit unitID="orgdo.utils" mrp="" bldFile="sf/app/utils/group" name="utils"/>
       </module>
-<module name="videocenter">
-        <unit unitID="vado.videocenter" mrp="" bldFile="sf/app/videocenter/group" name="videocenter"/>
-      </module>
-<module name="videoeditor">
-        <unit unitID="imm.videoeditor" mrp="" bldFile="sf/app/videoeditor/group" name="videoeditor"/>
-      </module>
 <module name="videoplayer">
-				<unit unitID="videoplayer" mrp="" bldFile="sf/app/videoplayer/group" name="videoplayer"/>
-			</module>
+        <unit unitID="vado.videoplayer" mrp="" bldFile="sf/app/videoplayer/group" name="videoplayer"/>
+      </module>
 <module name="videotelephony">
         <unit name="videotelephony_plat" unitID="tedo.videotelephony_plat" bldFile="sf/app/videotelephony/videotelephony_plat/group" mrp=""/>
         <unit name="vtprotocolsstub" unitID="tedo.vtprotocolsstub" bldFile="sf/app/videotelephony/vtprotocolsstub/group" mrp="" filter="sf_build"/>  
@@ -514,10 +510,6 @@
       <module name="camera_unit_tests">
       </module>
 <module name="gallery_unit_tests">
-      </module>
-<module name="imgeditor_unit_tests">
-    </module>
-<module name="videoeditor_unit_tests">
       </module>
 <module name="camerasrv_unit_tests">
       </module>
