@@ -94,7 +94,7 @@
   root CDATA #IMPLIED
   command CDATA #REQUIRED>
 ]>
-<SystemDefinition schema="2.0.1" name="Symbian">
+<SystemDefinition schema="2.0.1" name="Symbian^3">
 <systemModel>
 <layer name="os" long-name="OS" levels="hw services">
 <block name="kernelhwsrv" level="hw" long-name="Kernel and Hardware Services" levels="hw-if adaptation framework test">
@@ -293,9 +293,6 @@
 <component name="e32toolp" long-name="E32 Perl Tools" purpose="development" class="PC">
 <unit bldFile="os\buildtools\sbsv1_os\e32toolp\group" mrp="os\buildtools\sbsv1_os\e32toolp\group\tools_e32toolp.mrp"/>
 </component>
-<component name="romutils" long-name="ROM Utilities" filter="gt" purpose="development">
-<unit bldFile="os\buildtools\sbsv1_os\romutils\group" mrp="os\buildtools\sbsv1_os\romutils\group\tools_romutils.mrp"/>
-</component>
 </collection>
 <collection name="imgtools_os" long-name="Image Tools" level="fw">
 <component name="romkiteka2" long-name="ROMKIT EKA2" deprecated="tb91" purpose="development">
@@ -367,9 +364,6 @@
 </component>
 <component name="apputils" long-name="Application Utilities" introduced="ER5" purpose="mandatory">
 <unit bldFile="os\ossrv\lowlevellibsandfws\apputils\group" mrp="os\ossrv\lowlevellibsandfws\apputils\group\syslibs_bafl.mrp"/>
-</component>
-<component name="sysutil" long-name="System Utilities" introduced="ER5" purpose="mandatory">
-<unit bldFile="os\ossrv\lowlevellibsandfws\apputils\sysutil\group"/>
 </component>
 <component name="genericusabilitylib" long-name="Generic Usability Library" introduced="tb92" purpose="mandatory">
 <unit bldFile="os\ossrv\lowlevellibsandfws\genericusabilitylib\group" mrp="os\ossrv\lowlevellibsandfws\genericusabilitylib\group\syslibs_euserhl.mrp"/>
@@ -1612,7 +1606,7 @@
 </component>
 </collection>
 </block>
-<block name="osrndtools" level="services" long-name="OS RD tools" levels="fw trace">
+<block name="osrndtools" level="services" long-name="OS R&amp;D tools" levels="fw trace">
 <collection name="testexecfw1" long-name="Test Execution Framework v1" level="fw">
 <component name="cinidata" long-name="CINI Data" purpose="development">
 <unit bldFile="os\osrndtools\testexecfw1\cinidata" mrp="os\osrndtools\testexecfw1\cinidata\tools_cinidata.mrp"/>
@@ -1621,8 +1615,8 @@
 <unit bldFile="os\osrndtools\testexecfw1\testexecute\Group" mrp="os\osrndtools\testexecfw1\testexecute\Group\tools_testexecute.mrp"/>
 </component>
 </collection>
-<collection name="osrndtools_info" long-name="OS RD tools Info" level="trace">
-<component name="osrndtools_metadata" long-name="OS RD tools Metadata" introduced="tb91" purpose="development" class="config PC">
+<collection name="osrndtools_info" long-name="OS R&amp;D tools Info" level="trace">
+<component name="osrndtools_metadata" long-name="OS R&amp;D tools Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="os\osrndtools\osrndtools_info\osrndtools_metadata\osrndtools_metadata.mrp"/>
 </component>
 </collection>
@@ -1794,9 +1788,9 @@
 </component>
 </collection>
 </block>
-<block name="ipappprotocols" level="generic" long-name="IP App Protocols" levels="plugin framework conn server">
+<block name="ipappprotocols" level="generic" long-name="IP App Protocols" levels="plugin conn server if">
 <collection name="realtimenetprots" long-name="Real-time Internet Protocols" level="server">
-<component name="rtp" long-name="RTP" introduced="9.0" purpose="optional">
+<component name="symrtp" long-name="RTP" introduced="9.0" purpose="optional">
 <!-- Real Time Data Protocol -->
 <unit bldFile="mw\ipappprotocols\realtimenetprots\rtp\group" mrp="mw\ipappprotocols\realtimenetprots\rtp\group\mm-protocols_rtp.mrp"/>
 </component>
@@ -1809,12 +1803,13 @@
 <unit bldFile="mw\ipappprotocols\sipproviderplugins\sipprovider\group" mrp="mw\ipappprotocols\sipproviderplugins\sipprovider\group\mm-protocols_SipProvider.mrp"/>
 </component>
 </collection>
-<collection name="ipappprotocols_info" long-name="IP App Protocols Info" level="server">
+<collection name="ipappprotocols_info" long-name="IP App Protocols Info" level="if">
 <component name="ipappprotocols_metadata" long-name="IP App Protocols Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="mw\ipappprotocols\ipappprotocols_info\ipappprotocols_metadata\ipappprotocols_metadata.mrp"/>
 </component>
 </collection>
 </block>
+<block name="conntools" level="generic" long-name="Connectivity Tools"/>
 <block name="ipappsrv" level="specific" long-name="IP App Services" levels="framework generic server conn plugin">
 <collection name="multimediacommscontroller" long-name="Multimedia Comms Controller" level="conn">
 <component name="amrpayloadformatter" long-name="AMR Payload Formatter" introduced="tb92" purpose="optional">
@@ -2065,6 +2060,7 @@
 </component>
 </collection>
 <collection name="classicui_info" long-name="Classic UI Info" level="specific">
+<!-- the multiple units in the API components need to be resolved -->
 <component name="classicui_metadata" long-name="Classic UI Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="mw\classicui\classicui_info\classicui_metadata\classicui_metadata.mrp"/>
 </component>
@@ -2095,6 +2091,9 @@
 <component name="openssllib" long-name="OpenSSL Library" purpose="optional" class="PC">
 <unit mrp="mw\appinstall\secureswitools\openssllib\security_openssl.mrp"/>
 </component>
+<component name="swisistools" long-name="Secure Software Install SIS Tools" purpose="optional" class="PC">
+<unit bldFile="mw\appinstall\secureswitools\swisistools\group" mrp="mw\appinstall\secureswitools\swisistools\group\security_sistools.mrp"/>
+</component>
 </collection>
 <collection name="appinstall_info" long-name="Application Installation Info" level="api">
 <component name="appinstall_metadata" long-name="Application Installation Metadata" introduced="tb91" purpose="development" class="config PC">
@@ -2104,6 +2103,17 @@
 </block>
 </layer>
 <layer name="app" long-name="Applications" levels="services apps">
+<block name="location" level="apps" long-name="Location Apps"/>
+<block name="mmsharinguis" level="services" long-name="Multimedia Sharing UIs"/>
+<block name="phone" level="apps" span="2" long-name="Phone Apps"/>
+<block name="videotelephony" level="apps" long-name="Video Telephony Apps"/>
+<block name="poc" level="apps" long-name="PoC"/>
+<block name="iptelephony" level="apps" long-name="IP Telephony"/>
+<block name="settingsuis" level="services" long-name="Settings UIs"/>
+<block name="contentcontrol" level="services" long-name="Content Control Daemons"/>
+<block name="devicecontrol" level="services" long-name="Device Control Daemons"/>
+<block name="printing" level="services" long-name="Printing"/>
+<block name="files" level="apps" long-name="File Manager Apps"/>
 <block name="contacts" level="apps" span="2" long-name="Contacts Apps" levels="engine support services ui">
 <collection name="phonebookengines" long-name="Phonebook Engines" level="engine">
 <component name="contactsmodel" long-name="Contacts Model" introduced="ER5" purpose="optional">
@@ -2124,7 +2134,7 @@
 </component>
 </collection>
 </block>
-<block name="organizer" level="apps" span="2" long-name="Organizer Application Suite" levels="support services engine ui">
+<block name="organizer" level="apps" span="2" long-name="Organizer Application Suite" levels="support services engine ui app">
 <collection name="pimappservices" long-name="PIM App Services" level="services">
 <component name="calendar" long-name="Calendar" introduced="9.2" purpose="optional">
 <unit bldFile="app\organizer\pimappservices\calendar\group" mrp="app\organizer\pimappservices\calendar\group\app-engines_calendar.mrp" version="2"/>
@@ -2144,7 +2154,7 @@
 <unit bldFile="app\organizer\pimappsupport\chinesecalendarconverter\group" mrp="app\organizer\pimappsupport\chinesecalendarconverter\group\app-services_calcon.mrp"/>
 </component>
 </collection>
-<collection name="organizer_info" long-name="Organizer Application Suite Info" level="ui">
+<collection name="organizer_info" long-name="Organizer Application Suite Info" level="app">
 <component name="organizer_metadata" long-name="Organizer Application Suite Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="app\organizer\organizer_info\organizer_metadata\organizer_metadata.mrp"/>
 </component>
@@ -2186,12 +2196,34 @@
 </component>
 </collection>
 </block>
-<block name="helps" level="apps" span="2" long-name="Help Apps" levels="eng tools unused ui">
-<collection name="symhelp" long-name="Symbian Help" level="eng">
-<component name="helpmodel" long-name="Help" introduced="6.0" purpose="optional">
-<unit bldFile="app\helps\symhelp\helpmodel\group" mrp="app\helps\symhelp\helpmodel\group\app-services_hlpmodel.mrp"/>
-</component>
-</collection>
+<block name="commonemail" level="apps" long-name="Email Apps"/>
+<block name="conversations" level="apps" long-name="Conversation Apps"/>
+<block name="im" level="apps" long-name="Instant Messaging Apps"/>
+<block name="utils" level="apps" long-name="Utility Apps"/>
+<block name="dictionary" level="services" long-name="Dictionary"/>
+<block name="camera" level="apps" long-name="Camera Apps"/>
+<block name="imgeditor" level="apps" long-name="Image Editor Apps"/>
+<block name="videoeditor" level="apps" long-name="Video Editor Apps"/>
+<block name="gallery" level="apps" long-name="Gallery Apps"/>
+<block name="videoplayer" level="apps" long-name="Video Player Apps"/>
+<block name="photos" level="apps" long-name="Photos"/>
+<block name="tv" level="apps" long-name="TV Apps"/>
+<block name="videocenter" level="apps" long-name="Video Center"/>
+<block name="musicplayer" level="apps" long-name="Music Player Apps"/>
+<block name="radio" level="apps" long-name="Radio Apps"/>
+<block name="internetradio" level="apps" long-name="Internet Radio Apps"/>
+<block name="voicerec" level="apps" long-name="Voice Recorder Apps"/>
+<block name="imgvieweruis" level="services" long-name="Image Viewer UIs"/>
+<block name="screensaver" level="apps" long-name="Screen Saver Apps"/>
+<block name="homescreen" level="apps" long-name="Home Screen Apps"/>
+<block name="graphicsuis" level="services" long-name="Graphics UIs"/>
+<block name="profile" level="apps" long-name="Profile"/>
+<block name="speechsrv" level="services" long-name="Speech Recognition UIs"/>
+<block name="homescreentools" level="services" long-name="Home Screen Tools"/>
+<block name="webuis" level="services" long-name="Web UIs"/>
+<block name="java" level="services" long-name="Java"/>
+<block name="rndtools" level="services" long-name="RD tools"/>
+<block name="helps" level="apps" span="2" long-name="Help Apps" levels="eng tools if ui">
 <collection name="helps_info" long-name="Help Apps Info" level="ui">
 <component name="helps_metadata" long-name="Help Apps Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="app\helps\helps_info\helps_metadata\helps_metadata.mrp"/>
@@ -2205,11 +2237,6 @@
 </component>
 <component name="smoketest" long-name="Smoke Test" filter="gt" purpose="development">
 <unit bldFile="app\techview\buildverification\smoketest\Group" mrp="app\techview\buildverification\smoketest\Group\testtools_smoketest.mrp"/>
-</component>
-</collection>
-<collection name="installationapps" long-name="Installation Apps" level="apps2">
-<component name="swisistools" long-name="Secure Software Install SIS Tools" purpose="optional" class="PC">
-<unit bldFile="mw\appinstall\secureswitools\swisistools\group" mrp="mw\appinstall\secureswitools\swisistools\group\security_sistools.mrp"/>
 </component>
 </collection>
 <collection name="networkingutils" long-name="Networking Utils" level="utils">
