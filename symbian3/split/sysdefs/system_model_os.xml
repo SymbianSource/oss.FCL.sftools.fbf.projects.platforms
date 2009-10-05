@@ -128,6 +128,9 @@
 <component name="f32test" long-name="File Server Tests" purpose="development">
 <unit bldFile="os\kernelhwsrv\kerneltest\f32test\group" mrp="os\kernelhwsrv\kerneltest\f32test\group\base_f32test.mrp"/>
 </component>
+<component name="syborg" long-name="Syborg" purpose="development">
+<unit bldFile="os\QEMU\baseport\syborg" mrp=""/>
+</component>
 </collection>
 <collection name="ldds" long-name="Logical Device Drivers" level="adaptation">
 <component name="ethernetldd" long-name="Ethernet Drivers" purpose="optional">
