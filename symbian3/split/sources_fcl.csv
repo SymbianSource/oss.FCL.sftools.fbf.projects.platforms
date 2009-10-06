@@ -97,7 +97,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/os/buildtools/,/sf/os/buildtools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/cellularsrv/,/sf/os/cellularsrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/commsfw/,/sf/os/commsfw,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_development_staging/sfl/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/os/devicesrv/,/sf/os/devicesrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/os/graphics/,/sf/os/graphics,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/imagingext/,/sf/os/imagingext,branch,default,layers.sysdef.xml
@@ -109,12 +109,13 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/persistentdata/,/sf/os/persistentdata,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/os/security/,/sf/os/security,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/shortlinksrv/,/sf/os/shortlinksrv,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_development_staging/sfl/FCL/sf/os/textandloc/,/sf/os/textandloc,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_development_staging/sfl/FCL/sf/os/unref/,/sf/os/unref,branch,default,
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/os/textandloc/,/sf/os/textandloc,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/os/unref/,/sf/os/unref,branch,default,
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/usb/,/sf/os/usb,branch,default,
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/wlan/,/sf/os/wlan,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/xmlsrv/,/sf/os/xmlsrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/osrndtools/,/sf/os/osrndtools,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_master_prod/oss/FCL/interim/QEMU/,/sf/os/QEMU,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/tools/build_s60/,/sf/tools/build_s60,branch,default,
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/tools/buildplatforms/,/sf/tools/buildplatforms,branch,default,
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/tools/homescreentools/,/sf/tools/homescreentools,branch,default,layers.sysdef.xml
