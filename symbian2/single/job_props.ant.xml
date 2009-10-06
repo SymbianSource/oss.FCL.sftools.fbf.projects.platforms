@@ -32,7 +32,7 @@
     <property name="sf.spec.baseline.getenv_options" value="-I tools"/> <!-- Sync the tools... -->
     <property name="sf.spec.baseline.clean"          value="false"/>
     <property name="sf.spec.baseline.select"         value="location" />
-    <property name="sf.spec.baseline.location"       value="\\v800008\Builds01\Releases\PDK_2.0.e\" />
+    <property name="sf.spec.baseline.location"       value="\\v800008\Builds01\Releases\${sf.previous.pdk.tag}" />
     
     <property name="sf.spec.toolsbaseline.getenv_options" value="-i emu"/>
     <property name="sf.spec.toolsbaseline.select"         value="location" />
