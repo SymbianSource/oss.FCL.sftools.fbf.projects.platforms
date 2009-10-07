@@ -33,6 +33,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/shortlinksrv/,/sf/os/shortlinksrv,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/os/buildtools/,/sf/os/buildtools,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/unref/,/sf/os/unref,branch,RCL_1,
+//v800008/Builds01/mercurial_master_prod/oss/FCL/interim/QEMU/,/sf/os/QEMU,branch,default,
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/mw/appsupport/,/sf/mw/appsupport,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/securitysrv/,/sf/mw/securitysrv,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/drm/,/sf/mw/drm,branch,RCL_1,layers.sysdef.xml

@@ -378,6 +378,11 @@
   </layer>
   <layer name="os" long-name="OS" levels="hw services">
    <block name="boardsupport" long-name="Board Support" tech_domain="hb" level="hw" levels="bsp test 2 3 4">
+    <collection name="Syborg" long-name="Syborg Baseport" level="bsp">
+     <component name="syborgbsp" long-name="Syborg BSP" purpose="optional" plugin="N" origin-model="Symbian">
+      <unit bldFile="os/QEMU/baseport/syborg" />
+     </component>
+    </collection>
     <collection name="emulator" long-name="Emulator" level="bsp">
      <component name="emulatorbsp" long-name="Emulator BSP" purpose="optional" plugin="N" origin-model="Symbian">
       <unit bldFile="os/boardsupport/emulator/emulatorbsp" mrp="os/boardsupport/emulator/emulatorbsp/base_wins.mrp"/>
