@@ -128,9 +128,6 @@
 <component name="f32test" long-name="File Server Tests" purpose="development">
 <unit bldFile="os\kernelhwsrv\kerneltest\f32test\group" mrp="os\kernelhwsrv\kerneltest\f32test\group\base_f32test.mrp"/>
 </component>
-<component name="syborg" long-name="Syborg" purpose="development">
-<unit bldFile="os\QEMU\baseport\syborg" mrp=""/>
-</component>
 </collection>
 <collection name="ldds" long-name="Logical Device Drivers" level="adaptation">
 <component name="ethernetldd" long-name="Ethernet Drivers" purpose="optional">
@@ -2258,6 +2255,15 @@
 <collection name="techview_info" long-name="Techview Info" level="apps3">
 <component name="techview_metadata" long-name="Techview Metadata" introduced="tb91" purpose="development" class="config PC">
 <unit mrp="app\techview\techview_info\techview_metadata\techview_metadata.mrp"/>
+</component>
+</collection>
+</block>
+</layer>
+<layer name="adaptation" long-name="Adaptation" levels="hw-if">
+<block name="syborg_adaptation" level="hw-if" long-name="Syborg Adaptation" levels="hw-if">
+<collection id="baseport" name="Baseport" level="hw-if"> 
+<component id="syborg" name="Syborg" introduced="symbian^2" purpose="optional">
+<unit bldFile="adaptation\QEMU\baseport\syborg" mrp="baseport/syborg/syborg.mrp"/>
 </component>
 </collection>
 </block>
