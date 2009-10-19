@@ -74,5 +74,8 @@
     <property name="sf.spec.test.sendpkg.enable" value="true"/>
 
     <property name="sf.spec.md5.enable"          value="true"/>
-
+    
+    <!-- Build ROMs defined in list -->
+    <property name="sf.spec.referenceroms.createimages.enable" value="true"/>
+    <property name="sf.spec.referenceroms.list" value="syborg,beagle"/>
 </project>
