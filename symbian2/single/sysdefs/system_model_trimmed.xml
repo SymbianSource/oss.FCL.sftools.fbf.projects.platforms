@@ -15,12 +15,12 @@
     </collection>
     <collection name="themetool" long-name="Theme Tool" level="tool">
      <component name="themetool_build" origin-model="foundation">
-      <unit bldFile="tools/homescreentools/themetool/group"/>
+<!--AUTO TRIMMED      <unit bldFile="tools/homescreentools/themetool/group"/> -->
      </component>
     </collection>
     <collection name="homescreentools_info" long-name="Home Screen Tools Info" level="install">
      <component unofficial="yes" name="homescreentools_build" long-name="Home Screen Tools Build" origin-model="foundation">
-      <unit bldFile="tools/homescreentools/group"/>
+<!--AUTO TRIMMED      <unit bldFile="tools/homescreentools/group"/> -->
      </component>
     </collection>
    </block>
@@ -105,7 +105,7 @@
     </collection>
     <collection name="platformtools_info" long-name="Platform Tools Info">
      <component unofficial="yes" name="platformtools_build" long-name="Platform Tools Build" origin-model="foundation">
-      <unit bldFile="tools/platformtools/group"/>
+<!--AUTO TRIMMED      <unit bldFile="tools/platformtools/group"/> -->
      </component>
     </collection>
    </block>
@@ -226,7 +226,7 @@
     </collection>
     <collection name="osrndtools_info" long-name="OS RD tools Info" level="trace">
      <component unofficial="yes" name="osrndtools_build" long-name="OS RD tools Build" origin-model="foundation">
-      <unit bldFile="ostools/osrndtools/group"/>
+<!--AUTO TRIMMED      <unit bldFile="ostools/osrndtools/group"/> -->
      </component>
     <component name="osrndtools_metadata" long-name="OS RD tools Metadata" introduced="tb91" purpose="development" class="config PC" plugin="N" origin-model="Symbian">
       <unit mrp="os/osrndtools/osrndtools_info/osrndtools_metadata/osrndtools_metadata.mrp"/>
@@ -333,7 +333,7 @@
       <unit bldFile="adaptation/stubs/systemswstubs/examplecommonisc/group"/>
      </component>
      <component name="exampledsy" long-name="Example DSY" origin-model="foundation">
-      <unit bldFile="adaptation/stubs/systemswstubs/exampledsy/group"/>
+<!--AUTO TRIMMED      <unit bldFile="adaptation/stubs/systemswstubs/exampledsy/group"/> -->
      </component>
      <component name="featuremanagerstub" long-name="Feature Manager Stub" origin-model="foundation">
       <unit bldFile="adaptation/stubs/systemswstubs/featuremanagerstub/group"/>
@@ -778,7 +778,7 @@
      </component>-->
      <component name="reftsp" origin-model="foundation"/>
      <component unofficial="yes" name="accessoryservices_build" long-name="Accessory Services Build" origin-model="foundation">
-      <unit bldFile="os/devicesrv/accessoryservices/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/devicesrv/accessoryservices/group"/> -->
      </component>
     <component name="remotecontrolfw" long-name="Remote Control Framework" introduced="9.1" purpose="optional" plugin="N" origin-model="Symbian">
       <unit bldFile="os/devicesrv/accessoryservices/remotecontrolfw/group" mrp="os/devicesrv/accessoryservices/remotecontrolfw/group/bluetooth_remotecontrol.mrp"/>
@@ -809,7 +809,7 @@
       <unit bldFile="os/devicesrv/commonservices/activitymanager/tsrc/public/basic/group"/>
      </component>
      <component unofficial="yes" name="commonservices_build" long-name="Common Services Build" origin-model="foundation">
-      <unit bldFile="os/devicesrv/commonservices/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/devicesrv/commonservices/group"/> -->
      </component>
     </collection>
     <collection name="dosservices" long-name="Dos Services" level="hw-if">
@@ -829,7 +829,7 @@
       <!-- <unit bldFile="os/devicesrv/dosservices/tsrc/dsytesttool/group"/> -->
      </component>
      <component unofficial="yes" name="dosservices_build" long-name="Dos Services Build" origin-model="foundation">
-      <unit bldFile="os/devicesrv/dosservices/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/devicesrv/dosservices/group"/> -->
      </component>
     </collection>
     <collection name="resourcemgmt" long-name="Resource Management" level="hw-if">
@@ -918,7 +918,7 @@
       <!-- <unit bldFile="os/devicesrv/psmservices/psmserver/tsrc/public/basic/group"/> -->
      </component>
      <component unofficial="yes" name="psmservices_build" long-name="PSM Services Build" origin-model="foundation">
-      <unit bldFile="os/devicesrv/psmservices/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/devicesrv/psmservices/group"/> -->
      </component>
     </collection>
     <collection name="sensorservices" long-name="Sensor Services" level="framework">
@@ -943,7 +943,7 @@
       <!-- <unit bldFile="os/devicesrv/sensorservices/sensordatacompensator/tsrc/sensordatacompensatortest/group"/> -->
      </component>
      <component unofficial="yes" name="sensorservices_build" long-name="Sensor Services Build" origin-model="foundation">
-      <unit bldFile="os/devicesrv/sensorservices/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/devicesrv/sensorservices/group"/> -->
      </component>
     </collection>
     <collection name="sysstatemgmt" long-name="System State Management" level="server">
@@ -972,7 +972,7 @@
        <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/test/tsysstart2/group"/>
      </component>-->
      <component unofficial="yes" name="sysstatemgmt_build" long-name="System State Management Build" origin-model="foundation">
-      <unit bldFile="os/devicesrv/sysstatemgmt/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/devicesrv/sysstatemgmt/group"/> -->
      </component>
      <component unofficial="yes" name="sysstatemgmt_test" long-name="System State Management Test" origin-model="foundation">
       <!-- <unit bldFile="os/devicesrv/sysstatemgmt/tsrc/public/basic/group"/> -->
@@ -1346,7 +1346,7 @@
     </collection>
     <collection name="networkingsrv_info" long-name="Networking Services Info" level="app-if">
      <component unofficial="yes" name="networkingsrv_build" long-name="Networking Services Build" origin-model="foundation">
-      <unit bldFile="os/networkingsrv/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/networkingsrv/group"/> -->
      </component>
     <component name="networkingrom" long-name="Networking ROM" purpose="mandatory" plugin="N" origin-model="Symbian">
       <!--  production component: contains the IBY files -->
@@ -1405,7 +1405,7 @@
       <unit bldFile="os/wlan/wlan_pub/group"/>
      </component>
      <component unofficial="yes" name="wlan_build" long-name="WLAN Build" origin-model="foundation">
-      <unit bldFile="os/wlan/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/wlan/group"/> -->
      </component>
      <component unofficial="yes" name="wlan_plat" long-name="WLAN Platform Interfaces" class="api" origin-model="foundation">
       <unit bldFile="os/wlan/wlan_plat/group"/>
@@ -1525,7 +1525,7 @@
       <unit bldFile="os/cellularsrv/commonnetworkinterface/gprsumtsagent/group"/>
      </component>
      <component unofficial="yes" name="commonnetworkinterface_build" long-name="Common Network Interface Build" origin-model="foundation">
-      <unit bldFile="os/cellularsrv/commonnetworkinterface/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/cellularsrv/commonnetworkinterface/group"/> -->
      </component>
     </collection>
     <collection name="basebandabstraction" long-name="Baseband Abstraction" level="hw-if">
@@ -1559,7 +1559,7 @@
 	</collection>
     <collection name="cellularsrv_info" long-name="Cellular Baseband Services Info" level="app-if">
      <component unofficial="yes" name="cellularsrv_build" long-name="Cellular Baseband Services Build" origin-model="foundation">
-      <unit bldFile="os/cellularsrv/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/cellularsrv/group"/> -->
      </component>
      <component unofficial="yes" name="cellularsrv_plat" long-name="Cellular Baseband Services Platform Interfaces" class="api" origin-model="foundation">
       <unit bldFile="os/cellularsrv/cellularsrv_plat/group"/>
@@ -1603,12 +1603,12 @@
       <unit bldFile="os/mm/audio/arm_cmmf_codecs/group"/>
      </component>
      <component unofficial="yes" name="audio_build" long-name="Audio Codecs Build" origin-model="foundation">
-      <unit bldFile="os/mm/audio/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/mm/audio/group"/> -->
      </component>
     </collection>
     <collection name="video" long-name="Video Codecs" level="middleware">
      <component name="arm_mdf_decoders" long-name="ARM MDF Decoders" origin-model="foundation">
-      <unit bldFile="os/mm/video/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/mm/video/group"/> -->
      </component>
     </collection>
     <collection name="devsoundextensions" long-name="Devsound Extensions" level="device-fw">
@@ -1653,7 +1653,7 @@
       <unit bldFile="os/mm/devsoundextensions/ciextnfactoryplugins/group"/>
      </component>
      <component unofficial="yes" name="devsoundextensions_build" long-name="Devsound Extensions Build" origin-model="foundation">
-      <unit bldFile="os/mm/devsoundextensions/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/mm/devsoundextensions/group"/> -->
      </component>
     </collection>
     <collection name="mdfdevvideoextensions" long-name="MDF devvideo Extensions" level="device-fw">
@@ -1661,7 +1661,7 @@
       <unit bldFile="os/mm/mdfdevvideoextensions/arm_mdf_postprocessor/group"/>
      </component>
      <component unofficial="yes" name="mdfdevvideoextensions_build" long-name="MDF devvideo Extensions Build" origin-model="foundation">
-      <unit bldFile="os/mm/mdfdevvideoextensions/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/mm/mdfdevvideoextensions/group"/> -->
      </component>
     </collection>
     <collection name="videoadaptationextensions" long-name="Video Adaptation Extensions" level="adaptation">
@@ -1669,7 +1669,7 @@
       <unit bldFile="os/mm/videoadaptationextensions/postingsurface/group"/>
      </component>
      <component unofficial="yes" name="videoadaptationextensions_build" long-name="Video Adaptation Extensions Build" origin-model="foundation">
-      <unit bldFile="os/mm/videoadaptationextensions/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/mm/videoadaptationextensions/group"/> -->
      </component>
     </collection>
     <collection name="imagingandcamerafws" long-name="Imaging and Camera Frameworks" level="app-if">
@@ -1720,7 +1720,7 @@
       <unit bldFile="os/mm/mm_pub/group"/>
      </component>
      <component unofficial="yes" name="mm_build" long-name="Multimedia Build" origin-model="foundation">
-      <unit bldFile="os/mm/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/mm/group"/> -->
      </component>
      <component unofficial="yes" name="mm_test" long-name="Multimedia Test" origin-model="foundation">
       <!-- <unit bldFile="os/mm/tsrc/group"/> -->
@@ -1887,7 +1887,7 @@
       <unit bldFile="os/imagingext/imagingext_plat/group"/>
      </component>
      <component unofficial="yes" name="imagingext_build" long-name="Imaging Extensions Build" origin-model="foundation">
-      <unit bldFile="os/imagingext/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/imagingext/group"/> -->
      </component>
      <component unofficial="yes" name="imagingext_pub" long-name="Imaging Extensions Public Interfaces" class="api" origin-model="foundation">
       <!-- <unit bldFile="os/imagingext/imagingext_pub/exif_api/tsrc/group"/> -->
@@ -1926,7 +1926,7 @@
       <!-- <unit bldFile="os/graphics/graphics_pub/group"/> -->
      </component>
      <component unofficial="yes" name="graphics_build" long-name="Graphics Build" origin-model="foundation">
-      <unit bldFile="os/graphics/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/graphics/group"/> -->
      </component>
      <component unofficial="yes" name="graphics_plat" long-name="Graphics Platform Interfaces" class="api" origin-model="foundation">
       <unit bldFile="os/graphics/graphics_plat/group"/>
@@ -2125,7 +2125,7 @@
       <unit bldFile="os/textandloc/textandloc_pub/group"/>
      </component>
      <component unofficial="yes" name="textandloc_build" long-name="Text and Localisation Build" origin-model="foundation">
-      <unit bldFile="os/textandloc/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/textandloc/group"/> -->
      </component>
      <component unofficial="yes" name="textandloc_plat" long-name="Text and Localisation Platform Interfaces" class="api" origin-model="foundation">
       <!-- <unit bldFile="os/textandloc/textandloc_plat/findutil_api/tsrc/group"/> -->
@@ -2155,7 +2155,7 @@
       <unit bldFile="os/xmlsrv/xmlengine/xmlenginesaxplugin/group"/>
      </component>
      <component unofficial="yes" name="xmlengine_build" long-name="XML Engine Build" origin-model="foundation">
-      <unit bldFile="os/xmlsrv/xmlengine/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/xmlsrv/xmlengine/group"/> -->
      </component>
     </collection>
     <collection name="xmlsecurityengine" long-name="XML Security Engine" level="framework">
@@ -2172,7 +2172,7 @@
       <unit bldFile="os/xmlsrv/xmlsecurityengine/xmlsecwrapper/group"/>
      </component>
      <component unofficial="yes" name="xmlsecurityengine_build" long-name="XML Security Engine Build" origin-model="foundation">
-      <unit bldFile="os/xmlsrv/xmlsecurityengine/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/xmlsrv/xmlsecurityengine/group"/> -->
      </component>
     </collection>
     <collection name="xml" long-name="XML" level="generic">
@@ -2197,7 +2197,7 @@
       <!-- <unit bldFile="os/xmlsrv/xmlsrv_plat/xml_signature_api/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="xmlsrv_build" long-name="XML Services Build" origin-model="foundation">
-      <unit bldFile="os/xmlsrv/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/xmlsrv/group"/> -->
      </component>
      <component unofficial="yes" name="xmlsrv_pub" long-name="XML Services Public Interfaces" class="api" origin-model="foundation">
       <unit bldFile="os/xmlsrv/xmlsrv_pub/group"/>
@@ -2523,7 +2523,7 @@
     </collection>
     <collection name="shortlinksrv_info" long-name="Short Link Services Info" level="app-if">
      <component unofficial="yes" name="shortlinksrv_build" origin-model="foundation">
-      <unit bldFile="os/shortlinksrv/group"/>
+<!--AUTO TRIMMED      <unit bldFile="os/shortlinksrv/group"/> -->
      </component>
      <component unofficial="yes" name="shortlinksrv_plat" class="api" origin-model="foundation">
       <unit bldFile="os/shortlinksrv/shortlinksrv_plat/group"/>
@@ -2861,7 +2861,7 @@
       <!-- <unit bldFile="mw/appsupport/sysresmonitoring/oommonitor/tsrc/public/basic/group"/> -->
      </component>
      <component unofficial="yes" name="sysresmonitoring_build" long-name="System Resource Monitoring Build" origin-model="foundation">
-      <unit bldFile="mw/appsupport/sysresmonitoring/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/appsupport/sysresmonitoring/group"/> -->
      </component>
     </collection>
     <collection name="gssettingsuis" long-name="GS Settings UIs" level="specific">
@@ -2904,7 +2904,7 @@
       <unit bldFile="mw/appsupport/contextframework/cfwplugins/group"/>
      </component>
      <component unofficial="yes" name="contextframework_build" long-name="Context Framework Build" origin-model="foundation">
-      <unit bldFile="mw/appsupport/contextframework/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/appsupport/contextframework/group"/> -->
      </component>
     </collection>
     <collection name="mediakeys" long-name="Media Keys" level="plugin">
@@ -2973,7 +2973,7 @@
       <!-- <unit bldFile="mw/appsupport/coreapplicationuis/tsrc/public/basic/group"/> -->
      </component>
      <component unofficial="yes" name="coreapplicationuis_build" long-name="Core Application UIs Build" origin-model="foundation">
-      <unit bldFile="mw/appsupport/coreapplicationuis/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/appsupport/coreapplicationuis/group"/> -->
      </component>
     </collection>
     <collection name="startupservices" long-name="Startup Services" level="system">
@@ -2990,7 +2990,7 @@
       <unit bldFile="mw/appsupport/startupservices/startupanimation/group"/>
      </component>
      <component unofficial="yes" name="startupservices_build" long-name="Startup Services Build" origin-model="foundation">
-      <unit bldFile="mw/appsupport/startupservices/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/appsupport/startupservices/group"/> -->
      </component>
     </collection>
     <collection name="systemsettings" long-name="System Settings" level="system">
@@ -3001,7 +3001,7 @@
       <unit bldFile="mw/appsupport/systemsettings/gsaccessoryplugin/group"/>
      </component>
      <component unofficial="yes" name="systemsettings_build" long-name="System Settings Build" origin-model="foundation">
-      <unit bldFile="mw/appsupport/systemsettings/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/appsupport/systemsettings/group"/> -->
      </component>
     </collection>
     <collection name="filehandling" long-name="File Handling" level="server">
@@ -3114,7 +3114,7 @@
       <!-- <unit bldFile="mw/appsupport/appsupport_pub/profiles_engine_wrapper_api/tsrc/bc/profilesenginewrapperapi/group"/> -->
      </component>
      <component unofficial="yes" name="appsupport_build" long-name="Generic Application Support Build" origin-model="foundation">
-      <unit bldFile="mw/appsupport/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/appsupport/group"/> -->
      </component>
     <component name="appsupport_metadata" long-name="Generic Application Support Metadata" introduced="tb91" purpose="development" class="config PC" plugin="N" origin-model="Symbian">
       <unit mrp="mw/appsupport/appsupport_info/appsupport_metadata/appsupport_metadata.mrp"/>
@@ -3223,12 +3223,12 @@
       <unit bldFile="mw/securitysrv/securitydialogs/securityobserver/group"/>
      </component>
      <component unofficial="yes" name="securitydialogs_build" long-name="Security Dialogs Build" origin-model="foundation">
-      <unit bldFile="mw/securitysrv/securitydialogs/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/securitysrv/securitydialogs/group"/> -->
      </component>
     </collection>
     <collection name="securitysrv_info" long-name="Security Services Info" level="specific">
      <component unofficial="yes" name="securitysrv_build" long-name="Security Services Build" origin-model="foundation">
-      <unit bldFile="mw/securitysrv/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/securitysrv/group"/> -->
      </component>
      <component unofficial="yes" name="secsrv_plat" class="api" origin-model="foundation">
       <!-- <unit bldFile="mw/securitysrv/secsrv_plat/devicelock_access_api/group"/> -->
@@ -3325,7 +3325,7 @@
       <!-- <unit bldFile="mw/drm/drm_plat/roap_api/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="drm_build" long-name="DRM Build" origin-model="foundation">
-      <unit bldFile="mw/drm/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/drm/group"/> -->
      </component>
     </collection>
    </block>
@@ -3347,7 +3347,7 @@
       <unit bldFile="mw/accesssec/wlansecuritysettings/wpasecuritysettingsui/group"/>
      </component>
      <component unofficial="yes" name="wlansecuritysettings_build" long-name="WLAN Security Settings Build" origin-model="foundation">
-      <unit bldFile="mw/accesssec/wlansecuritysettings/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/accesssec/wlansecuritysettings/group"/> -->
      </component>
     </collection>
     <collection name="eapol" long-name="EAPOL" level="framework">
@@ -3355,7 +3355,7 @@
       <unit bldFile="mw/accesssec/eapol/eapol_framework/eapol_symbian/group"/>
      </component>
      <component unofficial="yes" name="eapol_build" long-name="EAPOL Build" origin-model="foundation">
-      <unit bldFile="mw/accesssec/eapol/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/accesssec/eapol/group"/> -->
      </component>
     </collection>
     <collection name="accesssec_info" long-name="Access Security Info" level="specific">
@@ -3363,7 +3363,7 @@
       <unit bldFile="mw/accesssec/accesssec_plat/group"/>
      </component>
      <component unofficial="yes" name="accesssec_build" long-name="Access Security Build" origin-model="foundation">
-      <unit bldFile="mw/accesssec/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/accesssec/group"/> -->
      </component>
     </collection>
    </block>
@@ -3373,7 +3373,7 @@
       <unit bldFile="mw/locationsrv/landmarks/locationlandmarks/group"/>
      </component>
      <component unofficial="yes" name="landmarks_build" long-name="Landmarks Build" origin-model="foundation">
-      <unit bldFile="mw/locationsrv/landmarks/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/locationsrv/landmarks/group"/> -->
      </component>
     </collection>
     <collection name="locationmapnavfw" long-name="Location Map Nav Framework" level="fw">
@@ -3392,7 +3392,7 @@
       <unit bldFile="mw/locationsrv/locationsystemui/locationsysui/group"/>
      </component>
      <component unofficial="yes" name="locationsystemui_build" long-name="Location System UI Build" origin-model="foundation">
-      <unit bldFile="mw/locationsrv/locationsystemui/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/locationsrv/locationsystemui/group"/> -->
      </component>
     </collection>
     <collection name="supl" long-name="SUPL" level="plugins">
@@ -3406,7 +3406,7 @@
       <unit bldFile="mw/locationsrv/supl/locationomasuplpostester/group"/>
      </component>
      <component unofficial="yes" name="supl_build" long-name="SUPL Build" origin-model="foundation">
-      <unit bldFile="mw/locationsrv/supl/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/locationsrv/supl/group"/> -->
      </component>
     </collection>
     <collection name="locationtriggering" long-name="Location Triggering" level="interface">
@@ -3495,7 +3495,7 @@
       <!-- <unit bldFile="mw/locationsrv/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="locationsrv_build" long-name="Location Services Build" origin-model="foundation">
-      <unit bldFile="mw/locationsrv/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/locationsrv/group"/> -->
      </component>
      <component unofficial="yes" name="locsrv_pub" class="api" origin-model="foundation">
       <!-- <unit bldFile="mw/locationsrv/locsrv_pub/blid_application_satellite_info_api/tsrc/bc_blid_application_satellite_info_api/group"/> -->
@@ -3516,7 +3516,7 @@
       <unit bldFile="mw/ipconnmgmt/alwayson_net_plugin/pdpcontextmanager2/group"/>
      </component>
      <component unofficial="yes" name="alwayson_net_plugin_build" long-name="Always On Net Plugin Build" origin-model="foundation">
-      <unit bldFile="mw/ipconnmgmt/alwayson_net_plugin/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/ipconnmgmt/alwayson_net_plugin/group"/> -->
      </component>
     </collection>
     <collection name="bearermanagement" long-name="Bearer Management" level="framework">
@@ -3545,7 +3545,7 @@
       <unit bldFile="mw/ipconnmgmt/connectionmonitoring/connmonext/group"/>
      </component>
      <component unofficial="yes" name="connectionmonitoring_build" long-name="Connection Monitoring Build" origin-model="foundation">
-      <unit bldFile="mw/ipconnmgmt/connectionmonitoring/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/ipconnmgmt/connectionmonitoring/group"/> -->
      </component>
     </collection>
     <collection name="accesspointcontrol" long-name="Access Point Control" level="plugin">
@@ -3564,7 +3564,7 @@
       <unit bldFile="mw/ipconnmgmt/apengine/apsettingsplugin/group"/>
      </component>
      <component unofficial="yes" name="apengine_build" long-name="Application Engine Build" origin-model="foundation">
-      <unit bldFile="mw/ipconnmgmt/apengine/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/ipconnmgmt/apengine/group"/> -->
      </component>
     </collection>
     <collection name="cmmanager" long-name="CM Manager" level="framework">
@@ -3596,7 +3596,7 @@
     </collection>
     <collection name="ipconnmgmt_info" long-name="IP Connectivity Management Info" level="utils">
      <component unofficial="yes" name="ipconnmgmt_build" long-name="IP Connectivity Management Build" origin-model="foundation">
-      <unit bldFile="mw/ipconnmgmt/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/ipconnmgmt/group"/> -->
      </component>
      <component unofficial="yes" name="ipcm_pub" class="api" origin-model="foundation">
       <unit bldFile="mw/ipconnmgmt/ipcm_pub/group"/>
@@ -3636,7 +3636,7 @@
       <unit bldFile="mw/netprotocols/httpfilters/uaproffilter/group"/>
      </component>
      <component unofficial="yes" name="httpfilters_build" long-name="HTTP Filters Build" origin-model="foundation">
-      <unit bldFile="mw/netprotocols/httpfilters/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/netprotocols/httpfilters/group"/> -->
      </component>
     </collection>
     <collection name="applayerprotocols" long-name="Application Layer Protocols" level="server">
@@ -3684,7 +3684,7 @@
       <unit bldFile="mw/netprotocols/netprotocols_plat/group"/>
      </component>
      <component unofficial="yes" name="netprotocols_build" long-name="High-level Internet Protocols Build" origin-model="foundation">
-      <unit bldFile="mw/netprotocols/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/netprotocols/group"/> -->
      </component>
     <component name="netprotocols_metadata" long-name="High-level Internet Protocols Metadata" introduced="tb91" purpose="development" class="config PC" plugin="N" origin-model="Symbian">
       <unit mrp="mw/netprotocols/netprotocols_info/netprotocols_metadata/netprotocols_metadata.mrp"/>
@@ -3782,7 +3782,7 @@
       <unit bldFile="mw/wirelessacc/wlanutilities/wlanindicatorplugin/group"/>
      </component>
      <component unofficial="yes" name="wlanutilities_build" long-name="WLAN Utilities Build" origin-model="foundation">
-      <unit bldFile="mw/wirelessacc/wlanutilities/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/wirelessacc/wlanutilities/group"/> -->
      </component>
     </collection>
     <collection name="wirelessacc_info" long-name="Wireless Access Info" level="ui">
@@ -3790,7 +3790,7 @@
       <unit bldFile="mw/wirelessacc/hsfw_plat/group"/>
      </component>
      <component unofficial="yes" name="wirelessacc_build" long-name="Wireless Access Build" origin-model="foundation">
-      <unit bldFile="mw/wirelessacc/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/wirelessacc/group"/> -->
      </component>
     </collection>
    </block>
@@ -4159,7 +4159,7 @@
       <unit bldFile="mw/ipappsrv/ipappsrv_plat/group"/>
      </component>
      <component unofficial="yes" name="ipappsrv_build" long-name="IP App Services Build" origin-model="foundation">
-      <unit bldFile="mw/ipappsrv/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/ipappsrv/group"/> -->
      </component>
     </collection>
    </block>
@@ -4199,7 +4199,7 @@
       <unit bldFile="mw/phonesrv/convergedcallengine/csplugin/group"/>
      </component>
      <component unofficial="yes" name="convergedcallengine_build" long-name="Converged Call Engine Build" origin-model="foundation">
-      <unit bldFile="mw/phonesrv/convergedcallengine/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/phonesrv/convergedcallengine/group"/> -->
      </component>
     </collection>
     <collection name="networkhandling" long-name="Network Handling" level="plugin">
@@ -4232,7 +4232,7 @@
       <unit bldFile="mw/phonesrv/satengine/satserver/group"/>
      </component>
      <component unofficial="yes" name="satengine_build" long-name="Sat Engine Build" origin-model="foundation">
-      <unit bldFile="mw/phonesrv/satengine/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/phonesrv/satengine/group"/> -->
      </component>
     </collection>
     <collection name="satui" long-name="Sat UI" level="specific">
@@ -4243,7 +4243,7 @@
       <unit bldFile="mw/phonesrv/satui/satplugin/group"/>
      </component>
      <component unofficial="yes" name="satui_build" long-name="Sat UI Build" origin-model="foundation">
-      <unit bldFile="mw/phonesrv/satui/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/phonesrv/satui/group"/> -->
      </component>
     </collection>
     <collection name="telutils" long-name="Utilities" level="generic">
@@ -4283,10 +4283,10 @@
       <!-- <unit bldFile="mw/phonesrv/phonesrv_plat/sat_refresh_api/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="phonesrv_pub" long-name="Telephony and SIM Services Public Interfaces" class="api" origin-model="foundation">
-      <unit bldFile="mw/phonesrv/phonesrv_pub/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/phonesrv/phonesrv_pub/group"/> -->
      </component>
      <component unofficial="yes" name="phonesrv_build" long-name="Telephony and SIM Services Build" origin-model="foundation">
-      <unit bldFile="mw/phonesrv/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/phonesrv/group"/> -->
      </component>
     </collection>
    </block>
@@ -4454,7 +4454,7 @@
       <unit bldFile="mw/messagingmw/msgfw_pub/send_ui_api/tsrc/group"/>
      </component>
      <component unofficial="yes" name="messagingmw_build" long-name="Messaging Middleware Build" origin-model="foundation">
-      <unit bldFile="mw/messagingmw/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/messagingmw/group"/> -->
      </component>
      <component unofficial="yes" name="msgfw_plat" class="api" origin-model="foundation">
       <unit bldFile="mw/messagingmw/msgfw_plat/group"/>
@@ -4566,7 +4566,7 @@
       <!-- <unit bldFile="mw/imsrv/imsrv_plat/xmpp_settings_api/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="imsrv_build" long-name="Instant Messaging and Presence Services Build" origin-model="foundation">
-      <unit bldFile="mw/imsrv/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/imsrv/group"/> -->
      </component>
     </collection>
    </block>
@@ -4742,16 +4742,16 @@
     </collection>
     <collection name="syncmlfw" long-name="SyncML Framework" level="server">
      <component name="syncmlfw_common" long-name="Common" origin-model="foundation">
-      <unit bldFile="mw/remotemgmt/syncmlfw/common/alerthandler/bld"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/remotemgmt/syncmlfw/common/alerthandler/bld"/> -->
       <unit bldFile="mw/remotemgmt/syncmlfw/common/alertqueue/bld"/>
       <unit bldFile="mw/remotemgmt/syncmlfw/common/debug/bld"/>
       <unit bldFile="mw/remotemgmt/syncmlfw/common/historylog/bld"/>
       <unit bldFile="mw/remotemgmt/syncmlfw/common/http/bld"/>
-      <unit bldFile="mw/remotemgmt/syncmlfw/common/inc"/>
-      <unit bldFile="mw/remotemgmt/syncmlfw/common/inc/modifiedheaders"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/remotemgmt/syncmlfw/common/inc"/> -->
+<!--AUTO TRIMMED      <unit bldFile="mw/remotemgmt/syncmlfw/common/inc/modifiedheaders"/> -->
       <unit bldFile="mw/remotemgmt/syncmlfw/common/inc/policy"/>
-      <unit bldFile="mw/remotemgmt/syncmlfw/common/inc/symbianheaders"/>
-      <unit bldFile="mw/remotemgmt/syncmlfw/common/notifiers/inc"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/remotemgmt/syncmlfw/common/inc/symbianheaders"/> -->
+<!--AUTO TRIMMED      <unit bldFile="mw/remotemgmt/syncmlfw/common/notifiers/inc"/> -->
       <unit bldFile="mw/remotemgmt/syncmlfw/common/obex/obexclient/bld"/>
       <unit bldFile="mw/remotemgmt/syncmlfw/common/obex/obexcommserver/bld"/>
       <unit bldFile="mw/remotemgmt/syncmlfw/common/obex/obexdmplugin/bld"/>
@@ -4780,7 +4780,7 @@
       <unit bldFile="mw/remotemgmt/syncmlfw/ds/hostserver/dshostclient/bld"/>
       <unit bldFile="mw/remotemgmt/syncmlfw/ds/hostserver/dshostserverbase/bld"/>
       <unit bldFile="mw/remotemgmt/syncmlfw/ds/hostserver/dshostservers/bld"/>
-      <unit bldFile="mw/remotemgmt/syncmlfw/ds/inc"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/remotemgmt/syncmlfw/ds/inc"/> -->
       <unit bldFile="mw/remotemgmt/syncmlfw/ds/netmon/bld"/>
       <!-- <unit bldFile="mw/remotemgmt/syncmlfw/ds/ota/bld"/> -->
       <unit bldFile="mw/remotemgmt/syncmlfw/ds/provisioningadapter/bld"/>
@@ -4789,7 +4789,7 @@
       <unit bldFile="mw/remotemgmt/syncmlfw/ds/wappushalert/bld"/>
      </component>
      <component name="dm" long-name="DM" origin-model="foundation">
-      <unit bldFile="mw/remotemgmt/syncmlfw/dm/bld"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/remotemgmt/syncmlfw/dm/bld"/> -->
       <unit bldFile="mw/remotemgmt/syncmlfw/dm/callbackserver/bld"/>
       <unit bldFile="mw/remotemgmt/syncmlfw/dm/dmutils/bld"/>
       <unit bldFile="mw/remotemgmt/syncmlfw/dm/hostserver/dmhostserverbase/bld"/>
@@ -4938,7 +4938,7 @@
       <unit bldFile="mw/networkingdm/clientprovisioning/cpdestinationnwadapter/group"/>
      </component>
      <component unofficial="yes" name="clientprovisioning_build" long-name="Client Provisioning Build" origin-model="foundation">
-      <unit bldFile="mw/networkingdm/clientprovisioning/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/networkingdm/clientprovisioning/group"/> -->
      </component>
     </collection>
     <collection name="devicemanagement" long-name="Device Management" level="specific">
@@ -4955,12 +4955,12 @@
       <unit bldFile="mw/networkingdm/devicemanagement/nsmldmbmadapter/group"/>
      </component>
      <component unofficial="yes" name="devicemanagement_build" long-name="Device Management Build" origin-model="foundation">
-      <unit bldFile="mw/networkingdm/devicemanagement/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/networkingdm/devicemanagement/group"/> -->
      </component>
     </collection>
     <collection name="networkingdm_info" long-name="Networking Device Management Info" level="specific">
      <component unofficial="yes" name="networkingdm_build" long-name="Networking Device Management Build" origin-model="foundation">
-      <unit bldFile="mw/networkingdm/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/networkingdm/group"/> -->
      </component>
     </collection>
    </block>
@@ -5009,10 +5009,10 @@
     </collection>
     <collection name="remoteconn_info" long-name="Remote Connectivity Info" level="specific">
      <component unofficial="yes" name="remoteconn_build" long-name="Remote Connectivity Build" origin-model="foundation">
-      <unit bldFile="mw/remoteconn/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/remoteconn/group"/> -->
      </component>
      <component unofficial="yes" name="remoteconn_plat" long-name="Remote Connectivity Platform Interfaces" class="api" origin-model="foundation">
-      <unit bldFile="mw/remoteconn/remoteconn_plat/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/remoteconn/remoteconn_plat/group"/> -->
      </component>
     <component name="remoteconn_metadata" long-name="Remote Connectivity Metadata" introduced="tb91" purpose="development" class="config PC" plugin="N" origin-model="Symbian">
       <unit mrp="mw/remoteconn/remoteconn_info/remoteconn_metadata/remoteconn_metadata.mrp"/>
@@ -5289,7 +5289,7 @@
       <unit bldFile="mw/dlnasrv/dlnasrv_plat/group"/>
      </component>
      <component unofficial="yes" name="dlnasrv_build" long-name="DLNA Services Build" origin-model="foundation">
-      <unit bldFile="mw/dlnasrv/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/dlnasrv/group"/> -->
      </component>
     </collection>
    </block>
@@ -5329,7 +5329,7 @@
       <unit bldFile="mw/shortlinkconn/bluetoothengine/bthid/group"/>
      </component>
      <component unofficial="yes" name="bluetoothengine_build" long-name="Bluetooth Engine Build" origin-model="foundation">
-      <unit bldFile="mw/shortlinkconn/bluetoothengine/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/shortlinkconn/bluetoothengine/group"/> -->
      </component>
     </collection>
     <collection name="localconnectivityservice" long-name="Local Connectivity Service" level="server">
@@ -5358,7 +5358,7 @@
       <unit bldFile="mw/shortlinkconn/localconnectivityservice/generichid/group"/>
      </component>
      <component unofficial="yes" name="localconnectivityservice_build" long-name="Local Connectivity Service Build" origin-model="foundation">
-      <unit bldFile="mw/shortlinkconn/localconnectivityservice/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/shortlinkconn/localconnectivityservice/group"/> -->
      </component>
     </collection>
     <collection name="usbclasses" long-name="USB classes" level="framework">
@@ -5457,7 +5457,7 @@
       <!-- <unit bldFile="mw/imghandling/3gplibrary/3gpmp4lib/tsrc/public/basic/group"/> -->
      </component>
      <component unofficial="yes" name="3gplibrary_build" long-name="3GP Library Build" origin-model="foundation">
-      <unit bldFile="mw/imghandling/3gplibrary/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/imghandling/3gplibrary/group"/> -->
      </component>
     </collection>
     <collection name="imagehandlinglib" long-name="Image Handling Library" level="generic">
@@ -5511,7 +5511,7 @@
       <unit bldFile="mw/metadatasrv/metadatasrv_plat/group"/>
      </component>
      <component unofficial="yes" name="metadatasrv_build" long-name="Legacy Metadata Services Build" origin-model="foundation">
-      <unit bldFile="mw/metadatasrv/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/metadatasrv/group"/> -->
      </component>
      <component unofficial="yes" name="metadatasrv_pub" long-name="Legacy Metadata Services Public Interfaces" class="api" origin-model="foundation">
       <unit bldFile="mw/metadatasrv/metadatasrv_pub/group"/>
@@ -5657,7 +5657,7 @@
       <unit bldFile="mw/mmuifw/mulwidgets/alfscrollbarwidget/group"/>
      </component>
      <component unofficial="yes" name="mulwidgets_build" long-name="MUL Widgets Build" origin-model="foundation">
-      <unit bldFile="mw/mmuifw/mulwidgets/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/mmuifw/mulwidgets/group"/> -->
      </component>
     </collection>
     <collection name="osncore" long-name="OSN Core" level="util">
@@ -5703,7 +5703,7 @@
       <unit bldFile="mw/videoutils/dvrengine/commonrecordingengineclient/group"/>
      </component>
      <component unofficial="yes" name="dvrengine_build" long-name="DVR Engine Build" origin-model="foundation">
-      <unit bldFile="mw/videoutils/dvrengine/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/videoutils/dvrengine/group"/> -->
      </component>
     </collection>
     <collection name="videoconnutility" long-name="Video Conn Utility" level="util">
@@ -5722,7 +5722,7 @@
       <unit bldFile="mw/videoutils/videoscheduler/schedulerserver/group"/>
      </component>
      <component unofficial="yes" name="videoscheduler_build" long-name="Video Scheduler Build" origin-model="foundation">
-      <unit bldFile="mw/videoutils/videoscheduler/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/videoutils/videoscheduler/group"/> -->
      </component>
     </collection>
     <collection name="videoutils_info" long-name="Video Utils Info" level="util">
@@ -5766,7 +5766,7 @@
       <unit bldFile="mw/mmmw/audioeffectsui/equalizer/group"/>
      </component>
      <component unofficial="yes" name="audioeffectsui_build" long-name="Audio Effects UI Build" origin-model="foundation">
-      <unit bldFile="mw/mmmw/audioeffectsui/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/mmmw/audioeffectsui/group"/> -->
      </component>
     </collection>
     <collection name="audioenhancements" long-name="Audio Enhancements" level="generic">
@@ -5802,7 +5802,7 @@
       <unit bldFile="mw/mmmw/audioenhancements/callaudiocontrol/group"/>
      </component>
      <component unofficial="yes" name="audioenhancements_build" long-name="Audio Enhancements Build" origin-model="foundation">
-      <unit bldFile="mw/mmmw/audioenhancements/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/mmmw/audioenhancements/group"/> -->
      </component>
     </collection>
     <collection name="metadatautility" long-name="Metadata Utility" level="generic">
@@ -5841,7 +5841,7 @@
       <!-- <unit bldFile="mw/mmmw/advancedaudiocontroller/tsrc/advancedaudiocontrollertestmodule/group"/> -->
      </component>
      <component unofficial="yes" name="advancedaudiocontroller_build" long-name="Advanced Audio Controller Build" origin-model="foundation">
-      <unit bldFile="mw/mmmw/advancedaudiocontroller/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/mmmw/advancedaudiocontroller/group"/> -->
      </component>
     </collection>
     <collection name="thumbnailengine" long-name="Thumbnail Engine" level="server">
@@ -5855,7 +5855,7 @@
       <unit bldFile="mw/mmmw/mmfw/helix_stub/group"/>
      </component>
      <component unofficial="yes" name="mmfw_build" long-name="Multimedia Framework Build" origin-model="foundation">
-      <unit bldFile="mw/mmmw/mmfw/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/mmmw/mmfw/group"/> -->
      </component>
     </collection>
     <collection name="mmmiddlewarefws" long-name="Multimedia Middleware Frameworks" level="server">
@@ -5892,7 +5892,7 @@
     </collection>
     <collection name="mmmw_info" long-name="Multimedia Middleware Info" level="specific">
      <component unofficial="yes" name="mmmw_build" long-name="Multimedia Middleware Build" origin-model="foundation">
-      <unit bldFile="mw/mmmw/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/mmmw/group"/> -->
      </component>
      <component unofficial="yes" name="mmmw_test" long-name="Multimedia Middleware Test" origin-model="foundation">
       <!-- <unit bldFile="mw/mmmw/tsrc/group"/> -->
@@ -6090,7 +6090,7 @@
      </component>
      <component name="matsutake" long-name="Matsutake" origin-model="foundation"/>
      <component unofficial="yes" name="textinput_build" long-name="Text Input Build" origin-model="foundation">
-      <unit bldFile="mw/inputmethods/textinput/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/inputmethods/textinput/group"/> -->
      </component>
      <component unofficial="yes" name="gslangplugin" origin-model="foundation">
       <unit bldFile="mw/inputmethods/textinput/gslangplugin"/>
@@ -6123,7 +6123,7 @@
       <!-- <unit bldFile="mw/inputmethods/inputmethods_plat/ptiengine_key_definations_api/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="inputmethods_build" long-name="Input Methods Build" origin-model="foundation">
-      <unit bldFile="mw/inputmethods/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/inputmethods/group"/> -->
      </component>
      <component unofficial="yes" name="inputmethods_pub" long-name="Input Methods Public Interfaces" class="api" origin-model="foundation">
       <unit bldFile="mw/inputmethods/inputmethods_pub/group"/>
@@ -6250,7 +6250,7 @@
     </collection>
     <collection name="classicui_info" long-name="Classic UI Info" level="specific">
      <component unofficial="yes" name="classicui_build" long-name="Classic UI Build" origin-model="foundation">
-      <unit bldFile="mw/classicui/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/classicui/group"/> -->
      </component>
      <component unofficial="yes" name="classicui_pub" long-name="Classic UI Public Interfaces" class="api" origin-model="foundation">
       <unit bldFile="mw/classicui/classicui_pub/aiw_criteria_api/tsrc/group"/>
@@ -6565,7 +6565,7 @@
       <unit bldFile="mw/uiresources/uiresources_plat/skins_image_attributes_api/tsrc/group"/>
      </component>
      <component unofficial="yes" name="uiresources_build" long-name="UI Resources Build" origin-model="foundation">
-      <unit bldFile="mw/uiresources/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/uiresources/group"/> -->
      </component>
      <component unofficial="yes" name="uiresources_pub" long-name="UI Resources Public Interfaces" class="api" origin-model="foundation">
       <unit bldFile="mw/uiresources/uiresources_pub/font_definition_api/tsrc/group"/>
@@ -6693,7 +6693,7 @@
       <unit bldFile="mw/appinstall/appinstaller/appinstui/group"/>
      </component>
      <component unofficial="yes" name="appinstaller_build" long-name="App Installer Build" origin-model="foundation">
-      <unit bldFile="mw/appinstall/appinstaller/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/appinstall/appinstaller/group"/> -->
      </component>
     </collection>
     <collection name="ncdengine" long-name="NCD Engine" level="framework">
@@ -6795,7 +6795,7 @@
     </collection>
     <collection name="serviceapifw_info" long-name="Service API Framework Info" level="specific">
      <component unofficial="yes" name="serviceapifw_pub" long-name="Service API Framework Public Interfaces" class="api" origin-model="foundation">
-      <unit bldFile="mw/serviceapifw/serviceapifw_pub/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/serviceapifw/serviceapifw_pub/group"/> -->
      </component>
      <component unofficial="yes" name="serviceapifw_plat" long-name="Service API Framework Platform Interfaces" class="api" origin-model="foundation">
       <unit bldFile="mw/serviceapifw/serviceapifw_plat/group"/>
@@ -6805,7 +6805,7 @@
       <!-- <unit bldFile="mw/serviceapifw/serviceapifw_plat/rtsecuritymanager_utility_api/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="serviceapifw_build" long-name="Service API Framework Build" origin-model="foundation">
-      <unit bldFile="mw/serviceapifw/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/serviceapifw/group"/> -->
      </component>
     </collection>
    </block>
@@ -6960,7 +6960,7 @@
       <unit bldFile="mw/web/browserutilities/aiwbrowserprovider/group"/>
      </component>
      <component unofficial="yes" name="browserutilities_build" long-name="Browser Utilities Build" origin-model="foundation">
-      <unit bldFile="mw/web/browserutilities/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/web/browserutilities/group"/> -->
      </component>
     </collection>
     <collection name="webengine" long-name="Web Engine" level="server">
@@ -7012,7 +7012,7 @@
       <unit bldFile="mw/web/webengine/wrtharvester/group"/>
      </component>
      <component unofficial="yes" name="webengine_build" long-name="Web Engine Build" origin-model="foundation">
-      <unit bldFile="mw/web/webengine/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/web/webengine/group"/> -->
      </component>
     </collection>
     <collection name="widgets" long-name="Widgets" level="generic">
@@ -7075,7 +7075,7 @@
       <unit bldFile="mw/web/web_pub/group"/>
      </component>
      <component unofficial="yes" name="web_build" long-name="Web Build" origin-model="foundation">
-      <unit bldFile="mw/web/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/web/group"/> -->
      </component>
      <component unofficial="yes" name="web_plat" long-name="Web Platform Interfaces" class="api" origin-model="foundation">
       <unit bldFile="mw/web/web_plat/group"/>
@@ -7168,7 +7168,7 @@
     </collection>
     <collection name="websrv_info" long-name="Web Services Info" level="specific">
      <component unofficial="yes" name="websrv_build" long-name="Web Services Build" origin-model="foundation">
-      <unit bldFile="mw/websrv/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/websrv/group"/> -->
      </component>
      <component unofficial="yes" name="websrv_pub" long-name="Web Services Public Interfaces" class="api" origin-model="foundation">
       <unit bldFile="mw/websrv/websrv_pub/group"/>
@@ -7279,7 +7279,7 @@
       <unit bldFile="app/location/basiclocationinfodisplay/blid/group"/>
      </component>
      <component unofficial="yes" name="basiclocationinfodisplay_build" long-name="Basic Location Info Display Build" origin-model="foundation">
-      <unit bldFile="app/location/basiclocationinfodisplay/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/location/basiclocationinfodisplay/group"/> -->
      </component>
     </collection>
     <collection name="eventsui" long-name="Events UI" level="ui">
@@ -7404,7 +7404,7 @@
       <!-- <unit bldFile="app/mmsharinguis/mmshplugins/mmcctranscoder/tsrc/ut_transcoder/group"/> -->
      </component>
      <component unofficial="yes" name="mmshplugins_build" long-name="MM Sharing Plugins Build" origin-model="foundation">
-      <unit bldFile="app/mmsharinguis/mmshplugins/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/mmsharinguis/mmshplugins/group"/> -->
      </component>
     </collection>
     <collection name="mmsharinguis_info" long-name="Multimedia Sharing UIs Info" level="plugin">
@@ -7533,7 +7533,7 @@
     </collection>
     <collection name="phone_info" long-name="Phone Apps Info" level="apps">
      <component unofficial="yes" name="phone_build" long-name="Phone Apps Build" origin-model="foundation">
-      <unit bldFile="app/phone/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/phone/group"/> -->
      </component>
      <component unofficial="yes" name="phone_plat" long-name="Phone Apps Platform Interfaces" class="api" origin-model="foundation">
       <unit bldFile="app/phone/phone_plat/group"/>
@@ -7554,7 +7554,7 @@
       <unit bldFile="app/videotelephony/vtengines/vtmediatorplugin/group"/>
      </component>
      <component unofficial="yes" name="vtengines_build" long-name="Video Telephony Engines Build" origin-model="foundation">
-      <unit bldFile="app/videotelephony/vtengines/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/videotelephony/vtengines/group"/> -->
      </component>
     </collection>
     <collection name="vtuis" long-name="Video Telephony UIs" level="ui">
@@ -7562,7 +7562,7 @@
       <unit bldFile="app/videotelephony/vtuis/videotelui/group"/>
      </component>
      <component unofficial="yes" name="vtuis_build" long-name="Video Telephony UIs Build" origin-model="foundation">
-      <unit bldFile="app/videotelephony/vtuis/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/videotelephony/vtuis/group"/> -->
      </component>
     </collection>
     <collection name="vtprotocolplugins" long-name="Video Telephony Protocol Plugins" level="plugin">
@@ -7573,7 +7573,7 @@
       <unit bldFile="app/videotelephony/vtprotocolplugins/videosource/group"/>
      </component>
      <component unofficial="yes" name="vtprotocolplugins_build" long-name="Video Telephony Protocol Plugins Build" origin-model="foundation">
-      <unit bldFile="app/videotelephony/vtprotocolplugins/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/videotelephony/vtprotocolplugins/group"/> -->
      </component>
     </collection>
     <collection name="vtprotocols" long-name="Video Telephony Protocols" level="prot">
@@ -7704,7 +7704,7 @@
       <unit bldFile="app/iptelephony/voipplugins/svtcallmenu/group"/>
      </component>
      <component unofficial="yes" name="voipplugins_build" long-name="VoIP Plugins Build" origin-model="foundation">
-      <unit bldFile="app/iptelephony/voipplugins/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/iptelephony/voipplugins/group"/> -->
      </component>
     </collection>
     <collection name="callcontinuity" long-name="Call Continuity" level="eng">
@@ -7735,7 +7735,7 @@
     </collection>
     <collection name="iptelephony_info" long-name="IP Telephony Info" level="ui">
      <component unofficial="yes" name="iptelephony_build" long-name="IP Telephony Build" origin-model="foundation">
-      <unit bldFile="app/iptelephony/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/iptelephony/group"/> -->
      </component>
      <component unofficial="yes" name="iptel_plat" class="api" origin-model="foundation">
       <unit bldFile="app/iptelephony/iptel_plat/group"/>
@@ -7767,10 +7767,10 @@
     </collection>
     <collection name="settingsuis_info" long-name="Settings UIs Info" level="ui">
      <component unofficial="yes" name="devmngt_pub" class="api" origin-model="foundation">
-      <unit bldFile="app/settingsuis/devmngt_pub/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/settingsuis/devmngt_pub/group"/> -->
      </component>
      <component unofficial="yes" name="settingsuis_build" long-name="Settings UIs Build" origin-model="foundation">
-      <unit bldFile="app/settingsuis/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/settingsuis/group"/> -->
      </component>
      <component unofficial="yes" name="settingsuis_test" long-name="Settings UIs Test" origin-model="foundation">
       <!-- <unit bldFile="app/settingsuis/tsrc/group"/> -->
@@ -7840,7 +7840,7 @@
     </collection>
     <collection name="contentcontrol_info" long-name="Content Control Daemons Info" level="2">
      <component unofficial="yes" name="contentcontrol_build" long-name="Content Control Daemons Build" origin-model="foundation">
-      <unit bldFile="app/contentcontrol/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/contentcontrol/group"/> -->
      </component>
      <component unofficial="yes" name="contentctrl_plat" class="api" origin-model="foundation">
       <unit bldFile="app/contentcontrol/contentctrl_plat/group"/>
@@ -7874,7 +7874,7 @@
       <unit bldFile="mw/remotemgmt/fotaapplication/fotaserver/group"/>
      </component>
      <component unofficial="yes" name="fotaapp" origin-model="foundation">
-      <unit bldFile="mw/remotemgmt/fotaapplication/group"/>
+<!--AUTO TRIMMED      <unit bldFile="mw/remotemgmt/fotaapplication/group"/> -->
      </component>
     </collection>
     <collection name="omadm" long-name="OMA Device Management" level="oma">
@@ -7904,7 +7904,7 @@
     </collection>
     <collection name="devicecontrol_info" long-name="Device Control Daemons Info" level="app">
      <component unofficial="yes" name="devicecontrol_build" long-name="Device Control Daemons Build" origin-model="foundation">
-      <unit bldFile="app/devicecontrol/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/devicecontrol/group"/> -->
      </component>
      <component unofficial="yes" name="customization_test" origin-model="foundation">
       <!-- <unit bldFile="app/devicecontrol/customization/tsrc/tarmcustomization/group"/> -->
@@ -7926,7 +7926,7 @@
       <unit bldFile="app/conntools/nettools/conntest/group"/>
      </component>
      <component unofficial="yes" name="nettools_build" long-name="Net Tools Build" origin-model="foundation">
-      <unit bldFile="app/conntools/nettools/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/conntools/nettools/group"/> -->
      </component>
     </collection>
     <collection name="emulatorlan" long-name="Emulator Lan" level="1">
@@ -7936,7 +7936,7 @@
     </collection>
     <collection name="conntools_info" long-name="Conn Tools Info" level="2">
      <component unofficial="yes" name="conntools_build" long-name="Conn Tools Build" origin-model="foundation">
-      <unit bldFile="app/conntools/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/conntools/group"/> -->
      </component>
     </collection>
    </block>
@@ -7992,7 +7992,7 @@
       <unit bldFile="app/files/files_plat/group"/>
      </component>
      <component unofficial="yes" name="files_build" long-name="File Manager Apps Build" origin-model="foundation">
-      <unit bldFile="app/files/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/files/group"/> -->
      </component>
     </collection>
    </block>
@@ -8002,7 +8002,7 @@
       <unit bldFile="app/contacts/contactextensions/predefinedcontacts/group"/>
      </component>
      <component unofficial="yes" name="contactextensions_build" long-name="Contact Extensions Build" origin-model="foundation">
-      <unit bldFile="app/contacts/contactextensions/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/contacts/contactextensions/group"/> -->
      </component>
     </collection>
     <collection name="logsui" long-name="Logs UI" level="ui">
@@ -8060,7 +8060,7 @@
        -  <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/teststartup/group"/>  -
      </component>-->
      <component unofficial="yes" name="phonebookengines_build" long-name="Phonebook Engines Build" origin-model="foundation">
-      <unit bldFile="app/contacts/phonebookengines/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/contacts/phonebookengines/group"/> -->
      </component>
     <component name="contactsmodel" long-name="Contacts Model" introduced="ER5" purpose="optional" plugin="N" origin-model="Symbian">
       <unit bldFile="app/contacts/phonebookengines/contactsmodel/group" mrp="app/contacts/phonebookengines/contactsmodel/group/app-engines_cntmodel.mrp" version="1"/>
@@ -8173,7 +8173,7 @@
       <unit bldFile="app/organizer/calendarui/settings/settingsui/group"/>
      </component>
      <component name="customisation" long-name="Customisation" origin-model="foundation">
-      <unit bldFile="app/organizer/calendarui/customisation/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/organizer/calendarui/customisation/group"/> -->
      </component>
      <component name="customisationmanager" long-name="Customisation Manager" origin-model="foundation">
       <unit bldFile="app/organizer/calendarui/customisationmanager/group"/>
@@ -8225,7 +8225,7 @@
     </collection>
     <collection name="meetingui" long-name="Meeting UI" level="ui">
      <component name="attendeeview" long-name="Attendee View" origin-model="foundation">
-      <unit bldFile="app/organizer/meetingui/attendeeview/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/organizer/meetingui/attendeeview/group"/> -->
      </component>
      <component name="agnentryui" long-name="Agn Entry UI" origin-model="foundation">
       <unit bldFile="app/organizer/meetingui/agnentryui/group"/>
@@ -8265,7 +8265,7 @@
       <!-- <unit bldFile="app/organizer/searchui/searchapp/plugins/srchuisettingsplugin/group"/> -->
      </component>
      <component unofficial="yes" name="searchui_build" long-name="Search UI Build" origin-model="foundation">
-      <unit bldFile="app/organizer/searchui/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/organizer/searchui/group"/> -->
      </component>
     </collection>
     <collection name="calendarengines" long-name="Calendar Engines" level="engine">
@@ -8285,7 +8285,7 @@
       <unit bldFile="app/organizer/calendarengines/calenlauncher/group"/>
      </component>
      <component unofficial="yes" name="calendarengines_build" long-name="Calendar Engines Build" origin-model="foundation">
-      <unit bldFile="app/organizer/calendarengines/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/organizer/calendarengines/group"/> -->
      </component>
     </collection>
     <collection name="meetingrequestengines" long-name="Meeting Request Engines" level="engine">
@@ -8301,7 +8301,7 @@
       <unit bldFile="app/organizer/alarmengines/missedalarmstore/group"/>
      </component>
      <component unofficial="yes" name="alarmengines_build" long-name="Alarm Engines Build" origin-model="foundation">
-      <unit bldFile="app/organizer/alarmengines/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/organizer/alarmengines/group"/> -->
      </component>
     </collection>
     <collection name="searchfw" long-name="Search Framework" level="services">
@@ -8362,7 +8362,7 @@
       <!-- <unit bldFile="app/organizer/organizer_pub/notepad_library_api/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="organizer_build" long-name="Organizer Application Suite Build" origin-model="foundation">
-      <unit bldFile="app/organizer/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/organizer/group"/> -->
      </component>
      <component unofficial="yes" name="organizer_plat" long-name="Organizer Application Suite Platform Interfaces" class="api" origin-model="foundation">
       <!-- <unit bldFile="app/organizer/organizer_plat/agenda_versit_2_api/tsrc/group"/> -->
@@ -8606,7 +8606,7 @@
       <unit bldFile="app/messaging/msg_pub/plugin_bio_control_api/tsrc/group"/>
      </component>
      <component unofficial="yes" name="messaging_build" long-name="Messaging Apps Build" origin-model="foundation">
-      <unit bldFile="app/messaging/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/messaging/group"/> -->
      </component>
     <component name="messaging_metadata" long-name="Messaging Apps Metadata" introduced="tb91" purpose="development" class="config PC" plugin="N" origin-model="Symbian">
       <unit mrp="app/messaging/messaging_info/messaging_metadata/messaging_metadata.mrp"/>
@@ -8631,7 +8631,7 @@
       <unit bldFile="app/commonemail/emailservices/emaildebug/group"/>
      </component>
      <component unofficial="yes" name="emailservices_build" long-name="Email Services Build" origin-model="foundation">
-      <unit bldFile="app/commonemail/emailservices/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/commonemail/emailservices/group"/> -->
      </component>
     </collection>
     <collection name="ipsservices" long-name="IPS Services" level="service">
@@ -8659,7 +8659,7 @@
       <unit bldFile="app/commonemail/emailcontacts/remotecontactlookup/group"/>
      </component>
      <component unofficial="yes" name="emailcontacts_build" long-name="Email Contacts Build" origin-model="foundation">
-      <unit bldFile="app/commonemail/emailcontacts/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/commonemail/emailcontacts/group"/> -->
      </component>
     </collection>
     <collection name="meetingrequest" long-name="Meeting Request" level="ui">
@@ -8729,7 +8729,7 @@
       <unit bldFile="app/commonemail/emailuis/widget/group"/>
      </component>
      <component unofficial="yes" name="emailuis_build" long-name="Email UIs Build" origin-model="foundation">
-      <unit bldFile="app/commonemail/emailuis/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/commonemail/emailuis/group"/> -->
      </component>
     </collection>
     <collection name="emailhelp" long-name="Email Help" level="support">
@@ -8751,7 +8751,7 @@
       <unit bldFile="app/commonemail/email_plat/group"/>
      </component>
      <component unofficial="yes" name="commonemail_build" long-name="Email Apps Build" origin-model="foundation">
-      <unit bldFile="app/commonemail/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/commonemail/group"/> -->
      </component>
     </collection>
    </block>
@@ -9018,7 +9018,7 @@
     </collection>
     <collection name="utils_info" long-name="Utility Apps Info" level="app">
      <component unofficial="yes" name="utils_build" long-name="Utility Apps Build" origin-model="foundation">
-      <unit bldFile="app/utils/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/utils/group"/> -->
      </component>
     </collection>
    </block>
@@ -9048,7 +9048,7 @@
     </collection>
     <collection name="camera_info" long-name="Camera Apps Info" level="1">
      <component unofficial="yes" name="camera_build" long-name="Camera Apps Build" origin-model="foundation">
-      <unit bldFile="app/camera/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/camera/group"/> -->
      </component>
      <component unofficial="yes" name="camera_plat" long-name="Camera Apps Platform Interfaces" class="api" origin-model="foundation">
       <!-- <unit bldFile="app/camera/camera_plat/active_palette_2_api/tsrc/group"/> -->
@@ -9147,7 +9147,7 @@
       <unit bldFile="app/imgeditor/imgeditor_plat/group"/>
      </component>
      <component unofficial="yes" name="imgeditor_build" long-name="Image Editor Apps Build" origin-model="foundation">
-      <unit bldFile="app/imgeditor/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/imgeditor/group"/> -->
      </component>
     </collection>
    </block>
@@ -9206,7 +9206,7 @@
       <unit bldFile="app/videoeditor/videoeditor_plat/group"/>
      </component>
      <component unofficial="yes" name="videoeditor_build" long-name="Video Editor Apps Build" origin-model="foundation">
-      <unit bldFile="app/videoeditor/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/videoeditor/group"/> -->
      </component>
     </collection>
    </block>
@@ -9218,7 +9218,7 @@
     </collection>
     <collection name="gallery_info" long-name="Gallery Apps Info" level="app">
      <component unofficial="yes" name="gallery_build" long-name="Gallery Apps Build" origin-model="foundation">
-      <unit bldFile="app/gallery/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/gallery/group"/> -->
      </component>
      <component unofficial="yes" name="gallery_plat" long-name="Gallery Apps Platform Interfaces" class="api" origin-model="foundation">
       <unit bldFile="app/gallery/gallery_plat/group"/>
@@ -9315,7 +9315,7 @@
        <unit bldFile="app/photos/photosgallery/memoryplugin/group"/>
      </component>-->
      <component unofficial="yes" name="photosicons" origin-model="foundation">
-      <unit bldFile="app/photos/photosgallery/icons"/>
+<!--AUTO TRIMMED      <unit bldFile="app/photos/photosgallery/icons"/> -->
      </component>
      <component unofficial="yes" name="photosgallery_build" long-name="Photos Gallery Build" origin-model="foundation">
       <unit bldFile="app/photos/photosgallery/group"/>
@@ -9329,7 +9329,7 @@
       <unit bldFile="app/photos/photos_plat/group"/>
      </component>
      <component unofficial="yes" name="photos_build" long-name="Photos Build" origin-model="foundation">
-      <unit bldFile="app/photos/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/photos/group"/> -->
      </component>
     </collection>
    </block>
@@ -9561,7 +9561,7 @@
       <!-- <unit bldFile="app/musicplayer/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="musicplayer_build" long-name="Music Player Apps Build" origin-model="foundation">
-      <unit bldFile="app/musicplayer/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/musicplayer/group"/> -->
      </component>
     </collection>
    </block>
@@ -9602,7 +9602,7 @@
     </collection>
     <collection name="voicerec_info" long-name="Voice Recorder Apps Info" level="1">
      <component unofficial="yes" name="voicerec_build" long-name="Voice Recorder Apps Build" origin-model="foundation">
-      <unit bldFile="app/voicerec/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/voicerec/group"/> -->
      </component>
      <component unofficial="yes" name="voicerec_test" long-name="Voice Recorder Apps Test" origin-model="foundation">
       <!-- <unit bldFile="app/voicerec/tsrc/group"/> -->
@@ -9624,7 +9624,7 @@
     </collection>
     <collection name="imgvieweruis_info" long-name="Image Viewer UIs Info" level="app">
      <component unofficial="yes" name="imgvieweruis_build" long-name="Image Viewer UIs Build" origin-model="foundation">
-      <unit bldFile="app/imgvieweruis/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/imgvieweruis/group"/> -->
      </component>
     </collection>
    </block>
@@ -9701,7 +9701,7 @@
     </collection>
     <collection name="graphicsuis_info" long-name="Graphics UIs Info" level="ui">
      <component unofficial="yes" name="graphicsuis_build" long-name="Graphics UIs Build" origin-model="foundation">
-      <unit bldFile="app/graphicsuis/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/graphicsuis/group"/> -->
      </component>
      <component unofficial="yes" name="graphicsuis_plat" long-name="Graphics UIs Platform Interfaces" class="api" origin-model="foundation">
       <unit bldFile="app/graphicsuis/graphicsuis_plat/group"/>
@@ -9730,7 +9730,7 @@
       <unit bldFile="app/profile/help/group"/>
      </component>
      <component unofficial="yes" name="profile_build" long-name="Profile Build" origin-model="foundation">
-      <unit bldFile="app/profile/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/profile/group"/> -->
      </component>
     </collection>
    </block>
@@ -9830,7 +9830,7 @@
       <!-- <unit bldFile="app/speechsrv/tsrc/group"/> -->
      </component>
      <component unofficial="yes" name="speechsrv_build" long-name="Speech Recognition UIs Build" origin-model="foundation">
-      <unit bldFile="app/speechsrv/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/speechsrv/group"/> -->
      </component>
      <component unofficial="yes" name="speechsrv_plat" long-name="Speech Recognition UIs Platform Interfaces" class="api" origin-model="foundation">
       <unit bldFile="app/speechsrv/speechsrv_plat/group"/>
@@ -9851,7 +9851,7 @@
       <unit bldFile="app/webuis/browserui/videoservices/group"/>
      </component>
      <component unofficial="yes" name="browserui_build" long-name="Browser UI Build" origin-model="foundation">
-      <unit bldFile="app/webuis/browserui/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/webuis/browserui/group"/> -->
      </component>
     </collection>
     <collection name="browserplugins" long-name="Browser Plugins" level="plugin">
@@ -9865,7 +9865,7 @@
       <unit bldFile="app/webuis/browserplugins/browseraudiovideoplugin/group"/>
      </component>
      <component unofficial="yes" name="browserplugins_build" long-name="Browser Plugins Build" origin-model="foundation">
-      <unit bldFile="app/webuis/browserplugins/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/webuis/browserplugins/group"/> -->
      </component>
     </collection>
     <collection name="pushmtm" long-name="Push MTM" level="plugin">
@@ -9881,7 +9881,7 @@
     </collection>
     <collection name="webuis_info" long-name="Web UIs Info" level="app">
      <component unofficial="yes" name="webuis_build" long-name="Web UIs Build" origin-model="foundation">
-      <unit bldFile="app/webuis/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/webuis/group"/> -->
      </component>
     </collection>
    </block>
@@ -9951,7 +9951,7 @@
     </collection>
     <collection name="java_info" long-name="Java Info" level="rt">
      <component unofficial="yes" name="java_build" long-name="Java Build" origin-model="foundation">
-      <unit bldFile="app/java/group"/>
+<!--AUTO TRIMMED      <unit bldFile="app/java/group"/> -->
      </component>
      <component unofficial="yes" name="java_plat" long-name="Java Platform Interfaces" class="api" origin-model="foundation">
       <unit bldFile="app/java/java_plat/group"/>
