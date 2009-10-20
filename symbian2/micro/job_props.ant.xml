@@ -74,7 +74,6 @@
 
     <!-- These are certainly specific to the micro build -->
     <property name="sf.spec.job.name" value="micro"/>
-    <property name="sf.spec.publish.enable"      value="false"/>
     <property name="sf.suppress.buildenv.check"  value="true"/>
     <property name="sf.suppress.drive.space.check" value="true"/>
     <property name="sf.spec.sourcesync.archive"  value="true"/>
