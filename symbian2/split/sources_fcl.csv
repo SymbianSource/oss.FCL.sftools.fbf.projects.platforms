@@ -13,7 +13,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/tools/makefile_templates/,/sf/tools/makefile_templates,branch,RCL_1,
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/ostools/osrndtools/,/sf/ostools/osrndtools,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/adaptation/stubs/,/sf/adaptation/stubs,branch,RCL_1,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/oss/MCL/sf/adaptation/qemu/,/sf/adaptation/QEMU,branch,default,
+//v800008/Builds01/mercurial_master_prod/oss/MCL/sf/adaptation/qemu/,/sf/adaptation/qemu,branch,default,
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/boardsupport/,/sf/os/boardsupport,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/FCL/sf/os/ossrv/,/sf/os/ossrv,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/os/security/,/sf/os/security,branch,RCL_1,layers.sysdef.xml
