@@ -5,7 +5,7 @@
     <dirname property="sf.spec.job.dir" file="${ant.file.SF-JOB-PROPS}"/>
     <property name="sf.project.type" value="platform" />
     
-    <property name="sf.previous.pdk.tag" value="PDK_3.0.a" />
+    <property name="sf.previous.pdk.tag" value="PDK_3.0.b" />
 
     <property name="sf.spec.job.name" value="symbian3"/>
     <property name="sf.spec.corebuildversion" value="week37"/>
@@ -32,8 +32,7 @@
     <property name="sf.spec.baseline.getenv_options" value="-I tools -k"/> <!-- Sync the tools... -->
     <property name="sf.spec.baseline.clean"          value="false"/>
     <property name="sf.spec.baseline.select"         value="location" />
-    <property name="sf.spec.baseline.location"       value="\\v800008\Builds01\Releases\PDK_3.0.a_candidate_Public_PDK.26_FCL.129" />
-    
+    <property name="sf.spec.baseline.location"       value="\\v800008\Builds01\Releases\${sf.previous.pdk.tag}" />
     <property name="sf.spec.toolsbaseline.getenv_options" value="-i emu -k"/>
     <property name="sf.spec.toolsbaseline.select"         value="location" />
     <property name="sf.spec.toolsbaseline.location"       value="\\v800008\Builds01\PDT\PDT_1.1_patched" /> <!-- for TEF etc -->
