@@ -5,17 +5,18 @@
     <dirname property="sf.spec.job.dir" file="${ant.file.SF-JOB-PROPS}"/>
     <property name="sf.project.type" value="platform" />
 
-    <property name="sf.previous.pdk.tag" value="PDK_2.0.e" />
+    <property name="sf.previous.pdk.tag" value="PDK_3.0.b" />
 
-    <property name="sf.spec.corebuildversion" value="week19"/>
+    <property name="sf.spec.corebuildversion" value="week37"/>
     
     <property name="sf.spec.sbs.variant" value="tb92sf"/>
     <property name="sf.spec.sbs.config"  value="winscw_udeb.whatlog"/>
     <property name="sf.spec.sbs.tools.config" value="tools2_rel.whatlog"/>
     
-    <property name="sf.os.compile.iterate"  value="true"/> <!-- New property for iterating though sf.spec.sbs.config instead of all at once -->
 
     <property name="sf.spec.bldmefirst.gt.variant" value="sf/os/deviceplatformrelease/symbianosbld/cedarutils/Symbian_OS_v${sf.spec.sbs.variant}.cfg" />
+    <!-- Location of Symbian_OS.hrh changed for Symbian3 to an inc directory -->
+    <property name="sf.spec.bldmefirst.gt.hrh.os" value="sf/os/deviceplatformrelease/symbianosbld/cedarutils/inc/Symbian_OS_${sf.spec.sbs.variant}.hrh" />
     <property name="sf.spec.bldmefirst.gt.hrh" value="sf/os/deviceplatformrelease/symbianosbld/cedarutils/" />
 
     <property name="sf.spec.bldmefirst.s60.variant" value="western" /> <!-- western|apac|japan but only western is used at the moment -->
@@ -28,14 +29,14 @@
     <!-- and set sf.spec.baseline.enable to 'true'                                                          -->        
 
     <!-- get full source env and binaries from pdk -->
-    <property name="sf.spec.baseline.getenv_options" value="-I tools"/> <!-- Sync the tools... -->
+    <property name="sf.spec.baseline.getenv_options" value="-I tools -k"/> <!-- Sync the tools... -->
     <property name="sf.spec.baseline.clean"          value="false"/>
     <property name="sf.spec.baseline.select"         value="location" />
-    <property name="sf.spec.baseline.location"       value="\\v800008\Builds01\Releases\PDK_2.0.e\" />
+    <property name="sf.spec.baseline.location"       value="\\v800008\Builds01\Releases\${sf.previous.pdk.tag}" />
     
-    <property name="sf.spec.toolsbaseline.getenv_options" value="-i emu"/>
+    <property name="sf.spec.toolsbaseline.getenv_options" value="-i emu -k"/>
     <property name="sf.spec.toolsbaseline.select"         value="location" />
-    <property name="sf.spec.toolsbaseline.location"       value="\\v800008\Builds01\PDT\PDT_b50" /> <!-- for TEF etc -->
+    <property name="sf.spec.toolsbaseline.location"       value="\\v800008\Builds01\PDT\PDT_1.2" /> <!-- for TEF etc -->
     
     <!-- platform build specific properties -->
     <property name="sf.spec.s60.sysdef.clean.configurations.list"  value="S60_5_2_sf" />
@@ -51,7 +52,7 @@
     
     <!-- build os and s60 by default -->
     <property name="sf.spec.os.skipbuild"   value="false"/>
-    <property name="sf.spec.s60.skipbuild"  value="false "/>
+    <property name="sf.spec.s60.skipbuild"  value="false"/>
     <property name="sf.spec.splitbuild"     value="true"/> <!-- *this* platform build defines two steps -->
 
     <!-- generate dir list(s) of epoc32 tree -->
