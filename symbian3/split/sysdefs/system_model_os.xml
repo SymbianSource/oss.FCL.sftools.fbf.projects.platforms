@@ -509,6 +509,15 @@
 <unit bldFile="os\devicesrv\accessoryservices\remotecontrolfw\group" mrp="os\devicesrv\accessoryservices\remotecontrolfw\group\bluetooth_remotecontrol.mrp"/>
 </component>
 </collection>
+<!-- MattD 20091030 - hacked in from package definition. Presume these should be in the GT model... -->
+    <collection name="commonservices" long-name="Common Services" level="app-if">
+      <component name="sysutil" long-name="System Utilities" purpose="mandatory" introduced="ER5">
+        <unit bldFile="os\devicesrv\commonservices\sysutil\group" mrp="os\devicesrv\commonservices\sysutil\group\sysutil.mrp"/>
+      </component>
+          <component name="activitymanager" long-name="Activity Manager" purpose="mandatory" introduced="ER5">
+        <unit bldFile="os\devicesrv\commonservices\activitymanager\group" mrp="commonservices\activitymanager\group\activitymanager.mrp"/>
+      </component>  
+    </collection>
 <collection name="resourcemgmt" long-name="Resource Management" level="hw-if">
 <component name="hwresourcesmgr" long-name="Hardware Resources Manager" introduced="tb91" purpose="optional">
 <unit bldFile="os\devicesrv\resourcemgmt\hwresourcesmgr\group" mrp="os\devicesrv\resourcemgmt\hwresourcesmgr\group\telephony_hwrm.mrp"/>
@@ -691,11 +700,8 @@
 </collection>
 <collection name="commsfwutils" long-name="Comms Framework Utilities" level="framework">
 <component name="commsbufs" long-name="Comms Buffers" introduced="tb92" purpose="mandatory">
-<unit bldFile="os\unref\orphan\comgen\comms-infras\commsbufs\group" mrp="os\unref\orphan\comgen\comms-infras\commsbufs\group\comms-infras_commsbufs.mrp"/>
-<!-- PLACEHOLDER DS.1656 REMOVE -->
-<!-- PLACEHOLDER="DS.1656"
-	 <unit bldFile="commsfwutils/commsbufs/group" mrp="commsfwutils/commsbufs/group/comms-infras_commsbufs.mrp"/>
-	 -->
+<!-- <unit bldFile="os\unref\orphan\comgen\comms-infras\commsbufs\group" mrp="os\unref\orphan\comgen\comms-infras\commsbufs\group\comms-infras_commsbufs.mrp"/> -->
+	 <unit bldFile="os\commsfw\commsfwutils\commsbufs\group" mrp="os\commsfw\commsfwutils\commsbufs\group\comms-infras_commsbufs.mrp"/>
 </component>
 </collection>
 <collection name="commsfw_info" long-name="Comms Framework Info" level="app-if">
