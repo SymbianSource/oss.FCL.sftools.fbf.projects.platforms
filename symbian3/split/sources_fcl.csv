@@ -75,7 +75,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/networkingdm/,/sf/mw/networkingdm,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/opensrv/,/sf/mw/opensrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/phonesrv/,/sf/mw/phonesrv,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/remoteconn/,/sf/mw/remoteconn,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/mw/remoteconn/,/sf/mw/remoteconn,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/remotemgmt/,/sf/mw/remotemgmt,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/remotestorage/,/sf/mw/remotestorage,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/securitysrv/,/sf/mw/securitysrv,branch,default,layers.sysdef.xml
