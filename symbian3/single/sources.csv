@@ -2,6 +2,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_development/oss/MCL/utilities/,/utilities,branch,default,
 //v800008/Builds01/mercurial_development/rnd/internal/epoc_additional/,/rnd/internal/epoc_additional,branch,default,
 //v800008/Builds01/mercurial_internal/rnd/rndonly/monotype/,/rnd/rndonly/monotype,branch,default,
+//v800008/Builds01/mercurial_internal/rnd/rndonly/realnetworks/,/rnd/rndonly/realnetworks,branch,default,
 //v800008/Builds01/mercurial_internal/rnd/rndonly/samsung/,/rnd/rndonly/samsung,branch,default,
 //v800008/Builds01/mercurial_internal/rnd/redist/objective_systems/,/rnd/redist/objective_systems,branch,default,
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/adaptation/stubs/,/sf/adaptation/stubs,branch,default,layers.sysdef.xml
