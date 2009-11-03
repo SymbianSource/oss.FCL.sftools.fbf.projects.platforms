@@ -823,7 +823,7 @@
 <component name="privacyprotocolmodule" long-name="Privacy Protocol Module" introduced="tb91" purpose="optional" plugin="Y">
 <unit bldFile="os/lbs/networkprotocolmodules/privacyprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/privacyprotocolmodule/group/lbs_privacyprotocolmodule.mrp"/>
 </component>
-<component name="n:suplprotocolmodule" long-name="SUPL Protocol Module" introduced="tb91" deprecated="tb91" purpose="optional" plugin="Y">
+<component name="suplprotocolmodule" long-name="SUPL Protocol Module" introduced="tb91" deprecated="tb91" purpose="optional" plugin="Y">
 <unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
 </component>
 </collection>
