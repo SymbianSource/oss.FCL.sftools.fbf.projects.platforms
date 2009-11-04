@@ -1106,6 +1106,10 @@
 </component>
 </collection>
 <collection name="bt_info" long-name="Bluetooth Info" level="app-if">
+<!-- MattD 20091102 - Added manually to stop build failures... Probably an S60 component -->
+      <component name="bt_plat" filter="s60" class="api">
+        <unit bldFile="os\bt\bt_plat\group"/>
+      </component>
 <component name="bt_metadata" long-name="Bluetooth Metadata" introduced="tb92" purpose="development" class="config PC">
 <unit mrp="os\bt\bt_info\bt_metadata\bt_metadata.mrp"/>
 </component>
@@ -2235,6 +2239,13 @@
 <unit mrp="app\helps\helps_info\helps_metadata\helps_metadata.mrp"/>
 </component>
 </collection>
+<!-- MattD 20091102 - Adding to fix build failures -->
+    <collection name="symhelp" long-name="Symbian Help" level="eng">
+      <component name="helpmodel" long-name="Help" introduced="6.0" purpose="optional">
+        <unit bldFile="app\helps\symhelp\helpmodel\group" mrp="app\helps\symhelp\helpmodel\group\app-services_hlpmodel.mrp"/>
+      </component>
+    </collection>
+
 </block>
 <block name="techview" level="apps" span="2" long-name="Techview" levels="services ui utils apps1 apps2 apps3">
 <collection name="buildverification" long-name="Build Verification" level="services">
