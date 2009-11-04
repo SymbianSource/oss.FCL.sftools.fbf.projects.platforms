@@ -2,6 +2,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_development/oss/MCL/utilities/,/utilities,branch,default,
 //v800008/Builds01/mercurial_development/rnd/internal/epoc_additional/,/rnd/internal/epoc_additional,branch,RCL_1,
 //v800008/Builds01/mercurial_internal/rnd/rndonly/monotype/,/rnd/rndonly/monotype,branch,default,
+//v800008/Builds01/mercurial_internal/rnd/rndonly/realnetworks/,/rnd/rndonly/realnetworks,branch,default,
 //v800008/Builds01/mercurial_internal/rnd/rndonly/samsung/,/rnd/rndonly/samsung,branch,default,
 //v800008/Builds01/mercurial_internal/rnd/redist/objective_systems/,/rnd/redist/objective_systems,branch,default,
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/tools/homescreentools/,/sf/tools/homescreentools,branch,RCL_1,layers.sysdef.xml
@@ -72,7 +73,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/FCL/sf/mw/uiresources/,/sf/mw/uiresources,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/hapticsservices/,/sf/mw/hapticsservices,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/homescreensrv/,/sf/mw/homescreensrv,branch,RCL_1,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/appinstall/,/sf/mw/appinstall,branch,RCL_1,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/mw/appinstall/,/sf/mw/appinstall,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/mw/serviceapifw/,/sf/mw/serviceapifw,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/mw/serviceapi/,/sf/mw/serviceapi,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/mw/web/,/sf/mw/web,branch,RCL_1,layers.sysdef.xml

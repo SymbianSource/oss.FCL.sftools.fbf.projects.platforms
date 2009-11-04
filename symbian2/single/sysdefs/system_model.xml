@@ -1083,9 +1083,8 @@
      <component name="privacyprotocolmodule" long-name="Privacy Protocol Module" introduced="tb91" purpose="optional" plugin="Y" origin-model="Symbian">
       <unit bldFile="os/lbs/networkprotocolmodules/privacyprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/privacyprotocolmodule/group/lbs_privacyprotocolmodule.mrp"/>
      </component>
-     <component name="n:suplprotocolmodule" long-name="SUPL Protocol Module" introduced="tb91" deprecated="tb91" purpose="optional" plugin="Y" origin-model="Symbian">
-      <!-- The following unit is removed as non-contributed -->
-      <!-- <unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/> -->
+     <component name="suplprotocolmodule" long-name="SUPL Protocol Module" introduced="tb91" deprecated="tb91" purpose="optional" plugin="Y" origin-model="Symbian">
+      <unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
      </component>
     </collection>
     <collection name="lbsapitest" long-name="Location API Tests" level="application-interface">
