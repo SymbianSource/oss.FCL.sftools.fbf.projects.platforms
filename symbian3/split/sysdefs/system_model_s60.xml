@@ -117,6 +117,11 @@
 <unit unitID="tools.osrndtools.hti" mrp="" bldFile="sf/os/osrndtools/hti/group" filter="sf_build" name="tools_osrndtools_hti"/></module>
 <module name="graphics">
         <unit unitID="abs.graphics" mrp="" bldFile="sf/os/graphics/group" name="graphics"/>
+        <!-- MattD: graphics/group is missing, as are various subdirs...lets cobble something together... -->
+        <unit unitID="abs.graphics.plat" mrp="" bldFile="sf/os/graphics/group/../graphics_plat/group" name="graphics_plat"/>
+        <unit unitID="abs.graphics.m3gcoreapi" mrp="" bldFile="sf/os/graphics/group/../graphics_plat/m3g_core_api/group" name="graphics_m3g_api"/>
+        <unit unitID="abs.graphics.m3gcore" mrp="" bldFile="sf/os/graphics/group/../m3g/m3gcore11/group" name="graphics_m3g"/>
+        <unit unitID="abs.graphics.acceleration_vgi" mrp="" bldFile="sf/os/graphics/group/../graphicsaccelaration/vgi/group" name="graphics_acceleration_vgi"/>
       </module>
 <module name="imagingext">
         <unit unitID="imm.imagingext" mrp="" bldFile="sf/os/imagingext/group" name="imagingext"/>
