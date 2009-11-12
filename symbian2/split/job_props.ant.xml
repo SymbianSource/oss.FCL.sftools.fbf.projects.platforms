@@ -27,13 +27,9 @@
     <!-- and set sf.spec.baseline.enable to 'true'                                                          -->        
 
     <!-- get full source env and binaries from pdk -->
-    <property name="sf.spec.baseline.getenv_options" value="-I tools"/> <!-- Sync the tools... -->
-    <property name="sf.spec.baseline.clean"          value="false"/>
-    <property name="sf.spec.baseline.select"         value="location" />
+    <property name="sf.spec.baseline.getenv_options" value="-I tools -k"/> <!-- Sync the tools... -->
     <property name="sf.spec.baseline.location"       value="\\v800008\Builds01\Releases\${sf.previous.pdk.tag}" />
     
-    <property name="sf.spec.toolsbaseline.getenv_options" value="-i emu"/>
-    <property name="sf.spec.toolsbaseline.select"         value="location" />
     <property name="sf.spec.toolsbaseline.location"       value="\\v800008\Builds01\PDT\PDT_1.2" /> <!-- for TEF etc -->
     
     <!-- platform build specific properties -->
