@@ -440,6 +440,9 @@
 <component name="filebasedcertificateandkeystores" long-name="File-based Certificate and Key Stores" introduced="8.0" purpose="optional">
 <unit bldFile="os\security\cryptoservices\filebasedcertificateandkeystores\group" mrp="os\security\cryptoservices\filebasedcertificateandkeystores\group\security_filetokens.mrp"/>
 </component>
+      <component id="browserrootcertificates" name="Browser Root Certificates" introduced="symbian^2" purpose="optional">
+        <unit mrp="os\security\cryptoservices\browserrootcertificates\browserrootcerts.mrp"/>
+      </component>
 <component name="asnpkcs" long-name="ASN PKCS" introduced="8.0" purpose="optional">
 <unit bldFile="os\security\cryptoservices\asnpkcs\group" mrp="os\security\cryptoservices\asnpkcs\group\security_asnpkcs.mrp"/>
 </component>
