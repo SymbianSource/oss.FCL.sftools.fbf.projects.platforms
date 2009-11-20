@@ -324,7 +324,10 @@
         <unit unitID="abs.uiresources" mrp="" bldFile="sf/mw/uiresources/group" name="uiresources"/>
       </module>
 <module name="usbservices">
-        <unit unitID="lcdo.usbservices" mrp="" bldFile="\sf\mw\usbservices\group" name="usbservices"/>
+        <unit unitID="lcdo.usbservices" mrp="" bldFile="sf/mw/usbservices/group" name="usbservices"/>
+        <!-- MattD: I really need to FCL the component to Add in a couple of null bld.inf files, but I'll push it a bit further by doing this -->
+        <unit unitID="more.usbservices" mrp="" bldFile="sf/mw/usbservices/usbservices_plat/group" name="usbservices_API"/>
+
       </module>
 <module name="videoutils">
         <unit unitID="vado.videoutils" mrp="" bldFile="sf/mw/videoutils/group" name="videoutils"/>
