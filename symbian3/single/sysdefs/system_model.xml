@@ -642,6 +642,9 @@
      <component name="rootcertificates" long-name="Root Certificates" introduced="7.0s" purpose="optional" plugin="N" origin-model="Symbian">
       <unit mrp="os/security/cryptoservices/rootcertificates/rootcerts.mrp"/>
      </component>
+     <component id="browserrootcertificates" name="Browser Root Certificates" introduced="symbian^2" purpose="optional">
+      <unit mrp="os/security/cryptoservices/browserrootcertificates/browserrootcerts.mrp"/>
+     </component>
      <component name="asnpkcs" long-name="ASN PKCS" introduced="8.0" purpose="optional" plugin="N" origin-model="Symbian">
       <unit bldFile="os/security/cryptoservices/asnpkcs/group" mrp="os/security/cryptoservices/asnpkcs/group/security_asnpkcs.mrp"/>
      </component>
