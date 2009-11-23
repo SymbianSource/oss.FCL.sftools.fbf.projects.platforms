@@ -1484,7 +1484,7 @@
 <unit bldFile="os\graphics\openvg\openvginterface\group" mrp="os\graphics\openvg\openvginterface\group\graphics_openvgheaders.mrp"/>
 </component>
 <component name="openvg11" long-name="OpenVG11" level="internal-adaptations">
- <unit bldFile="/sf/os/graphics/openvg/openvginterface/group/openvg11"/>  <! -- possibly should not be building this every time? ->
+ <unit bldFile="/sf/os/graphics/openvg/openvginterface/group/openvg11"/>  <!-- possibly should not be building this every time? -->
 </component>
 </collection>
 <collection name="egl" long-name="EGL" level="internal-adaptations">
