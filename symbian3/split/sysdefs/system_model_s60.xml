@@ -478,6 +478,10 @@
 <module name="homescreentools">
         <unit unitID="abs.homescreentools" mrp="" bldFile="sf/tools/homescreentools/group" name="homescreentools"/>
       </module>
+      
+<module name="buildplatforms">
+<unit unitID="sf_tools_buildplatforms" name="buildplatforms" bldFile="\sf\tools\buildplatforms\group" mrp=""/>
+</module>
 <module name="swconfigtools">
         <unit name="swconfigtools" unitID="sydo.swconfigtools" bldFile="sf/tools/swconfigtools/group" mrp=""/>
       </module></layer>
