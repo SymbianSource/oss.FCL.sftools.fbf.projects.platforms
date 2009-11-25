@@ -1396,6 +1396,11 @@
   <unit bldFile="/sf/os/graphics/graphicsaccelaration/vgi/group"/>
 </component>
 </collection>
+<collection name="m3g_core_api" long-name="M3G_core_api">
+<component name="m3g_core_api" long-name="M3G Core API" origin-model="foundation">
+  <unit bldFile="sf/os/graphics/graphics_plat/m3g_core_api/group"/>
+</component>
+</collection>
 <collection name="m3g" long-name="M3G" level="internal-adaptations">
 <component name="m3gcore11" long-name="M3G Core 11" origin-model="foundation">
   <unit bldFile="/sf/os/graphics/m3g/m3gcore11/group"/>
@@ -1477,6 +1482,7 @@
 <collection name="opengles" long-name="OpenGLES" level="internal-adaptations">
 <component name="openglesinterface" long-name="OpenGL ES Interface" introduced="8.0" purpose="optional">
 <unit bldFile="os\graphics\opengles\openglesinterface\group" mrp="os\graphics\opengles\openglesinterface\group\graphics_openglesheaders.mrp"/>
+<unit bldFile="os\graphics\opengles\openglesinterface\group\opengles_stub" /> <!-- MattD 20091124 - stub implementation that we need to rename this afterwards -->
 </component>
 </collection>
 <collection name="openvg" long-name="OpenVG" level="internal-adaptations">
