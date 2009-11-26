@@ -7,5 +7,5 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_internal/rnd/rndonly/realnetworks/,/rnd/rndonly/realnetworks,branch,default,
 //v800008/Builds01/mercurial_internal/rnd/redist/objective_systems/,/rnd/redist/objective_systems,branch,default,
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_development/sfl/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/os/buildtools/,/sf/os/buildtools,branch,default,layers.sysdef.xml
