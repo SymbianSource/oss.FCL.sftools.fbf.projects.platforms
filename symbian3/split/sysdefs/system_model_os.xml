@@ -1724,9 +1724,12 @@
 <component name="tzlocrscfactory" long-name="Time Zone Localization Resource Factory" introduced="9.1" purpose="optional" class="config">
 <unit bldFile="mw\appsupport\tzservices\tzlocrscfactory\group" mrp="mw\appsupport\tzservices\tzlocrscfactory\group\app-services_tzlocalizationrscfactory.mrp"/>
 </component>
+<!-- MattD: 20091124 - Dropping out the GT timezone DB to hopefully stop the ADTupdater crash. Note that Symbian2 does this by changing the bld.inf -->
+<!--
 <component name="tzdatabase" long-name="Time Zone Database" introduced="9.1" purpose="optional" class="config">
 <unit bldFile="mw\appsupport\tzservices\tzdatabase\group" mrp="mw\appsupport\tzservices\tzdatabase\group\app-services_tzdb.mrp"/>
 </component>
+-->
 <!--PLACEHOLDER="DS.1802" START REMOVE -->
 <component name="worldserver" long-name="World Server" introduced="7.0" deprecated="9.1" purpose="optional">
 <unit bldFile="mw\appsupport\tzservices\worldserver\group" mrp="mw\appsupport\tzservices\worldserver\group\app-services_worldserver.mrp"/>
