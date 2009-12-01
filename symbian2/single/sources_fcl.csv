@@ -69,7 +69,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/mmappfw/,/sf/mw/mmappfw,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/inputmethods/,/sf/mw/inputmethods,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/FCL/sf/mw/classicui/,/sf/mw/classicui,branch,RCL_1,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/FCL/sf/mw/svgt/,/sf/mw/svgt,branch,RCL_1,layers.sysdef.xml
+//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/svgt/,/sf/mw/svgt,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/uiaccelerator/,/sf/mw/uiaccelerator,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/mw/uiresources/,/sf/mw/uiresources,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/hapticsservices/,/sf/mw/hapticsservices,branch,RCL_1,layers.sysdef.xml
