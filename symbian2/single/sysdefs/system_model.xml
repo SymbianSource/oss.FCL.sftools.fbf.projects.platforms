@@ -1910,6 +1910,11 @@
       <unit bldFile="os/graphics/m3g/m3gcore11/group"/>
      </component>
     </collection>
+    <collection name="openvgref" long-name="OpenVG Ref">
+     <component name="openvgrefimpl" long-name="OpenVG Ref Implementation" origin-model="foundation">
+      <unit bldFile="os/graphics/openvg/openvgrefimplementation/sfopenvg/group"/>
+     </component>    
+    </collection>
     <collection name="graphicstest" long-name="Graphics Test" level="app-if">
      <component name="graphicstestharness" long-name="Graphics Test Harness" introduced="8.1" purpose="development" plugin="N" origin-model="Symbian">
       <unit mrp="os/graphics/graphicstest/graphicstestharness/group/graphics_testharness.mrp"/>
