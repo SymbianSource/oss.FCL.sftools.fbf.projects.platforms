@@ -1979,9 +1979,12 @@
      <component name="openvginterface" long-name="OpenVG Interface" introduced="tb91" purpose="optional" plugin="N" origin-model="Symbian">
       <unit bldFile="os/graphics/openvg/openvginterface/group" mrp="os/graphics/openvg/openvginterface/group/graphics_openvgheaders.mrp"/>
      </component>
+<!-- MattD 200091202 - Removing openvg11 so we can use the incomplete modified Khronos reference Implementation -->     
+<!--     
 	 <component name="openvg11" long-name="OpenVG11" level="internal-adaptations">
       <unit bldFile="os/graphics/openvg/openvginterface/group/openvg11"/>
      </component>
+-->     
     </collection>
     <collection name="egl" long-name="EGL" level="internal-adaptations">
      <component name="eglinterface" long-name="EGL Interface" introduced="tb91" purpose="optional" plugin="N" origin-model="Symbian">
