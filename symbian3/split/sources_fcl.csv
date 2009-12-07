@@ -111,7 +111,6 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/ossrv/,/sf/os/ossrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/persistentdata/,/sf/os/persistentdata,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/os/security/,/sf/os/security,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/shortlinksrv/,/sf/os/shortlinksrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/os/textandloc/,/sf/os/textandloc,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/os/unref/,/sf/os/unref,branch,default,
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/usb/,/sf/os/usb,branch,default,
@@ -120,10 +119,8 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/osrndtools/,/sf/os/osrndtools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/oss/FCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/tools/build_s60/,/sf/tools/build_s60,branch,default,
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/tools/buildplatforms/,/sf/tools/buildplatforms,branch,default,
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/tools/homescreentools/,/sf/tools/homescreentools,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/tools/makefile_templates/,/sf/tools/makefile_templates,branch,default,
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/mw/platformtools/,/sf/mw/platformtools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/rndtools/,/sf/app/rndtools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/tools/swconfigtools/,/sf/tools/swconfigtools,branch,default,layers.sysdef.xml
