@@ -1506,6 +1506,11 @@
  <unit bldFile="/sf/os/graphics/egl/eglswitch/group/" />  <!-- for NGA graphics drop -->
 </component>
 </collection>
+<collection name="KhronosReferenceImplementation" long-name="Khronos Reference Implementation" level="device-interface" >
+<component name="sfopenvg" long-name="sfopenvg" purpose="optional" origin-model="foundation">
+<unit bldFile="os/graphics/openvg/openvgrefimplementation/sfopenvg/group" />
+</component>
+</collection>
 <collection name="graphicsdeviceinterface" long-name="Graphics Device Interface" level="device-interface">
 <component name="gdi" long-name="GDI" purpose="mandatory">
 <unit bldFile="os\graphics\graphicsdeviceinterface\gdi\group" mrp="os\graphics\graphicsdeviceinterface\gdi\group\graphics_gdi.mrp"/>
