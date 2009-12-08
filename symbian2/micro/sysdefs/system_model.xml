@@ -26,12 +26,7 @@
       <!-- <unit bldFile="os/deviceplatformrelease/sf_config/config/western/group"/> -->
      </component>
     </collection>
-    <collection name="s60bld">
-     <component unofficial="yes" name="buildplatforms" origin-model="foundation">
-      <unit bldFile="tools/buildplatforms/group"/>
-     </component>
-    </collection>
-   <collection name="symbianosbld" long-name="Symbian OS Build" level="bld">
+    <collection name="symbianosbld" long-name="Symbian OS Build" level="bld">
      <component name="cedarutils" long-name="Cedar Utils" purpose="development" plugin="N" origin-model="Symbian">
       <unit mrp="os/deviceplatformrelease/symbianosbld/cedarutils/tools_utils_cedar.mrp"/>
      </component>
@@ -312,9 +307,6 @@
      <component name="n:usecasecontroller" long-name="Use Case Controller" purpose="development" plugin="N" origin-model="Symbian">
       <!-- The following unit is removed as non-contributed -->
       <!-- <unit bldFile="os/buildtools/toolsandutils/usecasecontroller/BuildScripts/group" mrp="os/buildtools/toolsandutils/usecasecontroller/BuildScripts/group/testtools_ucc.mrp"/> -->
-     </component>
-     <component name="autotest" long-name="Autotest" purpose="development" plugin="N" origin-model="Symbian">
-      <unit bldFile="os/buildtools/toolsandutils/autotest/group" mrp="os/buildtools/toolsandutils/autotest/group/tools_autotest.mrp"/>
      </component>
      <component name="n:testconfigfileparser" long-name="Test Config File Parser" purpose="development" plugin="N" origin-model="Symbian">
       <!-- The following unit is removed as non-contributed -->
