@@ -12,7 +12,7 @@
     
     <property name="sf.spec.sbs.variant" value="tb91sf"/>  
     <property name="sf.spec.sbs.config" value="winscw.whatlog,armv5.whatlog"/> <!-- both _urel and _udeb -->
-    <property name="sf.spec.sbs.tools.config" value="tools_rel.whatlog,tools2_rel.whatlog"/>
+    <property name="sf.spec.sbs.tools.config" value="tools2_rel.whatlog,tools_rel.whatlog"/>
 
     <property name="sf.spec.bldmefirst.gt.variant" value="sf/os/deviceplatformrelease/symbianosbld/cedarutils/Symbian_OS_v${sf.spec.sbs.variant}.cfg" />
     <property name="sf.spec.bldmefirst.gt.hrh" value="sf/os/deviceplatformrelease/symbianosbld/cedarutils/" />
