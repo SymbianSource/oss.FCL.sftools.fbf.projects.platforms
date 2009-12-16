@@ -7,7 +7,7 @@
 
     <property name="sf.drive.space.needed" value="2G"/>
 
-    <property name="sf.previous.pdk.tag" value="PDK_2.0.1" />
+    <property name="sf.previous.pdk.tag" value="PDK_2.0.2" />
 
     <property name="sf.spec.corebuildversion" value="week19"/>
     
