@@ -155,7 +155,7 @@
 <module name="sf_openvg11">
 			<component name="sf_openvg11">
 				<unit unitID="symbian.openvg11" name="sf_openvg11" bldFile="\sf\os\graphics\openvg\openvginterface\group\openvg11" mrp="" filter="sf_build"/>
-				<unit unitID=symbian.openvg11_tigerapp" name="sf_openvg11_tigerapp" bldFile="\sf\os\graphics\openvg\openvgrefimplementation\sfopenvg\test\group" mrp="" filter="sf_build"/>
+				<unit unitID="symbian.openvg11_tigerapp" name="sf_openvg11_tigerapp" bldFile="\sf\os\graphics\openvg\openvgrefimplementation\sfopenvg\test\group" mrp="" filter="sf_build"/>
 			</component>
 		</module></layer>
 	<layer name="bldfirst_mw_layer">
