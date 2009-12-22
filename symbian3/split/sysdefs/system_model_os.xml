@@ -1508,7 +1508,8 @@
 </collection>
 <collection name="KhronosReferenceImplementation" long-name="Khronos Reference Implementation" level="device-interface" >
 <component name="sfopenvg" long-name="sfopenvg" purpose="optional" origin-model="foundation">
-<unit bldFile="os/graphics/openvg/openvgrefimplementation/sfopenvg/group" />
+<!-- MattD - Moved KhronosRI into S60 model, as it depends on stdlib which isn't here in the GT part of the build -->
+<!--<unit bldFile="os/graphics/openvg/openvgrefimplementation/sfopenvg/group" /> -->
 </component>
 </collection>
 <collection name="graphicsdeviceinterface" long-name="Graphics Device Interface" level="device-interface">
