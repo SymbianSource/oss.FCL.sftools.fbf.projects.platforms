@@ -320,6 +320,7 @@
       </module>
 <module name="uiresources">
         <unit unitID="abs.uiresources" mrp="" bldFile="sf/mw/uiresources/group" name="uiresources"/>
+        <unit unitID="abs.uiresources_nvgrender" mrp="" bldFile="sf/mw/uiresources/uigraphics/nvgrenderstage/group" name="uiresources_nvgrender"/>        
       </module>
 <module name="usbservices">
         <unit unitID="lcdo.usbservices" mrp="" bldFile="sf/mw/usbservices/group" name="usbservices"/>
