@@ -65,6 +65,7 @@
     <!-- packaging options for bin/src-->
     <property name="sf.spec.package.bin.enable"  value="true"/>
     <property name="sf.spec.package.src.enable"  value="true"/>
+    <property name="sf.sdk.header.list.file"     value="${sf.spec.job.dir}/../sdkFiles.txt"/>
     
     <property name="sf.spec.test.sendpkg.enable" value="true"/>
 
