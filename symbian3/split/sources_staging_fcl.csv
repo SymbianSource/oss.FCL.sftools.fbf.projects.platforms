@@ -77,7 +77,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/networkingdm/,/sf/mw/networkingdm,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/opensrv/,/sf/mw/opensrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/phonesrv/,/sf/mw/phonesrv,branch,default,layers.sysdef.xml
-//v800008/Builds01/ mercurial_development_staging/sfl/FCL/sf/mw/remoteconn/,/sf/mw/remoteconn,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development_staging/sfl/FCL/sf/mw/remoteconn/,/sf/mw/remoteconn,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/remotemgmt/,/sf/mw/remotemgmt,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/remotestorage/,/sf/mw/remotestorage,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/securitysrv/,/sf/mw/securitysrv,branch,default,layers.sysdef.xml
@@ -95,9 +95,9 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/web/,/sf/mw/web,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/websrv/,/sf/mw/websrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/wirelessacc/,/sf/mw/wirelessacc,branch,default,layers.sysdef.xml
-//v800008/Builds01/ mercurial_development_staging/sfl/FCL/sf/os/boardsupport/,/sf/os/boardsupport,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development_staging/sfl/FCL/sf/os/boardsupport/,/sf/os/boardsupport,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/bt/,/sf/os/bt,branch,default,layers.sysdef.xml
-//v800008/Builds01/ mercurial_development_staging/sfl/FCL/sf/os/buildtools/,/sf/os/buildtools,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development_staging/sfl/FCL/sf/os/buildtools/,/sf/os/buildtools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/cellularsrv/,/sf/os/cellularsrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/commsfw/,/sf/os/commsfw,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development_staging/sfl/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,branch,default,layers.sysdef.xml
@@ -111,7 +111,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/ossrv/,/sf/os/ossrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/persistentdata/,/sf/os/persistentdata,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/security/,/sf/os/security,branch,default,layers.sysdef.xml
-//v800008/Builds01/ mercurial_development_staging/sfl/FCL/sf/os/textandloc/,/sf/os/textandloc,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development_staging/sfl/FCL/sf/os/textandloc/,/sf/os/textandloc,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/unref/,/sf/os/unref,branch,default,
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/usb/,/sf/os/usb,branch,default,
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/wlan/,/sf/os/wlan,branch,default,layers.sysdef.xml
@@ -121,6 +121,6 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_development/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/tools/buildplatforms/,/sf/tools/buildplatforms,branch,default,
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/tools/homescreentools/,/sf/tools/homescreentools,branch,default,layers.sysdef.xml
-//v800008/Builds01/ mercurial_development_staging/sfl/FCL/sf/mw/platformtools/,/sf/mw/platformtools,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development_staging/sfl/FCL/sf/mw/platformtools/,/sf/mw/platformtools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/app/rndtools/,/sf/app/rndtools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/tools/swconfigtools/,/sf/tools/swconfigtools,branch,default,layers.sysdef.xml
