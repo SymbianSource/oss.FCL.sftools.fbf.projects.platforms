@@ -3141,7 +3141,8 @@
 </block>
 
 <block name="textandloc" long-name="Text and Localisation Services" level="services" levels="encoding util fonts tools text">
-<collection name="charconvfw" long-name="Character Conversion" level="encoding">
+<!-- dario: commented out to avoid collisions with S60
+collection name="charconvfw" long-name="Character Conversion" level="encoding">
 <component name="charconv_fw" long-name="Character Encoding and Conversion Framework" purpose="optional" plugin="N">
 <unit bldFile="/sf/os/textandloc/charconvfw/charconv_fw/group" mrp="/sf/os/textandloc/charconvfw/charconv_fw/group/syslibs_charconv.mrp"/>
 </component>
@@ -3151,7 +3152,7 @@
 <component name="fatfilenameconversionplugins" long-name="FAT Filename Conversion Plugins" introduced="9.1" purpose="optional" plugin="Y">
 <unit bldFile="/sf/os/kernelhwsrv/userlibandfileserver/fatfilenameconversionplugins/group" mrp="/sf/os/kernelhwsrv/userlibandfileserver/fatfilenameconversionplugins/group/syslibs_FATCharsetConv.mrp"/>
 </component>
-</collection>
+</collection -->
 <collection name="fontandtxtsrv" long-name="Font and Text Services" level="fonts">
 <component name="iculayoutengine" long-name="ICU Layout Engine" introduced="9.2" purpose="optional" plugin="Y">
 <unit bldFile="/sf/os/textandloc/fontservices/textshaperplugin/group" mrp="/sf/os/textandloc/fontservices/textshaperplugin/group/graphics_iculayoutengine.mrp"/>
