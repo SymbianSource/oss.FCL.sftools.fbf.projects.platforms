@@ -106,7 +106,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/imagingext/,/sf/os/imagingext,changeset,7f89d0e41a80,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,changeset,6d8ad5bee44b,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/lbs/,/sf/os/lbs,changeset,bf6c9eb59ef6,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/mm/,/sf/os/mm,changeset,7d13bb704c41,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/os/mm/,/sf/os/mm,changeset,942431f56683,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/networkingsrv/,/sf/os/networkingsrv,changeset,ba545d6c00d1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/ossrv/,/sf/os/ossrv,changeset,c83446382b15,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/persistentdata/,/sf/os/persistentdata,changeset,09a5ad62f9e5,layers.sysdef.xml
