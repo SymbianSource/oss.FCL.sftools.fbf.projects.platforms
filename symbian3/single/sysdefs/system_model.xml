@@ -228,13 +228,13 @@
 </collection>
 </block>
 
-<block name="java" long-name="Java" level="services">
+<block name="jrt" long-name="JRT" level="services">
 <collection name="s60">
 <component name="java_java_plat" purpose="optional" plugin="N">
-<unit bldFile="/sf/app/java/java_plat/group" mrp=""/>
+<unit bldFile="/sf/app/jrt/java_plat/group" mrp=""/>
 </component>
 <component name="java_java_stubs" purpose="optional" plugin="N">
-<unit bldFile="/sf/app/java/java_stubs/group" mrp=""/>
+<unit bldFile="/sf/app/jrt/java_stubs/group" mrp=""/>
 </component>
 </collection>
 </block>
