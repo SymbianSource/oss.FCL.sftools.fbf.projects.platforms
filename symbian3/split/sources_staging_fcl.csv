@@ -24,7 +24,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/app/imgeditor/,/sf/app/imgeditor,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/app/imgvieweruis/,/sf/app/imgvieweruis,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/app/iptelephony/,/sf/app/iptelephony,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_stage/oss/MCL/sf/app/java/,/sf/app/java,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_master_stage/oss/MCL/sf/app/jrt/,/sf/app/jrt,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/app/location/,/sf/app/location,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/app/messaging/,/sf/app/messaging,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/app/mmsharinguis/,/sf/app/mmsharinguis,branch,default,layers.sysdef.xml
