@@ -2239,7 +2239,7 @@
 <block name="speechsrv" level="services" long-name="Speech Recognition UIs"/>
 <block name="homescreentools" level="services" long-name="Home Screen Tools"/>
 <block name="webuis" level="services" long-name="Web UIs"/>
-<block name="java" level="services" long-name="Java"/>
+<block name="jrt" level="services" long-name="JRT"/>
 <block name="rndtools" level="services" long-name="RD tools"/>
 <block name="helps" level="apps" span="2" long-name="Help Apps" levels="eng tools if ui">
 <collection name="helps_info" long-name="Help Apps Info" level="ui">

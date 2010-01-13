@@ -91,7 +91,7 @@
   cwd CDATA #REQUIRED
   command CDATA #REQUIRED>
 ]>
-<SystemDefinition name="S60_SystemBuild + sysdef_dtd_1_4_0_xml + QuickOffice + adobereader + webvideo + wmdrmkeystorage_dist + wmdrmpd_dist + zipviewer + s60platformrelease + oemrndtools + swconfigapps + avdomain + btaudioadaptation_stub + drm_stub + ocrsrv_stub + omasuplasnconverterstubimpl + posmsgpluginreferenceimpl + power_save_display_mode_stub + srsfenginestub + systemswstubs + tactileclickplugin_stub + wlanhwinit_stub + camera + commonemail + conntools + contacts + contentcontrol + conversations + devicecontrol + systemswextensions + files + gallery + graphicsuis + helps + homescreen + im + imgvieweruis + iptelephony + java + location + messaging + mmsharinguis + avdomain + organizer + phone + photos + printing + profile + radio + rndtools + screensaver + settingsuis + speechsrv + graphics + utils + video + videotelephony + avdomain + webuis + accesssec + appinstall + appsupport + btservices + camerasrv + classicui + dlnasrv + drm + gsprofilesrv + hapticsservices + avdomain + homescreensrv + imghandling + imsrv + inputmethods + ipappprotocols + ipappservices + ipconnmgmt + legacypresence + locationsrv + mds + messagingmw + metadatasrv + avdomain + avdomain + mmuifw + netprotocols + networkingdm + opensrv + phonesrv + platformtools + remoteconn + remotemgmt + remotestorage + securitysrv + serviceapi + serviceapifw + shortlinkconn + ossrv + svgt + uiaccelerator + uiresources + uitools + usbservices + videoutils + vpnclient + web + websrv + wirelessacc + bt + cellularsrv + deviceplatformrelease + devicesrv + graphics + imagingext + lbs + avdomainosext + networkingsrv + osrndtools + ossrv + systemswextensions + usb + wlan + xmlsrv + buildplatforms + homescreentools + swconfigtools" schema="1.4.0">
+<SystemDefinition name="S60_SystemBuild + sysdef_dtd_1_4_0_xml + QuickOffice + adobereader + webvideo + wmdrmkeystorage_dist + wmdrmpd_dist + zipviewer + s60platformrelease + oemrndtools + swconfigapps + avdomain + btaudioadaptation_stub + drm_stub + ocrsrv_stub + omasuplasnconverterstubimpl + posmsgpluginreferenceimpl + power_save_display_mode_stub + srsfenginestub + systemswstubs + tactileclickplugin_stub + wlanhwinit_stub + camera + commonemail + conntools + contacts + contentcontrol + conversations + devicecontrol + systemswextensions + files + gallery + graphicsuis + helps + homescreen + im + imgvieweruis + iptelephony + jrt + location + messaging + mmsharinguis + avdomain + organizer + phone + photos + printing + profile + radio + rndtools + screensaver + settingsuis + speechsrv + graphics + utils + video + videotelephony + avdomain + webuis + accesssec + appinstall + appsupport + btservices + camerasrv + classicui + dlnasrv + drm + gsprofilesrv + hapticsservices + avdomain + homescreensrv + imghandling + imsrv + inputmethods + ipappprotocols + ipappservices + ipconnmgmt + legacypresence + locationsrv + mds + messagingmw + metadatasrv + avdomain + avdomain + mmuifw + netprotocols + networkingdm + opensrv + phonesrv + platformtools + remoteconn + remotemgmt + remotestorage + securitysrv + serviceapi + serviceapifw + shortlinkconn + ossrv + svgt + uiaccelerator + uiresources + uitools + usbservices + videoutils + vpnclient + web + websrv + wirelessacc + bt + cellularsrv + deviceplatformrelease + devicesrv + graphics + imagingext + lbs + avdomainosext + networkingsrv + osrndtools + ossrv + systemswextensions + usb + wlan + xmlsrv + buildplatforms + homescreentools + swconfigtools" schema="1.4.0">
 <systemModel>
 	<layer name="os_layer">
 <module name="bt">
@@ -410,9 +410,10 @@
 <module name="iptelephony">
         <unit name="iptelephony" unitID="te.iptelephony" bldFile="sf/app/iptelephony/group" mrp=""/>
       </module>
-<module name="java">
-<unit unitID="java.java.java_plat" mrp="" bldFile="sf/app/java/java_plat/group" filter="sf_build" name="java_java_plat"/>
-<unit unitID="java.java.java_stubs" mrp="" bldFile="sf/app/java/java_stubs/group" filter="sf_build" name="java_java_stubs"/></module>
+<module name="jrt">
+<unit unitID="jrt.jrt.java_plat" mrp="" bldFile="sf/app/jrt/java_plat/group" filter="sf_build" name="java_java_plat"/>
+<unit unitID="jrt.jrt.java_stubs" mrp="" bldFile="sf/app/jrt/java_stubs/group" filter="sf_build" name="java_java_stubs"/>
+</module>
 <module name="location">
         <unit unitID="lodo.location" mrp="" bldFile="sf/app/location/group" name="location"/>
       </module>
