@@ -4725,6 +4725,18 @@
     </collection>
    </block>
    <block name="remotemgmt" long-name="Remote Management" tech_domain="dm" level="specific" levels="plugin framework server generic specific">
+    <collection name="fotaapplication" long-name="FOTA Application" level="app">
+     <component name="fotaserver" long-name="FOTA Server" origin-model="foundation">
+      <!-- <unit bldFile="mw/remotemgmt/fotaapplication/fotaserver/fmsclient/group"/> -->
+      <!-- <unit bldFile="mw/remotemgmt/fotaapplication/fotaserver/fmserver/group"/> -->
+      <!-- <unit bldFile="mw/remotemgmt/fotaapplication/fotaserver/fotarfsplugin/group"/> -->
+      <unit bldFile="mw/remotemgmt/fotaapplication/fotaserver/fotastartupextplg/group"/>
+      <unit bldFile="mw/remotemgmt/fotaapplication/fotaserver/group"/>
+     </component>
+     <component unofficial="yes" name="fotaapp" origin-model="foundation">
+      <unit bldFile="mw/remotemgmt/fotaapplication/group"/>
+     </component>
+    </collection>
     <collection name="omaprovisioning" long-name="OMA Provisioning" level="specific">
      <component name="pnputil" long-name="PnP Util" origin-model="foundation">
       <unit bldFile="mw/remotemgmt/omaprovisioning/pnputil/group"/>
@@ -7796,6 +7808,9 @@
      <component name="options" long-name="Options" origin-model="foundation">
       <unit bldFile="app/devicecontrol/applicationmanagement/options/group"/>
      </component>
+     <component unofficial="yes" name="applicationmanagement_build" origin-model="foundation" long-name="AM Build" filter="s60">
+      <unit bldFile="app/devicecontrol/applicationmanagement/group"/>
+     </component>
      <component name="applicationmanagement_client" long-name="Client" origin-model="foundation">
       <unit bldFile="app/devicecontrol/applicationmanagement/client/group"/>
      </component>
@@ -7810,6 +7825,9 @@
      </component>
     </collection>
     <collection name="customization" long-name="Customization" level="2">
+     <component unofficial="yes" name="customization_build" origin-model="foundation" long-name="DM Customization Build" filter="s60">
+      <unit bldFile="app/devicecontrol/customization/group"/>
+     </component>
      <component name="dmutils" origin-model="foundation">
       <unit bldFile="app/devicecontrol/customization/dmutils/bld"/>
      </component>
@@ -7848,9 +7866,6 @@
      </component>
     </collection>
     <collection name="contentcontrol_info" long-name="Content Control Daemons Info" level="2">
-     <component unofficial="yes" name="contentcontrol_build" long-name="Content Control Daemons Build" origin-model="foundation">
-      <unit bldFile="app/contentcontrol/group"/>
-     </component>
      <component unofficial="yes" name="contentctrl_plat" class="api" origin-model="foundation">
       <unit bldFile="app/contentcontrol/contentctrl_plat/group"/>
      </component>
@@ -7872,18 +7887,6 @@
      </component>
      <component unofficial="yes" name="devicediagnostics_build" long-name="Device Diagnostics Build" origin-model="foundation">
       <unit bldFile="app/devicecontrol/devicediagnostics/group"/>
-     </component>
-    </collection>
-    <collection name="fotaapplication" long-name="FOTA Application" level="app">
-     <component name="fotaserver" long-name="FOTA Server" origin-model="foundation">
-      <!-- <unit bldFile="mw/remotemgmt/fotaapplication/fotaserver/fmsclient/group"/> -->
-      <!-- <unit bldFile="mw/remotemgmt/fotaapplication/fotaserver/fmserver/group"/> -->
-      <!-- <unit bldFile="mw/remotemgmt/fotaapplication/fotaserver/fotarfsplugin/group"/> -->
-      <unit bldFile="mw/remotemgmt/fotaapplication/fotaserver/fotastartupextplg/group"/>
-      <unit bldFile="mw/remotemgmt/fotaapplication/fotaserver/group"/>
-     </component>
-     <component unofficial="yes" name="fotaapp" origin-model="foundation">
-      <unit bldFile="mw/remotemgmt/fotaapplication/group"/>
      </component>
     </collection>
     <collection name="omadm" long-name="OMA Device Management" level="oma">
@@ -7911,41 +7914,16 @@
       <unit bldFile="app/devicecontrol/omacp/omacpadapters/group"/>
      </component>
     </collection>
-    <collection name="devicecontrol_info" long-name="Device Control Daemons Info" level="app">
-     <component unofficial="yes" name="devicecontrol_build" long-name="Device Control Daemons Build" origin-model="foundation">
-      <unit bldFile="app/devicecontrol/group"/>
-     </component>
-     <component unofficial="yes" name="customization_test" origin-model="foundation">
-      <!-- <unit bldFile="app/devicecontrol/customization/tsrc/tarmcustomization/group"/> -->
-     </component>
-     <component unofficial="yes" name="applicationmanagement_build" origin-model="foundation">
-      <unit bldFile="app/devicecontrol/applicationmanagement/group"/>
-     </component>
-     <component unofficial="yes" name="customization_build" origin-model="foundation">
-      <unit bldFile="app/devicecontrol/customization/group"/>
-     </component>
-     <component unofficial="yes" name="applicationmanagement_test" origin-model="foundation">
-      <!-- <unit bldFile="app/devicecontrol/applicationmanagement/tsrc/tarmappmng/group"/> -->
-     </component>
-    </collection>
    </block>
    <block name="conntools" long-name="Conn Tools" tech_domain="dc" level="services" levels="1 2">
     <collection name="nettools" long-name="Net Tools" level="2">
      <component name="conntest" long-name="Connection Test" origin-model="foundation">
       <unit bldFile="app/conntools/nettools/conntest/group"/>
      </component>
-     <component unofficial="yes" name="nettools_build" long-name="Net Tools Build" origin-model="foundation">
-      <unit bldFile="app/conntools/nettools/group"/>
-     </component>
     </collection>
     <collection name="emulatorlan" long-name="Emulator Lan" level="1">
      <component name="emulatorlan_build" long-name="Emulator LAN Component" origin-model="foundation">
       <unit bldFile="app/conntools/emulatorlan/group"/>
-     </component>
-    </collection>
-    <collection name="conntools_info" long-name="Conn Tools Info" level="2">
-     <component unofficial="yes" name="conntools_build" long-name="Conn Tools Build" origin-model="foundation">
-      <unit bldFile="app/conntools/group"/>
      </component>
     </collection>
    </block>
@@ -8010,9 +7988,6 @@
      <component name="predefinedcontacts" long-name="Predefined Contacts" origin-model="foundation">
       <unit bldFile="app/contacts/contactextensions/predefinedcontacts/group"/>
      </component>
-     <component unofficial="yes" name="contactextensions_build" long-name="Contact Extensions Build" origin-model="foundation">
-      <unit bldFile="app/contacts/contactextensions/group"/>
-     </component>
     </collection>
     <collection name="logsui" long-name="Logs UI" level="ui">
      <component name="logsui_help" long-name="Help" origin-model="foundation">
@@ -8039,9 +8014,6 @@
       <!-- <unit bldFile="app/contacts/phonebookui/phonebook2/tsrc/utilities/changepbk2cenrepkeyvaluestool/group"/> -->
       <!-- <unit bldFile="app/contacts/phonebookui/phonebook2/tsrc/ut_addfavoritiesvisibility/group"/> -->
      </component>
-     <component unofficial="yes" name="phonebookui_build" long-name="Phonebook UI Build" origin-model="foundation">
-      <!-- <unit bldFile="app/contacts/phonebookui/group"/> -->
-     </component>
     </collection>
     <collection name="phonebookengines" long-name="Phonebook Engines" level="engine">
      <component name="cntfindplugin" long-name="Cnt Find Plugin" origin-model="foundation">
@@ -8054,22 +8026,6 @@
       <unit bldFile="app/contacts/phonebookengines/virtualphonebook/group"/>
       <!-- <unit bldFile="app/contacts/phonebookengines/virtualphonebook/tsrc/mt_vpbkeng_selectorfactory/group"/> -->
       <!-- <unit bldFile="app/contacts/phonebookengines/virtualphonebook/tsrc/mt_vpbkeng_strcntanalyzer/group"/> -->
-     </component>
-     <!--Component manually removed and merged to OS-->
-     <!--<component name="contactsmodel">
-       -  <unit bldFile="app/contacts/phonebookengines/contactsmodel/cntmatchlog/group"/>  -
-       -  <unit bldFile="app/contacts/phonebookengines/contactsmodel/group"/>  -
-       -  <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/cntmatchlog/group"/>  -
-       -  <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/fuzztest/group"/>  -
-       <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/cntperftest/groupsql"/>
-       <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/perffuncsuite/groupsql"/>
-       <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/tcntpolice/groupsql"/>
-       -  <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/testcontactsuite/group"/>  -
-       <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/testimpexvcard/groupsql"/>
-       -  <unit bldFile="app/contacts/phonebookengines/contactsmodel/tsrc/integration/teststartup/group"/>  -
-     </component>-->
-     <component unofficial="yes" name="phonebookengines_build" long-name="Phonebook Engines Build" origin-model="foundation">
-      <unit bldFile="app/contacts/phonebookengines/group"/>
      </component>
     <component name="contactsmodel" long-name="Contacts Model" introduced="ER5" purpose="optional" plugin="N" origin-model="Symbian">
       <unit bldFile="app/contacts/phonebookengines/contactsmodel/group" mrp="app/contacts/phonebookengines/contactsmodel/group/app-engines_cntmodel.mrp" version="1"/>
@@ -8130,9 +8086,6 @@
      </component>
     </collection>
     <collection name="contacts_info" long-name="Contacts Apps Info" level="ui">
-     <component unofficial="yes" name="contacts_build" long-name="Contacts Apps Build" origin-model="foundation">
-      <unit bldFile="app/contacts/group"/>
-     </component>
      <component unofficial="yes" name="contacts_plat" long-name="Contacts Apps Platform Interfaces" class="api" origin-model="foundation">
       <!-- <unit bldFile="app/contacts/contacts_plat/cca_launch_api/tsrc/group"/> -->
       <!-- <unit bldFile="app/contacts/contacts_plat/cca_view_plugin_api/tsrc/group"/> -->
@@ -8639,9 +8592,6 @@
      <component name="emaildebug" long-name="Email Debug" origin-model="foundation">
       <unit bldFile="app/commonemail/emailservices/emaildebug/group"/>
      </component>
-     <component unofficial="yes" name="emailservices_build" long-name="Email Services Build" origin-model="foundation">
-      <unit bldFile="app/commonemail/emailservices/group"/>
-     </component>
     </collection>
     <collection name="ipsservices" long-name="IPS Services" level="service">
      <component name="ipssossettings" long-name="IPSSOS Settings" origin-model="foundation">
@@ -8666,9 +8616,6 @@
      </component>
      <component name="remotecontactlookup" long-name="Remote Contact Lookup" origin-model="foundation">
       <unit bldFile="app/commonemail/emailcontacts/remotecontactlookup/group"/>
-     </component>
-     <component unofficial="yes" name="emailcontacts_build" long-name="Email Contacts Build" origin-model="foundation">
-      <unit bldFile="app/commonemail/emailcontacts/group"/>
      </component>
     </collection>
     <collection name="meetingrequest" long-name="Meeting Request" level="ui">
@@ -9052,7 +8999,7 @@
       <!-- <unit bldFile="app/camera/camerauis/cameraapp/generic/camerauiconfigmanager/group"/> -->
       <!-- <unit bldFile="app/camera/camerauis/cameraapp/generic/gscamcorderplugin/group"/> -->
       <unit bldFile="app/camera/camerauis/cameraapp/group"/>
-      <!-- <unit bldFile="app/camera/camerauis/cameraapp/help/group"/> -->
+      <unit bldFile="app/camera/camerauis/cameraapp/help/group"/>
      </component>
     </collection>
     <collection name="camera_info" long-name="Camera Apps Info" level="1">
