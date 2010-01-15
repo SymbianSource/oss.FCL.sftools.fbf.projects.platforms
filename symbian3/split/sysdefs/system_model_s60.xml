@@ -91,11 +91,11 @@
   cwd CDATA #REQUIRED
   command CDATA #REQUIRED>
 ]>
-<SystemDefinition name="S60_SystemBuild + sysdef_dtd_1_4_0_xml + QuickOffice + adobereader + tfxserver + webvideo + wmdrmkeystorage_dist + wmdrmpd_dist + zipviewer + oemrndtools + swconfigapps + toolsextensions + avdomain + btaudioadaptation_stub + drm_stub + ocrsrv_stub + omasuplasnconverterstubimpl + posmsgpluginreferenceimpl + power_save_display_mode_stub + srsfenginestub + systemswstubs + tactileclickplugin_stub + wlanhwinit_stub + camera + commonemail + conntools + contacts + contentcontrol + conversations + devicecontrol + systemswextensions + files + gallery + graphicsuis + helps + homescreen + im + imgvieweruis + iptelephony + java + location + messaging + mmsharinguis + avdomain + organizer + phone + photos + printing + profile + radio + rndtools + screensaver + settingsuis + speechsrv + utils + video + videotelephony + avdomain + webuis + accesssec + appinstall + appsupport + btservices + camerasrv + classicui + dlnasrv + drm + gsprofilesrv + hapticsservices + avdomain + homescreensrv + imghandling + imsrv + inputmethods + ipappprotocols + ipappservices + ipconnmgmt + legacypresence + locationsrv + mds + messagingmw + metadatasrv + avdomain + avdomain + mmuifw + netprotocols + networkingdm + opensrv + phonesrv + platformtools + remoteconn + remotemgmt + remotestorage + securitysrv + serviceapi + serviceapifw + shortlinkconn + ossrv + svgt + uiaccelerator + uiresources + uitools + usbservices + videoutils + vpnclient + web + websrv + wirelessacc + cellularsrv + S60Extras + devicesrv + graphics + imagingext + lbs + avdomainosext + networkingsrv + osrndtools + ossrv + systemswextensions + wlan + xmlsrv + buildplatforms + homescreentools + swconfigtools" schema="1.4.0">
+<SystemDefinition name="S60_SystemBuild + sysdef_dtd_1_4_0_xml + QuickOffice + adobereader + webvideo + wmdrmkeystorage_dist + wmdrmpd_dist + zipviewer + s60platformrelease + oemrndtools + swconfigapps + avdomain + btaudioadaptation_stub + drm_stub + ocrsrv_stub + omasuplasnconverterstubimpl + posmsgpluginreferenceimpl + power_save_display_mode_stub + srsfenginestub + systemswstubs + tactileclickplugin_stub + wlanhwinit_stub + camera + commonemail + conntools + contacts + contentcontrol + conversations + devicecontrol + systemswextensions + files + gallery + graphicsuis + helps + homescreen + im + imgvieweruis + iptelephony + jrt + location + messaging + mmsharinguis + avdomain + organizer + phone + photos + printing + profile + radio + rndtools + screensaver + settingsuis + speechsrv + graphics + utils + video + videotelephony + avdomain + webuis + accesssec + appinstall + appsupport + btservices + camerasrv + classicui + dlnasrv + drm + gsprofilesrv + hapticsservices + avdomain + homescreensrv + imghandling + imsrv + inputmethods + ipappprotocols + ipappservices + ipconnmgmt + legacypresence + locationsrv + mds + messagingmw + metadatasrv + avdomain + avdomain + mmuifw + netprotocols + networkingdm + opensrv + phonesrv + platformtools + remoteconn + remotemgmt + remotestorage + securitysrv + serviceapi + serviceapifw + shortlinkconn + ossrv + svgt + uiaccelerator + uiresources + uitools + usbservices + videoutils + vpnclient + web + websrv + wirelessacc + bt + cellularsrv + deviceplatformrelease + devicesrv + graphics + imagingext + lbs + avdomainosext + networkingsrv + osrndtools + ossrv + systemswextensions + usb + wlan + xmlsrv + buildplatforms + homescreentools + swconfigtools" schema="1.4.0">
 <systemModel>
 	<layer name="os_layer">
-<module name="toolsextensions">
-        <unit unitID="tools.toolsextensions" mrp="" bldFile="ext/tools/toolsextensions/group" name="toolsextensions"/>
+<module name="bt">
+        <unit unitID="lcdo.bt" mrp="" bldFile="sf/os/bt/group" name="bt"/>
       </module>
 <module name="cellularsrv">
 				<unit name="cellularsrv" unitID="tsydo.cellularsrv" bldFile="sf/os/cellularsrv/group" mrp=""/>       
@@ -103,8 +103,14 @@
 <module name="S60Extras">
         <unit unitID="platform.S60Extras" mrp="" bldFile="sf/os/deviceplatformrelease/S60Extras/group" name="S60Extras"/>
       </module>
-<module name="S60LocFiles">
-        <unit unitID="platform.S60LocFiles" mrp="" bldFile="sf/os/deviceplatformrelease/S60LocFiles/group" filter="sf_build" name="S60LocFiles"/>
+<module name="locfiles">
+				<unit unitID="platform.locfiles" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group" filter="" name="locfiles"/>
+				<unit unitID="platform.locfiles.set1" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set1" filter="" name="locfiles_set1"/>
+				<unit unitID="platform.locfiles.set2" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set2" filter="" name="locfiles_set2"/>
+				<unit unitID="platform.locfiles.set3" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set3" filter="" name="locfiles_set3"/>
+				<unit unitID="platform.locfiles.set4" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set4" filter="" name="locfiles_set4"/>
+				<unit unitID="platform.locfiles.set5" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set5" filter="" name="locfiles_set5"/>
+				<unit unitID="platform.locfiles.set6" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set6" filter="" name="locfiles_set6"/>
       </module>
 <module name="version">
         <unit unitID="platform.version" mrp="" bldFile="sf/os/deviceplatformrelease/Version/group" name="version"/>
@@ -141,6 +147,9 @@
 <module name="ossrv">                             
 <unit name="ossrv" unitID="mrtdo.ossrv" bldFile="sf/os/ossrv/group" mrp=""/>
 </module>
+<module name="usb">
+        <unit unitID="lcdo.usb" mrp="" bldFile="sf/os/usb/group" name="usb"/>
+      </module>
 <module name="wlan">
         <unit unitID="netdo.wlan" mrp="" bldFile="sf/os/wlan/group" name="wlan"/>
       </module>
@@ -149,7 +158,7 @@
       </module>
 <module name="sf_common_tsy">
 			<component name="sf_common_tsy">
-				<unit unitID="symbian.common_tsy" name="sf_common_tsy" bldFile="\sf\os\cellularsrv\telephonyserverplugins\common_tsy\group" mrp="" filter=""/>
+				<unit unitID="symbian.common_tsy" name="sf_common_tsy" bldFile="sf/os/cellularsrv/telephonyserverplugins/common_tsy/group" mrp="" filter=""/>
 			</component>
 		</module>
 <module name="sf_openvg11">
@@ -179,7 +188,7 @@
 <unit unitID="sedo.securitysrv.pkiutilities.Certificates" bldFile="sf/mw/securitysrv/pkiutilities/Certificates/group" mrp="" filter="sf_build" name="sedo_securitysrv_pkiutilities_Certificates"/>
 </module>
 <module name="btservices">
-        <unit unitID="lcdo.btservices" mrp="" bldFile="\sf\mw\btservices\group" name="btservices"/>
+        <unit unitID="lcdo.btservices" mrp="" bldFile="sf/mw/btservices/group" name="btservices"/>
       </module>
 <module name="camerasrv">
         <unit unitID="imm.camerasrv" mrp="" bldFile="sf/mw/camerasrv/group" name="camerasrv"/>
@@ -219,10 +228,10 @@
         <unit unitID="abs.inputmethods" mrp="" bldFile="sf/mw/inputmethods/group" name="inputmethods"/>
       </module>
 <module name="ipappprotocols">
-  		<unit unitID="ipappprotocol" name="ipappprotocol" bldFile="\sf\mw\ipappprotocols\group" mrp=""/> 
+  		<unit unitID="ipapdo.ipappprotocols" name="ipappprotocols" bldFile="sf/mw/ipappprotocols/group" mrp=""/> 
       </module>
 <module name="ipappsrv">
-  		<unit unitID="ipappsrv" name="ipappservice" bldFile="\sf\mw\ipappsrv\group" mrp=""/> 
+  		<unit unitID="ipasdo.ipappsrv" name="ipappsrv" bldFile="sf/mw/ipappsrv/group" mrp=""/> 
       </module>
 <module name="ipconnmgmt">
         <unit unitID="netdo.ipconnmgmt" mrp="" bldFile="sf/mw/ipconnmgmt/group" name="ipconnmgmt"/>
@@ -307,7 +316,7 @@
 <unit name="serviceapifw" unitID="sapido.serviceapifw" bldFile="sf/mw/serviceapifw/group" mrp=""/>
 </module>
 <module name="shortlinkconn">
-        <unit unitID="lcdo.shortlinkconn" mrp="" bldFile="\sf\mw\shortlinkconn\group" name="shortlinkconn"/>
+        <unit unitID="lcdo.shortlinkconn" mrp="" bldFile="sf/mw/shortlinkconn/group" name="shortlinkconn"/>
       </module>
 <module name="upnp">                             
 <unit name="upnp" unitID="mrtdo.upnp" bldFile="sf/mw/srvdiscovery/upnp/group" mrp=""/>
@@ -326,7 +335,6 @@
         <unit unitID="lcdo.usbservices" mrp="" bldFile="sf/mw/usbservices/group" name="usbservices"/>
         <!-- MattD: I really need to FCL the component to Add in a couple of null bld.inf files, but I'll push it a bit further by doing this -->
         <unit unitID="more.usbservices" mrp="" bldFile="sf/mw/usbservices/usbservices_plat/group" name="usbservices_API"/>
-
       </module>
 <module name="videoutils">
         <unit unitID="vado.videoutils" mrp="" bldFile="sf/mw/videoutils/group" name="videoutils"/>
@@ -355,12 +363,7 @@
         <unit unitID="tools.oemrndtools" mrp="" bldFile="ext/tools/oemrndtools/group" name="oemrndtools"/>
       </module>
 <module name="">
-<unit unitID="java.java.java_plat" mrp="" bldFile="sf/app/java/java_plat/group" filter="sf_build" name="java_java_plat"/>
-<unit unitID="java.java.java_stubs" mrp="" bldFile="sf/app/java/java_stubs/group" filter="sf_build" name="java_java_stubs"/>
 <unit unitID="tools.rndtools.htiui" mrp="" bldFile="sf/app/rndtools/htiui/group" filter="sf_build" name="tools_rndtools_htiui"/></module>
-<module name="swconfigapps">
-        <unit unitID="tools.swconfigapps" mrp="" bldFile="ext/tools/swconfigapps/group" name="swconfigapps"/>
-      </module>
 <module name="camera">
         <unit unitID="imm.camera" mrp="" bldFile="sf/app/camera/group" name="camera"/>
         <unit unitID="imm.camera.help" mrp="" bldFile="sf/app/camera/camerauis/cameraapp/help/group" name="camera_help"/>
@@ -407,6 +410,10 @@
 <module name="iptelephony">
         <unit name="iptelephony" unitID="te.iptelephony" bldFile="sf/app/iptelephony/group" mrp=""/>
       </module>
+<module name="jrt">
+<unit unitID="jrt.jrt.java_plat" mrp="" bldFile="sf/app/jrt/java_plat/group" filter="sf_build" name="java_java_plat"/>
+<unit unitID="jrt.jrt.java_stubs" mrp="" bldFile="sf/app/jrt/java_stubs/group" filter="sf_build" name="java_java_stubs"/>
+</module>
 <module name="location">
         <unit unitID="lodo.location" mrp="" bldFile="sf/app/location/group" name="location"/>
       </module>
@@ -414,7 +421,7 @@
         <unit unitID="Medo.messaging" mrp="" bldFile="sf/app/messaging/group" name="messaging"/>
       </module>
 <module name="mmsharinguis">
-  		<unit unitID="msdo.mmsharinguis" name="mmsharinguis" bldFile="\sf\app\mmsharinguis\group" mrp=""/> 
+  		<unit unitID="msdo.mmsharinguis" name="mmsharinguis" bldFile="sf/app/mmsharinguis/group" mrp=""/> 
       </module>
 <module name="musicplayer">
 				<unit unitID="musicplayer" mrp="" bldFile="sf/app/musicplayer/group" name="musicplayer"/>
@@ -469,17 +476,22 @@
 			</module>
 <module name="webuis">
 	    <unit unitID="browsing_domain.webuis" mrp="" bldFile="sf/app/webuis/group" name="webuis"/>
-      </module></layer>
+      </module>
+<module name="helps_loc2">
+        <unit unitID="platform.helps_loc2" mrp="" bldFile="sf/os/deviceplatformrelease/helps_loc2/group" name="helps_loc2"/>
+      </module>
+    </layer>
 	<layer name="tools_layer">
 <module name="uitools">
         <unit unitID="abs.uitools" mrp="" bldFile="sf/mw/uitools/group" name="uitools"/>
       </module>
 <module name="homescreentools">
-        <unit unitID="abs.homescreentools" mrp="" bldFile="sf/tools/homescreentools/group" name="homescreentools"/>
+        <unit unitID="hsdo.themeinstaller" mrp="" bldFile="sf/tools/homescreentools/themeinstaller/group" name="themeinstaller"/>
+<unit unitID="abs.homescreentools" mrp="" bldFile="sf/tools/homescreentools/group" name="homescreentools"/>
+        <unit unitID="hsdo.widgettools" mrp="" bldFile="sf/tools/homescreentools/widgettools/group" name="widgettools"/>
       </module>
-      
 <module name="buildplatforms">
-<unit unitID="sf_tools_buildplatforms" name="buildplatforms" bldFile="\sf\tools\buildplatforms\group" mrp=""/>
+    <unit unitID="sf_tools_buildplatforms" name="buildplatforms" bldFile="\sf\tools\buildplatforms\group" mrp=""/>
 </module>
 <module name="swconfigtools">
         <unit name="swconfigtools" unitID="sydo.swconfigtools" bldFile="sf/tools/swconfigtools/group" mrp=""/>
@@ -514,7 +526,7 @@
       </module>
 <module name="sf_licenseetsystub">
 			<component name="sf_licenseetsystub">
-				<unit unitID="symbian.licenseetsystub" name="sf_licenseetsystub" bldFile="\sf\os\cellularsrv\telephonyserverplugins\licenseetsystub\group" mrp="" filter=""/>
+				<unit unitID="symbian.licenseetsystub" name="sf_licenseetsystub" bldFile="sf/os/cellularsrv/telephonyserverplugins/licenseetsystub/group" mrp="" filter=""/>
 			</component>
 		</module></layer>
 <layer name="unit_test_layer">
@@ -558,14 +570,14 @@
     <targetList name="tools_rel" description="tools Release Targets" target="TOOLS_REL"/>
     <targetList name="cwtools" description="cwtools Targets" target="CWTOOLS"/>
     <targetList name="cwtools_rel" description="cwtools Release Targets" target="CWTOOLS_REL"/>
-		<configuration name="S60_sf" description="S60 sf build" filter="sf_build">
-<layerRef layerName="os_layer"/>
-<layerRef layerName="bldfirst_mw_layer"/>
-<layerRef layerName="mw_layer"/>
-<layerRef layerName="bldfirst_app_layer"/>
-<layerRef layerName="app_layer"/>
-<layerRef layerName="tools_layer"/>
-<layerRef layerName="stubs_layer"/>
+		<configuration name="S60_sf" description="S60 sf build" filter="raptor_S60_sf,sf_build">
+			<layerRef layerName="os_layer"/>
+			<layerRef layerName="bldfirst_mw_layer"/>
+			<layerRef layerName="mw_layer"/>
+			<layerRef layerName="bldfirst_app_layer"/>
+			<layerRef layerName="app_layer"/>
+			<layerRef layerName="tools_layer"/>
+			<layerRef layerName="stubs_layer"/>
       <task><buildLayer command="bldmake bldfiles" unitParallel="Y"/></task>
       <task><buildLayer command="abld export" unitParallel="Y"/></task>
       <task><buildLayer command="abld makefile" targetList="default_tools" unitParallel="Y" targetParallel="Y"/></task>

@@ -98,17 +98,12 @@
 <systemModel>
 <layer name="os" long-name="OS" levels="hw services">
 <block name="kernelhwsrv" level="hw" long-name="Kernel and Hardware Services" levels="hw-if adaptation framework test">
-<collection name="baseintegtests" long-name="Base Integration Testing" level="test">
-<component name="baseintegrationtest" long-name="Base Integration Test" introduced="9.3" purpose="development">
-<unit bldFile="os\kernelhwsrv\baseintegtests\baseintegrationtest\group" mrp="os\kernelhwsrv\baseintegtests\baseintegrationtest\group\base_integration_test.mrp"/>
-</component>
-</collection>
 <collection name="brdbootldr" long-name="Board Boot Loader" level="hw-if">
 <component name="ubootldr" long-name="Boot Loader" introduced="9.2" purpose="optional">
 <unit mrp="os\kernelhwsrv\brdbootldr\ubootldr\base_ubootldr.mrp"/>
 </component>
 </collection>
-<collection name="bsptemplate" long-name="BSP Template" level="hw-if">
+<collection name="bsptemplate" long-name="Board Support Package Template" level="hw-if">
 <component name="asspandvariant" long-name="Template ASSP and Variant" introduced="6.0" purpose="development">
 <unit bldFile="os\kernelhwsrv\bsptemplate\asspandvariant\template_variant" mrp="os\kernelhwsrv\bsptemplate\asspandvariant\base_template.mrp"/>
 </component>
@@ -154,6 +149,14 @@
 </component>
 <component name="cameraldd" long-name="Camera Drivers" introduced="tb92" purpose="optional">
 <unit bldFile="os\kernelhwsrv\kernel\eka\drivers\camerasc" mrp="os\kernelhwsrv\kernel\eka\drivers\camerasc\base_drivers_camerasc.mrp"/>
+</component>
+<component name="displayldd" long-name="Display Drivers" introduced="^3" purpose="optional" plugin="N">
+<!-- owned and maintained by graphics package. To be moved there as soon as technical limitations are resolved -->
+<unit bldFile="os\kernelhwsrv\kernel\eka\drivers\display" mrp="kernelhwsrv/kernel/eka/drivers/display/base_e32_drivers_display.mrp"/>
+</component>
+<component name="usbclientdrivers" long-name="USB Client Drivers" introduced="8.1b" purpose="optional" plugin="N">
+<!-- owned and maintained by usb package. To be moved there as soon as technical limitations are resolved -->
+<unit bldFile="os\kernelhwsrv\kernel\eka\drivers\usbc" mrp="kernelhwsrv/kernel/eka/drivers/usbc/base_e32_drivers_usbcli.mrp"/>
 </component>
 </collection>
 <collection name="driversupport" long-name="Generic Driver Support" level="hw-if">
@@ -273,12 +276,8 @@
 <component name="e32tools" long-name="E32 Tools" deprecated="tb91" purpose="development" class="PC">
 <unit bldFile="os\buildtools\toolsandutils\e32tools\group" mrp="os\buildtools\toolsandutils\e32tools\group\tools_e32tools.mrp"/>
 </component>
-<component name="wincredistribution" long-name="WinC Redistribution" purpose="development">
-<unit mrp="os\buildtools\dist_os\redistributionwinceka2\tools_redistribution_winc.mrp"/>
-</component>
-<component name="additionalredistribution" long-name="Additional Redistribution" purpose="development">
-<unit mrp="os\buildtools\perltoolsplat_os\redistribution\additional_tools.mrp"/>
-</component>
+
+
 <component name="statapi" long-name="STAT API" filter="gt" purpose="development">
 <unit bldFile="os\buildtools\toolsandutils\statapi\source\statapi\console" mrp="os\buildtools\toolsandutils\statapi\group\testtools_stat_device_gt.mrp"/>
 </component>
@@ -376,6 +375,11 @@
 </collection>
 </block>
 <block name="security" level="services" long-name="OS Security" levels="physical-abstraction plugins libraries management services utilities">
+<collection name="authenticationservices" long-name="Authentication Services" level="utilities">
+<component name="authenticationserver" long-name="Authentication Server" introduced="^3" purpose="optional" plugin="N">
+<unit bldFile="os\security\authenticationservices\authenticationserver\group" mrp="security/authenticationservices/authenticationserver/group/security_authserver.mrp"/>
+</component>
+</collection>
 <collection name="authorisation" long-name="Authorisation" level="utilities">
 <component name="userpromptservice" long-name="User Prompt Service" introduced="tb92" purpose="mandatory">
 <unit bldFile="os\security\authorisation\userpromptservice\group" mrp="os\security\authorisation\userpromptservice\group\security_ups.mrp"/>
@@ -587,6 +591,9 @@
 <component name="networkpositioningmodule" long-name="Network Positioning Module" introduced="tb92" purpose="optional" plugin="Y">
 <unit bldFile="os\lbs\datasourcemodules\networkpositioningmodule\group" mrp="os\lbs\datasourcemodules\networkpositioningmodule\group\lbs_network_positioning_module.mrp"/>
 </component>
+<component name="npeintegmodule" long-name="NPE Integration Module" introduced="^3" purpose="optional" plugin="Y">
+<unit bldFile="os\lbs\datasourcemodules\npeintegmodule\group" mrp="lbs/datasourcemodules/npeintegmodule/group/lbs_npeintegrationmodule.mrp"/>
+</component>
 </collection>
 <collection name="datasourceadaptation" long-name="Data Source Adaptation" level="adaptation">
 <component name="gpsdatasourceadaptation" long-name="GPS Data Source Adaptation" introduced="tb91" purpose="optional" plugin="Y">
@@ -631,9 +638,7 @@
 <unit bldFile="os\lbs\networkprotocolmodules\privacyprotocolmodule\group" mrp="os\lbs\networkprotocolmodules\privacyprotocolmodule\group\lbs_privacyprotocolmodule.mrp"/>
 </component>
 <component name="suplproxyprotocolmodule" long-name="SUPL Proxy Protocol Module" introduced="tb92" purpose="optional" plugin="Y" class="placeholder">
-<!-- PLACEHOLDER="DS.1806"
-        <unit bldFile="networkprotocolmodules/suplproxyprotocolmodule/group" mrp="networkprotocolmodules/suplproxyprotocolmodule/group/lbs_suplproxyprotocolmodule.mrp"/>
-		-->
+<unit bldFile="os\lbs\networkprotocolmodules\suplproxyprotocolmodule\group" mrp="lbs/networkprotocolmodules/suplproxyprotocolmodule/group/lbs_suplproxyprotocolmodule.mrp"/>
 </component>
 </collection>
 <collection name="lbsapitest" long-name="Location API Tests" level="application-interface">
@@ -668,12 +673,7 @@
 <component name="esockserver" long-name="ESock Server" purpose="mandatory">
 <unit bldFile="os\commsfw\datacommsserver\esockserver\group" mrp="os\commsfw\datacommsserver\esockserver\group\comms-infras_esock.mrp" version="3"/>
 </component>
-<component name="esockserverconfig" long-name="ESock Server Config" introduced="9.1" purpose="mandatory" class="config">
-<unit mrp="os\commsfw\datacommsserver\esockserver\group\comms-infras_esock-config.mrp" version="3"/>
-</component>
-<component name="networkinterfacemgr" long-name="Network Interface Manager" introduced="ER5U" purpose="mandatory">
-<unit bldFile="os\commsfw\datacommsserver\networkinterfacemgr\group" mrp="os\commsfw\datacommsserver\networkinterfacemgr\group\comms-infras_nifman.mrp" version="2"/>
-</component>
+
 <component name="networkingdialogapi" long-name="Networking Dialog API" introduced="6.1" purpose="optional">
 <unit bldFile="os\commsfw\datacommsserver\networkingdialogapi\group" mrp="os\commsfw\datacommsserver\networkingdialogapi\group\networking_dialog.mrp"/>
 </component>
@@ -772,20 +772,19 @@
 <component name="mbmsparameters" long-name="MBMS Parameters" introduced="tb92" purpose="optional" plugin="Y">
 <unit bldFile="os\networkingsrv\linklayercontrol\mbmsparameters\group" mrp="os\networkingsrv\linklayercontrol\mbmsparameters\group\networking_mbmsparams.mrp"/>
 </component>
+<component name="networkinterfacemgr" long-name="Network Interface Manager" introduced="ER5U" purpose="mandatory" plugin="N">
+<unit bldFile="os\networkingsrv\linklayercontrol\networkinterfacemgr\group" mrp="networkingsrv/linklayercontrol/networkinterfacemgr/group/comms-infras_nifman.mrp" version="2"/>
+</component>
 </collection>
 <collection name="linklayerprotocols" long-name="Link Layer Protocols" level="hw-if">
 <component name="ethernetnif" long-name="Ethernet NIF" purpose="optional" plugin="Y">
 <unit bldFile="os\networkingsrv\linklayerprotocols\ethernetnif\group" mrp="os\networkingsrv\linklayerprotocols\ethernetnif\group\networking_ether802.mrp"/>
 </component>
-<component name="ethernetpacketdriver" long-name="Ethernet Packet Driver" introduced="7.0" purpose="optional" plugin="Y">
-<unit mrp="os\networkingsrv\linklayerprotocols\ethernetpacketdriver\group\networking_etherdrv_srconly.mrp"/>
-</component>
+
 <component name="pppnif" long-name="PPP NIF" introduced="ER5" purpose="optional" plugin="Y">
 <unit bldFile="os\networkingsrv\linklayerprotocols\pppnif\group" mrp="os\networkingsrv\linklayerprotocols\pppnif\group\networking_ppp.mrp" version="2"/>
 </component>
-<component name="pppconfig" long-name="PPP Config" introduced="ER5" purpose="optional" class="config">
-<unit mrp="os\networkingsrv\linklayerprotocols\pppnif\group\networking_ppp-config.mrp" version="2"/>
-</component>
+
 <component name="slipnif" long-name="SLIP NIF" purpose="development" plugin="Y">
 <unit bldFile="os\networkingsrv\linklayerprotocols\slipnif\group" mrp="os\networkingsrv\linklayerprotocols\slipnif\group\networking_slip.mrp"/>
 </component>
@@ -799,9 +798,7 @@
 </component>
 </collection>
 <collection name="networkcontrol" long-name="Network Control" level="plugin">
-<component name="qosfwconfig" long-name="QoS Framework Config" introduced="7.0s" purpose="optional" class="config">
-<unit mrp="os\networkingsrv\networkcontrol\qosfwconfig\qos\group\networking_qos-config.mrp"/>
-</component>
+
 <component name="qoslib" long-name="QoS Library" introduced="7.0s" purpose="optional">
 <unit bldFile="os\networkingsrv\networkcontrol\qoslib\group" mrp="os\networkingsrv\networkcontrol\qoslib\group\networking_qoslib.mrp"/>
 </component>
@@ -1121,11 +1118,6 @@
 </collection>
 </block>
 <block name="usb" level="services" long-name="USB" levels="adaptation hw-if plugin framework server app-if">
-<collection name="usbldd" long-name="USB Logical Device Drivers" level="hw-if">
-<component name="usbclientdrivers" long-name="USB Client Drivers" introduced="8.1b" purpose="optional">
-<unit bldFile="os\kernelhwsrv\kernel\eka\drivers\usbc" mrp="os\kernelhwsrv\kernel\eka\drivers\usbc\base_e32_drivers_usbcli.mrp"/>
-</component>
-</collection>
 <collection name="usbmgmt" long-name="USB Management" level="server">
 <component name="usbmgr" long-name="USB Manager" purpose="optional">
 <unit bldFile="os\usb\usbmgmt\usbmgr\group" mrp="os\usb\usbmgmt\usbmgr\group\usb_manager.mrp" version="2"/>
@@ -1163,17 +1155,12 @@
 </collection>
 <collection name="mmlibs" long-name="Multimedia Libraries" level="middleware">
 <component name="mmutilitylib" long-name="Multimedia Utility Library" introduced="8.1" purpose="mandatory">
-<!-- PLACEHOLDER="DEF137894" START REMOVE -->
-<unit bldFile="mw\mmmw\mmmiddlewarefws\mmutilitylib\group" mrp="mw\mmmw\mmmiddlewarefws\mmutilitylib\group\multimedia_common.mrp"/>
-<!-- PLACEHOLDER="DEF137894" END REMOVE -->
-<!-- PLACEHOLDER="DEF137894"
-		<unit bldFile="mmlibs/mmutilitylib/group" mrp="mmlibs/mmutilitylib/group/multimedia_common.mrp"/>
-		-->
+<unit bldFile="os\mm\mmlibs\mmutilitylib\group" mrp="mm/mmlibs/mmutilitylib/group/multimedia_common.mrp"/>
 </component>
 </collection>
 <collection name="mmplugins" long-name="Multimedia Plugins" level="middleware">
 <component name="imagingplugins" long-name="Imaging Plugins" introduced="7.0s" purpose="optional" plugin="Y">
-<unit bldFile="os\mm\imagingandcamerafws\imagingfws\plugins\group" mrp="os\mm\imagingandcamerafws\imagingfws\plugins\group\multimedia_icl_plugin.mrp"/>
+<unit bldFile="os\mm\mmplugins\imagingplugins\group" mrp="mm/mmplugins/imagingplugins/group/multimedia_icl_plugin.mrp"/>
 </component>
 <component name="cameraplugins" long-name="Camera Plugins" introduced="7.0s" purpose="optional" plugin="Y">
 <unit bldFile="os\mm\mmplugins\cameraplugins\group" mrp="os\mm\mmplugins\cameraplugins\group\multimedia_ecam_plugins.mrp"/>
@@ -1436,9 +1423,6 @@
 </component>
 </collection>
 <collection name="graphicshwdrivers" long-name="Graphics Hardware Drivers" level="adaptation">
-<component name="displayldd" long-name="Display Drivers" introduced="tb92" purpose="optional">
-<unit bldFile="os\kernelhwsrv\kernel\eka\drivers\display" mrp="os\kernelhwsrv\kernel\eka\drivers\display\base_e32_drivers_display.mrp"/>
-</component>
 <component name="surfacemgr" long-name="Surface Manager" introduced="tb92" purpose="optional">
 <unit bldFile="os\graphics\graphicshwdrivers\surfacemgr\group" mrp="os\graphics\graphicshwdrivers\surfacemgr\group\graphics_surfacemanager.mrp"/>
 </component>
@@ -1558,7 +1542,7 @@
 <unit bldFile="os\textandloc\charconvfw\charconvplugins\group" mrp="os\textandloc\charconvfw\charconvplugins\group\syslibs_charconv_plugins.mrp"/>
 </component>
 <component name="fatfilenameconversionplugins" long-name="FAT Filename Conversion Plugins" introduced="9.1" purpose="optional" plugin="Y">
-<unit bldFile="os\kernelhwsrv\userlibandfileserver\fatfilenameconversionplugins\group" mrp="os\kernelhwsrv\userlibandfileserver\fatfilenameconversionplugins\group\syslibs_FATCharsetConv.mrp"/>
+<unit bldFile="os\textandloc\charconvfw\fatfilenameconversionplugins\group" mrp="textandloc/charconvfw/fatfilenameconversionplugins/group/syslibs_FATCharsetConv.mrp"/>
 </component>
 </collection>
 <collection name="fontandtxtsrv" long-name="Font and Text Services" level="fonts">
@@ -1599,7 +1583,7 @@
 </collection>
 <collection name="localesupport" long-name="Locale Support" level="util">
 <component name="reflocales" long-name="Reference Locales" purpose="optional" plugin="Y">
-<unit bldFile="os\kernelhwsrv\localisation\localesupport" mrp="os\kernelhwsrv\localisation\localesupport\mmpfiles\base_loce32.mrp"/>
+<unit bldFile="os\textandloc\localisation\localesupport" mrp="textandloc/localisation/localesupport/mmpfiles/base_loce32.mrp"/>
 </component>
 <component name="initlocale" long-name="Initialise Locale" introduced="tb91" purpose="mandatory" class="placeholder">
 <!-- placeholder for split from bafl -->
@@ -1626,6 +1610,9 @@
 </component>
 <component name="libxml2libs" long-name="Libxml2 Libraries" introduced="tb92" purpose="optional">
 <unit bldFile="os\xmlsrv\xml\libxml2libs\group" mrp="os\xmlsrv\xml\libxml2libs\group\syslibs_libxml2.mrp"/>
+</component>
+<component name="legacyminidomparser" introduced="7.0s" purpose="optional" plugin="N">
+<unit bldFile="os\xmlsrv\xml\legacyminidomparser\GROUP" mrp="xmlsrv/xml/legacyminidomparser/GROUP/syslibs_legacyminidomparser.mrp"/>
 </component>
 <component name="xmldomandxpath" long-name="XML DOM and XPath" introduced="tb92" purpose="optional">
 <unit bldFile="os\xmlsrv\xml\xmldomandxpath\group" mrp="os\xmlsrv\xml\xmldomandxpath\group\syslibs_xmldom.mrp"/>
@@ -1786,14 +1773,6 @@
 <component name="tzcompiler" long-name="Time Zone Compiler" introduced="9.1" purpose="optional" class="config PC">
 <unit bldFile="mw\appsupport\tzpcside\tzcompiler\group" mrp="mw\appsupport\tzpcside\tzcompiler\group\app-services_tzcompiler.mrp"/>
 </component>
-<!--PLACEHOLDER="DS.1802" START REMOVE -->
-<component name="worlddatabasekit" long-name="World Database Kit" introduced="6.0" deprecated="9.1" purpose="development" class="config PC">
-<unit bldFile="mw\appsupport\tzpcside\worlddatabasekit\group" mrp="mw\appsupport\tzpcside\worlddatabasekit\group\app-services_wlddatabasekit_cedar.mrp"/>
-</component>
-<component name="worldtools" long-name="World Tools" introduced="ER5" deprecated="9.1" purpose="development" class="config PC">
-<unit bldFile="mw\appsupport\tzpcside\worldtools\group" mrp="mw\appsupport\tzpcside\worldtools\group\app-services_wldtools.mrp"/>
-</component>
-<!--PLACEHOLDER="DS.1802" END REMOVE -->
 </collection>
 <collection name="appsupport_info" long-name="Generic Application Support Info" level="specific">
 <component name="appsupport_metadata" long-name="Generic Application Support Metadata" introduced="tb91" purpose="development" class="config PC">
@@ -1832,6 +1811,9 @@
 </component>
 <component name="telnetengine" long-name="Telnet Engine" introduced="6.0" purpose="optional">
 <unit bldFile="mw\netprotocols\applayerprotocols\telnetengine\group" mrp="mw\netprotocols\applayerprotocols\telnetengine\group\networking_telnet_e.mrp"/>
+</component>
+<component name="httpserviceapi" long-name="HTTP Service API" introduced="TB9.2" purpose="optional" plugin="N">
+<unit bldFile="mw\netprotocols\applayerprotocols\httpservice\group" mrp="netprotocols/applayerprotocols/httpservice/group/http_service.mrp"/>
 </component>
 </collection>
 <collection name="applayerpluginsandutils" long-name="Application Layer Plugins and Utils" level="framework">
@@ -1946,9 +1928,6 @@
 </component>
 </collection>
 <collection name="usbfunctiondrivers" long-name="USB Function Drivers" level="server">
-<component name="massstoragemgr" long-name="Mass Storage Manager" introduced="tb92" purpose="optional">
-<unit bldFile="mw\remoteconn\usbfunctiondrivers\massstoragemgr\group" mrp="mw\remoteconn\usbfunctiondrivers\massstoragemgr\group\connectivity_usbms.mrp"/>
-</component>
 </collection>
 <collection name="connectivitytransports" long-name="Connectivity Transports" level="plugin">
 <component name="plpremotelink" long-name="PLP Remote Link" deprecated="9.0" purpose="optional">
@@ -1965,21 +1944,18 @@
 <component name="mtpptpiptransport" long-name="MTP PTP-IP Transport" introduced="tb92" purpose="optional" plugin="Y">
 <unit bldFile="mw\remoteconn\mtptransports\mtpptpiptransport\group" mrp="mw\remoteconn\mtptransports\mtpptpiptransport\group\mtp_ptpip.mrp"/>
 </component>
+<component name="mtpcontroller" long-name="MTP Controller" introduced="^3" purpose="optional" plugin="Y">
+<unit bldFile="mw\remoteconn\mtptransports\mtpcontroller\group" mrp="remoteconn/mtptransports/mtpcontroller/group/mtpcontroller.mrp"/>
+</component>
 </collection>
 <collection name="mtpfws" long-name="MTP Frameworks" level="framework">
 <component name="mtpfw" long-name="MTP Framework" introduced="tb91" purpose="optional">
 <unit bldFile="mw\remoteconn\mtpfws\mtpfw\group" mrp="mw\remoteconn\mtpfws\mtpfw\group\mtp_framework.mrp"/>
 </component>
-<component name="mtpintegrationtest" long-name="MTP Integration Test" introduced="tb91" purpose="development">
-<unit bldFile="mw\remoteconn\mtpfws\mtpintegrationtest\group" mrp="mw\remoteconn\mtpfws\mtpintegrationtest\group\mtp_test.mrp"/>
-</component>
 </collection>
 <collection name="mtpdataproviders" long-name="MTP Data Providers" level="generic">
 <component name="mtpfileandfolderdp" long-name="MTP File and Folder Provider" introduced="tb91" purpose="optional" plugin="Y">
 <unit bldFile="mw\remoteconn\mtpdataproviders\mtpfileandfolderdp\group" mrp="mw\remoteconn\mtpdataproviders\mtpfileandfolderdp\group\mtp_filedp.mrp"/>
-</component>
-<component name="mtpbackupandrestoredp" long-name="Backup and Restore Provider" introduced="tb92" purpose="optional" plugin="Y">
-<unit bldFile="mw\remoteconn\mtpdataproviders\mtpbackupandrestoredp\group" mrp="mw\remoteconn\mtpdataproviders\mtpbackupandrestoredp\group\mtp_backupnrestoredp.mrp"/>
 </component>
 </collection>
 <collection name="backupandrestore" long-name="Backup and Restore" level="specific">
@@ -1988,19 +1964,6 @@
 </component>
 <component name="backuptest" long-name="Backup Test" introduced="tb91" purpose="development">
 <unit bldFile="mw\remoteconn\backupandrestore\backuptest\group" mrp="mw\remoteconn\backupandrestore\backuptest\group\connectivity_backuptest.mrp"/>
-</component>
-</collection>
-<collection name="connectivitypcside" long-name="Connectivity PC Side" level="generic">
-<component name="chatscripts" long-name="Chat Scripts" purpose="development">
-<unit bldFile="mw\remoteconn\connectivitypcside\chatscripts\group" mrp="mw\remoteconn\connectivitypcside\chatscripts\group\testtools_chatscripts.mrp"/>
-</component>
-</collection>
-<collection name="connectivitydevicefws" long-name="Connectivity Device Frameworks" level="framework">
-<component name="connectivityfw" long-name="Connectivity Framework" introduced="7.0s" deprecated="tb91" purpose="optional">
-<unit bldFile="mw\remoteconn\connectivitydevicefws\connectivityfw\group" mrp="mw\remoteconn\connectivitydevicefws\connectivityfw\group\connectivity_framework.mrp"/>
-</component>
-<component name="connectivityservices" long-name="Connectivity Services" introduced="7.0s" deprecated="tb91" purpose="optional">
-<unit bldFile="mw\remoteconn\connectivitydevicefws\connectivityservices\group" mrp="mw\remoteconn\connectivitydevicefws\connectivityservices\group\connectivity_services.mrp"/>
 </component>
 </collection>
 <collection name="obex" long-name="OBEX" level="generic">
@@ -2042,11 +2005,6 @@
 <unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\group" mrp="mw\mmmw\mmmiddlewarefws\mmfw\group\multimedia_mmf.mrp"/>
 </component>
 </collection>
-<collection name="mmmiddlewareplugins" long-name="Multimedia Middleware Plugins" level="framework">
-<component name="mmfwplugins" long-name="Multimedia Framework Plugins" introduced="7.0s" purpose="optional" plugin="Y">
-<unit bldFile="mw\mmmw\mmmiddlewarefws\mmfw\group_plugin" mrp="mw\mmmw\mmmiddlewarefws\mmfw\group_plugin\multimedia_mmf_plugin.mrp"/>
-</component>
-</collection>
 <collection name="mmfwtest" long-name="Multimedia Framework Test" level="server">
 <component name="mmfunittest" long-name="MMF Unit Tests" introduced="7.0s" purpose="development">
 <unit mrp="mw\mmmw\mmfwtest\mmfunittest\group\multimedia_unittest_mmf_source.mrp"/>
@@ -2054,14 +2012,8 @@
 <component name="mmfintegrationtest" long-name="MMF Integration Tests" introduced="7.0s" purpose="development">
 <unit mrp="mw\mmmw\mmfwtest\mmfintegrationtest\group\multimedia_inttest_mmf_source.mrp"/>
 </component>
-<component name="mmfcharacterisationvalidation" long-name="MMF Characterisation Validation" introduced="9.3" purpose="development">
-<unit bldFile="mw\mmmw\mmfwtest\mmfcharacterisationvalidation\group" mrp="mw\mmmw\mmfwtest\mmfcharacterisationvalidation\group\multimedia_mmf_char.mrp"/>
-</component>
 </collection>
 <collection name="mmvalidationsuite" long-name="Multimedia Validation Suite" level="specific">
-<component name="mmvalidationsuiteapp" long-name="Multimedia Validation Suite Application" introduced="tb91" purpose="development">
-<unit bldFile="mw\mmmw\mmvalidationsuite\mmvalidationsuiteapp\group" mrp="mw\mmmw\mmvalidationsuite\mmvalidationsuiteapp\group\multimedia_mvs_app.mrp"/>
-</component>
 <component name="mmvalidationsuiteagents" long-name="Multimedia Validation Suite Agents" introduced="tb91" purpose="development">
 <unit bldFile="mw\mmmw\mmvalidationsuite\mmvalidationsuiteagents\group" mrp="mw\mmmw\mmvalidationsuite\mmvalidationsuiteagents\group\multimedia_mvs_agents.mrp"/>
 </component>
@@ -2287,7 +2239,7 @@
 <block name="speechsrv" level="services" long-name="Speech Recognition UIs"/>
 <block name="homescreentools" level="services" long-name="Home Screen Tools"/>
 <block name="webuis" level="services" long-name="Web UIs"/>
-<block name="java" level="services" long-name="Java"/>
+<block name="jrt" level="services" long-name="JRT"/>
 <block name="rndtools" level="services" long-name="RD tools"/>
 <block name="helps" level="apps" span="2" long-name="Help Apps" levels="eng tools if ui">
 <collection name="helps_info" long-name="Help Apps Info" level="ui">
