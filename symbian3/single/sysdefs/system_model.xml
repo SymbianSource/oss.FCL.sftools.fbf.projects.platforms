@@ -688,16 +688,12 @@
 <component name="tzlocrscfactory" long-name="Time Zone Localization Resource Factory" introduced="9.1" purpose="optional" class="config" plugin="N">
 <unit bldFile="/sf/mw/appsupport/tzservices/tzlocrscfactory/group" mrp="/sf/mw/appsupport/tzservices/tzlocrscfactory/group/app-services_tzlocalizationrscfactory.mrp"/>
 </component>
-
-
-
-<!--  <component name="worldserver" long-name="World Server" introduced="7.0" deprecated="9.1" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/appsupport/tzservices/worldserver/group" mrp="/sf/mw/appsupport/tzservices/worldserver/group/app-services_worldserver.mrp"/>
-</component> -->
-<!--  <component name="worldservertest" long-name="World Server Test" introduced="8.1" deprecated="9.1" purpose="development" plugin="N">
-<unit bldFile="/sf/mw/appsupport/tzservices/worldservertest/TestWorldSrv" mrp="/sf/mw/appsupport/tzservices/worldservertest/TestWorldSrv/app-services_testworldsrv.mrp"/>
-</component> -->
-
+<!-- MattD: 20091124 - Dropping out the GT timezone DB to hopefully stop the ADTupdater crash. Note that Symbian2 does this by changing the bld.inf -->
+<!--
+<component name="tzdatabase" long-name="Time Zone Database" introduced="9.1" purpose="optional" class="config">
+<unit bldFile="mw\appsupport\tzservices\tzdatabase\group" mrp="mw\appsupport\tzservices\tzdatabase\group\app-services_tzdb.mrp"/>
+</component>
+-->
 </collection>
 <collection name="contenthandling" long-name="Content Handling" level="plugin">
 <component name="webrecognisers" long-name="Web Recognisers" purpose="optional" plugin="Y">
@@ -2622,22 +2618,14 @@
 <component name="omxilcomponentcommon" long-name="OpenMAX IL Component Framework" introduced="^3" purpose="optional" plugin="N">
 <unit bldFile="/sf/os/mm/omxil/omxilcomponentcommon/group" mrp="mm/omxil/omxilcomponentcommon/group/multimedia_omx_il_comp.mrp" version="1"/>
 </component>
-
 <component name="omxilapi" long-name="OpenMAX IL API" introduced="tb92" purpose="optional" plugin="N">
 <unit bldFile="/sf/os/mm/omxil/omxilapi/group" mrp="/sf/os/mm/omxil/omxilapi/group/multimedia_omx_il_api.mrp" version="1"/>
-
 </component>
 <component name="omxilcore" long-name="OpenMAX IL Core" introduced="tb92" purpose="optional" plugin="N">
 <unit bldFile="/sf/os/mm/omxil/omxilcore/group" mrp="/sf/os/mm/omxil/omxilcore/group/multimedia_omx_il_core.mrp" version="1"/>
-
 </component>
-<component name="omxilcomponentcommon" long-name="OpenMAX IL Component Framework" introduced="^3" purpose="optional" plugin="N">
-<unit bldFile="mm/omxil/omxilcomponentcommon/group" mrp="mm/omxil/omxilcomponentcommon/group/multimedia_omx_il_comp.mrp" version="1"/>
-</component>
-
 <component name="omxilrefcomps" long-name="OpenMAX IL Reference Components" introduced="tb92" purpose="optional" plugin="N">
 <unit bldFile="/sf/os/mm/omxil/omxilrefcomps/ref_components/group" mrp="/sf/os/mm/omxil/omxilrefcomps/ref_components/group/multimedia_omx_il_comp_ref.mrp" version="1"/>
-
 </component>
 <component name="omxilunittest" long-name="OpenMAX IL Unit Tests" introduced="tb92" purpose="development" plugin="N">
 <unit mrp="/sf/os/mm/omxil/omxilunittest/group/multimedia_unittest_omx_il.mrp" bldFile="/sf/os/mm/omxil/omxilunittest/group" />
@@ -3076,7 +3064,7 @@
 <unit bldFile="/sf/os/security/cryptomgmtlibs/securityutils/group" mrp="/sf/os/security/cryptomgmtlibs/securityutils/group/security_common.mrp"/>
 </component>
 <component name="securitytestfw" long-name="Security Test Framework" introduced="7.0" deprecated="tb92" purpose="development" plugin="N">
-<unit mrp="/sf/os/security/cryptomgmtlibs/securitytestfw/group/security_testframework.mrp"/>
+<unit mrp="/sf/os/security/cryptomgmtlibs/securitytestfw/group/security_testframework.mrp" bldFile="/sf/os/security/cryptomgmtlibs/securitytestfw/group"/>
 </component>
 <component name="securitydocs" long-name="Security Documentation" purpose="development" class="doc" plugin="N">
 <unit mrp="/sf/os/security/cryptomgmtlibs/securitydocs/security_documentation.mrp"/>
