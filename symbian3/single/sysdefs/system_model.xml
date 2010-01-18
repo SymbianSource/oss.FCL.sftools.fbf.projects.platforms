@@ -2181,6 +2181,10 @@
 
 <unit bldFile="/sf/os/graphics/windowing/windowserver/group" mrp="/sf/os/graphics/windowing/windowserver/group/graphics_wserv.mrp"/>
 </component>
+<component name="windowserver_openwfc" long-name="Window Server (OpenWF)" purpose="mandatory" plugin="N">
+  <unit bldFile="/sf/os/graphics/windowing/windowserver/group/openwfc" mrp="" /> 
+</component>
+
      <component name="windowserverplugins" long-name="Window Server Plugins" purpose="mandatory" plugin="Y" origin-model="Symbian">
       <unit bldFile="/sf/os/graphics/windowing/windowserverplugins/group"/>
      </component>
