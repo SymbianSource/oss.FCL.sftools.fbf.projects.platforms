@@ -103,15 +103,6 @@
 <module name="S60Extras">
         <unit unitID="platform.S60Extras" mrp="" bldFile="sf/os/deviceplatformrelease/S60Extras/group" name="S60Extras"/>
       </module>
-<module name="locfiles">
-				<unit unitID="platform.locfiles" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group" filter="" name="locfiles"/>
-				<unit unitID="platform.locfiles.set1" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set1" filter="" name="locfiles_set1"/>
-				<unit unitID="platform.locfiles.set2" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set2" filter="" name="locfiles_set2"/>
-				<unit unitID="platform.locfiles.set3" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set3" filter="" name="locfiles_set3"/>
-				<unit unitID="platform.locfiles.set4" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set4" filter="" name="locfiles_set4"/>
-				<unit unitID="platform.locfiles.set5" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set5" filter="" name="locfiles_set5"/>
-				<unit unitID="platform.locfiles.set6" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set6" filter="" name="locfiles_set6"/>
-      </module>
 <module name="version">
         <unit unitID="platform.version" mrp="" bldFile="sf/os/deviceplatformrelease/Version/group" name="version"/>
       </module>
@@ -119,8 +110,10 @@
         <unit unitID="sydo.devicesrv" mrp="" bldFile="sf/os/devicesrv/group" name="devicesrv"/>                  
       </module>
 <module name="">
-<unit unitID="tools.osrndtools.osrndtools_plat.hti_api" mrp="" bldFile="sf/os/osrndtools/osrndtools_plat/hti_api/group" filter="sf_build" name="tools_osrndtools_osrndtools_plat_hti_api"/>
-<unit unitID="tools.osrndtools.hti" mrp="" bldFile="sf/os/osrndtools/hti/group" filter="sf_build" name="tools_osrndtools_hti"/></module>
+<unit unitID="AudioEqualizerUtility" mrp="" bldFile="sf/os/mm/devsoundextensions/effectspresets/AudioEqualizerUtility/group" filter="!dfs_build" name="AudioEqualizerUtility"/>
+<unit unitID="EnvironmentalReverbUtility" mrp="" bldFile="sf/os/mm/devsoundextensions/effectspresets/EnvironmentalReverbUtility/group" filter="!dfs_build" name="EnvironmentalReverbUtility"/>
+<unit unitID="StereoWideningUtility" mrp="" bldFile="sf/os/mm/devsoundextensions/effectspresets/StereoWideningUtility/group" filter="!dfs_build" name="StereoWideningUtility"/>
+</module>
 <module name="graphics">
         <unit unitID="abs.graphics" mrp="" bldFile="sf/os/graphics/group" name="graphics"/>
         <!-- MattD: graphics/group is missing, as are various subdirs...lets cobble something together... -->
@@ -194,17 +187,7 @@
         <unit unitID="imm.camerasrv" mrp="" bldFile="sf/mw/camerasrv/group" name="camerasrv"/>
       </module>
 <module name="dlnasrv">
-        <unit name="homemedia" unitID="hcdo.homemedia" bldFile="sf/mw/dlnasrv/homemedia/group" mrp=""/>
-        <unit name="homesync" unitID="hcdo.homesync" bldFile="sf/mw/dlnasrv/homesync/group" mrp=""/>
-        <unit name="upnpavcontrolpoint" unitID="hcdo.upnpavcontrolpoint" bldFile="sf/mw/dlnasrv/upnpavcontrolpoint/group" mrp=""/>
-        <unit name="upnpframework" unitID="hcdo.upnpframework" bldFile="sf/mw/dlnasrv/upnpframework/group" mrp=""/>
-        <unit name="upnpharvester" unitID="hcdo.upnpharvester" bldFile="sf/mw/dlnasrv/upnpharvester/group" mrp=""/>
-        <unit name="upnpmediaserver" unitID="hcdo.upnpmediaserver" bldFile="sf/mw/dlnasrv/upnpmediaserver/group" mrp=""/>
-        <unit name="upnpavcontroller" unitID="hcdo.upnpavcontroller" bldFile="sf/mw/dlnasrv/upnpavcontroller/group" mrp=""/>
-        <unit name="upnpsharing" unitID="hcdo.upnpsharing" bldFile="sf/mw/dlnasrv/upnpsharing/group" mrp=""/>
-        <unit name="upnpsettings" unitID="hcdo.upnpsettings" bldFile="sf/mw/dlnasrv/upnpsettings/group" mrp=""/>
-        <unit name="upnpmpxplugins" unitID="hcdo.upnpmpxplugins" bldFile="sf/mw/dlnasrv/upnpmpxplugins/group" mrp=""/>
-        <unit name="dlnasrv_plat" unitID="hcdo.dlnasrv_plat" bldFile="sf/mw/dlnasrv/dlnasrv_plat/group" mrp=""/>
+        <unit name="dlnasrv" unitID="hcdo.dlnasrv" bldFile="sf/mw/dlnasrv/group" mrp=""/>
       </module>
 <module name="drm">
         <unit unitID="sedo.drm" mrp="" bldFile="sf/mw/drm/group" name="drm"/>
@@ -263,39 +246,23 @@
 <module name="netprotocols">
 	    <unit unitID="browsing_domain.netprotocols" mrp="" bldFile="sf/mw/netprotocols/group" name="netprotocols"/>
       </module>
-<module name="networkingdm">
-        <unit unitID="netdo.networkingdm" mrp="" bldFile="sf/mw/networkingdm/group" name="networkingdm"/>
-      </module>
 <module name="opensrv">
         <unit unitID="MeCodo.opensrv" mrp="" bldFile="sf/mw/opensrv/group" name="opensrv"/>
       </module>
 <module name="phonesrv">
-	      <unit name="phonesrv_plat" unitID="tedo.phonesrv_plat" bldFile="sf/mw/phonesrv/phonesrv_plat/group" mrp=""/>
-        <unit name="phonesrv_pub" unitID="tedo.phonesrv_pub" bldFile="sf/mw/phonesrv/phonesrv_pub/group" mrp=""/>
-        <unit name="CbsServer" unitID="tedo.CbsServer" bldFile="sf/mw/phonesrv/cbs/CbsServer/group" mrp=""/>
-        <unit name="cbsui" unitID="tedo.cbsui" bldFile="sf/mw/phonesrv/cbs/cbsui/group" mrp=""/>
-        <unit name="convergedcallengine" unitID="tedo.convergedcallengine" bldFile="sf/mw/phonesrv/convergedcallengine/group" mrp=""/>
-        <unit name="networkhandlingengine" unitID="tedo.networkhandlingengine" bldFile="sf/mw/phonesrv/networkhandling/networkhandlingengine/group" mrp=""/>
-        <unit name="aiwdialdata" unitID="tedo.aiwdialdata" bldFile="sf/mw/phonesrv/phoneclientserver/aiwdialdata/group" mrp=""/>
-        <unit name="CallUI" unitID="tedo.CallUI" bldFile="sf/mw/phonesrv/phoneclientserver/CallUI/group" mrp=""/>
-        <unit name="dialutils" unitID="tedo.dialutils" bldFile="sf/mw/phonesrv/phoneclientserver/dialutils/group" mrp=""/>
-        <unit name="EnPolicy" unitID="tedo.EnPolicy" bldFile="sf/mw/phonesrv/phoneclientserver/EnPolicy/group" mrp=""/>
-        <unit name="phoneclient" unitID="tedo.phoneclient" bldFile="sf/mw/phonesrv/phoneclientserver/phoneclient/group" mrp=""/>
-        <unit name="phoneserver" unitID="tedo.phoneserver" bldFile="sf/mw/phonesrv/phoneclientserver/phoneserver/group" mrp=""/>
-        <unit name="SatServer" unitID="tedo.SatServer" bldFile="sf/mw/phonesrv/satengine/SatServer/group" mrp=""/>
-        <unit name="satapp" unitID="tedo.satapp" bldFile="sf/mw/phonesrv/satui/satapp/group" mrp=""/>
-        <unit name="satplugin" unitID="tedo.satplugin" bldFile="sf/mw/phonesrv/satui/satplugin/group" mrp=""/>
-        <unit name="phoneparser" unitID="tedo.phoneparser" bldFile="sf/mw/phonesrv/telutils/phoneparser/group" mrp=""/>
-				<unit name="telephonyservice" unitID="tedo.telephonyservice" bldFile="sf/mw/phonesrv/telutils/telephonyservice/group" mrp=""/>
-        <unit name="telephonysettings" unitID="tedo.telephonysettings" bldFile="sf/mw/phonesrv/cellular/telephonysettings/group" mrp=""/>
-        <unit name="sssettings" unitID="tedo.sssettings" bldFile="sf/mw/phonesrv/cellular/sssettings/group" mrp=""/>
-        <unit name="psetnotesui" unitID="tedo.psetnotesui" bldFile="sf/mw/phonesrv/cellular/psetnotesui/group" mrp=""/>
-        <unit name="servicerequest" unitID="tedo.servicerequest" bldFile="sf/mw/phonesrv/cellular/servicerequest/group" mrp=""/>
-				<unit name="phonecmdhnlr" unitID="tedo.phonecmdhnlr" bldFile="sf/mw/phonesrv/phonecmdhandler/phonecmdhnlr/group" mrp=""/>
-				<unit name="vmbxengine" unitID="tedo.vmbxengine" bldFile="sf/mw/phonesrv/engines/vmbxengine/group" mrp=""/>
+	      <unit name="phonesrv" unitID="tedo.phonesrv" bldFile="sf/mw/phonesrv/group" mrp=""/>
       </module>
 <module name="platformtools">
         <unit unitID="tools.platformtools" mrp="" bldFile="sf/mw/platformtools/group" name="platformtools"/>
+      </module>
+<module name="ptihangulcore">
+        <unit unitID="abs.ptihangulcore" mrp="" bldFile="sf/mw/ptihangulcore/group" name="ptihangulcore"/>
+      </module>
+<module name="ptikoreanqwertycore">
+        <unit unitID="abs.ptikoreanqwertycore" mrp="" bldFile="sf/mw/ptikoreanqwertycore/group" name="ptikoreanqwertycore"/>
+      </module>
+<module name="qt">
+        <unit unitID="qtdo.qt" mrp="" bldFile="sf/mw/qt" name="qt"/>
       </module>
 <module name="remoteconn">
         <unit name="remoteconn" unitID="sydo.remoteconn" bldFile="sf/mw/remoteconn/group" mrp=""/>
@@ -362,8 +329,6 @@
 <module name="oemrndtools">
         <unit unitID="tools.oemrndtools" mrp="" bldFile="ext/tools/oemrndtools/group" name="oemrndtools"/>
       </module>
-<module name="">
-<unit unitID="tools.rndtools.htiui" mrp="" bldFile="sf/app/rndtools/htiui/group" filter="sf_build" name="tools_rndtools_htiui"/></module>
 <module name="camera">
         <unit unitID="imm.camera" mrp="" bldFile="sf/app/camera/group" name="camera"/>
         <unit unitID="imm.camera.help" mrp="" bldFile="sf/app/camera/camerauis/cameraapp/help/group" name="camera_help"/>
@@ -389,9 +354,6 @@
 <module name="files">
         <unit name="files" unitID="presdo.files" bldFile="sf/app/files/group" mrp=""/>
       </module>
-<module name="gallery">
-        <unit unitID="imm.gallery" mrp="" bldFile="sf/app/gallery/group" name="gallery"/>
-      </module>
 <module name="graphicsuis">
         <unit unitID="abs.graphicsuis" mrp="" bldFile="sf/app/graphicsuis/group" name="graphicsuis"/>
       </module>
@@ -404,16 +366,12 @@
 <module name="im">
         <unit unitID="impp.im" mrp="" bldFile="sf/app/im/group" name="im"/>
       </module>
-<module name="imgvieweruis">
-        <unit unitID="imm.imgvieweruis" mrp="" bldFile="sf/app/imgvieweruis/group" name="imgvieweruis"/>
-      </module>
 <module name="iptelephony">
         <unit name="iptelephony" unitID="te.iptelephony" bldFile="sf/app/iptelephony/group" mrp=""/>
       </module>
 <module name="jrt">
-<unit unitID="jrt.jrt.java_plat" mrp="" bldFile="sf/app/jrt/java_plat/group" filter="sf_build" name="java_java_plat"/>
-<unit unitID="jrt.jrt.java_stubs" mrp="" bldFile="sf/app/jrt/java_stubs/group" filter="sf_build" name="java_java_stubs"/>
-</module>
+<unit unitID="jrt.jrt.jrt_plat" mrp="" bldFile="sf/app/jrt/jrt_plat/group" filter="sf_build" name="jrt_jrt_plat"/>
+<unit unitID="jrt.jrt.java_stubs" mrp="" bldFile="sf/app/jrt/java_stubs/group" filter="sf_build" name="jrt_jrt_stubs"/></module>
 <module name="location">
         <unit unitID="lodo.location" mrp="" bldFile="sf/app/location/group" name="location"/>
       </module>
@@ -477,11 +435,33 @@
 <module name="webuis">
 	    <unit unitID="browsing_domain.webuis" mrp="" bldFile="sf/app/webuis/group" name="webuis"/>
       </module>
+<module name="locfiles">
+				<unit unitID="platform.locfiles" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group" filter="" name="locfiles"/>
+				<unit unitID="platform.locfiles.set1" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set1" filter="" name="locfiles_set1"/>
+				<unit unitID="platform.locfiles.set2" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set2" filter="" name="locfiles_set2"/>
+				<unit unitID="platform.locfiles.set3" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set3" filter="" name="locfiles_set3"/>
+				<unit unitID="platform.locfiles.set4" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set4" filter="" name="locfiles_set4"/>
+				<unit unitID="platform.locfiles.set5" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set5" filter="" name="locfiles_set5"/>
+				<unit unitID="platform.locfiles.set6" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set6" filter="" name="locfiles_set6"/>
+				<unit unitID="platform.locfiles.set7" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set7" filter="" name="locfiles_set7"/>
+				<unit unitID="platform.locfiles.set8" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set8" filter="" name="locfiles_set8"/>
+				<unit unitID="platform.locfiles.set9" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set9" filter="" name="locfiles_set9"/>
+				<unit unitID="platform.locfiles.set10" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set10" filter="" name="locfiles_set10"/>
+				<unit unitID="platform.locfiles.set11" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set11" filter="" name="locfiles_set11"/>
+				<unit unitID="platform.locfiles.set12" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set12" filter="" name="locfiles_set12"/>
+				<unit unitID="platform.locfiles.set13" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set13" filter="" name="locfiles_set13"/>
+				<unit unitID="platform.locfiles.set14" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set14" filter="" name="locfiles_set14"/>
+				<unit unitID="platform.locfiles.set15" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set15" filter="" name="locfiles_set15"/>
+				<unit unitID="platform.locfiles.set16" mrp="" bldFile="sf/os/deviceplatformrelease/locfiles/group/set16" filter="" name="locfiles_set16"/>
+      </module>
 <module name="helps_loc2">
         <unit unitID="platform.helps_loc2" mrp="" bldFile="sf/os/deviceplatformrelease/helps_loc2/group" name="helps_loc2"/>
       </module>
     </layer>
 	<layer name="tools_layer">
+<module name="qtconf">
+        <unit unitID="qtdo.qt.qtconf" mrp="" bldFile="sf/mw/qt/group" name="qtconf"/>
+      </module>
 <module name="uitools">
         <unit unitID="abs.uitools" mrp="" bldFile="sf/mw/uitools/group" name="uitools"/>
       </module>

@@ -735,7 +735,7 @@
 </component>
 -->
 <component name="commstools" long-name="Comms Tools" introduced="tb91" purpose="development" class="PC">
-<unit mrp="os\commsfw\commsfwtools\commstools\group\comms-infras_tools.mrp"/>
+<unit bldFile="os/commsfw/commsfwtools/commstools/group" mrp="os/commsfw/commsfwtools/commstools/group/comms-infras_tools.mrp"/>
 </component>
 </collection>
 </block>
@@ -1118,6 +1118,9 @@
 </collection>
 </block>
 <block name="usb" level="services" long-name="USB" levels="adaptation hw-if plugin framework server app-if">
+<collection name="usbldd" long-name="USB Logical Device Drivers" level="hw-if">
+<!-- usbclientdrivers  to be moved here from kernelhwsrv-->
+</collection>
 <collection name="usbmgmt" long-name="USB Management" level="server">
 <component name="usbmgr" long-name="USB Manager" purpose="optional">
 <unit bldFile="os\usb\usbmgmt\usbmgr\group" mrp="os\usb\usbmgmt\usbmgr\group\usb_manager.mrp" version="2"/>
