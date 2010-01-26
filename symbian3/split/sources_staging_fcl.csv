@@ -30,7 +30,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/app/mmsharinguis/,/sf/app/mmsharinguis,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/app/musicplayer/,/sf/app/musicplayer,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/app/organizer/,/sf/app/organizer,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_stage/oss/FCL/sf/app/phone/,/sf/app/phone,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/oss/FCL/sf/app/phone/,/sf/app/phone,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/app/photos/,/sf/app/photos,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/app/poc/,/sf/app/poc,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/app/printing/,/sf/app/printing,branch,default,layers.sysdef.xml
