@@ -67,6 +67,7 @@
     <property name="sf.sdk.header.list.file"     value="${sf.spec.job.dir}/../sdkFiles.txt"/>
     
     <property name="sf.spec.test.sendpkg.enable" value="true"/>
+    <property name="sf.test.csv.file"            value="${sf.spec.job.dir}/../platform_test.csv"/>
 
     <property name="sf.spec.md5.enable"          value="true"/>
 
