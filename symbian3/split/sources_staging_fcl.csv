@@ -95,7 +95,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/web/,/sf/mw/web,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/websrv/,/sf/mw/websrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/wirelessacc/,/sf/mw/wirelessacc,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_development/sfl/FCL/sf/os/boardsupport/,/sf/os/boardsupport,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/boardsupport/,/sf/os/boardsupport,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/bt/,/sf/os/bt,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/os/buildtools/,/sf/os/buildtools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/cellularsrv/,/sf/os/cellularsrv,branch,default,layers.sysdef.xml
