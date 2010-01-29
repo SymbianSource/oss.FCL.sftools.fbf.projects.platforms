@@ -102,7 +102,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/commsfw/,/sf/os/commsfw,changeset,b6139031a239,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,changeset,fe12bf603a6d,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/devicesrv/,/sf/os/devicesrv,changeset,ae8831c2b0c3,layers.sysdef.xml
-//v800008/Builds01/mercurial_development/sfl/FCL/sf/os/graphics/,/sf/os/graphics,changeset,9e8989f2cd63,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/os/graphics/,/sf/os/graphics,changeset,cf8414d8d764,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/imagingext/,/sf/os/imagingext,changeset,469c91dae73b,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,changeset,a9bf1d2c555e,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/os/lbs/,/sf/os/lbs,changeset,31fd0fb3ee1f,layers.sysdef.xml
