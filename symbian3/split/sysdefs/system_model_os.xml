@@ -251,8 +251,8 @@
 </block>
 <block name="buildtools" level="hw" long-name="Build Tools" levels="bld mw fw ui">
 <collection name="bldsystemtools" long-name="Build System Tools" level="bld">
-<component name="buildsystemtools" long-name="Build System Tools" purpose="development">
-<unit bldFile="os\buildtools\bldsystemtools\buildsystemtools\group" mrp="os\buildtools\bldsystemtools\buildsystemtools\group\tools_build.mrp"/>
+<component name="sysdeftools" long-name="System Definition Tools" purpose="development" introduced="^2" plugin="N">
+<unit mrp="os/buildtools/bldsystemtools/sysdeftools/group/sysdeftools.mrp"/>
 </component>
 <component name="gttechviewbaseline" long-name="GT Techview Baseline" purpose="development">
 <unit mrp="os\buildtools\packaging\additionalutils\gt_techview_baseline.mrp"/>
@@ -1802,9 +1802,6 @@
 <block name="conntools" level="generic" long-name="Connectivity Tools"/>
 <block name="ipappsrv" level="specific" long-name="IP App Services" levels="framework generic server conn plugin">
 <collection name="multimediacommscontroller" long-name="Multimedia Comms Controller" level="conn">
-<component name="amrpayloadformatter" long-name="AMR Payload Formatter" introduced="tb92" purpose="optional">
-<unit bldFile="mw\ipappsrv\multimediacommscontroller\amrpayloadformatter\group" mrp="mw\ipappsrv\multimediacommscontroller\amrpayloadformatter\group\mm-protocols_rtpamr.mrp"/>
-</component>
 </collection>
 <collection name="ipappsrv_info" long-name="IP App Services Info" level="plugin">
 <component name="ipappsrv_metadata" long-name="IP App Services Metadata" introduced="tb91" purpose="development" class="config PC">

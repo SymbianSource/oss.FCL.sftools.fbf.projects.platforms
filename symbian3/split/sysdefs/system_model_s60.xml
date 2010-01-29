@@ -131,23 +131,14 @@
 <module name="mm">
 				<unit unitID="mm" mrp="" bldFile="sf/os/mm/group" name="mm"/>
 			</module>
-<module name="networkingsrv">
-        <unit unitID="netdo.networkingsrv" mrp="" bldFile="sf/os/networkingsrv/group" name="networkingsrv"/>
-      </module>
 <module name="osrndtools">
         <unit unitID="tools.osrndtools" mrp="" bldFile="sf/os/osrndtools/group" name="osrndtools"/>
       </module>
-<module name="ossrv">                             
-<unit name="ossrv" unitID="mrtdo.ossrv" bldFile="sf/os/ossrv/group" mrp=""/>
-</module>
 <module name="usb">
         <unit unitID="lcdo.usb" mrp="" bldFile="sf/os/usb/group" name="usb"/>
       </module>
 <module name="wlan">
         <unit unitID="netdo.wlan" mrp="" bldFile="sf/os/wlan/group" name="wlan"/>
-      </module>
-<module name="xmlsrv">
-        <unit unitID="WSDo.xmlsrv" mrp="" bldFile="sf/os/xmlsrv/group" name="xmlsrv"/>
       </module>
 <module name="sf_common_tsy">
 			<component name="sf_common_tsy">
@@ -318,8 +309,14 @@
 <module name="wirelessacc">
         <unit unitID="netdo.wirelessacc" mrp="" bldFile="sf/mw/wirelessacc/group" name="wirelessacc"/>
       </module>
+<module name="ossrv">                             
+<unit name="ossrv" unitID="mrtdo.ossrv" bldFile="sf/os/ossrv/group" mrp=""/>
+</module>
 <module name="textandloc">
         <unit unitID="abs.textandloc" mrp="" bldFile="sf/os/textandloc/group" name="textandloc"/>
+      </module>
+<module name="xmlsrv">
+        <unit unitID="WSDo.xmlsrv" mrp="" bldFile="sf/os/xmlsrv/group" name="xmlsrv"/>
       </module></layer>
 	<layer name="bldfirst_app_layer">
 <module name="contacts">
@@ -512,8 +509,6 @@
 <layer name="unit_test_layer">
       <module name="camera_unit_tests">
       </module>
-<module name="gallery_unit_tests">
-      </module>
 <module name="camerasrv_unit_tests">
       </module>
 <module name="imagehandling_unit_tests">
@@ -537,6 +532,7 @@
     <target name="ARMV5" abldTarget="armv5" description="RVCT Compiler"/>
     <target name="ARMV5_REL" abldTarget="armv5 urel" description="RVCT Compiler"/>
     <target name="ARMV5_DEB" abldTarget="armv5 udeb" description="RVCT Compiler"/>
+    <target name="ARM9E" abldTarget="arm9e" description="RVCT Compiler"/>
     <!-- Aditional Targets -->
     <target name="CWTOOLS" abldTarget="cwtools" description="CodeWarrior Compiler for Tools"/> <!-- Not supported -->
     <target name="CWTOOLS_REL" abldTarget="cwtools rel" description="CodeWarrior Compiler for Tools Release mode only"/> <!-- Not supported -->
@@ -550,6 +546,7 @@
     <targetList name="tools_rel" description="tools Release Targets" target="TOOLS_REL"/>
     <targetList name="cwtools" description="cwtools Targets" target="CWTOOLS"/>
     <targetList name="cwtools_rel" description="cwtools Release Targets" target="CWTOOLS_REL"/>
+    <targetList name="arm9e" description="arm9e Release Targets" target="ARM9E"/>
 		<configuration name="S60_sf" description="S60 sf build" filter="raptor_S60_sf,sf_build">
 			<layerRef layerName="os_layer"/>
 			<layerRef layerName="bldfirst_mw_layer"/>
