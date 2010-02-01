@@ -67,7 +67,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/ipconnmgmt/,/sf/mw/ipconnmgmt,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/legacypresence/,/sf/mw/legacypresence,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/locationsrv/,/sf/mw/locationsrv,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/mds/,/sf/mw/mds,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/oss/FCL/sf/mw/mds/,/sf/mw/mds,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/messagingmw/,/sf/mw/messagingmw,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/metadatasrv/,/sf/mw/metadatasrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/mmappfw/,/sf/mw/mmappfw,branch,default,layers.sysdef.xml
