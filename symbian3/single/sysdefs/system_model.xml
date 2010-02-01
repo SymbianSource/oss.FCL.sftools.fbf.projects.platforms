@@ -155,14 +155,6 @@
 </collection>
 </block>
 
-<block name="gallery" long-name="Gallery Apps" level="apps">
-<collection name="s60">
-<component name="gallery" purpose="optional" plugin="N">
-<unit bldFile="/sf/app/gallery/group" mrp=""/>
-</component>
-</collection>
-</block>
-
 <block name="graphicsuis" long-name="Graphics UIs" level="services">
 <collection name="s60">
 <component name="graphicsuis" purpose="optional" plugin="N">
@@ -210,14 +202,6 @@
 
 <block name="imgeditor" long-name="Image Editor Apps" level="apps"/>
 
-<block name="imgvieweruis" long-name="Image Viewer UIs" level="services">
-<collection name="s60">
-<component name="imgvieweruis" purpose="optional" plugin="N">
-<unit bldFile="/sf/app/imgvieweruis/group" mrp=""/>
-</component>
-</collection>
-</block>
-
 <block name="internetradio" long-name="Internet Radio Apps" level="apps"/>
 
 <block name="iptelephony" long-name="IP Telephony" level="apps">
@@ -231,7 +215,7 @@
 <block name="jrt" long-name="JRT" level="services">
 <collection name="s60">
 <component name="java_java_plat" purpose="optional" plugin="N">
-<unit bldFile="/sf/app/jrt/java_plat/group" mrp=""/>
+<unit bldFile="/sf/app/jrt/jrt_plat/group" mrp=""/>
 </component>
 <component name="java_java_stubs" purpose="optional" plugin="N">
 <unit bldFile="/sf/app/jrt/java_stubs/group" mrp=""/>
@@ -381,9 +365,6 @@
 
 <block name="rndtools" long-name="RD tools" level="services">
 <collection name="s60">
-<component name="tools_rndtools_htiui" purpose="optional" plugin="N">
-<unit bldFile="/sf/app/rndtools/htiui/group" mrp=""/>
-</component>
 <component name="rndtools" purpose="optional" plugin="N">
 <unit bldFile="/sf/app/rndtools/group" mrp=""/>
 </component>
@@ -830,38 +811,8 @@
 
 <block name="dlnasrv">
 <collection name="s60">
-<component name="homemedia" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/dlnasrv/homemedia/group" mrp=""/>
-</component>
-<component name="homesync" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/dlnasrv/homesync/group" mrp=""/>
-</component>
-<component name="upnpavcontrolpoint" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/dlnasrv/upnpavcontrolpoint/group" mrp=""/>
-</component>
-<component name="upnpframework" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/dlnasrv/upnpframework/group" mrp=""/>
-</component>
-<component name="upnpharvester" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/dlnasrv/upnpharvester/group" mrp=""/>
-</component>
-<component name="upnpmediaserver" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/dlnasrv/upnpmediaserver/group" mrp=""/>
-</component>
-<component name="upnpavcontroller" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/dlnasrv/upnpavcontroller/group" mrp=""/>
-</component>
-<component name="upnpsharing" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/dlnasrv/upnpsharing/group" mrp=""/>
-</component>
-<component name="upnpsettings" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/dlnasrv/upnpsettings/group" mrp=""/>
-</component>
-<component name="upnpmpxplugins" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/dlnasrv/upnpmpxplugins/group" mrp=""/>
-</component>
-<component name="dlnasrv_plat" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/dlnasrv/dlnasrv_plat/group" mrp=""/>
+<component name="dlnasrv" purpose="optional" plugin="N">
+<unit bldFile="/sf/mw/dlnasrv/group" mrp=""/>
 </component>
 </collection>
 </block>
@@ -968,11 +919,6 @@
 </block>
 
 <block name="ipappsrv" long-name="IP App Services" level="specific" levels="framework generic server conn plugin">
-<collection name="multimediacommscontroller" long-name="Multimedia Comms Controller" level="conn">
-<component name="amrpayloadformatter" long-name="AMR Payload Formatter" introduced="tb92" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/ipappsrv/multimediacommscontroller/amrpayloadformatter/group" mrp="/sf/mw/ipappsrv/multimediacommscontroller/amrpayloadformatter/group/mm-protocols_rtpamr.mrp"/>
-</component>
-</collection>
 <collection name="ipappsrv_info" long-name="IP App Services Info" level="plugin">
 <component name="ipappsrv_metadata" long-name="IP App Services Metadata" introduced="tb91" purpose="development" class="config PC" plugin="N">
 <unit mrp="/sf/mw/ipappsrv/ipappsrv_info/ipappsrv_metadata/ipappsrv_metadata.mrp"/>
@@ -1091,11 +1037,6 @@
 </block>
 
 <block name="mmmw" long-name="Multimedia Middleware" level="generic" levels="plugin framework server generic specific">
-<collection name="mmmiddlewarefws" long-name="Multimedia Middleware Frameworks" level="server">
-<component name="mmfw" long-name="Multimedia Framework" introduced="7.0s" purpose="mandatory" plugin="N">
-<unit bldFile="/sf/mw/mmmw/mmmiddlewarefws/mmfw/group" mrp="/sf/mw/mmmw/mmmiddlewarefws/mmfw/group/multimedia_mmf.mrp"/>
-</component>
-</collection>
 <collection name="mmfwtest" long-name="Multimedia Framework Test" level="server">
 <component name="mmfunittest" long-name="MMF Unit Tests" introduced="7.0s" purpose="development" plugin="N">
 <unit mrp="/sf/mw/mmmw/mmfwtest/mmfunittest/group/multimedia_unittest_mmf_source.mrp"/>
@@ -1182,13 +1123,6 @@
 </collection>
 </block>
 
-<block name="networkingdm">
-<collection name="s60">
-<component name="networkingdm" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/networkingdm/group" mrp=""/>
-</component>
-</collection>
-</block>
 
 <block name="opensrv">
 <collection name="s60">
@@ -1200,74 +1134,8 @@
 
 <block name="phonesrv">
 <collection name="s60">
-<component name="phonesrv_plat" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/phonesrv_plat/group" mrp=""/>
-</component>
-<component name="phonesrv_pub" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/phonesrv_pub/group" mrp=""/>
-</component>
-<component name="CbsServer" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/cbs/CbsServer/group" mrp=""/>
-</component>
-<component name="cbsui" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/cbs/cbsui/group" mrp=""/>
-</component>
-<component name="convergedcallengine" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/convergedcallengine/group" mrp=""/>
-</component>
-<component name="networkhandlingengine" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/networkhandling/networkhandlingengine/group" mrp=""/>
-</component>
-<component name="aiwdialdata" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/phoneclientserver/aiwdialdata/group" mrp=""/>
-</component>
-<component name="CallUI" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/phoneclientserver/CallUI/group" mrp=""/>
-</component>
-<component name="dialutils" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/phoneclientserver/dialutils/group" mrp=""/>
-</component>
-<component name="EnPolicy" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/phoneclientserver/EnPolicy/group" mrp=""/>
-</component>
-<component name="phoneclient" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/phoneclientserver/phoneclient/group" mrp=""/>
-</component>
-<component name="phoneserver" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/phoneclientserver/phoneserver/group" mrp=""/>
-</component>
-<component name="SatServer" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/satengine/SatServer/group" mrp=""/>
-</component>
-<component name="satapp" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/satui/satapp/group" mrp=""/>
-</component>
-<component name="satplugin" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/satui/satplugin/group" mrp=""/>
-</component>
-<component name="phoneparser" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/telutils/phoneparser/group" mrp=""/>
-</component>
-<component name="telephonyservice" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/telutils/telephonyservice/group" mrp=""/>
-</component>
-<component name="telephonysettings" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/cellular/telephonysettings/group" mrp=""/>
-</component>
-<component name="sssettings" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/cellular/sssettings/group" mrp=""/>
-</component>
-<component name="psetnotesui" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/cellular/psetnotesui/group" mrp=""/>
-</component>
-<component name="servicerequest" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/cellular/servicerequest/group" mrp=""/>
-</component>
-<component name="phonecmdhnlr" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/phonecmdhandler/phonecmdhnlr/group" mrp=""/>
-</component>
-<component name="vmbxengine" purpose="optional" plugin="N">
-<unit bldFile="/sf/mw/phonesrv/engines/vmbxengine/group" mrp=""/>
+<component name="phonesrv" purpose="optional" plugin="N">
+<unit bldFile="/sf/mw/phonesrv/group" mrp=""/>
 </component>
 </collection>
 </block>
@@ -1280,6 +1148,29 @@
 </collection>
 </block>
 
+<!--  ptihangulcore and ptikoreanqwertycore should be collections under inputmethods package, where they will be moved asap. -->
+<block name = "ptihangul">
+<collection name="s60">
+<component name="ptihangulcore">
+<unit mrp="" bldFile="sf/mw/ptihangulcore/group"/>
+</component>
+<component name="ptikoreanqwertycore">
+<unit mrp="" bldFile="sf/mw/ptikoreanqwertycore/group" name="ptikoreanqwertycore"/>
+</component>
+</collection>
+</block>
+
+<block name="qt">
+<collection name="s60">
+<component name="qt">
+<unit mrp="" bldFile="sf/mw/qt" name="qt"/>
+</component>
+<component name="qtconf">
+<unit mrp="" bldFile="sf/mw/qt/group"/>
+</component>
+</collection>
+</block>
+
 <block name="remoteconn" long-name="Remote Connectivity" level="generic" levels="plugin framework server generic specific">
 <collection name="remoteconn_info" long-name="Remote Connectivity Info" level="specific">
 <component name="remoteconn_metadata" long-name="Remote Connectivity Metadata" introduced="tb91" purpose="development" class="config PC" plugin="N">
@@ -1287,12 +1178,12 @@
 </component>
 </collection>
 <collection name="connectivitytransports" long-name="Connectivity Transports" level="plugin">
-<!--  <component name="plpremotelink" long-name="PLP Remote Link" deprecated="9.0" purpose="optional" plugin="N">
+<component name="plpremotelink" long-name="PLP Remote Link" deprecated="9.0" purpose="optional" plugin="N">
 <unit bldFile="/sf/mw/remoteconn/connectivitytransports/plpremotelink/group" mrp="/sf/mw/remoteconn/connectivitytransports/plpremotelink/group/connectivity_legacy_plp_plpremotelink.mrp"/>
-</component> -->
-<!--   <component name="plpvariant" long-name="PLP Variant" deprecated="9.0" purpose="optional" plugin="N">
+</component>
+<component name="plpvariant" long-name="PLP Variant" deprecated="9.0" purpose="optional" plugin="N">
 <unit bldFile="/sf/mw/remoteconn/connectivitytransports/plpvariant/group" mrp="/sf/mw/remoteconn/connectivitytransports/plpvariant/group/connectivity_legacy_plp_plpvariant.mrp"/>
-</component> -->
+</component>
 </collection>
 <collection name="mtptransports" long-name="MTP Transports" level="plugin">
 <component name="mtpusbtransport" long-name="MTP USB Transport" introduced="tb91" purpose="optional" plugin="Y">
@@ -1710,7 +1601,7 @@
 <block name="buildtools" long-name="Build Tools" level="hw" levels="bld mw fw ui">
 <collection name="bldsystemtools" long-name="Build System Tools" level="bld">
 <component name="buildsystemtools" long-name="Build System Tools" purpose="development" plugin="N">
-<unit bldFile="/sf/os/buildtools/bldsystemtools/buildsystemtools/group" mrp="/sf/os/buildtools/bldsystemtools/buildsystemtools/group/tools_build.mrp"/>
+<unit mrp="os/buildtools/bldsystemtools/sysdeftools/group/sysdeftools.mrp"/>
 </component>
 <component name="gttechviewbaseline" long-name="GT Techview Baseline" purpose="development" plugin="N">
 <unit mrp="/sf/os/buildtools/packaging/additionalutils/gt_techview_baseline.mrp"/>
@@ -1977,9 +1868,16 @@
 </component>
 </collection>
 <collection name="commsfwtools" long-name="Comms Framework Tools" level="app-if">
-
-<component name="commstools" long-name="Comms Tools" introduced="tb91" purpose="development" class="PC" plugin="N">
-<unit mrp="/sf/os/commsfw/commsfwtools/commstools/group/comms-infras_tools.mrp"/>
+<!-- Removing GT commdb
+<component name="preparedefaultcommsdatabase" long-name="Prepare Default Comms Database" filter="gt" purpose="mandatory" class="config PC">
+<unit bldFile="os\commsfw\commsfwtools\preparedefaultcommsdatabase\defaultcommdb\group" mrp="os\commsfw\commsfwtools\preparedefaultcommsdatabase\defaultcommdb\group\comms-infras_defaultcommdb.mrp"/>
+</component>
+<component name="installdefaultcommsdatabase" long-name="Install Default Comms Database" purpose="mandatory" class="PC">
+<unit bldFile="os\commsfw\commsfwtools\preparedefaultcommsdatabase\installdefaultcommdb\group" mrp="os\commsfw\commsfwtools\preparedefaultcommsdatabase\installdefaultcommdb\group\comms-infras_installdefaultcommdb.mrp" priority="1010"/>
+</component>
+-->
+<component name="commstools" long-name="Comms Tools" introduced="tb91" purpose="development" class="PC">
+<unit bldFile="os/commsfw/commsfwtools/commstools/group" mrp="os/commsfw/commsfwtools/commstools/group/comms-infras_tools.mrp"/>
 </component>
 </collection>
 </block>
@@ -2010,27 +1908,6 @@
 <component name="S60Extras" purpose="optional" plugin="N">
 <unit bldFile="/sf/os/deviceplatformrelease/S60Extras/group" mrp=""/>
 </component>
-<component name="locfiles" purpose="optional" plugin="N">
-<unit bldFile="sf/os/deviceplatformrelease/locfiles/group" name="locfiles"/>
-</component>
-<component name="locfiles_set1" purpose="optional" plugin="N">
-<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set1" name="locfiles_set1"/>
-</component>
-<component name="locfiles_set2" purpose="optional" plugin="N">
-<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set2" name="locfiles_set2"/>
-</component>
-<component name="locfiles_set3" purpose="optional" plugin="N">
-<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set3" name="locfiles_set3"/>
-</component>
-<component name="locfiles_set4" purpose="optional" plugin="N">
-<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set4" name="locfiles_set4"/>
-</component>
-<component name="locfiles_set5" purpose="optional" plugin="N">
-<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set5" name="locfiles_set5"/>
-</component>
-<component name="locfiles_set6" purpose="optional" plugin="N">
-<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set6" name="locfiles_set6"/>
-</component>
 <component name="version" purpose="optional" plugin="N">
 <unit bldFile="/sf/os/deviceplatformrelease/Version/group" mrp=""/>
 </component>
@@ -2038,6 +1915,59 @@
 <collection name="s60">
 <component name="helps_loc2" purpose="optional" plugin="N">
 <unit bldFile="/sf/os/deviceplatformrelease/helps_loc2/group" mrp=""/>
+</component>
+</collection>
+<collection name="locfiles">
+<component name="platform.locfiles" >
+<unit bldFile="sf/os/deviceplatformrelease/locfiles/group"/>
+</component>
+<component name="platform.locfiles.set1" >
+<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set1"/>
+</component>
+<component name="platform.locfiles.set2" >
+<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set2"/>
+</component>
+<component name="platform.locfiles.set3" >
+<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set3"/>
+</component>
+<component name="platform.locfiles.set4" >
+<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set4"/>
+</component>
+<component name="platform.locfiles.set5" >
+<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set5"/>
+</component>
+<component name="platform.locfiles.set6" >
+<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set6"/>
+</component>
+<component name="platform.locfiles.set7" >
+<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set7"/>
+</component>
+<component name="platform.locfiles.set8" >
+<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set8"/>
+</component>
+<component name="platform.locfiles.set9" >
+<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set9"/>
+</component>
+<component name="platform.locfiles.set10" >
+<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set10"/>
+</component>
+<component name="platform.locfiles.set11" >
+<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set11"/>
+</component>
+<component name="platform.locfiles.set12" >
+<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set12"/>
+</component>
+<component name="platform.locfiles.set13" >
+<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set13"/>
+</component>
+<component name="platform.locfiles.set14" >
+<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set14"/>
+</component>
+<component name="platform.locfiles.set15" >
+<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set15"/>
+</component>
+<component name="platform.locfiles.set16" >
+<unit bldFile="sf/os/deviceplatformrelease/locfiles/group/set16"/>
 </component>
 </collection>
 </block>
@@ -2181,13 +2111,9 @@
 
 <unit bldFile="/sf/os/graphics/windowing/windowserver/group" mrp="/sf/os/graphics/windowing/windowserver/group/graphics_wserv.mrp"/>
 </component>
-<component name="windowserver_openwfc" long-name="Window Server (OpenWF)" purpose="mandatory" plugin="N">
-  <unit bldFile="/sf/os/graphics/windowing/windowserver/group/openwfc" mrp="" /> 
+<component name="windowserverplugins" long-name="Window Server Plugins" purpose="mandatory" plugin="Y" origin-model="Symbian">
+<unit bldFile="/sf/os/graphics/windowing/windowserverplugins/group"/>
 </component>
-
-     <component name="windowserverplugins" long-name="Window Server Plugins" purpose="mandatory" plugin="Y" origin-model="Symbian">
-      <unit bldFile="/sf/os/graphics/windowing/windowserverplugins/group"/>
-     </component>
 </collection>
 <collection name="printingservices" long-name="Printing Services" level="app-if">
 <component name="printerdriversupport" long-name="Printer Driver Support" purpose="optional" plugin="N">
@@ -2527,17 +2453,8 @@
 <component name="imagingfws" long-name="Imaging Frameworks" introduced="7.0s" purpose="mandatory" plugin="N">
 <unit bldFile="/sf/os/mm/imagingandcamerafws/imagingfws/group" mrp="/sf/os/mm/imagingandcamerafws/imagingfws/group/multimedia_icl.mrp"/>
 </component>
-<component name="imagingunittest" long-name="Imaging Unit Tests" introduced="7.0s" purpose="development" plugin="N">
-<unit mrp="/sf/os/mm/imagingandcamerafws/imagingunittest/group/multimedia_unittest_icl_source.mrp" bldFile="/sf/os/mm/imagingandcamerafws/imagingunittest/group" />
-</component>
-<component name="imaginginttest" long-name="Imaging Integration Tests" introduced="7.0s" purpose="development" plugin="N">
-<unit mrp="/sf/os/mm/imagingandcamerafws/imaginginttest/group/multimedia_inttest_icl_source.mrp" bldFile="/sf/os/mm/imagingandcamerafws/imaginginttest/group"   />
-</component>
 <component name="camerafw" long-name="Camera Framework" introduced="7.0s" purpose="optional" plugin="N">
 <unit bldFile="/sf/os/mm/imagingandcamerafws/camerafw/group" mrp="/sf/os/mm/imagingandcamerafws/camerafw/group/multimedia_ecam_framework.mrp"/>
-</component>
-<component name="cameraunittest" long-name="Camera Unit Tests" introduced="9.2" purpose="development" plugin="N">
-<unit mrp="/sf/os/mm/imagingandcamerafws/cameraunittest/group/multimedia_unittest_ecam_source.mrp"  bldFile="/sf/os/mm/imagingandcamerafws/cameraunittest/group"  />
 </component>
 </collection>
 <collection name="mmlibs" long-name="Multimedia Libraries" level="middleware">
@@ -2557,9 +2474,6 @@
 </component>
 <component name="lib3gp" long-name="3GP Library" introduced="tb91" purpose="optional" plugin="N">
 <unit bldFile="/sf/os/mm/mmplugins/lib3gp/group" mrp="/sf/os/mm/mmplugins/lib3gp/group/multimedia_3gplibrary.mrp"/>
-</component>
-<component name="lib3gpunittest" long-name="3GP Unit Tests" introduced="tb91" purpose="development" plugin="N">
-<unit mrp="/sf/os/mm/mmplugins/lib3gpunittest/group/multimedia_unittest_3gplibrary_source.mrp" bldFile="/sf/os/mm/mmplugins/lib3gpunittest/group" />
 </component>
 <component name="mmfwplugins" long-name="Multimedia Framework Plugins" introduced="7.0s" purpose="optional" plugin="Y">
 <unit bldFile="/sf/os/mm/mmplugins/mmfwplugins/group" mrp="mm/mmplugins/mmfwplugins/group/multimedia_mmf_plugin.mrp"/>
@@ -2585,9 +2499,6 @@
 <unit bldFile="/sf/os/mm/mmdevicefw/mdf/group" mrp="/sf/os/mm/mmdevicefw/mdf/group/multimedia_mdf.mrp"/>
 </component>
 
-<component name="mdfunittest" long-name="MDF Unit Tests" introduced="9.2" purpose="development" plugin="N">
-<unit mrp="/sf/os/mm/mmdevicefw/mdfunittest/group/multimedia_unittest_mdf_source.mrp"  bldFile="/sf/os/mm/mmdevicefw/mdfunittest/group" />
-</component>
 <component name="speechrecogsupport" long-name="Speech Recognition Support" introduced="7.0s" purpose="mandatory" plugin="N">
 <unit bldFile="/sf/os/mm/mmdevicefw/speechrecogsupport/group" mrp="mm/mmdevicefw/speechrecogsupport/group/multimedia_mmf_ASR.mrp"/>
 </component>
@@ -2599,20 +2510,6 @@
 <collection name="mmswadaptation" long-name="Multimedia Software Adaptation" level="adaptation">
 <component name="videorenderer" long-name="Video Renderer" introduced="tb92" purpose="optional" plugin="N">
 <unit bldFile="/sf/os/mm/mmswadaptation/videorenderer/group" mrp="/sf/os/mm/mmswadaptation/videorenderer/group/multimedia_videorenderer.mrp"/>
-</component>
-</collection>
-<collection name="mmtestenv" long-name="Multimedia Test Environment" level="device-fw">
-<component name="mmtestfw" long-name="Multimedia Test Framework" introduced="7.0s" purpose="development" plugin="N">
-<unit mrp="/sf/os/mm/mmtestenv/mmtestfw/group/multimedia_testframework_source.mrp"  bldFile="/sf/os/mm/mmtestenv/mmtestfw/group" />
-</component>
-<component name="mmtestfwunittest" long-name="Multimedia Test Framework Unit Tests" introduced="7.0s" purpose="development" plugin="N">
-<unit mrp="/sf/os/mm/mmtestenv/mmtestfwunittest/group/multimedia_unittest_testframework_source.mrp" bldFile="/sf/os/mm/mmtestenv/mmtestfwunittest/group" />
-</component>
-<component name="mmtestagent" long-name="Multimedia Test Agent" introduced="8.0" purpose="development" plugin="N">
-<unit mrp="/sf/os/mm/mmtestenv/mmtestagent/group/multimediatestagent_source.mrp"  bldFile="/sf/os/mm/mmtestenv/mmtestagent/group" />
-</component>
-<component name="mmtesttools" long-name="Multimedia Test Tools" purpose="development" plugin="N">
-<unit mrp="/sf/os/mm/mmtestenv/mmtesttools/Group/multimedia_testtools_source.mrp" bldFile="/sf/os/mm/mmtestenv/mmtesttools/Group" />
 </component>
 </collection>
 
@@ -2631,12 +2528,7 @@
 <component name="omxilrefcomps" long-name="OpenMAX IL Reference Components" introduced="tb92" purpose="optional" plugin="N">
 <unit bldFile="/sf/os/mm/omxil/omxilrefcomps/ref_components/group" mrp="/sf/os/mm/omxil/omxilrefcomps/ref_components/group/multimedia_omx_il_comp_ref.mrp" version="1"/>
 </component>
-<component name="omxilunittest" long-name="OpenMAX IL Unit Tests" introduced="tb92" purpose="development" plugin="N">
-<unit mrp="/sf/os/mm/omxil/omxilunittest/group/multimedia_unittest_omx_il.mrp" bldFile="/sf/os/mm/omxil/omxilunittest/group" />
-</component>
-<component name="omxilcoreconftest" long-name="OpenMAX IL Core Conformance Suite" introduced="tb92" purpose="development" plugin="N">
-<unit mrp="/sf/os/mm/omxil/omxilcoreconftest/group/multimedia_omx_il_core_loader_conf_suite.mrp" bldFile="/sf/os/mm/omxil/omxilcoreconftest/group" />
-</component>
+
 <component name="mmilapi" long-name="Multimedia Integration Layer API" introduced="tb92" purpose="development" plugin="N">
 <unit bldFile="/sf/os/mm/omxil/mmilapi/group" mrp="/sf/os/mm/omxil/mmilapi/group/multimedia_il_api.mrp"/>
 </component>
@@ -2664,9 +2556,6 @@
 <component name="a3ftrace" long-name="A3F Trace Utility" introduced="tb91" purpose="development" plugin="N">
 <unit bldFile="/sf/os/mm/devsound/a3ftrace/group" mrp="/sf/os/mm/devsound/a3ftrace/group/multimedia_a3f_traces.mrp"/>
 </component>
-<component name="a3fintegrationtest" long-name="A3F Integration Tests" introduced="tb91" purpose="development" plugin="N">
-<unit mrp="/sf/os/mm/devsound/a3fintegrationtest/group/multimedia_inttest_a3f_devsound_source.mrp" bldFile="/sf/os/mm/devsound/a3fintegrationtest/group" />
-</component>
 <component name="a3fsrvstart" long-name="A3F Server Start" introduced="tb91" purpose="optional" plugin="Y">
 <unit bldFile="/sf/os/mm/devsound/a3fsrvstart/group" mrp="/sf/os/mm/devsound/a3fsrvstart/group/multimedia_a3f_serverstart.mrp"/>
 </component>
@@ -2690,9 +2579,6 @@
 <component name="dvbhreceiverhai" long-name="Mobile TV DVB-H Receiver HAI" introduced="tb91" purpose="optional" plugin="N">
 <unit bldFile="/sf/os/mm/mmhais/dvbhreceiverhai/hai/dvbh/group" mrp="/sf/os/mm/mmhais/dvbhreceiverhai/hai/dvbh/group/multimedia_mobiletv_dvbh_hai.mrp"/>
 </component>
-<component name="dvbhunittest" long-name="Mobile TV DVB-H Unit Tests" introduced="tb91" purpose="development" plugin="N">
-<unit mrp="/sf/os/mm/mmhais/dvbhunittest/hai/dvbh/group/multimedia_unittest_dvbhhai.mrp" bldFile="/sf/os/mm/mmhais/dvbhunittest/hai/dvbh/group"/>
-</component>
 </collection>
 
 
@@ -2700,21 +2586,26 @@
 <component name="mmsvs" long-name="Multimedia Verification Suite" introduced="tb91" purpose="development" plugin="N">
 <unit mrp="/sf/os/mm/mmapitest/mmsvs/group/mmsvs.mrp"/>
 </component>
-<component name="devvideohaitest" long-name="DevVideo HAI Tests" introduced="tb91" purpose="development" plugin="N">
-<unit mrp="/sf/os/mm/mmapitest/devvideohaitest/group/devvideohaitest.mrp" bldFile="/sf/os/mm/mmapitest/devvideohaitest/group" />
-</component>
-<component name="devsoundhaitest" long-name="DevSound HAI Tests" introduced="tb91" purpose="development" plugin="N">
-<unit mrp="/sf/os/mm/mmapitest/devsoundhaitest/group/devsoundhaitest.mrp"  bldFile="/sf/os/mm/mmapitest/devsoundhaitest/group"/>
-</component>
-<component name="devsoundexthaitest" long-name="DevSound Extensions HAI Tests" introduced="tb91" purpose="development" plugin="N">
-<unit mrp="/sf/os/mm/mmapitest/devsoundexthaitest/group/devsoundexthaitest.mrp" bldFile="/sf/os/mm/mmapitest/devsoundexthaitest/group" />
-</component>
 </collection>
 <collection name="s60">
 <component name="mm" purpose="optional" plugin="N">
 <unit bldFile="/sf/os/mm/group" mrp=""/>
 </component>
 </collection>
+
+<!--  manually added from odd units in S60 model -->
+<collection name="effectspresets">
+<component name="AudioEqualizerUtility">
+<unit mrp="" bldFile="sf/os/mm/devsoundextensions/effectspresets/AudioEqualizerUtility/group" filter="!dfs_build" />
+</component>
+<component name="EnvironmentalReverbUtility">
+<unit mrp="" bldFile="sf/os/mm/devsoundextensions/effectspresets/EnvironmentalReverbUtility/group" filter="!dfs_build" />
+</component>
+<component name="StereoWideningUtility">
+<unit mrp="" bldFile="sf/os/mm/devsoundextensions/effectspresets/StereoWideningUtility/group" filter="!dfs_build" />
+</component>
+</collection>
+
 </block>
 
 <block name="networkingsrv" long-name="Networking Services" level="services" levels="adaptation hw-if plugin framework server app-if">
@@ -2873,11 +2764,6 @@
 <unit bldFile="/sf/os/networkingsrv/pppcompressionplugins/predictorcompression/group" mrp="/sf/os/networkingsrv/pppcompressionplugins/predictorcompression/group/networking_predcomp.mrp"/>
 </component>
 </collection>
-<collection name="s60">
-<component name="networkingsrv" purpose="optional" plugin="N">
-<unit bldFile="/sf/os/networkingsrv/group" mrp=""/>
-</component>
-</collection>
 </block>
 
 <block name="osrndtools" long-name="OS R&amp;D tools" level="services" levels="fw trace">
@@ -2895,12 +2781,6 @@
 </component>
 </collection>
 <collection name="s60">
-<component name="tools_osrndtools_osrndtools_plat_hti_api" purpose="optional" plugin="N">
-<unit bldFile="/sf/os/osrndtools/osrndtools_plat/hti_api/group" mrp=""/>
-</component>
-<component name="tools_osrndtools_hti" purpose="optional" plugin="N">
-<unit bldFile="/sf/os/osrndtools/hti/group" mrp=""/>
-</component>
 <component name="osrndtools" purpose="optional" plugin="N">
 <unit bldFile="/sf/os/osrndtools/group" mrp=""/>
 </component>
@@ -2972,8 +2852,8 @@
 </component>
 </collection>
 <collection name="s60">
-<component name="ossrv" purpose="optional" plugin="N">
-<unit bldFile="/sf/os/ossrv/group" mrp=""/>
+<component name="ossrv">
+<unit bldFile="sf/os/ossrv/group" mrp=""/>
 </component>
 </collection>
 </block>
@@ -3066,9 +2946,6 @@
 <collection name="cryptomgmtlibs" long-name="Crypto Management Libraries" level="management">
 <component name="securityutils" long-name="Security Utils" introduced="8.0" purpose="optional" plugin="N">
 <unit bldFile="/sf/os/security/cryptomgmtlibs/securityutils/group" mrp="/sf/os/security/cryptomgmtlibs/securityutils/group/security_common.mrp"/>
-</component>
-<component name="securitytestfw" long-name="Security Test Framework" introduced="7.0" deprecated="tb92" purpose="development" plugin="N">
-<unit mrp="/sf/os/security/cryptomgmtlibs/securitytestfw/group/security_testframework.mrp" bldFile="/sf/os/security/cryptomgmtlibs/securitytestfw/group"/>
 </component>
 <component name="securitydocs" long-name="Security Documentation" purpose="development" class="doc" plugin="N">
 <unit mrp="/sf/os/security/cryptomgmtlibs/securitydocs/security_documentation.mrp"/>
@@ -3272,8 +3149,8 @@
 </component>
 </collection>
 <collection name="s60">
-<component name="xmlsrv" purpose="optional" plugin="N">
-<unit bldFile="/sf/os/xmlsrv/group" mrp=""/>
+<component name="xmlsrv">
+<unit mrp="" bldFile="sf/os/xmlsrv/group" />
 </component>
 </collection>
 </block>
