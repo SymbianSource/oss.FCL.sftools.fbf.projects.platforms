@@ -71,6 +71,7 @@
 
     <!-- These are certainly specific to the micro build -->
     <property name="sf.spec.job.name" value="micro"/>
+    <property name="sf.spec.publish.enable"      value="false"/> <!-- Over-ridden when run by Hudson -->
     <property name="sf.suppress.buildenv.check"  value="true"/>
     <property name="sf.spec.sourcesync.archive"  value="true"/>
     <property name="sf.spec.test.sendpkg.enable" value="false"/>
