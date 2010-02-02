@@ -67,7 +67,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/ipconnmgmt/,/sf/mw/ipconnmgmt,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/legacypresence/,/sf/mw/legacypresence,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/locationsrv/,/sf/mw/locationsrv,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/mds/,/sf/mw/mds,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/oss/FCL/sf/mw/mds/,/sf/mw/mds,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/messagingmw/,/sf/mw/messagingmw,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/metadatasrv/,/sf/mw/metadatasrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/mmappfw/,/sf/mw/mmappfw,branch,default,layers.sysdef.xml
@@ -89,7 +89,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/mw/uiaccelerator/,/sf/mw/uiaccelerator,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/oss/FCL/sf/mw/uiresources/,/sf/mw/uiresources,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/uitools/,/sf/mw/uitools,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/usbservices/,/sf/mw/usbservices,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/oss/FCL/sf/mw/usbservices/,/sf/mw/usbservices,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/videoutils/,/sf/mw/videoutils,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/vpnclient/,/sf/mw/vpnclient,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/web/,/sf/mw/web,branch,default,layers.sysdef.xml
@@ -111,7 +111,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/ossrv/,/sf/os/ossrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/persistentdata/,/sf/os/persistentdata,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/security/,/sf/os/security,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/textandloc/,/sf/os/textandloc,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/os/textandloc/,/sf/os/textandloc,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/usb/,/sf/os/usb,branch,default,
 //v800008/Builds01/mercurial_master_stage/sfl/MCL/sf/os/wlan/,/sf/os/wlan,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/xmlsrv/,/sf/os/xmlsrv,branch,default,layers.sysdef.xml
