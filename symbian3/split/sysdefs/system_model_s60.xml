@@ -233,6 +233,8 @@
 			</module>
 <module name="mmmw">
 				<unit unitID="mmmw" mrp="" bldFile="sf/mw/mmmw/group" name="mmmw"/>
+				<!-- MattD 20100205 - This stub is needed for metadatautility (see Bug 1529) -->
+				<unit unitID="mmmw_3GPExtParserLib_stub" mrp="" bldFile="sf/mw/mmmw/mmserv/metadatautility/3GPExtParserLib_stub/group" name="mmmw_3GPExtParserLib_stub"/>
 			</module>
 <module name="mmuifw">
         <unit unitID="uxdo.mmuifw" mrp="" bldFile="sf/mw/mmuifw/group" name="mmuifw"/>

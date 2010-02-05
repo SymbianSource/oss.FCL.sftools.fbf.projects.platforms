@@ -1062,6 +1062,10 @@
 <component name="mmmw" purpose="optional" plugin="N">
 <unit bldFile="/sf/mw/mmmw/group" mrp=""/>
 </component>
+<!-- MattD 20100205 - This stub is needed for metadatautility (see Bug 1529) -->
+<component name="mmmw_3GPExtParserLib_stub" purpose="optional" plugin="N"> 
+<unit mrp="" bldFile="sf/mw/mmmw/mmserv/metadatautility/3GPExtParserLib_stub/group" />
+</component>
 </collection>
 </block>
 
