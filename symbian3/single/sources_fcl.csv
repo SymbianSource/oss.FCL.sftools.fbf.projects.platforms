@@ -16,7 +16,6 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/devicecontrol/,/sf/app/devicecontrol,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/dictionary/,/sf/app/dictionary,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/files/,/sf/app/files,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/gallery/,/sf/app/gallery,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/graphicsuis/,/sf/app/graphicsuis,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/helps/,/sf/app/helps,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/homescreen/,/sf/app/homescreen,branch,default,layers.sysdef.xml
