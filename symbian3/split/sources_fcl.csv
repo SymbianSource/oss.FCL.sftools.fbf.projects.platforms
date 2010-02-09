@@ -98,7 +98,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/os/commsfw/,/sf/os/commsfw,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/os/devicesrv/,/sf/os/devicesrv,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_development/sfl/FCL/sf/os/graphics/,/sf/os/graphics,branch,NewGraphicsArchitecture,layers.sysdef.xml
+//v800008/Builds01/mercurial_development_new/oss/FCL/sf/os/graphics/,/sf/os/graphics,branch,NewGraphicsArchitecture,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/os/imagingext/,/sf/os/imagingext,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/FCL/sf/os/lbs/,/sf/os/lbs,branch,default,layers.sysdef.xml
@@ -118,4 +118,3 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/tools/homescreentools/,/sf/tools/homescreentools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/FCL/sf/mw/platformtools/,/sf/mw/platformtools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/rndtools/,/sf/app/rndtools,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/tools/swconfigtools/,/sf/tools/swconfigtools,branch,default,layers.sysdef.xml
