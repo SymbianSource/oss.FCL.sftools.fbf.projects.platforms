@@ -73,7 +73,7 @@
     <property name="sf.spec.job.name" value="micro"/>
     <property name="sf.spec.publish.enable"      value="false"/> <!-- Over-ridden when run by Hudson -->
     <property name="sf.suppress.buildenv.check"  value="true"/>
-    <property name="sf.spec.sourcesync.archive"  value="true"/>
+    <property name="sf.spec.sourcesync.usecache" value="true"/>
     <property name="sf.spec.test.sendpkg.enable" value="false"/>
     <property name="sf.spec.bccheck.enable"      value="false"/>
     <!-- Slight hack to override these targets in the platform/common scripts -->
