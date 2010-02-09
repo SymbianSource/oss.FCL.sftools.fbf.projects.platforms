@@ -21,7 +21,6 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/homescreen/,/sf/app/homescreen,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/im/,/sf/app/im,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/imgeditor/,/sf/app/imgeditor,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/imgvieweruis/,/sf/app/imgvieweruis,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/iptelephony/,/sf/app/iptelephony,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/jrt/,/sf/app/jrt,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/location/,/sf/app/location,branch,default,layers.sysdef.xml
@@ -31,7 +30,6 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/organizer/,/sf/app/organizer,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/FCL/sf/app/phone/,/sf/app/phone,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/photos/,/sf/app/photos,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/poc/,/sf/app/poc,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/printing/,/sf/app/printing,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/profile/,/sf/app/profile,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/radio/,/sf/app/radio,branch,default,layers.sysdef.xml
@@ -40,7 +38,6 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/speechsrv/,/sf/app/speechsrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/techview/,/sf/app/techview,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/utils/,/sf/app/utils,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/videocenter/,/sf/app/videocenter,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/videoeditor/,/sf/app/videoeditor,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/videoplayer/,/sf/app/videoplayer,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/videotelephony/,/sf/app/videotelephony,branch,default,layers.sysdef.xml
@@ -121,4 +118,4 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/tools/homescreentools/,/sf/tools/homescreentools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/FCL/sf/mw/platformtools/,/sf/mw/platformtools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/rndtools/,/sf/app/rndtools,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/oss/MCL/sf/tools/swconfigtools/,/sf/tools/swconfigtools,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/tools/swconfigtools/,/sf/tools/swconfigtools,branch,default,layers.sysdef.xml
