@@ -1891,6 +1891,9 @@
 <component name="cedarutils" long-name="Cedar Utils" purpose="development" plugin="N">
 <unit mrp="/sf/os/deviceplatformrelease/symbianosbld/cedarutils/tools_utils_cedar.mrp"/>
 </component>
+<component name="sf_cenrep" long-name="ConE cenrep config" purpose="development" plugin="N">
+<unit bldFile="/sf/os/deviceplatformrelease/sf_config/cenrep/group" mrp=""/>
+</component>
 <component name="productionbldcbrconfig" long-name="Production Build CBR Config" filter="gt" purpose="development" class="config" plugin="N">
 <unit mrp="/sf/os/deviceplatformrelease/symbianosbld/productionbldcbrconfig/product_cbr_config.mrp"/>
 </component>
