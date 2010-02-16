@@ -18,7 +18,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_development/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,branch,default,
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/boardsupport/,/sf/os/boardsupport,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/FCL/sf/os/ossrv/,/sf/os/ossrv,branch,RCL_1,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/oss/MCL/sf/os/security/,/sf/os/security,branch,RCL_1,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/os/security/,/sf/os/security,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/persistentdata/,/sf/os/persistentdata,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/FCL/sf/os/devicesrv/,/sf/os/devicesrv,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/lbs/,/sf/os/lbs,branch,RCL_1,layers.sysdef.xml
@@ -75,9 +75,9 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/hapticsservices/,/sf/mw/hapticsservices,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/homescreensrv/,/sf/mw/homescreensrv,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/mw/appinstall/,/sf/mw/appinstall,branch,RCL_1,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/oss/MCL/sf/mw/serviceapifw/,/sf/mw/serviceapifw,branch,RCL_1,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/oss/MCL/sf/mw/serviceapi/,/sf/mw/serviceapi,branch,RCL_1,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/oss/MCL/sf/mw/web/,/sf/mw/web,branch,RCL_1,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/mw/serviceapifw/,/sf/mw/serviceapifw,branch,RCL_1,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/mw/serviceapi/,/sf/mw/serviceapi,branch,RCL_1,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/mw/web/,/sf/mw/web,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/websrv/,/sf/mw/websrv,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/mw/uitools/,/sf/mw/uitools,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/location/,/sf/app/location,branch,RCL_1,layers.sysdef.xml
@@ -116,7 +116,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/graphicsuis/,/sf/app/graphicsuis,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/profile/,/sf/app/profile,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/speechsrv/,/sf/app/speechsrv,branch,RCL_1,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/oss/MCL/sf/app/webuis/,/sf/app/webuis,branch,RCL_1,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/app/webuis/,/sf/app/webuis,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/java/,/sf/app/java,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/helps/,/sf/app/helps,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/app/techview/,/sf/app/techview,branch,RCL_1,layers.sysdef.xml
