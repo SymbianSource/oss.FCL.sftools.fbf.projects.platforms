@@ -48,7 +48,7 @@ http://developer.symbian.org/oss/MCL/sf/mw/appinstall/,/sf/mw/appinstall,branch,
 http://developer.symbian.org/oss/FCL/sf/mw/appsupport/,/sf/mw/appsupport,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/btservices/,/sf/mw/btservices,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/camerasrv/,/sf/mw/camerasrv,branch,default,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/mw/classicui/,/sf/mw/classicui,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/classicui/,/sf/mw/classicui,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/dlnasrv/,/sf/mw/dlnasrv,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/drm/,/sf/mw/drm,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/gsprofilesrv/,/sf/mw/gsprofilesrv,branch,default,layers.sysdef.xml
@@ -106,7 +106,7 @@ http://developer.symbian.org/oss/MCL/sf/os/mm/,/sf/os/mm,branch,default,layers.s
 http://developer.symbian.org/oss/MCL/sf/os/networkingsrv/,/sf/os/networkingsrv,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/ossrv/,/sf/os/ossrv,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/persistentdata/,/sf/os/persistentdata,branch,default,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/os/security/,/sf/os/security,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/security/,/sf/os/security,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/textandloc/,/sf/os/textandloc,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/usb/,/sf/os/usb,branch,default,
 http://developer.symbian.org/oss/MCL/sf/os/wlan/,/sf/os/wlan,branch,default,layers.sysdef.xml
