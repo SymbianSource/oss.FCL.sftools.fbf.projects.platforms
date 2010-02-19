@@ -54,7 +54,7 @@ http://developer.symbian.org/oss/MCL/sf/mw/drm/,/sf/mw/drm,branch,default,layers
 http://developer.symbian.org/oss/MCL/sf/mw/gsprofilesrv/,/sf/mw/gsprofilesrv,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/hapticsservices/,/sf/mw/hapticsservices,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/helix/,/sf/mw/helix,branch,default,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/mw/homescreensrv/,/sf/mw/homescreensrv,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/homescreensrv/,/sf/mw/homescreensrv,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/imghandling/,/sf/mw/imghandling,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/imsrv/,/sf/mw/imsrv,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/inputmethods/,/sf/mw/inputmethods,branch,default,layers.sysdef.xml
