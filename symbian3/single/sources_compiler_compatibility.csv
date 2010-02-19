@@ -66,7 +66,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_prod/oss/FCL/sf/mw/mds/,/sf/mw/mds,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/mw/messagingmw/,/sf/mw/messagingmw,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/mw/metadatasrv/,/sf/mw/metadatasrv,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/oss/MCL/sf/mw/mmappfw/,/sf/mw/mmappfw,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_master_prod/oss/FCL/sf/mw/mmappfw/,/sf/mw/mmappfw,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/mw/mmmw/,/sf/mw/mmmw,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/mw/mmuifw/,/sf/mw/mmuifw,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/oss/MCL/sf/mw/netprotocols/,/sf/mw/netprotocols,branch,default,layers.sysdef.xml
