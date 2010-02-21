@@ -41,20 +41,20 @@
    </package>
    <package id="beagleboard" tech-domain="hb" level="low" name="Beagle Board" levels="hw-if">
     <collection id="omap3530" name="OMAP 3530" level="hw-if">
-     <component id="omap3530" name="Beagle Board common" introduced="^3" purpose="optional">
+     <component id="omap3530_build" name="Beagle Board Common" introduced="^3" purpose="optional" filter="sf_build">
       <unit bldFile="/adaptation/beagleboard/omap3530" mrp="/adaptation/beagleboard/omap3530/base_beagle.mrp"/>
      </component>
-     <component id="kernel" name="Beagle Board kernel" introduced="^3" purpose="optional">
+     <component id="omap3530_kernel" name="Beagle Board Kernel" introduced="^3" purpose="optional" filter="sf_build">
       <unit bldFile="/adaptation/beagleboard/omap3530/kernel"/>
      </component>
-     <component id="beagleboard" name="Beagle Board baseport" introduced="^3" purpose="optional">
+     <component id="beagleboard_Baseport" name="Beagle Board Baseport" introduced="^3" purpose="optional" filter="sf_build">
       <unit bldFile="/adaptation/beagleboard/omap3530/beagleboard"/>
      </component>
     </collection>
    </package>
    <package id="qemu" tech-domain="hb" level="low" name="QEMU and Baseport" levels="hw-if">
-    <collection id="baseport" name="Baseport" level="hw-if">
-     <component id="syborg" name="Syborg" introduced="^2" purpose="optional">
+    <collection id="qemu_baseport" name="Baseport" level="hw-if">
+     <component id="syborg" name="Syborg" introduced="^2" purpose="optional" filter="sf_build">
       <unit bldFile="/adaptation/qemu/baseport/syborg" mrp="/adaptation/qemu/baseport/syborg/syborg.mrp"/>
      </component>
     </collection>
@@ -2243,9 +2243,7 @@
      <component id="tzlocrscfactory" name="Time Zone Localization Resource Factory" introduced="9.1" purpose="optional" class="config">
       <unit bldFile="/mw/appsupport/tzservices/tzlocrscfactory/group" mrp="/mw/appsupport/tzservices/tzlocrscfactory/group/app-services_tzlocalizationrscfactory.mrp"/>
      </component>
-     <component id="tzdatabase" name="Time Zone Database" introduced="9.1" purpose="optional" class="config">
-      <unit bldFile="/mw/appsupport/tzservices/tzdatabase/group" mrp="/mw/appsupport/tzservices/tzdatabase/group/app-services_tzdb.mrp"/>
-     </component>
+     
     </collection>
     <collection id="contenthandling" name="Content Handling" level="plugin">
      <component id="webrecognisers" name="Web Recognisers" purpose="optional" class="plugin">
@@ -4683,9 +4681,11 @@
      <component id="fontprovider" filter="s60" name="Font Provider">
       <unit bldFile="/mw/uiresources/fontsupport/fontprovider/group"/>
      </component>
-     <component id="fontutils" filter="s60" name="Font Utils">
-      <unit bldFile="/mw/uiresources/fontsupport/fontutils/group"/>
-     </component>
+     <!-- R&D materials, should be Nokia only
+      <component id="fontutils" filter="s60" name="Font Utils">
+        <unit bldFile="fontsupport/fontutils/group"/>
+      </component>
+-->
     </collection>
     <collection id="helpthemes" name="Help Themes" level="data">
      <!-- collection is really a component. Need to move down a directory -->
@@ -6166,7 +6166,7 @@
      <component id="calenlauncher" filter="s60" name="Calendar Launcher">
       <unit bldFile="/app/organizer/calendarengines/calenlauncher/group"/>
      </component>
-     <component id="caldav" filter="s60" name="CalDav Server" introduced="^3">
+     <component id="caldavsrv" filter="sf_build" name="CalDAV Server" introduced="^3">
       <unit bldFile="/app/organizer/calendarengines/caldav/group"/>
      </component>
     </collection>
@@ -6252,6 +6252,9 @@
      </component>
      <component id="calenaiwprovider" filter="s60" name="Calendar AIW Proivder" class="plugin" introduced="^3">
       <unit bldFile="/app/organizer/calendarui/calenaiwprovider/group"/>
+     </component>
+     <component id="caldav" filter="sf_build" name="CalDAV" class="plugin" introduced="^3">
+      <unit bldFile="/app/organizer/calendarui/caldav/group"/>
      </component>
      <component id="calendarui_build" filter="s60" name="Calendar UI Build">
       <!-- split contents into separate components -->
@@ -6775,7 +6778,9 @@
      </component>
     </collection>
     <collection id="camera_info" name="Camera Apps Info">
-     
+     <component id="camera_plat" filter="s60" name="Camera Apps Platform Interfaces" class="api">
+      <unit bldFile="/app/camera/camera_plat/group"/>
+     </component>
     </collection>
    </package>
    <package id="imgeditor" level="apps" tech-domain="ma" name="Image Editor Apps" levels="engine ui">
@@ -7045,7 +7050,7 @@
       <unit bldFile="/app/videoplayer/videoplayerapp/lwplayer/group"/>
      </component>
      <component id="mpxvideoplayer" filter="s60" name="MPX Video Player" class="plugin">
-      <unit bldFile="/app/videoplayer/videoplayerapp/lmpxvideoplayer/group"/>
+      <unit bldFile="/app/videoplayer/videoplayerapp/mpxvideoplayer/group"/>
      </component>
      <component id="videoplayerlauncher" filter="s60" name="Video Player Launcher">
       <unit bldFile="/app/videoplayer/videoplayerapp/videoplayerlauncher/group"/>
