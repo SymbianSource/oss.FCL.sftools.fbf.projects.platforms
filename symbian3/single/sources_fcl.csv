@@ -20,7 +20,7 @@ http://developer.symbian.org/oss/MCL/sf/app/graphicsuis/,/sf/app/graphicsuis,bra
 http://developer.symbian.org/oss/MCL/sf/app/helps/,/sf/app/helps,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/homescreen/,/sf/app/homescreen,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/im/,/sf/app/im,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/app/imgeditor/,/sf/app/imgeditor,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/app/imgeditor/,/sf/app/imgeditor,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/iptelephony/,/sf/app/iptelephony,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/jrt/,/sf/app/jrt,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/location/,/sf/app/location,branch,RCL_3,layers.sysdef.xml
@@ -38,7 +38,7 @@ http://developer.symbian.org/oss/MCL/sf/app/settingsuis/,/sf/app/settingsuis,bra
 http://developer.symbian.org/oss/MCL/sf/app/speechsrv/,/sf/app/speechsrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/techview/,/sf/app/techview,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/utils/,/sf/app/utils,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/app/videoeditor/,/sf/app/videoeditor,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/app/videoeditor/,/sf/app/videoeditor,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/videoplayer/,/sf/app/videoplayer,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/videotelephony/,/sf/app/videotelephony,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/voicerec/,/sf/app/voicerec,branch,RCL_3,layers.sysdef.xml
