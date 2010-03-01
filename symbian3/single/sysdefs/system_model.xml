@@ -97,7 +97,7 @@
       <unit bldFile="adaptation/stubs/posmsgpluginreferenceimpl/group"/>
      </component>
      <component name="srsfenginestub" long-name="SRSF Engine Stub">
-      <unit bldFile="adaptation/stubs/power_save_display_mode_stub/group"/>
+      <unit bldFile="adaptation/stubs/srsfenginestub/group"/>
      </component>
      <component name="power_save_display_mode_stub" long-name="Power Save Display Mode Stub">
       <unit bldFile="adaptation/stubs/power_save_display_mode_stub/group"/>
@@ -288,19 +288,8 @@
      <component name="sysdeftools" long-name="System Definition Tools" purpose="development" introduced="^2">
       <unit mrp="os/buildtools/bldsystemtools/sysdeftools/group/sysdeftools.mrp"/>
      </component>
-     <component name="gttechviewbaseline" long-name="GT Techview Baseline" purpose="development">
-      <unit mrp="os/buildtools/packaging/additionalutils/gt_techview_baseline.mrp"/>
-     </component>
      <component name="commonbldutils" long-name="Common Utils" purpose="development">
       <unit mrp="os/buildtools/bldsystemtools/commonbldutils/tools_utils_common.mrp"/>
-     </component>
-    </collection>
-    <collection name="packaging" long-name="Packaging" level="ui">
-     <component name="additionalutils" long-name="Additional Utils" purpose="development">
-      <unit mrp="os/buildtools/packaging/additionalutils/additional_unknown_cedar.mrp"/>
-     </component>
-     <component name="dummy" long-name="Dummy" purpose="development">
-      <unit bldFile="os/buildtools/packaging/dummy" mrp="os/buildtools/packaging/dummy/additional_dummy.mrp"/>
      </component>
     </collection>
     <collection name="toolsandutils" long-name="Tools and Utils" level="mw">
@@ -309,9 +298,6 @@
      </component>
      <component name="e32tools" long-name="E32 Tools" deprecated="^2" purpose="development" class="PC">
       <unit bldFile="os/buildtools/toolsandutils/e32tools/group" mrp="os/buildtools/toolsandutils/e32tools/group/tools_e32tools.mrp"/>
-     </component>
-     <component name="statapi" long-name="STAT API" filter="gt" purpose="development">
-      <unit bldFile="os/buildtools/toolsandutils/statapi/source/statapi/console" mrp="os/buildtools/toolsandutils/statapi/group/testtools_stat_device_gt.mrp"/>
      </component>
      <component name="autotest" long-name="Autotest" purpose="development">
       <unit bldFile="os/buildtools/toolsandutils/autotest/group" mrp="os/buildtools/toolsandutils/autotest/group/tools_autotest.mrp"/>
@@ -646,12 +632,6 @@
      </component>
     </collection>
     <collection name="sysstatemgmt" long-name="System State Management" level="server">
-     <component name="starter" filter="s60" long-name="Starter">
-      <unit bldFile="os/devicesrv/sysstatemgmt/starter/group"/>
-      <!-- are these test bld.infs needed for the build? -->
-      <!-- <unit bldFile="sysstatemgmt/starter/strtsecnote/group"/> -->
-      <!-- <unit bldFile="sysstatemgmt/starter/strtsecobs/group"/> -->
-     </component>
      <component name="ssmmapperutility" filter="s60" long-name="SSM Mapper Utility" introduced="^3">
       <unit bldFile="os/devicesrv/sysstatemgmt/ssmmapperutility/group"/>
      </component>
@@ -735,9 +715,6 @@
      <component name="cafrecogniserconfig" long-name="CAF Recogniser Config" introduced="9.1" purpose="mandatory">
       <unit bldFile="os/security/contentmgmt/cafrecogniserconfig" mrp="os/security/contentmgmt/cafrecogniserconfig/security_reccafconfig.mrp"/>
      </component>
-     <component name="referencedrmagent" long-name="Reference DRM Agent" introduced="8.0" purpose="development">
-      <unit bldFile="os/security/contentmgmt/referencedrmagent/RefTestAgent/group" mrp="os/security/contentmgmt/referencedrmagent/RefTestAgent/group/security_rta.mrp"/>
-     </component>
     </collection>
     <collection name="crypto" long-name="Crypto Libraries" level="libraries">
      <component name="weakcryptospi" long-name="Weak Crypto SPI" filter="gt" introduced="^3" purpose="optional">
@@ -781,12 +758,8 @@
      <component name="filebasedcertificateandkeystores" long-name="File-based Certificate and Key Stores" introduced="8.0" purpose="optional">
       <unit bldFile="os/security/cryptoservices/filebasedcertificateandkeystores/group" mrp="os/security/cryptoservices/filebasedcertificateandkeystores/group/security_filetokens.mrp"/>
      </component>
-     <component name="Browser Root Certificates" introduced="^2" purpose="optional" filter="s60">
-      <!-- not really s60 -->
+     <component name="Browser Root Certificates" introduced="^2" purpose="optional" filter="sf_build">
       <unit mrp="os/security/cryptoservices/browserrootcertificates/browserrootcerts.mrp"/>
-     </component>
-     <component name="rootcertificates" filter="sf_build" long-name="Root Certificates" introduced="7.0s" purpose="optional">
-      <unit bldFile="os/security/cryptoservices/rootcertificates/group" mrp="os/security/cryptoservices/rootcertificates/group/rootcerts.mrp"/>
      </component>
      <component name="asnpkcs" long-name="ASN PKCS" introduced="8.0" purpose="optional">
       <unit bldFile="os/security/cryptoservices/asnpkcs/group" mrp="os/security/cryptoservices/asnpkcs/group/security_asnpkcs.mrp"/>
@@ -817,13 +790,6 @@
      </component>
      <component name="locationapesuplpsy" long-name="APE SUPL PSY" introduced="^3" purpose="optional" filter="s60" plugin="Y">
       <unit bldFile="os/lbs/datasourcemodules/locationapesuplpsy/group"/>
-     </component>
-     <component name="npeintegmodule" long-name="NPE Integration Module" introduced="^3" purpose="optional" plugin="Y">
-      <unit bldFile="os/lbs/datasourcemodules/npeintegmodule/group" mrp="os/lbs/datasourcemodules/npeintegmodule/group/lbs_npeintegrationmodule.mrp"/>
-     </component>
-     <component name="datasourcemodules_build" long-name="Data Source Modules Build" introduced="^3" purpose="optional" filter="s60">
-      <!-- need to move the exports to another component, or make this a real component by removing the #include and moving down a directory -->
-      <unit bldFile="os/lbs/datasourcemodules/group"/>
      </component>
     </collection>
     <collection name="datasourceadaptation" long-name="Data Source Adaptation" level="adaptation">
@@ -867,6 +833,15 @@
      </component>
      <component name="suplproxyprotocolmodule" long-name="SUPL Proxy Protocol Module" introduced="^3" purpose="optional" plugin="Y">
       <unit bldFile="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/group/lbs_suplproxyprotocolmodule.mrp"/>
+     </component>
+     <component name="suplprotocolmodule" long-name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" plugin="Y">
+      <unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
+     </component>
+     <component name="suplrrlpasn1" filter="sf_build" long-name="SUPL RRLP ASN1 parser">
+      <unit bldFile="os/lbs/networkprotocolmodules/common/suplrrlpasn1/group"/>
+     </component>
+     <component name="suplrrlpprotocol" filter="sf_build" long-name="SUPL RRLP Protocol Module">
+      <unit bldFile="os/lbs/networkprotocolmodules/suplcontrolplaneprotocols/common/suplrrlpprotocol/group"/>
      </component>
     </collection>
     <collection name="lbsapitest" long-name="Location API Tests" level="application-interface"/>
@@ -957,11 +932,6 @@
     </collection>
    </block>
    <block name="networkingsrv" level="services" long-name="Networking Services" levels="adaptation hw-if plugin framework server app-if">
-    <collection name="commsdb" long-name="Comms DB" level="server">
-     <component name="s60_commsdb" filter="s60" long-name="S60 Commsdb" class="config">
-      <unit bldFile="os/networkingsrv/commsdb/s60_commsdb/group"/>
-     </component>
-    </collection>
     <collection name="esockapiextensions" long-name="ESock API Extensions" level="app-if">
      <component name="internetsockets" long-name="Internet Sockets" introduced="ER5" purpose="mandatory">
       <unit bldFile="os/networkingsrv/esockapiextensions/internetsockets/group" mrp="os/networkingsrv/esockapiextensions/internetsockets/group/networking_insock.mrp"/>
@@ -1032,9 +1002,6 @@
      </component>
      <component name="iptransportlayer" long-name="IP Transport Layer" introduced="^3" purpose="optional" plugin="Y">
       <unit bldFile="os/networkingsrv/networkcontrol/iptransportlayer/group" mrp="os/networkingsrv/networkcontrol/iptransportlayer/group/networking_iptransport.mrp"/>
-     </component>
-     <component name="ipupsplugins" long-name="IP UPS" introduced="^3" purpose="optional" plugin="Y">
-      <unit bldFile="os/networkingsrv/networkcontrol/ipupsplugins/group"/>
      </component>
      <component name="commsuserpromptmgr" long-name="Comms User Prompt Manager" introduced="^3" purpose="mandatory">
       <unit bldFile="os/networkingsrv/networkcontrol/commsuserpromptmgr/group" mrp="os/networkingsrv/networkcontrol/commsuserpromptmgr/group/networking_netups.mrp"/>
@@ -1137,9 +1104,6 @@
      <component name="basebandchanneladaptor" long-name="Baseband Channel Adaptor" introduced="8.1" purpose="optional">
       <unit bldFile="os/cellularsrv/basebandabstraction/basebandchanneladaptor/group" mrp="os/cellularsrv/basebandabstraction/basebandchanneladaptor/group/networking_bca.mrp"/>
      </component>
-     <component name="isc_if" filter="s60" long-name="Inter-System Communication Interface">
-      <unit bldFile="os/cellularsrv/basebandabstraction/isc_if/group"/>
-     </component>
     </collection>
     <collection name="basebandadaptationplugins" long-name="Baseband Adaptation Plugins" level="adaptation">
      <component name="basebandchanneladaptorforc32" long-name="Baseband Channel Adaptor for C32" introduced="8.1" purpose="optional" plugin="Y">
@@ -1219,14 +1183,6 @@
       <unit bldFile="os/cellularsrv/telephonyserverplugins/simatktsy/group" mrp="os/cellularsrv/telephonyserverplugins/simatktsy/group/commonsimatktsy.mrp"/>
      </component>
     </collection>
-    <collection name="commonnetworkinterface" long-name="Common Network Interface" level="hw-if">
-     <component name="gennif" filter="s60" long-name="Generic NIF">
-      <unit bldFile="os/cellularsrv/commonnetworkinterface/gennif/group"/>
-     </component>
-     <component name="gprsumtsagent" filter="s60" long-name="GPRS UMTS Agent">
-      <unit bldFile="os/cellularsrv/commonnetworkinterface/gprsumtsagent/group"/>
-     </component>
-    </collection>
     <collection name="telephonyutils" long-name="Telephony Utilities" level="app-if">
      <component name="dial" long-name="Dial" deprecated="9.1" purpose="optional">
       <unit bldFile="os/cellularsrv/telephonyutils/dial/group" mrp="os/cellularsrv/telephonyutils/dial/group/telephony_dial.mrp"/>
@@ -1239,9 +1195,6 @@
      </component>
     </collection>
     <collection name="cellularsrv_info" long-name="Cellular Baseband Services Info" level="app-if">
-     <component name="cellularsrv_plat" filter="s60" long-name="Cellular Baseband Services Platform Interfaces" class="api">
-      <unit bldFile="os/cellularsrv/cellularsrv_plat/group"/>
-     </component>
      <component name="telephonyconfidentialdocs" long-name="Telephony Confidential Documentation" purpose="development" class="doc">
       <unit mrp="os/cellularsrv/cellularsrv_info/telephonyconfidentialdocs/telephony_confidential.mrp"/>
      </component>
@@ -1374,7 +1327,7 @@
      </component>
      <component name="effectspresets_utils" filter="s60" long-name="Effects Presets Utils">
       <!-- need to #include the lot from a single bld.inf
-      		Also move to a stanard component location, not under effectspresets -->
+      		Also move to a standard component location, not under effectspresets -->
       <unit bldFile="os/mm/devsoundextensions/effectspresets/AudioEqualizerUtility/group" filter="!dfs_build"/>
       <unit bldFile="os/mm/devsoundextensions/effectspresets/EnvironmentalReverbUtility/group" filter="!dfs_build"/>
       <unit bldFile="os/mm/devsoundextensions/effectspresets/StereoWideningUtility/group" filter="!dfs_build"/>
@@ -1399,10 +1352,7 @@
      </component>
     </collection>
     <collection name="mdfdevvideoextensions" long-name="MDF Dev Video Extensions" level="device-fw">
-     <component name="arm_mdf_postprocessor" filter="s60" long-name="ARM MDF Postprocessor">
-      <unit bldFile="os/mm/mdfdevvideoextensions/arm_mdf_postprocessor/group"/>
-     </component>
-     <component name="nga_mdf_postprocessor" long-name="NGA MDF Postprocessor">
+     <component name="nga_mdf_postprocessor" long-name="NGA MDF Postprocessor" filter="s60">
       <unit bldFile="os/mm/mdfdevvideoextensions/nga_mdf_postprocessor/group"/>
      </component>
     </collection>
@@ -1413,11 +1363,6 @@
     </collection>
     <collection name="video" long-name="Video Codecs" level="middleware">
      <!-- empty -->
-    </collection>
-    <collection name="videoadaptationextensions" long-name="Video Adaptation Extensions" level="adaptation">
-     <component name="postingsurface" filter="s60" long-name="Posting Surface">
-      <unit bldFile="os/mm/videoadaptationextensions/postingsurface/group"/>
-     </component>
     </collection>
     <collection name="imagingandcamerafws" long-name="Imaging and Camera Frameworks" level="app-if">
      <component name="imagingfws" long-name="Imaging Frameworks" introduced="7.0s" purpose="mandatory">
@@ -1580,12 +1525,6 @@
    </block>
    <block name="graphics" level="services" long-name="Graphics" levels="adaptation engines internal-adaptations device-interface internal-utils app-if">
     <collection name="graphicsaccelaration" long-name="Graphics Acceleration" level="adaptation">
-     <component name="3d_opengl_es_1_1" filter="s60" long-name="3D OpenGL ES 1.1" introduced="^3">
-      <unit bldFile="os/graphics/graphicsaccelaration/3d_opengl_es_1_1/group"/>
-     </component>
-     <component name="2d_openvg_1_1" filter="s60" long-name="2D OpenVG 1.1" introduced="^3">
-      <unit bldFile="os/graphics/graphicsaccelaration/2D_OpenVG_1_1/group"/>
-     </component>
      <component name="vgi" filter="s60" long-name="VGI">
       <unit bldFile="os/graphics/graphicsaccelaration/vgi/group"/>
      </component>
@@ -2083,14 +2022,6 @@
       <unit bldFile="os/osrndtools/hti/group"/>
      </component>
     </collection>
-    <collection name="testexecfw1" long-name="Test Execution Framework v1" level="fw">
-     <component name="cinidata" long-name="CINI Data" purpose="development">
-      <unit bldFile="os/osrndtools/testexecfw1/cinidata" mrp="os/osrndtools/testexecfw1/cinidata/tools_cinidata.mrp"/>
-     </component>
-     <component name="testexecute" long-name="Test Execute" deprecated="^2" purpose="development">
-      <unit bldFile="os/osrndtools/testexecfw1/testexecute/Group" mrp="os/osrndtools/testexecfw1/testexecute/Group/tools_testexecute.mrp"/>
-     </component>
-    </collection>
     <collection name="osrndtools_info" long-name="OS R&amp;D tools Info" level="trace">
      <component name="osrndtools_plat" filter="s60" long-name="OS R&amp;D tools Platform Interfaces" purpose="development" class="api">
       <unit bldFile="os/osrndtools/osrndtools_plat/group"/>
@@ -2446,6 +2377,9 @@
      <component name="omadrm_build" filter="s60" long-name="OMA DRM Build">
       <unit bldFile="mw/drm/omadrm/group"/>
      </component>
+     <component name="foundationcerts" filter="sf_build" long-name="Foundation Certificates">
+      <unit bldFile="mw/drm/omadrm/foundationcerts/group"/>
+     </component>
     </collection>
     <collection name="wmdrm" long-name="Windows Media DRM" level="framework">
      <!-- collection is really a component. Move down a directory -->
@@ -2612,12 +2546,11 @@
      <component name="mpm" filter="s60" long-name="Mobility Policy Manager">
       <unit bldFile="mw/ipconnmgmt/bearermanagement/mpm/group"/>
      </component>
-     <component name="bearermanager" filter="s60" long-name="Bearer Manager">
-      <unit bldFile="mw/ipconnmgmt/bearermanagement/bearermanager/group"/>
+     <component name="extendedconnpref" filter="s60" long-name="Extended Connection Preferences">
+      <unit bldFile="mw/ipconnmgmt/bearermanagement/extendedconnpref/group"/>
      </component>
-     <component name="bearermanagement_build" filter="s60" long-name="Bearer Management Build">
-      <!-- move exports into one of the other components and remove this one -->
-      <unit bldFile="mw/ipconnmgmt/bearermanagement/group"/>
+     <component name="s60mcpr" filter="s60" long-name="S60 Meta-Connection Provider" plugin="Y">
+      <unit bldFile="mw/ipconnmgmt/bearermanagement/S60MCPR/group"/>
      </component>
     </collection>
     <collection name="cmmanager" long-name="Connection Method Manager" level="framework">
@@ -2948,7 +2881,7 @@
       <unit bldFile="mw/vpnclient/vpnengine/dmadpki/group" filter="!oem_build"/>
      </component>
      <component name="ikesocket" filter="s60" long-name="IKE Socket" introduced="^3">
-      <unit bldFile="mw/vpnclient/vpnengine/ikesocketplugin/group" filter="!oem_build"/>
+      <unit bldFile="mw/vpnclient/vpnengine/ikesocket/group" filter="!oem_build"/>
      </component>
     </collection>
     <collection name="vpnui" long-name="VPN UI" level="ui">
@@ -3419,15 +3352,17 @@
      </component>
     </collection>
     <collection name="fotaapplication" long-name="FOTA Application" level="generic">
-     <!-- need to break up into components after resolving the #ifdefs -->
      <component name="fotaapplication_build" filter="s60" long-name="FOTA Application Build">
-      <unit bldFile="mw/remotemgmt/fotaapplication/fotaserver/fotastartupextplg/group"/>
+      <!-- remove this component when configuration is in place and the #ifdefs have been worked out -->
+      <unit bldFile="mw/remotemgmt/fotaapplication/group"/>
      </component>
      <component name="fotaserver" filter="s60" long-name="FOTA Server">
-      <unit bldFile="mw/remotemgmt/fotaapplication/fotaserver/group"/>
+      <!-- uncomment when #ifdefs are resolved -->
+      <!--<unit bldFile="fotaapplication/fotaserver/group"/>-->
      </component>
-     <component name="fotacustcmds" filter="s60" long-name="FOTA Custom Commands">
-      <unit bldFile="mw/remotemgmt/fotaapplication/fotaserver/fotacustcmds/group"/>
+     <component name="fotacustcmds" filter="s60" long-name="FOTA Custom Commands" class="placeholder">
+      <!-- uncomment when #ifdefs are resolved. Need to put a config meta here-->
+      <!--<unit bldFile="fotaapplication/fotaserver/fotacustcmds/group"/>-->
      </component>
     </collection>
     <collection name="remotemgmt_info" long-name="Remote Management Info" level="specific">
@@ -3512,6 +3447,12 @@
     <collection name="mtpdataproviders" long-name="MTP Data Providers" level="generic">
      <component name="mtpfileandfolderdp" long-name="MTP File and Folder Provider" introduced="^2" purpose="optional" plugin="Y">
       <unit bldFile="mw/remoteconn/mtpdataproviders/mtpfileandfolderdp/group" mrp="mw/remoteconn/mtpdataproviders/mtpfileandfolderdp/group/mtp_filedp.mrp"/>
+     </component>
+     <component name="mtpimagedp" long-name="MTP Image Data Provider" filter="gt" introduced="^3" purpose="optional" plugin="Y">
+      <unit bldFile="mw/remoteconn/mtpdataproviders/mtpimagedp/group" mrp="mw/remoteconn/mtpdataproviders/mtpimagedp/group/mtp_imagedp.mrp"/>
+     </component>
+     <component name="mtppictbridgedp" long-name="MTP PictBridge Data Provider" filter="gt" introduced="^3" purpose="optional" plugin="Y">
+      <unit bldFile="mw/remoteconn/mtpdataproviders/mtppictbridgedp/group" mrp="mw/remoteconn/mtpdataproviders/mtppictbridgedp/group/mtp_pictbridgedp.mrp"/>
      </component>
     </collection>
     <collection name="backupandrestore" long-name="Backup and Restore" level="specific">
@@ -4289,6 +4230,12 @@
      <component name="akninputlanguage" filter="s60" long-name="Avkon Input Language">
       <unit bldFile="mw/inputmethods/textinput/akninputlanguage/group"/>
      </component>
+     <component name="ptihangulcore" filter="s60" long-name="PIT Hangul Core" introduced="^3">
+      <unit bldFile="mw/inputmethods/textinput/ptihangulcore/group"/>
+     </component>
+     <component name="ptikoreanqwertycore" filter="s60" long-name="PTI Korean QWERTY Core" introduced="^3">
+      <unit bldFile="mw/inputmethods/textinput/ptikoreanqwertycore/group"/>
+     </component>
      <component name="peninputarc" filter="s60" long-name="Pen Input Arc">
       <unit bldFile="mw/inputmethods/textinput/peninputarc/group"/>
      </component>
@@ -4320,7 +4267,28 @@
       <unit bldFile="mw/inputmethods/textinput/peninputvkbjp/group"/>
      </component>
      <component name="gslangplugin" filter="s60" long-name="GS Language Plugin" plugin="Y">
-      <unit bldFile="mw/inputmethods/textinput/gslangplugin"/>
+      <unit bldFile="mw/inputmethods/textinput/GSLangPlugin"/>
+     </component>
+     <component name="peninputgenericitut" filter="s60" long-name="Pen Input Generic ITU-T" introduced="^3" plugin="Y">
+      <unit bldFile="mw/inputmethods/textinput/peninputgenericitut/group"/>
+     </component>
+     <component name="peninputhwrtrui" filter="s60" long-name="Pen Input Handwriting Recognition Training UI" introduced="^3" plugin="Y">
+      <unit bldFile="mw/inputmethods/textinput/peninputhwrtrui/group"/>
+     </component>
+     <component name="peninputhwrfscn" filter="s60" long-name="Pen Input Chinese Full Screen Handwriting Recognition" introduced="^3" plugin="Y">
+      <unit bldFile="mw/inputmethods/textinput/peninputhwrfscn/group"/>
+     </component>
+     <component name="peninputvkbkr" filter="s60" long-name="Pen Input Korean Virtual Keyboard" introduced="^3" plugin="Y">
+      <unit bldFile="mw/inputmethods/textinput/peninputvkbkr/group"/>
+     </component>
+     <component name="peninputfingerhwr" filter="s60" long-name="Pen Input Finger Handwriting Recognition" introduced="^3" plugin="Y">
+      <unit bldFile="mw/inputmethods/textinput/peninputfingerhwr/group"/>
+     </component>
+     <component name="peninputsplititut" filter="s60" long-name="Pen Input Split ITU-T" introduced="^3" plugin="Y">
+      <unit bldFile="mw/inputmethods/textinput/peninputsplititut/group"/>
+     </component>
+     <component name="peninputsplitqwerty" filter="s60" long-name="Pen Input Split QWERTY" introduced="^3" plugin="Y">
+      <unit bldFile="mw/inputmethods/textinput/peninputsplitqwerty/group"/>
      </component>
      <component name="textinput_build" filter="s60" long-name="Text Input Build">
       <!--needed for #ifdef, can be removed when configuration is implemented -->
@@ -4576,11 +4544,14 @@
      <component name="fontprovider" filter="s60" long-name="Font Provider">
       <unit bldFile="mw/uiresources/fontsupport/fontprovider/group"/>
      </component>
-     <!-- R&D materials, should be Nokia only
-      <component id="fontutils" filter="s60" name="Font Utils">
+     <!-- R&D materials, should be Nokia only: exports S60 fonts, removes freetype
+      <component id="s6_fonts" filter="s60" name="S60 Fonts">
         <unit bldFile="fontsupport/fontutils/group"/>
       </component>
 -->
+     <component name="fontutils" filter="sf_build" long-name="Font Utils">
+      <unit bldFile="mw/uiresources/fontsupport/fontutils/FontUtils/group"/>
+     </component>
     </collection>
     <collection name="helpthemes" long-name="Help Themes" level="data">
      <!-- collection is really a component. Need to move down a directory -->
@@ -6554,7 +6525,8 @@
       <unit bldFile="app/conversations/servicewidget/servicewidgetdatapublisher/group"/>
      </component>
      <component name="themes" filter="s60" long-name="Service Widget Themes" class="config">
-      <unit bldFile="app/conversations/servicewidget/themes/install-themes/install/servicewidget/group"/>
+      <!-- does this really need to have that number in the directory name? -->
+      <unit bldFile="app/conversations/servicewidget/themes/install-themes/install/servicewidget_20021383/group"/>
      </component>
      <component name="servicewidget_build" filter="s60" long-name="Service Widget Build">
       <!-- Either move the whole collection down one directory into a single component, or move the ROM and SIS parts into a Service Widget ROM component -->
