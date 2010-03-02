@@ -837,10 +837,12 @@
      <component name="suplprotocolmodule" long-name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" plugin="Y">
       <unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
      </component>
-     <component name="suplrrlpasn1" filter="sf_build" long-name="SUPL RRLP ASN1 parser">
+     <component name="suplrrlpasn1" filter="sf_build" long-name="SUPL RRLP ASN1 Parser">
+      <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
       <unit bldFile="os/lbs/networkprotocolmodules/common/suplrrlpasn1/group"/>
      </component>
      <component name="suplrrlpprotocol" filter="sf_build" long-name="SUPL RRLP Protocol Module">
+      <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
       <unit bldFile="os/lbs/networkprotocolmodules/suplcontrolplaneprotocols/common/suplrrlpprotocol/group"/>
      </component>
     </collection>
@@ -4545,7 +4547,7 @@
       <unit bldFile="mw/uiresources/fontsupport/fontprovider/group"/>
      </component>
      <!-- R&D materials, should be Nokia only: exports S60 fonts, removes freetype
-      <component id="s6_fonts" filter="s60" name="S60 Fonts">
+      <component id="s60_fonts" filter="s60" name="S60 Fonts">
         <unit bldFile="fontsupport/fontutils/group"/>
       </component>
 -->
@@ -5467,6 +5469,9 @@
     <collection name="phoneuis" long-name="Phone UIs" level="ui">
      <component name="dialer" filter="s60" long-name="Dialer">
       <unit bldFile="app/phone/phoneuis/dialer/group"/>
+     </component>
+     <component name="easydialing" filter="s60" long-name="Easy Dialing Plugin" introduced="^3" plugin="Y">
+      <unit bldFile="app/phone/phoneuis/easydialing/group"/>
      </component>
      <component name="bubblemanager" filter="s60" long-name="Phone Bubble Manager">
       <unit bldFile="app/phone/phoneuis/bubblemanager/group"/>
@@ -6751,9 +6756,9 @@
      </component>
     </collection>
    </block>
-   <block name="videoplayer" level="apps" long-name="Video Player Apps" levels="support apps">
-    <collection name="videofeeds" long-name="Video Feeds" level="apps">
-     <component name="iptv_utils" filter="s60" long-name="Iptv Util" introduced="^3">
+   <block name="videoplayer" level="apps" long-name="Video Player Apps" levels="support plugin util apps">
+    <collection name="videofeeds" long-name="Video Feeds" level="util">
+     <component name="iptv_utils" filter="s60" long-name="IPTV Util" introduced="^3">
       <unit bldFile="app/videoplayer/videofeeds/utils/group"/>
      </component>
      <component name="viewmessageutility" filter="s60" long-name="View Message Utility" introduced="^3">
@@ -6808,7 +6813,7 @@
       <unit bldFile="app/videoplayer/videofeeds/scheduleddlplugin/group"/>
      </component>
     </collection>
-    <collection name="videocollection" long-name="Video Collection" level="apps">
+    <collection name="videocollection" long-name="Video Collection" level="util">
      <component name="mpxmyvideoscollection" filter="s60" long-name="MPX My Videos Collection" introduced="^3">
       <unit bldFile="app/videoplayer/videocollection/mpxmyvideoscollection/group"/>
      </component>
@@ -6822,7 +6827,7 @@
       <unit bldFile="app/videoplayer/videocollection/hgmyvideosplugin/group"/>
      </component>
     </collection>
-    <collection name="videoplayer_homescreenplugins" long-name="Videoplayer Homescreen Plugins" level="support">
+    <collection name="videoplayer_homescreenplugins" long-name="Videoplayer Homescreen Plugins" level="plugin">
      <component name="videosuiteconf" filter="s60" long-name="Video Suite Configuration" introduced="^3" plugin="Y">
       <unit bldFile="app/videoplayer/homescreenplugins/videosuiteconf/group"/>
      </component>
@@ -6866,7 +6871,7 @@
       <unit bldFile="app/videoplayer/videoplayerapp/videoplayerlauncher/group"/>
      </component>
     </collection>
-    <collection name="videoplayback" long-name="Video Playback Plugins" level="support">
+    <collection name="videoplayback" long-name="Video Playback Plugins" level="plugin">
      <component name="videohelix" long-name="Video Helix" filter="s60" introduced="^3" plugin="Y">
       <unit bldFile="app/videoplayer/videoplayback/videohelix/group"/>
      </component>
@@ -7083,7 +7088,7 @@
      </component>
     </collection>
    </block>
-   <block name="homescreen" level="apps" long-name="Home Screen Apps" levels="fw apps">
+   <block name="homescreen" level="apps" long-name="Home Screen Apps" levels="fw support apps">
     <collection name="idlehomescreen" long-name="Idle Home Screen" level="apps">
      <component name="nativeuicontroller" filter="s60" long-name="Native UI Controller">
       <unit bldFile="app/homescreen/idlehomescreen/nativeuicontroller/group"/>
@@ -7135,7 +7140,7 @@
       <unit bldFile="app/homescreen/menufw/group"/>
      </component>
     </collection>
-    <collection name="taskswitcher" long-name="Task Switcher" level="apps">
+    <collection name="taskswitcher" long-name="Task Switcher" level="support">
      <component name="contextengine" filter="s60" long-name="Context Engine" introduced="^3">
       <unit bldFile="app/homescreen/taskswitcher/contextengine/group"/>
      </component>
