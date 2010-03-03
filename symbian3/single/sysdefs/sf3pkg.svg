@@ -1,0 +1,1226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AdobeSVGViewer resolution="600"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:m="http://exslt.org/math" version="1.1" onload="wrapalltext()" viewBox="-3.2 -3.2 2102.899999999999 686.7023744025573" class="package-fixed" onscroll="resized()" onzoom="resized()" onresize="resized()">
+ <title>Symbian OS ^3 System Model: %d %b %Y</title>
+ <defs>
+  <style type="text/css">
+    text.layer, text.package, text.collection, text.component,
+    text.cbox, text.lgrp, text.label, text.lgd {
+		fill:black;
+		font-family: Arial;
+    }
+    text.title {
+		fill:red;
+		font-weight: bold;
+		font-size: 3.2249999999999996px;	
+		font-family: Arial;
+    }    
+    text.component {		
+		font-size: 1.940px;  /*  5.5pt  */
+		font-weight: bold;
+	}
+ 	text.lgd, 
+	text.layer, text.package {
+		font-size: 4.233px;  /*  12pt  */
+		font-weight: bold;
+	}
+	text.label {		
+		font-size: 1.940px;  /*  5.5pt  */
+		font-weight: bold
+	}
+	 text.level {
+		font-style: italic;
+		fill: blue;
+	}
+	g.layer text.level {		
+		font-size: 7.055px;  /*  20pt  */
+		font-style: italic;
+		fill: red;
+	}
+	g.package text.level {		
+		font-size: 4.233px;  /*  12pt  */
+	}
+	g.nested text.level {		
+		font-size: 3.175px;  /*  8pt  */
+	}
+	
+	text.cbox {		
+		font-size: 1.411px;  /*  4pt  */
+		font-weight: bold
+	}
+	text.lgrp {
+		font-size: 12.699px;  /*  36pt  */
+		font-weight: normal;
+	}
+
+g.placeholder text.package,
+svg.package text.package,
+svg.package-fixed text.package {
+		font-size: 11.288px;  /*  32pt  */
+		font-weight: normal;
+	}
+
+
+
+	g.nested text.package {
+		font-size: 2.822px;  /*  8pt  */
+	}
+	
+	svg.collection g.nested text.package,
+	svg.collection-fixed g.nested text.package  {
+		font-size: 4.233px;  /*  12pt  */
+	}
+	
+	svg.package g.nested text.package,
+	svg.package-fixed g.nested text.package  {
+		font-size: 7.055px;  /*  20pt  */
+	}
+
+	text.collection {
+		font-size: 2.469px;  /*  7pt  */
+	}
+	
+	g.placeholder text.collection,
+	svg.collection text.collection,
+	svg.collection-fixed text.collection  {
+		font-size: 3.7035px;  /*  10.5pt  */
+	} 
+
+	/* thin border */
+	rect.legend, rect.collection, rect.cbox {
+		stroke-width: 0.0882px;  /*  0.25pt  */
+		stroke: black
+	}
+	/* thick border */
+	rect.layer, rect.package  {
+		stroke-width: 0.2469px;  /*  0.7pt  */
+		stroke: black
+	}
+	rect.layer {
+		fill: #e6e6e6
+	}
+	rect.package {
+		fill: #b3b3b3
+	}
+	g.nested rect.package {
+		fill: #e6e6e6
+	}
+	rect.collection {
+		fill: white
+	}
+	rect.legend {
+		fill: white
+	}
+	
+	 @media print {
+		#Zoom {visibility: hidden}
+	  }
+ </style>
+  <radialGradient id="Patternradial-grad" gradientUnits="objectBoundingBox" cx="50%" cy="50%" r="70%">
+   <stop offset="0%" stop-color="white" stop-opacity="1"/>
+   <stop offset="100%" stop-opacity="0" stop-color="white"/>
+  </radialGradient>
+  <linearGradient id="Patternstriped-diag-up" spreadMethod="repeat" gradientUnits="userSpaceOnUse" x1="0" x2="3" y1="0" y2="3">
+   <stop offset="0%" stop-opacity="0" stop-color="white"/>
+   <stop offset="20%" stop-color="#ccc" stop-opacity="1"/>
+   <stop offset="40%" stop-opacity="0" stop-color="white"/>
+   <stop offset="100%" stop-opacity="0" stop-color="white"/>
+  </linearGradient>
+  <pattern id="Patternbig-X" patternUnits="objectBoundingBox" x="0" y="0" width="100%" height="100%" viewBox="0 0 10 10">
+   <path d="M 1 1 L 9 9 M 1 9  L 9 1" stroke="#555" stroke-width="1.15" stroke-linecap="round"/>
+  </pattern>
+  <radialGradient id="Patternoutgrad" cx="50%" cy="50%" r="100%" fx="50%" fy="50%">
+   <stop offset="36%" stop-color="white" stop-opacity="0"/>
+   <stop offset="43%" stop-color="white" stop-opacity="0.6"/>
+   <stop offset="50%" stop-color="white" stop-opacity="0"/>
+   <stop offset="100%" stop-color="black" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="Patterningrad" cx="50%" cy="50%" r="100%" fx="50%" fy="50%">
+   <stop offset="0%" stop-color="white" stop-opacity="0.45"/>
+   <stop offset="36%" stop-color="yellow" stop-opacity="0"/>
+   <stop offset="43%" stop-color="yellow" stop-opacity="0.6"/>
+   <stop offset="50%" stop-color="yellow" stop-opacity="0"/>
+   <stop offset="100%" stop-color="black" stop-opacity="0"/>
+  </radialGradient>
+  <symbol id="Borderbox" viewBox="0 0 20 20">
+   <path d="M 0 0 L 0 20 L 20 20 L 20 0 z" stroke="black"/>
+  </symbol>
+  <symbol id="Borderbox-clipRT" viewBox="0 0 20 20">
+   <path d="M 0 0 L 0 20 L 20 20 L 20 5 L 15 0 z" stroke="black"/>
+  </symbol>
+  <symbol id="Borderbox-clipAll" viewBox="0 0 20 20">
+   <path d="M 5 0 L 0 5 L 0 15 L 5 20 L 15 20 L 20 15 L 20 5 L 15 0 z" stroke="black"/>
+  </symbol>
+  <symbol id="Borderround" viewBox="0 0 20 20">
+   <circle cx="10" cy="10" r="10" stroke="black"/>
+  </symbol>
+  <symbol id="Borderhexagon" viewBox="0 0 20 20">
+   <path d="M 0 10 L 5.8 0 L 14.2 0 L 20 10 L 14.2 20 L 5.8 20 z" stroke="black"/>
+  </symbol>
+  <s:style xmlns:s="http://www.w3.org/2000/svg" type="text/css">
+	svg.package-fixed text.layer, 	svg.package text.layer
+	svg.package text.package, svg.package-fixed text.package {
+		font-size: 17.00px;
+		font-weight: normal
+	} 
+	
+	svg.collection-fixed text.layer,  svg.collection text.layer {
+		font-size: 12px;
+		font-weight: normal
+	} 
+	svg.collection-fixed	text.package {
+		font-size: 6px;
+		font-weight: normal;
+	}
+    </s:style>
+  <symbol id="BorderShape2" viewBox="0 0 20 20">
+   <s:path xmlns:s="http://www.w3.org/2000/svg" d="M 0 0 L 0 20 L 20 20 L 20 8 L 17.6 5.6 A 2.7 2.7 30 1 0 14.4 2.4 L12 0 z" stroke="black"/>
+  </symbol>
+  <s:radialGradient xmlns:s="http://www.w3.org/2000/svg" gradientUnits="userSpaceOnUse" cx="10" cy="10" r="14" id="PatternOverlay1">
+   <s:stop offset="15%" stop-color="white" stop-opacity="0"/>
+   <s:stop offset="20%" stop-color="white" stop-opacity="0.75"/>
+   <s:stop offset="25%" stop-color="white" stop-opacity="0"/>
+   <s:stop offset="35%" stop-color="white" stop-opacity="0"/>
+   <s:stop offset="40%" stop-color="white" stop-opacity="0.75"/>
+   <s:stop offset="45%" stop-color="white" stop-opacity="0"/>
+   <s:stop offset="55%" stop-color="white" stop-opacity="0"/>
+   <s:stop offset="60%" stop-color="white" stop-opacity="0.75"/>
+   <s:stop offset="65%" stop-color="white" stop-opacity="0"/>
+  </s:radialGradient>
+  <s:pattern xmlns:s="http://www.w3.org/2000/svg" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%" viewBox="0 0 10 10" id="PatternOverlay4">
+   <s:path d="M 1 1 L 9 9 M 1 9  L 9 1" stroke="yellow" stroke-width="0.7" stroke-linecap="round"/>
+  </s:pattern>
+  <s:pattern xmlns:s="http://www.w3.org/2000/svg" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%" viewBox="0 0 10 10" id="PatternOverlay5">
+   <s:path d="M 1 1 L 9 9 M 1 9  L 9 1" stroke="blue" stroke-width="0.7" stroke-linecap="round"/>
+  </s:pattern>
+  <s:pattern xmlns:s="http://www.w3.org/2000/svg" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%" viewBox="0 0 10 10" id="PatternOverlay6">
+   <s:path d="M 1 1 L 9 9 M 1 9  L 9 1" stroke="yellow" stroke-width="0.7" stroke-linecap="round"/>
+  </s:pattern>
+  <s:radialGradient xmlns:s="http://www.w3.org/2000/svg" gradientUnits="userSpaceOnUse" cx="10" cy="10" r="14" id="PatternOverlay8">
+   <s:stop offset="0%" stop-color="yellow" stop-opacity="1"/>
+   <s:stop offset="85%" stop-opacity="0" stop-color="white"/>
+   <s:stop offset="100%" stop-opacity="0" stop-color="white"/>
+  </s:radialGradient>
+  <s:radialGradient xmlns:s="http://www.w3.org/2000/svg" gradientUnits="userSpaceOnUse" cx="10" cy="10" r="14" id="PatternOverlay9">
+   <s:stop offset="0%" stop-color="rgb(180  52 255)" stop-opacity="1"/>
+   <s:stop offset="85%" stop-opacity="0" stop-color="white"/>
+   <s:stop offset="100%" stop-opacity="0" stop-color="white"/>
+  </s:radialGradient>
+ </defs>
+ <script type="text/ecmascript"><![CDATA[ 
+
+var svgns="http://www.w3.org/2000/svg";
+
+]]><![CDATA[
+
+function splitup(txt) {
+	var a = new Array;
+	var t = txt;
+	var found		
+	while((found = t.match(/(^[\u3041-\u309e\u30a1-\u30fe\u4e00-\ufa2d])([\u3041-\u309e\u30a1-\u30fe\u4e00-\ufa2d].*)$/))|| ( found = t.match(/^([^ \u200b\xad-]+[ \u200b\xad-]+)(.*)$/))) {
+			a.push(found[1]);
+			t=found[2];
+	}
+	a.push(t);
+	return a;
+}
+
+
+function splitable(node) {
+ 	return node.firstChild.nodeType == 3 && node.firstChild.data.match(/[\t\n\r \u200b\xad-]/);
+}
+
+function crush(node, len) {
+	node.setAttribute('letter-spacing','-0.075em');
+	if( node.getComputedTextLength() > len) 
+		node.setAttribute('letter-spacing','-0.15em');
+}
+
+function whatSize(txt) { // convert a length into pixels
+	if(txt.match(/^[0-9.-]+$/)) return txt;
+	return;
+}
+
+
+function wrapalltext(node) {
+    if(!node) node= document;
+    var all = node.getElementsByTagNameNS(svgns,'text');
+    var i=0;
+    for (i=0; i<all.length; i++) {
+		var cur = all.item(i);
+		var w=0;
+		if (cur.hasAttribute('width')) {
+			w = whatSize(cur.getAttribute('width'));
+		}
+	if (w)	wraptext(cur,w)
+	}
+}
+
+
+function wraptext(cur,l) {
+	if(cur.firstChild.nodeType != 3)  return; // must be just a text node
+	if(cur.getBBox().width < l )  {
+		cur.firstChild.data = cur.firstChild.data.replace(/[\xad\u200b]/g,"");
+		return; // no need -- won't wrap
+	}
+	var t = cur.firstChild.data.replace(/\s+/," ");  // normalize all spaces
+	t = t.replace(/^ +/,"").replace(/ +$/,"");  // trim spaces
+	var words =splitup(t); 	// each word ends with the split character (if any)
+	if (words.length<2)  {
+		crush(cur, l);
+		return;
+	}
+	cur.removeChild(cur.firstChild)
+	var tspan = document.createElementNS(svgns,'tspan');
+	var first = tspan;	
+	cur.appendChild(tspan);
+	var txt = document.createTextNode(words[0]);
+	tspan.appendChild(txt);
+	tspan.setAttribute('x',cur.getAttribute('x'));	// Opera needs this
+	var nlines=1;
+	var zero =0;
+	for (i =1;i< words.length;i++) {
+		var was = txt.data;
+		txt.data+=words[i];
+		if (tspan.getComputedTextLength() -zero > l) { // if the line with this word at the end is bigger than the available space...
+			txt.data=was.replace(/ +$/,"").replace(/\xad(.)/,"$1").replace(/\u200b/g,""); // remove zero-width spaces and trailing spaces and soft hyphens
+			// if it's still too big then decrease the letter spacing
+			if( tspan.getComputedTextLength() > l ) crush(tspan,l);
+			tspan = document.createElementNS(svgns,'tspan');
+			tspan.setAttribute('dy',"1em");
+			nlines++;
+			tspan.setAttribute('x',cur.getAttribute('x'));
+			cur.appendChild(tspan);
+			txt = document.createTextNode('');
+			tspan.appendChild(txt);
+			zero = tspan.getComputedTextLength();
+			txt.data+=words[i];
+		}
+	}
+	txt.data=txt.data.replace(/ +$/,"").replace(/\xad(.)/,"$1").replace(/\u200b/g,""); // remove zero-width spaces and trailing spaces and soft hyphens
+	if( tspan.getComputedTextLength() > l ) 	crush(tspan,l);
+	var align =cur.getAttribute('dy');
+	if(align=='0.375em') {	// middle aligned
+		first.setAttribute('dy',((1-nlines ) / 2 + 0.375 )+"em");
+	}  else if(align=='0.75em' || align=='1em')  {  // top (or above) aligned
+		first.setAttribute('dy',align)	
+	}  else  { // bottom aligned (default)
+		first.setAttribute('dy',(1-nlines)+"em");
+	}
+}
+
+  
+]]><![CDATA[
+
+var curId = '';
+function clear(id) {
+	if(curId != '') off(curId);
+	return curId=id;
+}
+
+
+function on(id) {
+	var cur =document.getElementById(id)
+	cur.setAttribute('visibility','visible');
+	]]><![CDATA[
+	if(!cur.hasAttribute('wrapenated')) {
+		cur.setAttribute('wrapenated','true');
+		wrapalltext(cur)
+	}
+	]]><![CDATA[
+	return cur;
+}
+
+function off(id) {
+	document.getElementById(id).setAttribute('visibility','hidden');
+}
+]]><![CDATA[
+
+var pandandzoom=null;
+function endpanning()
+        {
+        if(pandandzoom)
+	        {
+    	    window.clearInterval(pandandzoom)
+        	pandandzoom=null
+        	}
+        }
+
+function repeatpan(x,y)
+        {
+        endpanning()
+        panning(x,y)
+        pandandzoom = window.setInterval('panning('+x+','+y+')', 100);
+        }
+
+function panning(x,y)
+        {
+        document.rootElement.currentTranslate.x += x
+        document.rootElement.currentTranslate.y += y
+        }
+
+function repeatzoom(z)
+        {
+        endpanning()
+        zoom(z)
+        pandandzoom = window.setInterval('zoom('+z+')', 100);
+        }
+
+function zoom(z)
+		{
+		var viewbox = document.documentElement.getAttribute("viewBox").split(' ');
+ 		var x = Number(viewbox[0]);
+ 		var y = Number(viewbox[1]);
+ 		var width = Number(viewbox[2]);
+ 		var height = Number(viewbox[3]);
+ 		if( window.innerWidth==0 || window.innerHeight ==0 || height ==0) {return}
+ 		var s = width  / window.innerWidth;
+ 		if ( width / height < window.innerWidth / window.innerHeight)
+ 			{
+			s = height  / window.innerHeight;
+			width = window.innerWidth * s;
+			}
+		else	
+			{
+ 			height = window.innerHeight * s;
+ 			}
+ 			
+ 		x = x - 0.5* (width - viewbox[2]) + ( -document.rootElement.currentTranslate.x ) * s  / document.rootElement.currentScale ;
+		y = y - 0.5* (height - viewbox[3]) + ( -document.rootElement.currentTranslate.y ) * s  / document.rootElement.currentScale ;
+		width = width / document.rootElement.currentScale;
+		height = height / document.rootElement.currentScale;
+        document.rootElement.currentTranslate.x=
+        	document.rootElement.currentTranslate.x *z - 0.5*window.innerWidth* (z -1 )
+        document.rootElement.currentTranslate.y=
+        	document.rootElement.currentTranslate.y *z - 0.5*window.innerHeight* (z -1 )
+        document.rootElement.currentScale*=z
+		}
+
+]]><![CDATA[
+function resized()
+		{
+		var viewbox = document.documentElement.getAttribute("viewBox").split(' ');
+ 		var x = Number(viewbox[0]);
+ 		var y = Number(viewbox[1]);
+ 		var width = Number(viewbox[2]);
+ 		var height = Number(viewbox[3]);
+ 		if( window.innerWidth==0 || window.innerHeight ==0 || height ==0) {return}
+ 		var s = width  / window.innerWidth;
+ 		if ( width / height < window.innerWidth / window.innerHeight)
+ 			{
+			s = height  / window.innerHeight;
+			width = window.innerWidth * s;
+			}
+		else	
+			{
+ 			height = window.innerHeight * s;
+ 			}
+]]><![CDATA[
+		var e = document.getElementById('Zoom');
+		var trans = 'translate(';
+		trans+= x - 0.5* (width - viewbox[2]) + ( -document.rootElement.currentTranslate.x ) * s  / document.rootElement.currentScale ;
+		trans+=' ';
+		trans+= y - 0.5* (height - viewbox[3]) + ( -document.rootElement.currentTranslate.y ) * s  / document.rootElement.currentScale ;
+		trans+=') scale(';
+		trans+=  (height / window.innerHeight) *3.2 / document.rootElement.currentScale;
+		trans+=')';
+		e.setAttribute('transform',trans);
+]]><![CDATA[		
+ 		}
+	]]></script>
+ <g id="os" transform="translate(3.1999999999999993 395.6)" class="layer">
+  <rect x="0.3" y="0.3" width="9.3" rx="4.65" ry="4.65" class="layer" height="222.8"/>
+  <text text-anchor="middle" dy="0.375em" class="layer" transform="rotate(-90)" y="4.95" width="222.8" height="9.3" x="-111.7">OS</text>
+  <g class="layer-detail" transform="translate(333.19999999999976 3.2)">
+   <rect x="-320.39999999999975" class="layer" y="-3.2" width="2080.499999999999" height="222.8"/>
+   <g>
+    <g id="kernelhwsrv" class="package" transform="translate( 0 119.20000000000002)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color0.mouseover" end="s8-color0.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:tan;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.60000000000002" dy="0.375em" height="78.4">Kernel &amp; HW Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="boardsupport" class="package" transform="translate( 80.1 119.20000000000002)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color0.mouseover" end="s8-color0.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:tan;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.60000000000002" dy="0.375em" height="97.2">Board Support</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="buildtools" class="package" transform="translate( 160.2 119.20000000000002)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color12.mouseover" end="s8-color12.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:darkgray;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.60000000000002" dy="0.375em" height="78.4">Build Tools</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="ossrv" class="package" transform="translate( 0 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color0.mouseover" end="s8-color0.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:tan;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000001" dy="0.375em" height="116.00000000000001">Generic OS Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="persistentdata" class="package" transform="translate( 80.1 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color0.mouseover" end="s8-color0.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:tan;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000001" dy="0.375em" height="116.00000000000001">Persistent Data Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="devicesrv" class="package" transform="translate( 160.2 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color0.mouseover" end="s8-color0.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:tan;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000001" dy="0.375em" height="116.00000000000001">Dev­ice Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="security" class="package" transform="translate( 240.29999999999998 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color1.mouseover" end="s8-color1.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:rgb(228,14,98);"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000001" dy="0.375em" height="116.00000000000001">OS Security</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="lbs" class="package" transform="translate( 320.4 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color2.mouseover" end="s8-color2.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:whitesmoke;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000001" dy="0.375em" height="97.2">Locating Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="commsfw" class="package" transform="translate( 400.5 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color4.mouseover" end="s8-color4.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:moccasin;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000001" dy="0.375em" height="97.2">Comms Frame­work</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="networkingsrv" class="package" transform="translate( 480.6 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color4.mouseover" end="s8-color4.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:moccasin;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000001" dy="0.375em" height="116.00000000000001">Network­ing Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="wlan" class="package" transform="translate( 560.7 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color4.mouseover" end="s8-color4.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:moccasin;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000001" dy="0.375em" height="116.00000000000001">WLAN</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="cellularsrv" class="package" transform="translate( 640.8000000000001 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color3.mouseover" end="s8-color3.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:darkkhaki;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000001" dy="0.375em" height="116.00000000000001">Cellular Baseband Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="bt" class="package" transform="translate( 720.9000000000001 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color5.mouseover" end="s8-color5.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orchid;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000001" dy="0.375em" height="116.00000000000001">Blue­tooth</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="usb" class="package" transform="translate( 801.0000000000001 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color5.mouseover" end="s8-color5.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orchid;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000001" dy="0.375em" height="116.00000000000001">USB</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="mm" class="package" transform="translate( 881.1000000000001 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:rgb(175,212,240);"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000001" dy="0.375em" height="116.00000000000001">Multi­media</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="imagingext" class="package" transform="translate( 961.2000000000002 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:rgb(175,212,240);"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000001" dy="0.375em" height="116.00000000000001">Imaging Exten­sions</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="graphics" class="package" transform="translate( 1041.3 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000001" dy="0.375em" height="116.00000000000001">Graphics</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="textandloc" class="package" transform="translate( 1121.3999999999999 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000001" dy="0.375em" height="97.2">Text &amp; Localis­ation Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="xmlsrv" class="package" transform="translate( 1201.4999999999998 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color11.mouseover" end="s8-color11.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:slateblue;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000001" dy="0.375em" height="97.2">XML Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="deviceplatformrelease" class="package" transform="translate( 1281.5999999999997 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color12.mouseover" end="s8-color12.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:darkgray;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000001" dy="0.375em" height="59.6">Dev­ice Platform Release</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="osrndtools" class="package" transform="translate( 1361.6999999999996 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color12.mouseover" end="s8-color12.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:darkgray;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000001" dy="0.375em" height="40.8">OS R&amp;D tools</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="mw" transform="translate(3.1999999999999993 169.6)" class="layer">
+  <rect x="0.3" y="0.3" width="9.3" rx="4.65" ry="4.65" class="layer" height="222.8"/>
+  <text text-anchor="middle" dy="0.375em" class="layer" transform="rotate(-90)" y="4.95" width="222.8" height="9.3" x="-111.7">Middleware</text>
+  <g class="layer-detail" transform="translate(12.8 3.2)">
+   <rect x="0" class="layer" y="-3.2" width="2080.499999999999" height="222.8"/>
+   <g>
+    <g id="appsupport" class="package" transform="translate( 0 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color11.mouseover" end="s8-color11.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:slateblue;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="116.00000000000001">Generic App Support</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="securitysrv" class="package" transform="translate( 80.1 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color1.mouseover" end="s8-color1.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:rgb(228,14,98);"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="97.2">Security Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="drm" class="package" transform="translate( 160.2 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color1.mouseover" end="s8-color1.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:rgb(228,14,98);"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="97.2">DRM</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="locationsrv" class="package" transform="translate( 0 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color2.mouseover" end="s8-color2.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:whitesmoke;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="78.4">Location Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="accesssec" class="package" transform="translate( 240.29999999999998 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color4.mouseover" end="s8-color4.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:moccasin;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="97.2">Access Security</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="ipconnmgmt" class="package" transform="translate( 320.4 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color4.mouseover" end="s8-color4.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:moccasin;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="97.2">IP Connect­ivity Mgmt.</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="netprotocols" class="package" transform="translate( 400.5 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color4.mouseover" end="s8-color4.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:moccasin;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="97.2">High-level Internet Protocols</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="ipappprotocols" class="package" transform="translate( 480.6 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color4.mouseover" end="s8-color4.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:moccasin;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="78.4">IP App Protocols</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="wirelessacc" class="package" transform="translate( 80.1 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color4.mouseover" end="s8-color4.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:moccasin;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="59.6">Wireless Access</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="vpnclient" class="package" transform="translate( 160.2 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color4.mouseover" end="s8-color4.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:moccasin;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="59.6">VPN Client</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="ipappsrv" class="package" transform="translate( 240.29999999999998 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color3.mouseover" end="s8-color3.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:darkkhaki;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="97.2">IP App Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="phonesrv" class="package" transform="translate( 320.4 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color3.mouseover" end="s8-color3.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:darkkhaki;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="97.2">Telephony &amp; SIM Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="messagingmw" class="package" transform="translate( 400.5 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:lightpink;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="59.6">Messag­ing Middle­ware</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="imsrv" class="package" transform="translate( 480.6 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:lightpink;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="97.2">Instant Msg. &amp; Presence Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="legacypresence" class="package" transform="translate( 560.7 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:lightpink;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="59.6">Legacy Presence Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="opensrv" class="package" transform="translate( 640.8000000000001 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:lightpink;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="78.4">Open Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="remotemgmt" class="package" transform="translate( 720.9000000000001 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color6.mouseover" end="s8-color6.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:darkseagreen;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="97.2">Remote Manage­ment</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="remotestorage" class="package" transform="translate( 560.7 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color5.mouseover" end="s8-color5.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orchid;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="40.8">Remote Storage</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="remoteconn" class="package" transform="translate( 640.8000000000001 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color5.mouseover" end="s8-color5.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orchid;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="97.2">Remote Connect­ivity</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="srvdiscovery" class="package" transform="translate( 720.9000000000001 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color5.mouseover" end="s8-color5.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orchid;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="97.2">Service Discovery &amp; Usage</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="dlnasrv" class="package" transform="translate( 801.0000000000001 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color5.mouseover" end="s8-color5.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:orchid;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="97.2">DLNA Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="btservices" class="package" transform="translate( 801.0000000000001 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color5.mouseover" end="s8-color5.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orchid;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="97.2">Blue­tooth Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="usbservices" class="package" transform="translate( 881.1000000000001 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color5.mouseover" end="s8-color5.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orchid;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="97.2">USB Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="shortlinkconn" class="package" transform="translate( 961.2000000000002 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color5.mouseover" end="s8-color5.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orchid;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="97.2">Shortlink Connectivity</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="imghandling" class="package" transform="translate( 881.1000000000001 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:rgb(175,212,240);"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="59.6">Image Handling</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="metadatasrv" class="package" transform="translate( 961.2000000000002 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:rgb(175,212,240);"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="97.2">Legacy Metadata Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="mds" class="package" transform="translate( 1041.3 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:rgb(175,212,240);"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="78.4">Metadata Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="mmuifw" class="package" transform="translate( 1121.3999999999999 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:rgb(175,212,240);"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="78.4">Multi­media UI Fmwk.</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="videoutils" class="package" transform="translate( 1201.4999999999998 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:rgb(175,212,240);"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="59.6">Video Utils</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="mmmw" class="package" transform="translate( 1041.3 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:rgb(175,212,240);"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="97.2">Multi­media Middle­ware</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="helix" class="package" transform="translate( 1121.3999999999999 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:rgb(175,212,240);"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="97.2">Helix</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="camerasrv" class="package" transform="translate( 1281.5999999999997 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:rgb(175,212,240);"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="59.6">Camera Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="mmappfw" class="package" transform="translate( 1361.6999999999996 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:rgb(175,212,240);"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="59.6">Multi­media App Fmwk.</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="inputmethods" class="package" transform="translate( 1201.4999999999998 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="59.6">Input Methods</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="qt" class="package placeholder" transform="translate( 1281.5999999999997 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="15.600000000000001">Qt</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="classicui" class="package" transform="translate( 1361.6999999999996 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="97.2">Classic UI</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="svgt" class="package" transform="translate( 1441.7999999999995 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="40.8">SVG Tiny</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="uiaccelerator" class="package" transform="translate( 1521.8999999999994 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="97.2">UI Accel­erator</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="uiresources" class="package" transform="translate( 1601.9999999999993 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="116.00000000000001">UI Resources</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="hapticsservices" class="package" transform="translate( 1682.0999999999992 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="59.6">Haptics Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="gsprofilesrv" class="package" transform="translate( 1762.1999999999991 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="116.00000000000001">General Settings &amp; Profiles Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="homescreensrv" class="package" transform="translate( 1441.7999999999995 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="97.2">Home Screen Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="appinstall" class="package" transform="translate( 1842.299999999999 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color11.mouseover" end="s8-color11.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:slateblue;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="78.4">App Install­ation</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="serviceapifw" class="package" transform="translate( 1521.8999999999994 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color11.mouseover" end="s8-color11.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:slateblue;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="97.2">Service API Frame­work</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="serviceapi" class="package" transform="translate( 1601.9999999999993 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color11.mouseover" end="s8-color11.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:slateblue;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="78.4">Service API</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="web" class="package" transform="translate( 1682.0999999999992 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color11.mouseover" end="s8-color11.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:slateblue;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="97.2">Web</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="websrv" class="package" transform="translate( 1922.399999999999 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color11.mouseover" end="s8-color11.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:slateblue;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="97.2">Web Services</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="platformtools" class="package" transform="translate( 2002.4999999999989 100.4)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color12.mouseover" end="s8-color12.mouseout"/>
+     <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:darkgray;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="15.600000000000001">Platform Tools</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="uitools" class="package" transform="translate( 1762.1999999999991 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color12.mouseover" end="s8-color12.mouseout"/>
+     <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:darkgray;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="78.4">UI Tools</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="app" transform="translate(3.1999999999999993 0)" class="layer">
+  <rect x="0.3" y="0.3" width="9.3" rx="4.65" ry="4.65" class="layer" height="166.4"/>
+  <text text-anchor="middle" dy="0.375em" class="layer" transform="rotate(-90)" y="4.95" width="166.4" height="9.3" x="-83.5">Applications</text>
+  <g class="layer-detail" transform="translate(12.8 3.2)">
+   <rect x="0" class="layer" y="-3.2" width="2080.499999999999" height="166.4"/>
+   <g>
+    <g id="location" class="package" transform="translate( 0 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color2.mouseover" end="s8-color2.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:whitesmoke;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="78.4">Location Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="mmsharinguis" class="package" transform="translate( 0 81.60000000000001)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color3.mouseover" end="s8-color3.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:darkkhaki;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.19999999999999" dy="0.375em" height="59.6">Multi­media Sharing UIs</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="phone" class="package" transform="translate( 80.1 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color3.mouseover" end="s8-color3.mouseout"/>
+     <rect class="package" x="0" width="78" height="160" y="0" style="fill:darkkhaki;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="79" dy="0.375em" height="78.4">Phone Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="videotelephony" class="package" transform="translate( 160.2 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color3.mouseover" end="s8-color3.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:darkkhaki;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="78.4">Video Telephony Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="iptelephony" class="package" transform="translate( 240.29999999999998 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color3.mouseover" end="s8-color3.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:darkkhaki;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="78.4">IP Telephony</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="settingsuis" class="package" transform="translate( 160.2 81.60000000000001)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color6.mouseover" end="s8-color6.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:darkseagreen;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.19999999999999" dy="0.375em" height="40.8">Settings UIs</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="contentcontrol" class="package" transform="translate( 240.29999999999998 81.60000000000001)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color6.mouseover" end="s8-color6.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:darkseagreen;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.19999999999999" dy="0.375em" height="40.8">Content Control Daemons</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="devicecontrol" class="package" transform="translate( 320.4 81.60000000000001)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color6.mouseover" end="s8-color6.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:darkseagreen;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.19999999999999" dy="0.375em" height="59.6">Dev­ice Control Daemons</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="printing" class="package" transform="translate( 400.5 81.60000000000001)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color5.mouseover" end="s8-color5.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:orchid;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.19999999999999" dy="0.375em" height="15.600000000000001">Printing</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="files" class="package" transform="translate( 320.4 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:lightpink;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="40.8">File Manager Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="utils" class="package" transform="translate( 400.5 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:lightpink;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="15.600000000000001">Utility Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="contacts" class="package" transform="translate( 480.6 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
+     <rect class="package" x="0" width="78" height="160" y="0" style="fill:lightpink;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="79" dy="0.375em" height="78.4">Contacts Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="organizer" class="package" transform="translate( 560.7 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
+     <rect class="package" x="0" width="78" height="160" y="0" style="fill:lightpink;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="79" dy="0.375em" height="97.2">Organizer App Suite</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="messaging" class="package" transform="translate( 640.8000000000001 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
+     <rect class="package" x="0" width="78" height="160" y="0" style="fill:lightpink;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="79" dy="0.375em" height="78.4">Messag­ing Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="commonemail" class="package" transform="translate( 720.9000000000001 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
+     <rect class="package" x="0" width="78" height="160" y="0" style="fill:lightpink;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="79" dy="0.375em" height="78.4">Email Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="conversations" class="package" transform="translate( 801.0000000000001 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:lightpink;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="78.4">Conversa­tion Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="im" class="package" transform="translate( 881.1000000000001 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:lightpink;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="78.4">Instant Msg. Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="dictionary" class="package" transform="translate( 801.0000000000001 81.60000000000001)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:lightpink;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.19999999999999" dy="0.375em" height="40.8">Dictio­nary</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="camera" class="package" transform="translate( 961.2000000000002 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:#ffff00;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="15.600000000000001">Camera Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="imgeditor" class="package" transform="translate( 1041.3 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:#ffff00;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="40.8">Image Editor Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="videoeditor" class="package" transform="translate( 1121.3999999999999 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:#ffff00;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="40.8">Video Editor Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="videoplayer" class="package" transform="translate( 1201.4999999999998 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:#ffff00;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="78.4">Video Player Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="photos" class="package" transform="translate( 1281.5999999999997 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:#ffff00;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="78.4">Photos</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="musicplayer" class="package" transform="translate( 1361.6999999999996 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:#ffff00;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="78.4">Music Player Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="radio" class="package" transform="translate( 1441.7999999999995 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:#ffff00;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="40.8">Radio Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="internetradio" class="package placeholder" transform="translate( 1521.8999999999994 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:#ffff00;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="15.600000000000001">Internet Radio Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="tv" class="package placeholder" transform="translate( 881.1000000000001 81.60000000000001)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:#ffff00;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.19999999999999" dy="0.375em" height="15.600000000000001">TV Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="voicerec" class="package" transform="translate( 1601.9999999999993 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:#ffff00;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="15.600000000000001">Voice Recorder Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="screensaver" class="package" transform="translate( 1682.0999999999992 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="40.8">Screen Saver Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="homescreen" class="package" transform="translate( 1762.1999999999991 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="59.6">Home Screen Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="graphicsuis" class="package" transform="translate( 961.2000000000002 81.60000000000001)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.19999999999999" dy="0.375em" height="40.8">Graphics UIs</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="profile" class="package" transform="translate( 1842.299999999999 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.2" dy="0.375em" height="15.600000000000001">Profiles</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="speechsrv" class="package" transform="translate( 1041.3 81.60000000000001)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.19999999999999" dy="0.375em" height="59.6">Speech Recog­nition UIs</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="homescreentools" class="package" transform="translate( 1121.3999999999999 81.60000000000001)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.19999999999999" dy="0.375em" height="40.8">Home Screen Tools</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="webuis" class="package" transform="translate( 1201.4999999999998 81.60000000000001)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color11.mouseover" end="s8-color11.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:slateblue;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.19999999999999" dy="0.375em" height="40.8">Web UIs</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="jrt" class="package" transform="translate( 1281.5999999999997 81.60000000000001)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color11.mouseover" end="s8-color11.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:slateblue;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.19999999999999" dy="0.375em" height="78.4">Java Runtime</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="conntools" class="package" transform="translate( 1361.6999999999996 81.60000000000001)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color4.mouseover" end="s8-color4.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:moccasin;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.19999999999999" dy="0.375em" height="40.8">Connect­ivity Tools</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="rndtools" class="package" transform="translate( 1441.7999999999995 81.60000000000001)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color12.mouseover" end="s8-color12.mouseout"/>
+     <rect class="package" x="0" width="78" height="78.4" y="0" style="fill:darkgray;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="38.19999999999999" dy="0.375em" height="78.4">R&amp;D tools</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="helps" class="package" transform="translate( 1922.399999999999 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="160" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="79" dy="0.375em" height="78.4">Help Apps</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+    <g id="techview" class="package" transform="translate( 2002.4999999999989 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
+     <rect class="package" x="0" width="78" height="160" y="0" style="fill:orange;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="79" dy="0.375em" height="116.00000000000001">Techview</text>
+     <g transform="translate(0 3.2)"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="legend-root" class="legend" transform="translate(1806.8894999999993 624.8000000000001) translate(292.8105 0) scale(5.736679524812121) translate(-292.8105)">
+  <text text-anchor="middle" class="title" x="276.47525" y="0">
+   <tspan dy="0.75em" x="276.47525">Symbian OS ^3</tspan>
+   <tspan dy="1em" x="276.47525">System Model</tspan>
+   <tspan font-style="italic" dy="1em" id="release-version" x="276.47525">%d %b %Y</tspan>
+  </text>
+  <g id="legend-box">
+   <rect class="legend" rx="5" ry="5" height="8.1" width="260.14" x="0" y="0"/>
+   <g transform="translate(5 2.5)">
+    <text text-anchor="start" class="lgd" dy="0.375em" x="0" y="1.5499999999999998">Key</text>
+    <g transform="translate(12 0)">
+     <g transform="translate(0 0)">
+      <text text-anchor="end" class="label" dy="0.375em" x="13.5" y="1.5499999999999998" width="13.5">Technology Domain:</text>
+      <g id="s8-color0">
+       <rect class="cbox" height="3.1" width="15.5" fill="tan" x="15" y="-0.0000000000000002220446049250313"/>
+       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="22.75" y="1.5499999999999998">OS Base Services (5)</text>
+      </g>
+      <g id="s8-color1">
+       <rect class="cbox" height="3.1" width="15.5" fill="rgb(228,14,98)" x="30.5" y="-0.0000000000000002220446049250313"/>
+       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="38.25" y="1.5499999999999998">Security (3)</text>
+      </g>
+      <g id="s8-color2">
+       <rect class="cbox" height="3.1" width="15.5" fill="whitesmoke" x="46" y="-0.0000000000000002220446049250313"/>
+       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="53.75" y="1.5499999999999998">Location (3)</text>
+      </g>
+      <g id="s8-color3">
+       <rect class="cbox" height="3.1" width="15.5" fill="darkkhaki" x="61.5" y="-0.0000000000000002220446049250313"/>
+       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="69.25" y="1.5499999999999998">Personal Communications (7)</text>
+      </g>
+      <g id="s8-color4">
+       <rect class="cbox" height="3.1" width="15.5" fill="moccasin" x="77" y="-0.0000000000000002220446049250313"/>
+       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="84.75" y="1.5499999999999998">Data Communications (10)</text>
+      </g>
+      <g id="s8-color5">
+       <rect class="cbox" height="3.1" width="15.5" fill="orchid" x="92.5" y="-0.0000000000000002220446049250313"/>
+       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="100.25" y="1.5499999999999998">Device Connectivity (10)</text>
+      </g>
+      <g id="s8-color6">
+       <rect class="cbox" height="3.1" width="15.5" fill="darkseagreen" x="108" y="-0.0000000000000002220446049250313"/>
+       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="115.75" y="1.5499999999999998">Dev­ice Manage­ment (4)</text>
+      </g>
+      <g id="s8-color7">
+       <rect class="cbox" height="3.1" width="15.5" fill="lightpink" x="123.5" y="-0.0000000000000002220446049250313"/>
+       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="131.25" y="1.5499999999999998">Productivity (13)</text>
+      </g>
+      <g id="s8-color8">
+       <rect class="cbox" height="3.1" width="15.5" fill="rgb(175,212,240)" x="139" y="-0.0000000000000002220446049250313"/>
+       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="146.75" y="1.5499999999999998">Multi­media (11)</text>
+      </g>
+      <g id="s8-color9">
+       <rect class="cbox" height="3.1" width="15.5" fill="#ffff00" x="154.5" y="-0.0000000000000002220446049250313"/>
+       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="162.25" y="1.5499999999999998">Multimedia Apps (10)</text>
+      </g>
+      <g id="s8-color10">
+       <rect class="cbox" height="3.1" width="15.5" fill="orange" x="170" y="-0.0000000000000002220446049250313"/>
+       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="177.75" y="1.5499999999999998">User Interface (19)</text>
+      </g>
+      <g id="s8-color11">
+       <rect class="cbox" height="3.1" width="15.5" fill="slateblue" x="185.5" y="-0.0000000000000002220446049250313"/>
+       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="193.25" y="1.5499999999999998">Runtimes and Web (9)</text>
+      </g>
+      <g id="s8-color12">
+       <rect class="cbox" height="3.1" width="15.5" fill="darkgray" x="201" y="-0.0000000000000002220446049250313"/>
+       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="208.75" y="1.5499999999999998">Tools (6)</text>
+      </g>
+     </g>
+    </g>
+    <text text-anchor="middle" class="label" dy="0.375em" x="241.82" y="1.5499999999999998">
+     <tspan dy="0em" x="241.82">110 Packages</tspan>
+    </text>
+   </g>
+  </g>
+ </g>
+ <g id="Zoom" onload="resized()">
+  <set attributeType="CSS" attributeName="opacity" to="0.8" fill="freeze" begin="Zoom.mouseover"/>
+  <set attributeType="CSS" attributeName="opacity" to="0.8" fill="freeze" begin="Zoomin.mouseover"/>
+  <set attributeType="CSS" attributeName="opacity" to="0.8" fill="freeze" begin="Zoomout.mouseover"/>
+  <animate attributeType="CSS" attributeName="opacity" from="0.8" to="0" fill="freeze" dur="0.5s" begin="10s"/>
+  <animate attributeType="CSS" attributeName="opacity" from="0.8" to="0" fill="freeze" dur="0.2s" begin="Zoom.mouseout"/>
+  <animate attributeType="CSS" attributeName="opacity" from="0.8" to="1" fill="freeze" dur="0.5s" begin="0.3s"/>
+  <path d="M0,0 l15,0 l0,30 a 7.5,7.5 18 0,1 -15, 0Z" fill="rgb(0,102,153)" opacity="0.8"/>
+  <g onclick="zoom(1.25)">
+   <path d="M7.5,4.5 l0,3 m1.5,-1.5 l-3,0" stroke="yellow" stroke-width="1" pointer-events="none"/>
+   <circle id="Zoomin" r="4.5" cx="7.5" cy="6" fill="url(#Patternoutgrad)">
+    <set attributeType="XML" attributeName="fill" to="url(#Patterningrad)" fill="freeze" begin="Zoomin.mouseover"/>
+    <set attributeType="XML" attributeName="fill" to="url(#Patternoutgrad)" fill="freeze" begin="Zoomin.mouseout"/>
+   </circle>
+  </g>
+  <g onclick="zoom(0.8)">
+   <path d="M5.5,18 l4,0" stroke="yellow" stroke-width="1" pointer-events="none"/>
+   <circle r="4.5" cx="7.5" cy="18" fill="url(#Patternoutgrad)" id="Zoomout">
+    <set attributeType="XML" attributeName="fill" to="url(#Patterningrad)" fill="freeze" begin="Zoomout.mouseover"/>
+    <set attributeType="XML" attributeName="fill" to="url(#Patternoutgrad)" fill="freeze" begin="Zoomout.mouseout"/>
+   </circle>
+  </g>
+  <path id="MoveUp" d="M7.5,25  l1.5,3 l-3,0 Z" fill-opacity="0.2" stroke-opacity="0.7" stroke-linejoin="round" fill="white" stroke="white" stroke-width="0.4" onmousedown="repeatpan(0,20)" onmouseup="endpanning()">
+   <set attributeType="XML" attributeName="stroke" to="yellow" end="MoveUp.mouseout" begin="MoveUp.mouseover"/>
+  </path>
+  <path id="MoveDown" d="M6,33  l3,0 l-1.5,3 Z" fill-opacity="0.2" stroke-linejoin="round" stroke-opacity="0.7" fill="white" stroke="white" stroke-width="0.4" onmousedown="repeatpan(0,-20)" onmouseup="endpanning()">
+   <set attributeType="XML" attributeName="stroke" to="yellow" end="MoveDown.mouseout" begin="MoveDown.mouseover"/>
+  </path>
+  <path id="MoveRight" d="M10,29  l3,1.5 l-3,1.5 Z" fill-opacity="0.2" stroke-linejoin="round" stroke-opacity="0.7" fill="white" stroke="white" stroke-width="0.4" onmousedown="repeatpan(-20,0)" onmouseup="endpanning()">
+   <set attributeType="XML" attributeName="stroke" to="yellow" end="MoveRight.mouseout" begin="MoveRight.mouseover"/>
+  </path>
+  <path id="MoveLeft" d="M5,29  l0,3 l-3,-1.5 Z" fill-opacity="0.2" stroke-linejoin="round" stroke-opacity="0.7" fill="white" stroke="white" stroke-width="0.4" onmousedown="repeatpan(20,0)" onmouseup="endpanning()">
+   <set attributeType="XML" attributeName="stroke" to="yellow" end="MoveLeft.mouseout" begin="MoveLeft.mouseover"/>
+  </path>
+ </g>
+</svg>

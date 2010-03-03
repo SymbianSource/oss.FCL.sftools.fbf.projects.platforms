@@ -6328,7 +6328,7 @@
      </component>
     </collection>
    </block>
-   <block name="commonemail" level="apps" long-name="Email Apps" levels="service support ui app">
+   <block name="commonemail" level="apps" span="2" long-name="Email Apps" levels="service support ui app">
     <collection name="emailservices" long-name="Email Services" level="service">
      <component name="emailframework" filter="s60" long-name="Email Framework" introduced="^2">
       <unit bldFile="app/commonemail/emailservices/emailframework/group"/>

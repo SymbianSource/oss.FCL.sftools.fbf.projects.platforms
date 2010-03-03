@@ -6485,7 +6485,7 @@
      </component>
     </collection>
    </package>
-   <package id="commonemail" level="apps" tech-domain="pr" name="Email Apps" levels="service support ui app">
+   <package id="commonemail" level="apps" span="2" tech-domain="pr" name="Email Apps" levels="service support ui app">
     <collection id="emailservices" name="Email Services" level="service">
      <component id="emailframework" filter="s60" name="Email Framework" introduced="^2">
       <unit bldFile="/app/commonemail/emailservices/emailframework/group"/>
