@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?AdobeSVGViewer resolution="600"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:m="http://exslt.org/math" version="1.1" onload="wrapalltext()" viewBox="-3.2 -3.2 2040.8000000000002 818.9698799125019" class="component-fixed" onscroll="resized()" onzoom="resized()" onresize="resized()">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:m="http://exslt.org/math" version="1.1" onload="wrapalltext()" viewBox="-3.2 -3.2 2031.5 818.6191222156103" class="component-fixed" onscroll="resized()" onzoom="resized()" onresize="resized()">
  <title>Symbian OS ^3 System Model: %d %b %Y</title>
  <defs>
   <style type="text/css">
@@ -426,8 +426,8 @@ function resized()
  <g id="os" transform="translate(3.1999999999999993 479.26)" class="layer">
   <rect x="0.3" y="0.3" width="9.3" rx="4.65" ry="4.65" class="layer" height="250.06"/>
   <text text-anchor="middle" dy="0.375em" class="layer" transform="rotate(-90)" y="4.95" width="250.06" height="9.3" x="-125.33">OS</text>
-  <g class="layer-detail" transform="translate(199.25000000000006 3.2)">
-   <rect x="-186.45000000000005" class="layer" y="-3.2" width="2018.4" height="250.06"/>
+  <g class="layer-detail" transform="translate(194.59999999999997 3.2)">
+   <rect x="-181.79999999999995" class="layer" y="-3.2" width="2009.1" height="250.06"/>
    <g>
     <g id="kernelhwsrv" class="package" transform="translate( 0 142.23)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color0.mouseover" end="s8-color0.mouseout"/>
@@ -3733,8 +3733,8 @@ function resized()
  <g id="mw" transform="translate(3.1999999999999993 215.66)" class="layer">
   <rect x="0.3" y="0.3" width="9.3" rx="4.65" ry="4.65" class="layer" height="260.40000000000003"/>
   <text text-anchor="middle" dy="0.375em" class="layer" transform="rotate(-90)" y="4.95" width="260.40000000000003" height="9.3" x="-130.50000000000003">Middleware</text>
-  <g class="layer-detail" transform="translate(56.3 3.2)">
-   <rect x="-43.5" class="layer" y="-3.2" width="2018.4" height="260.40000000000003"/>
+  <g class="layer-detail" transform="translate(51.649999999999906 3.2)">
+   <rect x="-38.84999999999991" class="layer" y="-3.2" width="2009.1" height="260.40000000000003"/>
    <g>
     <g id="appsupport" class="package" transform="translate( 0 119.20000000000002)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color11.mouseover" end="s8-color11.mouseout"/>
@@ -8506,7 +8506,7 @@ function resized()
   <rect x="0.3" y="0.3" width="9.3" rx="4.65" ry="4.65" class="layer" height="212.46"/>
   <text text-anchor="middle" dy="0.375em" class="layer" transform="rotate(-90)" y="4.95" width="212.46" height="9.3" x="-106.53">Applications</text>
   <g class="layer-detail" transform="translate(12.8 3.2)">
-   <rect x="0" class="layer" y="-3.2" width="2018.4" height="212.46"/>
+   <rect x="0" class="layer" y="-3.2" width="2009.1" height="212.46"/>
    <g>
     <g id="location" class="package" transform="translate( 0 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color2.mouseover" end="s8-color2.mouseout"/>
@@ -11066,12 +11066,12 @@ function resized()
     </g>
     <g id="musicplayer" class="package" transform="translate( 1607.9999999999998 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
-     <rect class="package" x="0" width="55.8" height="101.43" y="0" style="fill:#ffff00;"/>
-     <text text-anchor="middle" class="package" width="55.8" x="27.9" y="100.43">Music Player Apps</text>
+     <rect class="package" x="0" width="46.5" height="101.43" y="0" style="fill:#ffff00;"/>
+     <text text-anchor="middle" class="package" width="46.5" x="23.25" y="100.43">Music Player Apps</text>
      <g transform="translate(0 3.2)">
       <g id="mpxmusicplayer" transform="translate(0 18.8)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="55.8"/>
-       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="54.4" height="6.299999999999999">MPX Music Player</text>
+       <rect class="collection" x="0" y="0" height="15.6" width="46.5"/>
+       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="45.1" height="6.299999999999999">MPX Music Player</text>
        <g transform="translate(0 6.299999999999999)">
         <g id="mediakeyhandler" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
@@ -11088,20 +11088,15 @@ function resized()
          <use width="9.3" height="9.3" x="18.6" y="0" xlink:href="#Borderbox" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
          <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="23.25">commonui</text>
         </g>
-        <g id="activeidle" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
-         <use width="9.3" height="9.3" x="27.900000000000002" y="0" xlink:href="#Borderbox" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="32.550000000000004">activeidle</text>
-        </g>
         <g id="metadatahandler" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
-         <use width="9.3" height="9.3" x="37.2" y="0" xlink:href="#Borderbox" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="41.85">metadatahandler</text>
+         <use width="9.3" height="9.3" x="27.900000000000002" y="0" xlink:href="#Borderbox" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="32.550000000000004">metadatahandler</text>
         </g>
         <g id="app" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
-         <use width="9.3" height="9.3" x="46.5" y="0" xlink:href="#Borderbox" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="51.15">app</text>
+         <use width="9.3" height="9.3" x="37.2" y="0" xlink:href="#Borderbox" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="41.85">app</text>
         </g>
        </g>
       </g>
@@ -11133,7 +11128,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="radio" class="package" transform="translate( 1665.8999999999999 0)">
+    <g id="radio" class="package" transform="translate( 1656.5999999999997 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
      <rect class="package" x="0" width="55.8" height="101.43" y="0" style="fill:#ffff00;"/>
      <text text-anchor="middle" class="package" width="55.8" x="27.9" y="100.43">Radio Apps</text>
@@ -11176,7 +11171,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="voicerec" class="package" transform="translate( 1723.8 0)">
+    <g id="voicerec" class="package" transform="translate( 1714.4999999999998 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
      <rect class="package" x="0" width="33.3" height="101.43" y="0" style="fill:#ffff00;"/>
      <text text-anchor="middle" class="package" width="33.3" x="16.65" y="100.43">Voice Recorder Apps</text>
@@ -11193,13 +11188,13 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="screensaver" class="package placeholder" transform="translate( 1759.2 0)">
+    <g id="screensaver" class="package placeholder" transform="translate( 1749.8999999999999 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="78" height="101.43" y="0" style="fill:orange;"/>
      <text text-anchor="middle" class="package" width="78" x="39" y="49.715" dy="0.375em" height="45.03">Screen Saver Apps</text>
      <g transform="translate(0 3.2)"/>
     </g>
-    <g id="homescreen" class="package" transform="translate( 1839.3 0)">
+    <g id="homescreen" class="package" transform="translate( 1829.9999999999998 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="83.69999999999999" height="101.43" y="0" style="fill:orange;"/>
      <text text-anchor="middle" class="package" width="83.69999999999999" x="41.849999999999994" y="100.43">Home Screen Apps</text>
@@ -11322,7 +11317,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="profile" class="package" transform="translate( 1925.1 0)">
+    <g id="profile" class="package" transform="translate( 1915.7999999999997 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="33.3" height="101.43" y="0" style="fill:orange;"/>
      <text text-anchor="middle" class="package" width="33.3" x="16.65" y="100.43">Profiles</text>
@@ -11718,7 +11713,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="helps" class="package" transform="translate( 1960.5 0)">
+    <g id="helps" class="package" transform="translate( 1951.1999999999998 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="27.900000000000002" height="206.06" y="0" style="fill:orange;"/>
      <text text-anchor="middle" class="package" width="27.900000000000002" x="13.950000000000001" y="205.06">Help Apps</text>
@@ -11753,7 +11748,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="techview" class="package" transform="translate( 1990.5 0)">
+    <g id="techview" class="package" transform="translate( 1981.1999999999998 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="27.900000000000002" height="206.06" y="0" style="fill:orange;"/>
      <text text-anchor="middle" class="package" width="27.900000000000002" x="13.950000000000001" y="205.06">Techview</text>
@@ -11793,7 +11788,7 @@ function resized()
    </g>
   </g>
  </g>
- <g id="legend-root" class="legend" transform="translate(1734.2795 735.7200000000001) translate(303.3205 0) scale(5.374117476398728) translate(-303.3205)">
+ <g id="legend-root" class="legend" transform="translate(1724.9795 735.7200000000001) translate(303.3205 0) scale(5.349588966126589) translate(-303.3205)">
   <text text-anchor="middle" class="title" x="286.98525" y="0">
    <tspan dy="0.75em" x="286.98525">Symbian OS ^3</tspan>
    <tspan dy="1em" x="286.98525">System Model</tspan>
@@ -11919,7 +11914,7 @@ function resized()
     <text text-anchor="middle" class="label" dy="0.375em" x="250.875" y="4.65">
      <tspan dy="-1em" x="250.875">107 Packages</tspan>
      <tspan dy="1em" x="250.875">608 Collections</tspan>
-     <tspan dy="1em" x="250.875">1401 Components</tspan>
+     <tspan dy="1em" x="250.875">1400 Components</tspan>
     </text>
    </g>
   </g>

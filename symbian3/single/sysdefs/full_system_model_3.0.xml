@@ -7507,9 +7507,6 @@
      <component id="mpxmusicplayer_commonui" filter="s60" name="MPX Common UI">
       <unit bldFile="/app/musicplayer/mpxmusicplayer/commonui/group"/>
      </component>
-     <component id="mpx_activeidle" filter="s60" name="MPX Active Idle">
-      <unit bldFile="/app/musicplayer/mpxmusicplayer/activeidle/group"/>
-     </component>
      <component id="mpx_metadatahandler" filter="s60" name="MPX Metadata Handler">
       <unit bldFile="/app/musicplayer/mpxmusicplayer/metadatahandler/group"/>
      </component>
