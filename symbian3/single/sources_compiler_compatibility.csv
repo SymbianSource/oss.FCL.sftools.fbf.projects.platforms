@@ -115,6 +115,6 @@ http://developer.symbian.org/oss/MCL/sf/os/osrndtools/,/sf/os/osrndtools,branch,
 http://developer.symbian.org/oss/FCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/tools/buildplatforms/,/sf/tools/buildplatforms,branch,CompilerCompatibility,
-http://developer.symbian.org/oss/MCL/sf/tools/homescreentools/,/sf/tools/homescreentools,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/app/homescreentools/,/sf/app/homescreentools,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/platformtools/,/sf/mw/platformtools,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/rndtools/,/sf/app/rndtools,branch,default,layers.sysdef.xml
