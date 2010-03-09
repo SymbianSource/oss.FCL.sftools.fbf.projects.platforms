@@ -927,7 +927,6 @@ epoc32/include/mmf/devvideo/devvideoplay.h
 epoc32/include/mmf/devvideo/devvideoplay.inl
 epoc32/include/mmf/devvideo/devvideoplugininterfaceuids.hrh
 epoc32/include/mmf/devvideo/devvideorecord.h
-epoc32/include/mmf/devvideo/devvideorecord.h
 epoc32/include/mmf/devvideo/devvideorecord.inl
 epoc32/include/mmf/devvideo/h263.h
 epoc32/include/mmf/devvideo/mpeg4visual.h
