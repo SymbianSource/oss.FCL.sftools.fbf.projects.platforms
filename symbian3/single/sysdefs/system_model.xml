@@ -811,8 +811,8 @@
      <component name="sensor_data_compensator_api" long-name="Sensor Data Compensator API" filter="s60" class="api">
       <unit bldFile="os/devicesrv/devicesrv_pub/sensor_data_compensator_api/group"/>
      </component>
-     <component name="platform_path_definitions_api" long-name="Platform Path Definitions API" filter="s60" class="api">
-      <unit bldFile="os/devicesrv/devicesrv_pub/platform_path_definitions_api/inc/platform_paths.hrh"/>
+     <component name="platform_path_definitions_api" long-name="Platform Path Definitions API" filter="s60" class="api placeholder">
+      <!-- FAULTY <unit bldFile="devicesrv_pub/platform_path_definitions_api/inc/platform_paths.hrh"/> -->
      </component>
     </collection>
     <collection name="devicesrv_plat" long-name="Device Services Platform Interfaces" level="app-if">
@@ -2548,13 +2548,13 @@
 	  Remove this component and uncomment the other units when fixed-->
       <unit bldFile="os/xmlsrv/xmlsrv_plat/group"/>
      </component>
-     <component name="xml_encryption_api" long-name="XML Encryption API" filter="s60" class="api">
+     <component name="xml_encryption_api" long-name="XML Encryption API" filter="s60" class="api placeholder">
       <!-- <unit bldFile="xmlsrv_plat/xml_encryption_api/group"/> -->
      </component>
-     <component name="xml_signature_api" long-name="XML Signature API" filter="s60" class="api">
+     <component name="xml_signature_api" long-name="XML Signature API" filter="s60" class="api placeholder">
       <!-- <unit bldFile="xmlsrv_plat/xml_signature_api/group"/> -->
      </component>
-     <component name="xml_security_engine_utils_api" long-name="XML Security Engine Utils API" filter="s60" class="api">
+     <component name="xml_security_engine_utils_api" long-name="XML Security Engine Utils API" filter="s60" class="api placeholder">
       <!-- <unit bldFile="xmlsrv_plat/xml_security_engine_utils_api/group"/> -->
      </component>
     </collection>
@@ -6024,8 +6024,8 @@
    </block>
    <block name="mmappfw" level="specific" long-name="Multimedia App Framework" levels="fw utils if">
     <collection name="mmappfw_plat" long-name="Multimedia App Framework Platform Interfaces" level="if">
-     <component name="inc" long-name="Inc" introduced="^1" filter="s60" class="api">
-      <unit bldFile="mw/mmappfw/mmappfw_plat/inc/mmappfwbldvariant.hrh"/>
+     <component name="inc" long-name="Inc" introduced="^1" filter="s60" class="api placeholder">
+      <!-- FAULTY <unit bldFile="mmappfw_plat/inc/mmappfwbldvariant.hrh"/> -->
      </component>
      <component name="collection_helper_api" long-name="Collection Helper API" introduced="^1" filter="s60" class="api">
       <unit bldFile="mw/mmappfw/mmappfw_plat/collection_helper_api/group"/>
@@ -7573,8 +7573,8 @@
      </component>
     </collection>
     <collection name="web_plat" long-name="Web Platform Interfaces" level="specific">
-     <component name="browser_platform_api" long-name="Browser Platform API" filter="s60" class="api">
-      <unit bldFile="mw/web/web_plat/browser_platform_api/inc/browser_platform_variant.hrh"/>
+     <component name="browser_platform_api" long-name="Browser Platform API" filter="s60" class="api placeholder">
+      <!-- FAULTY <unit bldFile="web_plat/browser_platform_api/inc/browser_platform_variant.hrh"/> -->
      </component>
      <component name="aiw_browser_provider_api" long-name="AIW Browser Provider API" filter="s60" class="api">
       <unit bldFile="mw/web/web_plat/aiw_browser_provider_api/group"/>

@@ -1691,9 +1691,10 @@ function resized()
          <use width="9.3" height="9.3" x="83.69999999999999" y="0" xlink:href="#Borderround" style="fill:#32cd99;stroke-width: 0.5; "/>
          <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="88.35">Sensor Data Compensator API</text>
         </g>
-        <g id="platform_path_definitions_api" class="component">
+        <g id="platform_path_definitions_api" class="component placeholder">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
          <use width="9.3" height="9.3" x="92.99999999999999" y="0" xlink:href="#Borderround" style="fill:#32cd99;stroke-width: 0.5; "/>
+         <use width="9.3" height="9.3" x="92.99999999999999" y="0" style="fill:url(#PatternOverlay1); stroke: none; stroke-width: 0;" xlink:href="#Borderround"/>
          <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="97.64999999999999">Platform Path Definitions API</text>
         </g>
        </g>
@@ -11347,9 +11348,10 @@ function resized()
        <rect class="collection" x="0" y="0" height="15.6" width="204.60000000000008"/>
        <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="203.20000000000007" height="6.299999999999999">MM App FW Platform Inter­faces</text>
        <g transform="translate(0 6.299999999999999)">
-        <g id="inc" class="component">
+        <g id="inc" class="component placeholder">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
          <use width="9.3" height="9.3" x="0" y="0" xlink:href="#Borderround" style="fill:#32cd99;stroke-width: 0.5; "/>
+         <use width="9.3" height="9.3" x="0" y="0" style="fill:url(#PatternOverlay1); stroke: none; stroke-width: 0;" xlink:href="#Borderround"/>
          <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">Inc</text>
         </g>
         <g id="collection_helper_api" class="component">
@@ -14111,9 +14113,10 @@ function resized()
        <rect class="collection" x="0" y="0" height="15.6" width="167.40000000000003"/>
        <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="166.00000000000003" height="6.299999999999999">Web Platform Inter­faces</text>
        <g transform="translate(0 6.299999999999999)">
-        <g id="browser_platform_api" class="component">
+        <g id="browser_platform_api" class="component placeholder">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
          <use width="9.3" height="9.3" x="0" y="0" xlink:href="#Borderround" style="fill:#32cd99;stroke-width: 0.5; "/>
+         <use width="9.3" height="9.3" x="0" y="0" style="fill:url(#PatternOverlay1); stroke: none; stroke-width: 0;" xlink:href="#Borderround"/>
          <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">Browser Platform API</text>
         </g>
         <g id="aiw_browser_provider_api" class="component">
