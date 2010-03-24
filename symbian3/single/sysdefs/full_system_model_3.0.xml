@@ -748,9 +748,6 @@
      <component id="sensor_data_compensator_api" name="Sensor Data Compensator API" class="api" filter="s60">
       <unit bldFile="/os/devicesrv/devicesrv_pub/sensor_data_compensator_api/group"/>
      </component>
-     <component id="platform_path_definitions_api" name="Platform Path Definitions API" class="api" filter="s60">
-      <!-- FAULTY <unit bldFile="devicesrv_pub/platform_path_definitions_api/inc/platform_paths.hrh"/> -->
-     </component>
     </collection>
     <collection id="devicesrv_plat" name="Device Services Platform Interfaces" level="app-if">
      <component id="configuration_file_parser_api" name="Configuration File Parser API" class="api" filter="s60">
@@ -1172,7 +1169,7 @@
      <component id="filebasedcertificateandkeystores" name="File-based Certificate and Key Stores" introduced="8.0" purpose="optional">
       <unit bldFile="/os/security/cryptoservices/filebasedcertificateandkeystores/group" mrp="/os/security/cryptoservices/filebasedcertificateandkeystores/group/security_filetokens.mrp"/>
      </component>
-     <component id="Browser Root Certificates" introduced="^2" purpose="optional" filter="sf_build">
+     <component id="browserrootcertificates" name="Browser Root Certificates" introduced="^2" purpose="optional" filter="sf_build">
       <unit mrp="/os/security/cryptoservices/browserrootcertificates/browserrootcerts.mrp"/>
      </component>
      <component id="rootcertificates" filter="sf_build" name="Root Certificates" introduced="7.0s" purpose="optional">
@@ -6294,8 +6291,9 @@
    </package>
    <package id="mmappfw" level="specific" tech-domain="mm" name="Multimedia App Framework" levels="fw utils if">
     <collection id="mmappfw_plat" name="Multimedia App Framework Platform Interfaces" level="if">
-     <component id="inc" name="Inc" introduced="^1" class="api" filter="s60">
-      <!-- FAULTY <unit bldFile="mmappfw_plat/inc/mmappfwbldvariant.hrh"/> -->
+     <component id="mmappfw_plat_build" name="Multimedia App Framework Platform Interfaces Build" introduced="^1" filter="s60">
+      <!-- this is no longer necessary when confguration is put in place -->
+      <unit bldFile="/mw/mmappfw/mmappfw_plat"/>
      </component>
      <component id="collection_helper_api" name="Collection Helper API" introduced="^1" class="api" filter="s60">
       <unit bldFile="/mw/mmappfw/mmappfw_plat/collection_helper_api/group"/>
@@ -8026,9 +8024,6 @@
      </component>
     </collection>
     <collection id="web_plat" name="Web Platform Interfaces" level="specific">
-     <component id="browser_platform_api" name="Browser Platform API" class="api" filter="s60">
-      <!-- FAULTY <unit bldFile="web_plat/browser_platform_api/inc/browser_platform_variant.hrh"/> -->
-     </component>
      <component id="aiw_browser_provider_api" name="AIW Browser Provider API" class="api" filter="s60">
       <unit bldFile="/mw/web/web_plat/aiw_browser_provider_api/group"/>
      </component>
@@ -8374,9 +8369,6 @@
       <unit bldFile="/mw/websrv/webservices/wsstar/wsstarpolicy/group"/>
       <unit bldFile="/mw/websrv/webservices/wsstar/wsstarplugin/group"/>
       <unit bldFile="/mw/websrv/webservices/wsstar/wsstarmessagehandlers/group"/>
-     </component>
-     <component id="wsoviplugin" filter="s60" name="WS Ovi Plugin">
-      <unit bldFile="/mw/websrv/webservices/wsoviplugin/group"/>
      </component>
      <component id="wsoviplugin" filter="s60" name="WS Ovi Plugin">
       <unit bldFile="/mw/websrv/webservices/wsoviplugin/group"/>
@@ -9076,7 +9068,7 @@
       <unit bldFile="/app/devicecontrol/applicationmanagement/amadapter2/group"/>
      </component>
      <component id="omascomoadapter" filter="s60" name="OMA SCOMO Adapter" class="plugin" introduced="^3">
-      <unit bldFile="/app/devicecontrol/applicationmanagement/amadapter2/group"/>
+      <unit bldFile="/app/devicecontrol/applicationmanagement/omascomoadapter/group"/>
      </component>
      <component id="applicationmanagement_build" filter="s60" name="AM Build">
       <!-- If thes aren't collapsed into one cmp, can all  #includes removed from here, and it renamed AM ROM? -->
