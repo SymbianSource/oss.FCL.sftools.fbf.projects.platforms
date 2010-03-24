@@ -5,7 +5,7 @@
     <dirname property="sf.spec.job.dir" file="${ant.file.SF-JOB-PROPS}"/>
     <property name="sf.project.type" value="platform" />
 
-    <property name="sf.previous.pdk.tag" value="PDK_3.0.g" />
+    <property name="sf.previous.pdk.tag" value="PDK_3.0.h" />
 
     <property name="sf.spec.job.name" value="symbian3"/>
     <property name="sf.spec.corebuildversion" value="week37"/>
@@ -15,6 +15,7 @@
     <property name="sf.spec.sbs.tools.config" value="tools2_rel.whatlog,tools_rel.whatlog"/>
     
     <property name="sf.os.compile.iterate"  value="true"/> <!-- New property for iterating though sf.spec.sbs.config instead of all at once -->
+    <property name="sf.spec.sbs.options" value="--pp=on --no-depend-include"/>
 
     <property name="sf.spec.bldmefirst.gt.variant" value="sf/os/deviceplatformrelease/symbianosbld/cedarutils/Symbian_OS_v${sf.spec.sbs.variant}.cfg" />
 	<!-- Location of Symbian_OS.hrh changed for Symbian3 to an inc directory -->
