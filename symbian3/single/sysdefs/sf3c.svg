@@ -1011,6 +1011,11 @@ function resized()
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Baseband Adapt. Plugins</text>
        <g transform="translate(0 6.299999999999999)"/>
       </g>
+      <g id="fax" transform="translate(0 18.8)" class="collection">
+       <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
+       <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Fax</text>
+       <g transform="translate(0 6.299999999999999)"/>
+      </g>
       <g id="smsprotocols" transform="translate(0 37.6)" class="collection">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">SMS Protocols</text>
@@ -1021,7 +1026,7 @@ function resized()
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Telephony Protocols</text>
        <g transform="translate(0 6.299999999999999)"/>
       </g>
-      <g id="telephonyserver" transform="translate(0 18.8)" class="collection">
+      <g id="telephonyserver" transform="translate(17.7 18.8)" class="collection">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Telephony Server</text>
        <g transform="translate(0 6.299999999999999)"/>
@@ -4606,7 +4611,7 @@ function resized()
     </g>
     <text text-anchor="middle" class="label" dy="0.375em" x="243.275" y="3.0999999999999996">
      <tspan dy="-0.5em" x="243.275">110 Packages</tspan>
-     <tspan dy="1em" x="243.275">663 Collections</tspan>
+     <tspan dy="1em" x="243.275">664 Collections</tspan>
     </text>
    </g>
   </g>

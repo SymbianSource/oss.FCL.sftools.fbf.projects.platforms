@@ -1,5 +1,4 @@
 source,dst,type,pattern,sysdef
-//v800008/Builds01/mercurial_development/oss/MCL/utilities/,/utilities,changeset,2c9e0f9990c0,
 //v800008/Builds01/mercurial_development/rnd/internal/epoc_additional/,/rnd/internal/epoc_additional,changeset,78fc0271e9a7,
 //v800008/Builds01/mercurial_internal/rnd/rndonly/aricent/,/rnd/rndonly/aricent,changeset,5c9ca1e17dbb,
 //v800008/Builds01/mercurial_internal/rnd/rndonly/monotype/,/rnd/rndonly/monotype,changeset,d179868647e4,
@@ -54,7 +53,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/drm/,/sf/mw/drm,changeset,77a4e6a1beb
 http://developer.symbian.org/oss/MCL/sf/mw/gsprofilesrv/,/sf/mw/gsprofilesrv,changeset,f62c3a3d66b8,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/hapticsservices/,/sf/mw/hapticsservices,changeset,0a5ec9af4050,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/helix/,/sf/mw/helix,changeset,bf642e5cdd8d,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/homescreensrv/,/sf/mw/homescreensrv,changeset,5ef93ea513cb,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/homescreensrv/,/sf/mw/homescreensrv,changeset,ef4c618643c7,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/imghandling/,/sf/mw/imghandling,changeset,82749d516180,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/imsrv/,/sf/mw/imsrv,changeset,071f3cdcec69,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/inputmethods/,/sf/mw/inputmethods,changeset,f5a1e66df979,layers.sysdef.xml
