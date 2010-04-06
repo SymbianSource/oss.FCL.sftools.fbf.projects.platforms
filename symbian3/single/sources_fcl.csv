@@ -58,7 +58,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/homescreensrv/,/sf/mw/homescreensrv,b
 http://developer.symbian.org/oss/MCL/sf/mw/imghandling/,/sf/mw/imghandling,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/imsrv/,/sf/mw/imsrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/inputmethods/,/sf/mw/inputmethods,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/ipappprotocols/,/sf/mw/ipappprotocols,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/mw/ipappprotocols/,/sf/mw/ipappprotocols,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/ipappsrv/,/sf/mw/ipappsrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/ipconnmgmt/,/sf/mw/ipconnmgmt,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/legacypresence/,/sf/mw/legacypresence,branch,RCL_3,layers.sysdef.xml
@@ -73,7 +73,7 @@ http://developer.symbian.org/oss/MCL/sf/mw/netprotocols/,/sf/mw/netprotocols,bra
 http://developer.symbian.org/oss/MCL/sf/mw/networkingdm/,/sf/mw/networkingdm,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/opensrv/,/sf/mw/opensrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/phonesrv/,/sf/mw/phonesrv,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/remoteconn/,/sf/mw/remoteconn,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/mw/remoteconn/,/sf/mw/remoteconn,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/remotemgmt/,/sf/mw/remotemgmt,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/remotestorage/,/sf/mw/remotestorage,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/securitysrv/,/sf/mw/securitysrv,branch,RCL_3,layers.sysdef.xml
@@ -84,8 +84,8 @@ http://developer.symbian.org/oss/MCL/sf/mw/srvdiscovery/,/sf/mw/srvdiscovery,bra
 http://developer.symbian.org/oss/MCL/sf/mw/svgt/,/sf/mw/svgt,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/uiaccelerator/,/sf/mw/uiaccelerator,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/uiresources/,/sf/mw/uiresources,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/uitools/,/sf/mw/uitools,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/usbservices/,/sf/mw/usbservices,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/mw/uitools/,/sf/mw/uitools,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/mw/usbservices/,/sf/mw/usbservices,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/videoutils/,/sf/mw/videoutils,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/vpnclient/,/sf/mw/vpnclient,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/web/,/sf/mw/web,branch,RCL_3,layers.sysdef.xml
@@ -103,7 +103,7 @@ http://developer.symbian.org/oss/MCL/sf/os/imagingext/,/sf/os/imagingext,branch,
 http://developer.symbian.org/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/lbs/,/sf/os/lbs,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/mm/,/sf/os/mm,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/os/networkingsrv/,/sf/os/networkingsrv,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/os/networkingsrv/,/sf/os/networkingsrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/ossrv/,/sf/os/ossrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/persistentdata/,/sf/os/persistentdata,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/security/,/sf/os/security,branch,RCL_3,layers.sysdef.xml
