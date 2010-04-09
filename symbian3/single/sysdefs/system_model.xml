@@ -617,24 +617,19 @@
     </collection>
     <collection name="glib" long-name="GLib" level="utilities">
      <component name="glibbackend" filter="s60" long-name="GLib Backend">
-      <unit bldFile="os/ossrv/glib/build/symbian/glibbackend/group"/>
-      <!-- Move to here: <unit bldFile="glib/glibbackend/group"/> -->
+      <unit bldFile="os/ossrv/glib/glibbackend/group"/>
      </component>
      <component name="libglib" filter="s60" long-name="GLib Library">
-      <unit bldFile="os/ossrv/glib/build/symbian/glib/group"/>
-      <!-- Move to here: <unit bldFile="glib/libglib/group"/> -->
+      <unit bldFile="os/ossrv/glib/libglib/group"/>
      </component>
      <component name="libgthread" filter="s60" long-name="Libg Thread">
-      <unit bldFile="os/ossrv/glib/build/symbian/gthread/group"/>
-      <!-- Move to here:     <unit bldFile="glib/libgthread/group"/> -->
+      <unit bldFile="os/ossrv/glib/libgthread/group"/>
      </component>
      <component name="libgmodule" filter="s60" long-name="Libg Module">
-      <unit bldFile="os/ossrv/glib/build/symbian/gmodule/group"/>
-      <!-- Move to here:         <unit bldFile="glib/libgmodule/group"/> -->
+      <unit bldFile="os/ossrv/glib/libgmodule/group"/>
      </component>
      <component name="libgobject" filter="s60" long-name="Libg Object">
-      <unit bldFile="os/ossrv/glib/build/symbian/gobject/group"/>
-      <!-- Move to here:         <unit bldFile="glib/libgobject/group"/> -->
+      <unit bldFile="os/ossrv/glib/libgobject/group"/>
      </component>
     </collection>
     <collection name="stdcpp" long-name="C++ Standard Library" level="translation">
@@ -5546,10 +5541,15 @@
    <block name="metadatasrv" level="specific" long-name="Legacy Metadata Services" levels="plugin framework server generic specific">
     <collection name="metadatasrv_pub" long-name="Legacy Metadata Services Public Interfaces" level="specific">
      <component name="content_listing_framework_api" long-name="Content Listing Framework API" filter="s60" class="api">
-      <unit bldFile="mw/metadatasrv/metadatasrv_pub/content_listing_framework_api/group"/>
+      <!-- Leave commented out until confguration is in use
+      <unit bldFile="mw/metadatasrv/metadatasrv_pub/content_listing_framework_api/group"/>-->
      </component>
      <component name="media_fetch_api" long-name="Media Fetch API" filter="s60" class="api">
       <unit bldFile="mw/metadatasrv/metadatasrv_pub/media_fetch_api/group"/>
+     </component>
+     <component name="metadatasrv_pub_build" long-name="Legacy Metadata Services Public Interface Build" filter="s60" class="api">
+      <!-- only needed for #ifdefs, remove when confguration is in use -->
+      <unit bldFile="mw/metadatasrv/metadatasrv_pub/group"/>
      </component>
     </collection>
     <collection name="metadatasrv_plat" long-name="Legacy Metadata Services Platform Interfaces" level="specific">
@@ -5557,10 +5557,16 @@
       <unit bldFile="mw/metadatasrv/metadatasrv_plat/media_fetch_implementation_api/group"/>
      </component>
      <component name="content_listing_framework_collection_manager_api" long-name="Content Listing Framework Collection Manager API" filter="s60" class="api">
-      <unit bldFile="mw/metadatasrv/metadatasrv_plat/content_listing_framework_collection_manager_api/group"/>
+      <!-- Leave commented out until confguration is in use
+      <unit bldFile="mw/metadatasrv/metadatasrv_plat/content_listing_framework_collection_manager_api/group"/>-->
      </component>
      <component name="content_listing_framework_extended_api" long-name="Content Listing Framework Extended API" filter="s60" class="api">
-      <unit bldFile="mw/metadatasrv/metadatasrv_plat/content_listing_framework_extended_api/group"/>
+      <!-- Leave commented out until confguration is in use
+      <unit bldFile="mw/metadatasrv/metadatasrv_plat/content_listing_framework_extended_api/group"/>-->
+     </component>
+     <component name="metadatasrv_plat_build" long-name="Legacy Metadata Services Platform Interface Build" filter="s60" class="api">
+      <!-- only needed for #ifdefs, remove when confguration is in use -->
+      <unit bldFile="mw/metadatasrv/metadatasrv_plat/group"/>
      </component>
     </collection>
     <collection name="mediamanagementutilities" long-name="Media Management Utilities" level="generic">
@@ -6033,9 +6039,9 @@
    </block>
    <block name="mmappfw" level="specific" long-name="Multimedia App Framework" levels="fw utils if">
     <collection name="mmappfw_plat" long-name="Multimedia App Framework Platform Interfaces" level="if">
-     <component name="mmappfw_plat_build" long-name="Multimedia App Framework Platform Interfaces Build" introduced="^1" filter="s60">
+     <component name="mmappfw_plat_build" long-name="Multimedia App Framework Platform Interfaces Build" introduced="^1" filter="s60" class="api">
       <!-- this is no longer necessary when confguration is put in place -->
-      <unit bldFile="mw/mmappfw/mmappfw_plat"/>
+      <unit bldFile="mw/mmappfw/mmappfw_plat/group"/>
      </component>
      <component name="collection_helper_api" long-name="Collection Helper API" introduced="^1" filter="s60" class="api">
       <unit bldFile="mw/mmappfw/mmappfw_plat/collection_helper_api/group"/>
