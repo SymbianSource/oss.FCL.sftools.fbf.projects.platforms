@@ -18,7 +18,7 @@ http://developer.symbian.org/oss/MCL/sf/app/dictionary/,/sf/app/dictionary,branc
 http://developer.symbian.org/oss/MCL/sf/app/files/,/sf/app/files,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/graphicsuis/,/sf/app/graphicsuis,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/helps/,/sf/app/helps,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/app/homescreen/,/sf/app/homescreen,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/homescreen/,/sf/app/homescreen,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/im/,/sf/app/im,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/imgeditor/,/sf/app/imgeditor,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/iptelephony/,/sf/app/iptelephony,branch,RCL_3,layers.sysdef.xml
@@ -108,7 +108,7 @@ http://developer.symbian.org/oss/FCL/sf/os/ossrv/,/sf/os/ossrv,branch,RCL_3,laye
 http://developer.symbian.org/oss/MCL/sf/os/persistentdata/,/sf/os/persistentdata,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/security/,/sf/os/security,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/textandloc/,/sf/os/textandloc,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/os/usb/,/sf/os/usb,branch,RCL_3,
+http://developer.symbian.org/oss/FCL/sf/os/usb/,/sf/os/usb,branch,RCL_3,
 http://developer.symbian.org/oss/MCL/sf/os/wlan/,/sf/os/wlan,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/xmlsrv/,/sf/os/xmlsrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/osrndtools/,/sf/os/osrndtools,branch,RCL_3,layers.sysdef.xml
