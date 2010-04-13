@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?AdobeSVGViewer resolution="600"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:m="http://exslt.org/math" version="1.1" onload="wrapalltext()" viewBox="-3.2 -3.2 2102.899999999999 686.7023744025573" class="package-fixed" onscroll="resized()" onzoom="resized()" onresize="resized()">
- <title>Symbian OS ^3 System Model: %d %b %Y</title>
+ <title>Symbian OS ^3 System Model: date</title>
  <defs>
   <style type="text/css">
     text.layer, text.package, text.collection, text.component,
@@ -773,10 +773,10 @@ function resized()
      <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="78.4">Input Methods</text>
      <g transform="translate(0 3.2)"/>
     </g>
-    <g id="qt" class="package placeholder" transform="translate( 1281.5999999999997 100.4)">
+    <g id="qt" class="package" transform="translate( 1281.5999999999997 100.4)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="78" height="116.00000000000001" y="0" style="fill:orange;"/>
-     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="15.600000000000001">Qt</text>
+     <text text-anchor="middle" class="package" width="78" x="39" y="57.00000000000003" dy="0.375em" height="59.6">Qt</text>
      <g transform="translate(0 3.2)"/>
     </g>
     <g id="classicui" class="package" transform="translate( 1361.6999999999996 100.4)">
@@ -1119,7 +1119,7 @@ function resized()
   <text text-anchor="middle" class="title" x="276.47525" y="0">
    <tspan dy="0.75em" x="276.47525">Symbian OS ^3</tspan>
    <tspan dy="1em" x="276.47525">System Model</tspan>
-   <tspan font-style="italic" dy="1em" id="release-version" x="276.47525">%d %b %Y</tspan>
+   <tspan font-style="italic" dy="1em" id="release-version" x="276.47525" font-weight="normal">date</tspan>
   </text>
   <g id="legend-box">
    <rect class="legend" rx="5" ry="5" height="8.1" width="260.14" x="0" y="0"/>
