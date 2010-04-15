@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE SystemDefinition [
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE SystemDefinition [
 <!ELEMENT SystemDefinition ( systemModel )>
 <!ATTLIST SystemDefinition
   name CDATA #REQUIRED
@@ -72,7 +73,7 @@
   priority CDATA #IMPLIED
 >
 ]>
-<SystemDefinition schema="2.0.1" name="Symbian^3">
+<SystemDefinition name="Symbian^3" schema="2.0.1">
 <systemModel>
 <layer name="adaptation" long-name="Adaptation" levels="low mw high">
 <block name="stubs" level="high" long-name="Stubs" levels="stub">
@@ -6295,25 +6296,25 @@
 </collection>
 <collection name="qt_info" long-name="Qt Info" level="mw">
 <component name="qt_build" long-name="Qt Build" introduced="^2">
-<unit bldFile="mw/qt/."/>
+<unit bldFile="mw/qt" proFile="projects.pro" qmakeArgs="-r"/>
 </component>
 </collection>
 <collection name="qtdemos" long-name="Qt Demos" level="app">
 <component name="qtdemos_build" long-name="Qt Demos Build" introduced="^2" filter="qtdemos">
-<unit bldFile="mw/qt/demos"/>
+<unit bldFile="mw/qt/demos" proFile="demos.pro" qmakeArgs="-r"/>
 </component>
 </collection>
 <collection name="qtexamples" long-name="Qt Examples" level="app">
 <component name="qtexamples_build" long-name="Qt Examples Build" introduced="^2" filter="qtexamples">
-<unit bldFile="mw/qt/examples"/>
+<unit bldFile="mw/qt/examples" proFile="examples.pro" qmakeArgs="-r"/>
 </component>
 </collection>
 <collection name="qt_tests" long-name="Qt Tests" level="app">
 <component name="qttestsauto" long-name="Qt Automated Tests" introduced="^2" filter="qttestsauto">
-<unit bldFile="mw/qt/tests/auto"/>
+<unit bldFile="mw/qt/tests/auto" proFile="qtpauto.pro"/>
 </component>
 <component name="qttestsbenchmarks" long-name="Qt Benchmarks Tests" introduced="^2" filter="qttestsbenchmarks">
-<unit bldFile="mw/qt/tests/benchmarks"/>
+<unit bldFile="mw/qt/tests/benchmarks" proFile="benchmarks.pro" qmakeArgs="-r"/>
 </component>
 </collection>
 </block>
