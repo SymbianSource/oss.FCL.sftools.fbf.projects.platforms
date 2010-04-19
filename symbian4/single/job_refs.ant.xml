@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<project name="SF-JOB-REFS" xmlns:hlm="http://www.nokia.com/helium">
+
+<!-- For a combined model GT+S60, sf.spec.os.system.definition.files must be used -->
+  <path id="sf.spec.os.system.definition.files">
+    <fileset dir="${sf.project.location}/" casesensitive="false">
+            <include name="sysdefs/system_model.xml" />
+    </fileset>
+  </path>
+  
+  <path id="sf.spec.s60.system.definition.files">
+    <fileset dir="${sf.project.location}/" casesensitive="false">
+        <include name="sysdefs/system_model_s60.xml" />
+    </fileset>
+  </path>   
+    
+  <!-- iMaker config to be used by build-roms Helium target -->
+  <hlm:imakerconfigurationset id="imaker.rom.config">
+     <imakerconfiguration regionalVariation="false">
+         <makefileset>
+             <!-- Note: case sensitive -->
+             <include name="**/*Syborg*.mk"/>
+         </makefileset>
+         <targetset>
+             <include name="^core$" />
+             <!--
+             include name="langpack_\d+" />
+             <include name="^custvariant_.*$" />
+             <include name="^udaerase$" /
+             -->
+         </targetset>
+         <variableset>
+             <variable name="TYPE" value="rnd"/>
+             <variable name="USE_SYMGEN" value="1"/>
+             <variable name="USE_UDEB" value="1"/>
+         </variableset>
+     </imakerconfiguration>
+     
+     <!--imakerconfiguration regionalVariation="false">
+         <makefileset>
+             <include name="**/*zoom2*.mk"/>
+         </makefileset>
+         <targetset>
+             <include name="^core$" />
+         </targetset>
+         <variableset>
+             <variable name="TYPE" value="rnd"/>
+             <variable name="USE_SYMGEN" value="1"/>
+             <variable name="USE_UDEB" value="1"/>
+         </variableset>
+     </imakerconfiguration -->
+     
+  </hlm:imakerconfigurationset>
+    
+ </project>
