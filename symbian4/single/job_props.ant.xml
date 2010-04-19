@@ -26,7 +26,7 @@
     <property name="sf.spec.bldmefirst.s60.variant" value="western" /> <!-- western|apac|japan but only western is used at the moment -->
     <property name="sf.spec.bldmefirst.s60.config.root" value="sf/os/deviceplatformrelease/sf_config/config" />
     <property name="sf.spec.bldmefirst.s60.sbs.variant.cfg" value="${sf.spec.bldmefirst.s60.config.root}/inc/variant.cfg" /> <!-- currently needed for touching -->
-    <property name="sf.spec.bldmefirst.s60.exports" value="${sf.spec.bldmefirst.s60.config.root}/${sf.spec.bldmefirst.s60.variant}/group,${sf.spec.bldmefirst.s60.config.root}/group,sf/os/devicesrv/devicesrv_pub/platform_path_definitions_api/group,sf/os/devicesrv/devicesrv_pub/common_platform_security_definitions_api/group,sf/os/devicesrv/commonservices/commonengine/group,sf/mw/web/web_plat/browser_platform_api/group,sf/app/homescreentools/dtdinstaller/group"/>
+    <property name="sf.spec.bldmefirst.s60.exports" value="${sf.spec.bldmefirst.s60.config.root}/${sf.spec.bldmefirst.s60.variant}/group,${sf.spec.bldmefirst.s60.config.root}/group,sf/os/devicesrv/devicesrv_pub/platform_path_definitions_api/group,sf/os/devicesrv/devicesrv_pub/common_platform_security_definitions_api/group,sf/os/devicesrv/commonservices/commonengine/group,sf/mw/web/web_plat/browser_platform_api/group"/>
     
     <!-- To sync the tools instead of building them, change sf.spec.sbs.tools.config to tools2_rel.whatlog  -->
     <!-- check that sf.spec.baseline.getenv_options includes 'tools'                                        -->
