@@ -76,39 +76,104 @@
 <SystemDefinition name="Symbian^4" schema="2.0.1">
 <systemModel>
 <layer name="adaptation" long-name="Adaptation" levels="low mw high">
-<block name="stubs" level="high" long-name="Stubs" levels="stub">
-<collection name="s60_stubs" level="stub">
-<component name="audiostubs" long-name="Audio Stubs">
-<unit bldFile="adaptation/stubs/audiostubs/group"/>
+<block name="stubs" level="high" span="2" long-name="Stubs" levels="adaptation plugin mid engine">
+<collection name="audiostubs" long-name="Audio Stubs" level="adaptation">
+<component name="devsoundextensions_stubs" long-name="Devsound Extensions Stubs">
+<unit bldFile="adaptation/stubs/audiostubs/devsoundextensions_stubs/group"/>
 </component>
-<component name="btaudioadaptation_stub" long-name="Bluetooth Audio Adaptation Stub">
+<component name="fmradiotunercontrolstub" long-name="FM Radio Tuner Control Stub">
+<unit bldFile="adaptation/stubs/audiostubs/fmradiotunercontrolstub/group"/>
+</component>
+</collection>
+<collection name="btaudioadaptation_stub" long-name="Bluetooth Audio Adaptation Stub" level="adaptation">
+<component name="btaudioadaptation_stub_build" long-name="Bluetooth Audio Adaptation Stub Build" filter="oem_build">
 <unit bldFile="adaptation/stubs/btaudioadaptation_stub/group"/>
 </component>
-<component name="drm_stubs" long-name="DRM Stubs">
+</collection>
+<collection name="drm_stubs" long-name="DRM Stubs" level="plugin">
+<component name="drm_stubs_build" long-name="DRM Stubs Build">
 <unit bldFile="adaptation/stubs/drm_stubs/group"/>
 </component>
-<component name="ocrsrv_stub" long-name="OCR Services Stub">
+</collection>
+<collection name="ocrsrv_stub" long-name="OCR Services Stub" level="mid">
+<component name="ocrsrv_stub_build" long-name="OCR Services Stub Build" filter="!dfs_build">
 <unit bldFile="adaptation/stubs/ocrsrv_stub/group"/>
 </component>
-<component name="omasuplasnconverterstubimpl" long-name="OMA SUPL ASN Converter Stub Implementation">
+</collection>
+<collection name="omasuplasnconverterstubimpl" long-name="OMA SUPL ASN Converter Stub Implementation" level="plugin">
+<component name="omasuplasnconverterstubimpl_build" long-name="OMA SUPL ASN Converter Stub Implementation Build" filter="!dfs_build">
 <unit bldFile="adaptation/stubs/omasuplasnconverterstubimpl/group"/>
 </component>
-<component name="posmsgpluginreferenceimpl" long-name="POS Message Plugin Reference Implementation" plugin="Y">
+</collection>
+<collection name="posmsgpluginreferenceimpl" long-name="POS Message Plugin Reference Implementation" level="plugin">
+<component name="posmsgpluginreferenceimpl_build" long-name="POS Message Plugin Reference Implementation Build" plugin="Y">
 <unit bldFile="adaptation/stubs/posmsgpluginreferenceimpl/group"/>
 </component>
-<component name="srsfenginestub" long-name="SRSF Engine Stub">
+</collection>
+<collection name="srsfenginestub" long-name="SRSF Engine Stub" level="engine">
+<component name="srsfenginestub_build" long-name="SRSF Engine Stub Build" filter="stubs">
 <unit bldFile="adaptation/stubs/srsfenginestub/group"/>
 </component>
-<component name="power_save_display_mode_stub" long-name="Power Save Display Mode Stub">
+</collection>
+<collection name="power_save_display_mode_stub" long-name="Power Save Display Mode Stub" level="plugin">
+<component name="power_save_display_mode_stub_build" long-name="Power Save Display Mode Stub Build">
 <unit bldFile="adaptation/stubs/power_save_display_mode_stub/group"/>
 </component>
-<component name="systemswstubs" long-name="System Software Stubs">
-<unit bldFile="adaptation/stubs/systemswstubs/group"/>
+</collection>
+<collection name="systemswstubs" long-name="System Software Stubs" level="adaptation">
+<component name="ddcaccessstub" long-name="DDC Access Stub">
+<unit bldFile="adaptation/stubs/systemswstubs/ddcaccessstub/group"/>
 </component>
-<component name="tactileclickplugin_stub" long-name="Tactile Click Plugin Stub" plugin="Y">
+<component name="tvoutconfig" long-name="TV Out Config">
+<unit bldFile="adaptation/stubs/systemswstubs/TVOutConfig/group" filter="oem_build"/>
+</component>
+<component name="accessorypolicyreference" long-name="Accessory Policy Reference">
+<unit bldFile="adaptation/stubs/systemswstubs/accessorypolicyreference/group" filter="oem_build"/>
+</component>
+<component name="asyreference" long-name="ASY Reference" plugin="Y">
+<unit bldFile="adaptation/stubs/systemswstubs/asyreference/group" filter="oem_build"/>
+</component>
+<component name="examplecommonisc" long-name="Example Common ISC">
+<unit bldFile="adaptation/stubs/systemswstubs/examplecommonisc/group" filter="oem_build"/>
+</component>
+<component name="exampledsy" long-name="Example DSY">
+<unit bldFile="adaptation/stubs/systemswstubs/exampledsy/group" filter="oem_build"/>
+</component>
+<component name="featuremanagerstub" long-name="Feature Manager Stub">
+<unit bldFile="adaptation/stubs/systemswstubs/featuremanagerstub/group" filter="oem_build"/>
+</component>
+<component name="hwrmstubplugins" long-name="Hardware Resource Manager Stub Plugins" plugin="Y">
+<unit bldFile="adaptation/stubs/systemswstubs/hwrmstubplugins/group" filter="oem_build"/>
+</component>
+<component name="hwrmhapticsstubplugin" long-name="Hardware Resource Manager Haptics Stub Plugin" plugin="Y">
+<unit bldFile="adaptation/stubs/systemswstubs/hwrmhapticsstubplugin/group" filter="oem_build"/>
+</component>
+<component name="sensorchannelsreference" long-name="Sensor Channels Reference">
+<unit bldFile="adaptation/stubs/systemswstubs/sensorchannelsreference/group" filter="oem_build"/>
+</component>
+<component name="ssyreference" long-name="SSY Reference" plugin="Y">
+<unit bldFile="adaptation/stubs/systemswstubs/ssyreference/group" filter="oem_build"/>
+</component>
+<component name="startupadaptationstub" long-name="Startup Adaptation Stub" plugin="Y">
+<unit bldFile="adaptation/stubs/systemswstubs/startupadaptationstub/group" filter="oem_build"/>
+</component>
+<component name="tiltcompensationstub" long-name="Tilt Compensation Stub">
+<unit bldFile="adaptation/stubs/systemswstubs/tiltcompensationstub/group" filter="oem_build"/>
+</component>
+<component name="tvoutbehaviour" long-name="TV Out Behaviour">
+<unit bldFile="adaptation/stubs/systemswstubs/tvoutbehaviour/group" filter="oem_build"/>
+</component>
+<component name="wiredbearerreference" long-name="Wired Bearer Reference" plugin="Y">
+<unit bldFile="adaptation/stubs/systemswstubs/wiredbearerreference/group" filter="oem_build"/>
+</component>
+</collection>
+<collection name="tactileclickplugin_stub" long-name="Tactile Click Plugin Stub" level="engine">
+<component name="tactileclickplugin_stub_build" long-name="Tactile Click Plugin Stub Build" plugin="Y">
 <unit bldFile="adaptation/stubs/tactileclickplugin_stub/group"/>
 </component>
-<component name="wlanhwinit_stub" long-name="WLAN Hardware Init Stub">
+</collection>
+<collection name="wlanhwinit_stub" long-name="WLAN Hardware Init Stub" level="mid">
+<component name="wlanhwinit_stub_build" long-name="WLAN Hardware Init Stub Build">
 <unit bldFile="adaptation/stubs/wlanhwinit_stub/group"/>
 </component>
 </collection>
@@ -195,14 +260,6 @@
 <component name="usbclientdrivers" long-name="USB Client Drivers" introduced="8.1b" purpose="optional">
 <!-- owned and maintained by usb package. To be moved there as soon as technical limitations are resolved -->
 <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/usbc" mrp="os/kernelhwsrv/kernel/eka/drivers/usbc/base_e32_drivers_usbcli.mrp"/>
-</component>
-<component name="usbdescriptors" long-name="USB Descriptors" purpose="optional">
-<!-- owned and maintained by usb package. To be moved there as soon as technical limitations are resolved -->
-<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/usbho/usbdescriptors" mrp="os/kernelhwsrv/kernel/eka/drivers/usbho/usbdescriptors/base_drivers_usbdescriptors.mrp"/>
-</component>
-<component name="usbdi_utils" long-name="USB DI Utils" purpose="optional">
-<!-- owned and maintained by usb package. To be moved there as soon as technical limitations are resolved -->
-<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/usbho/usbdi_utils" mrp="os/kernelhwsrv/kernel/eka/drivers/usbho/usbdi_utils/base_drivers_usbdi_utils.mrp"/>
 </component>
 </collection>
 <collection name="driversupport" long-name="Generic Driver Support" level="hw-if">
@@ -707,9 +764,6 @@
 </component>
 <component name="openenvcore" long-name="Open Environment Core" introduced="^2" purpose="mandatory">
 <unit bldFile="os/ossrv/genericopenlibs/openenvcore/group" mrp="os/ossrv/genericopenlibs/openenvcore/group/openenv.mrp"/>
-</component>
-<component name="pluggableauthenticationmodulefw" long-name="Pluggable Authentication Module Framework" introduced="^4" purpose="optional">
-<unit bldFile="os/ossrv/genericopenlibs/pluggableauthenticationmodulefw/group" mrp="os/ossrv/genericopenlibs/pluggableauthenticationmodulefw/group/oeaddons_libpam.mrp"/>
 </component>
 <component name="posixrealtimeextensions" long-name="POSIX Realtime Extensions" introduced="^3" purpose="optional">
 <unit bldFile="os/ossrv/genericopenlibs/posixrealtimeextensions/group" mrp="os/ossrv/genericopenlibs/posixrealtimeextensions/group/oeaddons_librt.mrp"/>
@@ -1228,10 +1282,6 @@
 <component name="browserrootcertificates" long-name="Browser Root Certificates" introduced="^2" purpose="optional" filter="sf_build">
 <unit mrp="os/security/cryptoservices/browserrootcertificates/browserrootcerts.mrp"/>
 </component>
-<component name="rootcertificates" filter="sf_build" long-name="Root Certificates" introduced="7.0s" purpose="optional">
-<!-- not in S60 codebase -->
-<unit bldFile="os/security/cryptoservices/rootcertificates/group" mrp="os/security/cryptoservices/rootcertificates/group/rootcerts.mrp"/>
-</component>
 <component name="asnpkcs" long-name="ASN PKCS" introduced="8.0" purpose="optional">
 <unit bldFile="os/security/cryptoservices/asnpkcs/group" mrp="os/security/cryptoservices/asnpkcs/group/security_asnpkcs.mrp"/>
 </component>
@@ -1619,11 +1669,6 @@
 <unit bldFile="os/cellularsrv/basebandadaptationplugins/basebandchanneladaptorforc32/group" mrp="os/cellularsrv/basebandadaptationplugins/basebandchanneladaptorforc32/group/networking_c32bca.mrp"/>
 </component>
 </collection>
-<collection name="fax" long-name="Fax" level="server">
-<component name="faxclientandserver" long-name="Fax Client and Server" purpose="optional">
-<unit bldFile="os/cellularsrv/fax/faxclientandserver/Group" mrp="os/cellularsrv/fax/faxclientandserver/Group/telephony_fax.mrp"/>
-</component>
-</collection>
 <collection name="smsprotocols" long-name="SMS Protocols" level="framework">
 <component name="smsstack" long-name="SMS Stack" introduced="6.0" purpose="mandatory" plugin="Y">
 <unit bldFile="os/cellularsrv/smsprotocols/smsstack/group" mrp="os/cellularsrv/smsprotocols/smsstack/group/nbprotocols_smsstackv2.mrp"/>
@@ -1805,11 +1850,6 @@
 </collection>
 </block>
 <block name="usb" level="services" long-name="USB" levels="adaptation hw-if plugin framework server app-if">
-<collection name="usb_plat" long-name="USB Platform Interfaces" level="app-if">
-<component name="usb_audio_stream_plugin_api" long-name="USB Audio Stream Plugin API" filter="s60" class="api">
-<unit bldFile="os/usb/usb_plat/usb_audio_stream_plugin_api/group"/>
-</component>
-</collection>
 <collection name="usbldd" long-name="USB Logical Device Drivers" level="hw-if">
 <!-- usbclientdrivers  to be moved here from kernelhwsrv-->
 </collection>
@@ -2606,61 +2646,6 @@
 <unit bldFile="os/deviceplatformrelease/S60Extras/group"/>
 </component>
 </collection>
-<collection name="locfiles" long-name="Locale Files" level="mid">
-<component name="locfiles_build" filter="s60" long-name="S60 Locale Files Build" purpose="development" class="config">
-<!-- need to move component down a directory -->
-<unit bldFile="os/deviceplatformrelease/locfiles/group"/>
-</component>
-<component name="locfiles_set1" long-name="Locale Files Set 1" filter="s60" class="config">
-<unit bldFile="os/deviceplatformrelease/locfiles/group/set1"/>
-</component>
-<component name="locfiles_set2" long-name="Locale Files Set 2" filter="s60" class="config">
-<unit bldFile="os/deviceplatformrelease/locfiles/group/set2"/>
-</component>
-<component name="locfiles_set3" long-name="Locale Files Set 3" filter="s60" class="config">
-<unit bldFile="os/deviceplatformrelease/locfiles/group/set3"/>
-</component>
-<component name="locfiles_set4" long-name="Locale Files Set 4" filter="s60" class="config">
-<unit bldFile="os/deviceplatformrelease/locfiles/group/set4"/>
-</component>
-<component name="locfiles_set5" long-name="Locale Files Set 5" filter="s60" class="config">
-<unit bldFile="os/deviceplatformrelease/locfiles/group/set5"/>
-</component>
-<component name="locfiles_set6" long-name="Locale Files Set 6" filter="s60" class="config">
-<unit bldFile="os/deviceplatformrelease/locfiles/group/set6"/>
-</component>
-<!-- is the a problem with SF builds with the following? -->
-<component name="locfiles_set7" long-name="Locale Files Set 7" filter="s60" class="config">
-<unit bldFile="os/deviceplatformrelease/locfiles/group/set7"/>
-</component>
-<component name="locfiles_set8" long-name="Locale Files Set 8" filter="s60" class="config">
-<unit bldFile="os/deviceplatformrelease/locfiles/group/set8"/>
-</component>
-<component name="locfiles_set9" long-name="Locale Files Set 9" filter="s60" class="config">
-<unit bldFile="os/deviceplatformrelease/locfiles/group/set9"/>
-</component>
-<component name="locfiles_set10" long-name="Locale Files Set 10" filter="s60" class="config">
-<unit bldFile="os/deviceplatformrelease/locfiles/group/set10"/>
-</component>
-<component name="locfiles_set11" long-name="Locale Files Set 11" filter="s60" class="config">
-<unit bldFile="os/deviceplatformrelease/locfiles/group/set11"/>
-</component>
-<component name="locfiles_set12" long-name="Locale Files Set 12" filter="s60" class="config">
-<unit bldFile="os/deviceplatformrelease/locfiles/group/set12"/>
-</component>
-<component name="locfiles_set13" long-name="Locale Files Set 13" filter="s60" class="config">
-<unit bldFile="os/deviceplatformrelease/locfiles/group/set13"/>
-</component>
-<component name="locfiles_set14" long-name="Locale Files Set 14" filter="s60" class="config">
-<unit bldFile="os/deviceplatformrelease/locfiles/group/set14"/>
-</component>
-<component name="locfiles_set15" long-name="Locale Files Set 15" filter="s60" class="config">
-<unit bldFile="os/deviceplatformrelease/locfiles/group/set15"/>
-</component>
-<component name="locfiles_set16" long-name="Locale Files Set 16" filter="s60" class="config">
-<unit bldFile="os/deviceplatformrelease/locfiles/group/set16"/>
-</component>
-</collection>
 <collection name="version" long-name="Version" level="top">
 <!-- collection is really a component. Need to move down a directory -->
 <component name="version_build" filter="s60" long-name="Version Build" purpose="development" class="config">
@@ -2676,8 +2661,14 @@
 <collection name="sf_config" long-name="SF Config" level="mid">
 <component name="config" filter="s60" long-name="Config" purpose="development" class="config"/>
 <component name="cenrep" filter="sf_build" long-name="ConE Central Repository Config" purpose="development" class="config">
-<!-- will shoudl give the id/path something more unique than cenrep -->
+<!-- will should give the id/path something more unique than cenrep -->
 <unit bldFile="os/deviceplatformrelease/sf_config/cenrep/group"/>
+</component>
+<component name="rombuild_syborg" filter="sf_build" long-name="Syborg iMaker Config" purpose="development" introduced="^3" class="config">
+<unit bldFile="os/deviceplatformrelease/sf_config/rombuild/syborg/group"/>
+</component>
+<component name="rombuild_zoom2" filter="sf_build" long-name="Zoom2 iMaker Config" purpose="development" introduced="^3" class="config">
+<unit bldFile="os/deviceplatformrelease/sf_config/rombuild/zoom2/group"/>
 </component>
 </collection>
 <!-- should be located locally in buildplatforms/group 
@@ -3480,7 +3471,7 @@
 <component name="oma_supl_asn_codec_plugin_api" long-name="OMA SUPL ASN Codec Plugin API" filter="s60" class="api">
 <unit bldFile="mw/locationsrv/locsrv_plat/oma_supl_asn_codec_plugin_api/group"/>
 </component>
-<component name="query_and_notification_api" long-name="Query and Notification API" filter="s60" introduced="^4" class="api">
+<component name="query_and_notification_api" long-name="Query and Notification API" filter="s60" introduced="^3" class="api">
 <unit bldFile="mw/locationsrv/locsrv_plat/query_and_notification_api/group"/>
 </component>
 <component name="location_local_variation_api" long-name="Location Local Variation API" filter="s60" class="api">
@@ -3902,9 +3893,6 @@
 <!-- Real Time Data Protocol -->
 <unit bldFile="mw/ipappprotocols/realtimenetprots/rtp/group" mrp="mw/ipappprotocols/realtimenetprots/rtp/group/mm-protocols_rtp.mrp"/>
 </component>
-<component name="srtp" long-name="Secure RTP" introduced="^4" purpose="optional">
-<unit bldFile="mw/ipappprotocols/realtimenetprots/srtp/group" mrp="mw/ipappprotocols/realtimenetprots/srtp/group/mm-protocols_srtp.mrp"/>
-</component>
 <component name="sipfw" long-name="SIP Framework" introduced="9.2" purpose="optional">
 <unit bldFile="mw/ipappprotocols/realtimenetprots/sipfw/Group" mrp="mw/ipappprotocols/realtimenetprots/sipfw/Group/mm-protocols_SIP2_Com.mrp" version="2"/>
 </component>
@@ -3983,7 +3971,7 @@
 <collection name="wlanutilities" long-name="WLAN Utilities" level="generic">
 <component name="wlanutilities_build" long-name="WLAN Utilities Qt" introduced="^4" filter="s60">
 <!-- is this uinit needed, or is it sufficient to uncomment the units in the below components? -->
-<unit bldFile="mw/wirelessacc/wlanutilities" proFile="wirelessacc.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/wirelessacc/wlanutilities" proFile="wlanutilities.pro" qmakeArgs="-r"/>
 </component>
 <component name="wlanqtutilities" filter="s60" long-name="WLAN Qt Utilities" introduced="^4" class="placeholder">
 <!--<unit bldFile="wlanutilities/wlanplugin/group" qt:proFile="wlanqtutilities.pro"/>-->
@@ -3996,6 +3984,9 @@
 </component>
 <component name="wlanindicatorplugin" filter="s60" long-name="WLAN Indicator Plugin" plugin="Y" class="placeholder">
 <!--<unit bldFile="wlanutilities/wlanindicatorplugin/group" qt:proFile="wlanindicatorplugin.pro"/>-->
+</component>
+<component name="cpwlansettingsplugin" filter="s60" long-name="WLAN Settings Control Panel Plugin" introduced="^4" plugin="Y" class="placeholder">
+<!--<unit bldFile="wlanutilities/cpwlansettingsplugin/group" qt:proFile="cpwlansettingsplugin.pro"/>-->
 </component>
 </collection>
 </block>
@@ -4106,9 +4097,6 @@
 </component>
 <component name="vpndialogmanager" filter="s60" long-name="VPN Dialog Manager">
 <unit bldFile="mw/vpnclient/vpnui/vpndialogmanager/group"/>
-</component>
-<component name="vpnmanagementui" filter="s60" long-name="VPN Management UI" plugin="Y">
-<unit bldFile="mw/vpnclient/vpnui/vpnmanagementui/group"/>
 </component>
 <component name="vpnpolins" filter="s60" long-name="VPN Policy Installer">
 <unit bldFile="mw/vpnclient/vpnui/vpnpolins/group"/>
@@ -4719,9 +4707,6 @@
 </component>
 <component name="ds_capability_mgmt_plugin_api" long-name="DS Capability Management Plugin API" filter="s60" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/ds_capability_mgmt_plugin_api/group"/>
-</component>
-<component name="dm_native_notifier_api" long-name="DM Native Notifier API" filter="s60" class="api">
-<unit bldFile="mw/remotemgmt/remotemgmt_plat/dm_native_notifier_api/group"/>
 </component>
 </collection>
 <collection name="policymanagement" long-name="Policy Management" level="generic">
@@ -5720,12 +5705,6 @@
 <component name="media_recorder_sink_api" long-name="Media Recorder Sink API" filter="s60" class="api">
 <unit bldFile="mw/camerasrv/camerasrv_plat/media_recorder_sink_api/group"/>
 </component>
-<component name="cae_extentension_api" long-name="CAE Extension API" filter="s60" class="api">
-<unit bldFile="mw/camerasrv/camerasrv_plat/cae_extentension_api/group"/>
-</component>
-<component name="camera_application_engine_api" long-name="Camera Application Engine API" filter="s60" class="api">
-<unit bldFile="mw/camerasrv/camerasrv_plat/camera_application_engine_api/group" filter="!test"/>
-</component>
 <component name="custom_onboard_camera_api" long-name="Custom Onboard Camera API" filter="s60" class="api">
 <unit bldFile="mw/camerasrv/camerasrv_plat/custom_onboard_camera_api/group"/>
 </component>
@@ -6061,7 +6040,19 @@
 </component>
 </collection>
 </block>
-<block name="hb" level="generic" long-name="Orbit"/>
+<block name="hb" level="generic" long-name="Orbit" levels="engine test api">
+<collection name="hb_info" long-name="Orbit Info" level="api">
+<component name="hb_build" long-name="Orbit Build" introduced="^4">
+<!-- should break this down into actual components -->
+<unit bldFile="mw/hb" proFile="hb.pro"/>
+</component>
+</collection>
+<collection name="hb_test" long-name="Orbit Test" level="test">
+<component name="hb_fute" filter="hb_fute_app" long-name="Fute" introduced="^4">
+<unit bldFile="mw/hb/tsrc/fute" proFile="fute.pro" qmakeArgs="-r MMP_RULES+=EXPORTUNFROZEN"/>
+</component>
+</collection>
+</block>
 <block name="classicui" level="generic" long-name="Classic UI" levels="base support server generic specific">
 <collection name="classicui_plat" long-name="Classic UI Platform Interfaces" level="specific">
 <component name="personalisation_framework_api" long-name="Personalisation Framework API" filter="s60" class="api">
@@ -6938,142 +6929,24 @@
 <component name="profileengine" filter="s60" long-name="Profile Engine" introduced="9.1">
 <unit bldFile="mw/gsprofilesrv/profilesservices/profileengine/group"/>
 </component>
-<component name="ringingtone3dplugin" filter="s60" long-name="Ringing Tone 3D Plugin" introduced="^2" plugin="Y">
-<unit bldFile="mw/gsprofilesrv/profilesservices/ringingtone3dplugin/group"/>
-</component>
 </collection>
 </block>
 <block name="homescreensrv" level="specific" long-name="Home Screen Services" levels="plugin framework server generic specific">
 <collection name="homescreensrv_plat" long-name="Home Screen Services Platform Interfaces" level="specific">
-<component name="ai_content_model_api" long-name="AI Content Model API" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/ai_content_model_api/group"/>
-</component>
-<component name="ai_utilities_api" long-name="AI Utilities API" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/ai_utilities_api/group" filter="!test"/>
-</component>
-<component name="ai_plugin_management_api" long-name="AI Plug-in Management API" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/ai_plugin_management_api/group"/>
-</component>
-<component name="ai_plugin_information_api" long-name="AI Plug-in Information API" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/ai_plugin_information_api/group"/>
-</component>
-<component name="ai_variation_api" long-name="AI Variation API" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/ai_variation_api/group"/>
-</component>
 <component name="action_handler_plugin_api" long-name="Action Handler Plugin API" filter="s60" class="api">
 <unit bldFile="mw/homescreensrv/homescreensrv_plat/action_handler_plugin_api/group" filter="!test"/>
 </component>
 <component name="content_harvester_plugin_api" long-name="Content Harvester Plugin API" filter="s60" class="api">
 <unit bldFile="mw/homescreensrv/homescreensrv_plat/content_harvester_plugin_api/group" filter="!test"/>
 </component>
-<component name="menu_model_api" long-name="Menu Model API" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/menu_model_api/group"/>
-</component>
 <component name="menu_sat_interface_api" long-name="Menu SAT Interface API" filter="s60" class="api">
 <unit bldFile="mw/homescreensrv/homescreensrv_plat/menu_sat_interface_api/group" filter="!test"/>
-</component>
-<component name="external_home_screen_api" long-name="External Home Screen API" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/external_home_screen_api/group"/>
-</component>
-<component name="menu_content_service_api" long-name="Menu Content Service API" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/menu_content_service_api/group" filter="!test"/>
 </component>
 <component name="sapi_contentpublishing" long-name="SAPI Content Publishing" filter="s60" class="api">
 <unit bldFile="mw/homescreensrv/homescreensrv_plat/sapi_contentpublishing/group"/>
 </component>
-<component name="sapi_backstepping" long-name="SAPI Backstepping" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/sapi_backstepping/group"/>
-</component>
 <component name="sapi_actionhandler" long-name="SAPI Action Handler" filter="s60" class="api">
 <unit bldFile="mw/homescreensrv/homescreensrv_plat/sapi_actionhandler/group"/>
-</component>
-<component name="sapi_homescreenplugin" long-name="SAPI Homescreen Plugin" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/sapi_homescreenplugin/group" filter="!test"/>
-</component>
-<component name="sapi_menucontent" long-name="SAPI Menu Content" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/sapi_menucontent/group"/>
-</component>
-<component name="xcfw_api" long-name="XCFW API" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/xcfw_api/group"/>
-</component>
-<component name="idlefw_api" long-name="Idle Framework API" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/idlefw_api/group"/>
-</component>
-<component name="hs_widget_publisher_api" long-name="Home Screen Publishing API" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/hs_widget_publisher_api/group"/>
-</component>
-<component name="hs_settings_api" long-name="HS Settings API" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/hs_settings_api/group"/>
-</component>
-<component name="hs_content_control_api" long-name="HS Content Control API" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/hs_content_control_api/group"/>
-</component>
-</collection>
-<collection name="xcfw" long-name="XML Content Framework" level="framework">
-<!-- collection is really a component, needs to be moved down a directory -->
-<component name="xcfw_build" filter="s60" long-name="XML Content Framework Build">
-<unit bldFile="mw/homescreensrv/xcfw/group"/>
-</component>
-</collection>
-<collection name="homescreenpluginsrv" long-name="Home Screen Plugin Service" level="plugin">
-<component name="hspsdefinitionengine" filter="s60" long-name="HS Plugin Service Definition Engine" class="placeholder">
-<!-- <unit bldFile="homescreenpluginsrv/hspsdefinitionengine/group"/> -->
-</component>
-<component name="hspsdom" filter="s60" long-name="HS Plugin Service DOM" class="placeholder">
-<!-- <unit bldFile="homescreenpluginsrv/hspsdom/group"/> -->
-</component>
-<component name="hspstools" filter="s60" long-name="HS Server Tools">
-<!-- <unit bldFile="homescreenpluginsrv/hspstools/group"/> -->
-</component>
-<component name="hspspluginregistry" filter="s60" long-name="HS Plugin Registry" class="placeholder">
-<!-- <unit bldFile="homescreenpluginsrv/hspspluginregistry/group"/>-->
-</component>
-<component name="hspsmanager" filter="s60" long-name="HSPS Manager" class="placeholder">
-<!-- <unit bldFile="homescreenpluginsrv/hspsmanager/group"/>-->
-</component>
-<component name="hspsodt" filter="s60" long-name="HSPS Object Description Tree" class="placeholder">
-<!-- <unit bldFile="homescreenpluginsrv/hspsodt/group"/>-->
-</component>
-<component name="hspsresource" filter="s60" long-name="HS Plugin Server Resource" class="placeholder">
-<!-- <unit bldFile="homescreenpluginsrv/hspsresource/group"/>-->
-</component>
-<component name="hspsresult" filter="s60" long-name="HS Plugin Server Result" class="placeholder">
-<!-- <unit bldFile="homescreenpluginsrv/hspsresult/group"/>-->
-</component>
-<component name="homescreen_settings_api" filter="s60" long-name="HS Settings API" class="api placeholder">
-<!-- <unit bldFile="homescreenpluginsrv/hspsresult/group"/>-->
-</component>
-<component name="homescreenpluginsrv_build" filter="s60" long-name="HSPS Build">
-<!-- need to break this up into the self-contained components above and uncomment them -->
-<unit bldFile="mw/homescreensrv/homescreenpluginsrv/group"/>
-</component>
-</collection>
-<collection name="idlefw" long-name="Idle Framework" level="framework">
-<!-- Uncomment all units when configuration is in place. All currently #included from idlefw_build -->
-<component name="idlefw_plugins" filter="s60" long-name="Idle Framework Plugins" plugin="Y" class="placeholder">
-<!--<unit bldFile="idlefw/plugins/group"/>-->
-</component>
-<component name="hslaunch" filter="s60" long-name="Home Screen Launch" class="placeholder">
-<!--<unit bldFile="idlefw/plugins/group"/>-->
-</component>
-<component name="idlefw_build" filter="s60" long-name="Idle Framework Build">
-<!--split this into components, or separate from the above components and move this down a directory -->
-<unit bldFile="mw/homescreensrv/idlefw/group"/>
-</component>
-</collection>
-<collection name="menucontentsrv" long-name="Menu Content Service" level="generic">
-<component name="menusatinterface" filter="s60" long-name="Menu SAT Interface">
-<unit bldFile="mw/homescreensrv/menucontentsrv/menusatinterface/group"/>
-</component>
-<component name="menucontentsrv_build" filter="s60" long-name="Menu Content Service Build">
-<!--split this into components, or separate from the above component and move this down a directory -->
-<unit bldFile="mw/homescreensrv/menucontentsrv/group"/>
-</component>
-</collection>
-<collection name="backsteppingsrv" long-name="Back Stepping Service" level="server">
-<!-- collection is really a component, needs to be moved down a directory -->
-<component name="bsengine" long-name="Back Stepping Engine" filter="s60">
-<unit bldFile="mw/homescreensrv/backsteppingsrv/group"/>
 </component>
 </collection>
 <collection name="contentpublishingsrv" long-name="Content Publishing Service" level="server">
@@ -7094,28 +6967,6 @@
 <!-- need to remove links to the above components and just contain the IBY (or move the IBY into another component). 
       		If keeping, it need to move down a directory.-->
 <unit bldFile="mw/homescreensrv/contentpublishingsrv/group"/>
-</component>
-</collection>
-<collection name="contentcontrolsrv" long-name="Content Control Service" level="server">
-<component name="ccsrv" long-name="Content Control Service" filter="s60" introduced="^3">
-<unit bldFile="mw/homescreensrv/contentcontrolsrv/ccsrv/group"/>
-</component>
-<component name="ccsrvapi" long-name="Content Control Service API" filter="s60" introduced="^3" class="api">
-<unit bldFile="mw/homescreensrv/contentcontrolsrv/ccsrvapi/group"/>
-</component>
-<component name="ccclientsession" long-name="Content Control Client Session" filter="s60" introduced="^3">
-<unit bldFile="mw/homescreensrv/contentcontrolsrv/ccclientsession/group"/>
-</component>
-<component name="hsccclient" long-name="HS Content Control Client" filter="s60" introduced="^3">
-<unit bldFile="mw/homescreensrv/contentcontrolsrv/hsccclient/group"/>
-</component>
-<component name="hscontentinfo" long-name="Home Screen Content Info" filter="s60" introduced="^3">
-<unit bldFile="mw/homescreensrv/contentcontrolsrv/hscontentinfo/group"/>
-</component>
-<component name="contentcontrolsrv_build" long-name="Content Control Service Build" filter="s60" introduced="^3">
-<!-- need to remove links to the above components and just contain the IBY (or move the IBY into another component). 
-      		If keeping, it need to move down a directory.-->
-<unit bldFile="mw/homescreensrv/contentcontrolsrv/group"/>
 </component>
 </collection>
 </block>
@@ -7388,6 +7239,9 @@
 <component name="download_mgr_client_api_extn" long-name="Download Manager Client API Extension" filter="s60" class="api">
 <unit bldFile="mw/web/web_plat/download_mgr_client_api_extn/group"/>
 </component>
+<component name="download_path_plugin_api" long-name="Download Path Plugin API" filter="s60" introduced="^3" class="api">
+<unit bldFile="mw/web/web_plat/download_path_plugin_api/group"/>
+</component>
 <component name="feeds_engine_api" long-name="Feeds Engine API" filter="s60" class="api">
 <unit bldFile="mw/web/web_plat/feeds_engine_api/group"/>
 </component>
@@ -7414,9 +7268,6 @@
 </component>
 <component name="xml_parser_api" long-name="XML Parser API" filter="s60" class="api">
 <unit bldFile="mw/web/web_plat/xml_parser_api/group"/>
-</component>
-<component name="stmgesturefw_api" long-name="State Machine Gesture Framework API " filter="s60" class="api">
-<unit bldFile="mw/web/web_plat/stmgesturefw_api/group"/>
 </component>
 </collection>
 <collection name="web_info" long-name="Web Info" level="specific">
@@ -7698,6 +7549,14 @@
 </component>
 </collection>
 </block>
+<block name="webruntime" level="specific" long-name="Web Runtime">
+<!-- need to break up this package nito collections and components -->
+<collection name="webruntime_info" long-name="Web Runtime Info">
+<component name="webruntime_build" long-name="Web Runtime Build" introduced="^4">
+<unit bldFile="mw/webruntime" proFile="cwrt.pro" qmakeArgs="&quot;what+=ninetwo&quot; &quot;what+=tenone&quot; &quot;what+=qt_unstable&quot; &quot;what+=wrtlite&quot; &quot;what+=exportiby&quot;"/>
+</component>
+</collection>
+</block>
 <block name="platformtools" level="generic" long-name="Platform Tools">
 <collection name="gfxconversion" long-name="Graphics Conversion">
 <component name="bmconv_s60" filter="s60" long-name="S60 Bitmap Converter" class="PC">
@@ -7782,68 +7641,6 @@
 </collection>
 </block>
 <!-- pending removal -->
-<block name="mmsharinguis" level="services" long-name="Multimedia Sharing UIs" levels="base plugin if">
-<collection name="mmsharinguis_plat" long-name="Multimedia Sharing UIs Platform Interfaces" level="if">
-<component name="multimedia_sharing_settings_api" long-name="Multimedia Sharing Settings API" filter="s60" class="api">
-<unit bldFile="app/mmsharinguis/mmsharinguis_plat/multimedia_sharing_settings_api/group"/>
-</component>
-<component name="multimedia_sharing_resource_api" long-name="Multimedia Sharing Resource API" filter="s60" class="api">
-<unit bldFile="app/mmsharinguis/mmsharinguis_plat/multimedia_sharing_resource_api/group"/>
-</component>
-<component name="multimedia_sharing_manager_api" long-name="Multimedia Sharing Manager API" filter="s60" class="api">
-<unit bldFile="app/mmsharinguis/mmsharinguis_plat/multimedia_sharing_manager_api/group"/>
-</component>
-</collection>
-<collection name="mmsharing" long-name="Multimedia Sharing" level="base">
-<component name="mmshavailability" filter="s60" long-name="Multimedia Sharing Availability">
-<unit bldFile="app/mmsharinguis/mmsharing/mmshavailability/group"/>
-</component>
-<component name="mmshindicator" filter="s60" long-name="Multimedia Sharing Indicator">
-<unit bldFile="app/mmsharinguis/mmsharing/mmshindicator/group"/>
-</component>
-<!-- consider putting client and server in the same component -->
-<component name="mmshmanagercli" filter="s60" long-name="Multimedia Sharing Manager Client">
-<unit bldFile="app/mmsharinguis/mmsharing/mmshmanagercli/group" filter="!test"/>
-</component>
-<component name="mmshmanagersrv" filter="s60" long-name="Multimedia Sharing Manager Server">
-<unit bldFile="app/mmsharinguis/mmsharing/mmshmanagersrv/group"/>
-</component>
-<component name="mmshengine" filter="s60" long-name="Multimedia Sharing Engine">
-<unit bldFile="app/mmsharinguis/mmsharing/mmshengine/group"/>
-</component>
-<component name="mmshui" filter="s60" long-name="Multimedia Sharing UI">
-<!-- can only have one unit: need to #include one from the other if it's needed -->
-<unit bldFile="app/mmsharinguis/mmsharing/mmshui/group"/>
-<unit bldFile="app/mmsharinguis/mmsharing/mmshui/help/group"/>
-</component>
-<component name="mmsharing_build" filter="s60" long-name="MM Sharing Build">
-<unit bldFile="app/mmsharinguis/mmsharing/group"/>
-</component>
-</collection>
-<collection name="mmshplugins" long-name="Multimedia Sharing Plugins" level="plugin">
-<component name="mmshaoplugin" filter="s60" long-name="Multimedia Sharing Always Online Plugin" plugin="Y">
-<unit bldFile="app/mmsharinguis/mmshplugins/mmshaoplugin/group"/>
-</component>
-<component name="mmshaiwplugin" filter="s60" long-name="Multimedia Sharing AIW Plugin" plugin="Y">
-<unit bldFile="app/mmsharinguis/mmshplugins/mmshaiwplugin/group"/>
-</component>
-<component name="mmshsipcrplugin" filter="s60" long-name="Multimedia Sharing SIP Client Resolver Plugin" plugin="Y">
-<unit bldFile="app/mmsharinguis/mmshplugins/mmshsipcrplugin/group"/>
-</component>
-<component name="mmshsettingsuiplugin" filter="s60" long-name="Multimedia Sharing Settings UI Plugin" plugin="Y">
-<unit bldFile="app/mmsharinguis/mmshplugins/mmshsettingsuiplugin/group"/>
-</component>
-<component name="mmshwpadapterplugin" filter="s60" long-name="Multimedia Sharing WAP Provisioning Adapter" plugin="Y">
-<unit bldFile="app/mmsharinguis/mmshplugins/mmshwpadapterplugin/group"/>
-</component>
-</collection>
-<collection name="mmsharinguis_info" long-name="Multimedia Sharing UIs Info" level="if">
-<component name="mmsharinguis_build" filter="s60" long-name="Multimedia Sharing UIs Build">
-<!--  consider distributing to other components -->
-<unit bldFile="app/mmsharinguis/group"/>
-</component>
-</collection>
-</block>
 <block name="phone" level="apps" span="2" long-name="Phone Apps" levels="engine plugin ui app">
 <collection name="phoneapp" long-name="Phone Application" level="app">
 <component name="blacklist" filter="s60" long-name="Phone Blacklist Clearing" plugin="Y">
@@ -7975,43 +7772,6 @@
 <collection name="phonesettings" long-name="Phone Settings" level="plugin">
 <component name="cpphonesettingsplugins" filter="s60" long-name="CP Phone Settings Plugins" introduced="^4" plugin="Y">
 <unit bldFile="app/phone/phonesettings/cpphonesettingsplugins" proFile="cpphonesettingsplugins.pro"/>
-</component>
-</collection>
-</block>
-<block name="videotelephony" level="apps" long-name="Video Telephony Apps" levels="engine plugin prot ui">
-<collection name="videotelephony_plat" long-name="VT Apps Platform Interfaces" level="ui">
-<component name="video_telephony_control_mediator_api" long-name="Video Telephony Control Mediator API" filter="s60" class="api">
-<unit bldFile="app/videotelephony/videotelephony_plat/video_telephony_control_mediator_api/group"/>
-</component>
-<component name="video_telephony_media_configuration_api" long-name="Video Telephony Media Configuration API" filter="s60" class="api">
-<unit bldFile="app/videotelephony/videotelephony_plat/video_telephony_media_configuration_api/group"/>
-</component>
-</collection>
-<collection name="vtengines" long-name="Video Telephony Engines" level="engine">
-<component name="videoteleng" filter="s60" long-name="Video Telephony Engine">
-<unit bldFile="app/videotelephony/vtengines/videoteleng/Group"/>
-</component>
-<component name="vtmediatorplugin" filter="s60" long-name="VT Mediator Plugin" plugin="Y">
-<unit bldFile="app/videotelephony/vtengines/vtmediatorplugin/group"/>
-</component>
-</collection>
-<collection name="vtuis" long-name="Video Telephony UIs" level="ui">
-<component name="videotelui" filter="s60" long-name="Video Telephony UI">
-<unit bldFile="app/videotelephony/vtuis/videotelui/group"/>
-</component>
-</collection>
-<collection name="vtprotocolplugins" long-name="VT Protocol Plugins" level="plugin">
-<component name="displaysink" filter="s60" long-name="Display Sink" introduced="^2">
-<unit bldFile="app/videotelephony/vtprotocolplugins/DisplaySink/group"/>
-</component>
-<component name="videosource" filter="s60" long-name="Video Source" introduced="^2">
-<unit bldFile="app/videotelephony/vtprotocolplugins/VideoSource/group"/>
-</component>
-</collection>
-<collection name="vtprotocolsstub" long-name="VT Protocols Stub" level="prot">
-<!--  this collection is really a component, move down a directory -->
-<component name="videotelproto" filter="s60" long-name="Video Telephony Protocol">
-<unit bldFile="app/videotelephony/vtprotocolsstub/group" filter="sf_build"/>
 </component>
 </collection>
 </block>
@@ -8173,7 +7933,7 @@
 <unit bldFile="app/contacts/phonebookengines/mobcntmodel" proFile="mobcntmodel.pro"/>
 </component>
 <component name="mobcntactions" filter="s60" long-name="Mobile Contacts Actions" introduced="^4">
-<unit bldFile="app/contacts/phonebookengines/cntmaptileservice" proFile="cntmaptileservice.pro"/>
+<unit bldFile="app/contacts/phonebookengines/mobcntactions" proFile="mobcntactions.pro"/>
 </component>
 <component name="cntmaptileservice" filter="s60" long-name="Contacts Map Tile Service" introduced="^4">
 <unit bldFile="app/contacts/phonebookengines/cntmaptileservice" proFile="cntmaptileservice.pro"/>
@@ -8334,6 +8094,9 @@
 <component name="chinesecalendarconverter" long-name="Chinese Calendar Converter" introduced="6.1" purpose="optional">
 <unit bldFile="app/organizer/pimappsupport/chinesecalendarconverter/group" mrp="app/organizer/pimappsupport/chinesecalendarconverter/group/app-services_calcon.mrp"/>
 </component>
+<component name="chinesecalendaralg" long-name="Chinese Calendar Algorithm" introduced="^2" purpose="optional" plugin="Y">
+<unit bldFile="app/organizer/pimappsupport/chinesecalendaralg/group" mrp="app/organizer/pimappsupport/chinesecalendaralg/group/app-services_chinesecalendaralgorithm.mrp"/>
+</component>
 </collection>
 <collection name="alarmui" long-name="Alarm UI" level="app">
 <!-- collection is really a component, should move down a directory -->
@@ -8379,7 +8142,7 @@
 <collection name="messagingappbase" long-name="Messaging App Base" level="base">
 <component name="messagingappbase_build" filter="s60" long-name="Messaging App Base Build" introduced="^4">
 <!-- break this up into the below components -->
-<unit bldFile="app/messaging/messagingappbase" proFile="messagingappbase/messagingappbase.pro" qmakeArgs="-r"/>
+<unit bldFile="app/messaging/messagingappbase" proFile="messagingappbase.pro" qmakeArgs="-r"/>
 </component>
 <component name="msgmedia" filter="s60" long-name="Message Media"/>
 <component name="smsmtm" long-name="SMS MTM" purpose="optional" plugin="Y">
@@ -8437,34 +8200,34 @@
 </component>
 <component name="mmsengine_build" filter="s60" long-name="MMS Engine Build">
 <!-- this should be broken up into the individual other components -->
-<unit bldFile="app/messaging/mmsengine" proFile="mmsengine/mmsengine.pro" qmakeArgs="-r"/>
+<unit bldFile="app/messaging/mmsengine" proFile="mmsengine.pro" qmakeArgs="-r"/>
 </component>
 </collection>
 <collection name="messagingapp" long-name="Messaging Application" level="app">
 <component name="mmsengine_build" filter="s60" long-name="MMS Engine Build">
 <!-- this should be broken up into the individual other components -->
-<unit bldFile="app/messaging/mmsengine" proFile="mmsengine/mmsengine.pro" qmakeArgs="-r"/>
+<unit bldFile="app/messaging/messagingapp" proFile="messagingapp.pro" qmakeArgs="-r"/>
 </component>
 <component name="msgutils" filter="s60" long-name="Messaging Utils" introduced="^4">
-<unit bldFile="app/messaging/msgutils" proFile="msgutils.pro" qmakeArgs="-r"/>
+<unit bldFile="app/messaging/messagingapp/msgutils" proFile="msgutils.pro" qmakeArgs="-r"/>
 </component>
 <component name="msgappfw" filter="s60" long-name="Messaging Application Framework" introduced="^4">
-<unit bldFile="app/messaging/msgappfw" proFile="msgappfw.pro" qmakeArgs="-r"/>
+<unit bldFile="app/messaging/messagingapp/msgappfw" proFile="msgappfw.pro" qmakeArgs="-r"/>
 </component>
 <component name="msgsettings" filter="s60" long-name="Messaging Settings" introduced="^4">
-<unit bldFile="app/messaging/msgsettings" proFile="msgsettings.pro" qmakeArgs="-r"/>
+<unit bldFile="app/messaging/messagingapp/msgsettings" proFile="msgsettings.pro" qmakeArgs="-r"/>
 </component>
 <component name="msgnotifications" filter="s60" long-name="Messaging Notifications" introduced="^4">
-<unit bldFile="app/messaging/msgnotifications" proFile="msgnotifications.pro" qmakeArgs="-r"/>
+<unit bldFile="app/messaging/messagingapp/msgnotifications" proFile="msgnotifications.pro" qmakeArgs="-r"/>
 </component>
 <component name="smartmessaging" filter="s60" long-name="Smart Messaging">
 <unit bldFile="app/messaging/messagingapp/smartmessaging" proFile="smartmessaging.pro" qmakeArgs="-r"/>
 </component>
 <component name="shareui" filter="s60" long-name="Shared UI" introduced="^4">
-<unit bldFile="app/messaging/shareui" proFile="shareui.pro" qmakeArgs="-r"/>
+<unit bldFile="app/messaging/messagingapp/shareui" proFile="shareui.pro" qmakeArgs="-r"/>
 </component>
 <component name="msgui" filter="s60" long-name="Messaging UI" introduced="^4">
-<unit bldFile="app/messaging/msgui" proFile="msgui.pro" qmakeArgs="-r"/>
+<unit bldFile="app/messaging/messagingapp/msgui" proFile="msgui.pro" qmakeArgs="-r"/>
 </component>
 </collection>
 <collection name="email" long-name="Email" level="plugin">
@@ -8829,7 +8592,7 @@
 <collection name="photos_info" long-name="Photos Info" level="support">
 <component name="photos_build" filter="s60" long-name="Photos Build" introduced="^4">
 <!--  split this up into the above components  -->
-<unit bldFile="app/photos/photosgallery" proFile="photos.pro"/>
+<unit bldFile="app/photos" proFile="photos.pro"/>
 </component>
 </collection>
 </block>
@@ -8920,7 +8683,7 @@
 <unit bldFile="app/radio/radioapp/radioapplication" proFile="radioapplication.pro"/>
 </component>
 <component name="radio_rom" filter="s60" long-name="Radio ROM" introduced="^4">
-<unit bldFile="app/radio/rom/group"/>
+<unit bldFile="app/radio/rom"/>
 </component>
 </collection>
 </block>
@@ -8999,49 +8762,6 @@
 </component>
 <component name="wrtwidgetpreinstaller" filter="s60" long-name="WRT Widget Preinstaller" introduced="^3" class="tool PC">
 <unit bldFile="app/homescreentools/widgettools/wrtwidgetpreinstaller/group"/>
-</component>
-</collection>
-</block>
-<block name="webuis" level="services" long-name="Web UIs" levels="plugin app">
-<collection name="browserui" long-name="Browser UI" level="app">
-<component name="browser" filter="s60" long-name="Browser">
-<unit bldFile="app/webuis/browserui/browser/group"/>
-</component>
-<component name="operatormenu" filter="s60" long-name="Browser Operator Menu">
-<unit bldFile="app/webuis/browserui/operatormenu/group"/>
-</component>
-<component name="videoservices" filter="s60" long-name="Browser Video Services">
-<unit bldFile="app/webuis/browserui/videoservices/group"/>
-</component>
-</collection>
-<collection name="browserplugins" long-name="Browser Plugins" level="plugin">
-<component name="browsersysteminfoplugin" filter="s60" long-name="Browser System Info Plugin" plugin="Y">
-<!-- uncomment the unit when configuration is in place, it's currently #included from browserplugins_build -->
-<!-- <unit bldFile="browserplugins/browsersysteminfoplugin/group"/>-->
-</component>
-<component name="browsergpsplugin" filter="s60" long-name="Browser GPS Plugin" plugin="Y">
-<!-- uncomment the unit when configuration is in place, it's currently #included from browserplugins_build -->
-<!-- <unit bldFile="browserplugins/browsergpsplugin/group"/>-->
-</component>
-<component name="browseraudiovideoplugin" filter="s60" long-name="Browser Audio Video Plugin" plugin="Y">
-<unit bldFile="app/webuis/browserplugins/browseraudiovideoplugin/group"/>
-</component>
-<component name="browserplugins_build" filter="s60" long-name="Browser Plugins Build">
-<!-- when configuration is in place, the #ifdef is no longer needed and this component can be removed -->
-<unit bldFile="app/webuis/browserplugins/group"/>
-</component>
-</collection>
-<collection name="pushmtm" long-name="Push MTM" level="plugin">
-<component name="pushmtm_help" filter="s60" long-name="Push MTM Help">
-<unit bldFile="app/webuis/pushmtm/help/group"/>
-</component>
-<component name="plugins" filter="s60" long-name="Push MTM Plugins" plugin="Y">
-<unit bldFile="app/webuis/pushmtm/plugins/group"/>
-</component>
-<component name="pushmtm_build" filter="s60" long-name="Push MTM Build">
-<!-- Some content is at collection level and some is at comopnent level. Either make this a single
-			component and move it down a diretcory, or make separate independent components in this collection -->
-<unit bldFile="app/webuis/pushmtm/group"/>
 </component>
 </collection>
 </block>
@@ -9158,9 +8878,6 @@
 </component>
 </collection>
 <collection name="htiui" long-name="Harmonized Test Interface UI" level="generic">
-<component name="HtiCommPlugins" filter="s60" long-name="HTI Comm Plugins" purpose="development" plugin="Y">
-<unit bldFile="app/rndtools/htiui/HtiCommPlugins/HtiBtCommPlugin/group"/>
-</component>
 <component name="HtiServicePlugins" filter="s60" long-name="HTI Service Plugins" purpose="development" plugin="Y">
 <!-- can only have a single unit. Should #include from a common bld.inf file -->
 <unit bldFile="app/rndtools/htiui/HtiServicePlugins/HtiAppServicePlugin/group"/>
@@ -9188,10 +8905,10 @@
 </collection>
 </block>
 <block name="helps" level="apps" span="2" long-name="Help Apps" levels="eng tools if ui">
-<collection name="csxhelp" long-name="Context Sensitive Extended Help" level="if">
-<!-- this is really a component. Should move it down a directory -->
-<component name="csxhelp_build" filter="s60" long-name="Context Sensitive Extended Help Build">
-<unit bldFile="app/helps/csxhelp/group"/>
+<collection name="userguide" long-name="User Guide" level="if">
+<!-- collection is really a component. Move down a directory -->
+<component name="userguide_build" long-name="User Guide Build" filter="s60" introduced="^4">
+<unit bldFile="app/helps/userguide" proFile="Userguide.pro"/>
 </component>
 </collection>
 <collection name="symhelp" long-name="Symbian Help" level="eng">
