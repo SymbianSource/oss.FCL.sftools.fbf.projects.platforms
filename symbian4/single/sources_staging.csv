@@ -80,7 +80,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/srvdiscovery/,/sf/mw/srvdiscovery,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/svgt/,/sf/mw/svgt,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/uiaccelerator/,/sf/mw/uiaccelerator,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/uiresources/,/sf/mw/uiresources,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_master_stage/oss/FCL/sf/mw/uiresources/,/sf/mw/uiresources,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/uitools/,/sf/mw/uitools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/usbservices/,/sf/mw/usbservices,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/videoutils/,/sf/mw/videoutils,branch,default,layers.sysdef.xml
