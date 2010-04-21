@@ -97,7 +97,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/oss/FCL/sf/os/devicesrv/,/sf/os/devicesrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/graphics/,/sf/os/graphics,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/imagingext/,/sf/os/imagingext,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_master_stage/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/lbs/,/sf/os/lbs,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/mm/,/sf/os/mm,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/networkingsrv/,/sf/os/networkingsrv,branch,default,layers.sysdef.xml
@@ -110,7 +110,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/xmlsrv/,/sf/os/xmlsrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/osrndtools/,/sf/os/osrndtools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_stage/oss/MCL/sf/adaptation/qemu/,/sf/adaptation/qemu,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/tools/buildplatforms/,/sf/tools/buildplatforms,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/app/homescreentools/,/sf/app/homescreentools,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/platformtools/,/sf/mw/platformtools,branch,default,layers.sysdef.xml
