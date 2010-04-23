@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?AdobeSVGViewer resolution="600"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:m="http://exslt.org/math" version="1.1" onload="wrapalltext()" viewBox="-3.2 -3.2 4902.5 847.4714176753633" class="component-fixed" onscroll="resized()" onzoom="resized()" onresize="resized()">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:m="http://exslt.org/math" version="1.1" onload="wrapalltext()" viewBox="-3.2 -3.2 4902.5 872.6714176753632" class="component-fixed" onscroll="resized()" onzoom="resized()" onresize="resized()">
  <title>Symbian OS ^3 System Model: date</title>
  <defs>
   <style type="text/css">
@@ -423,7 +423,7 @@ function resized()
 ]]><![CDATA[		
  		}
 	]]></script>
- <g id="os" transform="translate(3.1999999999999993 418.63)" class="layer">
+ <g id="os" transform="translate(3.1999999999999993 443.83000000000004)" class="layer">
   <rect x="0.3" y="0.3" width="9.3" rx="4.65" ry="4.65" class="layer" height="231.26000000000002"/>
   <text text-anchor="middle" dy="0.375em" class="layer" transform="rotate(-90)" y="4.95" width="231.26000000000002" height="9.3" x="-115.93">OS</text>
   <g class="layer-detail" transform="translate(549.0500000000006 3.2)">
@@ -2354,28 +2354,18 @@ function resized()
        </g>
       </g>
       <g id="networkprotocolmodules" transform="translate(17.7 37.6)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="37.2"/>
-       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="35.800000000000004" height="6.299999999999999">Network Protocol Modules</text>
+       <rect class="collection" x="0" y="0" height="15.6" width="18.6"/>
+       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="17.200000000000003" height="6.299999999999999">Network Protocol Modules</text>
        <g transform="translate(0 6.299999999999999)">
         <g id="privacyprotocolmodule" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
          <use width="9.3" height="9.3" x="0" y="0" xlink:href="#BorderShape2" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
          <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">Privacy Protocol Module</text>
         </g>
-        <g id="suplproxyprotocolmodule" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
-         <use width="9.3" height="9.3" x="9.3" y="0" xlink:href="#BorderShape2" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="13.950000000000001">SUPL Proxy Protocol Module</text>
-        </g>
         <g id="common" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
-         <use width="9.3" height="9.3" x="18.6" y="0" xlink:href="#Borderbox" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="23.25">common</text>
-        </g>
-        <g id="suplcontrolplaneprotocols" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
-         <use width="9.3" height="9.3" x="27.900000000000002" y="0" xlink:href="#Borderbox" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="32.550000000000004">suplcontrolplaneprotocols</text>
+         <use width="9.3" height="9.3" x="9.3" y="0" xlink:href="#Borderbox" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="13.950000000000001">common</text>
         </g>
        </g>
       </g>
@@ -3172,6 +3162,18 @@ function resized()
          <use width="9.3" height="9.3" x="0" y="0" xlink:href="#BorderShape2" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
          <use width="9.3" height="9.3" x="0" y="0" style="fill:url(#Patternstriped-diag-up); stroke: none; stroke-width: 0;" xlink:href="#BorderShape2"/>
          <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">MockSY</text>
+        </g>
+       </g>
+      </g>
+      <g id="wapstack" transform="translate(60.00000000000001 0)" class="collection">
+       <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
+       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="14.2" height="6.299999999999999">WAP Stack</text>
+       <g transform="translate(0 6.299999999999999)">
+        <g id="wapmessageapi" class="component">
+         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
+         <use width="9.3" height="9.3" x="0" y="0" xlink:href="#Borderbox" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
+         <use width="9.3" height="9.3" x="0" y="0" style="fill:url(#Patternstriped-diag-up); stroke: none; stroke-width: 0;" xlink:href="#Borderbox"/>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">WAP Message API</text>
         </g>
        </g>
       </g>
@@ -5008,7 +5010,7 @@ function resized()
    </g>
   </g>
  </g>
- <g id="mw" transform="translate(3.1999999999999993 192.63)" class="layer">
+ <g id="mw" transform="translate(3.1999999999999993 217.83)" class="layer">
   <rect x="0.3" y="0.3" width="9.3" rx="4.65" ry="4.65" class="layer" height="222.8"/>
   <text text-anchor="middle" dy="0.375em" class="layer" transform="rotate(-90)" y="4.95" width="222.8" height="9.3" x="-111.7">Middleware</text>
   <g class="layer-detail" transform="translate(12.8 3.2)">
@@ -6083,15 +6085,15 @@ function resized()
          <use width="9.3" height="9.3" x="195.30000000000007" y="0" xlink:href="#Borderround" style="fill:#32cd99;stroke-width: 0.5; "/>
          <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="199.95000000000007">OMA SUPL ASN Codec Plugin API</text>
         </g>
-        <g id="location_local_variation_api" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="204.60000000000008" y="0" xlink:href="#Borderround" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="209.25000000000009">Location Local Variation API</text>
-        </g>
         <g id="query_and_notification_api" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
+         <use width="9.3" height="9.3" x="204.60000000000008" y="0" xlink:href="#Borderround" style="fill:#32cd99;stroke-width: 0.5; "/>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="209.25000000000009">Query and Notification API</text>
+        </g>
+        <g id="location_local_variation_api" class="component">
+         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
          <use width="9.3" height="9.3" x="213.9000000000001" y="0" xlink:href="#Borderround" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="218.5500000000001">Query and Notification API</text>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="218.5500000000001">Location Local Variation API</text>
         </g>
        </g>
       </g>
@@ -13233,7 +13235,7 @@ function resized()
    </g>
   </g>
  </g>
- <g id="app" transform="translate(3.1999999999999993 0)" class="layer">
+ <g id="app" transform="translate(3.1999999999999993 25.2)" class="layer">
   <rect x="0.3" y="0.3" width="9.3" rx="4.65" ry="4.65" class="layer" height="189.43"/>
   <text text-anchor="middle" dy="0.375em" class="layer" transform="rotate(-90)" y="4.95" width="189.43" height="9.3" x="-95.015">Applications</text>
   <g class="layer-detail" transform="translate(836.7499999999991 3.2)">
@@ -15261,7 +15263,7 @@ function resized()
         </g>
         <g id="chinesecalendaralg" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
-         <use width="9.3" height="9.3" x="18.6" y="0" xlink:href="#Borderbox" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
+         <use width="9.3" height="9.3" x="18.6" y="0" xlink:href="#BorderShape2" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
          <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="23.25">Chinese Calendar Algorithm</text>
         </g>
        </g>
@@ -17570,7 +17572,21 @@ function resized()
    </g>
   </g>
  </g>
- <g id="legend-root" class="legend" transform="translate(4595.9795 656.2900000000002) translate(303.3205 0) scale(12.92177745981561) translate(-303.3205)">
+ <g id="tools" transform="translate(3.1999999999999993 0)" class="layer">
+  <rect x="0.3" y="0.3" width="9.3" rx="4.65" ry="4.65" class="layer" height="22"/>
+  <text text-anchor="middle" dy="0.375em" class="layer" transform="rotate(-90)" y="4.95" width="22" height="9.3" x="-11.3">tools</text>
+  <g class="layer-detail" transform="translate(2413.8500000000004 3.2)">
+   <rect x="-2401.05" class="layer" y="-3.2" width="4880.1" height="22"/>
+   <g>
+    <g id="buildplatforms" class="package placeholder" transform="translate( 0 0)">
+     <rect class="package" x="0" width="78" height="15.600000000000001" y="0" style="fill:grey;"/>
+     <text text-anchor="middle" class="package" width="78" x="39" y="7.8" dy="0.375em" height="15.600000000000001">buildplatforms</text>
+     <g/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <g id="legend-root" class="legend" transform="translate(4595.9795 681.49) translate(303.3205 0) scale(12.92177745981561) translate(-303.3205)">
   <text text-anchor="middle" class="title" x="286.98525" y="0">
    <tspan dy="0.75em" x="286.98525">Symbian OS ^3</tspan>
    <tspan dy="1em" x="286.98525">System Model</tspan>
@@ -17661,7 +17677,7 @@ function resized()
       <g id="s4-overlay0" class="cmp placeholder">
        <use width="9.3" height="9.3" x="0" y="0" xlink:href="#Borderbox" style="fill:grey;stroke-width: 0.5;"/>
        <use width="9.3" height="9.3" x="0" y="0" style="fill:url(#Patternstriped-diag-up); stroke: none; stroke-width: 0;" xlink:href="#Borderbox"/>
-       <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">Test Compo­nent (139)</text>
+       <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">Test Compo­nent (140)</text>
       </g>
      </g>
     </g>
@@ -17694,9 +17710,9 @@ function resized()
      </g>
     </g>
     <text text-anchor="middle" class="label" dy="0.375em" x="250.875" y="4.65">
-     <tspan dy="-1em" x="250.875">108 Packages</tspan>
-     <tspan dy="1em" x="250.875">603 Collections</tspan>
-     <tspan dy="1em" x="250.875">2540 Components</tspan>
+     <tspan dy="-1em" x="250.875">109 Packages</tspan>
+     <tspan dy="1em" x="250.875">604 Collections</tspan>
+     <tspan dy="1em" x="250.875">2539 Components</tspan>
     </text>
    </g>
   </g>

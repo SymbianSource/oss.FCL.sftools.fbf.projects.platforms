@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE SystemDefinition [
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE SystemDefinition [
 <!ELEMENT SystemDefinition ( systemModel )>
 <!ATTLIST SystemDefinition
   name CDATA #REQUIRED
@@ -73,7 +72,7 @@
   priority CDATA #IMPLIED
 >
 ]>
-<SystemDefinition name="Symbian^3" schema="2.0.1">
+<SystemDefinition schema="2.0.1" name="Symbian^3">
 <systemModel>
 <layer name="adaptation" long-name="Adaptation" levels="low mw high">
 <block name="stubs" level="high" long-name="Stubs" levels="stub">
@@ -1282,19 +1281,9 @@
 <component name="privacyprotocolmodule" long-name="Privacy Protocol Module" introduced="^2" purpose="optional" plugin="Y">
 <unit bldFile="os/lbs/networkprotocolmodules/privacyprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/privacyprotocolmodule/group/lbs_privacyprotocolmodule.mrp"/>
 </component>
-<component name="networkprotoutils" long-name="Network Protocol Common Utilities" introduced="^3">
-<unit bldFile="os/lbs/networkprotocolmodules/common/utils/group"/>
-</component>
-<component name="suplproxyprotocolmodule" long-name="SUPL Proxy Protocol Module" filter="sf_build" introduced="^3" purpose="optional" plugin="Y">
-<unit bldFile="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/sfgroup"/>
-</component>
 <component name="suplrrlpasn1" filter="sf_build" long-name="SUPL RRLP ASN1 Parser">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
 <unit bldFile="os/lbs/networkprotocolmodules/common/suplrrlpasn1/group"/>
-</component>
-<component name="suplrrlpprotocol" filter="sf_build" long-name="SUPL RRLP Protocol Module">
-<!-- hack for Foundation builds needed while collection is reorganised into proper components -->
-<unit bldFile="os/lbs/networkprotocolmodules/suplcontrolplaneprotocols/common/suplrrlpprotocol/sfgroup"/>
 </component>
 </collection>
 <collection name="lbsapitest" long-name="Location API Tests" level="application-interface"/>
@@ -1710,6 +1699,11 @@
 </component>
 </collection>
 <collection name="cellularsrvapitest" long-name="Telephony API Tests" level="app-if"/>
+<collection name="wapstack" long-name="WAP Stack" level="app-if">
+<component name="wapmessageapi" long-name="WAP Message API" purpose="development">
+<unit mrp="os/cellularsrv/wapstack/wapmessageapi/group/wap-stack_wapmessage.mrp" bldFile="os/cellularsrv/wapstack/wapmessageapi/group"/>
+</component>
+</collection>
 </block>
 <block name="bt" level="services" long-name="Bluetooth" levels="adaptation hw-if plugin framework server app-if">
 <collection name="bt_plat" long-name="Bluetooth Platform Interfaces" level="app-if">
@@ -2655,22 +2649,22 @@
 <collection name="sf_config" long-name="SF Config" level="mid">
 <component name="config" filter="s60" long-name="Config" purpose="development" class="config"/>
 <component name="cenrep" filter="sf_build" long-name="ConE Central Repository Config" purpose="development" class="config">
-<!-- will should give the id/path something more unique than cenrep -->
+<!-- will shoudl give the id/path something more unique than cenrep -->
 <unit bldFile="os/deviceplatformrelease/sf_config/cenrep/group"/>
 </component>
-<component name="rombuild_syborg" filter="sf_build" long-name="Syborg iMaker Config" purpose="development" class="config">
+<component name="rombuild_syborg" filter="sf_build" long-name="Syborg iMaker Config" purpose="development" introduced="^3" class="config">
 <unit bldFile="os/deviceplatformrelease/sf_config/rombuild/syborg/group"/>
 </component>
-<component name="rombuild_zoom2" filter="sf_build" long-name="Zoom2 iMaker Config" purpose="development" class="config">
+<component name="rombuild_zoom2" filter="sf_build" long-name="Zoom2 iMaker Config" purpose="development" introduced="^3" class="config">
 <unit bldFile="os/deviceplatformrelease/sf_config/rombuild/zoom2/group"/>
 </component>
 </collection>
-<!-- should be located locally in buildplatforms/group -->
-    <collection id="s60bld" name="S60 Build">
-      <component id="buildplatforms" filter="s60" name="Build Platforms">
-        <unit bldFile="tools/buildplatforms/group"/>
-      </component>
-    </collection>
+<!-- should be located locally in buildplatforms/group. NB. This is a different package! -->
+<collection name="s60bld" long-name="S60 Build">
+<component name="buildplatforms" filter="s60" long-name="Build Platforms">
+<unit bldFile="tools/buildplatforms/group"/>
+</component>
+</collection>
 <collection name="symbianosbld" long-name="Symbian OS Build" level="bld">
 <component name="cedarutils" long-name="Cedar Utils" purpose="development">
 <unit mrp="os/deviceplatformrelease/symbianosbld/cedarutils/tools_utils_cedar.mrp"/>
@@ -3456,12 +3450,12 @@
 <component name="oma_supl_asn_codec_plugin_api" long-name="OMA SUPL ASN Codec Plugin API" filter="s60" class="api">
 <unit bldFile="mw/locationsrv/locsrv_plat/oma_supl_asn_codec_plugin_api/group"/>
 </component>
+<component name="query_and_notification_api" long-name="Query and Notification API" filter="s60" introduced="^3" class="api">
+<!-- needs metadata file: <meta rel="Api" href="locsrv_plat/query_and_notification_api/query_and_notification_api.metaxml"/> -->
+<unit bldFile="mw/locationsrv/locsrv_plat/query_and_notification_api/group"/>
+</component>
 <component name="location_local_variation_api" long-name="Location Local Variation API" filter="s60" class="api">
 <unit bldFile="mw/locationsrv/locsrv_plat/location_local_variation_api/group"/>
-</component>
-<component name="query_and_notification_api" long-name="Query and Notification API" filter="s60" class="api">
-<!-- not yet supplied <meta rel="Api" href="locsrv_plat/query_and_notification_api/query_and_notification_api.metaxml"/> -->
-<unit bldFile="mw/locationsrv/locsrv_plat/query_and_notification_api/group"/>
 </component>
 </collection>
 <collection name="genericpositioningplugins" long-name="Generic Positioning Plugins" level="plugin">
@@ -4817,10 +4811,10 @@
 <component name="dm_native_notifier_api" long-name="DM Native Notifier API" filter="s60" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/dm_native_notifier_api/group"/>
 </component>
-<component name="syncml_ds_error_reporting_api" long-name="SyncML DS Error Reporting API" filter="s60" class="api">
+<component name="syncml_ds_error_reporting_api" long-name="SyncML DS Error Reporting API" filter="s60" introduced="^3" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_ds_error_reporting_api/group"/>
 </component>
-<component name="syncml_ds_customization_api" long-name="SyncML DS Customization API" filter="s60" class="api">
+<component name="syncml_ds_customization_api" long-name="SyncML DS Customization API" filter="s60" introduced="^3" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_ds_customization_api/group"/>
 </component>
 </collection>
@@ -6296,25 +6290,25 @@
 </collection>
 <collection name="qt_info" long-name="Qt Info" level="mw">
 <component name="qt_build" long-name="Qt Build" introduced="^2">
-<unit bldFile="mw/qt" proFile="projects.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/qt/."/>
 </component>
 </collection>
 <collection name="qtdemos" long-name="Qt Demos" level="app">
 <component name="qtdemos_build" long-name="Qt Demos Build" introduced="^2" filter="qtdemos">
-<unit bldFile="mw/qt/demos" proFile="demos.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/qt/demos"/>
 </component>
 </collection>
 <collection name="qtexamples" long-name="Qt Examples" level="app">
 <component name="qtexamples_build" long-name="Qt Examples Build" introduced="^2" filter="qtexamples">
-<unit bldFile="mw/qt/examples" proFile="examples.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/qt/examples"/>
 </component>
 </collection>
 <collection name="qt_tests" long-name="Qt Tests" level="app">
 <component name="qttestsauto" long-name="Qt Automated Tests" introduced="^2" filter="qttestsauto">
-<unit bldFile="mw/qt/tests/auto" proFile="qtpauto.pro"/>
+<unit bldFile="mw/qt/tests/auto"/>
 </component>
 <component name="qttestsbenchmarks" long-name="Qt Benchmarks Tests" introduced="^2" filter="qttestsbenchmarks">
-<unit bldFile="mw/qt/tests/benchmarks" proFile="benchmarks.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/qt/tests/benchmarks"/>
 </component>
 </collection>
 </block>
@@ -7618,7 +7612,7 @@
 <component name="download_mgr_client_api_extn" long-name="Download Manager Client API Extension" filter="s60" class="api">
 <unit bldFile="mw/web/web_plat/download_mgr_client_api_extn/group"/>
 </component>
-<component name="download_path_plugin_api" long-name="Download Path Plugin API" filter="s60" class="api">
+<component name="download_path_plugin_api" long-name="Download Path Plugin API" filter="s60" introduced="^3" class="api">
 <unit bldFile="mw/web/web_plat/download_path_plugin_api/group"/>
 </component>
 <component name="feeds_engine_api" long-name="Feeds Engine API" filter="s60" class="api">
@@ -9239,7 +9233,7 @@
 <component name="chinesecalendarconverter" long-name="Chinese Calendar Converter" introduced="6.1" purpose="optional">
 <unit bldFile="app/organizer/pimappsupport/chinesecalendarconverter/group" mrp="app/organizer/pimappsupport/chinesecalendarconverter/group/app-services_calcon.mrp"/>
 </component>
-<component name="chinesecalendaralg" long-name="Chinese Calendar Algorithm" introduced="S^3" purpose="optional">
+<component name="chinesecalendaralg" long-name="Chinese Calendar Algorithm" introduced="^2" purpose="optional" plugin="Y">
 <unit bldFile="app/organizer/pimappsupport/chinesecalendaralg/group" mrp="app/organizer/pimappsupport/chinesecalendaralg/group/app-services_chinesecalendaralgorithm.mrp"/>
 </component>
 </collection>

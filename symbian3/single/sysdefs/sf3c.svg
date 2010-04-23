@@ -431,8 +431,8 @@ function resized()
  <g id="os" transform="translate(3.1999999999999993 404.06)" class="layer">
   <rect x="0.3" y="0.3" width="9.3" rx="4.65" ry="4.65" class="layer" height="231.26000000000002"/>
   <text text-anchor="middle" dy="0.375em" class="layer" transform="rotate(-90)" y="4.95" width="231.26000000000002" height="9.3" x="-115.93">OS</text>
-  <g class="layer-detail" transform="translate(59.74999999999993 3.2)">
-   <rect x="-46.94999999999993" class="layer" y="-3.2" width="1343.0999999999997" height="231.26000000000002"/>
+  <g class="layer-detail" transform="translate(50.899999999999906 3.2)">
+   <rect x="-38.09999999999991" class="layer" y="-3.2" width="1343.0999999999997" height="231.26000000000002"/>
    <g>
     <g id="kernelhwsrv" class="package" transform="translate( 0 123.43000000000002)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color0.mouseover" end="s8-color0.mouseout"/>
@@ -998,8 +998,8 @@ function resized()
     </g>
     <g id="cellularsrv" class="package" transform="translate( 619.5 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color3.mouseover" end="s8-color3.mouseout"/>
-     <rect class="package" x="0" width="51" height="120.23000000000002" y="0" style="fill:darkkhaki;"/>
-     <text text-anchor="middle" class="package" width="35.4" x="33.3" y="86.2" dy="0.375em">Cellular Baseband Services</text>
+     <rect class="package" x="0" width="68.7" height="120.23000000000002" y="0" style="fill:darkkhaki;"/>
+     <text text-anchor="middle" class="package" width="68.7" x="34.35" y="119.23000000000002">Cellular Baseband Services</text>
      <g transform="translate(0 3.2)">
       <g id="basebandabstraction" transform="translate(0 75.2)" class="collection">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
@@ -1056,9 +1056,14 @@ function resized()
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Telephony API Tests</text>
        <g transform="translate(0 6.299999999999999)"/>
       </g>
+      <g id="wapstack" transform="translate(53.099999999999994 0)" class="collection">
+       <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
+       <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">WAP Stack</text>
+       <g transform="translate(0 6.299999999999999)"/>
+      </g>
      </g>
     </g>
-    <g id="bt" class="package" transform="translate( 672.6 0)">
+    <g id="bt" class="package" transform="translate( 690.3 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color5.mouseover" end="s8-color5.mouseout"/>
      <rect class="package" x="0" width="68.7" height="120.23000000000002" y="0" style="fill:orchid;"/>
      <text text-anchor="middle" class="package" width="68.7" x="34.35" y="119.23000000000002">Blue­tooth</text>
@@ -1110,7 +1115,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="usb" class="package" transform="translate( 743.4 0)">
+    <g id="usb" class="package" transform="translate( 761.0999999999999 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color5.mouseover" end="s8-color5.mouseout"/>
      <rect class="package" x="0" width="27.900000000000002" height="120.23000000000002" y="0" style="fill:orchid;"/>
      <text text-anchor="middle" class="package" width="27.900000000000002" x="13.950000000000001" y="119.23000000000002">USB</text>
@@ -1132,7 +1137,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="mm" class="package" transform="translate( 773.4 0)">
+    <g id="mm" class="package" transform="translate( 791.0999999999999 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
      <rect class="package" x="0" width="86.4" height="120.23000000000002" y="0" style="fill:rgb(175,212,240);"/>
      <text text-anchor="middle" class="package" width="86.4" x="43.2" y="119.23000000000002">Multi­media</text>
@@ -1224,7 +1229,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="imagingext" class="package" transform="translate( 861.9 0)">
+    <g id="imagingext" class="package" transform="translate( 879.5999999999999 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
      <rect class="package" x="0" width="51" height="120.23000000000002" y="0" style="fill:rgb(175,212,240);"/>
      <text text-anchor="middle" class="package" width="51" x="25.5" y="119.23000000000002">Imaging Exten­sions</text>
@@ -1251,7 +1256,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="graphics" class="package" transform="translate( 915 0)">
+    <g id="graphics" class="package" transform="translate( 932.6999999999999 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="104.1" height="120.23000000000002" y="0" style="fill:orange;"/>
      <text text-anchor="middle" class="package" width="104.1" x="52.05" y="119.23000000000002">Graphics</text>
@@ -1348,7 +1353,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="textandloc" class="package" transform="translate( 1021.1999999999999 0)">
+    <g id="textandloc" class="package" transform="translate( 1038.8999999999999 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="68.7" height="120.23000000000002" y="0" style="fill:orange;"/>
      <text text-anchor="middle" class="package" width="68.7" x="34.35" y="119.23000000000002">Text &amp; Localis­ation Services</text>
@@ -1400,7 +1405,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="xmlsrv" class="package" transform="translate( 1091.9999999999998 0)">
+    <g id="xmlsrv" class="package" transform="translate( 1109.6999999999998 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color11.mouseover" end="s8-color11.mouseout"/>
      <rect class="package" x="0" width="33.3" height="120.23000000000002" y="0" style="fill:slateblue;"/>
      <text text-anchor="middle" class="package" width="33.3" x="16.65" y="119.23000000000002">XML Services</text>
@@ -1427,54 +1432,59 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="deviceplatformrelease" class="package" transform="translate( 1127.3999999999999 0)">
+    <g id="deviceplatformrelease" class="package" transform="translate( 1145.1 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color12.mouseover" end="s8-color12.mouseout"/>
      <rect class="package" x="0" width="68.7" height="120.23000000000002" y="0" style="fill:darkgray;"/>
      <text text-anchor="middle" class="package" width="68.7" x="34.35" y="119.23000000000002">Dev­ice Platform Release</text>
      <g transform="translate(0 3.2)">
-      <g id="s60extras" transform="translate(0 18.8)" class="collection">
+      <g id="s60extras" transform="translate(0 37.6)" class="collection">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">S60 Extras</text>
        <g transform="translate(0 6.299999999999999)"/>
       </g>
-      <g id="locfiles" transform="translate(17.7 18.8)" class="collection">
+      <g id="locfiles" transform="translate(17.7 37.6)" class="collection">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Locale Files</text>
        <g transform="translate(0 6.299999999999999)"/>
       </g>
-      <g id="version" transform="translate(0 0)" class="collection">
+      <g id="version" transform="translate(0 18.8)" class="collection">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Version</text>
        <g transform="translate(0 6.299999999999999)"/>
       </g>
-      <g id="helps_loc2" transform="translate(17.7 0)" class="collection">
+      <g id="helps_loc2" transform="translate(17.7 18.8)" class="collection">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Helps Locale 2</text>
        <g transform="translate(0 6.299999999999999)"/>
       </g>
-      <g id="sf_config" transform="translate(35.4 18.8)" class="collection">
+      <g id="sf_config" transform="translate(35.4 37.6)" class="collection">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">SF Config</text>
        <g transform="translate(0 6.299999999999999)"/>
       </g>
-      <g id="symbianosbld" transform="translate(0 37.6)" class="collection">
+      <g id="s60bld" transform="translate(0 0)" class="collection">
+       <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
+       <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">S60 Build</text>
+       <g transform="translate(0 6.299999999999999)"/>
+      </g>
+      <g id="symbianosbld" transform="translate(0 56.400000000000006)" class="collection">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Symbian OS Build</text>
        <g transform="translate(0 6.299999999999999)"/>
       </g>
-      <g id="foundation_system" transform="translate(35.4 0)" class="collection">
+      <g id="foundation_system" transform="translate(35.4 18.8)" class="collection">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Found­ation System</text>
        <g transform="translate(0 6.299999999999999)"/>
       </g>
-      <g id="deviceplatformrelease_info" transform="translate(53.099999999999994 0)" class="collection">
+      <g id="deviceplatformrelease_info" transform="translate(53.099999999999994 18.8)" class="collection">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Dev­ice Platform Release Info</text>
        <g transform="translate(0 6.299999999999999)"/>
       </g>
      </g>
     </g>
-    <g id="osrndtools" class="package" transform="translate( 1198.1999999999998 0)">
+    <g id="osrndtools" class="package" transform="translate( 1215.8999999999999 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color12.mouseover" end="s8-color12.mouseout"/>
      <rect class="package" x="0" width="51" height="120.23000000000002" y="0" style="fill:darkgray;"/>
      <text text-anchor="middle" class="package" width="51" x="25.5" y="119.23000000000002">OS R&amp;D tools</text>
@@ -4622,7 +4632,7 @@ function resized()
     </g>
     <text text-anchor="middle" class="label" dy="0.375em" x="243.275" y="3.0999999999999996">
      <tspan dy="-0.5em" x="243.275">110 Packages</tspan>
-     <tspan dy="1em" x="243.275">666 Collections</tspan>
+     <tspan dy="1em" x="243.275">668 Collections</tspan>
     </text>
    </g>
   </g>
