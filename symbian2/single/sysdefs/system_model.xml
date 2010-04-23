@@ -1528,6 +1528,11 @@
       <unit bldFile="os/cellularsrv/hwpluginsimulation/mocksy/group" mrp="os/cellularsrv/hwpluginsimulation/mocksy/group/telephony_tools_mocksy.mrp"/>
      </component>
     </collection>
+   <collection name="wapstack" long-name="WAP Stack" level="app-if">
+     <component name="wapmessageapi" long-name="WAP Message API" purpose="development">
+      <unit bldFile="os/cellularsrv/wapstack/wapmessageapi/group" mrp="os/cellularsrv/wapstack/wapmessageapi/group/wap-stack_wapmessage.mrp"/>
+     </component>
+    </collection>
     <collection name="cellularsrvapitest" long-name="Telephony API Tests" level="app-if">
      <component name="datatransferhaitest" long-name="Data Transfer HAI Tests" introduced="tb91" purpose="development" class="placeholder" plugin="N" origin-model="Symbian">
       <!-- PLACEHOLDER="DS.1645"
