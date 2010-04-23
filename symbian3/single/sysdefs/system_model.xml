@@ -2665,12 +2665,12 @@
 <unit bldFile="os/deviceplatformrelease/sf_config/rombuild/zoom2/group"/>
 </component>
 </collection>
-<!-- should be located locally in buildplatforms/group 
+<!-- should be located locally in buildplatforms/group -->
     <collection id="s60bld" name="S60 Build">
       <component id="buildplatforms" filter="s60" name="Build Platforms">
-        <unit bldFile="/tools/buildplatforms/group"/>
+        <unit bldFile="tools/buildplatforms/group"/>
       </component>
-    </collection>-->
+    </collection>
 <collection name="symbianosbld" long-name="Symbian OS Build" level="bld">
 <component name="cedarutils" long-name="Cedar Utils" purpose="development">
 <unit mrp="os/deviceplatformrelease/symbianosbld/cedarutils/tools_utils_cedar.mrp"/>
