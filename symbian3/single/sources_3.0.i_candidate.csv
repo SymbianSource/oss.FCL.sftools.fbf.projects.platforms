@@ -95,7 +95,7 @@ http://developer.symbian.org/oss/MCL/sf/mw/wirelessacc/,/sf/mw/wirelessacc,branc
 http://developer.symbian.org/oss/MCL/sf/os/boardsupport/,/sf/os/boardsupport,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/bt/,/sf/os/bt,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/buildtools/,/sf/os/buildtools,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/os/cellularsrv/,/sf/os/cellularsrv,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/cellularsrv/,/sf/os/cellularsrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/commsfw/,/sf/os/commsfw,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/devicesrv/,/sf/os/devicesrv,branch,RCL_3,layers.sysdef.xml
