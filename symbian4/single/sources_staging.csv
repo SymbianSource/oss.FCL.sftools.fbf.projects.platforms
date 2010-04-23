@@ -36,7 +36,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/app/videotelephony/,/sf/app/videotelephony,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/app/webuis/,/sf/app/webuis,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/accesssec/,/sf/mw/accesssec,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/appinstall/,/sf/mw/appinstall,branch,default,layers.sysdef.xml
+//v800008/Builds01/mercurial_master_stage/oss/FCL/sf/mw/appinstall/,/sf/mw/appinstall,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/appsupport/,/sf/mw/appsupport,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/btservices/,/sf/mw/btservices,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/camerasrv/,/sf/mw/camerasrv,branch,default,layers.sysdef.xml
