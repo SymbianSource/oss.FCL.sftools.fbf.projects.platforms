@@ -78,7 +78,4 @@
     <!-- Build ROMs from iMaker config defined in job_refs.ant.xml -->
     <property name="sf.spec.referenceroms.createimages.enable" value="false"/>
 
-    <!-- run qmake for anything units with proFile attribs -->
-    <property name="qmake.enabled" value="true"/>
-
 </project>
