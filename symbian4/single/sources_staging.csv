@@ -36,7 +36,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/app/videotelephony/,/sf/app/videotelephony,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/app/webuis/,/sf/app/webuis,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/accesssec/,/sf/mw/accesssec,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_stage/oss/FCL/sf/mw/appinstall/,/sf/mw/appinstall,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/appinstall/,/sf/mw/appinstall,branch,default,modified-FCL
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/appsupport/,/sf/mw/appsupport,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/btservices/,/sf/mw/btservices,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/camerasrv/,/sf/mw/camerasrv,branch,default,layers.sysdef.xml
@@ -90,7 +90,7 @@ source,dst,type,pattern,sysdef
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/mw/wirelessacc/,/sf/mw/wirelessacc,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/boardsupport/,/sf/os/boardsupport,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/bt/,/sf/os/bt,branch,default,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_stage/oss/FCL/sf/os/buildtools/,/sf/os/buildtools,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/buildtools/,/sf/os/buildtools,branch,default,modified-FCL
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/cellularsrv/,/sf/os/cellularsrv,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/MCL/sf/os/commsfw/,/sf/os/commsfw,branch,default,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_stage/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,branch,default,layers.sysdef.xml
