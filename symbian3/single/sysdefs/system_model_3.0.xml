@@ -1078,11 +1078,6 @@
 </collection>
 </package>
 <package id="security" level="services" tech-domain="se" name="OS Security" levels="physical-abstraction plugins libraries management services utilities">
-<collection id="authenticationservices" name="Authentication Services" level="utilities">
-<component id="authenticationserver" name="Authentication Server" introduced="^3" purpose="optional">
-<unit bldFile="/os/security/authenticationservices/authenticationserver/group" mrp="/os/security/authenticationservices/authenticationserver/group/security_authserver.mrp"/>
-</component>
-</collection>
 <collection id="authorisation" name="Authorisation" level="utilities">
 <component id="userpromptservice" name="User Prompt Service" introduced="^3" purpose="mandatory">
 <unit bldFile="/os/security/authorisation/userpromptservice/group" mrp="/os/security/authorisation/userpromptservice/group/security_ups.mrp"/>
@@ -3308,6 +3303,9 @@
 <component id="wmdrm_access_api" name="WMDRM Access API" class="api" filter="s60">
 <unit bldFile="/mw/drm/drm_plat/wmdrm_access_api/group"/>
 </component>
+<component id="wmdrm_ota_access_api" name="WMDRM OTA Access API" class="api" filter="s60">
+<unit bldFile="/mw/drm/drm_plat/wmdrm_ota_access_api/group"/>
+</component>
 <component id="camese_utility_api" name="Camese Utility API" class="api" filter="s60">
 <meta rel="config">
 <defined condition="__WINDOWS_MEDIA_DRM"/>
@@ -4289,7 +4287,8 @@
 
 </component>
 <component id="telephony_mediator_api" name="Telephony Mediator API" class="api" filter="s60">
-<unit bldFile="/mw/phonesrv/phonesrv_plat/telephony_mediator_api/group"/>
+<unit bldFile="/mw/phonesrv/phonesrv_plat/telephony_mediator_api/group" filter="!test"/>
+
 </component>
 </collection>
 <collection id="telutils" name="Telephony Utils" level="generic">
@@ -4310,28 +4309,32 @@
 </collection>
 <collection id="cellular" name="Cellular" level="server">
 <component id="telephonysettings" filter="s60" name="Telephony Settings">
-<unit bldFile="/mw/phonesrv/cellular/telephonysettings/group"/>
+<unit bldFile="/mw/phonesrv/cellular/telephonysettings/group" filter="!test"/>
+
 </component>
 <component id="sssettings" filter="s60" name="Supplementary Service Settings">
-<unit bldFile="/mw/phonesrv/cellular/sssettings/group"/>
+<unit bldFile="/mw/phonesrv/cellular/sssettings/group" filter="!test"/>
+
 </component>
 <component id="psetnotesui" filter="s60" name="Phone Settings Notes UI">
-<unit bldFile="/mw/phonesrv/cellular/psetnotesui/group"/>
+<unit bldFile="/mw/phonesrv/cellular/psetnotesui/group" filter="!test"/>
+
 </component>
 <component id="servicerequest" filter="s60" name="Service Request">
 <unit bldFile="/mw/phonesrv/cellular/servicerequest/group"/>
 </component>
-
 </collection>
 <collection id="convergedcallengine" name="Converged Call Engine" level="framework">
 <component id="callprovider" filter="s60" name="Call Provider">
 <unit bldFile="/mw/phonesrv/convergedcallengine/callprovider/group"/>
 </component>
 <component id="cce" filter="s60" name="CCE">
-<unit bldFile="/mw/phonesrv/convergedcallengine/cce/group"/>
+<unit bldFile="/mw/phonesrv/convergedcallengine/cce/group" filter="!test"/>
+
 </component>
 <component id="spsettings" filter="s60" name="Service Provider Settings">
-<unit bldFile="/mw/phonesrv/convergedcallengine/spsettings/group"/>
+<unit bldFile="/mw/phonesrv/convergedcallengine/spsettings/group" filter="!test"/>
+
 </component>
 <component id="cenrepdatabase" filter="s60" name="CCE Cenrep Database">
 <unit bldFile="/mw/phonesrv/convergedcallengine/cenrepdatabase/group"/>
@@ -4343,7 +4346,6 @@
 <!--  should spell out CS in name -->
 <unit bldFile="/mw/phonesrv/convergedcallengine/csplugin/group"/>
 </component>
-
 </collection>
 <collection id="engines" name="Telephony Engines" level="specific">
 <component id="vmbxengine" filter="s60" name="Voice Mailbox Engine">
@@ -4360,13 +4362,16 @@
 <unit bldFile="/mw/phonesrv/phoneclientserver/enpolicy/group"/>
 </component>
 <component id="aiwdialdata" filter="s60" name="AIW Dial Data">
-<unit bldFile="/mw/phonesrv/phoneclientserver/aiwdialdata/group"/>
+<unit bldFile="/mw/phonesrv/phoneclientserver/aiwdialdata/group" filter="!test"/>
+
 </component>
 <component id="dialutils" filter="s60" name="Dial Utils">
-<unit bldFile="/mw/phonesrv/phoneclientserver/dialutils/group"/>
+<unit bldFile="/mw/phonesrv/phoneclientserver/dialutils/group" filter="!test"/>
+
 </component>
 <component id="phoneclient" filter="s60" name="Phone Client">
-<unit bldFile="/mw/phonesrv/phoneclientserver/phoneclient/group"/>
+<unit bldFile="/mw/phonesrv/phoneclientserver/phoneclient/group" filter="!test"/>
+
 </component>
 <component id="phoneserver" filter="s60" name="Phone Server">
 <unit bldFile="/mw/phonesrv/phoneclientserver/phoneserver/group"/>
@@ -4374,7 +4379,6 @@
 <component id="callui" filter="s60" name="Call UI">
 <unit bldFile="/mw/phonesrv/phoneclientserver/callui/group"/>
 </component>
-
 </collection>
 <collection id="satengine" name="SIM Application Toolkit Engine" level="generic">
 <component id="satserver" filter="s60" name="SAT Server">
@@ -4393,9 +4397,6 @@
 <component id="phonecmdhnlr" filter="s60" name="Phone Command Handler">
 <unit bldFile="/mw/phonesrv/phonecmdhandler/phonecmdhnlr/group"/>
 </component>
-</collection>
-<collection id="phonesrv_info" name="Telephony and SIM Services Info" level="specific">
-
 </collection>
 </package>
 <package id="messagingmw" level="specific" tech-domain="pr" name="Messaging Middleware" levels="stack fw api">
@@ -8974,6 +8975,17 @@
 </collection>
 </package>
 <package id="printing" level="services" tech-domain="de" name="Printing" levels="app">
+<collection id="DirectPrint" name="DirectPrint" level="app">
+<component id="DirectPrintApp" filter="sf_build" name="DirectPrint App" introduced="^3">
+<unit bldFile="/app/printing/DirectPrint/DirectPrintApp/group"/>
+</component>
+<component id="DirectPrintServer" filter="sf_build" name="DirectPrint Server" introduced="^3">
+<unit bldFile="/app/printing/DirectPrint/DirectPrintServer/group"/>
+</component>
+<component id="DirectPrintClient" filter="sf_build" name="DirectPrint Client" introduced="^3">
+<unit bldFile="/app/printing/DirectPrint/DirectPrintClient/group"/>
+</component>
+</collection>
 <collection id="imageprint" name="ImagePrint" level="app">
 <component id="clog" filter="s60" name="ImagePrint Logging" introduced="^2">
 <unit bldFile="/app/printing/imageprint/clog/group"/>

@@ -1141,11 +1141,6 @@
 </collection>
 </block>
 <block name="security" level="services" long-name="OS Security" levels="physical-abstraction plugins libraries management services utilities">
-<collection name="authenticationservices" long-name="Authentication Services" level="utilities">
-<component name="authenticationserver" long-name="Authentication Server" introduced="^3" purpose="optional">
-<unit bldFile="os/security/authenticationservices/authenticationserver/group" mrp="os/security/authenticationservices/authenticationserver/group/security_authserver.mrp"/>
-</component>
-</collection>
 <collection name="authorisation" long-name="Authorisation" level="utilities">
 <component name="userpromptservice" long-name="User Prompt Service" introduced="^3" purpose="mandatory">
 <unit bldFile="os/security/authorisation/userpromptservice/group" mrp="os/security/authorisation/userpromptservice/group/security_ups.mrp"/>
@@ -3304,6 +3299,9 @@
 <component name="wmdrm_access_api" long-name="WMDRM Access API" filter="s60" class="api">
 <unit bldFile="mw/drm/drm_plat/wmdrm_access_api/group"/>
 </component>
+<component name="wmdrm_ota_access_api" long-name="WMDRM OTA Access API" filter="s60" class="api">
+<unit bldFile="mw/drm/drm_plat/wmdrm_ota_access_api/group"/>
+</component>
 <component name="camese_utility_api" long-name="Camese Utility API" filter="s60" class="api">
 <unit bldFile="mw/drm/drm_plat/camese_utility_api/group"/>
 </component>
@@ -4265,7 +4263,7 @@
 <unit bldFile="mw/phonesrv/phonesrv_plat/call_remote_party_information_api/group" filter="!test"/>
 </component>
 <component name="telephony_mediator_api" long-name="Telephony Mediator API" filter="s60" class="api">
-<unit bldFile="mw/phonesrv/phonesrv_plat/telephony_mediator_api/group"/>
+<unit bldFile="mw/phonesrv/phonesrv_plat/telephony_mediator_api/group" filter="!test"/>
 </component>
 </collection>
 <collection name="telutils" long-name="Telephony Utils" level="generic">
@@ -4286,13 +4284,13 @@
 </collection>
 <collection name="cellular" long-name="Cellular" level="server">
 <component name="telephonysettings" filter="s60" long-name="Telephony Settings">
-<unit bldFile="mw/phonesrv/cellular/telephonysettings/group"/>
+<unit bldFile="mw/phonesrv/cellular/telephonysettings/group" filter="!test"/>
 </component>
 <component name="sssettings" filter="s60" long-name="Supplementary Service Settings">
-<unit bldFile="mw/phonesrv/cellular/sssettings/group"/>
+<unit bldFile="mw/phonesrv/cellular/sssettings/group" filter="!test"/>
 </component>
 <component name="psetnotesui" filter="s60" long-name="Phone Settings Notes UI">
-<unit bldFile="mw/phonesrv/cellular/psetnotesui/group"/>
+<unit bldFile="mw/phonesrv/cellular/psetnotesui/group" filter="!test"/>
 </component>
 <component name="servicerequest" filter="s60" long-name="Service Request">
 <unit bldFile="mw/phonesrv/cellular/servicerequest/group"/>
@@ -4303,10 +4301,10 @@
 <unit bldFile="mw/phonesrv/convergedcallengine/callprovider/group"/>
 </component>
 <component name="cce" filter="s60" long-name="CCE">
-<unit bldFile="mw/phonesrv/convergedcallengine/cce/group"/>
+<unit bldFile="mw/phonesrv/convergedcallengine/cce/group" filter="!test"/>
 </component>
 <component name="spsettings" filter="s60" long-name="Service Provider Settings">
-<unit bldFile="mw/phonesrv/convergedcallengine/spsettings/group"/>
+<unit bldFile="mw/phonesrv/convergedcallengine/spsettings/group" filter="!test"/>
 </component>
 <component name="cenrepdatabase" filter="s60" long-name="CCE Cenrep Database">
 <unit bldFile="mw/phonesrv/convergedcallengine/cenrepdatabase/group"/>
@@ -4334,13 +4332,13 @@
 <unit bldFile="mw/phonesrv/phoneclientserver/enpolicy/group"/>
 </component>
 <component name="aiwdialdata" filter="s60" long-name="AIW Dial Data">
-<unit bldFile="mw/phonesrv/phoneclientserver/aiwdialdata/group"/>
+<unit bldFile="mw/phonesrv/phoneclientserver/aiwdialdata/group" filter="!test"/>
 </component>
 <component name="dialutils" filter="s60" long-name="Dial Utils">
-<unit bldFile="mw/phonesrv/phoneclientserver/dialutils/group"/>
+<unit bldFile="mw/phonesrv/phoneclientserver/dialutils/group" filter="!test"/>
 </component>
 <component name="phoneclient" filter="s60" long-name="Phone Client">
-<unit bldFile="mw/phonesrv/phoneclientserver/phoneclient/group"/>
+<unit bldFile="mw/phonesrv/phoneclientserver/phoneclient/group" filter="!test"/>
 </component>
 <component name="phoneserver" filter="s60" long-name="Phone Server">
 <unit bldFile="mw/phonesrv/phoneclientserver/phoneserver/group"/>
@@ -4367,7 +4365,6 @@
 <unit bldFile="mw/phonesrv/phonecmdhandler/phonecmdhnlr/group"/>
 </component>
 </collection>
-<collection name="phonesrv_info" long-name="Telephony and SIM Services Info" level="specific"/>
 </block>
 <block name="messagingmw" level="specific" long-name="Messaging Middleware" levels="stack fw api">
 <collection name="msgfw_pub" long-name="Messaging Middleware Public Interfaces" level="api">
@@ -8645,6 +8642,17 @@
 </collection>
 </block>
 <block name="printing" level="services" long-name="Printing" levels="app">
+<collection name="DirectPrint" level="app">
+<component name="DirectPrintApp" filter="sf_build" long-name="DirectPrint App" introduced="^3">
+<unit bldFile="app/printing/DirectPrint/DirectPrintApp/group"/>
+</component>
+<component name="DirectPrintServer" filter="sf_build" long-name="DirectPrint Server" introduced="^3">
+<unit bldFile="app/printing/DirectPrint/DirectPrintServer/group"/>
+</component>
+<component name="DirectPrintClient" filter="sf_build" long-name="DirectPrint Client" introduced="^3">
+<unit bldFile="app/printing/DirectPrint/DirectPrintClient/group"/>
+</component>
+</collection>
 <collection name="imageprint" long-name="ImagePrint" level="app">
 <component name="clog" filter="s60" long-name="ImagePrint Logging" introduced="^2">
 <unit bldFile="app/printing/imageprint/clog/group"/>
