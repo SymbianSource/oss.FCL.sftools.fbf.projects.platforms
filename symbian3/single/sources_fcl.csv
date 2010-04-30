@@ -50,7 +50,7 @@ http://developer.symbian.org/oss/MCL/sf/mw/appinstall/,/sf/mw/appinstall,branch,
 http://developer.symbian.org/oss/FCL/sf/mw/appsupport/,/sf/mw/appsupport,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/btservices/,/sf/mw/btservices,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/camerasrv/,/sf/mw/camerasrv,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/mw/classicui/,/sf/mw/classicui,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/classicui/,/sf/mw/classicui,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/dlnasrv/,/sf/mw/dlnasrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/drm/,/sf/mw/drm,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/gsprofilesrv/,/sf/mw/gsprofilesrv,branch,RCL_3,layers.sysdef.xml
@@ -107,7 +107,7 @@ http://developer.symbian.org/oss/MCL/sf/os/imagingext/,/sf/os/imagingext,branch,
 http://developer.symbian.org/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/lbs/,/sf/os/lbs,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/mm/,/sf/os/mm,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/os/networkingsrv/,/sf/os/networkingsrv,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/networkingsrv/,/sf/os/networkingsrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/ossrv/,/sf/os/ossrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/persistentdata/,/sf/os/persistentdata,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/security/,/sf/os/security,branch,RCL_3,layers.sysdef.xml

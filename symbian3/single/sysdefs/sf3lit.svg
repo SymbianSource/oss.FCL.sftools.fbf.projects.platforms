@@ -17391,6 +17391,11 @@ function resized()
         </g>
        </g>
       </g>
+      <g id="java_stubs" transform="translate(0 56.400000000000006)" class="collection placeholder">
+       <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
+       <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Java Stubs</text>
+       <g transform="translate(0 6.299999999999999)"/>
+      </g>
      </g>
     </g>
     <g id="conntools" class="package" transform="translate( 2482.2000000000007 100.4)">
@@ -17726,7 +17731,7 @@ function resized()
     </g>
     <text text-anchor="middle" class="label" dy="0.375em" x="250.875" y="4.65">
      <tspan dy="-1em" x="250.875">109 Packages</tspan>
-     <tspan dy="1em" x="250.875">604 Collections</tspan>
+     <tspan dy="1em" x="250.875">605 Collections</tspan>
      <tspan dy="1em" x="250.875">2542 Components</tspan>
     </text>
    </g>
