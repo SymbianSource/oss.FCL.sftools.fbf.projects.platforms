@@ -28,7 +28,7 @@ http://developer.symbian.org/oss/MCL/sf/app/musicplayer/,/sf/app/musicplayer,cha
 http://developer.symbian.org/oss/MCL/sf/app/organizer/,/sf/app/organizer,changeset,a552c9d3f67b,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/phone/,/sf/app/phone,changeset,5d467ea4b3e5,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/photos/,/sf/app/photos,changeset,2dac0fdba72b,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/app/printing/,/sf/app/printing,changeset,f693f7318d3e,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/printing/,/sf/app/printing,changeset,f693f7318d3e,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/profile/,/sf/app/profile,changeset,2854d7196aaf,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/radio/,/sf/app/radio,changeset,f73067c3e563,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/screensaver/,/sf/app/screensaver,changeset,4784a3bc2236,layers.sysdef.xml
@@ -102,7 +102,7 @@ http://developer.symbian.org/oss/MCL/sf/os/imagingext/,/sf/os/imagingext,changes
 http://developer.symbian.org/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,changeset,b0c9ba7c8f31,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/lbs/,/sf/os/lbs,changeset,87328fd772e8,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/mm/,/sf/os/mm,changeset,b74061f7f3d2,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/os/networkingsrv/,/sf/os/networkingsrv,changeset,6d5320894977,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/networkingsrv/,/sf/os/networkingsrv,changeset,6d5320894977,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/ossrv/,/sf/os/ossrv,changeset,c39903cb48f6,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/persistentdata/,/sf/os/persistentdata,changeset,211563e4b919,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/security/,/sf/os/security,changeset,e0a1505373c1,layers.sysdef.xml
