@@ -8376,7 +8376,7 @@
 </component>
 <component introduced="^4">
 <!-- break this up into the above collections and eventually remove -->
-<unit bldFile="app/messaging" proFile="messaging.pro" qmakeArgs="-r"/>
+<unit bldFile="app/messaging"/>
 </component>
 </collection>
 </block>

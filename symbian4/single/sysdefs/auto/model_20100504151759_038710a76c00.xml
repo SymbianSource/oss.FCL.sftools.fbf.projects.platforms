@@ -8374,10 +8374,6 @@
 <component name="messaging_metadata" long-name="Messaging Apps Metadata" introduced="^2" purpose="development" class="config PC">
 <unit mrp="app/messaging/messaging_info/messaging_metadata/messaging_metadata.mrp"/>
 </component>
-<component introduced="^4">
-<!-- break this up into the above collections and eventually remove -->
-<unit bldFile="app/messaging" proFile="messaging.pro" qmakeArgs="-r"/>
-</component>
 </collection>
 </block>
 <block name="commonemail" level="apps" span="2" long-name="Email Apps" levels="service support ui app">

@@ -1088,11 +1088,6 @@
 </collection>
 </package>
 <package id="security" level="services" tech-domain="se" name="OS Security" levels="physical-abstraction plugins libraries management services utilities">
-<collection id="authenticationservices" name="Authentication Services" level="utilities">
-<component id="authenticationserver" name="Authentication Server" introduced="^3" purpose="optional">
-<unit bldFile="/os/security/authenticationservices/authenticationserver/group" mrp="/os/security/authenticationservices/authenticationserver/group/security_authserver.mrp"/>
-</component>
-</collection>
 <collection id="authorisation" name="Authorisation" level="utilities">
 <component id="userpromptservice" name="User Prompt Service" introduced="^3" purpose="mandatory">
 <unit bldFile="/os/security/authorisation/userpromptservice/group" mrp="/os/security/authorisation/userpromptservice/group/security_ups.mrp"/>
@@ -3411,6 +3406,9 @@
 <component id="wmdrm_access_api" name="WMDRM Access API" class="api" filter="s60">
 <unit bldFile="/mw/drm/drm_plat/wmdrm_access_api/group"/>
 </component>
+<component id="wmdrm_ota_access_api" name="WMDRM OTA Access API" class="api" filter="s60">
+<unit bldFile="/mw/drm/drm_plat/wmdrm_ota_access_api/group"/>
+</component>
 <component id="camese_utility_api" name="Camese Utility API" class="api" filter="s60">
 <meta rel="config">
 <defined condition="__WINDOWS_MEDIA_DRM"/>
@@ -4296,7 +4294,7 @@
 </component>
 <component id="sat_refresh_api" name="SAT Refresh API" class="api" filter="s60">
 <unit bldFile="/mw/phonesrv/phonesrv_plat/sat_refresh_api/group" filter="!test"/>
-<unit unitID="tedo.sat_refresh_api.test" bldFile="/mw/phonesrv/phonesrv_plat/sat_refresh_api/tsrc/group" filter="test,api_test"/>
+<unit bldFile="/mw/phonesrv/phonesrv_plat/sat_refresh_api/tsrc/group" filter="test,api_test"/>
 </component>
 <component id="network_handling_engine_api" name="Network Handling Engine API" class="api" filter="s60">
 <unit bldFile="/mw/phonesrv/phonesrv_plat/network_handling_engine_api/group"/>
@@ -4318,14 +4316,14 @@
 </component>
 <component id="sat_client_api" name="SAT Client API" class="api" filter="s60">
 <unit bldFile="/mw/phonesrv/phonesrv_plat/sat_client_api/group" filter="!test"/>
-<unit unitID="tedo.sat_client_api.test" bldFile="/mw/phonesrv/phonesrv_plat/sat_client_api/tsrc/group" filter="test,api_test"/>
+<unit bldFile="/mw/phonesrv/phonesrv_plat/sat_client_api/tsrc/group" filter="test,api_test"/>
 </component>
 <component id="phone_client_api" name="Phone Client API" class="api" filter="s60">
 <unit bldFile="/mw/phonesrv/phonesrv_plat/phone_client_api/group"/>
 </component>
 <component id="sat_service_api" name="SAT Service API" class="api" filter="s60">
 <unit bldFile="/mw/phonesrv/phonesrv_plat/sat_service_api/group" filter="!test"/>
-<unit unitID="tedo.sat_service_api.test" bldFile="/mw/phonesrv/phonesrv_plat/sat_service_api/tsrc/group" filter="test,api_test"/>
+<unit bldFile="/mw/phonesrv/phonesrv_plat/sat_service_api/tsrc/group" filter="test,api_test"/>
 </component>
 <component id="cbs_message_api" name="CBS Message API" class="api" filter="s60">
 <unit bldFile="/mw/phonesrv/phonesrv_plat/cbs_message_api/group"/>
@@ -4389,14 +4387,15 @@
 </component>
 <component id="call_information_api" name="Call Information API" class="api" filter="s60">
 <unit bldFile="/mw/phonesrv/phonesrv_plat/call_information_api/group" filter="!test"/>
-<unit unitID="tedo.call_information_api.test" bldFile="/mw/phonesrv/phonesrv_plat/call_information_api/tsrc/group" filter="test,api_test"/>
+<unit bldFile="/mw/phonesrv/phonesrv_plat/call_information_api/tsrc/group" filter="test,api_test"/>
 </component>
 <component id="call_remote_party_information_api" name="Call Remote Party Information API" class="api" filter="s60">
 <unit bldFile="/mw/phonesrv/phonesrv_plat/call_remote_party_information_api/group" filter="!test"/>
-<unit unitID="tedo.call_remote_party_information_api.test" bldFile="/mw/phonesrv/phonesrv_plat/call_remote_party_information_api/tsrc/group" filter="test,api_test"/>
+<unit bldFile="/mw/phonesrv/phonesrv_plat/call_remote_party_information_api/tsrc/group" filter="test,api_test"/>
 </component>
 <component id="telephony_mediator_api" name="Telephony Mediator API" class="api" filter="s60">
-<unit bldFile="/mw/phonesrv/phonesrv_plat/telephony_mediator_api/group"/>
+<unit bldFile="/mw/phonesrv/phonesrv_plat/telephony_mediator_api/group" filter="!test"/>
+<unit bldFile="/mw/phonesrv/phonesrv_plat/telephony_mediator_api/tsrc/ut_telephony_mediator_api/group" filter="test,api_test"/>
 </component>
 </collection>
 <collection id="telutils" name="Telephony Utils" level="generic">
@@ -4417,22 +4416,19 @@
 </collection>
 <collection id="cellular" name="Cellular" level="server">
 <component id="telephonysettings" filter="s60" name="Telephony Settings">
-<unit bldFile="/mw/phonesrv/cellular/telephonysettings/group"/>
+<unit bldFile="/mw/phonesrv/cellular/telephonysettings/group" filter="!test"/>
+<unit bldFile="/mw/phonesrv/cellular/telephonysettings/tsrc/public/basic/group" filter="test,api_test"/>
 </component>
 <component id="sssettings" filter="s60" name="Supplementary Service Settings">
-<unit bldFile="/mw/phonesrv/cellular/sssettings/group"/>
+<unit bldFile="/mw/phonesrv/cellular/sssettings/group" filter="!test"/>
+<unit bldFile="/mw/phonesrv/cellular/SSSettings/tsrc/public/basic/group" filter="test,api_test"/>
 </component>
 <component id="psetnotesui" filter="s60" name="Phone Settings Notes UI">
-<unit bldFile="/mw/phonesrv/cellular/psetnotesui/group"/>
+<unit bldFile="/mw/phonesrv/cellular/psetnotesui/group" filter="!test"/>
+<unit bldFile="/mw/phonesrv/cellular/PsetNotesUi/tsrc/public/basic/group" filter="test,api_test"/>
 </component>
 <component id="servicerequest" filter="s60" name="Service Request">
 <unit bldFile="/mw/phonesrv/cellular/servicerequest/group"/>
-</component>
-<component id="cellular_test" filter="s60,test,api_test" name="Cellular Tests" purpose="development">
-<!-- can only have one unit. Need to #include from a single bld.inf  (cellular/tsrc/bld.inf?) -->
-<unit unitID="tedo.PsetNotesUi.test" bldFile="/mw/phonesrv/cellular/PsetNotesUi/tsrc/public/basic/group"/>
-<unit unitID="tedo.SSSettings.test" bldFile="/mw/phonesrv/cellular/SSSettings/tsrc/public/basic/group"/>
-<unit unitID="tedo.telephonysettings.test" bldFile="/mw/phonesrv/cellular/telephonysettings/tsrc/public/basic/group"/>
 </component>
 </collection>
 <collection id="convergedcallengine" name="Converged Call Engine" level="framework">
@@ -4440,10 +4436,12 @@
 <unit bldFile="/mw/phonesrv/convergedcallengine/callprovider/group"/>
 </component>
 <component id="cce" filter="s60" name="CCE">
-<unit bldFile="/mw/phonesrv/convergedcallengine/cce/group"/>
+<unit bldFile="/mw/phonesrv/convergedcallengine/cce/group" filter="!test"/>
+<unit filter="test,api_test" bldFile="/mw/phonesrv/convergedcallengine/cce/tsrc/public/basic/group"/>
 </component>
 <component id="spsettings" filter="s60" name="Service Provider Settings">
-<unit bldFile="/mw/phonesrv/convergedcallengine/spsettings/group"/>
+<unit bldFile="/mw/phonesrv/convergedcallengine/spsettings/group" filter="!test"/>
+<unit filter="test,api_test" bldFile="/mw/phonesrv/convergedcallengine/spsettings/tsrc/public/basic/group"/>
 </component>
 <component id="cenrepdatabase" filter="s60" name="CCE Cenrep Database">
 <unit bldFile="/mw/phonesrv/convergedcallengine/cenrepdatabase/group"/>
@@ -4454,11 +4452,6 @@
 <component id="csplugin" filter="s60" name="CS Plugin" class="plugin">
 <!--  should spell out CS in name -->
 <unit bldFile="/mw/phonesrv/convergedcallengine/csplugin/group"/>
-</component>
-<component id="convergedcallengine_test" filter="s60,test,api_test" name="CCE Tests" purpose="development">
-<!-- can only have one unit. Need to #include from a single bld.inf  (convergedcallengine/tsrc/bld.inf?) -->
-<unit unitID="tedo.cce.test" bldFile="/mw/phonesrv/convergedcallengine/cce/tsrc/public/basic/group"/>
-<unit unitID="tedo.spsettings.test" bldFile="/mw/phonesrv/convergedcallengine/spsettings/tsrc/public/basic/group"/>
 </component>
 </collection>
 <collection id="engines" name="Telephony Engines" level="specific">
@@ -4476,25 +4469,22 @@
 <unit bldFile="/mw/phonesrv/phoneclientserver/enpolicy/group"/>
 </component>
 <component id="aiwdialdata" filter="s60" name="AIW Dial Data">
-<unit bldFile="/mw/phonesrv/phoneclientserver/aiwdialdata/group"/>
+<unit bldFile="/mw/phonesrv/phoneclientserver/aiwdialdata/group" filter="!test"/>
+<unit filter="test,api_test" bldFile="/mw/phonesrv/phoneclientserver/aiwdialdata/tsrc/public/basic/group"/>
 </component>
 <component id="dialutils" filter="s60" name="Dial Utils">
-<unit bldFile="/mw/phonesrv/phoneclientserver/dialutils/group"/>
+<unit bldFile="/mw/phonesrv/phoneclientserver/dialutils/group" filter="!test"/>
+<unit filter="test,api_test" bldFile="/mw/phonesrv/phoneclientserver/dialutils/tsrc/public/basic/group"/>
 </component>
 <component id="phoneclient" filter="s60" name="Phone Client">
-<unit bldFile="/mw/phonesrv/phoneclientserver/phoneclient/group"/>
+<unit bldFile="/mw/phonesrv/phoneclientserver/phoneclient/group" filter="!test"/>
+<unit filter="test,api_test" bldFile="/mw/phonesrv/phoneclientserver/phoneclient/tsrc/public/basic/group"/>
 </component>
 <component id="phoneserver" filter="s60" name="Phone Server">
 <unit bldFile="/mw/phonesrv/phoneclientserver/phoneserver/group"/>
 </component>
 <component id="callui" filter="s60" name="Call UI">
 <unit bldFile="/mw/phonesrv/phoneclientserver/callui/group"/>
-</component>
-<component id="phoneclientserver_test" filter="s60,test,api_test" name="Phone Client/Server Tests" purpose="development">
-<!-- can only have one unit. Need to #include from a single bld.inf  (phoneclientserver/tsrc/bld.inf?) -->
-<unit unitID="tedo.aiwdialdata.test" bldFile="/mw/phonesrv/phoneclientserver/aiwdialdata/tsrc/public/basic/group"/>
-<unit unitID="tedo.dialutils.test" bldFile="/mw/phonesrv/phoneclientserver/dialutils/tsrc/public/basic/group"/>
-<unit unitID="tedo.phoneclient.test" bldFile="/mw/phonesrv/phoneclientserver/phoneclient/tsrc/public/basic/group"/>
 </component>
 </collection>
 <collection id="satengine" name="SIM Application Toolkit Engine" level="generic">
@@ -4513,12 +4503,6 @@
 <collection id="phonecmdhandler" name="Phone Command Handler" level="generic">
 <component id="phonecmdhnlr" filter="s60" name="Phone Command Handler">
 <unit bldFile="/mw/phonesrv/phonecmdhandler/phonecmdhnlr/group"/>
-</component>
-</collection>
-<collection id="phonesrv_info" name="Telephony and SIM Services Info" level="specific">
-<component id="phonesrv_test" filter="s60,test,api_test" name="Telephony and SIM Services Tests" purpose="development">
-<!-- can only have one unit. Need to #include from a single bld.inf  (phonesrv_plat/tsrc/bld.inf?) -->
-<unit unitID="tedo.telephony_mediator_api.test" bldFile="/mw/phonesrv/phonesrv_plat/telephony_mediator_api/tsrc/ut_telephony_mediator_api/group"/>
 </component>
 </collection>
 </package>
@@ -9127,6 +9111,17 @@
 </collection>
 </package>
 <package id="printing" level="services" tech-domain="de" name="Printing" levels="app">
+<collection id="DirectPrint" name="DirectPrint" level="app">
+<component id="DirectPrintApp" filter="sf_build" name="DirectPrint App" introduced="^3">
+<unit bldFile="/app/printing/DirectPrint/DirectPrintApp/group"/>
+</component>
+<component id="DirectPrintServer" filter="sf_build" name="DirectPrint Server" introduced="^3">
+<unit bldFile="/app/printing/DirectPrint/DirectPrintServer/group"/>
+</component>
+<component id="DirectPrintClient" filter="sf_build" name="DirectPrint Client" introduced="^3">
+<unit bldFile="/app/printing/DirectPrint/DirectPrintClient/group"/>
+</component>
+</collection>
 <collection id="imageprint" name="ImagePrint" level="app">
 <component id="clog" filter="s60" name="ImagePrint Logging" introduced="^2">
 <unit bldFile="/app/printing/imageprint/clog/group"/>
@@ -11239,28 +11234,8 @@
 </component>
 </collection>
 <collection id="java_stubs" name="Java Stubs" level="util">
-<meta rel="config">
-<defined condition="__JAVA_STUBS"/>
-</meta>
-<!-- uncomment all components when configuration is in place. Currently #included from jrt_build -->
-<component id="javadrmutils" name="Java DRM Utils" filter="s60,sf_build">
-<!--<unit bldFile="java_stubs/jrtdrmutils/group"/>-->
-</component>
-<component id="javaenvinfo" name="Java Environment Info" filter="s60,sf_build">
-<!--<unit bldFile="java_stubs/jrtenvinfo/group"/>-->
-</component>
-<component id="javaregistry" filter="s60,sf_build" name="Java Registry">
-<!--<unit bldFile="java_stubs/jrtregistry/clientserver/client/group"/>-->
-</component>
-<component id="java_stubs_build" filter="s60,sf_build" name="Java Stubs ROM">
-<!-- Remove the #includes and rename JRT ROM-->
-<!--<unit bldFile="java_stubs/group"/>-->
-</component>
-</collection>
-<collection id="jrt_info" name="JRT Info" level="rt">
-<component id="jrt_build" filter="s60" name="JRT Build">
-<!--  needed for __JAVA_STUBS condition -->
-<unit bldFile="/app/jrt/group"/>
+<component id="java_stubs_build" filter="s60" name="JRT Stubs Build">
+<unit bldFile="/app/jrt/java_stubs/group"/>
 </component>
 </collection>
 </package>
