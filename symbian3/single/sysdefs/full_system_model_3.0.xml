@@ -4799,43 +4799,6 @@
 </component>
 </collection>
 </package>
-<package id="opensrv" level="specific" tech-domain="pr" name="Open Services" levels="prt lib server eng">
-<collection id="opensrv_plat" name="Open Services Platform Interfaces" level="eng">
-<component id="messagequeue_api" name="Message Queue API" introduced="^2" class="api" filter="s60">
-<unit bldFile="/mw/opensrv/opensrv_plat/messagequeue_api/group"/>
-</component>
-</collection>
-<collection id="loudmouth" name="Loudmouth" level="prt">
-<!-- collection is really a component so it needs to be moved down a directory -->
-<component id="loudmouth_build" filter="s60" name="Loudmouth Build" introduced="^2">
-<unit bldFile="/mw/opensrv/loudmouth/group"/>
-</component>
-</collection>
-<collection id="libtelepathy" name="Telepathy Library" level="lib">
-<!-- collection is really a component so it needs to be moved down a directory -->
-<component id="libtelepathy_build" filter="s60" name="Telepathy Library Build" introduced="^2">
-<unit bldFile="/mw/opensrv/libtelepathy/group"/>
-</component>
-</collection>
-<collection id="telepathygabble" name="Telepathy Gabble" level="eng">
-<!-- collection is really a component so it needs to be moved down a directory -->
-<component id="telepathygabble_build" filter="s60" name="Telepathy Gabble Build" introduced="^2">
-<unit bldFile="/mw/opensrv/telepathygabble/group"/>
-</component>
-</collection>
-<collection id="isolationserver" name="Isolation Server" level="server">
-<component id="messagequeue" filter="s60" name="Message Queue" introduced="^2">
-<unit bldFile="/mw/opensrv/isolationserver/messagequeue/group"/>
-</component>
-<component id="isoserver" filter="s60" name="ISO Server" introduced="^2">
-<unit bldFile="/mw/opensrv/isolationserver/isoserver/group"/>
-</component>
-<component id="isolationserver_build" filter="s60" name="Isloation Server Build" introduced="^2">
-<!-- needs #includes removed. either move the exports to another component or make this a ROM component -->
-<unit bldFile="/mw/opensrv/isolationserver/group"/>
-</component>
-</collection>
-</package>
 <package id="remotemgmt" level="specific" tech-domain="dm" name="Remote Management" levels="plugin framework server generic specific">
 <collection id="remotemgmt_pub" name="Remote Management Public Interfaces" level="specific">
 <component id="synchronization_capability_api" name="Synchronization Capability API" class="api" filter="s60">
@@ -6270,10 +6233,6 @@
 </package>
 <package id="mmappfw" level="specific" tech-domain="mm" name="Multimedia App Framework" levels="fw utils if">
 <collection id="mmappfw_plat" name="Multimedia App Framework Platform Interfaces" level="if">
-<component id="mmappfw_plat_build" name="Multimedia App Framework Platform Interfaces Build" introduced="^1" filter="s60">
-<!-- this is no longer necessary when confguration is put in place -->
-<unit bldFile="/mw/mmappfw/mmappfw_plat"/>
-</component>
 <component id="collection_helper_api" name="Collection Helper API" introduced="^1" class="api" filter="s60">
 <unit bldFile="/mw/mmappfw/mmappfw_plat/collection_helper_api/group"/>
 </component>
@@ -6571,7 +6530,7 @@
 </collection>
 <collection id="qt_info" name="Qt Info" level="mw">
 <component id="qt_build" name="Qt Build" introduced="^2">
-<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/qt/." qt:proFile="projects.pro" qt:qmakeArgs="&quot;QMAKE_MOC=/epoc32/tools/qt/moc.exe&quot; &quot;QMAKE_RCC=/epoc32/tools/qt/rcc.exe&quot; &quot;QMAKE_UIC=/epoc32/tools/qt/uic.exe&quot; -r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/qt" qt:proFile="projects.pro" qt:qmakeArgs="&quot;QMAKE_MOC=/epoc32/tools/qt/moc.exe&quot; &quot;QMAKE_RCC=/epoc32/tools/qt/rcc.exe&quot; &quot;QMAKE_UIC=/epoc32/tools/qt/uic.exe&quot; -r"/>
 </component>
 </collection>
 <collection id="qtdemos" name="Qt Demos" level="app">
@@ -8424,9 +8383,6 @@
 </component>
 </collection>
 <collection id="gfxtools" name="Graphics Tools" level="tool">
-<component id="gditools" filter="s60" name="GDI Tools" target="desktop">
-<unit bldFile="/mw/uitools/gfxtools/gditools/group"/>
-</component>
 <component id="color" filter="s60" name="Bitmap Colour Palette" target="desktop">
 <unit bldFile="/mw/uitools/gfxtools/color/group"/>
 </component>
@@ -11263,14 +11219,14 @@
 <!-- consider collapsing into a single component -->
 <component id="fileopserver" filter="s60" name="File Operations Server" purpose="development" target="device" class="tool">
 <meta rel="config">
-<not-defined condition="FILEBROWSER_LITE"/>
+<not-defined xmlns:qt="http://www.nokia.com/qt" condition="FILEBROWSER_LITE"/>
 </meta>
 <!-- uncomment the unit when configuration is in place, it's currently #included from filebrowser_build -->
 <!-- <unit bldFile="filebrowser/fileopserver/group"/>-->
 </component>
 <component id="fileopclient" filter="s60" name="File Operations Client" purpose="development" target="device" class="tool">
 <meta rel="config">
-<not-defined condition="FILEBROWSER_LITE"/>
+<not-defined xmlns:qt="http://www.nokia.com/qt" condition="FILEBROWSER_LITE"/>
 </meta>
 <!-- uncomment the unit when configuration is in place, it's currently #included from filebrowser_build -->
 <!--<unit bldFile="filebrowser/fileopclient/group"/>-->
@@ -11305,15 +11261,12 @@
 </component>
 </collection>
 <collection id="stifui" name="STIF UI" level="generic">
-<component id="stifui_stifui" filter="s60" name="STIF UI" purpose="development" target="device">
-<unit bldFile="/app/rndtools/stifui/stifui/group"/>
+<component id="stifui_avkon" filter="s60" name="STIF UI for Avkon" purpose="development">
+<unit bldFile="/app/rndtools/stifui/avkon/group"/>
 </component>
-<component id="uitestserverstarter" filter="s60" name="UI Test Server Starter" purpose="development" target="device">
-<unit bldFile="/app/rndtools/stifui/uitestserverstarter/group"/>
-</component>
-<component id="stifui_build" filter="s60" name="STIF UI Build" purpose="development">
-<!-- can this be split up into the other components or made a ROM component? -->
-<unit bldFile="/app/rndtools/stifui/group"/>
+<component id="stifui_qt" filter="s60,test" name="STIF UI for Qt" purpose="development">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/rndtools/stifui/qt" qt:proFile="stifqtui.pro"/>
+<!-- marked as test until we know what to do with it -->
 </component>
 </collection>
 <collection id="memspyui" name="Memspy UI" level="generic">

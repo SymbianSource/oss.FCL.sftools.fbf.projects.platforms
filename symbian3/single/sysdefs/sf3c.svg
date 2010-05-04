@@ -2180,39 +2180,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="opensrv" class="package" transform="translate( 401.7 0)">
-     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
-     <rect class="package" x="0" width="33.3" height="97.2" y="0" style="fill:lightpink;"/>
-     <text text-anchor="middle" class="package" width="33.3" x="16.65" y="96.2">Open Services</text>
-     <g transform="translate(0 3.2)">
-      <g id="opensrv_plat" transform="translate(0 0)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
-       <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Open Services Platform Inter­faces</text>
-       <g transform="translate(0 6.299999999999999)"/>
-      </g>
-      <g id="loudmouth" transform="translate(0 56.400000000000006)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
-       <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Loud­mouth</text>
-       <g transform="translate(0 6.299999999999999)"/>
-      </g>
-      <g id="libtelepathy" transform="translate(0 37.6)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
-       <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Telepathy Library</text>
-       <g transform="translate(0 6.299999999999999)"/>
-      </g>
-      <g id="telepathygabble" transform="translate(17.7 0)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
-       <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Telepathy Gabble</text>
-       <g transform="translate(0 6.299999999999999)"/>
-      </g>
-      <g id="isolationserver" transform="translate(0 18.8)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
-       <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Isolation Server</text>
-       <g transform="translate(0 6.299999999999999)"/>
-      </g>
-     </g>
-    </g>
-    <g id="remotemgmt" class="package" transform="translate( 437.09999999999997 0)">
+    <g id="remotemgmt" class="package" transform="translate( 401.7 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color6.mouseover" end="s8-color6.mouseout"/>
      <rect class="package" x="0" width="68.7" height="97.2" y="0" style="fill:darkseagreen;"/>
      <text text-anchor="middle" class="package" width="68.7" x="34.35" y="86.2" dy="0.375em">Remote Manage­ment</text>
@@ -2350,7 +2318,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="dlnasrv" class="package" transform="translate( 507.9 0)">
+    <g id="dlnasrv" class="package" transform="translate( 472.5 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color5.mouseover" end="s8-color5.mouseout"/>
      <rect class="package" x="0" width="86.4" height="97.2" y="0" style="fill:orchid;"/>
      <text text-anchor="middle" class="package" width="86.4" x="43.2" y="86.2" dy="0.375em">DLNA Services</text>
@@ -2503,7 +2471,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="imghandling" class="package" transform="translate( 596.4 0)">
+    <g id="imghandling" class="package" transform="translate( 561 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
      <rect class="package" x="0" width="27.900000000000002" height="97.2" y="0" style="fill:rgb(175,212,240);"/>
      <text text-anchor="middle" class="package" width="27.900000000000002" x="13.950000000000001" y="96.2">Image Handling</text>
@@ -2525,7 +2493,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="metadatasrv" class="package" transform="translate( 626.4 0)">
+    <g id="metadatasrv" class="package" transform="translate( 591 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
      <rect class="package" x="0" width="33.3" height="97.2" y="0" style="fill:rgb(175,212,240);"/>
      <text text-anchor="middle" class="package" width="33.3" x="16.65" y="86.2" dy="0.375em">Legacy Metadata Services</text>
@@ -2547,7 +2515,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="mds" class="package" transform="translate( 661.8 0)">
+    <g id="mds" class="package" transform="translate( 626.4 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
      <rect class="package" x="0" width="68.7" height="97.2" y="0" style="fill:rgb(175,212,240);"/>
      <text text-anchor="middle" class="package" width="68.7" x="34.35" y="96.2">Metadata Services</text>
@@ -2599,7 +2567,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="mmuifw" class="package" transform="translate( 732.5999999999999 0)">
+    <g id="mmuifw" class="package" transform="translate( 697.1999999999999 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
      <rect class="package" x="0" width="51" height="97.2" y="0" style="fill:rgb(175,212,240);"/>
      <text text-anchor="middle" class="package" width="51" x="25.5" y="86.2" dy="0.375em">Multi­media UI Fmwk.</text>
@@ -2641,7 +2609,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="videoutils" class="package" transform="translate( 785.6999999999999 0)">
+    <g id="videoutils" class="package" transform="translate( 750.3 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
      <rect class="package" x="0" width="33.3" height="97.2" y="0" style="fill:rgb(175,212,240);"/>
      <text text-anchor="middle" class="package" width="33.3" x="16.65" y="96.2">Video Utils</text>
@@ -2712,7 +2680,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="camerasrv" class="package" transform="translate( 821.0999999999999 0)">
+    <g id="camerasrv" class="package" transform="translate( 785.6999999999999 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
      <rect class="package" x="0" width="51" height="97.2" y="0" style="fill:rgb(175,212,240);"/>
      <text text-anchor="middle" class="package" width="51" x="25.5" y="96.2">Camera Services</text>
@@ -2744,7 +2712,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="mmappfw" class="package" transform="translate( 874.1999999999999 0)">
+    <g id="mmappfw" class="package" transform="translate( 838.8 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
      <rect class="package" x="0" width="33.3" height="97.2" y="0" style="fill:rgb(175,212,240);"/>
      <text text-anchor="middle" class="package" width="33.3" x="16.65" y="96.2">Multi­media App Fmwk.</text>
@@ -3057,7 +3025,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="homescreensrv" class="package" transform="translate( 909.5999999999999 0)">
+    <g id="homescreensrv" class="package" transform="translate( 874.1999999999999 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="51" height="97.2" y="0" style="fill:orange;"/>
      <text text-anchor="middle" class="package" width="35.4" x="33.3" y="86.2" dy="0.375em">Home Screen Services</text>
@@ -3156,7 +3124,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="serviceapifw" class="package" transform="translate( 962.6999999999999 0)">
+    <g id="serviceapifw" class="package" transform="translate( 927.3 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color11.mouseover" end="s8-color11.mouseout"/>
      <rect class="package" x="0" width="33.3" height="97.2" y="0" style="fill:slateblue;"/>
      <text text-anchor="middle" class="package" width="33.3" x="16.65" y="86.2" dy="0.375em">Service API Frame­work</text>
@@ -3183,7 +3151,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="serviceapi" class="package" transform="translate( 998.0999999999999 0)">
+    <g id="serviceapi" class="package" transform="translate( 962.6999999999999 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color11.mouseover" end="s8-color11.mouseout"/>
      <rect class="package" x="0" width="27.900000000000002" height="97.2" y="0" style="fill:slateblue;"/>
      <text text-anchor="middle" class="package" width="27.900000000000002" x="13.950000000000001" y="96.2">Service API</text>
@@ -3195,7 +3163,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="web" class="package" transform="translate( 1028.1 0)">
+    <g id="web" class="package" transform="translate( 992.6999999999999 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color11.mouseover" end="s8-color11.mouseout"/>
      <rect class="package" x="0" width="68.7" height="97.2" y="0" style="fill:slateblue;"/>
      <text text-anchor="middle" class="package" width="68.7" x="34.35" y="86.2" dy="0.375em">Web</text>
@@ -3271,7 +3239,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="uitools" class="package" transform="translate( 1098.8999999999999 0)">
+    <g id="uitools" class="package" transform="translate( 1063.4999999999998 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color12.mouseover" end="s8-color12.mouseout"/>
      <rect class="package" x="0" width="68.7" height="97.2" y="0" style="fill:darkgray;"/>
      <text text-anchor="middle" class="package" width="68.7" x="34.35" y="96.2">UI Tools</text>
@@ -4596,7 +4564,7 @@ function resized()
       </g>
       <g id="s8-color7">
        <rect class="cbox" height="3.1" width="15.5" fill="lightpink" x="15" y="3.0999999999999996"/>
-       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="22.75" y="4.65">Productivity (13)</text>
+       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="22.75" y="4.65">Productivity (12)</text>
       </g>
       <g id="s8-color8">
        <rect class="cbox" height="3.1" width="15.5" fill="rgb(175,212,240)" x="30.5" y="3.0999999999999996"/>
@@ -4621,8 +4589,8 @@ function resized()
      </g>
     </g>
     <text text-anchor="middle" class="label" dy="0.375em" x="243.275" y="3.0999999999999996">
-     <tspan dy="-0.5em" x="243.275">110 Packages</tspan>
-     <tspan dy="1em" x="243.275">666 Collections</tspan>
+     <tspan dy="-0.5em" x="243.275">109 Packages</tspan>
+     <tspan dy="1em" x="243.275">661 Collections</tspan>
     </text>
    </g>
   </g>
