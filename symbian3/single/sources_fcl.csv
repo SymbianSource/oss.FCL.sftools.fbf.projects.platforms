@@ -27,7 +27,7 @@ http://developer.symbian.org/oss/MCL/sf/app/location/,/sf/app/location,branch,RC
 http://developer.symbian.org/oss/MCL/sf/app/messaging/,/sf/app/messaging,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/mmsharinguis/,/sf/app/mmsharinguis,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/musicplayer/,/sf/app/musicplayer,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/app/organizer/,/sf/app/organizer,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/organizer/,/sf/app/organizer,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/phone/,/sf/app/phone,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/photos/,/sf/app/photos,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/printing/,/sf/app/printing,branch,RCL_3,layers.sysdef.xml
