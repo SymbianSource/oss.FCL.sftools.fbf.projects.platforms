@@ -16,7 +16,8 @@ http://developer.symbian.org/oss/MCL/sf/app/dictionary/,/sf/app/dictionary,branc
 http://developer.symbian.org/oss/MCL/sf/app/files/,/sf/app/files,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/graphicsuis/,/sf/app/graphicsuis,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/helps/,/sf/app/helps,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/app/homescreen/,/sf/app/homescreen,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/app/homescreen/,/sf/app/homescreen,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/app/homescreentools/,/sf/app/homescreentools,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/im/,/sf/app/im,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/imgeditor/,/sf/app/imgeditor,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/iptelephony/,/sf/app/iptelephony,branch,RCL_3,layers.sysdef.xml
@@ -28,9 +29,10 @@ http://developer.symbian.org/oss/MCL/sf/app/musicplayer/,/sf/app/musicplayer,bra
 http://developer.symbian.org/oss/MCL/sf/app/organizer/,/sf/app/organizer,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/phone/,/sf/app/phone,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/photos/,/sf/app/photos,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/app/printing/,/sf/app/printing,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/printing/,/sf/app/printing,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/profile/,/sf/app/profile,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/radio/,/sf/app/radio,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/app/rndtools/,/sf/app/rndtools,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/screensaver/,/sf/app/screensaver,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/settingsuis/,/sf/app/settingsuis,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/speechsrv/,/sf/app/speechsrv,branch,RCL_3,layers.sysdef.xml
@@ -71,6 +73,7 @@ http://developer.symbian.org/oss/MCL/sf/mw/netprotocols/,/sf/mw/netprotocols,bra
 http://developer.symbian.org/oss/MCL/sf/mw/networkingdm/,/sf/mw/networkingdm,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/opensrv/,/sf/mw/opensrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/phonesrv/,/sf/mw/phonesrv,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/platformtools/,/sf/mw/platformtools,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/qt/,/sf/mw/qt,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/remoteconn/,/sf/mw/remoteconn,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/remotemgmt/,/sf/mw/remotemgmt,branch,RCL_3,layers.sysdef.xml
@@ -114,6 +117,3 @@ http://developer.symbian.org/oss/MCL/sf/os/osrndtools/,/sf/os/osrndtools,branch,
 http://developer.symbian.org/oss/FCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/tools/buildplatforms/,/sf/tools/buildplatforms,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/app/homescreentools/,/sf/app/homescreentools,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/platformtools/,/sf/mw/platformtools,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/app/rndtools/,/sf/app/rndtools,branch,RCL_3,layers.sysdef.xml
