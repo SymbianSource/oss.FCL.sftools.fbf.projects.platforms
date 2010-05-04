@@ -6124,11 +6124,17 @@
 </block>
 <block name="qtextensions" level="generic" long-name="Qt Extensions" levels="tool mw app">
 <collection name="qtecomplugins" long-name="Qt ECom Plugins" level="app">
+<component name="qtecomplugins" filter="qtecomplugins" long-name="Qt ECom Plugin" purpose="development" introduced="^4">
+<unit bldFile="mw/qtextensions/qtecomplugins" proFile="qtecomplugins.pro" qmakeArgs="-r"/>
+</component>
 <component name="qtextensions_examples" filter="qtextensionsexamples" long-name="Qt ECom Plugin Examples" purpose="development" introduced="^4">
 <unit bldFile="mw/qtextensions/qtecomplugins/examples" proFile="examples.pro" qmakeArgs="-r"/>
 </component>
 </collection>
 <collection name="qthighway" long-name="Qt Highway" level="app">
+<component name="qthighway" filter="qthighway" long-name="Qt Highway" purpose="development" introduced="^4">
+<unit bldFile="mw/qtextensions/qthighway" proFile="qthighway.pro" qmakeArgs="-r"/>
+</component>
 <component name="qthighway_examples" filter="qtextensionsexamples" long-name="Qt Highway Examples" purpose="development" introduced="^4">
 <unit bldFile="mw/qtextensions/qthighway/examples" qmakeArgs="-r"/>
 </component>
@@ -6137,11 +6143,17 @@
 </component>
 </collection>
 <collection name="qtmobileextensions" long-name="Qt Mobile Extensions" level="app">
+<component name="qtmobileextensions" filter="qtextension" long-name="Qt Mobile Extensions" purpose="development" introduced="^4">
+<unit bldFile="mw/qtextensions/qtmobileextensions" proFile="qtmobileextensions.pro" qmakeArgs="-r"/>
+</component>
 <component name="qtmobileextensions_examples" filter="qtextensionsexamples" long-name="Qt Mobile Extensions Examples" purpose="development" introduced="^4">
 <unit bldFile="mw/qtextensions/qtmobileextensions/examples" proFile="examples.pro" qmakeArgs="-r"/>
 </component>
 </collection>
 <collection name="qtmobility" long-name="Qt Mobility">
+<component name="qtmobility" filter="qtmobility" long-name="Qt Mobility" purpose="development" introduced="^4">
+<unit bldFile="mw/qtextensions/qtmobility" proFile="qtmobility.pro" qmakeArgs="-r"/>
+</component>
 <component name="qtmobility_examples" filter="qtextensionsexamples" long-name="Qt Mobility Examples" purpose="development" introduced="^4">
 <unit bldFile="mw/qtextensions/qtmobility/examples" proFile="examples.pro" qmakeArgs="-r"/>
 </component>
@@ -8361,6 +8373,10 @@
 <collection name="messaging_info" long-name="Messaging Apps Info" level="api">
 <component name="messaging_metadata" long-name="Messaging Apps Metadata" introduced="^2" purpose="development" class="config PC">
 <unit mrp="app/messaging/messaging_info/messaging_metadata/messaging_metadata.mrp"/>
+</component>
+<component introduced="^4">
+<!-- break this up into the above collections and eventually remove -->
+<unit bldFile="app/messaging" proFile="messaging.pro" qmakeArgs="-r"/>
 </component>
 </collection>
 </block>
