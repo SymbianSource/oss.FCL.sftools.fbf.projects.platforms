@@ -7,6 +7,7 @@ http://developer.symbian.org/oss/FCL/sftools/fbf/utilities/,/utilities,branch,de
 //v800008/Builds01/mercurial_internal/rnd/rndonly/samsung/,/rnd/rndonly/samsung,branch,default,
 //v800008/Builds01/mercurial_internal/rnd/redist/objective_systems/,/rnd/redist/objective_systems,branch,default,
 http://developer.symbian.org/oss/FCL/sf/adaptation/stubs/,/sf/adaptation/stubs,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/browserui/,/sf/app/browserui,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/camera/,/sf/app/camera,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/commonemail/,/sf/app/commonemail,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/conntools/,/sf/app/conntools,branch,default,layers.sysdef.xml
@@ -28,6 +29,7 @@ http://developer.symbian.org/oss/FCL/sf/app/phone/,/sf/app/phone,branch,default,
 http://developer.symbian.org/oss/FCL/sf/app/photos/,/sf/app/photos,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/printing/,/sf/app/printing,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/radio/,/sf/app/radio,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/recents/,/sf/app/recents,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/settingsuis/,/sf/app/settingsuis,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/search/,/sf/app/search,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/techview/,/sf/app/techview,branch,default,layers.sysdef.xml
@@ -38,6 +40,7 @@ http://developer.symbian.org/oss/FCL/sf/app/webuis/,/sf/app/webuis,branch,defaul
 http://developer.symbian.org/oss/FCL/sf/mw/accesssec/,/sf/mw/accesssec,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/appinstall/,/sf/mw/appinstall,branch,default,modified-FCL
 http://developer.symbian.org/oss/FCL/sf/mw/appsupport/,/sf/mw/appsupport,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/browser/,/sf/mw/browser,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/btservices/,/sf/mw/btservices,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/camerasrv/,/sf/mw/camerasrv,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/classicui/,/sf/mw/classicui,branch,default,layers.sysdef.xml
@@ -70,6 +73,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/platformthemes/,/sf/mw/platformthemes
 http://developer.symbian.org/oss/FCL/sf/mw/phonesrv/,/sf/mw/phonesrv,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/qt/,/sf/mw/qt,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/qtextensions/,/sf/mw/qtextensions,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/qttranslations/,/sf/mw/qttranslations,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/remoteconn/,/sf/mw/remoteconn,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/remotemgmt/,/sf/mw/remotemgmt,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/searchsrv/,/sf/mw/searchsrv,branch,default,layers.sysdef.xml
