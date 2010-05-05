@@ -5,6 +5,8 @@ http://developer.symbian.org/oss/FCL/sftools/fbf/utilities/,/utilities,branch,de
 //v800008/Builds01/mercurial_internal/rnd/rndonly/realnetworks/,/rnd/rndonly/realnetworks,branch,default,
 //v800008/Builds01/mercurial_internal/rnd/rndonly/samsung/,/rnd/rndonly/samsung,branch,default,
 //v800008/Builds01/mercurial_internal/rnd/redist/objective_systems/,/rnd/redist/objective_systems,branch,default,
+http://developer.symbian.org/oss/FCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,branch,default,
+http://developer.symbian.org/oss/MCL/sf/adaptation/qemu/,/sf/adaptation/qemu,branch,default,
 http://developer.symbian.org/oss/FCL/sf/adaptation/stubs/,/sf/adaptation/stubs,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/camera/,/sf/app/camera,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/commonemail/,/sf/app/commonemail,branch,RCL_3,layers.sysdef.xml
@@ -115,6 +117,4 @@ http://developer.symbian.org/oss/FCL/sf/os/usb/,/sf/os/usb,branch,RCL_3,
 http://developer.symbian.org/oss/MCL/sf/os/wlan/,/sf/os/wlan,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/xmlsrv/,/sf/os/xmlsrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/osrndtools/,/sf/os/osrndtools,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,branch,default,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/tools/buildplatforms/,/sf/tools/buildplatforms,branch,RCL_3,layers.sysdef.xml
