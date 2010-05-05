@@ -1276,9 +1276,19 @@
 <component name="privacyprotocolmodule" long-name="Privacy Protocol Module" introduced="^2" purpose="optional" plugin="Y">
 <unit bldFile="os/lbs/networkprotocolmodules/privacyprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/privacyprotocolmodule/group/lbs_privacyprotocolmodule.mrp"/>
 </component>
+<component name="suplproxyprotocolmodule" long-name="SUPL Proxy Protocol Module" introduced="^3" purpose="optional" plugin="Y">
+<unit bldFile="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/group/lbs_suplproxyprotocolmodule.mrp"/>
+</component>
+<component name="suplprotocolmodule" long-name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" plugin="Y">
+<unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
+</component>
 <component name="suplrrlpasn1" filter="sf_build" long-name="SUPL RRLP ASN1 Parser">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
 <unit bldFile="os/lbs/networkprotocolmodules/common/suplrrlpasn1/group"/>
+</component>
+<component name="suplrrlpprotocol" filter="sf_build" long-name="SUPL RRLP Protocol Module">
+<!-- hack for Foundation builds needed while collection is reorganised into proper components -->
+<unit bldFile="os/lbs/networkprotocolmodules/suplcontrolplaneprotocols/common/suplrrlpprotocol/group"/>
 </component>
 </collection>
 <collection name="lbsapitest" long-name="Location API Tests" level="application-interface"/>
@@ -6246,7 +6256,7 @@
 </collection>
 <collection name="qt_info" long-name="Qt Info" level="mw">
 <component name="qt_build" long-name="Qt Build" introduced="^2">
-<unit bldFile="mw/qt" proFile="projects.pro" qmakeArgs="&quot;QMAKE_MOC=/epoc32/tools/qt/moc.exe&quot; &quot;QMAKE_RCC=/epoc32/tools/qt/rcc.exe&quot; &quot;QMAKE_UIC=/epoc32/tools/qt/uic.exe&quot; -r"/>
+<unit bldFile="mw/qt" proFile="projects.pro" qmakeArgs="-r"/>
 </component>
 </collection>
 <collection name="qtdemos" long-name="Qt Demos" level="app">
@@ -8481,6 +8491,12 @@
 <component name="ds_folder_util_api" long-name="DS Folder Util API" filter="s60" class="api">
 <unit bldFile="app/contentcontrol/contentctrl_plat/ds_folder_util_api/group"/>
 </component>
+<component name="adapter_customization_api" long-name="Adapter Customization API" filter="s60" class="api">
+<unit bldFile="app/contentcontrol/contentctrl_plat/adapter_customization_api/group"/>
+</component>
+<component name="ds_data_modification_api" long-name="DS Data Modification API" filter="s60" class="api">
+<unit bldFile="app/contentcontrol/contentctrl_plat/ds_data_modification_api/group"/>
+</component>
 </collection>
 <collection name="dsdcmoadapter" long-name="Data Sync DCMO Adapter" level="plugin">
 <!-- Component at wrong rank, should move down a directory -->
@@ -8564,9 +8580,6 @@
 </component>
 <component name="uisettingssrv" filter="s60" long-name="UI Settings Server">
 <unit bldFile="app/devicecontrol/customization/uisettingssrv/bld"/>
-</component>
-<component name="isadapter" filter="s60" long-name="Idle State Adapter" plugin="Y">
-<unit bldFile="app/devicecontrol/customization/isadapter/bld"/>
 </component>
 <component name="supadapter" filter="s60" long-name="Startup Adapter" plugin="Y">
 <unit bldFile="app/devicecontrol/customization/supadapter/bld"/>
