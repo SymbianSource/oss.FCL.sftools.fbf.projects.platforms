@@ -493,8 +493,8 @@ function resized()
        </g>
       </g>
       <g id="ldds" transform="translate(17.7 37.6)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="92.99999999999999"/>
-       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="91.59999999999998" height="6.299999999999999">Logical Dev­ice Drivers</text>
+       <rect class="collection" x="0" y="0" height="15.6" width="111.59999999999998"/>
+       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="110.19999999999997" height="6.299999999999999">Logical Dev­ice Drivers</text>
        <g transform="translate(0 6.299999999999999)">
         <g id="ethernetldd" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
@@ -545,6 +545,16 @@ function resized()
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
          <use width="9.3" height="9.3" x="83.69999999999999" y="0" xlink:href="#Borderbox" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
          <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="88.35">USB Client Drivers</text>
+        </g>
+        <g id="usbdescriptors" class="component">
+         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
+         <use width="9.3" height="9.3" x="92.99999999999999" y="0" xlink:href="#Borderbox" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="97.64999999999999">USB Descriptors</text>
+        </g>
+        <g id="usbdi_utils" class="component">
+         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
+         <use width="9.3" height="9.3" x="102.29999999999998" y="0" xlink:href="#Borderbox" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="106.94999999999999">USB DI Utils</text>
         </g>
        </g>
       </g>
@@ -20069,7 +20079,7 @@ function resized()
     <text text-anchor="middle" class="label" dy="0.375em" x="265.17499999999995" y="4.65">
      <tspan dy="-1em" x="265.17499999999995">109 Packages</tspan>
      <tspan dy="1em" x="265.17499999999995">661 Collections</tspan>
-     <tspan dy="1em" x="265.17499999999995">2902 Components</tspan>
+     <tspan dy="1em" x="265.17499999999995">2904 Components</tspan>
     </text>
    </g>
   </g>
