@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><SystemDefinition schema="3.0.0" id-namespace="http://www.symbian.org/system-definition">
+<?xml version="1.0" encoding="UTF-8"?><SystemDefinition id-namespace="http://www.symbian.org/system-definition" schema="3.0.0">
 <systemModel name="Symbian^3">
 <layer id="adaptation" name="Adaptation" levels="low mw high">
 <package id="stubs" tech-domain="hb" level="high" name="Stubs" levels="stub">
@@ -1225,18 +1225,20 @@
 <unit bldFile="/os/lbs/networkprotocolmodules/privacyprotocolmodule/group" mrp="/os/lbs/networkprotocolmodules/privacyprotocolmodule/group/lbs_privacyprotocolmodule.mrp"/>
 </component>
 <component id="suplproxyprotocolmodule" name="SUPL Proxy Protocol Module" introduced="^3" purpose="optional" class="plugin">
-<unit bldFile="/os/lbs/networkprotocolmodules/suplproxyprotocolmodule/group" mrp="/os/lbs/networkprotocolmodules/suplproxyprotocolmodule/group/lbs_suplproxyprotocolmodule.mrp"/>
+<!-- hack for Foundation builds needed while collection is reorganised into proper components -->
+<unit bldFile="/os/lbs/networkprotocolmodules/suplproxyprotocolmodule/sfgroup" mrp="/os/lbs/networkprotocolmodules/suplproxyprotocolmodule/group/lbs_suplproxyprotocolmodule.mrp"/>
 </component>
 <component id="suplprotocolmodule" name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" class="plugin">
-<unit bldFile="/os/lbs/networkprotocolmodules/suplprotocolmodule/group" mrp="/os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
+<!-- hack for Foundation builds needed while collection is reorganised into proper components -->
+<unit bldFile="/os/lbs/networkprotocolmodules/suplprotocolmodule/sfgroup" mrp="/os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
 </component>
 <component id="suplrrlpasn1" filter="sf_build" name="SUPL RRLP ASN1 Parser">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
 <unit bldFile="/os/lbs/networkprotocolmodules/common/suplrrlpasn1/group"/>
 </component>
-<component id="suplrrlpprotocol" filter="sf_build" name="SUPL RRLP Protocol Module">
+<component id="suplrrlpprotocol" name="SUPL RRLP Protocol Module">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
-<unit bldFile="/os/lbs/networkprotocolmodules/suplcontrolplaneprotocols/common/suplrrlpprotocol/group"/>
+<unit bldFile="/os/lbs/networkprotocolmodules/suplcontrolplaneprotocols/common/suplrrlpprotocol/sfgroup"/>
 </component>
 </collection>
 <collection id="lbsapitest" name="Location API Tests" level="application-interface">
@@ -8832,10 +8834,10 @@
 <component id="ds_folder_util_api" name="DS Folder Util API" class="api" filter="s60">
 <unit bldFile="/app/contentcontrol/contentctrl_plat/ds_folder_util_api/group"/>
 </component>
-<component id="adapter_customization_api" name="Adapter Customization API" class="api" filter="s60">
+<component id="adapter_customization_api" name="Adapter Customization API" class="api" filter="s60" introduced="^3">
 <unit bldFile="/app/contentcontrol/contentctrl_plat/adapter_customization_api/group"/>
 </component>
-<component id="ds_data_modification_api" name="DS Data Modification API" class="api" filter="s60">
+<component id="ds_data_modification_api" name="DS Data Modification API" class="api" filter="s60" introduced="^3">
 <unit bldFile="/app/contentcontrol/contentctrl_plat/ds_data_modification_api/group"/>
 </component>
 </collection>

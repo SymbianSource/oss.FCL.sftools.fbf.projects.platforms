@@ -1285,18 +1285,20 @@
 <unit bldFile="os/lbs/networkprotocolmodules/privacyprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/privacyprotocolmodule/group/lbs_privacyprotocolmodule.mrp"/>
 </component>
 <component name="suplproxyprotocolmodule" long-name="SUPL Proxy Protocol Module" introduced="^3" purpose="optional" plugin="Y">
-<unit bldFile="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/group/lbs_suplproxyprotocolmodule.mrp"/>
+<!-- hack for Foundation builds needed while collection is reorganised into proper components -->
+<unit bldFile="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/sfgroup" mrp="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/group/lbs_suplproxyprotocolmodule.mrp"/>
 </component>
 <component name="suplprotocolmodule" long-name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" plugin="Y">
-<unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
+<!-- hack for Foundation builds needed while collection is reorganised into proper components -->
+<unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/sfgroup" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
 </component>
 <component name="suplrrlpasn1" filter="sf_build" long-name="SUPL RRLP ASN1 Parser">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
 <unit bldFile="os/lbs/networkprotocolmodules/common/suplrrlpasn1/group"/>
 </component>
-<component name="suplrrlpprotocol" filter="sf_build" long-name="SUPL RRLP Protocol Module">
+<component name="suplrrlpprotocol" long-name="SUPL RRLP Protocol Module">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
-<unit bldFile="os/lbs/networkprotocolmodules/suplcontrolplaneprotocols/common/suplrrlpprotocol/group"/>
+<unit bldFile="os/lbs/networkprotocolmodules/suplcontrolplaneprotocols/common/suplrrlpprotocol/sfgroup"/>
 </component>
 </collection>
 <collection name="lbsapitest" long-name="Location API Tests" level="application-interface"/>
@@ -8499,10 +8501,10 @@
 <component name="ds_folder_util_api" long-name="DS Folder Util API" filter="s60" class="api">
 <unit bldFile="app/contentcontrol/contentctrl_plat/ds_folder_util_api/group"/>
 </component>
-<component name="adapter_customization_api" long-name="Adapter Customization API" filter="s60" class="api">
+<component name="adapter_customization_api" long-name="Adapter Customization API" filter="s60" introduced="^3" class="api">
 <unit bldFile="app/contentcontrol/contentctrl_plat/adapter_customization_api/group"/>
 </component>
-<component name="ds_data_modification_api" long-name="DS Data Modification API" filter="s60" class="api">
+<component name="ds_data_modification_api" long-name="DS Data Modification API" filter="s60" introduced="^3" class="api">
 <unit bldFile="app/contentcontrol/contentctrl_plat/ds_data_modification_api/group"/>
 </component>
 </collection>
