@@ -13189,8 +13189,8 @@ function resized()
  <g id="app" transform="translate(3.1999999999999993 25.2)" class="layer">
   <rect x="0.3" y="0.3" width="9.3" rx="4.65" ry="4.65" class="layer" height="189.43"/>
   <text text-anchor="middle" dy="0.375em" class="layer" transform="rotate(-90)" y="4.95" width="189.43" height="9.3" x="-95.015">Applications</text>
-  <g class="layer-detail" transform="translate(824.8999999999992 3.2)">
-   <rect x="-812.0999999999992" class="layer" y="-3.2" width="4871.700000000001" height="189.43"/>
+  <g class="layer-detail" transform="translate(807.1999999999991 3.2)">
+   <rect x="-794.3999999999992" class="layer" y="-3.2" width="4871.700000000001" height="189.43"/>
    <g>
     <g id="location" class="package" transform="translate( 0 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color2.mouseover" end="s8-color2.mouseout"/>
@@ -17545,6 +17545,23 @@ function resized()
       </g>
      </g>
     </g>
+    <g id="podcatcher" class="package" transform="translate( 3249.600000000002 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
+     <rect class="package" x="0" width="33.3" height="97.2" y="0" style="fill:#ffff00;"/>
+     <text text-anchor="middle" class="package" width="33.3" x="16.65" y="96.2">Podcatcher</text>
+     <g transform="translate(0 3.2)">
+      <g id="application" transform="translate(0 0)" class="collection placeholder">
+       <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
+       <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">application</text>
+       <g transform="translate(0 6.299999999999999)"/>
+      </g>
+      <g id="engine" transform="translate(17.7 0)" class="collection placeholder">
+       <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
+       <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">engine</text>
+       <g transform="translate(0 6.299999999999999)"/>
+      </g>
+     </g>
+    </g>
    </g>
   </g>
  </g>
@@ -17613,7 +17630,7 @@ function resized()
       </g>
       <g id="s8-color9">
        <rect class="cbox" height="3.1" width="15.5" fill="#ffff00" x="77" y="3.1"/>
-       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="84.75" y="4.65">Multimedia Apps (8)</text>
+       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="84.75" y="4.65">Multimedia Apps (9)</text>
       </g>
       <g id="s8-color10">
        <rect class="cbox" height="3.1" width="15.5" fill="orange" x="15" y="6.2"/>
@@ -17686,8 +17703,8 @@ function resized()
      </g>
     </g>
     <text text-anchor="middle" class="label" dy="0.375em" x="250.875" y="4.65">
-     <tspan dy="-1em" x="250.875">108 Packages</tspan>
-     <tspan dy="1em" x="250.875">599 Collections</tspan>
+     <tspan dy="-1em" x="250.875">109 Packages</tspan>
+     <tspan dy="1em" x="250.875">601 Collections</tspan>
      <tspan dy="1em" x="250.875">2541 Components</tspan>
     </text>
    </g>

@@ -14808,8 +14808,8 @@ function resized()
  <g id="app" transform="translate(3.1999999999999993 0)" class="layer">
   <rect x="0.3" y="0.3" width="9.3" rx="4.65" ry="4.65" class="layer" height="174.86"/>
   <text text-anchor="middle" dy="0.375em" class="layer" transform="rotate(-90)" y="4.95" width="174.86" height="9.3" x="-87.73">Applications</text>
-  <g class="layer-detail" transform="translate(761.8999999999987 3.2)">
-   <rect x="-749.0999999999988" class="layer" y="-3.2" width="5072.699999999998" height="174.86"/>
+  <g class="layer-detail" transform="translate(746.8999999999987 3.2)">
+   <rect x="-734.0999999999988" class="layer" y="-3.2" width="5072.699999999998" height="174.86"/>
    <g>
     <g id="location" class="package" transform="translate( 0 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color2.mouseover" end="s8-color2.mouseout"/>
@@ -19941,6 +19941,34 @@ function resized()
       </g>
      </g>
     </g>
+    <g id="podcatcher" class="package" transform="translate( 3576.6000000000004 0)">
+     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
+     <rect class="package" x="0" width="27.900000000000002" height="82.63000000000001" y="0" style="fill:#ffff00;"/>
+     <text text-anchor="middle" class="package" width="27.900000000000002" x="13.950000000000001" y="81.63000000000001">Podcatcher</text>
+     <g transform="translate(0 3.2)">
+      <g id="podcatcher" transform="translate(0 0)" class="collection">
+       <rect class="collection" x="0" y="0" height="15.6" width="27.900000000000002"/>
+       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="26.500000000000004" height="6.299999999999999">Podcatcher</text>
+       <g transform="translate(0 6.299999999999999)">
+        <g id="podcatcher_build" class="component">
+         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
+         <use width="9.3" height="9.3" x="0" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">Podcatcher Build</text>
+        </g>
+        <g id="podcatcher_app" class="component">
+         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
+         <use width="9.3" height="9.3" x="9.3" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="13.950000000000001">Podcatcher Application</text>
+        </g>
+        <g id="podcatcher_engine" class="component">
+         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
+         <use width="9.3" height="9.3" x="18.6" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="23.25">Podcatcher Engine</text>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
    </g>
   </g>
  </g>
@@ -19995,7 +20023,7 @@ function resized()
       </g>
       <g id="s8-color9">
        <rect class="cbox" height="3.1" width="15.5" fill="#ffff00" x="77" y="3.1"/>
-       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="84.75" y="4.65">Multimedia Apps (10)</text>
+       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="84.75" y="4.65">Multimedia Apps (11)</text>
       </g>
       <g id="s8-color10">
        <rect class="cbox" height="3.1" width="15.5" fill="orange" x="15" y="6.2"/>
@@ -20077,9 +20105,9 @@ function resized()
      </g>
     </g>
     <text text-anchor="middle" class="label" dy="0.375em" x="265.17499999999995" y="4.65">
-     <tspan dy="-1em" x="265.17499999999995">109 Packages</tspan>
-     <tspan dy="1em" x="265.17499999999995">661 Collections</tspan>
-     <tspan dy="1em" x="265.17499999999995">2904 Components</tspan>
+     <tspan dy="-1em" x="265.17499999999995">110 Packages</tspan>
+     <tspan dy="1em" x="265.17499999999995">662 Collections</tspan>
+     <tspan dy="1em" x="265.17499999999995">2907 Components</tspan>
     </text>
    </g>
   </g>
