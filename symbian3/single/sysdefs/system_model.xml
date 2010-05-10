@@ -10119,6 +10119,13 @@
 </component>
 </collection>
 </block>
+<block name="podcatcher" level="apps" long-name="Podcatcher" levels="app">
+  <collection name="podcatcher" long-name="Podcatcher" level="app">
+    <component name="podcatcher" filter="s60" long-name="Podcatcher Build" introduced="^3">
+      <unit bldFile="app/podcatcher/group"/>
+    </component>
+  </collection>
+</block>
 <block name="musicplayer" level="apps" long-name="Music Player Apps" levels="plugins support hs app">
 <collection name="musicplayer_plat" long-name="Music Player Apps Platform Interfaces" level="app">
 <component name="mpx_music_player_app_api" long-name="MPX Music Player App API" filter="s60" class="api">

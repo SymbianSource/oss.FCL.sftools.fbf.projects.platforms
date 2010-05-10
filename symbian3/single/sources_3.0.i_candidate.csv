@@ -31,6 +31,7 @@ http://developer.symbian.org/oss/MCL/sf/app/musicplayer/,/sf/app/musicplayer,bra
 http://developer.symbian.org/oss/FCL/sf/app/organizer/,/sf/app/organizer,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/phone/,/sf/app/phone,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/photos/,/sf/app/photos,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/app/podcatcher/,/sf/app/podcatcher,branch,default,package_definition.xml
 http://developer.symbian.org/oss/FCL/sf/app/printing/,/sf/app/printing,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/profile/,/sf/app/profile,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/radio/,/sf/app/radio,branch,RCL_3,layers.sysdef.xml

@@ -10486,6 +10486,13 @@
 </component>
 </collection>
 </package>
+<package id="podcatcher" level="apps" name="Podcatcher" levels="app">
+  <collection id="podcatcher" name="Podcatcher" level="app">
+    <component id="podcatcher_build" filter="s60" name="Podcatcher Build">
+      <unit bldFile="group"/>
+    </component>
+  </collection>
+</package>
 <package id="musicplayer" level="apps" tech-domain="ma" name="Music Player Apps" levels="plugins support hs app">
 <collection id="musicplayer_plat" name="Music Player Apps Platform Interfaces" level="app">
 <component id="mpx_music_player_app_api" name="MPX Music Player App API" class="api" filter="s60">
