@@ -79,7 +79,7 @@ http://developer.symbian.org/oss/MCL/sf/mw/phonesrv/,/sf/mw/phonesrv,branch,RCL_
 http://developer.symbian.org/oss/FCL/sf/mw/platformtools/,/sf/mw/platformtools,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/qt/,/sf/mw/qt,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/remoteconn/,/sf/mw/remoteconn,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/mw/remotemgmt/,/sf/mw/remotemgmt,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/remotemgmt/,/sf/mw/remotemgmt,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/remotestorage/,/sf/mw/remotestorage,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/securitysrv/,/sf/mw/securitysrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/serviceapi/,/sf/mw/serviceapi,branch,RCL_3,layers.sysdef.xml
