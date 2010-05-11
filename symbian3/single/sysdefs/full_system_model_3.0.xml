@@ -10769,6 +10769,13 @@
 </collection>
 </package>
 <package id="internetradio" level="apps" tech-domain="ma" name="Internet Radio Apps"/>
+<package id="podcatcher" level="apps" tech-domain="ma" name="Podcatcher" levels="app">
+<collection id="podcatcher_info" name="Podcatcher" level="app">
+<component id="podcatcher_build" filter="sf_build" name="Podcatcher Build" introduced="^3">
+<unit bldFile="/app/podcatcher/group"/>
+</component>
+</collection>
+</package>
 <package id="tv" level="services" tech-domain="ma" name="TV Apps"/>
 <package id="voicerec" level="apps" tech-domain="ma" name="Voice Recorder Apps">
 <!-- custom filter pref_test-->
@@ -11508,20 +11515,6 @@
 <collection id="techview_info" name="Techview Info" level="apps3">
 <component id="techview_metadata" name="Techview Metadata" class="config" introduced="^2" purpose="development" target="desktop">
 <unit mrp="/app/techview/techview_info/techview_metadata/techview_metadata.mrp"/>
-</component>
-</collection>
-</package>
-<package id="podcatcher" level="apps" tech-domain="ma" name="Podcatcher" levels="app">
-<collection id="podcatcher" name="Podcatcher" level="app">
-<component id="podcatcher_build" filter="s60" name="Podcatcher Build">
-<!-- has exports from top level bld.inf -->
-<unit bldFile="/app/podcatcher/group"/>
-</component>
-<component id="podcatcher_app" filter="s60" name="Podcatcher Application">
-<unit bldFile="/app/podcatcher/application/group"/>
-</component>
-<component id="podcatcher_engine" filter="s60" name="Podcatcher Engine">
-<unit bldFile="/app/podcatcher/engine/group"/>
 </component>
 </collection>
 </package>
