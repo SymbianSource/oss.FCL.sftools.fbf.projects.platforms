@@ -34,7 +34,7 @@
 
     <!-- get full source env and binaries from pdk -->
     <property name="sf.spec.baseline.location"       value="\\v800008\Builds01\Releases\${sf.previous.pdk.tag}" />
-    <property name="sf.spec.toolsbaseline.location"       value="\\v800008\Builds01\PDT\PDT_1.6" /> <!-- for TEF etc -->
+    <property name="sf.spec.toolsbaseline.location"       value="\\v800008\Builds01\PDT\overlay_default.11" /> <!-- for TEF,Qmake etc -->
     
     <!-- platform build specific properties -->
     <property name="sf.spec.s60.sysdef.clean.configurations.list"  value="S60_5_2_sf" />
@@ -77,8 +77,5 @@
     
     <!-- Build ROMs from iMaker config defined in job_refs.ant.xml -->
     <property name="sf.spec.referenceroms.createimages.enable" value="false"/>
-
-    <!-- run qmake for anything units with proFile attribs -->
-    <property name="qmake.enabled" value="true"/>
 
 </project>
