@@ -2670,13 +2670,13 @@
 <component name="config" filter="s60" long-name="Config" purpose="development" class="config"/>
 <component name="cenrep" filter="sf_build" long-name="ConE Central Repository Config" purpose="development" class="config">
 <!-- will should give the id/path something more unique than cenrep -->
-<unit bldFile="os/deviceplatformrelease/sf_config/cenrep/group"/>
+<unit bldFile="os/deviceplatformrelease/foundation_system/sf_config/cenrep/group"/>
 </component>
 <component name="rombuild_syborg" filter="sf_build" long-name="Syborg iMaker Config" purpose="development" introduced="^3" class="config">
-<unit bldFile="os/deviceplatformrelease/sf_config/rombuild/syborg/group"/>
+<unit bldFile="os/deviceplatformrelease/foundation_system/sf_config/rombuild/syborg/group"/>
 </component>
 <component name="rombuild_zoom2" filter="sf_build" long-name="Zoom2 iMaker Config" purpose="development" introduced="^3" class="config">
-<unit bldFile="os/deviceplatformrelease/sf_config/rombuild/zoom2/group"/>
+<unit bldFile="os/deviceplatformrelease/foundation_system/sf_config/rombuild/zoom2/group"/>
 </component>
 </collection>
 <!-- should be located locally in buildplatforms/group 
@@ -4650,60 +4650,60 @@
 </block>
 <block name="searchsrv" level="specific" long-name="Search Services" levels="services engine generic api">
 <collection name="searchsrv_plat" long-name="Search Services Platform Interfaces" level="api">
-<component name="cpix_utility_api" long-name="CPIX Utility API" filter="s60" class="api">
+<component name="cpix_utility_api" long-name="CPIX Utility API" filter="s60" introduced="^4" class="api">
 <unit bldFile="mw/searchsrv/searchsrv_plat/cpix_utility_api/group"/>
 </component>
-<component name="cpix_framework_api" long-name="CPIX Framework API" filter="s60" class="api">
+<component name="cpix_framework_api" long-name="CPIX Framework API" filter="s60" introduced="^4" class="api">
 <unit bldFile="mw/searchsrv/searchsrv_plat/cpix_framework_api/group"/>
 </component>
-<component name="cpix_search_api" long-name="CPIX Search API" filter="s60" class="api">
+<component name="cpix_search_api" long-name="CPIX Search API" filter="s60" introduced="^4" class="api">
 <unit bldFile="mw/searchsrv/searchsrv_plat/cpix_search_api/group"/>
 </component>
 </collection>
 <collection name="searchengine" long-name="Search Engine" level="engine">
-<component name="searchengine_util" long-name="Search Engine Utils" filter="s60">
+<component name="searchengine_util" long-name="Search Engine Utils" filter="s60" introduced="^4">
 <unit bldFile="mw/searchsrv/searchengine/util/group"/>
 </component>
-<component name="searchengine_oss" long-name="Search Engine OSS" filter="s60">
+<component name="searchengine_oss" long-name="Search Engine OSS" filter="s60" introduced="^4">
 <unit bldFile="mw/searchsrv/searchengine/oss/group"/>
 </component>
-<component name="cpix" long-name="Cross Platform Indexing Engine" filter="s60">
+<component name="cpix" long-name="Cross Platform Indexing Engine" filter="s60" introduced="^4">
 <unit bldFile="mw/searchsrv/searchengine/cpix/group"/>
 </component>
 </collection>
 <collection name="searcher" long-name="Searcher" level="generic">
-<component name="searchclient" long-name="Search Client" filter="s60">
+<component name="searchclient" long-name="Search Client" filter="s60" introduced="^4">
 <unit bldFile="mw/searchsrv/searcher/SearchClient/group"/>
 </component>
-<component name="searchserver" long-name="Search Server" filter="s60">
+<component name="searchserver" long-name="Search Server" filter="s60" introduced="^4">
 <unit bldFile="mw/searchsrv/searcher/SearchServer/group"/>
 </component>
-<component name="searcher_test" long-name="Searcher Tests" filter="s60" purpose="development">
+<component name="searcher_test" long-name="Searcher Tests" filter="s60" purpose="development" introduced="^4">
 <!-- #include from common bld.inf or split into two components -->
 <unit bldFile="mw/searchsrv/searcher/tsrc/RobustnessTest/group"/>
 <unit bldFile="mw/searchsrv/searcher/tsrc/LogPlayer/group"/>
 </component>
 </collection>
 <collection name="searchsrv_harvester" long-name="Search Services Harvester" level="services">
-<component name="searchsrv_pluginfw" long-name="Search Server" filter="s60">
+<component name="searchsrv_pluginfw" long-name="Search Server" filter="s60" introduced="^4">
 <unit bldFile="mw/searchsrv/harvester/pluginfw/group"/>
 </component>
-<component name="searchsrv_harvesterserver" long-name="Search Harvester Server" filter="s60">
+<component name="searchsrv_harvesterserver" long-name="Search Harvester Server" filter="s60" introduced="^4">
 <unit bldFile="mw/searchsrv/harvester/HarvesterServer/group"/>
 </component>
 </collection>
 <collection name="searchsrv_watchdog" long-name="Search Services Watch Dog" level="services">
-<component name="searchsrv_watchdog_build" long-name="Search Services Watch Dog Build" filter="s60">
+<component name="searchsrv_watchdog_build" long-name="Search Services Watch Dog Build" filter="s60" introduced="^4">
 <unit bldFile="mw/searchsrv/WatchDog/group"/>
 </component>
 </collection>
 <collection name="qcpix" long-name="Qt CPIX" level="engine">
-<component name="qcpix_build" long-name="Qt CPIX Build">
+<component name="qcpix_build" long-name="Qt CPIX Build" introduced="^4">
 <unit bldFile="mw/searchsrv/qcpix" proFile="qcpix.pro"/>
 </component>
 </collection>
 <collection name="searchsrv_info" long-name="Search Services Info">
-<component name="searchsrv_build" long-name="Search Services Build">
+<component name="searchsrv_build" long-name="Search Services Build" introduced="^4">
 <!-- move exports to own component and remove this -->
 <unit bldFile="mw/searchsrv/group"/>
 </component>
@@ -8002,12 +8002,12 @@
 </block>
 <block name="search" level="apps" long-name="Search Apps" levels="eng base app api">
 <collection name="search_info" long-name="Search Info">
-<component name="search_build" long-name="Search Build">
+<component name="search_build" long-name="Search Build" introduced="^4">
 <unit bldFile="app/search/group"/>
 </component>
 </collection>
 <collection name="searchui" long-name="Search UI">
-<component name="searchui_build" long-name="Search UI Build">
+<component name="searchui_build" long-name="Search UI Build" introduced="^4">
 <unit bldFile="app/search/searchui" proFile="searchui.pro"/>
 </component>
 </collection>
@@ -8839,6 +8839,13 @@
 <component name="qtinternetradio_build" long-name="Qt Internet Radio Build">
 <!--  Move down a dir or break into components-->
 <unit bldFile="app/internetradio/qtinternetradio" proFile="all.pro" qmakeArgs="-r -config rom"/>
+</component>
+</collection>
+</block>
+<block name="podcatcher" level="apps" long-name="Podcatcher" levels="app">
+<collection name="podcatcher_info" long-name="Podcatcher" level="app">
+<component name="podcatcher_build" filter="sf_build" long-name="Podcatcher Build" introduced="^3">
+<unit bldFile="app/podcatcher/group"/>
 </component>
 </collection>
 </block>
