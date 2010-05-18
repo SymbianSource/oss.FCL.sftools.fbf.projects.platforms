@@ -7062,45 +7062,7 @@
 </component>
 </collection>
 </block>
-<block name="homescreensrv" level="specific" long-name="Home Screen Services" levels="plugin framework server generic specific">
-<collection name="homescreensrv_plat" long-name="Home Screen Services Platform Interfaces" level="specific">
-<component name="action_handler_plugin_api" long-name="Action Handler Plugin API" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/action_handler_plugin_api/group" filter="!test"/>
-</component>
-<component name="content_harvester_plugin_api" long-name="Content Harvester Plugin API" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/content_harvester_plugin_api/group" filter="!test"/>
-</component>
-<component name="menu_sat_interface_api" long-name="Menu SAT Interface API" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/menu_sat_interface_api/group" filter="!test"/>
-</component>
-<component name="sapi_contentpublishing" long-name="SAPI Content Publishing" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/sapi_contentpublishing/group"/>
-</component>
-<component name="sapi_actionhandler" long-name="SAPI Action Handler" filter="s60" class="api">
-<unit bldFile="mw/homescreensrv/homescreensrv_plat/sapi_actionhandler/group"/>
-</component>
-</collection>
-<collection name="contentpublishingsrv" long-name="Content Publishing Service" level="server">
-<component name="contentpublishingdebug" filter="s60" long-name="Content Publishing Debug">
-<!-- need to move this component outside of contentpublishingutils and into separate component directory -->
-<!-- <unit bldFile="contentpublishingsrv/contentpublishingutils/contentpublishingdebug/group"/> -->
-</component>
-<component name="contentpublishingutils" filter="s60" long-name="Content Publishing Utils">
-<unit bldFile="mw/homescreensrv/contentpublishingsrv/contentpublishingutils/group"/>
-</component>
-<component name="contentpublishingserver" filter="s60" long-name="Content Publishing Server">
-<unit bldFile="mw/homescreensrv/contentpublishingsrv/contentpublishingserver/group"/>
-</component>
-<component name="contentharvester" filter="s60" long-name="Content Harvester">
-<unit bldFile="mw/homescreensrv/contentpublishingsrv/contentharvester/group"/>
-</component>
-<component name="contentpublishingsrv_build" filter="s60" long-name="Content Publishing Service Build">
-<!-- need to remove links to the above components and just contain the IBY (or move the IBY into another component). 
-      		If keeping, it need to move down a directory.-->
-<unit bldFile="mw/homescreensrv/contentpublishingsrv/group"/>
-</component>
-</collection>
-</block>
+<block name="homescreensrv" level="specific"/>
 <block name="homescreensrvlegacy" level="generic" long-name="Legacy Home Screen Services" levels="plugin framework server generic specific">
 <collection name="homescreensrvlegacy_plat" long-name="Legacy Home Screen Services Platform Interfaces" level="specific">
 <component name="ai_content_model_api" long-name="AI Content Model API" filter="s60" class="api">
