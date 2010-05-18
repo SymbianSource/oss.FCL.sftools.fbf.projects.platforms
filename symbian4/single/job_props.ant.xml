@@ -34,7 +34,7 @@
 
     <!-- get full source env and binaries from pdk -->
     <property name="sf.spec.baseline.location"       value="\\v800008\Builds01\Releases\${sf.previous.pdk.tag}" />
-    <property name="sf.spec.toolsbaseline.location"       value="\\v800008\Builds01\PDT\overlay_default.11" /> <!-- for TEF,Qmake etc -->
+    <property name="sf.spec.toolsbaseline.location"       value="\\v800008\Builds01\PDT\prebuilt_default.22" /> <!-- for TEF,Qmake etc -->
     
     <!-- platform build specific properties -->
     <property name="sf.spec.s60.sysdef.clean.configurations.list"  value="S60_5_2_sf" />
