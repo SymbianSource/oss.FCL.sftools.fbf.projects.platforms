@@ -817,7 +817,7 @@
 <component name="eventlogger" long-name="Event Logger" introduced="6.0" purpose="optional">
 <unit bldFile="os/persistentdata/loggingservices/eventlogger/group" mrp="os/persistentdata/loggingservices/eventlogger/group/syslibs_logeng.mrp"/>
 </component>
-<component name="filelogger" long-name="File Logger" introduced="ER5" deprecated="^4" purpose="optional">
+<component name="filelogger" long-name="File Logger" introduced="ER5" deprecated="^3" purpose="optional">
 <unit bldFile="os/persistentdata/loggingservices/filelogger/group" mrp="os/persistentdata/loggingservices/filelogger/group/comms-infras_flogger.mrp"/>
 </component>
 <component name="rfilelogger" long-name="RFile Logger" deprecated="^3" introduced="9.1" purpose="development">
@@ -7362,7 +7362,13 @@
 </component>
 </collection>
 </block>
-<block name="browser" level="specific"/>
+<block name="browser" level="specific" long-name="Browser" levels="plugin utils support main">
+<collection name="bookmarksengine" long-name="Bookmarks Engine" level="support">
+<component name="bookmarksengine_build" long-name="Bookmarks Engine Build" introduced="^4">
+<unit bldFile="mw/browser/bookmarksengine" proFile="bookmarksengine.pro" qmakeArgs="&quot;what+=plat_101&quot;"/>
+</component>
+</collection>
+</block>
 <block name="web" level="specific" long-name="Web" levels="plugin utils server generic specific">
 <collection name="web_pub" long-name="Web Public Interfaces" level="specific">
 <component name="browser_control_api" long-name="Browser Control API" filter="s60" class="api">
@@ -7942,7 +7948,20 @@
 </component>
 </collection>
 </block>
-<block name="recents" level="apps"/>
+<block name="recents" level="apps" long-name="Recent Events" levels="engine support ui api">
+<collection name="recents_plat" long-name="Recent Events Platform Interfaces" level="api">
+<component name="logs_services_api" long-name="Logs Services API" filter="s60" introduced="^4" class="api"/>
+<component name="logs_engine_api" long-name="Logs Engine API" filter="s60" introduced="^4" class="api"/>
+<component name="logs_timers_api" long-name="Logs Timers API" filter="s60" class="api"/>
+<component name="logs_engine_api_extensions" long-name="Logs Engine API Extensions" filter="s60" class="api"/>
+</collection>
+<collection name="logsui" long-name="Logs UI" level="ui">
+<component name="logsui_build" filter="s60" long-name="Logs UI Build">
+<!-- component at too high a rank, should move down one directory -->
+<unit bldFile="app/recents/logsui" proFile="logsui.pro"/>
+</component>
+</collection>
+</block>
 <block name="settingsuis" level="services" long-name="Settings UIs" levels="plugin ui">
 <collection name="controlpanelplugins" long-name="Control Panel Plugins" level="plugin">
 <component name="themeplugin" filter="s60" long-name="Theme Plugin" introduced="^4">
@@ -8968,7 +8987,13 @@
 </component>
 </collection>
 </block>
-<block name="browserui" level="services"/>
+<block name="browserui" level="services" long-name="Browser UI" levels="utils support ui">
+<collection name="browserui_info" long-name="Browser UI Info" level="ui">
+<component name="browserui_build" long-name="Bookmarks Engine Build" introduced="^4">
+<unit bldFile="app/browserui" proFile="browserui.pro" qmakeArgs="&quot;what+=plat_101&quot;"/>
+</component>
+</collection>
+</block>
 <block name="conntools" level="services" long-name="Connectivity Tools" levels="config app">
 <collection name="nettools" long-name="Net Tools" level="app">
 <component name="conntest" filter="s60" long-name="Connection Test" purpose="development">
