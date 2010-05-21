@@ -5802,7 +5802,44 @@
 </component>
 </collection>
 </block>
-<block name="gstreamer" level="generic"/>
+<block name="gstreamer" level="generic" long-name="GStreamer" levels="plugin core api">
+<!-- Uncomment all units when configuration is in place. All currently #included from gstreamer_build -->
+<!-- structure matches planned directory layout -->
+<collection name="gstreamerfw" long-name="GStreamer Framework" level="core">
+<component name="gstreamer_core" long-name="GStreamer Core" introduced="^3" class="placeholder">
+<!--<unit bldFile="gstreamer_core/group"/>-->
+</component>
+</collection>
+<collection name="gst_plugins" long-name="GStreamer Plugins" level="plugin">
+<component name="gst_plugins_base" long-name="GStreamer Base Plugins" introduced="^3" class="placeholder">
+<!--<unit bldFile="gst_plugins_base/group"/>-->
+</component>
+<component name="gst_plugins_good" long-name="GStreamer Good Plugins" introduced="^3" class="placeholder">
+<!--<unit bldFile="gst_plugins_good/group"/>-->
+</component>
+<component name="gst_plugins_symbian" filter="s60" long-name="GStreamer Sybmian Plugins" introduced="^3" class="placeholder">
+<!--<unit bldFile="gst_plugins_symbian/group" filter="!test"/>-->
+<!--<unit bldFile="gst_plugins_symbian/tsrc/GStreamerTestModule/group" filter="test,pref_test"/>-->
+</component>
+</collection>
+<collection name="gstregistrygenerator" long-name="GStreamer Registry Generator" level="core">
+<!-- collection is really a component. Move down an directory -->
+<component name="gstregistrygenerator_build" filter="s60" long-name="GStreamer Registry Generator Build" introduced="^3" class="placeholder">
+<!-- <unit bldFile="gstregistrygenerator/group"/>-->
+</component>
+</collection>
+<collection name="gst_test_apps" long-name="GStreamer Test Applications" level="api">
+<component name="gst_player" filter="s60" long-name="GStreamer Player" introduced="^3" purpose="development" class="placeholder">
+<!-- <unit bldFile="gst_test_apps/gst_player/group"/>-->
+</component>
+</collection>
+<collection name="gstreamer_info" long-name="GStreamer Info" level="api">
+<component name="gstreamer_build" filter="s60" long-name="GStreamer Build" introduced="^3">
+<!-- make this a ROM component or split up instead? -->
+<unit bldFile="mw/gstreamer/group"/>
+</component>
+</collection>
+</block>
 <block name="helix" level="generic" long-name="Helix" levels="plugin framework server generic specific">
 <collection name="helix_ren" long-name="Helix Engine" level="framework">
 <!-- what does "ren" stand for? -->
@@ -6119,9 +6156,6 @@
 <component name="qthighway_examples" filter="qtextensionsexamples" long-name="Qt Highway Examples" purpose="development" introduced="^4">
 <unit bldFile="mw/qtextensions/qthighway/examples" proFile="examples.pro" qmakeArgs="-r"/>
 </component>
-<component name="qthighwaytests" filter="qtextensionstests" long-name="Qt Highway Tests" purpose="development" introduced="^4">
-<unit bldFile="mw/qtextensions/qthighway/tests" proFile="tests.pro" qmakeArgs="-r"/>
-</component>
 </collection>
 <collection name="qtmobileextensions" long-name="Qt Mobile Extensions" level="app">
 <component name="qtmobileextensions_build" filter="qtextension" long-name="Qt Mobile Extensions" purpose="development" introduced="^4">
@@ -6138,9 +6172,6 @@
 <component name="qtmobility_examples" filter="qtextensionsexamples" long-name="Qt Mobility Examples" purpose="development" introduced="^4">
 <unit bldFile="mw/qtextensions/qtmobility/examples" proFile="examples.pro" qmakeArgs="-r"/>
 </component>
-<component name="qtmobilitytests" filter="qtextensionstests" long-name="Qt Extensions Tests" purpose="development" introduced="^4">
-<unit bldFile="mw/qtextensions/qtmobility/tests" proFile="tests.pro" qmakeArgs="-r"/>
-</component>
 </collection>
 <collection name="qhbstyle" level="mw" long-name="Qt Orbit Style">
 <component name="qhbstyle_build" long-name="Qt Orbit Style Build" introduced="^4">
@@ -6148,7 +6179,7 @@
 </component>
 </collection>
 <collection name="qtextensions_info" long-name="Qt Extensions Info" level="app">
-<component name="qtextensions_conf" long-name="Qt Extensions Confgure" introduced="^4" class="conf">
+<component name="qtextensions_conf" long-name="Qt Extensions Confgure" introduced="^4" filter="qt_tools" class="conf">
 <unit bldFile="mw/qtextensions/group"/>
 </component>
 <component name="qtextensions_build" long-name="Qt Extensions Build" introduced="^4">
