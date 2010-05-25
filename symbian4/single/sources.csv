@@ -27,6 +27,7 @@ http://developer.symbian.org/oss/FCL/sf/app/phone/,/sf/app/phone,branch,default,
 http://developer.symbian.org/oss/FCL/sf/app/photos/,/sf/app/photos,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/printing/,/sf/app/printing,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/radio/,/sf/app/radio,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/recents/,/sf/app/recents,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/settingsuis/,/sf/app/settingsuis,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/search/,/sf/app/search,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/techview/,/sf/app/techview,branch,default,layers.sysdef.xml
