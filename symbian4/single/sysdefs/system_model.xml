@@ -7858,6 +7858,11 @@
 <component name="blacklist" filter="s60" long-name="Phone Blacklist Clearing" plugin="Y">
 <unit bldFile="app/phone/phoneapp/blacklist/group"/>
 </component>
+
+<component name="phoneringingtoneplayer" filter="s60" long-name="Phone Rining Tone Player">
+<unit bldFile="app/phone/phoneapp/phoneringingtoneplayer/group"/>
+</component>
+
 <component name="phoneuicontrol" filter="s60" long-name="Phone UI Control">
 <unit bldFile="app/phone/phoneapp/phoneuicontrol/group"/>
 </component>
@@ -7939,6 +7944,11 @@
 <component name="telephony_device_mode_api" long-name="Telephony Device Mode API" filter="s60" class="api">
 <unit bldFile="app/phone/phone_plat/telephony_device_mode_api/group"/>
 </component>
+
+<component name="telephony_menu_extension_api" long-name="Telephony Menu Extension API" filter="s60" class="api">
+<unit bldFile="app/phone/phone_plat/telephony_menu_extension_api/group"/>
+</component>
+
 <component name="telephony_remote_party_information_api" long-name="Telephony Remote Party Information API" filter="s60" class="api">
 <unit bldFile="app/phone/phone_plat/telephony_remote_party_information_api/group"/>
 </component>
@@ -7973,6 +7983,9 @@
 <collection name="phoneplugins" long-name="Phone Plugins" level="plugin">
 <component name="csplugin" filter="s60" long-name="Circuit Switched Plugin" introduced="^4" plugin="Y">
 <unit bldFile="app/phone/phoneplugins/csplugin/group"/>
+</component>
+<component name="phoneindicatorplugin" filter="s60" long-name="Info Indicator Plugin" introduced="^4" plugin="Y">
+<unit bldFile="app/phone/phoneplugins/phoneindicatorplugin" proFile="phoneindicatorplugin.pro"/>
 </component>
 <component name="hsdialerwidgetplugin" filter="s60" long-name="Home Screen Dialer Widget Plugin" introduced="^4" plugin="Y">
 <unit bldFile="app/phone/phoneplugins/hsdialerwidgetplugin" proFile="hsdialerwidgetplugin.pro"/>
