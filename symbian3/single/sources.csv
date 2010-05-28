@@ -10,7 +10,7 @@ http://developer.symbian.org/oss/FCL/sf/adaptation/stubs/,/sf/adaptation/stubs,b
 http://developer.symbian.org/oss/MCL/sf/app/camera/,/sf/app/camera,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/commonemail/,/sf/app/commonemail,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/conntools/,/sf/app/conntools,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/app/contacts/,/sf/app/contacts,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/contacts/,/sf/app/contacts,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/contentcontrol/,/sf/app/contentcontrol,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/conversations/,/sf/app/conversations,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/devicecontrol/,/sf/app/devicecontrol,branch,RCL_3,layers.sysdef.xml
@@ -87,7 +87,7 @@ http://developer.symbian.org/oss/MCL/sf/mw/serviceapifw/,/sf/mw/serviceapifw,bra
 http://developer.symbian.org/oss/MCL/sf/mw/shortlinkconn/,/sf/mw/shortlinkconn,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/srvdiscovery/,/sf/mw/srvdiscovery,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/svgt/,/sf/mw/svgt,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/uiaccelerator/,/sf/mw/uiaccelerator,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/mw/uiaccelerator/,/sf/mw/uiaccelerator,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/uiresources/,/sf/mw/uiresources,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/uitools/,/sf/mw/uitools,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/usbservices/,/sf/mw/usbservices,branch,RCL_3,layers.sysdef.xml
