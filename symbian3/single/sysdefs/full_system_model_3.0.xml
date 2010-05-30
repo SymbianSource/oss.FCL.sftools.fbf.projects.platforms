@@ -2335,6 +2335,9 @@
 <component id="ecam_face_tracking_custom_api" name="ECam Face Tracking Custom API" class="api" filter="s60">
 <unit bldFile="/os/imagingext/imagingext_plat/ecam_face_tracking_custom_api/group"/>
 </component>
+<component id="ecam_use_case_hint_custom_api" name="ECam Use Case Hint Custom API" class="api" filter="s60">
+<unit bldFile="/os/imagingext/imagingext_plat/ecam_use_case_hint_custom_api/group"/>
+</component>
 </collection>
 <collection id="imageadaptationextensions" name="Image Adaptation Extensions" level="app-if">
 <component id="iclextjpegapi" filter="s60" name="ICL Extension JPEG API">
@@ -4692,7 +4695,7 @@
 <component id="im_cache_server_api" name="IM Cache Server API" class="api" filter="s60">
 <unit bldFile="/mw/imsrv/imsrv_plat/im_cache_server_api/group"/>
 </component>
-<component id="presence_avabilitytext" name="Presence Avability Text" class="api" filter="s60">
+<component id="presence_avabilitytext" name="Presence Availbility Text" class="api" filter="s60">
 <unit bldFile="/mw/imsrv/imsrv_plat/presence_avabilitytext/group"/>
 </component>
 </collection>
@@ -4714,9 +4717,6 @@
 </component>
 <component id="xmppsettingsfetcher" filter="s60" name="XMPP Settings Fetcher" introduced="^2">
 <unit bldFile="/mw/imsrv/imservices/xmppsettingsfetcher/group"/>
-</component>
-<component id="ossprotocoladaptation" filter="s60" name="OSS Protocol Adaptation" class="plugin" introduced="^2">
-<unit bldFile="/mw/imsrv/imservices/ossprotocoladaptation/group"/>
 </component>
 <component id="instantmessagingcache" filter="s60" name="Instant Messaging Cache" introduced="^2">
 <unit bldFile="/mw/imsrv/imservices/instantmessagingcache/group"/>
@@ -8431,14 +8431,11 @@
 </component>
 </collection>
 </package>
+<!-- <package id="opensrv" level="specific" tech-domain="pr" href="../../../../mw/opensrv/package_definition.xml"/> -->
 </layer>
 <layer id="app" name="Applications" levels="services apps">
 <package id="location" level="apps" tech-domain="lo" name="Location Apps" levels="ui events loc apps">
-<collection id="loc_plat" name="Location Apps Platform Interfaces" level="apps">
-<component id="location_centre_api" name="Location Centre API" introduced="^3" class="api" filter="s60">
-<unit bldFile="/app/location/loc_plat/location_centre_api/group"/>
-</component>
-</collection>
+<collection id="loc_plat" name="Location Apps Platform Interfaces" level="apps"/>
 <collection id="loc_pub" name="Location Apps Public Interfaces" level="apps">
 <component id="landmarks_ui_selector_api" name="Landmarks UI Selector API" class="api" filter="s60">
 <unit bldFile="/app/location/loc_pub/landmarks_ui_selector_api/group"/>
@@ -8528,24 +8525,6 @@
 <!-- this is a component, needs to be moved down a directory -->
 <component id="mapnavproviderrefapp_build" filter="s60" name="Map and Navigation Provider Reference Application">
 <unit bldFile="/app/location/mapnavproviderrefapp/group"/>
-</component>
-</collection>
-<collection id="locationcentre" name="Location Centre" level="loc">
-<component id="lcutils" name="Location Centre Utilities" filter="s60" introduced="^3">
-<unit bldFile="/app/location/locationcentre/lcutils/group"/>
-</component>
-<component id="lcservice" name="Location Centre Service Project" filter="s60" introduced="^3">
-<unit bldFile="/app/location/locationcentre/lcservice/group"/>
-</component>
-<component id="lcserver" name="Location Centre Server Project" filter="s60" introduced="^3">
-<unit bldFile="/app/location/locationcentre/lcserver/group"/>
-</component>
-<component id="lcapp" name="Location Centre Application" filter="s60" introduced="^3">
-<unit bldFile="/app/location/locationcentre/lcapp/group"/>
-</component>
-<component id="locationcentre_build" filter="s60" name="Location Centre Build" introduced="^3">
-<!-- consider distributing this into the other components or collapsing into a single component -->
-<unit bldFile="/app/location/locationcentre/group"/>
 </component>
 </collection>
 </package>
@@ -9166,9 +9145,6 @@
 </component>
 <component id="calcsoft" filter="s60" name="Calculator Application">
 <unit bldFile="/app/utils/extras/calcsoft/group"/>
-</component>
-<component id="converter" filter="s60" name="Unit Converter">
-<unit bldFile="/app/utils/extras/converter/group"/>
 </component>
 </collection>
 </package>
@@ -10361,65 +10337,7 @@
 </component>
 </collection>
 </package>
-<package id="videoeditor" level="apps" tech-domain="ma" name="Video Editor Apps" levels="engine ui">
-<collection id="videoeditor_plat" filter="s60" name="Video Editor Apps Platform Interfaces" level="ui">
-<component id="video_editor_engine_api" name="Video Editor Engine API" class="api" introduced="^2">
-<unit bldFile="/app/videoeditor/videoeditor_plat/video_editor_engine_api/group"/>
-</component>
-</collection>
-<collection id="videditor" name="Video Editor" level="ui">
-<component id="videoeditorcommon" filter="s60" name="Video Editor Common" introduced="^2">
-<unit bldFile="/app/videoeditor/videditor/videoeditorcommon/group"/>
-</component>
-<component id="videoeditoruicomponents" filter="s60" name="Video Editor UI Components" introduced="^2">
-<unit bldFile="/app/videoeditor/videditor/videoeditoruicomponents/group"/>
-</component>
-<component id="simplevideoeditor" filter="s60" name="Simple Video Editor" introduced="^2">
-<unit bldFile="/app/videoeditor/videditor/simplevideoeditor/group"/>
-</component>
-<component id="simplecutvideo" filter="s60" name="Simple Cut Video" introduced="^2">
-<unit bldFile="/app/videoeditor/videditor/simplecutvideo/group"/>
-</component>
-<component id="videoprovider" filter="s60" name="Video Provider" introduced="^2">
-<unit bldFile="/app/videoeditor/videditor/videoprovider/group"/>
-</component>
-<component id="manualvideoeditor" filter="s60" name="Manual Video Editor" introduced="^2">
-<!--  uncomment when supported
-      	<meta rel="config">
-      		<defined condition="__INCLUDE_MANUAL_VIDEO_EDITOR__"/>
-      	</meta>
-        <unit bldFile="videditor/manualvideoeditor/group"/> -->
-</component>
-<component id="videditor_build" filter="s60" name="Video Editor Build" introduced="^2">
-<!-- can the exports be distributed to the other components? Or should this be collapsed into one component?-->
-<unit bldFile="/app/videoeditor/videditor/group"/>
-</component>
-</collection>
-<collection id="videoeditorengine" name="Video Editor Engine" level="engine">
-<component id="audioeditorengine" filter="s60" name="Audio Editor Engine" introduced="^2">
-<unit bldFile="/app/videoeditor/videoeditorengine/audioeditorengine/group"/>
-</component>
-<component id="avcedit" filter="s60" name="AVC Editing" introduced="^2">
-<unit bldFile="/app/videoeditor/videoeditorengine/avcedit/group"/>
-</component>
-<component id="h263decoder" filter="s60" name="H.263 Decoder" introduced="^2">
-<unit bldFile="/app/videoeditor/videoeditorengine/h263decoder/group"/>
-</component>
-<component id="mp3aacmaniplib" filter="s60" name="MP3 and AAC Manipulation Library" introduced="^2">
-<unit bldFile="/app/videoeditor/videoeditorengine/mp3aacmaniplib/group"/>
-</component>
-<component id="vedtranscoder" filter="s60" name="Video Editor Transcoder" introduced="^2">
-<unit bldFile="/app/videoeditor/videoeditorengine/vedtranscoder/group"/>
-</component>
-<component id="vedengine" filter="s60" name="Video Editor Engine" introduced="^2">
-<unit bldFile="/app/videoeditor/videoeditorengine/vedengine/group"/>
-</component>
-<component id="videoeditorengine_build" filter="s60" name="Video Editor Engine Build" introduced="^2">
-<!-- can the exports be distributed to the other components? Or should this be collapsed into one component?-->
-<unit bldFile="/app/videoeditor/videoeditorengine/group"/>
-</component>
-</collection>
-</package>
+<!-- <package id="videoeditor" level="apps" tech-domain="ma" href="../../../../app/videoeditor/package_definition.xml"/> -->
 <package id="videoplayer" level="apps" tech-domain="ma" name="Video Player Apps" levels="support plugin util apps">
 <collection id="videoplayer_plat" name="Video Player Apps Platform Interfaces" level="apps">
 <component id="videoplayer_startup_api" name="Video Player Startup API" class="api" filter="s60">
@@ -10768,7 +10686,6 @@
 </component>
 </collection>
 </package>
-<package id="internetradio" level="apps" tech-domain="ma" name="Internet Radio Apps"/>
 <package id="podcatcher" level="apps" tech-domain="ma" name="Podcatcher" levels="app">
 <collection id="podcatcher_info" name="Podcatcher" level="app">
 <component id="podcatcher_build" filter="sf_build" name="Podcatcher Build" introduced="^3">
@@ -10776,7 +10693,6 @@
 </component>
 </collection>
 </package>
-<package id="tv" level="services" tech-domain="ma" name="TV Apps"/>
 <package id="voicerec" level="apps" tech-domain="ma" name="Voice Recorder Apps">
 <!-- custom filter pref_test-->
 <collection id="voicerec_plat" name="Voice Recorder Apps Platform Interfaces">
@@ -11306,9 +11222,6 @@
 </component>
 </collection>
 <collection id="htiui" name="Harmonized Test Interface UI" level="generic">
-<component id="HtiCommPlugins" filter="s60" name="HTI Comm Plugins" purpose="development" target="device" class="plugin">
-<unit bldFile="/app/rndtools/htiui/HtiCommPlugins/HtiBtCommPlugin/group"/>
-</component>
 <component id="HtiServicePlugins" filter="s60" name="HTI Service Plugins" purpose="development" target="device" class="plugin">
 <!-- can only have a single unit. Should #include from a common bld.inf file -->
 <unit bldFile="/app/rndtools/htiui/HtiServicePlugins/HtiAppServicePlugin/group"/>

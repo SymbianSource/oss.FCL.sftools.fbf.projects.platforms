@@ -426,8 +426,8 @@ function resized()
  <g id="os" transform="translate(3.1999999999999993 443.83000000000004)" class="layer">
   <rect x="0.3" y="0.3" width="9.3" rx="4.65" ry="4.65" class="layer" height="231.26000000000002"/>
   <text text-anchor="middle" dy="0.375em" class="layer" transform="rotate(-90)" y="4.95" width="231.26000000000002" height="9.3" x="-115.93">OS</text>
-  <g class="layer-detail" transform="translate(545.9000000000008 3.2)">
-   <rect x="-533.1000000000008" class="layer" y="-3.2" width="4871.700000000001" height="231.26000000000002"/>
+  <g class="layer-detail" transform="translate(541.2500000000009 3.2)">
+   <rect x="-528.450000000001" class="layer" y="-3.2" width="4871.700000000001" height="231.26000000000002"/>
    <g>
     <g id="kernelhwsrv" class="package" transform="translate( 0 123.43000000000002)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color0.mouseover" end="s8-color0.mouseout"/>
@@ -4106,8 +4106,8 @@ function resized()
     </g>
     <g id="imagingext" class="package" transform="translate( 3266.699999999999 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color8.mouseover" end="s8-color8.mouseout"/>
-     <rect class="package" x="0" width="91.19999999999999" height="120.23000000000002" y="0" style="fill:rgb(175,212,240);"/>
-     <text text-anchor="middle" class="package" width="91.19999999999999" x="45.599999999999994" y="119.23000000000002">Imaging Exten­sions</text>
+     <rect class="package" x="0" width="100.49999999999999" height="120.23000000000002" y="0" style="fill:rgb(175,212,240);"/>
+     <text text-anchor="middle" class="package" width="100.49999999999999" x="50.24999999999999" y="119.23000000000002">Imaging Exten­sions</text>
      <g transform="translate(0 3.2)">
       <g id="imagingext_pub" transform="translate(0 0)" class="collection">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
@@ -4121,8 +4121,8 @@ function resized()
        </g>
       </g>
       <g id="imagingext_plat" transform="translate(17.7 0)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="55.8"/>
-       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="54.4" height="6.299999999999999">Imaging Ext. Platform Inter­faces</text>
+       <rect class="collection" x="0" y="0" height="15.6" width="65.1"/>
+       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="63.699999999999996" height="6.299999999999999">Imaging Ext. Platform Inter­faces</text>
        <g transform="translate(0 6.299999999999999)">
         <g id="jpeg2000_icl_plugin_api" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
@@ -4154,9 +4154,14 @@ function resized()
          <use width="9.3" height="9.3" x="46.5" y="0" xlink:href="#Borderround" style="fill:#32cd99;stroke-width: 0.5; "/>
          <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="51.15">ECam Face Tracking Custom API</text>
         </g>
+        <g id="ecam_use_case_hint_custom_api" class="component">
+         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
+         <use width="9.3" height="9.3" x="55.8" y="0" xlink:href="#Borderround" style="fill:#32cd99;stroke-width: 0.5; "/>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="60.449999999999996">ECam Use Case Hint Custom API</text>
+        </g>
        </g>
       </g>
-      <g id="imageadaptationextensions" transform="translate(75.6 0)" class="collection">
+      <g id="imageadaptationextensions" transform="translate(84.89999999999999 0)" class="collection">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
        <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="14.2" height="6.299999999999999">Image Adapt. Ext.</text>
        <g transform="translate(0 6.299999999999999)">
@@ -4185,7 +4190,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="graphics" class="package" transform="translate( 3359.999999999999 0)">
+    <g id="graphics" class="package" transform="translate( 3369.299999999999 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="95.4" height="120.23000000000002" y="0" style="fill:orange;"/>
      <text text-anchor="middle" class="package" width="95.4" x="47.7" y="119.23000000000002">Graphics</text>
@@ -4476,7 +4481,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="textandloc" class="package" transform="translate( 3457.499999999999 0)">
+    <g id="textandloc" class="package" transform="translate( 3466.799999999999 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="84.9" height="120.23000000000002" y="0" style="fill:orange;"/>
      <text text-anchor="middle" class="package" width="84.9" x="42.45" y="119.23000000000002">Text &amp; Localis­ation Services</text>
@@ -4626,7 +4631,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="xmlsrv" class="package" transform="translate( 3544.499999999999 0)">
+    <g id="xmlsrv" class="package" transform="translate( 3553.799999999999 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color11.mouseover" end="s8-color11.mouseout"/>
      <rect class="package" x="0" width="65.1" height="120.23000000000002" y="0" style="fill:slateblue;"/>
      <text text-anchor="middle" class="package" width="65.1" x="32.55" y="119.23000000000002">XML Services</text>
@@ -4717,7 +4722,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="deviceplatformrelease" class="package" transform="translate( 3611.699999999999 0)">
+    <g id="deviceplatformrelease" class="package" transform="translate( 3620.9999999999986 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color12.mouseover" end="s8-color12.mouseout"/>
      <rect class="package" x="0" width="51" height="120.23000000000002" y="0" style="fill:darkgray;"/>
      <text text-anchor="middle" class="package" width="51" x="25.5" y="119.23000000000002">Dev­ice Platform Release</text>
@@ -4822,7 +4827,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="osrndtools" class="package" transform="translate( 3664.799999999999 0)">
+    <g id="osrndtools" class="package" transform="translate( 3674.0999999999985 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color12.mouseover" end="s8-color12.mouseout"/>
      <rect class="package" x="0" width="140.7" height="120.23000000000002" y="0" style="fill:darkgray;"/>
      <text text-anchor="middle" class="package" width="140.7" x="70.35" y="119.23000000000002">OS R&amp;D tools</text>
@@ -7934,7 +7939,7 @@ function resized()
         <g id="presence_avabilitytext" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
          <use width="9.3" height="9.3" x="232.5000000000001" y="0" xlink:href="#Borderround" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="237.15000000000012">Presence Avability Text</text>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="237.15000000000012">Presence Availbility Text</text>
         </g>
        </g>
       </g>
@@ -7944,8 +7949,8 @@ function resized()
        <g transform="translate(0 6.299999999999999)"/>
       </g>
       <g id="imservices" transform="translate(0 18.8)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="55.8"/>
-       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="54.4" height="6.299999999999999">IM Services</text>
+       <rect class="collection" x="0" y="0" height="15.6" width="46.5"/>
+       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="45.1" height="6.299999999999999">IM Services</text>
        <g transform="translate(0 6.299999999999999)">
         <g id="imfeatureplugin" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
@@ -7967,15 +7972,10 @@ function resized()
          <use width="9.3" height="9.3" x="27.900000000000002" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
          <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="32.550000000000004">XMPP Settings Fetcher</text>
         </g>
-        <g id="ossprotocoladaptation" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="37.2" y="0" xlink:href="#BorderShape2" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="41.85">OSS Protocol Adapt.</text>
-        </g>
         <g id="instantmessagingcache" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="46.5" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="51.15">Instant Msg. Cache</text>
+         <use width="9.3" height="9.3" x="37.2" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="41.85">Instant Msg. Cache</text>
         </g>
        </g>
       </g>
@@ -13189,26 +13189,15 @@ function resized()
  <g id="app" transform="translate(3.1999999999999993 25.2)" class="layer">
   <rect x="0.3" y="0.3" width="9.3" rx="4.65" ry="4.65" class="layer" height="189.43"/>
   <text text-anchor="middle" dy="0.375em" class="layer" transform="rotate(-90)" y="4.95" width="189.43" height="9.3" x="-95.015">Applications</text>
-  <g class="layer-detail" transform="translate(784.8499999999992 3.2)">
-   <rect x="-772.0499999999993" class="layer" y="-3.2" width="4871.700000000001" height="189.43"/>
+  <g class="layer-detail" transform="translate(826.8499999999997 3.2)">
+   <rect x="-814.0499999999997" class="layer" y="-3.2" width="4871.700000000001" height="189.43"/>
    <g>
     <g id="location" class="package" transform="translate( 0 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color2.mouseover" end="s8-color2.mouseout"/>
-     <rect class="package" x="0" width="107.1" height="97.2" y="0" style="fill:whitesmoke;"/>
-     <text text-anchor="middle" class="package" width="107.1" x="53.55" y="96.2">Location Apps</text>
+     <rect class="package" x="0" width="89.4" height="97.2" y="0" style="fill:whitesmoke;"/>
+     <text text-anchor="middle" class="package" width="89.4" x="44.7" y="96.2">Location Apps</text>
      <g transform="translate(0 3.2)">
-      <g id="loc_plat" transform="translate(0 0)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
-       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="14.2" height="6.299999999999999">Location Apps Platform Interfaces</text>
-       <g transform="translate(0 6.299999999999999)">
-        <g id="location_centre_api" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="0" y="0" xlink:href="#Borderround" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">Location Centre API</text>
-        </g>
-       </g>
-      </g>
-      <g id="loc_pub" transform="translate(17.7 0)" class="collection">
+      <g id="loc_pub" transform="translate(0 0)" class="collection">
        <rect class="collection" x="0" y="0" height="15.6" width="18.6"/>
        <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="17.200000000000003" height="6.299999999999999">Location Apps Public Inter­faces</text>
        <g transform="translate(0 6.299999999999999)">
@@ -13307,17 +13296,17 @@ function resized()
         </g>
        </g>
       </g>
-      <g id="locationlandmarksrefappfors60" transform="translate(38.400000000000006 0)" class="collection placeholder">
+      <g id="locationlandmarksrefappfors60" transform="translate(20.700000000000003 0)" class="collection placeholder">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Location Land­marks Ref App for S60</text>
        <g transform="translate(0 6.299999999999999)"/>
       </g>
-      <g id="locationlandmarksuirefapp" transform="translate(56.10000000000001 0)" class="collection placeholder">
+      <g id="locationlandmarksuirefapp" transform="translate(38.400000000000006 0)" class="collection placeholder">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Location Land­marks UI Ref App</text>
        <g transform="translate(0 6.299999999999999)"/>
       </g>
-      <g id="locationsatviewrefapp" transform="translate(73.80000000000001 0)" class="collection placeholder">
+      <g id="locationsatviewrefapp" transform="translate(56.10000000000001 0)" class="collection placeholder">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Location Satellite View Ref App</text>
        <g transform="translate(0 6.299999999999999)"/>
@@ -13327,36 +13316,10 @@ function resized()
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Simula­tion PSY Config­urator</text>
        <g transform="translate(0 6.299999999999999)"/>
       </g>
-      <g id="mapnavproviderrefapp" transform="translate(91.5 0)" class="collection placeholder">
+      <g id="mapnavproviderrefapp" transform="translate(73.80000000000001 0)" class="collection placeholder">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Map &amp; Nav Provider Ref App</text>
        <g transform="translate(0 6.299999999999999)"/>
-      </g>
-      <g id="locationcentre" transform="translate(57.9 18.8)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="37.2"/>
-       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="35.800000000000004" height="6.299999999999999">Location Centre</text>
-       <g transform="translate(0 6.299999999999999)">
-        <g id="lcutils" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="0" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">Location Centre Utilities</text>
-        </g>
-        <g id="lcservice" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="9.3" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="13.950000000000001">Location Centre Service Project</text>
-        </g>
-        <g id="lcserver" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="18.6" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="23.25">Location Centre Server Project</text>
-        </g>
-        <g id="lcapp" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="27.900000000000002" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="32.550000000000004">Location Centre Application</text>
-        </g>
-       </g>
       </g>
      </g>
     </g>
@@ -13455,7 +13418,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="phone" class="package" transform="translate( 109.19999999999999 0)">
+    <g id="phone" class="package" transform="translate( 91.5 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color3.mouseover" end="s8-color3.mouseout"/>
      <rect class="package" x="0" width="243.9" height="183.03" y="0" style="fill:darkkhaki;"/>
      <text text-anchor="middle" class="package" width="243.9" x="121.95" y="182.03">Phone Apps</text>
@@ -13718,7 +13681,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="videotelephony" class="package" transform="translate( 355.20000000000005 0)">
+    <g id="videotelephony" class="package" transform="translate( 337.5 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color3.mouseover" end="s8-color3.mouseout"/>
      <rect class="package" x="0" width="36.300000000000004" height="97.2" y="0" style="fill:darkkhaki;"/>
      <text text-anchor="middle" class="package" width="36.300000000000004" x="18.150000000000002" y="96.2">Video Telephony Apps</text>
@@ -13789,7 +13752,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="iptelephony" class="package" transform="translate( 393.6 0)">
+    <g id="iptelephony" class="package" transform="translate( 375.9 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color3.mouseover" end="s8-color3.mouseout"/>
      <rect class="package" x="0" width="110.69999999999997" height="97.2" y="0" style="fill:darkkhaki;"/>
      <text text-anchor="middle" class="package" width="65.09999999999997" x="78.14999999999999" y="86.2" dy="0.375em">IP Telephony</text>
@@ -13992,7 +13955,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="settingsuis" class="package" transform="translate( 355.20000000000005 100.4)">
+    <g id="settingsuis" class="package" transform="translate( 337.5 100.4)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color6.mouseover" end="s8-color6.mouseout"/>
      <rect class="package" x="0" width="37.2" height="82.63000000000001" y="0" style="fill:darkseagreen;"/>
      <text text-anchor="middle" class="package" width="37.2" x="18.6" y="81.63000000000002">Settings UIs</text>
@@ -14052,7 +14015,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="contentcontrol" class="package" transform="translate( 394.50000000000006 100.4)">
+    <g id="contentcontrol" class="package" transform="translate( 376.8 100.4)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color6.mouseover" end="s8-color6.mouseout"/>
      <rect class="package" x="0" width="67.19999999999999" height="82.63000000000001" y="0" style="fill:darkseagreen;"/>
      <text text-anchor="middle" class="package" width="67.19999999999999" x="33.599999999999994" y="81.63000000000002">Content Control Daemons</text>
@@ -14111,7 +14074,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="devicecontrol" class="package" transform="translate( 463.80000000000007 100.4)">
+    <g id="devicecontrol" class="package" transform="translate( 446.1 100.4)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color6.mouseover" end="s8-color6.mouseout"/>
      <rect class="package" x="0" width="95.1" height="82.63000000000001" y="0" style="fill:darkseagreen;"/>
      <text text-anchor="middle" class="package" width="95.1" x="47.55" y="81.63000000000002">Dev­ice Control Daemons</text>
@@ -14269,7 +14232,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="printing" class="package" transform="translate( 561.0000000000001 100.4)">
+    <g id="printing" class="package" transform="translate( 543.3000000000001 100.4)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color5.mouseover" end="s8-color5.mouseout"/>
      <rect class="package" x="0" width="57.900000000000006" height="82.63000000000001" y="0" style="fill:orchid;"/>
      <text text-anchor="middle" class="package" width="57.900000000000006" x="28.950000000000003" y="81.63000000000002">Printing</text>
@@ -14318,7 +14281,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="files" class="package" transform="translate( 506.4 0)">
+    <g id="files" class="package" transform="translate( 488.69999999999993 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
      <rect class="package" x="0" width="67.19999999999999" height="97.2" y="0" style="fill:lightpink;"/>
      <text text-anchor="middle" class="package" width="67.19999999999999" x="33.599999999999994" y="96.2">File Manager Apps</text>
@@ -14388,14 +14351,14 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="utils" class="package" transform="translate( 575.6999999999999 0)">
+    <g id="utils" class="package" transform="translate( 557.9999999999999 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
      <rect class="package" x="0" width="27.900000000000002" height="97.2" y="0" style="fill:lightpink;"/>
      <text text-anchor="middle" class="package" width="27.900000000000002" x="13.950000000000001" y="96.2">Utility Apps</text>
      <g transform="translate(0 3.2)">
       <g id="extras" transform="translate(0 0)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="27.900000000000002"/>
-       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="26.500000000000004" height="6.299999999999999">Extras</text>
+       <rect class="collection" x="0" y="0" height="15.6" width="18.6"/>
+       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="17.200000000000003" height="6.299999999999999">Extras</text>
        <g transform="translate(0 6.299999999999999)">
         <g id="about" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
@@ -14407,16 +14370,11 @@ function resized()
          <use width="9.3" height="9.3" x="9.3" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
          <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="13.950000000000001">Calculator App</text>
         </g>
-        <g id="converter" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="18.6" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="23.25">Unit Converter</text>
-        </g>
        </g>
       </g>
      </g>
     </g>
-    <g id="contacts" class="package" transform="translate( 621.0000000000001 0)">
+    <g id="contacts" class="package" transform="translate( 603.3000000000001 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
      <rect class="package" x="0" width="569.7000000000004" height="183.03" y="0" style="fill:lightpink;"/>
      <text text-anchor="middle" class="package" width="569.7000000000004" x="284.8500000000002" y="182.03">Contacts Apps</text>
@@ -14843,7 +14801,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="organizer" class="package" transform="translate( 1192.8000000000004 0)">
+    <g id="organizer" class="package" transform="translate( 1175.1000000000004 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
      <rect class="package" x="0" width="289.80000000000007" height="183.03" y="0" style="fill:lightpink;"/>
      <text text-anchor="middle" class="package" width="289.80000000000007" x="144.90000000000003" y="182.03">Organizer App Suite</text>
@@ -15259,7 +15217,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="messaging" class="package" transform="translate( 1484.7000000000005 0)">
+    <g id="messaging" class="package" transform="translate( 1467.0000000000005 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
      <rect class="package" x="0" width="356.7000000000001" height="183.03" y="0" style="fill:lightpink;"/>
      <text text-anchor="middle" class="package" width="356.7000000000001" x="178.35000000000005" y="182.03">Messag­ing Apps</text>
@@ -15604,7 +15562,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="commonemail" class="package" transform="translate( 1843.5000000000007 0)">
+    <g id="commonemail" class="package" transform="translate( 1825.8000000000006 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
      <rect class="package" x="0" width="148.8" height="183.03" y="0" style="fill:lightpink;"/>
      <text text-anchor="middle" class="package" width="148.8" x="74.4" y="182.03">Email Apps</text>
@@ -15828,7 +15786,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="conversations" class="package" transform="translate( 1994.4000000000008 0)">
+    <g id="conversations" class="package" transform="translate( 1976.7000000000007 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
      <rect class="package" x="0" width="106.50000000000001" height="97.2" y="0" style="fill:lightpink;"/>
      <text text-anchor="middle" class="package" width="106.50000000000001" x="53.25000000000001" y="96.2">Conversa­tion Apps</text>
@@ -15954,7 +15912,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="im" class="package" transform="translate( 2103.000000000001 0)">
+    <g id="im" class="package" transform="translate( 2085.3000000000006 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
      <rect class="package" x="0" width="27.900000000000002" height="97.2" y="0" style="fill:lightpink;"/>
      <text text-anchor="middle" class="package" width="27.900000000000002" x="13.950000000000001" y="96.2">Instant Msg. Apps</text>
@@ -15977,7 +15935,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="dictionary" class="package" transform="translate( 1994.4000000000008 100.4)">
+    <g id="dictionary" class="package" transform="translate( 1976.7000000000007 100.4)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color7.mouseover" end="s8-color7.mouseout"/>
      <rect class="package" x="0" width="33.3" height="82.63000000000001" y="0" style="fill:lightpink;"/>
      <text text-anchor="middle" class="package" width="33.3" x="16.65" y="81.63000000000002">Dictio­nary</text>
@@ -16000,7 +15958,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="camera" class="package" transform="translate( 2133.000000000001 0)">
+    <g id="camera" class="package" transform="translate( 2115.3000000000006 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
      <rect class="package" x="0" width="39.300000000000004" height="97.2" y="0" style="fill:#ffff00;"/>
      <text text-anchor="middle" class="package" width="39.300000000000004" x="19.650000000000002" y="96.2">Camera Apps</text>
@@ -16039,7 +15997,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="imgeditor" class="package" transform="translate( 2174.400000000001 0)">
+    <g id="imgeditor" class="package" transform="translate( 2156.7000000000007 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
      <rect class="package" x="0" width="113.69999999999999" height="97.2" y="0" style="fill:#ffff00;"/>
      <text text-anchor="middle" class="package" width="113.69999999999999" x="56.849999999999994" y="96.2">Image Editor Apps</text>
@@ -16144,92 +16102,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="videoeditor" class="package" transform="translate( 2290.200000000001 0)">
-     <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
-     <rect class="package" x="0" width="64.2" height="97.2" y="0" style="fill:#ffff00;"/>
-     <text text-anchor="middle" class="package" width="64.2" x="32.1" y="96.2">Video Editor Apps</text>
-     <g transform="translate(0 3.2)">
-      <g id="videoeditor_plat" transform="translate(0 0)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
-       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="14.2" height="6.299999999999999">Video Editor Apps Platform Inter­faces</text>
-       <g transform="translate(0 6.299999999999999)">
-        <g id="video_editor_engine_api" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
-         <use width="9.3" height="9.3" x="0" y="0" xlink:href="#Borderround" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">Video Editor Engine API</text>
-        </g>
-       </g>
-      </g>
-      <g id="videditor" transform="translate(17.7 0)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="46.5"/>
-       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="45.1" height="6.299999999999999">Video Editor</text>
-       <g transform="translate(0 6.299999999999999)">
-        <g id="videoeditorcommon" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="0" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">Video Editor Common</text>
-        </g>
-        <g id="videoeditoruicomponents" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="9.3" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="13.950000000000001">Video Editor UI Cmp.</text>
-        </g>
-        <g id="simplevideoeditor" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="18.6" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="23.25">Simple Video Editor</text>
-        </g>
-        <g id="simplecutvideo" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="27.900000000000002" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="32.550000000000004">Simple Cut Video</text>
-        </g>
-        <g id="videoprovider" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="37.2" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="41.85">Video Provider</text>
-        </g>
-       </g>
-      </g>
-      <g id="videoeditorengine" transform="translate(0 18.8)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="55.8"/>
-       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="54.4" height="6.299999999999999">Video Editor Engine</text>
-       <g transform="translate(0 6.299999999999999)">
-        <g id="audioeditorengine" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="0" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">Audio Editor Engine</text>
-        </g>
-        <g id="avcedit" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="9.3" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="13.950000000000001">AVC Editing</text>
-        </g>
-        <g id="h263decoder" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="18.6" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="23.25">H.263 Decoder</text>
-        </g>
-        <g id="mp3aacmaniplib" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="27.900000000000002" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="32.550000000000004">MP3 &amp; AAC Manipulation Library</text>
-        </g>
-        <g id="vedtranscoder" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="37.2" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="41.85">Video Editor Transcoder</text>
-        </g>
-        <g id="vedengine" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="46.5" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="51.15">Video Editor Engine</text>
-        </g>
-       </g>
-      </g>
-     </g>
-    </g>
-    <g id="videoplayer" class="package" transform="translate( 2356.5000000000014 0)">
+    <g id="videoplayer" class="package" transform="translate( 2272.500000000001 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
      <rect class="package" x="0" width="206.70000000000002" height="97.2" y="0" style="fill:#ffff00;"/>
      <text text-anchor="middle" class="package" width="178.8" x="117.30000000000001" y="11" dy="0.375em">Video Player Apps</text>
@@ -16479,7 +16352,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="photos" class="package" transform="translate( 2565.3000000000015 0)">
+    <g id="photos" class="package" transform="translate( 2481.300000000001 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
      <rect class="package" x="0" width="160.19999999999996" height="97.2" y="0" style="fill:#ffff00;"/>
      <text text-anchor="middle" class="package" width="160.19999999999996" x="80.09999999999998" y="96.2">Photos</text>
@@ -16583,7 +16456,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="musicplayer" class="package" transform="translate( 2727.6000000000017 0)">
+    <g id="musicplayer" class="package" transform="translate( 2643.600000000001 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
      <rect class="package" x="0" width="132.29999999999998" height="97.2" y="0" style="fill:#ffff00;"/>
      <text text-anchor="middle" class="package" width="132.29999999999998" x="66.14999999999999" y="96.2">Music Player Apps</text>
@@ -16693,7 +16566,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="radio" class="package" transform="translate( 2862.000000000002 0)">
+    <g id="radio" class="package" transform="translate( 2778.000000000001 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
      <rect class="package" x="0" width="55.8" height="97.2" y="0" style="fill:#ffff00;"/>
      <text text-anchor="middle" class="package" width="55.8" x="27.9" y="96.2">Radio Apps</text>
@@ -16736,13 +16609,13 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="podcatcher" class="package placeholder" transform="translate( 2919.900000000002 0)">
+    <g id="podcatcher" class="package placeholder" transform="translate( 2835.900000000001 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
      <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:#ffff00;"/>
      <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="15.600000000000001">Podcatcher</text>
      <g transform="translate(0 3.2)"/>
     </g>
-    <g id="voicerec" class="package" transform="translate( 3000.000000000002 0)">
+    <g id="voicerec" class="package" transform="translate( 2916.000000000001 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color9.mouseover" end="s8-color9.mouseout"/>
      <rect class="package" x="0" width="36.300000000000004" height="97.2" y="0" style="fill:#ffff00;"/>
      <text text-anchor="middle" class="package" width="36.300000000000004" x="18.150000000000002" y="96.2">Voice Recorder Apps</text>
@@ -16770,13 +16643,13 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="screensaver" class="package placeholder" transform="translate( 3038.400000000002 0)">
+    <g id="screensaver" class="package placeholder" transform="translate( 2954.400000000001 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="78" height="97.2" y="0" style="fill:orange;"/>
      <text text-anchor="middle" class="package" width="78" x="39" y="47.6" dy="0.375em" height="45.03">Screen Saver Apps</text>
      <g transform="translate(0 3.2)"/>
     </g>
-    <g id="homescreen" class="package" transform="translate( 3118.500000000002 0)">
+    <g id="homescreen" class="package" transform="translate( 3034.500000000001 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="113.69999999999999" height="97.2" y="0" style="fill:orange;"/>
      <text text-anchor="middle" class="package" width="113.69999999999999" x="56.849999999999994" y="96.2">Home Screen Apps</text>
@@ -16892,7 +16765,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="graphicsuis" class="package" transform="translate( 2029.8000000000009 100.4)">
+    <g id="graphicsuis" class="package" transform="translate( 2012.1000000000008 100.4)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="45.6" height="82.63000000000001" y="0" style="fill:orange;"/>
      <text text-anchor="middle" class="package" width="45.6" x="22.8" y="81.63000000000002">Graphics UIs</text>
@@ -16931,7 +16804,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="profile" class="package" transform="translate( 3234.300000000002 0)">
+    <g id="profile" class="package" transform="translate( 3150.300000000001 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="33.3" height="97.2" y="0" style="fill:orange;"/>
      <text text-anchor="middle" class="package" width="33.3" x="16.65" y="96.2">Profiles</text>
@@ -16965,7 +16838,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="speechsrv" class="package" transform="translate( 2077.500000000001 100.4)">
+    <g id="speechsrv" class="package" transform="translate( 2059.8000000000006 100.4)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="290.40000000000015" height="82.63000000000001" y="0" style="fill:orange;"/>
      <text text-anchor="middle" class="package" width="290.40000000000015" x="145.20000000000007" y="81.63000000000002">Speech Recog­nition UIs</text>
@@ -17245,7 +17118,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="homescreentools" class="package" transform="translate( 2370.000000000001 100.4)">
+    <g id="homescreentools" class="package" transform="translate( 2352.3000000000006 100.4)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="54" height="82.63000000000001" y="0" style="fill:orange;"/>
      <text text-anchor="middle" class="package" width="54" x="27" y="81.63000000000002">Home Screen Tools</text>
@@ -17278,7 +17151,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="webuis" class="package" transform="translate( 2426.100000000001 100.4)">
+    <g id="webuis" class="package" transform="translate( 2408.4000000000005 100.4)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color11.mouseover" end="s8-color11.mouseout"/>
      <rect class="package" x="0" width="36.300000000000004" height="82.63000000000001" y="0" style="fill:slateblue;"/>
      <text text-anchor="middle" class="package" width="36.300000000000004" x="18.150000000000002" y="81.63000000000002">Web UIs</text>
@@ -17333,7 +17206,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="jrt" class="package" transform="translate( 2464.500000000001 100.4)">
+    <g id="jrt" class="package" transform="translate( 2446.8000000000006 100.4)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color11.mouseover" end="s8-color11.mouseout"/>
      <rect class="package" x="0" width="27.900000000000002" height="82.63000000000001" y="0" style="fill:slateblue;"/>
      <text text-anchor="middle" class="package" width="27.900000000000002" x="13.950000000000001" y="81.63000000000002">Java Runtime</text>
@@ -17366,7 +17239,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="conntools" class="package" transform="translate( 2494.500000000001 100.4)">
+    <g id="conntools" class="package" transform="translate( 2476.8000000000006 100.4)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color4.mouseover" end="s8-color4.mouseout"/>
      <rect class="package" x="0" width="27.900000000000002" height="82.63000000000001" y="0" style="fill:moccasin;"/>
      <text text-anchor="middle" class="package" width="27.900000000000002" x="13.950000000000001" y="81.63000000000002">Connect­ivity Tools</text>
@@ -17390,10 +17263,10 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="rndtools" class="package" transform="translate( 2524.500000000001 100.4)">
+    <g id="rndtools" class="package" transform="translate( 2506.8000000000006 100.4)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color12.mouseover" end="s8-color12.mouseout"/>
-     <rect class="package" x="0" width="81.9" height="82.63000000000001" y="0" style="fill:darkgray;"/>
-     <text text-anchor="middle" class="package" width="81.9" x="40.95" y="81.63000000000002">R&amp;D tools</text>
+     <rect class="package" x="0" width="72.60000000000001" height="82.63000000000001" y="0" style="fill:darkgray;"/>
+     <text text-anchor="middle" class="package" width="72.60000000000001" x="36.300000000000004" y="81.63000000000002">R&amp;D tools</text>
      <g transform="translate(0 3.2)">
       <g id="creator" transform="translate(0 56.400000000000006)" class="collection placeholder">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
@@ -17442,44 +17315,38 @@ function resized()
        <g transform="translate(0 6.299999999999999)"/>
       </g>
       <g id="htiui" transform="translate(35.4 37.6)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="46.5"/>
-       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="45.1" height="6.299999999999999">Harmonized Test Inter­face UI</text>
+       <rect class="collection" x="0" y="0" height="15.6" width="37.2"/>
+       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="35.800000000000004" height="6.299999999999999">Harmonized Test Inter­face UI</text>
        <g transform="translate(0 6.299999999999999)">
-        <g id="HtiCommPlugins" class="component">
+        <g id="HtiServicePlugins" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
          <use width="9.3" height="9.3" x="0" y="0" xlink:href="#BorderShape2" style="fill:#32cd99;stroke-width: 0.5; "/>
          <use width="9.3" height="9.3" x="0" y="0" style="fill:url(#Patternstriped-diag-up); stroke: none; stroke-width: 0;" xlink:href="#BorderShape2"/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">HTI Comm Plugins</text>
-        </g>
-        <g id="HtiServicePlugins" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="9.3" y="0" xlink:href="#BorderShape2" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <use width="9.3" height="9.3" x="9.3" y="0" style="fill:url(#Patternstriped-diag-up); stroke: none; stroke-width: 0;" xlink:href="#BorderShape2"/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="13.950000000000001">HTI Service Plugins</text>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">HTI Service Plugins</text>
         </g>
         <g id="htidevicereboot" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="18.6" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <use width="9.3" height="9.3" x="18.6" y="0" style="fill:url(#Patternstriped-diag-up); stroke: none; stroke-width: 0;" xlink:href="#Borderbox"/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="23.25">HTI Dev­ice Reboot</text>
+         <use width="9.3" height="9.3" x="9.3" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
+         <use width="9.3" height="9.3" x="9.3" y="0" style="fill:url(#Patternstriped-diag-up); stroke: none; stroke-width: 0;" xlink:href="#Borderbox"/>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="13.950000000000001">HTI Dev­ice Reboot</text>
         </g>
         <g id="htistartupwait" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="27.900000000000002" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <use width="9.3" height="9.3" x="27.900000000000002" y="0" style="fill:url(#Patternstriped-diag-up); stroke: none; stroke-width: 0;" xlink:href="#Borderbox"/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="32.550000000000004">HTI Startup Wait</text>
+         <use width="9.3" height="9.3" x="18.6" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
+         <use width="9.3" height="9.3" x="18.6" y="0" style="fill:url(#Patternstriped-diag-up); stroke: none; stroke-width: 0;" xlink:href="#Borderbox"/>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="23.25">HTI Startup Wait</text>
         </g>
         <g id="htiadmin" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="37.2" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <use width="9.3" height="9.3" x="37.2" y="0" style="fill:url(#Patternstriped-diag-up); stroke: none; stroke-width: 0;" xlink:href="#Borderbox"/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="41.85">HTI Admin</text>
+         <use width="9.3" height="9.3" x="27.900000000000002" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
+         <use width="9.3" height="9.3" x="27.900000000000002" y="0" style="fill:url(#Patternstriped-diag-up); stroke: none; stroke-width: 0;" xlink:href="#Borderbox"/>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="32.550000000000004">HTI Admin</text>
         </g>
        </g>
       </g>
      </g>
     </g>
-    <g id="helps" class="package" transform="translate( 3269.700000000002 0)">
+    <g id="helps" class="package" transform="translate( 3185.700000000001 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="27.900000000000002" height="183.03" y="0" style="fill:orange;"/>
      <text text-anchor="middle" class="package" width="27.900000000000002" x="13.950000000000001" y="182.03">Help Apps</text>
@@ -17514,7 +17381,7 @@ function resized()
       </g>
      </g>
     </g>
-    <g id="techview" class="package" transform="translate( 3299.700000000002 0)">
+    <g id="techview" class="package" transform="translate( 3215.700000000001 0)">
      <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s8-color10.mouseover" end="s8-color10.mouseout"/>
      <rect class="package" x="0" width="27.900000000000002" height="183.03" y="0" style="fill:orange;"/>
      <text text-anchor="middle" class="package" width="27.900000000000002" x="13.950000000000001" y="182.03">Techview</text>
@@ -17619,7 +17486,7 @@ function resized()
       </g>
       <g id="s8-color9">
        <rect class="cbox" height="3.1" width="15.5" fill="#ffff00" x="77" y="3.1"/>
-       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="84.75" y="4.65">Multimedia Apps (9)</text>
+       <text text-anchor="middle" class="cbox" width="15.5" dy="0.375em" x="84.75" y="4.65">Multimedia Apps (8)</text>
       </g>
       <g id="s8-color10">
        <rect class="cbox" height="3.1" width="15.5" fill="orange" x="15" y="6.2"/>
@@ -17659,7 +17526,7 @@ function resized()
       <g id="s4-overlay0" class="cmp placeholder">
        <use width="9.3" height="9.3" x="0" y="0" xlink:href="#Borderbox" style="fill:grey;stroke-width: 0.5;"/>
        <use width="9.3" height="9.3" x="0" y="0" style="fill:url(#Patternstriped-diag-up); stroke: none; stroke-width: 0;" xlink:href="#Borderbox"/>
-       <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">Test Compo­nent (139)</text>
+       <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">Test Compo­nent (138)</text>
       </g>
      </g>
     </g>
@@ -17692,9 +17559,9 @@ function resized()
      </g>
     </g>
     <text text-anchor="middle" class="label" dy="0.375em" x="250.875" y="4.65">
-     <tspan dy="-1em" x="250.875">109 Packages</tspan>
-     <tspan dy="1em" x="250.875">599 Collections</tspan>
-     <tspan dy="1em" x="250.875">2541 Components</tspan>
+     <tspan dy="-1em" x="250.875">108 Packages</tspan>
+     <tspan dy="1em" x="250.875">594 Collections</tspan>
+     <tspan dy="1em" x="250.875">2522 Components</tspan>
     </text>
    </g>
   </g>
