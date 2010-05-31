@@ -36,7 +36,7 @@ http://developer.symbian.org/oss/FCL/sf/app/videoeditor/,/sf/app/videoeditor,bra
 http://developer.symbian.org/oss/FCL/sf/app/videoplayer/,/sf/app/videoplayer,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/videotelephony/,/sf/app/videotelephony,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/webuis/,/sf/app/webuis,branch,default,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/accesssec/,/sf/mw/accesssec,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/accesssec/,/sf/mw/accesssec,changeset,093cf0757204,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/appinstall/,/sf/mw/appinstall,branch,default,modified-FCL
 http://developer.symbian.org/oss/FCL/sf/mw/appsupport/,/sf/mw/appsupport,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/btservices/,/sf/mw/btservices,branch,default,layers.sysdef.xml
