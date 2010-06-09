@@ -24,7 +24,7 @@ http://developer.symbian.org/oss/MCL/sf/app/homescreentools/,/sf/app/homescreent
 http://developer.symbian.org/oss/MCL/sf/app/im/,/sf/app/im,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/imgeditor/,/sf/app/imgeditor,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/iptelephony/,/sf/app/iptelephony,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/app/jrt/,/sf/app/jrt,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/jrt/,/sf/app/jrt,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/location/,/sf/app/location,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/messaging/,/sf/app/messaging,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/mmsharinguis/,/sf/app/mmsharinguis,branch,RCL_3,layers.sysdef.xml
