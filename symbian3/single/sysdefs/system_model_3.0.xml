@@ -1450,12 +1450,8 @@
 
 
 
-<component id="networkingintegrationtest" name="Networking Integration Test" introduced="ER5" purpose="development">
-<unit bldFile="/os/networkingsrv/networkingtestandutils/networkingintegrationtest/Group" mrp="/os/networkingsrv/networkingtestandutils/networkingintegrationtest/Group/networking_integrationtest.mrp"/>
-</component>
-<component id="networkingperformancemeasurementtools" name="Networking Performance Measurement Tools" introduced="^3" purpose="development">
-<unit bldFile="/os/networkingsrv/networkingtestandutils/networkingperformancemeasurementtools/group" mrp="/os/networkingsrv/networkingtestandutils/networkingperformancemeasurementtools/group/networking_netperf.mrp"/>
-</component>
+
+
 </collection>
 <collection id="networkingsrv_info" name="Networking Services Info" level="app-if">
 <component id="networkingrom" name="Networking ROM" purpose="mandatory">
@@ -1633,9 +1629,7 @@
 <component id="multimodetsy" name="Multimode TSY" purpose="development" class="plugin">
 <unit bldFile="/os/cellularsrv/telephonyserverplugins/multimodetsy/group" mrp="/os/cellularsrv/telephonyserverplugins/multimodetsy/group/telephony_mmtsy.mrp"/>
 </component>
-<component id="simtsy" name="SIM TSY" introduced="7.0" purpose="development" class="plugin">
-<unit bldFile="/os/cellularsrv/telephonyserverplugins/simtsy/group" mrp="/os/cellularsrv/telephonyserverplugins/simtsy/group/telephony_simtsy.mrp"/>
-</component>
+
 <component id="ctsydispatchlayer" name="C-TSY Dispatch Layer" introduced="^3" purpose="optional" class="plugin">
 <unit bldFile="/os/cellularsrv/telephonyserverplugins/ctsydispatchlayer/group" mrp="/os/cellularsrv/telephonyserverplugins/ctsydispatchlayer/group/telephony_dispatcher.mrp"/>
 </component>
@@ -10967,9 +10961,9 @@
 <unit bldFile="/app/jrt/jrt_plat/java_debug_api/build"/>
 </component>
 </collection>
-<collection id="java_stubs" name="Java Stubs" level="util">
-<component id="java_stubs_build" filter="s60" name="JRT Stubs Build">
-<unit bldFile="/app/jrt/java_stubs/group"/>
+<collection id="java_build" name="JRT Build" level="util">
+<component id="java_build_sf" filter="sf_build" name="JRT Build for Symbian Foundation">
+<unit bldFile="/app/jrt/group/sf"/>
 </component>
 </collection>
 </package>

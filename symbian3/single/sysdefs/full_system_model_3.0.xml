@@ -1493,10 +1493,10 @@
 <component id="ipanalyzer" name="IP Analyzer" deprecated="^3" introduced="7.0" purpose="development" filter="test">
 <unit mrp="/os/networkingsrv/networkingtestandutils/ipanalyzer/group/networking_iprotor.mrp" bldFile="/os/networkingsrv/networkingtestandutils/ipanalyzer/group"/>
 </component>
-<component id="networkingintegrationtest" name="Networking Integration Test" introduced="ER5" purpose="development">
+<component id="networkingintegrationtest" name="Networking Integration Test" introduced="ER5" purpose="development" filter="test">
 <unit bldFile="/os/networkingsrv/networkingtestandutils/networkingintegrationtest/Group" mrp="/os/networkingsrv/networkingtestandutils/networkingintegrationtest/Group/networking_integrationtest.mrp"/>
 </component>
-<component id="networkingperformancemeasurementtools" name="Networking Performance Measurement Tools" introduced="^3" purpose="development">
+<component id="networkingperformancemeasurementtools" name="Networking Performance Measurement Tools" introduced="^3" purpose="development" filter="test">
 <unit bldFile="/os/networkingsrv/networkingtestandutils/networkingperformancemeasurementtools/group" mrp="/os/networkingsrv/networkingtestandutils/networkingperformancemeasurementtools/group/networking_netperf.mrp"/>
 </component>
 </collection>
@@ -1680,7 +1680,7 @@
 <component id="multimodetsy" name="Multimode TSY" purpose="development" class="plugin">
 <unit bldFile="/os/cellularsrv/telephonyserverplugins/multimodetsy/group" mrp="/os/cellularsrv/telephonyserverplugins/multimodetsy/group/telephony_mmtsy.mrp"/>
 </component>
-<component id="simtsy" name="SIM TSY" introduced="7.0" purpose="development" class="plugin">
+<component id="simtsy" name="SIM TSY" introduced="7.0" purpose="development" class="plugin" filter="test">
 <unit bldFile="/os/cellularsrv/telephonyserverplugins/simtsy/group" mrp="/os/cellularsrv/telephonyserverplugins/simtsy/group/telephony_simtsy.mrp"/>
 </component>
 <component id="ctsydispatchlayer" name="C-TSY Dispatch Layer" introduced="^3" purpose="optional" class="plugin">
@@ -11135,9 +11135,9 @@
 <unit bldFile="/app/jrt/jrt_plat/java_debug_api/build"/>
 </component>
 </collection>
-<collection id="java_stubs" name="Java Stubs" level="util">
-<component id="java_stubs_build" filter="s60" name="JRT Stubs Build">
-<unit bldFile="/app/jrt/java_stubs/group"/>
+<collection id="java_build" name="JRT Build" level="util">
+<component id="java_build_sf" filter="sf_build" name="JRT Build for Symbian Foundation">
+<unit bldFile="/app/jrt/group/sf"/>
 </component>
 </collection>
 </package>

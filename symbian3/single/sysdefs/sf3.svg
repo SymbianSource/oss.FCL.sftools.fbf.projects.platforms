@@ -2974,8 +2974,8 @@ function resized()
        </g>
       </g>
       <g id="networkingtestandutils" transform="translate(17.7 0)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="27.900000000000002"/>
-       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="26.500000000000004" height="6.299999999999999">Network­ing Test &amp; Utils</text>
+       <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
+       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="14.2" height="6.299999999999999">Network­ing Test &amp; Utils</text>
        <g transform="translate(0 6.299999999999999)">
         <g id="networkingexamples" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
@@ -2983,21 +2983,9 @@ function resized()
          <use width="9.3" height="9.3" x="0" y="0" style="fill:url(#Patternstriped-diag-up); stroke: none; stroke-width: 0;" xlink:href="#Borderbox"/>
          <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">Network­ing Examples</text>
         </g>
-        <g id="networkingintegrationtest" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
-         <use width="9.3" height="9.3" x="9.3" y="0" xlink:href="#Borderbox" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
-         <use width="9.3" height="9.3" x="9.3" y="0" style="fill:url(#Patternstriped-diag-up); stroke: none; stroke-width: 0;" xlink:href="#Borderbox"/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="13.950000000000001">Network­ing Integ Test</text>
-        </g>
-        <g id="networkingperformancemeasurementtools" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
-         <use width="9.3" height="9.3" x="18.6" y="0" xlink:href="#Borderbox" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
-         <use width="9.3" height="9.3" x="18.6" y="0" style="fill:url(#Patternstriped-diag-up); stroke: none; stroke-width: 0;" xlink:href="#Borderbox"/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="23.25">Network­ing Perfor­mance Measurement Tools</text>
-        </g>
        </g>
       </g>
-      <g id="networkingsrv_info" transform="translate(47.7 0)" class="collection">
+      <g id="networkingsrv_info" transform="translate(35.4 0)" class="collection">
        <rect class="collection" x="0" y="0" height="15.6" width="27.900000000000002"/>
        <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="26.500000000000004" height="6.299999999999999">Network­ing Services Info</text>
        <g transform="translate(0 6.299999999999999)">
@@ -3312,8 +3300,8 @@ function resized()
        </g>
       </g>
       <g id="telephonyserverplugins" transform="translate(0 56.400000000000006)" class="collection">
-       <rect class="collection" x="0" y="0" height="15.6" width="55.8"/>
-       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="54.4" height="6.299999999999999">Telephony Server Plugins</text>
+       <rect class="collection" x="0" y="0" height="15.6" width="46.5"/>
+       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="45.1" height="6.299999999999999">Telephony Server Plugins</text>
        <g transform="translate(0 6.299999999999999)">
         <g id="common_tsy" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
@@ -3332,21 +3320,15 @@ function resized()
          <use width="9.3" height="9.3" x="18.6" y="0" style="fill:url(#Patternstriped-diag-up); stroke: none; stroke-width: 0;" xlink:href="#BorderShape2"/>
          <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="23.25">Multi­mode TSY</text>
         </g>
-        <g id="simtsy" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
-         <use width="9.3" height="9.3" x="27.900000000000002" y="0" xlink:href="#BorderShape2" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
-         <use width="9.3" height="9.3" x="27.900000000000002" y="0" style="fill:url(#Patternstriped-diag-up); stroke: none; stroke-width: 0;" xlink:href="#BorderShape2"/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="32.550000000000004">SIM TSY</text>
-        </g>
         <g id="ctsydispatchlayer" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
-         <use width="9.3" height="9.3" x="37.2" y="0" xlink:href="#BorderShape2" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="41.85">C-TSY Dispatch Layer</text>
+         <use width="9.3" height="9.3" x="27.900000000000002" y="0" xlink:href="#BorderShape2" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="32.550000000000004">C-TSY Dispatch Layer</text>
         </g>
         <g id="simatktsy" class="component">
          <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
-         <use width="9.3" height="9.3" x="46.5" y="0" xlink:href="#BorderShape2" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="51.15">SIMATK TSY</text>
+         <use width="9.3" height="9.3" x="37.2" y="0" xlink:href="#BorderShape2" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="41.85">SIMATK TSY</text>
         </g>
        </g>
       </g>
@@ -19448,14 +19430,14 @@ function resized()
         </g>
        </g>
       </g>
-      <g id="java_stubs" transform="translate(0 56.400000000000006)" class="collection">
+      <g id="java_build" transform="translate(0 56.400000000000006)" class="collection">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
-       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="14.2" height="6.299999999999999">Java Stubs</text>
+       <text text-anchor="start" dy="1em" class="collection" y="0" x="1.4" width="14.2" height="6.299999999999999">JRT Build</text>
        <g transform="translate(0 6.299999999999999)">
-        <g id="java_stubs_build" class="component">
-         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color2.mouseover" end="s9-color2.mouseout"/>
-         <use width="9.3" height="9.3" x="0" y="0" xlink:href="#Borderbox" style="fill:#32cd99;stroke-width: 0.5; "/>
-         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">JRT Stubs Build</text>
+        <g id="java_build_sf" class="component">
+         <set attributeName="opacity" attributeType="XML" to="0.5" fill="remove" begin="s9-color3.mouseover" end="s9-color3.mouseout"/>
+         <use width="9.3" height="9.3" x="0" y="0" xlink:href="#Borderbox" style="fill:rgb(93,155,205);stroke-width: 0.5; "/>
+         <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">JRT Build for Symbian Foundation</text>
         </g>
        </g>
       </g>
@@ -19901,7 +19883,7 @@ function resized()
       <g id="s4-overlay0" class="cmp placeholder">
        <use width="9.3" height="9.3" x="0" y="0" xlink:href="#Borderbox" style="fill:grey;stroke-width: 0.5;"/>
        <use width="9.3" height="9.3" x="0" y="0" style="fill:url(#Patternstriped-diag-up); stroke: none; stroke-width: 0;" xlink:href="#Borderbox"/>
-       <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">Test Compo­nent (167)</text>
+       <text text-anchor="middle" dy="0.375em" class="component" y="4.800000000000001" width="9.3" height="9.3" x="4.65">Test Compo­nent (164)</text>
       </g>
      </g>
     </g>
@@ -19936,7 +19918,7 @@ function resized()
     <text text-anchor="middle" class="label" dy="0.375em" x="265.17499999999995" y="4.65">
      <tspan dy="-1em" x="265.17499999999995">107 Packages</tspan>
      <tspan dy="1em" x="265.17499999999995">658 Collections</tspan>
-     <tspan dy="1em" x="265.17499999999995">2882 Components</tspan>
+     <tspan dy="1em" x="265.17499999999995">2879 Components</tspan>
     </text>
    </g>
   </g>
