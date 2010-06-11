@@ -6835,26 +6835,6 @@
 <unit bldFile="mw/homescreensrv/contentstorage/caclient" qmakeArgs="-r" proFile="caclient.pro"/>
 </component>
 </collection>
-<collection name="contentpublishingsrv" long-name="Content Publishing Service" level="server">
-<component name="contentpublishingdebug" filter="s60" long-name="Content Publishing Debug">
-<!-- need to move this component outside of contentpublishingutils and into separate component directory -->
-<!-- <unit bldFile="contentpublishingsrv/contentpublishingutils/contentpublishingdebug/group"/> -->
-</component>
-<component name="contentpublishingutils" filter="s60" long-name="Content Publishing Utils">
-<unit bldFile="mw/homescreensrv/contentpublishingsrv/contentpublishingutils/group"/>
-</component>
-<component name="contentpublishingserver" filter="s60" long-name="Content Publishing Server">
-<unit bldFile="mw/homescreensrv/contentpublishingsrv/contentpublishingserver/group"/>
-</component>
-<component name="contentharvester" filter="s60" long-name="Content Harvester">
-<unit bldFile="mw/homescreensrv/contentpublishingsrv/contentharvester/group"/>
-</component>
-<component name="contentpublishingsrv_rom" filter="s60" long-name="Content Publishing Service ROM">
-<!-- need to remove links to the above components and just contain the IBY (or move the IBY into another component). 
-      		If keeping, it need to move down a directory.-->
-<unit bldFile="mw/homescreensrv/contentpublishingsrv/group"/>
-</component>
-</collection>
 <collection name="homescreensrv_plat" long-name="Home Screen Services Platform Interfaces" level="specific">
 <component name="homescreensrv_plat_build" long-name="Home Screen Services Platform Interfaces build" introduced="^4">
 <unit bldFile="mw/homescreensrv/homescreensrv_plat" qmakeArgs="-r" proFile="homescreensrv_plat.pro"/>
@@ -6869,11 +6849,6 @@
 <component name="hswidgetmodel_api" long-name="HS Widget Model API" filter="s60" introduced="^4" class="api"/>
 <component name="statemodel_api" long-name="State Model API" filter="s60" introduced="^4" class="api"/>
 <component name="homescreen_information_api" long-name="Homescreen Information API" filter="s60" introduced="^4" class="api"/>
-</collection>
-<collection name="screensavermodel" long-name="Screensaver Model" level="specific">
-<component name="screensavermodel_build" long-name="Screensaver Model Build" introduced="^4">
-<unit bldFile="mw/homescreensrv/screensavermodel" qmakeArgs="-r" proFile="screensavermodel.pro"/>
-</component>
 </collection>
 <collection name="hsactivityfw" long-name="Activity Framework" level="activityfw">
 <component name="hsactivityfw_build" long-name="Activity Framework Build" introduced="^4">
