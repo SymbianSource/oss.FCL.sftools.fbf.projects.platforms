@@ -6823,6 +6823,9 @@
 <component name="ai_plugin_information_api" long-name="AI Plug-in Information API" filter="s60" class="api">
 <unit bldFile="mw/homescreensrvlegacy/ai_plugin_information_api/group" proFile="group.pro"/>
 </component>
+<component name="content_harvester_plugin_api" long-name="Content Harvester Plug-in API" filter="s60" class="api">
+<unit bldFile="mw/homescreensrvlegacy/content_harvester_plugin_api/group"/>
+</component>
 </collection>
 </block>
 <block name="appinstall" level="generic" long-name="Application Installation" levels="tool framework generic api">
