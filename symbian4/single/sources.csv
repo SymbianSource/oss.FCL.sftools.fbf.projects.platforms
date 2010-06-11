@@ -33,7 +33,6 @@ http://developer.symbian.org/oss/FCL/sf/app/recents/,/sf/app/recents,branch,defa
 http://developer.symbian.org/oss/FCL/sf/app/settingsuis/,/sf/app/settingsuis,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/search/,/sf/app/search,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/techview/,/sf/app/techview,branch,default,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/app/videoeditor/,/sf/app/videoeditor,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/videoplayer/,/sf/app/videoplayer,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/videotelephony/,/sf/app/videotelephony,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/webuis/,/sf/app/webuis,branch,default,layers.sysdef.xml
@@ -67,7 +66,6 @@ http://developer.symbian.org/oss/FCL/sf/mw/mmappfw/,/sf/mw/mmappfw,branch,defaul
 http://developer.symbian.org/oss/FCL/sf/mw/mmmw/,/sf/mw/mmmw,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/netprotocols/,/sf/mw/netprotocols,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/networkingdm/,/sf/mw/networkingdm,branch,default,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/opensrv/,/sf/mw/opensrv,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/platformthemes/,/sf/mw/platformthemes,changeset,28e8d4c0e55e,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/phonesrv/,/sf/mw/phonesrv,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/qt/,/sf/mw/qt,branch,default,layers.sysdef.xml
