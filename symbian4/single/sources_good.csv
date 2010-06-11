@@ -38,6 +38,7 @@ http://developer.symbian.org/oss/FCL/sf/app/webuis/,/sf/app/webuis,changeset,f42
 http://developer.symbian.org/oss/FCL/sf/mw/accesssec/,/sf/mw/accesssec,changeset,093cf0757204,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/appinstall/,/sf/mw/appinstall,changeset,4a49a8c90306,modified-FCL
 http://developer.symbian.org/oss/FCL/sf/mw/appsupport/,/sf/mw/appsupport,changeset,b3552d9d77dd,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/browser/,/sf/mw/browser,changeset,fa475d6462b2,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/btservices/,/sf/mw/btservices,changeset,19bd632b5100,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/camerasrv/,/sf/mw/camerasrv,changeset,69c8bb60738b,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/classicui/,/sf/mw/classicui,changeset,75713bee6484,layers.sysdef.xml
