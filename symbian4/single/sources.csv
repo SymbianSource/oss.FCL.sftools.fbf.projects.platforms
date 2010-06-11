@@ -86,6 +86,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/usbservices/,/sf/mw/usbservices,branc
 http://developer.symbian.org/oss/FCL/sf/mw/videoutils/,/sf/mw/videoutils,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/vpnclient/,/sf/mw/vpnclient,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/web/,/sf/mw/web,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/webruntime/,/sf/mw/webruntime,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/websrv/,/sf/mw/websrv,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/wirelessacc/,/sf/mw/wirelessacc,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/boardsupport/,/sf/os/boardsupport,branch,default,layers.sysdef.xml

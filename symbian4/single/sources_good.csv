@@ -86,6 +86,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/usbservices/,/sf/mw/usbservices,chang
 http://developer.symbian.org/oss/FCL/sf/mw/videoutils/,/sf/mw/videoutils,changeset,fbe6578feb8b,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/vpnclient/,/sf/mw/vpnclient,changeset,5aacbb121f34,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/web/,/sf/mw/web,changeset,92a765b5b3e7,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/webruntime/,/sf/mw/webruntime,changeset,36b93dc584b9,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/websrv/,/sf/mw/websrv,changeset,abb636afedf7,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/wirelessacc/,/sf/mw/wirelessacc,changeset,6480c77e38d0,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/boardsupport/,/sf/os/boardsupport,changeset,cf4c5641c6dd,layers.sysdef.xml
