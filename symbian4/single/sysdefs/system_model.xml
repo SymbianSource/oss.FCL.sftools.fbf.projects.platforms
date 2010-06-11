@@ -5261,9 +5261,6 @@
 <component name="dun" long-name="Dial Up Networking">
 <unit bldFile="mw/shortlinkconn/localconnectivityservice/dun/group"/>
 </component>
-<component name="lcstylustap" long-name="LC Stylus Tap Plugins" plugin="Y">
-<unit bldFile="mw/shortlinkconn/localconnectivityservice/lcstylustap/group"/>
-</component>
 <component name="generichid" long-name="Generic HID">
 <unit bldFile="mw/shortlinkconn/localconnectivityservice/generichid/group"/>
 </component>
