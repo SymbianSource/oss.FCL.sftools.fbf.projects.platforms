@@ -25,6 +25,9 @@
     <!-- default build configurations -->
     <property name="sf.spec.sbs.config" value="winscw_udeb.whatlog" />
     <property name="sf.spec.sbs.tools.config" value="tools2.whatlog" />
+
+    <!-- default localisation variant -->
+    <property name="sf.spec.bldmefirst.s60.variant" value="engineering" />
     
     <!-- prevent trying to access default SF servers -->
     <property name="sf.spec.smoketest.enable" value="false" />
