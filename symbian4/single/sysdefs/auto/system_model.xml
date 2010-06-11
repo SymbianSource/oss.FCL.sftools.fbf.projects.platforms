@@ -3352,7 +3352,26 @@
 </component>
 </collection>
 </block>
-<block name="accesssec" level="generic"/>
+<block name="accesssec" level="generic" long-name="Access Security" levels="plugin framework server generic specific">
+<collection name="accesssec_plat" long-name="Access Security Platform Interfaces" level="specific">
+<component name="eap_vpn_api" long-name="EAP VPN API" filter="s60" class="api">
+<unit bldFile="mw/accesssec/accesssec_plat/eap_vpn_api/group"/>
+</component>
+<component name="eap_type_api" long-name="EAP Type API" filter="s60" class="api">
+<unit bldFile="mw/accesssec/accesssec_plat/eap_type_api/group"/>
+</component>
+</collection>
+<collection name="securitysettings" long-name="Security Settings QT" level="generic">
+<component name="securitysettings_build" long-name="Security Settings Build" introduced="^4">
+<unit bldFile="mw/accesssec/securitysettings" qmakeArgs="-r" proFile="securitysettings.pro"/>
+</component>
+</collection>
+<collection name="eapol" long-name="EAPOL" level="framework">
+<component name="eapol_framework" filter="s60" long-name="EAPOL Framework" introduced="9.2">
+<unit bldFile="mw/accesssec/eapol/eapol_framework/eapol_symbian/group"/>
+</component>
+</collection>
+</block>
 <block name="ipconnmgmt" level="generic" long-name="IP Connectivity Management" levels="plugin framework server utils api">
 <collection name="ipcm_plat" long-name="IP Connectivity Management Platform Interfaces" level="api">
 <component name="access_point_engine_misc_api" long-name="Access Point Engine Misc API" filter="s60" class="api">
@@ -6801,6 +6820,9 @@
 </component>
 <component name="ai_plugin_information_api" long-name="AI Plug-in Information API" filter="s60" class="api">
 <unit bldFile="mw/homescreensrvlegacy/ai_plugin_information_api/group" proFile="group.pro"/>
+</component>
+<component name="content_harvester_plugin_api" long-name="Content Harvester Plug-in API" filter="s60" class="api">
+<unit bldFile="mw/homescreensrvlegacy/content_harvester_plugin_api/group"/>
 </component>
 </collection>
 </block>
