@@ -7899,9 +7899,6 @@
 <component name="regionalplugins" long-name="Regional Plugins" filter="s60" introduced="^4" plugin="Y">
 <unit bldFile="app/organizer/calendarui/regionalplugins" proFile="regionalplugins.pro"/>
 </component>
-<component name="caldav" filter="sf_build" long-name="CalDAV" introduced="^3" plugin="Y">
-<unit bldFile="app/organizer/calendarui/caldav/group"/>
-</component>
 </collection>
 <collection name="notes" long-name="Notes" level="ui">
 <component name="noteseditor" filter="s60" long-name="Notes Editor" introduced="^4">
@@ -7923,9 +7920,6 @@
 </component>
 <component name="calenimp" filter="s60" long-name="Calendar Import Wrapper" introduced="7.0s">
 <unit bldFile="app/organizer/calendarengines/calenimp/group"/>
-</component>
-<component name="caldavsrv" filter="sf_build" long-name="CalDAV Server" introduced="^3">
-<unit bldFile="app/organizer/calendarengines/caldav/group"/>
 </component>
 </collection>
 <collection name="clock" long-name="Clock" level="app">
