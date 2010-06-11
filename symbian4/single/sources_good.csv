@@ -26,6 +26,7 @@ http://developer.symbian.org/oss/FCL/sf/app/musicplayer/,/sf/app/musicplayer,cha
 http://developer.symbian.org/oss/FCL/sf/app/organizer/,/sf/app/organizer,changeset,c690c592b381,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/phone/,/sf/app/phone,changeset,14cdbae33453,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/photos/,/sf/app/photos,changeset,e7ef9a1d6228,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/podcatcher/,/sf/app/podcatcher,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/printing/,/sf/app/printing,changeset,2275db202402,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/radio/,/sf/app/radio,changeset,6bac020dcc51,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/recents/,/sf/app/recents,changeset,7a485daed50d,layers.sysdef.xml
