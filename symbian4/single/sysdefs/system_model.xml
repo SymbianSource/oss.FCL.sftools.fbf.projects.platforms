@@ -5871,11 +5871,6 @@
 <unit bldFile="mw/hb" proFile="hb.pro" qmakeArgs="-r MMP_RULES+=EXPORTUNFROZEN"/>
 </component>
 </collection>
-<collection name="hb_test" long-name="Orbit Test" level="test">
-<component name="hb_fute" filter="hb_fute_app" long-name="Fute" introduced="^4">
-<unit bldFile="mw/hb/tsrc/fute" proFile="fute.pro" qmakeArgs="-r MMP_RULES+=EXPORTUNFROZEN"/>
-</component>
-</collection>
 </block>
 <block name="classicui" level="generic" long-name="Classic UI" levels="base support server generic specific">
 <collection name="classicui_plat" long-name="Classic UI Platform Interfaces" level="specific">
