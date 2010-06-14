@@ -4301,9 +4301,9 @@ function resized()
        <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">JRT Platform Interfaces</text>
        <g transform="translate(0 6.299999999999999)"/>
       </g>
-      <g id="java_stubs" transform="translate(0 56.400000000000006)" class="collection">
+      <g id="java_build" transform="translate(0 56.400000000000006)" class="collection">
        <rect class="collection" x="0" y="0" height="15.6" width="15.6"/>
-       <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">Java Stubs</text>
+       <text text-anchor="middle" dy="0.375em" class="collection" y="7.8" x="7.8" width="14.2" height="15.6">JRT Build</text>
        <g transform="translate(0 6.299999999999999)"/>
       </g>
      </g>

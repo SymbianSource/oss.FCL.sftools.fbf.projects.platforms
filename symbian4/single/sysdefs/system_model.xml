@@ -444,174 +444,6 @@
 <component name="ossrv_exceptions_api" long-name="Generic OS Services Exceptions API" filter="s60" class="api">
 <unit bldFile="os/ossrv/ossrv_pub/exceptions/group"/>
 </component>
-<component name="gboxed" long-name="GBoxed API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/gboxed/group"/>
-</component>
-<component name="glib_arrays" long-name="Glib Arrays API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_arrays/group"/>
-</component>
-<component name="glib_asynchronous_queues" long-name="Glib Asynchronous Queues API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_asynchronous_queues/group"/>
-</component>
-<component name="glib_atomic_operations" long-name="Glib Atomic Operations API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_atomic_operations/group"/>
-</component>
-<component name="glib_automatic_string_completion" long-name="Glib Automatic String Completion API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_automatic_string_completion/group"/>
-</component>
-<component name="glib_balanced_binary_trees" long-name="Glib Balanced Binary Trees API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_balanced_binary_trees/group"/>
-</component>
-<component name="glib_basic_types" long-name="Glib Basic Types API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_basic_types/group"/>
-</component>
-<component name="glib_caches" long-name="Glib Caches API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_caches/group"/>
-</component>
-<component name="glib_character_set_conversion" long-name="Glib Character Set Conversion API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_character_set_conversion/group"/>
-</component>
-<component name="glib_closures" long-name="Glib Closures API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_closures/group"/>
-</component>
-<component name="glib_commandline_option_parser" long-name="Glib Command Line Option Parser API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_commandline_option_parser/group"/>
-</component>
-<component name="glib_datasets" long-name="Glib Datasets API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_datasets/group"/>
-</component>
-<component name="glib_date_and_time_functions" long-name="Glib Date and Time Functions API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_date_and_time_functions/group"/>
-</component>
-<component name="glib_doubleended_queues" long-name="Glib Double-ended Queues API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_doubleended_queues/group"/>
-</component>
-<component name="glib_doublylinked_lists" long-name="Glib Doubly-Linked Lists API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_doublylinked_lists/group"/>
-</component>
-<component name="glib_dynamic_loading_of_modules" long-name="Glib Dynamic Loading of Modules API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_dynamic_loading_of_modules/group"/>
-</component>
-<component name="glib_enums_and_flags" long-name="Glib Enums and Flags API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_enums_and_flags/group"/>
-</component>
-<component name="glib_error_reporting" long-name="Glib Error Reporting API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_error_reporting/group"/>
-</component>
-<component name="glib_file_utilities" long-name="Glib File Utilities API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_file_utilities/group"/>
-</component>
-<component name="glib_generic_values" long-name="Glib Generic Values API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_generic_values/group"/>
-</component>
-<component name="glib_globstyle_pattern_matching" long-name="Glib Glob-Style Pattern Matching API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_globstyle_pattern_matching/group"/>
-</component>
-<component name="glib_hash_tables" long-name="Glib Hash Tables API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_hash_tables/group"/>
-</component>
-<component name="glib_hook_functions" long-name="Glib Hook Functions API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_hook_functions/group"/>
-</component>
-<component name="glib_internationalization" long-name="Glib  Internationalization API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_internationalization/group"/>
-</component>
-<component name="glib_io_channels" long-name="Glib I/O Channels API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_io_channels/group"/>
-</component>
-<component name="glib_keyvalue_file_parser" long-name="Glib Key-Value File Parser API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_keyvalue_file_parser/group"/>
-</component>
-<component name="glib_lexical_scanner" long-name="Glib Lexical Scanner API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_lexical_scanner/group"/>
-</component>
-<component name="glib_main_event_loop" long-name="Glib Main Event Loop API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_main_event_loop/group"/>
-</component>
-<component name="glib_memory_allocation" long-name="Glib Memory Allocation API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_memory_allocation/group"/>
-</component>
-<component name="glib_memory_slices" long-name="Glib Memory Slices API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_memory_slices/group"/>
-</component>
-<component name="glib_message_logging" long-name="Glib Message Logging API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_message_logging/group"/>
-</component>
-<component name="glib_miscellaneous_utility_functions" long-name="Glib Miscellaneous Utility Functions API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_miscellaneous_utility_functions/group"/>
-</component>
-<component name="glib_nary_trees" long-name="Glib N-ary Trees API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_nary_trees/group"/>
-</component>
-<component name="glib_parameters_and_values" long-name="Glib Parameters and Values API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_parameters_and_values/group"/>
-</component>
-<component name="glib_quarks" long-name="Glib Quarks API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_quarks/group"/>
-</component>
-<component name="glib_random_numbers" long-name="Glib Random Numbers API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_random_numbers/group"/>
-</component>
-<component name="glib_relations_and_tuples" long-name="Glib Relations and Tuples API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_relations_and_tuples/group"/>
-</component>
-<component name="glib_shellrelated_utilities" long-name="Glib Shell-related Utilities API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_shellrelated_utilities/group"/>
-</component>
-<component name="glib_signals" long-name="Glib Signals API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_signals/group"/>
-</component>
-<component name="glib_simple_xml_subset_parser" long-name="Glib Simple XML Subset Parser API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_simple_xml_subset_parser/group"/>
-</component>
-<component name="glib_singlylinked_lists" long-name="Glib Singly-Linked Lists API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_singlylinked_lists/group"/>
-</component>
-<component name="glib_spawning_processes" long-name="Glib Spawning Processes API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_spawning_processes/group"/>
-</component>
-<component name="glib_standard_macros" long-name="Glib Standard Macros API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_standard_macros/group"/>
-</component>
-<component name="glib_string_utility_functions" long-name="Glib String Utility Functions API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_string_utility_functions/group"/>
-</component>
-<component name="glib_strings" long-name="Glib Strings API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_strings/group"/>
-</component>
-<component name="glib_thread_pools" long-name="Glib Thread Pools API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_thread_pools/group"/>
-</component>
-<component name="glib_threads" long-name="Glib Threads API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_threads/group"/>
-</component>
-<component name="glib_timers" long-name="Glib Timers API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_timers/group"/>
-</component>
-<component name="glib_unicode_manipulation" long-name="Glib Unicode Manipulation API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_unicode_manipulation/group"/>
-</component>
-<component name="glib_value_arrays" long-name="Glib Value Arrays API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_value_arrays/group"/>
-</component>
-<component name="glib_varargs_value_collection" long-name="Glib Varargs Value Collection API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/glib_varargs_value_collection/group"/>
-</component>
-<component name="gobject" long-name="GObject API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/gobject/group"/>
-</component>
-<component name="gparamspec" long-name="GParamSpec API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/gparamspec/group"/>
-</component>
-<component name="gtype" long-name="GType API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/gtype/group"/>
-</component>
-<component name="gtypemodule" long-name="GTypeModule API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/gtypemodule/group"/>
-</component>
-<component name="gtypeplugin" long-name="GTypePlugin API" filter="s60" class="api">
-<unit bldFile="os/ossrv/ossrv_pub/gtypeplugin/group"/>
-</component>
 <component name="io_stream_api" long-name="I/O stream API" filter="s60" class="api">
 <unit bldFile="os/ossrv/ossrv_pub/io_stream_api/group"/>
 </component>
@@ -772,9 +604,6 @@
 </component>
 <component name="openenvcore" long-name="Open Environment Core" introduced="^2" purpose="mandatory">
 <unit bldFile="os/ossrv/genericopenlibs/openenvcore/group" mrp="os/ossrv/genericopenlibs/openenvcore/group/openenv.mrp"/>
-</component>
-<component name="pluggableauthenticationmodulefw" long-name="Pluggable Authentication Module Framework" introduced="^4" purpose="optional">
-<unit bldFile="os/ossrv/genericopenlibs/pluggableauthenticationmodulefw/group" mrp="os/ossrv/genericopenlibs/pluggableauthenticationmodulefw/group/oeaddons_libpam.mrp"/>
 </component>
 <component name="posixrealtimeextensions" long-name="POSIX Realtime Extensions" introduced="^3" purpose="optional">
 <unit bldFile="os/ossrv/genericopenlibs/posixrealtimeextensions/group" mrp="os/ossrv/genericopenlibs/posixrealtimeextensions/group/oeaddons_librt.mrp"/>
@@ -1580,12 +1409,6 @@
 <component name="networkingexamples" long-name="Networking Examples" introduced="7.0" purpose="development">
 <unit bldFile="os/networkingsrv/networkingtestandutils/networkingexamples/examplecode/group" mrp="os/networkingsrv/networkingtestandutils/networkingexamples/examplecode/group/networking_examplecode.mrp"/>
 </component>
-<component name="networkingintegrationtest" long-name="Networking Integration Test" introduced="ER5" purpose="development">
-<unit bldFile="os/networkingsrv/networkingtestandutils/networkingintegrationtest/Group" mrp="os/networkingsrv/networkingtestandutils/networkingintegrationtest/Group/networking_integrationtest.mrp"/>
-</component>
-<component name="networkingperformancemeasurementtools" long-name="Networking Performance Measurement Tools" introduced="^3" purpose="development">
-<unit bldFile="os/networkingsrv/networkingtestandutils/networkingperformancemeasurementtools/group" mrp="os/networkingsrv/networkingtestandutils/networkingperformancemeasurementtools/group/networking_netperf.mrp"/>
-</component>
 </collection>
 <collection name="networkingsrv_info" long-name="Networking Services Info" level="app-if">
 <component name="networkingrom" long-name="Networking ROM" purpose="mandatory">
@@ -1754,9 +1577,6 @@
 </component>
 <component name="multimodetsy" long-name="Multimode TSY" purpose="development" plugin="Y">
 <unit bldFile="os/cellularsrv/telephonyserverplugins/multimodetsy/group" mrp="os/cellularsrv/telephonyserverplugins/multimodetsy/group/telephony_mmtsy.mrp"/>
-</component>
-<component name="simtsy" long-name="SIM TSY" introduced="7.0" purpose="development" plugin="Y">
-<unit bldFile="os/cellularsrv/telephonyserverplugins/simtsy/group" mrp="os/cellularsrv/telephonyserverplugins/simtsy/group/telephony_simtsy.mrp"/>
 </component>
 <component name="ctsydispatchlayer" long-name="C-TSY Dispatch Layer" introduced="^3" purpose="optional" plugin="Y">
 <unit bldFile="os/cellularsrv/telephonyserverplugins/ctsydispatchlayer/group" mrp="os/cellularsrv/telephonyserverplugins/ctsydispatchlayer/group/telephony_dispatcher.mrp"/>
@@ -2681,12 +2501,6 @@
 <unit bldFile="os/deviceplatformrelease/Version/group"/>
 </component>
 </collection>
-<collection name="helps_loc2" long-name="Helps Locale 2" level="top">
-<!-- collection is really a component. Need to move down a directory -->
-<component name="helps_loc2_build" long-name="Helps Locale 2 Build" filter="s60">
-<unit bldFile="os/deviceplatformrelease/helps_loc2/group"/>
-</component>
-</collection>
 <collection name="symbianosbld" long-name="Symbian OS Build" level="bld">
 <component name="cedarutils" long-name="Cedar Utils" purpose="development">
 <unit mrp="os/deviceplatformrelease/symbianosbld/cedarutils/tools_utils_cedar.mrp"/>
@@ -3433,23 +3247,8 @@
 </component>
 </collection>
 <collection name="locsrv_plat" long-name="Location Services Platform Interfaces" level="if">
-<component name="map_and_navigation_api" long-name="Map and Navigation API" filter="s60" class="api">
-<unit bldFile="mw/locationsrv/locsrv_plat/map_and_navigation_api/group"/>
-</component>
-<component name="map_and_navigation_provider_discovery_api" long-name="Map and Navigation Provider Discovery API" filter="s60" class="api">
-<unit bldFile="mw/locationsrv/locsrv_plat/map_and_navigation_provider_discovery_api/group"/>
-</component>
 <component name="geocoding_api" long-name="Geocoding API" filter="s60" class="api">
 <unit bldFile="mw/locationsrv/locsrv_plat/geocoding_api/group"/>
-</component>
-<component name="map_image_api" long-name="Map Image API" filter="s60" class="api">
-<unit bldFile="mw/locationsrv/locsrv_plat/map_image_api/group"/>
-</component>
-<component name="map_and_navigation_aiw_api" long-name="Map and Navigation AIW API" filter="s60" class="api">
-<unit bldFile="mw/locationsrv/locsrv_plat/map_and_navigation_aiw_api/group"/>
-</component>
-<component name="map_and_navigation_provider_api" long-name="Map and Navigation Provider API" filter="s60" class="api">
-<unit bldFile="mw/locationsrv/locsrv_plat/map_and_navigation_provider_api/group"/>
 </component>
 <component name="landmarks_category_definition_api" long-name="Landmarks Category Definition API" filter="s60" class="api">
 <unit bldFile="mw/locationsrv/locsrv_plat/landmarks_category_definition_api/group"/>
@@ -3457,38 +3256,17 @@
 <component name="supl_settings_api" long-name="SUPL Settings API" filter="s60" class="api">
 <unit bldFile="mw/locationsrv/locsrv_plat/supl_settings_api/group"/>
 </component>
-<component name="location_settings_launch_api" long-name="Location Settings Launch API" filter="s60" class="api">
-<unit bldFile="mw/locationsrv/locsrv_plat/location_settings_launch_api/group"/>
-</component>
-<component name="map_image_conversion_plugin_api" long-name="Map Image Conversion Plug-In API" filter="s60" class="api">
-<unit bldFile="mw/locationsrv/locsrv_plat/map_image_conversion_plugin_api/group"/>
-</component>
-<component name="psy_configuration_ui_plugin_api" long-name="PSY Configuration UI Plug-in API" filter="s60" class="api">
-<unit bldFile="mw/locationsrv/locsrv_plat/psy_configuration_ui_plugin_api/group"/>
-</component>
 <component name="np_proxy_configuration_api" long-name="NP Proxy Configuration API" filter="s60" class="api">
 <unit bldFile="mw/locationsrv/locsrv_plat/np_proxy_configuration_api/group"/>
 </component>
 <component name="supl_terminal_initiation_api" long-name="SUPL Terminal Initiation API" filter="s60" class="api">
 <unit bldFile="mw/locationsrv/locsrv_plat/supl_terminal_initiation_api/group"/>
 </component>
-<component name="location_notation_preferences_settings_api" long-name="Location Notation Preferences Settings API" filter="s60" class="api">
-<unit bldFile="mw/locationsrv/locsrv_plat/location_notation_preferences_settings_api/group"/>
-</component>
-<component name="supl_settings_notifier_secondary_display_api" long-name="SUPL Settings Notifier Secondary Display API" filter="s60" class="api">
-<unit bldFile="mw/locationsrv/locsrv_plat/supl_settings_notifier_secondary_display_api/group"/>
-</component>
 <component name="supl_network_initiation_api" long-name="SUPL Network Initiation API" filter="s60" class="api">
 <unit bldFile="mw/locationsrv/locsrv_plat/supl_network_initiation_api/group"/>
 </component>
-<component name="privacy_notifiers_secondary_display_api" long-name="Privacy Notifiers Secondary Display API" filter="s60" class="api">
-<unit bldFile="mw/locationsrv/locsrv_plat/privacy_notifiers_secondary_display_api/group"/>
-</component>
 <component name="oma_supl_configuration_parameter_api" long-name="OMA SUPL Configuration Parameter API" filter="s60" class="api">
 <unit bldFile="mw/locationsrv/locsrv_plat/oma_supl_configuration_parameter_api/group"/>
-</component>
-<component name="supl_query_secondary_display_api" long-name="SUPL Query Secondary Display API" filter="s60" class="api">
-<unit bldFile="mw/locationsrv/locsrv_plat/supl_query_secondary_display_api/group"/>
 </component>
 <component name="location_triggering_management_api" long-name="Location Triggering Management API" filter="s60" class="api">
 <unit bldFile="mw/locationsrv/locsrv_plat/location_triggering_management_api/group"/>
@@ -3521,18 +3299,6 @@
 <collection name="landmarks" long-name="Landmarks" level="server">
 <component name="locationlandmarks" filter="s60" long-name="Location Landmarks">
 <unit bldFile="mw/locationsrv/landmarks/locationlandmarks/group"/>
-</component>
-</collection>
-<collection name="locationmapnavfw" long-name="Location Map and Navigation Framework" level="fw">
-<component name="mnlibrary" filter="s60" long-name="Map and Navigation Library">
-<unit bldFile="mw/locationsrv/locationmapnavfw/library/group"/>
-</component>
-<component name="mnaiwprovider" filter="s60" long-name="Map and Navigation AIW Provider" plugin="Y">
-<unit bldFile="mw/locationsrv/locationmapnavfw/aiwprovider/group"/>
-</component>
-<component name="locationmapnavfw_build" filter="s60" long-name="Location Map and Navigation Framework Build">
-<!-- need to break this up into the other components -->
-<unit bldFile="mw/locationsrv/locationmapnavfw/group"/>
 </component>
 </collection>
 <collection name="locationsystemui" long-name="Location System UI" level="if">
@@ -3579,9 +3345,6 @@
 <component name="ltcellidmovementdetector" filter="s60" long-name="Cell ID Movement Detector">
 <unit bldFile="mw/locationsrv/locationtriggering/ltcellidmovementdetector/group"/>
 </component>
-<component name="lbtmgmtui" filter="s60" long-name="LBT Management UI" plugin="Y">
-<unit bldFile="mw/locationsrv/locationtriggering/lbtmgmtui/group"/>
-</component>
 <component name="ltcontextsourceplugin" filter="s60" long-name="LT Context Source Plugin" introduced="^3" plugin="Y">
 <unit bldFile="mw/locationsrv/locationtriggering/ltcontextsourceplugin/group"/>
 </component>
@@ -3593,65 +3356,16 @@
 </block>
 <block name="accesssec" level="generic" long-name="Access Security" levels="plugin framework server generic specific">
 <collection name="accesssec_plat" long-name="Access Security Platform Interfaces" level="specific">
-<component name="wapi_security_settings_ui_api" long-name="WAPI Security Settings UI API" filter="s60" class="api">
-<unit bldFile="mw/accesssec/accesssec_plat/wapi_security_settings_ui_api/group"/>
-</component>
-<component name="wep_security_settings_ui_api" long-name="WEP Security Settings UI API" filter="s60" class="api">
-<unit bldFile="mw/accesssec/accesssec_plat/wep_security_settings_ui_api/group"/>
-</component>
-<component name="wi-fi_protected_setup_ui_api" long-name="Wi-Fi Protected Setup UI API" filter="s60" class="api">
-<unit bldFile="mw/accesssec/accesssec_plat/wi-fi_protected_setup_ui_api/group"/>
-</component>
-<component name="wlan_eap_settings_ui_api" long-name="WLAN EAP Settings UI API" filter="s60" class="api">
-<unit bldFile="mw/accesssec/accesssec_plat/wlan_eap_settings_ui_api/group"/>
-</component>
-<component name="wpa_security_settings_ui_api" long-name="WPA Security Settings UI API" filter="s60" class="api">
-<unit bldFile="mw/accesssec/accesssec_plat/wpa_security_settings_ui_api/group"/>
-</component>
 <component name="eap_vpn_api" long-name="EAP VPN API" filter="s60" class="api">
 <unit bldFile="mw/accesssec/accesssec_plat/eap_vpn_api/group"/>
-</component>
-<component name="eapsim_db_api" long-name="EAP-SIM DB API" filter="s60" class="api">
-<unit bldFile="mw/accesssec/accesssec_plat/eapsim_db_api/group"/>
 </component>
 <component name="eap_type_api" long-name="EAP Type API" filter="s60" class="api">
 <unit bldFile="mw/accesssec/accesssec_plat/eap_type_api/group"/>
 </component>
-<component name="eaptlspeap_db_api" long-name="EAP-TLS-PEAP DB API" filter="s60" class="api">
-<unit bldFile="mw/accesssec/accesssec_plat/eaptlspeap_db_api/group"/>
-</component>
-<component name="eapleap_db_api" long-name="LEAP DB API" filter="s60" class="api">
-<unit bldFile="mw/accesssec/accesssec_plat/eapleap_db_api/group"/>
-</component>
-<component name="eapgtc_db_api" long-name="EAP-GTC DB API" filter="s60" class="api">
-<unit bldFile="mw/accesssec/accesssec_plat/eapgtc_db_api/group"/>
-</component>
-<component name="eapmschapv2_db_api" long-name="EAP-MSCHAPV2 DB API" filter="s60" class="api">
-<unit bldFile="mw/accesssec/accesssec_plat/eapmschapv2_db_api/group"/>
-</component>
-<component name="eapaka_db_api" long-name="EAP-AKA DB API" filter="s60" class="api">
-<unit bldFile="mw/accesssec/accesssec_plat/eapaka_db_api/group"/>
-</component>
-<component name="wapi_db_api" long-name="WAPI DB API" filter="s60" class="api">
-<unit bldFile="mw/accesssec/accesssec_plat/wapi_db_api/group"/>
-</component>
 </collection>
-<collection name="wlansecuritysettings" long-name="WLAN Security Settings" level="specific">
-<component name="wapisecuritysettingsui" filter="s60" long-name="WAPI Security Settings UI" introduced="9.1">
-<!-- the directory for this needs to be moved up to the right level -->
-<unit bldFile="mw/accesssec/wlansecuritysettings/wapisecuritysettingsui/stub/group"/>
-</component>
-<component name="wepsecuritysettingsui" filter="s60" long-name="WEP Security Settings UI" introduced="9.1">
-<unit bldFile="mw/accesssec/wlansecuritysettings/wepsecuritysettingsui/group"/>
-</component>
-<component name="wifiprotectedsetup" filter="s60" long-name="WIFI Protected Setup" introduced="^1">
-<unit bldFile="mw/accesssec/wlansecuritysettings/wifiprotectedsetup/group"/>
-</component>
-<component name="wlaneapsettingsui" filter="s60" long-name="WLAN EAP Settings UI" introduced="9.3">
-<unit bldFile="mw/accesssec/wlansecuritysettings/wlaneapsettingsui/group"/>
-</component>
-<component name="wpasecuritysettingsui" filter="s60" long-name="WPA Security Settings UI" introduced="9.1">
-<unit bldFile="mw/accesssec/wlansecuritysettings/wpasecuritysettingsui/group"/>
+<collection name="securitysettings" long-name="Security Settings" level="generic">
+<component name="securitysettings_build" long-name="Security Settings Build" introduced="^4">
+<unit bldFile="mw/accesssec/securitysettings" qmakeArgs="-r" proFile="securitysettings.pro"/>
 </component>
 </collection>
 <collection name="eapol" long-name="EAPOL" level="framework">
@@ -3742,9 +3456,6 @@
 <component name="apsettingshandlerui" filter="s60" long-name="Access Point Settings Handler UI">
 <unit bldFile="mw/ipconnmgmt/apengine/apsettingshandlerui/group"/>
 </component>
-<component name="apsettingsplugin" filter="s60" long-name="Access Point Settings Plugin" plugin="Y">
-<unit bldFile="mw/ipconnmgmt/apengine/apsettingsplugin/group"/>
-</component>
 </collection>
 <collection name="bearermanagement" long-name="Bearer Management" level="framework">
 <component name="mpm" filter="s60" long-name="Mobility Policy Manager">
@@ -3761,14 +3472,8 @@
 <component name="cmmgr" filter="s60" long-name="CM Manager">
 <unit bldFile="mw/ipconnmgmt/cmmanager/cmmgr/group"/>
 </component>
-<component name="gsconnsettingsplugin" filter="s60" long-name="GS Connection Settings Plugin" introduced="^3" plugin="Y">
-<unit bldFile="mw/ipconnmgmt/cmmanager/gsconnsettingsplugin/group"/>
-</component>
 </collection>
 <collection name="connectionmonitoring" long-name="Connection Monitoring" level="server">
-<component name="connectionmonitorplugin" filter="s60" long-name="Connection Monitor Plugin" plugin="Y">
-<unit bldFile="mw/ipconnmgmt/connectionmonitoring/connectionmonitorplugin/group"/>
-</component>
 <component name="connectionmonitorui" filter="s60" long-name="Connection Monitor UI">
 <unit bldFile="mw/ipconnmgmt/connectionmonitoring/connectionmonitorui/group"/>
 </component>
@@ -4631,43 +4336,6 @@
 </component>
 </collection>
 </block>
-<block name="opensrv" level="specific" long-name="Open Services" levels="prt lib server eng">
-<collection name="opensrv_plat" long-name="Open Services Platform Interfaces" level="eng">
-<component name="messagequeue_api" long-name="Message Queue API" introduced="^2" filter="s60" class="api">
-<unit bldFile="mw/opensrv/opensrv_plat/messagequeue_api/group"/>
-</component>
-</collection>
-<collection name="loudmouth" long-name="Loudmouth" level="prt">
-<!-- collection is really a component so it needs to be moved down a directory -->
-<component name="loudmouth_build" filter="s60" long-name="Loudmouth Build" introduced="^2">
-<unit bldFile="mw/opensrv/loudmouth/group"/>
-</component>
-</collection>
-<collection name="libtelepathy" long-name="Telepathy Library" level="lib">
-<!-- collection is really a component so it needs to be moved down a directory -->
-<component name="libtelepathy_build" filter="s60" long-name="Telepathy Library Build" introduced="^2">
-<unit bldFile="mw/opensrv/libtelepathy/group"/>
-</component>
-</collection>
-<collection name="telepathygabble" long-name="Telepathy Gabble" level="eng">
-<!-- collection is really a component so it needs to be moved down a directory -->
-<component name="telepathygabble_build" filter="s60" long-name="Telepathy Gabble Build" introduced="^2">
-<unit bldFile="mw/opensrv/telepathygabble/group"/>
-</component>
-</collection>
-<collection name="isolationserver" long-name="Isolation Server" level="server">
-<component name="messagequeue" filter="s60" long-name="Message Queue" introduced="^2">
-<unit bldFile="mw/opensrv/isolationserver/messagequeue/group"/>
-</component>
-<component name="isoserver" filter="s60" long-name="ISO Server" introduced="^2">
-<unit bldFile="mw/opensrv/isolationserver/isoserver/group"/>
-</component>
-<component name="isolationserver_build" filter="s60" long-name="Isloation Server Build" introduced="^2">
-<!-- needs #includes removed. either move the exports to another component or make this a ROM component -->
-<unit bldFile="mw/opensrv/isolationserver/group"/>
-</component>
-</collection>
-</block>
 <block name="searchsrv" level="specific" long-name="Search Services" levels="services engine generic api">
 <collection name="searchsrv_plat" long-name="Search Services Platform Interfaces" level="api">
 <component name="cpix_utility_api" long-name="CPIX Utility API" filter="s60" introduced="^4" class="api">
@@ -5484,9 +5152,6 @@
 <component name="dun" long-name="Dial Up Networking">
 <unit bldFile="mw/shortlinkconn/localconnectivityservice/dun/group"/>
 </component>
-<component name="lcstylustap" long-name="LC Stylus Tap Plugins" plugin="Y">
-<unit bldFile="mw/shortlinkconn/localconnectivityservice/lcstylustap/group"/>
-</component>
 <component name="generichid" long-name="Generic HID">
 <unit bldFile="mw/shortlinkconn/localconnectivityservice/generichid/group"/>
 </component>
@@ -6204,11 +5869,6 @@
 <component name="hb_build" long-name="Orbit Build" introduced="^4">
 <!-- should break this down into actual components -->
 <unit bldFile="mw/hb" proFile="hb.pro" qmakeArgs="-r MMP_RULES+=EXPORTUNFROZEN"/>
-</component>
-</collection>
-<collection name="hb_test" long-name="Orbit Test" level="test">
-<component name="hb_fute" filter="hb_fute_app" long-name="Fute" introduced="^4">
-<unit bldFile="mw/hb/tsrc/fute" proFile="fute.pro" qmakeArgs="-r MMP_RULES+=EXPORTUNFROZEN"/>
 </component>
 </collection>
 </block>
@@ -7121,26 +6781,6 @@
 <unit bldFile="mw/homescreensrv/contentstorage/caclient" qmakeArgs="-r" proFile="caclient.pro"/>
 </component>
 </collection>
-<collection name="contentpublishingsrv" long-name="Content Publishing Service" level="server">
-<component name="contentpublishingdebug" filter="s60" long-name="Content Publishing Debug">
-<!-- need to move this component outside of contentpublishingutils and into separate component directory -->
-<!-- <unit bldFile="contentpublishingsrv/contentpublishingutils/contentpublishingdebug/group"/> -->
-</component>
-<component name="contentpublishingutils" filter="s60" long-name="Content Publishing Utils">
-<unit bldFile="mw/homescreensrv/contentpublishingsrv/contentpublishingutils/group"/>
-</component>
-<component name="contentpublishingserver" filter="s60" long-name="Content Publishing Server">
-<unit bldFile="mw/homescreensrv/contentpublishingsrv/contentpublishingserver/group"/>
-</component>
-<component name="contentharvester" filter="s60" long-name="Content Harvester">
-<unit bldFile="mw/homescreensrv/contentpublishingsrv/contentharvester/group"/>
-</component>
-<component name="contentpublishingsrv_rom" filter="s60" long-name="Content Publishing Service ROM">
-<!-- need to remove links to the above components and just contain the IBY (or move the IBY into another component). 
-      		If keeping, it need to move down a directory.-->
-<unit bldFile="mw/homescreensrv/contentpublishingsrv/group"/>
-</component>
-</collection>
 <collection name="homescreensrv_plat" long-name="Home Screen Services Platform Interfaces" level="specific">
 <component name="homescreensrv_plat_build" long-name="Home Screen Services Platform Interfaces build" introduced="^4">
 <unit bldFile="mw/homescreensrv/homescreensrv_plat" qmakeArgs="-r" proFile="homescreensrv_plat.pro"/>
@@ -7155,11 +6795,6 @@
 <component name="hswidgetmodel_api" long-name="HS Widget Model API" filter="s60" introduced="^4" class="api"/>
 <component name="statemodel_api" long-name="State Model API" filter="s60" introduced="^4" class="api"/>
 <component name="homescreen_information_api" long-name="Homescreen Information API" filter="s60" introduced="^4" class="api"/>
-</collection>
-<collection name="screensavermodel" long-name="Screensaver Model" level="specific">
-<component name="screensavermodel_build" long-name="Screensaver Model Build" introduced="^4">
-<unit bldFile="mw/homescreensrv/screensavermodel" qmakeArgs="-r" proFile="screensavermodel.pro"/>
-</component>
 </collection>
 <collection name="hsactivityfw" long-name="Activity Framework" level="activityfw">
 <component name="hsactivityfw_build" long-name="Activity Framework Build" introduced="^4">
@@ -7187,6 +6822,9 @@
 </component>
 <component name="ai_plugin_information_api" long-name="AI Plug-in Information API" filter="s60" class="api">
 <unit bldFile="mw/homescreensrvlegacy/ai_plugin_information_api/group" proFile="group.pro"/>
+</component>
+<component name="content_harvester_plugin_api" long-name="Content Harvester Plug-in API" filter="s60" class="api">
+<unit bldFile="mw/homescreensrvlegacy/content_harvester_plugin_api/group"/>
 </component>
 </collection>
 </block>
@@ -8109,7 +7747,7 @@
 </component>
 <component name="filemanager_build" filter="s60" long-name="File Manager Build">
 <!-- break this up into components or move down a directory -->
-<unit bldFile="app/files/filemanager" proFile="filemanager.pro"/>
+<unit bldFile="app/files/filemanager" qmakeArgs="-r" proFile="filemanager.pro"/>
 </component>
 </collection>
 </block>
@@ -8264,9 +7902,6 @@
 <component name="regionalplugins" long-name="Regional Plugins" filter="s60" introduced="^4" plugin="Y">
 <unit bldFile="app/organizer/calendarui/regionalplugins" proFile="regionalplugins.pro"/>
 </component>
-<component name="caldav" filter="sf_build" long-name="CalDAV" introduced="^3" plugin="Y">
-<unit bldFile="app/organizer/calendarui/caldav/group"/>
-</component>
 </collection>
 <collection name="notes" long-name="Notes" level="ui">
 <component name="noteseditor" filter="s60" long-name="Notes Editor" introduced="^4">
@@ -8288,9 +7923,6 @@
 </component>
 <component name="calenimp" filter="s60" long-name="Calendar Import Wrapper" introduced="7.0s">
 <unit bldFile="app/organizer/calendarengines/calenimp/group"/>
-</component>
-<component name="caldavsrv" filter="sf_build" long-name="CalDAV Server" introduced="^3">
-<unit bldFile="app/organizer/calendarengines/caldav/group"/>
 </component>
 </collection>
 <collection name="clock" long-name="Clock" level="app">
@@ -8561,172 +8193,6 @@
 <collection name="camerauis" long-name="Camera UIs">
 <component name="cameraxui" filter="s60" long-name="CameraX UIs">
 <unit bldFile="app/camera/camerauis/cameraxui" filter="!test" proFile="camerax.pro"/>
-</component>
-</collection>
-</block>
-<block name="imgeditor" level="apps" long-name="Image Editor Apps" levels="engine ui">
-<collection name="imgeditor_plat" long-name="Image Editor Apps Platform Interfaces" level="ui">
-<component name="image_editor_debug_utilities_api" long-name="Image Editor Debug Utilities API" filter="sf_build" class="api">
-<unit bldFile="app/imgeditor/imgeditor_plat/image_editor_debug_utilities_api/group"/>
-</component>
-<component name="image_editor_utilities_api" long-name="Image Editor Utilities API" filter="sf_build" class="api">
-<unit bldFile="app/imgeditor/imgeditor_plat/image_editor_utilities_api/group"/>
-</component>
-<component name="image_editor_definitions_api" long-name="Image Editor Definitions API" filter="sf_build" class="api">
-<unit bldFile="app/imgeditor/imgeditor_plat/image_editor_definitions_api/group"/>
-</component>
-<component name="image_editor_system_parameters_api" long-name="Image Editor System Parameters API" filter="sf_build" class="api">
-<unit bldFile="app/imgeditor/imgeditor_plat/image_editor_system_parameters_api/group"/>
-</component>
-<component name="image_processing_engine_api" long-name="Image Processing Engine API" filter="sf_build" class="api">
-<unit bldFile="app/imgeditor/imgeditor_plat/image_processing_engine_api/group"/>
-</component>
-</collection>
-<collection name="imageeditor" long-name="Image Editor UI" level="ui">
-<component name="pb" filter="sf_build" long-name="Plugin Base">
-<unit bldFile="app/imgeditor/imageeditor/pb/group"/>
-</component>
-<component name="iepb" filter="sf_build" long-name="Image Editor Plugin Base">
-<unit bldFile="app/imgeditor/imageeditor/iepb/group"/>
-</component>
-<component name="imageeditorui" filter="sf_build" long-name="Image Editor UI">
-<unit bldFile="app/imgeditor/imageeditor/imageeditorui/group"/>
-</component>
-<component name="imageeditormanager" filter="sf_build" long-name="Image Editor Manager">
-<unit bldFile="app/imgeditor/imageeditor/imageeditormanager/group"/>
-</component>
-<component name="imageeditorapp" filter="sf_build" long-name="Image Editor Application">
-<unit bldFile="app/imgeditor/imageeditor/imageeditorapp/group"/>
-</component>
-<component name="imageeditor_plugins" filter="sf_build" long-name="Image Editor Plugins" plugin="Y">
-<!-- can only have one unit. Need to include all from a single bld.inf -->
-<unit bldFile="app/imgeditor/imageeditor/plugins/blackwhiteplugin/group"/>
-<unit bldFile="app/imgeditor/imageeditor/plugins/brightnessplugin/group"/>
-<unit bldFile="app/imgeditor/imageeditor/plugins/bubbleplugin/group"/>
-<unit bldFile="app/imgeditor/imageeditor/plugins/cartoonizeplugin/group"/>
-<unit bldFile="app/imgeditor/imageeditor/plugins/clipartplugin/group"/>
-<unit bldFile="app/imgeditor/imageeditor/plugins/contrastplugin/group"/>
-<unit bldFile="app/imgeditor/imageeditor/plugins/cropplugin/group"/>
-<unit bldFile="app/imgeditor/imageeditor/plugins/drawplugin/group"/>
-<unit bldFile="app/imgeditor/imageeditor/plugins/frameplugin/group"/>
-<unit bldFile="app/imgeditor/imageeditor/plugins/negativeplugin/group"/>
-<unit bldFile="app/imgeditor/imageeditor/plugins/redeyeplugin/group"/>
-<unit bldFile="app/imgeditor/imageeditor/plugins/resizeplugin/group"/>
-<unit bldFile="app/imgeditor/imageeditor/plugins/rotatelplugin/group"/>
-<unit bldFile="app/imgeditor/imageeditor/plugins/rotaterplugin/group"/>
-<unit bldFile="app/imgeditor/imageeditor/plugins/sepiaplugin/group"/>
-<unit bldFile="app/imgeditor/imageeditor/plugins/sharpnessplugin/group"/>
-<unit bldFile="app/imgeditor/imageeditor/plugins/textplugin/group"/>
-<!-- conditionally #included in imageeditor_build: need to fix
-        <unit bldFile="imageeditor/plugins/drawplugin/group"/>
-         -->
-</component>
-<component name="editorprovider" filter="sf_build" long-name="Image Editor Provider">
-<unit bldFile="app/imgeditor/imageeditor/editorprovider/group"/>
-</component>
-<component name="imageeditor_build" filter="sf_build" long-name="Image Editor Build">
-<!-- should distribute this to the other components -->
-<unit bldFile="app/imgeditor/imageeditor/group"/>
-</component>
-</collection>
-<collection name="imageeditorengine" long-name="Image Editor Engine" level="engine">
-<component name="filters" filter="sf_build" long-name="Image Editor Filters">
-<!-- can only have one unit. Need to include all from a single bld.inf -->
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filterbrightness/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filterbubble/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filterbuffer/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filtercartoon/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filterclipart/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filtercontrast/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filtercrop/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filterdraw/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filterframe/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filtergrayscale/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filtericlsource/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filterjpegsource/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filterjpegtarget/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filternegate/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filterredeye/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filterrotate/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filterscale/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filtersepia/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filtersharpness/group"/>
-<unit bldFile="app/imgeditor/imageeditorengine/filters/filtertext/group"/>
-<!-- conditionally #included in imageeditor_build: need to fix
-        <unit bldFile="imageeditorengine/filters/filterdraw/group"/>
-         -->
-</component>
-<component name="imageeditorutils" filter="sf_build" long-name="Image Editor Utilities">
-<unit bldFile="app/imgeditor/imageeditorengine/imageeditorutils/group"/>
-</component>
-<component name="systemparameters" filter="sf_build" long-name="System Parameters">
-<unit bldFile="app/imgeditor/imageeditorengine/systemparameters/group"/>
-</component>
-<component name="enginewrapper" filter="sf_build" long-name="Image Editor Engine Wrapper">
-<unit bldFile="app/imgeditor/imageeditorengine/enginewrapper/group"/>
-</component>
-<component name="imageeditorengine_build" filter="sf_build" long-name="Image Editor Engine Build">
-<!-- should distribute this to the other components -->
-<unit bldFile="app/imgeditor/imageeditorengine/group"/>
-</component>
-</collection>
-</block>
-<block name="videoeditor" level="apps" long-name="Video Editor Apps" levels="engine ui">
-<collection name="videoeditor_plat" long-name="Video Editor Apps Platform Interfaces" level="ui">
-<component name="video_editor_engine_api" filter="sf_build" long-name="Video Editor Engine API" introduced="^2" class="api">
-<unit bldFile="app/videoeditor/videoeditor_plat/video_editor_engine_api/group"/>
-</component>
-</collection>
-<collection name="videditor" long-name="Video Editor" level="ui">
-<component name="videoeditorcommon" filter="sf_build" long-name="Video Editor Common" introduced="^2">
-<unit bldFile="app/videoeditor/videditor/videoeditorcommon/group"/>
-</component>
-<component name="videoeditoruicomponents" filter="sf_build" long-name="Video Editor UI Components" introduced="^2">
-<unit bldFile="app/videoeditor/videditor/videoeditoruicomponents/group"/>
-</component>
-<component name="simplevideoeditor" filter="sf_build" long-name="Simple Video Editor" introduced="^2">
-<unit bldFile="app/videoeditor/videditor/simplevideoeditor/group"/>
-</component>
-<component name="simplecutvideo" filter="sf_build" long-name="Simple Cut Video" introduced="^2">
-<unit bldFile="app/videoeditor/videditor/simplecutvideo/group"/>
-</component>
-<component name="videoprovider" filter="sf_build" long-name="Video Provider" introduced="^2">
-<unit bldFile="app/videoeditor/videditor/videoprovider/group"/>
-</component>
-<component name="manualvideoeditor" filter="sf_build" long-name="Manual Video Editor" introduced="^2" class="placeholder">
-<!--  uncomment when supported
-      	<meta rel="config">
-      		<defined condition="__INCLUDE_MANUAL_VIDEO_EDITOR__"/>
-      	</meta>
-        <unit bldFile="videditor/manualvideoeditor/group"/> -->
-</component>
-<component name="videditor_build" filter="sf_build" long-name="Video Editor Build" introduced="^2">
-<!-- can the exports be distributed to the other components? Or should this be collapsed into one component?-->
-<unit bldFile="app/videoeditor/videditor/group"/>
-</component>
-</collection>
-<collection name="videoeditorengine" long-name="Video Editor Engine" level="engine">
-<component name="audioeditorengine" filter="sf_build" long-name="Audio Editor Engine" introduced="^2">
-<unit bldFile="app/videoeditor/videoeditorengine/audioeditorengine/group"/>
-</component>
-<component name="avcedit" filter="sf_build" long-name="AVC Editing" introduced="^2">
-<unit bldFile="app/videoeditor/videoeditorengine/avcedit/group"/>
-</component>
-<component name="h263decoder" filter="sf_build" long-name="H.263 Decoder" introduced="^2">
-<unit bldFile="app/videoeditor/videoeditorengine/h263decoder/group"/>
-</component>
-<component name="mp3aacmaniplib" filter="sf_build" long-name="MP3 and AAC Manipulation Library" introduced="^2">
-<unit bldFile="app/videoeditor/videoeditorengine/mp3aacmaniplib/group"/>
-</component>
-<component name="vedtranscoder" filter="sf_build" long-name="Video Editor Transcoder" introduced="^2">
-<unit bldFile="app/videoeditor/videoeditorengine/vedtranscoder/group"/>
-</component>
-<component name="vedengine" filter="sf_build" long-name="Video Editor Engine" introduced="^2">
-<unit bldFile="app/videoeditor/videoeditorengine/vedengine/group"/>
-</component>
-<component name="videoeditorengine_build" filter="sf_build" long-name="Video Editor Engine Build" introduced="^2">
-<!-- can the exports be distributed to the other components? Or should this be collapsed into one component?-->
-<unit bldFile="app/videoeditor/videoeditorengine/group"/>
 </component>
 </collection>
 </block>
@@ -9111,15 +8577,11 @@
 </component>
 </collection>
 <collection name="stifui" long-name="STIF UI" level="generic">
-<component name="stifui_stifui" filter="s60" long-name="STIF UI" purpose="development">
-<unit bldFile="app/rndtools/stifui/stifui/group"/>
+<component name="stifui_avkon" filter="s60" long-name="STIF UI" purpose="development">
+<unit bldFile="app/rndtools/stifui/avkon/group"/>
 </component>
 <component name="uitestserverstarter" filter="s60" long-name="UI Test Server Starter" purpose="development">
 <unit bldFile="app/rndtools/stifui/uitestserverstarter/group"/>
-</component>
-<component name="stifui_build" filter="s60" long-name="STIF UI Build" purpose="development">
-<!-- can this be split up into the other components or made a ROM component? -->
-<unit bldFile="app/rndtools/stifui/group"/>
 </component>
 </collection>
 <collection name="memspyui" long-name="Memspy UI" level="generic">
