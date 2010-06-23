@@ -1,10 +1,4 @@
 source,dst,type,pattern,sysdef
-//v800008/Builds01/mercurial_internal/rnd/rndonly/aricent/,/rnd/rndonly/aricent,changeset,2b41c6133edf,
-//v800008/Builds01/mercurial_internal/rnd/rndonly/ibm/,/rnd/rndonly/ibm,changeset,04ac8a231adf,
-//v800008/Builds01/mercurial_internal/rnd/rndonly/monotype/,/rnd/rndonly/monotype,changeset,a94919327585,
-//v800008/Builds01/mercurial_internal/rnd/rndonly/realnetworks/,/rnd/rndonly/realnetworks,changeset,afb66031ac23,
-//v800008/Builds01/mercurial_internal/rnd/rndonly/samsung/,/rnd/rndonly/samsung,changeset,bc65ca6d8d9c,
-//v800008/Builds01/mercurial_internal/rnd/redist/objective_systems/,/rnd/redist/objective_systems,changeset,3308607f8c27,
 http://developer.symbian.org/oss/FCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,changeset,2905910218db,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,changeset,bb16bb5b2818,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/adaptation/stubs/,/sf/adaptation/stubs,changeset,ac0dcfe5059d,layers.sysdef.xml
@@ -101,7 +95,7 @@ http://developer.symbian.org/oss/MCL/sf/os/bt/,/sf/os/bt,changeset,32ba20339036,
 http://developer.symbian.org/oss/FCL/sf/os/buildtools/,/sf/os/buildtools,changeset,06f00a153f2a,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/cellularsrv/,/sf/os/cellularsrv,changeset,664a5fed40c6,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/commsfw/,/sf/os/commsfw,changeset,9644881fedd0,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,changeset,d0917ab8b45e,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,changeset,f81fa44d2763,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/devicesrv/,/sf/os/devicesrv,changeset,5ced40f3c181,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/graphics/,/sf/os/graphics,changeset,0709f76d91e5,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/imagingext/,/sf/os/imagingext,changeset,e5ca06a707ac,layers.sysdef.xml
