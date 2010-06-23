@@ -10,7 +10,7 @@
     
     <!-- unpack prebuilt binaries and bom? if so from where? -->
     <property name="sf.spec.baseline.enable"         value="true" />
-    <property name="sf.spec.baseline.location"       value="D:\PDK_3.0.i_download" />
+    <property name="sf.spec.baseline.location"       value="C:\PDK" />
     <property name="sf.spec.baseline.getenv_options" value="-i emu -i prebuilt -i info -k" />
     
     <!-- unpack tools? if so, from same location as baseline? -->
