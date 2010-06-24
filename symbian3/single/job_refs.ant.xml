@@ -11,13 +11,13 @@
     
   <!-- iMaker config to be used by build-roms Helium target -->
   <hlm:imakerconfigurationset id="imaker.rom.config">
-     <imakerconfiguration regionalVariation="false">
+     <imakerconfiguration>
          <makefileset>
              <!-- Note: case sensitive -->
-             <include name="**/*Syborg*.mk"/>
+             <include name="**/image_conf_syborg.mk"/>
          </makefileset>
          <targetset>
-             <include name="^core$" />
+             <include name="^flash$" />
              <!--
              include name="langpack_\d+" />
              <include name="^custvariant_.*$" />
@@ -25,9 +25,11 @@
              -->
          </targetset>
          <variableset>
+             <!--
              <variable name="TYPE" value="rnd"/>
              <variable name="USE_SYMGEN" value="1"/>
              <variable name="USE_UDEB" value="1"/>
+             -->
          </variableset>
      </imakerconfiguration>
      
