@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<SystemDefinition xmlns:qt="http://www.nokia.com/qt" id-namespace="http://www.symbian.org/system-definition" schema="3.0.0">
+<?xml version="1.0" encoding="UTF-8"?><SystemDefinition id-namespace="http://www.symbian.org/system-definition" schema="3.0.0">
 <systemModel name="Symbian^4">
 <layer id="adaptation" name="Adaptation" levels="low mw high">
 <package id="stubs" tech-domain="hb" level="high" span="2" name="Stubs" levels="adaptation plugin mid engine">
@@ -280,7 +279,7 @@
 <component id="kernelhwsrv_metadata" name="Kernel and Hardware Services Metadata" class="config" introduced="^2" purpose="development" target="desktop">
 <unit mrp="/os/kernelhwsrv/kernelhwsrv_info/kernelhwsrv_metadata/kernelhwsrv_metadata.mrp"/>
 </component>
-<component id="kernelhwsrv_metadata" name="Kernel and Hardware Services Public Documentation" class="doc" introduced="^3" purpose="development">
+<component id="kernelhwsrv_docpub" name="Kernel and Hardware Services Public Documentation" class="doc" introduced="^3" purpose="development">
 <unit mrp="/os/kernelhwsrv/kernelhwsrv_info/doc_pub/kernelhwsrv_doc_pub.mrp"/>
 </component>
 </collection>
@@ -935,9 +934,7 @@
 <meta rel="config">
 <defined condition="__HWRM_TARGET_MODIFIER_PLUGIN"/>
 </meta>
-<!-- uncomment the unit when configuration is in place, it's currently #included from resourcemgmt_build, 
-      		may need to  -->
-<!-- <unit bldFile="resourcemgmt/hwrmtargetmodifierplugin/group"/> -->
+<unit bldFile="/os/devicesrv/resourcemgmt/hwrmtargetmodifierplugin/group"/>
 </component>
 <component id="vibractrl" filter="s60" name="Vibra Control" deprecated="9.1">
 <unit bldFile="/os/devicesrv/resourcemgmt/vibractrl/group"/>
@@ -948,9 +945,8 @@
 <component id="hwresourcesmgrconfig" name="Hardware Resources Manager Config" introduced="^3" purpose="optional" class="config">
 <unit bldFile="/os/devicesrv/resourcemgmt/hwresourcesmgrconfig" mrp="/os/devicesrv/resourcemgmt/hwresourcesmgrconfig/telephony_hwrm-config.mrp"/>
 </component>
-<component id="resourcemgmt_build" filter="s60" name="Resource Management Build">
-<!-- Move exports to a self-contained component.
-         	This needs to be kept around until configuration is in place -->
+<component id="resourcemgmt_data" filter="s60" name="Resource Management Data" class="config">
+<!-- Move exports to a self-contained component. Or leave as a component but move down a dir -->
 <unit bldFile="/os/devicesrv/resourcemgmt/group"/>
 </component>
 <component id="powerandmemorynotificationservice" name="Power and Memory Notification Service" introduced="6.0" purpose="mandatory">
@@ -2175,7 +2171,7 @@
 <component id="ecam_face_tracking_custom_api" name="ECam Face Tracking Custom API" class="api" filter="s60">
 <unit bldFile="/os/imagingext/imagingext_plat/ecam_face_tracking_custom_api/group"/>
 </component>
-<component id="ecam_use_case_hint_custom_api" class="api" name="ECam Use Case Hint Custom API" filter="s60" introduced="^4">
+<component id="ecam_use_case_hint_custom_api" class="api" name="ECam Use Case Hint Custom API" filter="s60" introduced="^3">
 <unit bldFile="/os/imagingext/imagingext_plat/ecam_use_case_hint_custom_api/group"/>
 </component>
 </collection>
@@ -2325,7 +2321,8 @@
 <component id="gdi" name="GDI" purpose="mandatory">
 <unit bldFile="/os/graphics/graphicsdeviceinterface/gdi/group" mrp="/os/graphics/graphicsdeviceinterface/gdi/group/graphics_gdi.mrp"/>
 </component>
-<component id="bitgdi" name="BitGDI" purpose="mandatory">
+<component id="bitgdi" name="BitGDI" purpose="mandatory" filter="api_test">
+<!-- just api_test, not test -->
 <unit bldFile="/os/graphics/graphicsdeviceinterface/bitgdi/group" mrp="/os/graphics/graphicsdeviceinterface/bitgdi/group/graphics_bitgdi.mrp"/>
 </component>
 <component id="colourpalette" name="Colour Palette" introduced="7.0s" purpose="optional">
@@ -2356,19 +2353,11 @@
 </package>
 <package id="textandloc" level="services" tech-domain="ui" name="Text and Localisation Services" levels="encoding util fonts tools text">
 <collection id="textandloc_plat" name="Text and Localisation Platform Interfaces" level="text">
-<component id="findutil_api" class="api" name="Find Util API" filter="s60">
-<unit bldFile="/os/textandloc/textandloc_plat/findutil_api/group"/>
-</component>
 <component id="japanese_language_utilities_api" class="api" name="Japanese Language Utilities API" filter="s60">
 <unit bldFile="/os/textandloc/textandloc_plat/japanese_language_utilities_api/group"/>
 </component>
 <component id="sortutil_api" class="api" name="Sort Util API" filter="s60">
 <unit bldFile="/os/textandloc/textandloc_plat/sortutil_api/group"/>
-</component>
-</collection>
-<collection id="textandloc_pub" name="Text and Localisation Public Interfaces" level="text">
-<component id="directory_localizer_api" class="api" name="Directory Localizer API" filter="s60">
-<unit bldFile="/os/textandloc/textandloc_pub/directory_localizer_api/group"/>
 </component>
 </collection>
 <collection id="charconvfw" name="Character Conversion" level="encoding">
@@ -2410,19 +2399,16 @@
 </collection>
 <collection id="textandlocutils" name="Text and Localisation Utils" level="util">
 <component id="numbergrouping" name="Number Grouping">
-<unit bldFile="/os/textandloc/charconvfw/numbergrouping/group"/>
+<unit bldFile="/os/textandloc/textandlocutils/numbergrouping/group" mrp="/os/textandloc/textandlocutils/numbergrouping/group/tls_numbergrouping.mrp"/>
 </component>
 <component id="jplangutil" name="Japanese Language Utilities">
-<unit bldFile="/os/textandloc/charconvfw/jplangutil/group"/>
+<unit bldFile="/os/textandloc/textandlocutils/jplangutil/group" mrp="/os/textandloc/textandlocutils/jplangutil/group/tls_jplangutil.mrp"/>
 </component>
 <component id="sortutil" name="Sorting Utility">
-<unit bldFile="/os/textandloc/charconvfw/sortutil/group"/>
+<unit bldFile="/os/textandloc/textandlocutils/sortutil/group" mrp="/os/textandloc/textandlocutils/sortutil/group/tls_sortutil.mrp"/>
 </component>
 <component id="inlinetext" name="Inline Text">
-<unit bldFile="/os/textandloc/charconvfw/inlinetext/group"/>
-</component>
-<component id="nearestlangutil" name="Nearest Language Util" introduced="^2" purpose="mandatory">
-<!-- placeholder for split from bafl -->
+<unit bldFile="/os/textandloc/textandlocutils/inlinetext/group" mrp="/os/textandloc/textandlocutils/inlinetext/group/tls_inlinetext.mrp"/>
 </component>
 <component id="numberformatting" name="Number Formatting" introduced="7.0s" purpose="optional">
 <unit bldFile="/os/textandloc/textrendering/numberformatting/group" mrp="/os/textandloc/textrendering/numberformatting/group/app-framework_numberconversion.mrp"/>
@@ -2515,13 +2501,13 @@
 <collection id="s60extras" name="S60 Extras" level="mid">
 <!-- collection is really a component. Need to move down a directory -->
 <component id="s60extras_build" filter="s60" name="S60 Extras Build" class="config" purpose="development">
-<unit bldFile="/os/deviceplatformrelease/S60Extras/group"/>
+<unit bldFile="/os/deviceplatformrelease/s60extras/group"/>
 </component>
 </collection>
 <collection id="version" name="Version" level="top">
 <!-- collection is really a component. Need to move down a directory -->
 <component id="version_build" filter="s60" name="Version Build" class="config" purpose="development">
-<unit bldFile="/os/deviceplatformrelease/Version/group"/>
+<unit bldFile="/os/deviceplatformrelease/version/group"/>
 </component>
 </collection>
 <collection id="symbianosbld" name="Symbian OS Build" level="bld">
@@ -2536,7 +2522,7 @@
 <component id="system_model" name="System Model" class="config" introduced="^2" purpose="development" target="desktop">
 <unit mrp="/os/deviceplatformrelease/foundation_system/system_model/system_model.mrp"/>
 </component>
-<component id="sf_config" name="Foundation Config" introduced="^4">
+<component id="sf_config" filter="s60" name="Foundation Config" introduced="^4">
 <unit bldFile="/os/deviceplatformrelease/foundation_system/sf_config/CI_external/group"/>
 </component>
 <component id="config" filter="s60" name="Config" class="config" purpose="development">
@@ -2559,7 +2545,7 @@
 </component>
 </collection>
 </package>
-<package id="osrndtools" level="services" tech-domain="to" name="OS R&amp;D tools" levels="fw trace">
+<package id="osrndtools" level="services" tech-domain="to" name="OS R&amp;D tools" levels="fw trace analysis">
 <collection id="stif" name="STIF" level="fw">
 <component id="stif_plat" filter="s60" name="STIF Platform Interfaces" class="api" purpose="development">
 <unit bldFile="/os/osrndtools/stif/stif_plat/group"/>
@@ -2604,31 +2590,36 @@
 <meta rel="config">
 <defined condition="__S60_"/>
 </meta>
-<!-- uncomment the unit when configuration is in place, it's currently #included from stif_build -->
-<!-- <unit bldFile="stif/stifkerneltestclassbase/group"/>-->
+<unit bldFile="/os/osrndtools/stif/stifkerneltestclassbase/group"/>
 </component>
-<component id="stif_build" filter="s60" name="STIF Build" purpose="development">
-<!--  move exports into self-contained component. Remove this when configuration is in place-->
+<component id="stif_data" filter="s60" name="STIF Data" purpose="development" class="config">
+<!--  This is a component. Should move down a directory. or move into other STIF components-->
 <unit bldFile="/os/osrndtools/stif/group"/>
 </component>
 </collection>
-<collection id="memspy" name="Memspy" level="trace">
-<component id="memspy_plat" filter="s60" name="Memspy Platform Interfaces" class="api" purpose="development">
+<collection id="memspy" name="MemSpy" level="trace">
+<component id="memspy_plat" filter="s60" name="MemSpy Platform Interfaces" class="api" purpose="development">
 <unit bldFile="/os/osrndtools/memspy/memspy_plat/group"/>
 </component>
-<component id="driver" filter="s60" name="Memspy Driver" purpose="development">
+<component id="driver" filter="s60" name="MemSpy Driver" purpose="development">
 <unit bldFile="/os/osrndtools/memspy/driver/group"/>
 </component>
-<component id="memspy_engine" filter="s60" name="Memspy Engine" purpose="development">
+<component id="memspy_engine" filter="s60" name="MemSpy Engine" purpose="development">
 <unit bldFile="/os/osrndtools/memspy/engine/group"/>
 </component>
-<component id="commandline" filter="s60" name="Memspy Command Line" purpose="development">
+<component id="commandline" filter="s60" name="MemSpy Command Line" purpose="development">
 <unit bldFile="/os/osrndtools/memspy/commandline/group"/>
 </component>
-<component id="console" filter="s60" name="Memspy Console" purpose="development">
+<component id="console" filter="s60" name="MemSpy Console" purpose="development">
 <unit bldFile="/os/osrndtools/memspy/console/group"/>
 </component>
-<component id="memspy_build" filter="s60" name="Memspy Build" purpose="development">
+<component id="memspyserver" filter="s60" name="MemSpy Server" purpose="development" introduced="^4">
+<unit bldFile="/os/osrndtools/memspy/MemSpyServer/group"/>
+</component>
+<component id="memspyclient" filter="s60" name="MemSpy Client" purpose="development" introduced="^4">
+<unit bldFile="/os/osrndtools/memspy/MemSpyClient/group"/>
+</component>
+<component id="memspy_build" filter="s60" name="MemSpy Build" purpose="development">
 <!--  move exports into self-contained component.-->
 <unit bldFile="/os/osrndtools/memspy/group"/>
 </component>
@@ -2670,6 +2661,16 @@
 <component id="hti_build" filter="s60" name="HTI Build" purpose="development">
 <!--  move exports into self-contained component.-->
 <unit bldFile="/os/osrndtools/hti/group"/>
+</component>
+</collection>
+<collection id="piprofiler" name="Performance Investigator Profiler" level="analysis">
+<component id="piprofiler_build" name="Performance Investigator Profiler Build" introduced="^4">
+<unit bldFile="/os/osrndtools/piprofiler/group"/>
+</component>
+</collection>
+<collection id="analyzetool" name="Analyze Tool" level="analysis">
+<component id="analyzetool_build" name="Analyze Tool Build" introduced="^4">
+<unit bldFile="/os/osrndtools/analyzetool/group"/>
 </component>
 </collection>
 <collection id="osrndtools_info" name="OS R&amp;D tools Info" level="trace">
@@ -2788,22 +2789,17 @@
 </component>
 </collection>
 <collection id="contextframework" name="Context Framework" level="framework">
-<!-- the units that are commented out need to be put back when configuration is in place.
-		They're currently #included by contextframework_build, which should be removed when the other units are uncommented -->
 <component id="cfw" filter="s60" name="Context Framework">
 <meta rel="config">
 <defined condition="RD_CONTEXT_FRAMEWORK"/>
 </meta>
-<!--<unit bldFile="contextframework/cfw/group"/> -->
+<unit bldFile="/mw/appsupport/contextframework/cfw/group"/>
 </component>
 <component id="cfwplugins" filter="s60" name="Context Framework Plugins" class="plugin">
 <meta rel="config">
 <defined condition="RD_CONTEXT_FRAMEWORK"/>
 </meta>
-<!--<unit bldFile="contextframework/cfwplugins/group"/>-->
-</component>
-<component id="contextframework_build" filter="s60" name="Context Framework Build">
-<unit bldFile="/mw/appsupport/contextframework/group"/>
+<unit bldFile="/mw/appsupport/contextframework/cfwplugins/group"/>
 </component>
 </collection>
 <collection id="coreapplicationuis" name="Core Application UIs" level="server">
@@ -3051,17 +3047,11 @@
 <component id="pkcs12" filter="s60" name="PKCS #12">
 <unit bldFile="/mw/securitysrv/pkiutilities/pkcs12/group"/>
 </component>
-<component id="certmanui" filter="s60" name="Certificate Management UI">
-<unit bldFile="/mw/securitysrv/pkiutilities/certmanui/group"/>
-</component>
 <component id="ctsecuritydialogs" filter="s60" name="Crypto Token Security Dialogs">
 <unit bldFile="/mw/securitysrv/pkiutilities/ctsecuritydialogs/group"/>
 </component>
 <component id="certsaver" filter="s60" name="Certificate Saver">
 <unit bldFile="/mw/securitysrv/pkiutilities/certsaver/group"/>
-</component>
-<component id="secmodui" filter="s60" name="Security Module UI">
-<unit bldFile="/mw/securitysrv/pkiutilities/secmodui/group"/>
 </component>
 <component id="devicetoken" filter="s60" name="Device Token">
 <unit bldFile="/mw/securitysrv/pkiutilities/devicetoken/group"/>
@@ -3102,14 +3092,38 @@
 <component id="securitynotifier" filter="s60" name="Security Notifier">
 <unit bldFile="/mw/securitysrv/securitydialogs/securitynotifier/group"/>
 </component>
-<component id="lockclient" filter="s60" name="Lock Client" introduced="^4">
-<unit bldFile="/mw/securitysrv/securitydialogs/lockclient/group" qt:proFile="lockclient.pro" qt:qmakeArgs="-r"/>
+<component id="lockclient" filter="s60" name="Lock Client" introduced="^3">
+<!-- This overwrites the bld.inf already in this dir. I'm pretty sure this will cause problems with the export -->
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/securitysrv/securitydialogs/lockclient/group" qt:proFile="lockclient.pro" qt:qmakeArgs="-r"/>
 </component>
 <component id="lockapp" filter="s60" name="Lock Application" introduced="^3">
 <unit bldFile="/mw/securitysrv/securitydialogs/lockapp/group"/>
 </component>
 <component id="secuinotifications" name="Security UI Notifications" introduced="^4" filter="s60">
-<unit bldFile="/mw/securitysrv/securitydialogs/secuinotifications" qt:proFile="secuinotifications.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/securitysrv/securitydialogs/secuinotifications" qt:proFile="secuinotifications.pro" qt:qmakeArgs="-r"/>
+</component>
+<component id="indicatorautolockplugin" name="Auto Lock Indicator Plugin" introduced="^4" filter="s60" class="plugin">
+<!-- directory at the wrong level to be a component-->
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/securitysrv/securitydialogs/AutolockSrv/indicatorplugin" qt:proFile="indicatorautolockplugin.pro" qt:qmakeArgs="-r"/>
+</component>
+<component id="autolockuseractivityservice" name="Auto Lock User Activity Service" introduced="^4" filter="s60">
+<!-- Can't have two .pro files in the same dir: their generated bld.infs will overwrite each other-->
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/securitysrv/securitydialogs/AutolockSrv" qt:proFile="autolockuseractivityservice.pro" qt:qmakeArgs="-r"/>
+</component>
+<component id="autolocksrv" name="Auto Lock Server" introduced="^4" filter="s60">
+<!-- directory at the wrong level to be a component-->
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/securitysrv/securitydialogs/AutolockSrv" qt:proFile="AutolockSrv.pro" qt:qmakeArgs="-r"/>
+</component>
+</collection>
+<collection id="cpsecplugins" name="Security Settings Plugins" level="plugin">
+<component id="devicelockplugin" name="Device Lock Plugin" introduced="^4" filter="s60">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/securitysrv/cpsecplugins/devicelockplugin" qt:proFile="devicelockplugin.pro" qt:qmakeArgs="-r"/>
+</component>
+<component id="simpincodeplugin" name="SIM PIN Code Plugin" introduced="^4" filter="s60">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/securitysrv/cpsecplugins/simpincodeplugin" qt:proFile="pincodeplugin.pro" qt:qmakeArgs="-r"/>
+</component>
+<component id="cpadvancedsecplugin" name="Advanced Security Plugin" introduced="^4" filter="s60">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/securitysrv/cpsecplugins/cpadvancedsecplugin/group" qt:proFile="advancedsecplugin.pro" qt:qmakeArgs="-r"/>
 </component>
 </collection>
 <collection id="boottimeintegritycheck" name="Boot Time Integrity Check" level="plugin">
@@ -3231,9 +3245,6 @@
 <component id="drmencryptor" filter="s60" name="DRM Encryptor">
 <!-- this should have its own bld.inf or be removed as a component -->
 </component>
-<component id="drmsettingsplugin" filter="s60" name="DRM Settings Plugin" class="plugin">
-<!-- this should have its own bld.inf or be removed as a component -->
-</component>
 <component id="drmrightsmanagerui" filter="s60" name="DRM Rights Manager UI">
 <unit bldFile="/mw/drm/commondrm/drmrightsmanagerui/help/group"/>
 </component>
@@ -3292,6 +3303,12 @@
 <component id="geocoding_api" name="Geocoding API" class="api" filter="s60">
 <unit bldFile="/mw/locationsrv/locsrv_plat/geocoding_api/group"/>
 </component>
+<component id="supl_pos_message_plugin_api" name="SUPL POS Message Plugin API" class="api" filter="s60">
+<!-- placeholder
+    <meta rel="Api" href="locsrv_plat/supl_pos_message_plugin_api/supl_pos_message_plugin_api.metaxml"/>
+    <unit bldFile="locsrv_plat/supl_pos_message_plugin_api/group"/>
+	 -->
+</component>
 <component id="landmarks_category_definition_api" name="Landmarks Category Definition API" class="api" filter="s60">
 <unit bldFile="/mw/locationsrv/locsrv_plat/landmarks_category_definition_api/group"/>
 </component>
@@ -3347,6 +3364,9 @@
 <component id="locationsysui" filter="s60" name="Location System UI">
 <unit bldFile="/mw/locationsrv/locationsystemui/locationsysui/group"/>
 </component>
+<component id="locationsysui" filter="s60" name="Location System Qt UI">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/locationsrv/locationsystemui/locationsysui" qt:proFile="locsysui.pro"/>
+</component>
 </collection>
 <collection id="supl" name="SUPL" level="fw">
 <component id="locationsuplfw" filter="s60" name="Location SUPL Framework">
@@ -3396,7 +3416,29 @@
 </component>
 </collection>
 </package>
-<package id="accesssec" level="generic" tech-domain="dc"/>
+<package id="accesssec" level="generic" tech-domain="dc" name="Access Security" levels="plugin framework server generic specific">
+<collection id="accesssec_plat" name="Access Security Platform Interfaces" level="specific">
+<component id="eap_vpn_api" name="EAP VPN API" class="api" filter="s60">
+<unit bldFile="/mw/accesssec/accesssec_plat/eap_vpn_api/group"/>
+</component>
+<component id="eap_type_api" name="EAP Type API" class="api" filter="s60">
+<unit bldFile="/mw/accesssec/accesssec_plat/eap_type_api/group"/>
+</component>
+</collection>
+<collection id="securitysettings" name="WLAN Security Settings" level="specific">
+<component id="accesssec_qtconfigutils" filter="s60" name="Access Security Config Utils" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/accesssec/securitysettings/qtconfigutils" qt:proFile="qtconfigutils.pro" qt:qmakeArgs="-r"/>
+</component>
+<component id="cpwlansecurityuiplugins" filter="s60" name="Control Panel WLAN Security UI Plugins" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/accesssec/securitysettings/cpwlansecurityuiplugins" qt:proFile="cpwlansecurityuiplugins.pro" qt:qmakeArgs="-r"/>
+</component>
+</collection>
+<collection id="eapol" name="EAPOL" level="framework">
+<component id="eapol_framework" filter="s60" name="EAPOL Framework" introduced="9.2">
+<unit bldFile="/mw/accesssec/eapol/eapol_framework/eapol_symbian/group"/>
+</component>
+</collection>
+</package>
 <package id="ipconnmgmt" level="generic" tech-domain="dc" name="IP Connectivity Management" levels="plugin framework server utils api">
 <collection id="ipcm_plat" name="IP Connectivity Management Platform Interfaces" level="api">
 <component id="access_point_engine_misc_api" name="Access Point Engine Misc API" class="api" filter="s60">
@@ -3462,11 +3504,6 @@
 <unit bldFile="/mw/ipconnmgmt/ipcm_pub/extendedconnpref_api/group"/>
 </component>
 </collection>
-<collection id="accesspointcontrol" name="Access Point Control" level="plugin">
-<component id="apcontrollistplugin" filter="s60" name="Access Point Control List Plugin" class="plugin" introduced="^2">
-<unit bldFile="/mw/ipconnmgmt/accesspointcontrol/apcontrollistplugin/group"/>
-</component>
-</collection>
 <collection id="alwayson_net_plugin" name="Always Online Net Plugin" level="server">
 <component id="pdpcontextmanager2" filter="s60" name="PDP Context Manager 2">
 <unit bldFile="/mw/ipconnmgmt/alwayson_net_plugin/pdpcontextmanager2/group"/>
@@ -3520,10 +3557,9 @@
 </component>
 <component id="commsdatcreatorrfsplugin" filter="s60" name="Comms Database Creator RFS Plugin" class="plugin" introduced="9.3">
 <meta rel="config">
-<not-defined condition="WINSCW"/>
+<not-defined xmlns:qt="http://www.nokia.com/qt" condition="WINSCW"/>
 </meta>
-<!-- uncomment when config is turned on -->
-<!-- <unit bldFile="dbcreator/commsdatcreatorrfsplugin/group"/>-->
+<unit bldFile="/mw/ipconnmgmt/dbcreator/commsdatcreatorrfsplugin/group"/>
 </component>
 <component id="commsdatstartup" filter="s60" name="Comms Database Startup" introduced="9.3">
 <unit bldFile="/mw/ipconnmgmt/dbcreator/commsdatstartup/group"/>
@@ -3538,11 +3574,11 @@
 </collection>
 <collection id="ipconnmgmt_info" name="IP Connectivity Management Info" level="api">
 <component id="ipcm_build" filter="s60" name="IP Connectivity Management Build">
-<!-- need to move exports to another component, or maek this a config component and revmove the #includes -->
+<!-- need to move exports to another component, or make this a config component and revmove the #includes -->
 <unit bldFile="/mw/ipconnmgmt/group"/>
 </component>
 <component id="ipcm_qt_build" name="IP Connectivity Management Qt Build" introduced="^4">
-<unit bldFile="/mw/ipconnmgmt" qt:proFile="ipconnmgmt.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/ipconnmgmt" qt:proFile="ipconnmgmt.pro" qt:qmakeArgs="-r"/>
 </component>
 </collection>
 </package>
@@ -3661,7 +3697,7 @@
 <unit bldFile="/mw/ipappprotocols/sipplugins/sippwlanplugin/group"/>
 </component>
 <component id="sippsipsettingsui" filter="s60" name="SIP Settings UI" class="plugin">
-<unit bldFile="/mw/ipappprotocols/sipplugins/sippsipsettingsui/group"/>
+<!--<unit bldFile="sipplugins/sippsipsettingsui/group"/> -->
 </component>
 <component id="sippdevmgmtsipadapter" filter="s60" name="Device Management SIP Settings Adapter" class="plugin">
 <unit bldFile="/mw/ipappprotocols/sipplugins/sippdevmgmtsipadapter/group"/>
@@ -3730,7 +3766,7 @@
 <collection id="wlanutilities" name="WLAN Utilities" level="generic">
 <component id="wlanutilities_build" name="WLAN Utilities Qt" introduced="^4" filter="s60">
 <!-- is this uinit needed, or is it sufficient to uncomment the units in the below components? -->
-<unit bldFile="/mw/wirelessacc/wlanutilities" qt:proFile="wlanutilities.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/wirelessacc/wlanutilities" qt:proFile="wlanutilities.pro" qt:qmakeArgs="-r"/>
 </component>
 <component id="wlanqtutilities" filter="s60" name="WLAN Qt Utilities" introduced="^4">
 <!--<unit bldFile="wlanutilities/wlanplugin/group" qt:proFile="wlanqtutilities.pro"/>-->
@@ -3750,7 +3786,6 @@
 </collection>
 </package>
 <package id="vpnclient" level="specific" tech-domain="dc" name="VPN Client" levels="engine ui api">
-<!-- is the !oem_build filter needed? -->
 <collection id="vpnc_plat" name="VPN Client Platform Interfaces" level="api">
 <component id="vpnapi" filter="s60" class="api" name="VPN API">
 <unit bldFile="/mw/vpnclient/vpnc_plat/vpnapi/group"/>
@@ -4095,7 +4130,7 @@
 </collection>
 <collection id="phonesrv_info" name="Phone Server Info" level="generic">
 <component id="phonesrv_build" name="Phone Server Build" filter="s60">
-<unit bldFile="/mw/phonesrv" qt:proFile="phonesrv.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/phonesrv" qt:proFile="phonesrv.pro"/>
 </component>
 </collection>
 </package>
@@ -4263,7 +4298,7 @@
 <component id="im_cache_server_api" name="IM Cache Server API" class="api" filter="s60">
 <unit bldFile="/mw/imsrv/imsrv_plat/im_cache_server_api/group"/>
 </component>
-<component id="presence_avabilitytext" name="Presence Avability Text" class="api" filter="s60">
+<component id="presence_avabilitytext" name="Presence Availability Text" class="api" filter="s60">
 <unit bldFile="/mw/imsrv/imsrv_plat/presence_avabilitytext/group"/>
 </component>
 </collection>
@@ -4345,12 +4380,6 @@
 <unit bldFile="/mw/legacypresence/xdmengine/group"/>
 </component>
 </collection>
-<collection id="xdmsettingsui" name="XDM Settings UI" level="ui">
-<!-- collection is really a component. Need to move down a directory (eg xdm/xdmsettingsui)-->
-<component id="xdmsettingsui_build" filter="s60" name="XDM Settings UI Build">
-<unit bldFile="/mw/legacypresence/xdmsettingsui/group"/>
-</component>
-</collection>
 <collection id="xdmprotocols" name="XDM Protocols" level="fw">
 <!-- collection is really a component. Need to move down a directory (eg xdm/xdmprotocols)-->
 <component id="xdmprotocols_build" filter="s60" name="XDM Protocols Build">
@@ -4361,12 +4390,6 @@
 <!-- collection is really a component. Need to move down a directory-->
 <component id="msgconnmanager_build" filter="s60" name="Messaging Connection Manager Build">
 <unit bldFile="/mw/legacypresence/msgconnmanager/group"/>
-</component>
-</collection>
-<collection id="presencesettingsui" name="Presence Settings UI" level="ui">
-<!-- collection is really a component. Need to move down a directory-->
-<component id="presencesettingsui_build" filter="s60" name="Presence Settings UI Build">
-<unit bldFile="/mw/legacypresence/presencesettingsui/group"/>
 </component>
 </collection>
 <collection id="simpleengine" name="SIMPLE Engine" level="engine">
@@ -4438,7 +4461,7 @@
 </collection>
 <collection id="qcpix" name="Qt CPIX" level="engine">
 <component id="qcpix_build" name="Qt CPIX Build" introduced="^4">
-<unit bldFile="/mw/searchsrv/qcpix" qt:proFile="qcpix.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/searchsrv/qcpix" qt:proFile="qcpix.pro"/>
 </component>
 </collection>
 <collection id="searchsrv_info" name="Search Services Info">
@@ -4525,21 +4548,6 @@
 <component id="pnpms_utils_api" name="PNPMS Utils API" class="api" filter="s60">
 <unit bldFile="/mw/remotemgmt/remotemgmt_plat/pnpms_utils_api/group"/>
 </component>
-<component id="diagnostics_plugin_utility_api" name="Diagnostics Plugin Utility API" class="api" filter="s60">
-<unit bldFile="/mw/remotemgmt/remotemgmt_plat/diagnostics_plugin_utility_api/group"/>
-</component>
-<component id="diagnostics_plugin_api" name="Diagnostics Plug-in API" class="api" filter="s60">
-<unit bldFile="/mw/remotemgmt/remotemgmt_plat/diagnostics_plugin_api/group"/>
-</component>
-<component id="diagnostics_framework_api" name="Diagnostics Framework API" class="api" filter="s60">
-<unit bldFile="/mw/remotemgmt/remotemgmt_plat/diagnostics_framework_api/group"/>
-</component>
-<component id="diagnostics_results_api" name="Diagnostics Results API" class="api" filter="s60">
-<unit bldFile="/mw/remotemgmt/remotemgmt_plat/diagnostics_results_api/group"/>
-</component>
-<component id="diagnostics_plugin_pool_api" name="Diagnostics Plugin Pool API" class="api" filter="s60">
-<unit bldFile="/mw/remotemgmt/remotemgmt_plat/diagnostics_plugin_pool_api/group"/>
-</component>
 <component id="adaptive_history_list_api" name="Adaptive History List API" class="api" filter="s60">
 <unit bldFile="/mw/remotemgmt/remotemgmt_plat/adaptive_history_list_api/group"/>
 </component>
@@ -4623,23 +4631,6 @@
 <unit bldFile="/mw/remotemgmt/omaprovisioning/provisioning/group"/>
 </component>
 </collection>
-<collection id="devicediagnosticsfw" name="Device Diagnostics Framework" level="framework">
-<component id="diagframework" filter="s60" name="Diagnostics Framework">
-<unit bldFile="/mw/remotemgmt/devicediagnosticsfw/diagframework/group"/>
-</component>
-<component id="diagpluginbase" filter="s60" name="Diagnostics Plugin Base">
-<unit bldFile="/mw/remotemgmt/devicediagnosticsfw/diagpluginbase/group"/>
-</component>
-<component id="diagresultsdb" filter="s60" name="Diagnostics Results Database">
-<!--  can only have one unit, merge or split into two components -->
-<unit bldFile="/mw/remotemgmt/devicediagnosticsfw/diagresultsdb/client/group"/>
-<unit bldFile="/mw/remotemgmt/devicediagnosticsfw/diagresultsdb/server/group"/>
-</component>
-<component id="devicediagnosticsfw_build" filter="s60" name="Device Diagnostics Framework Build">
-<!--  need to distribute exports, etc into the other components and remove this-->
-<unit bldFile="/mw/remotemgmt/devicediagnosticsfw/group"/>
-</component>
-</collection>
 <collection id="dcmofw" name="Device Capability Management Object Framework" level="framework">
 <component id="dcmoclient" filter="s60" name="DCMO Client">
 <unit bldFile="/mw/remotemgmt/dcmofw/dcmoclient/group"/>
@@ -4656,20 +4647,25 @@
 </component>
 </collection>
 <collection id="fotaapplication" name="FOTA Application" level="generic">
-<component id="fotaapplication_build" filter="s60" name="FOTA Application Build">
-<!-- remove this component when configuration is in place and the #ifdefs have been worked out -->
-<unit bldFile="/mw/remotemgmt/fotaapplication/group"/>
-</component>
 <component id="fotaserver" filter="s60" name="FOTA Server">
 <meta rel="config">
 <defined condition="__SYNCML_DM_FOTA"/>
 </meta>
-<!-- uncomment when #ifdefs are resolved -->
-<!--<unit bldFile="fotaapplication/fotaserver/group"/>-->
+<unit bldFile="/mw/remotemgmt/fotaapplication/fotaserver/group"/>
 </component>
 <component id="fotacustcmds" filter="s60" name="FOTA Custom Commands">
-<!-- uncomment when #ifdefs are resolved. Need to put a config meta here-->
-<!--<unit bldFile="fotaapplication/fotaserver/fotacustcmds/group"/>-->
+<meta rel="config">
+<defined condition="__SYNCML_DM"/>
+<not-defined condition="__PLUG_AND_PLAY_MOBILE_SERVICES"/>
+</meta>
+<unit bldFile="/mw/remotemgmt/fotaapplication/fotaserver/fotacustcmds/group"/>
+</component>
+<!-- really need to find a better way to do this -->
+<component id="fotacustcmds-alt" filter="s60" name="FOTA Custom Commands">
+<meta rel="config">
+<defined condition="__PLUG_AND_PLAY_MOBILE_SERVICES"/>
+</meta>
+<unit bldFile="/mw/remotemgmt/fotaapplication/fotaserver/fotacustcmds/group"/>
 </component>
 </collection>
 </package>
@@ -4844,31 +4840,31 @@
 <meta rel="config">
 <defined condition="FF_UPNP_FRAMEWORK_2_0"/>
 </meta>
-<!-- <unit bldFile="upnpframework/upnpextensionpluginif/group"/> -->
+<unit bldFile="/mw/dlnasrv/upnpframework/upnpextensionpluginif/group"/>
 </component>
 <component id="upnpfiletransferengine" filter="s60" name="UPnP File Transfer Engine" introduced="^2" deprecated="^3">
 <meta rel="config">
 <defined condition="FF_UPNP_FRAMEWORK_2_0"/>
 </meta>
-<!-- <unit bldFile="upnpframework/upnpfiletransferengine/group"/>-->
+<unit bldFile="/mw/dlnasrv/upnpframework/upnpfiletransferengine/group"/>
 </component>
 <component id="upnpcommonui" filter="s60" name="UPnP Common UI" introduced="^2" deprecated="^3">
 <meta rel="config">
 <defined condition="FF_UPNP_FRAMEWORK_2_0"/>
 </meta>
-<!--<unit bldFile="upnpframework/upnpcommonui/group"/>-->
+<unit bldFile="/mw/dlnasrv/upnpframework/upnpcommonui/group"/>
 </component>
 <component id="upnpaiwengine" filter="s60" name="UPnP AIW Engine" introduced="^2" deprecated="^3">
 <meta rel="config">
 <defined condition="FF_UPNP_FRAMEWORK_2_0"/>
 </meta>
-<!--<unit bldFile="upnpframework/upnpaiwengine/group"/> -->
+<unit bldFile="/mw/dlnasrv/upnpframework/upnpaiwengine/group"/>
 </component>
 <component id="upnpaiwprovider" filter="s60" name="UPnP AIW Provider" class="plugin" introduced="^2" deprecated="^3">
 <meta rel="config">
 <defined condition="FF_UPNP_FRAMEWORK_2_0"/>
 </meta>
-<!--<unit bldFile="upnpframework/upnpaiwprovider/group"/>-->
+<unit bldFile="/mw/dlnasrv/upnpframework/upnpaiwprovider/group"/>
 </component>
 <component id="upnpmusicadapter" filter="s60" name="UPnP Music Adapter" introduced="^2">
 <unit bldFile="/mw/dlnasrv/upnpframework/upnpmusicadapter/group"/>
@@ -4877,7 +4873,7 @@
 <unit bldFile="/mw/dlnasrv/upnpframework/upnpcommand/group"/>
 </component>
 <component id="upnpframework_build" filter="s60" name="UPnP Framework Build" introduced="^2">
-<!-- move exports content into one of above components -->
+<!-- move exports content into one or more of above components -->
 <unit bldFile="/mw/dlnasrv/upnpframework/group"/>
 </component>
 </collection>
@@ -4889,21 +4885,24 @@
 <meta rel="config">
 <defined condition="FF_UPNP_FRAMEWORK_2_0"/>
 </meta>
-<!--<unit bldFile="upnpsettings/multiselectionui/group"/>-->
+<unit bldFile="/mw/dlnasrv/upnpsettings/multiselectionui/group"/>
 </component>
 <component id="appwizard" filter="s60" name="UPnP Settings Wizard App" introduced="^2" deprecated="^3">
 <meta rel="config">
 <defined condition="FF_UPNP_FRAMEWORK_2_0"/>
 </meta>
-<!--<unit bldFile="upnpsettings/appwizard/group"/>-->
+<unit bldFile="/mw/dlnasrv/upnpsettings/appwizard/group"/>
 </component>
 <component id="upnpsharingui" filter="s60" name="UPnP Sharing UI" introduced="^2" deprecated="^3">
 <meta rel="config">
 <defined condition="FF_UPNP_FRAMEWORK_2_0"/>
 </meta>
-<!--<unit bldFile="upnpsettings/upnpsharingui/group"/>-->
+<unit bldFile="/mw/dlnasrv/upnpsettings/upnpsharingui/group"/>
 </component>
 <component id="upnpgsplugin" filter="s60" name="UPnP GS Plugin" class="plugin" introduced="^2">
+<meta rel="config">
+<defined condition="FF_UPNP_FRAMEWORK_2_0"/>
+</meta>
 <unit bldFile="/mw/dlnasrv/upnpsettings/upnpgsplugin/group"/>
 </component>
 <component id="upnpsettings_build" filter="s60" name="UPnP Settings Build" introduced="^2">
@@ -4944,20 +4943,20 @@
 </meta>
 <component id="upnpharvester_common" filter="s60" name="UPnP Harvester Common" introduced="^2" deprecated="^3">
 <!-- need to merge or #include these to a single bld.inf -->
-<!--<unit bldFile="upnpharvester/common/cmlibrary/group"/>
-        <unit bldFile="upnpharvester/common/cmsettings/group"/>
-        <unit bldFile="upnpharvester/common/cmsqlwrapper/group"/>
-        <unit bldFile="upnpharvester/common/dbmanager/group"/>-->
+<unit bldFile="/mw/dlnasrv/upnpharvester/common/cmlibrary/group"/>
+<unit bldFile="/mw/dlnasrv/upnpharvester/common/cmsettings/group"/>
+<unit bldFile="/mw/dlnasrv/upnpharvester/common/cmsqlwrapper/group"/>
+<unit bldFile="/mw/dlnasrv/upnpharvester/common/dbmanager/group"/>
 </component>
 <component id="cdssync" filter="s60" name="CDS Sync" introduced="^2" deprecated="^3">
-<!-- <unit bldFile="upnpharvester/cdssync/common"/>-->
+<unit bldFile="/mw/dlnasrv/upnpharvester/cdssync/common"/>
 </component>
 <component id="mdhserver" filter="s60" name="Metadata Harvester Server" introduced="^2" deprecated="^3">
-<!--<unit bldFile="upnpharvester/mdhserver/group"/>-->
+<unit bldFile="/mw/dlnasrv/upnpharvester/mdhserver/group"/>
 </component>
 <component id="upnpharvester_build" filter="s60" name="UPnP Harvester Build" introduced="^2" deprecated="^3">
 <!-- could just make the whole collection one component and move down a dir. Or move the exports here into the other component -->
-<!--<unit bldFile="upnpharvester/group"/>-->
+<unit bldFile="/mw/dlnasrv/upnpharvester/group"/>
 </component>
 </collection>
 <collection id="homesync" name="Home Sync" level="plugin">
@@ -4965,7 +4964,7 @@
 <defined condition="FF_UPNP_FRAMEWORK_2_0"/>
 </meta>
 <component id="contentmanager" filter="s60" name="Content Manager" introduced="^2" deprecated="^3">
-<!-- <unit bldFile="homesync/group"/>-->
+<unit bldFile="/mw/dlnasrv/homesync/group"/>
 <!-- move bld.inf into contentmanager dir -->
 </component>
 </collection>
@@ -4975,14 +4974,10 @@
 </meta>
 <!-- collection is really just a component. Move down a directory -->
 <component id="homemedia_build" filter="s60" name="Home Media" introduced="^2" deprecated="^3">
-<!-- <unit bldFile="homemedia/group"/> -->
+<unit bldFile="/mw/dlnasrv/homemedia/group"/>
 </component>
 </collection>
 <collection id="dlnasrv_info" name="DLNA Services Info" level="plugin">
-<component id="dlnasrv_build" filter="s60" name="DLNA Services Build">
-<!-- need to #include upnpplatformvar.hrh from each #included bld.inf, then this can be removed  -->
-<unit bldFile="/mw/dlnasrv/group"/>
-</component>
 
 </collection>
 </package>
@@ -5037,11 +5032,21 @@
 </component>
 </collection>
 <collection id="bluetoothengine" name="Bluetooth Engine" level="framework">
+<component id="btnotifclient" filter="s60" name="Bluetooth Notification Client" introduced="^4">
+<!-- cannot put a component under another component. Move up a directory -->
+<unit bldFile="/mw/btservices/bluetoothengine/btnotif/btnotifclient/group"/>
+</component>
 <component id="bteng" filter="s60" name="Bluetooth Engine">
 <unit bldFile="/mw/btservices/bluetoothengine/bteng/group"/>
 </component>
+<component id="btserviceutil" filter="s60" name="Bluetooth Service Utils" introduced="^4">
+<unit bldFile="/mw/btservices/bluetoothengine/btserviceutil/group"/>
+</component>
 <component id="btnotif" filter="s60" name="Bluetooth Notifier">
 <unit bldFile="/mw/btservices/bluetoothengine/btnotif/group"/>
+</component>
+<component id="btdevicedialogplugin" filter="s60" name="Bluetooth Device Dialog Plugin" class="plugin" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/btservices/bluetoothengine/btnotif/btdevicedialogplugin" qt:proFile="btdevicedialogplugin.pro"/>
 </component>
 <component id="btaudioman" filter="s60" name="Bluetooth Audio Manager">
 <unit bldFile="/mw/btservices/bluetoothengine/btaudioman/group"/>
@@ -5059,7 +5064,7 @@
 <unit bldFile="/mw/btservices/bluetoothengine/btsap/group"/>
 </component>
 <component id="btui" filter="s60" name="Bluetooth UI">
-<unit bldFile="/mw/btservices/bluetoothengine/btui/group"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/btservices/bluetoothengine/btui" qt:proFile="btui.pro"/>
 </component>
 <component id="btpbap" filter="s60" name="Bluetooth Phonebook Access Profile" class="plugin">
 <unit bldFile="/mw/btservices/bluetoothengine/btpbap/group"/>
@@ -5069,12 +5074,6 @@
 </component>
 <component id="btctrldcmoadapter" filter="s60" name="Bluetooth Control DCMO Adapter" class="plugin" introduced="^3">
 <unit bldFile="/mw/btservices/bluetoothengine/btctrldcmoadapter/group"/>
-</component>
-<component id="btserviceutil" filter="s60" name="Bluetooth Service Utils">
-<unit bldFile="/mw/btservices/bluetoothengine/btserviceutil/group"/>
-</component>
-<component id="btnotifclient" filter="s60" name="Bluetooth Notifier Client">
-<unit bldFile="/mw/btservices/bluetoothengine/btnotif/btnotifclient/group"/>
 </component>
 </collection>
 <collection id="bluetoothappprofiles" name="Bluetooth Application Profiles" level="plugin">
@@ -5180,9 +5179,6 @@
 </component>
 </collection>
 <collection id="usbuis" name="USB UIs" level="specific">
-<component id="usbui" filter="s60" name="USB UI">
-<unit bldFile="/mw/usbservices/usbuis/usbui/group"/>
-</component>
 <component id="usbuinotif" filter="s60" name="USB UI Notifiers">
 <unit bldFile="/mw/usbservices/usbuis/usbuinotif/group"/>
 </component>
@@ -5192,8 +5188,11 @@
 <component id="usbimageprintui" filter="s60" name="ImagePrint UI">
 <unit bldFile="/mw/usbservices/usbuis/imageprintui/group"/>
 </component>
-<component id="usbuiqt" name="USB UI Qt" introduced="^4" filter="s60">
-<unit bldFile="/mw/usbservices/usbuis/usbuiqt" qt:proFile="usbapplication.pro"/>
+<component id="usbsettingsapp" name="USB Settings Application" introduced="^4" filter="s60">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/usbservices/usbuis/usbsettingsapp" qt:proFile="usbsettingsapp.pro" qt:qmakeArgs="-r"/>
+</component>
+<component id="usbindicatorplugin" name="USB Indicator Plugin" introduced="^4" filter="s60" class="plugin">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/usbservices/usbuis/usbindicatorplugin" qt:proFile="usbindicatorplugin.pro" qt:qmakeArgs="-r"/>
 </component>
 </collection>
 <collection id="usbservices_test" name="USB Services Test" level="server">
@@ -5238,6 +5237,10 @@
 <component id="obexsendservices" name="OBEX Send Services">
 <unit bldFile="/mw/shortlinkconn/localconnectivityservice/obexsendservices/group"/>
 </component>
+<component id="obexhighway" name="OBEX Highway" introduced="^4">
+<!-- component must be moved to its own directory. Components cannot live in others component's directories -->
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/shortlinkconn/localconnectivityservice/obexsendservices/obexhighway" qt:proFile="obexhighway.pro"/>
+</component>
 <component id="obexreceiveservices" name="OBEX Receive Services">
 <unit bldFile="/mw/shortlinkconn/localconnectivityservice/obexreceiveservices/group"/>
 </component>
@@ -5277,7 +5280,7 @@
 <unit bldFile="/mw/imghandling/imagehandlingutilities/thumbnailmanager/group"/>
 </component>
 <component id="thumbnailmanagerqt" filter="s60" name="Thumbnail Manager Qt" introduced="^4">
-<unit bldFile="/mw/imghandling/imagehandlingutilities/thumbnailmanager/thumbnailmanagerqt" qt:proFile="thumbnailmanagerqt.pro" qt:qmakeArgs="-r" filter="!test"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/imghandling/imagehandlingutilities/thumbnailmanager/thumbnailmanagerqt" qt:proFile="thumbnailmanagerqt.pro" qt:qmakeArgs="-r" filter="!test"/>
 
 </component>
 </collection>
@@ -5427,8 +5430,7 @@
 <defined condition="RD_MDS_2_5"/>
 </meta>
 <component id="clfwrapper_build" filter="s60" name="CLF Wrapper Build" introduced="^2">
-<!-- Uncomment unit when configuration is in place. Currently #included from mds_build -->
-<!--<unit bldFile="clfwrapper/group"/>-->
+<unit bldFile="/mw/mds/clfwrapper/group"/>
 </component>
 </collection>
 <collection id="mds_info" name="Metadata Services Info" level="int">
@@ -5462,12 +5464,6 @@
 <component id="multimedia_data_source_api" name="Multimedia Data Source API" class="api" filter="s60">
 <unit bldFile="/mw/mmmw/mmmw_plat/multimedia_data_source_api/group"/>
 </component>
-<component id="progressive_download_api" name="Progressive Download API" class="api" filter="s60">
-<unit bldFile="/mw/mmmw/mmmw_plat/progressive_download_api/group"/>
-</component>
-<component id="equalizer_ui_api" name="Equalizer UI API" class="api" filter="s60">
-<unit bldFile="/mw/mmmw/mmmw_plat/equalizer_ui_api/group"/>
-</component>
 <component id="enhanced_media_client_api" name="Enhanced Media Client API" class="api" filter="s60">
 <unit bldFile="/mw/mmmw/mmmw_plat/enhanced_media_client_api/group"/>
 </component>
@@ -5482,9 +5478,6 @@
 </component>
 <component id="audio_metadata_reader_api" name="Audio MetaData Reader API" class="api" filter="s60">
 <unit bldFile="/mw/mmmw/mmmw_plat/audio_metadata_reader_api/group"/>
-</component>
-<component id="emc_progressive_download_source_api" name="EMC Progressive Download Source API" class="api" filter="s60">
-<unit bldFile="/mw/mmmw/mmmw_plat/emc_progressive_download_source_api/group"/>
 </component>
 <component id="emc_volume_effect_api" name="EMC Volume Effect API" class="api" filter="s60">
 <unit bldFile="/mw/mmmw/mmmw_plat/emc_volume_effect_api/group"/>
@@ -5535,8 +5528,16 @@
 <component id="openmax_al_api" name="OpenMAX AL API" class="api" filter="s60" introduced="^4">
 <unit bldFile="/mw/mmmw/mmmw_plat/openmax_al_api/group"/>
 </component>
+<component id="openmax_al_ext_api" name="OpenMAX AL Extensions API" class="api" filter="s60" introduced="^4">
+<unit bldFile="/mw/mmmw/mmmw_plat/openmax_al_ext_api/group"/>
+</component>
 <component id="system_tone_service_api" name="System Tone Service API" class="api" filter="s60" introduced="^4">
 <unit bldFile="/mw/mmmw/mmmw_plat/system_tone_service_api/group"/>
+</component>
+</collection>
+<collection id="khronosfws" name="Khronos Frameworks" level="framework">
+<component id="openmax_al" filter="s60" name="OpenMAX AL" introduced="^4">
+<unit bldFile="/mw/mmmw/khronosfws/openmax_al/group"/>
 </component>
 </collection>
 <collection id="mmfenh" name="MMF Enhancements" level="generic">
@@ -5558,19 +5559,9 @@
 <component id="profilesettingsmonitor" filter="s60" name="Profile Settings Monitor">
 <unit bldFile="/mw/mmmw/mmfenh/profilesettingsmonitor/group"/>
 </component>
-<component id="progressivedownload" filter="s60" name="Progressive Download">
-<unit bldFile="/mw/mmmw/mmfenh/progressivedownload/group"/>
-</component>
 
 </collection>
-<collection id="mm_fw" name="Multimedia Frameworks" level="framework">
-<!-- Id needs to be unique, mmfw already in use -->
-<!-- Placeholder for OpenAX AL and other stuff -->
-</collection>
 <collection id="mmserv" name="Multimedia Services" level="specific">
-<component id="audioeffectsui" filter="s60" name="Audio Effects UI">
-<unit bldFile="/mw/mmmw/mmserv/audioeffectsui/group"/>
-</component>
 <component id="callaudiocontrol" filter="s60" name="Call Audio Control">
 <unit bldFile="/mw/mmmw/mmserv/callaudiocontrol/group"/>
 </component>
@@ -5623,7 +5614,8 @@
 </component>
 <component id="gst_plugins_symbian" filter="s60" name="GStreamer Sybmian Plugins" introduced="^3">
 <!--<unit bldFile="gst_plugins_symbian/group" filter="!test"/>-->
-<!--<unit bldFile="gst_plugins_symbian/tsrc/GStreamerTestModule/group" filter="test,pref_test"/>-->
+
+<!-- add ,pref_test,TA_GSTREAMER filters later -->
 </component>
 </collection>
 <collection id="gstregistrygenerator" name="GStreamer Registry Generator" level="core">
@@ -5745,13 +5737,13 @@
 </component>
 <component id="mpx_backstepping_utility_api" name="MPX Backstepping Utility API" introduced="^1" class="api" filter="s60">
 <meta rel="config">
-<defined condition="IAD_INCLUDE_BACKSTEPPING"/>
+<defined xmlns:qt="http://www.nokia.com/qt" condition="IAD_INCLUDE_BACKSTEPPING"/>
 </meta>
 <unit bldFile="/mw/mmappfw/mmappfw_plat/mpx_backstepping_utility_api/group"/>
 </component>
 <component id="asx_parser_api" name="ASX Parser API" introduced="^1" class="api" filter="s60">
 <meta rel="config">
-<defined condition="__WINDOWS_MEDIA"/>
+<defined xmlns:qt="http://www.nokia.com/qt" condition="__WINDOWS_MEDIA"/>
 </meta>
 <unit bldFile="/mw/mmappfw/mmappfw_plat/asx_parser_api/group"/>
 </component>
@@ -5760,6 +5752,9 @@
 </component>
 <component id="videoplaylist_utility_api" name="Video Playlist Utility API" introduced="^1" class="api" filter="s60">
 <unit bldFile="/mw/mmappfw/mmappfw_plat/videoplaylist_utility_api/group"/>
+</component>
+<component id="qt_telephony_multimedia_service_api" name="Qt Telephony Multimedia Service API" introduced="^4" class="api" filter="s60">
+<unit bldFile="/mw/mmappfw/mmappfw_plat/qt_telephony_multimedia_service_api/group"/>
 </component>
 </collection>
 <collection id="mpx" name="Multimedia Player" level="fw">
@@ -5775,8 +5770,8 @@
 <component id="mpxviewfw" filter="s60" name="MPX View Framework" introduced="^1">
 <unit bldFile="/mw/mmappfw/mpx/viewframework/group"/>
 </component>
-<component id="mpxviewframeworkqt" name="MPX View Framework Qt" filter="s60" introducde="^4">
-<unit bldFile="/mw/mmappfw/mpx/mpxviewframeworkqt" qt:proFile="mpxviewframeworkqt.pro" qt:qmakeArgs="-r -config rom"/>
+<component id="mpxviewframeworkqt" name="MPX View Framework Qt" filter="s60" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/mmappfw/mpx/mpxviewframeworkqt" qt:proFile="mpxviewframeworkqt.pro" qt:qmakeArgs="-r -config rom"/>
 </component>
 <component id="mpx_build" filter="s60" name="MPX Build" introduced="^1">
 <!--  Move the export to another component or remove the #includes from this one -->
@@ -5806,17 +5801,15 @@
 </component>
 <component id="audiofetcher" filter="s60" name="Audio Fetcher" class="plugin" introduced="^1">
 <meta rel="config">
-<defined condition="IAD_INCLUDE_AUDIOFETCHER"/>
+<defined xmlns:qt="http://www.nokia.com/qt" condition="IAD_INCLUDE_AUDIOFETCHER"/>
 </meta>
-<!-- uncomment when config is in place, currently #included in mmappcomponents_build -->
-<!-- <unit bldFile="mmappcomponents/audiofetcher/group"/>-->
+<unit bldFile="/mw/mmappfw/mmappcomponents/audiofetcher/group"/>
 </component>
 <component id="asxparser" filter="s60" name="ASX Parser" introduced="^1">
 <meta rel="config">
-<defined condition="__WINDOWS_MEDIA"/>
+<defined xmlns:qt="http://www.nokia.com/qt" condition="__WINDOWS_MEDIA"/>
 </meta>
-<!-- uncomment when config is in place, currently #included in mmappcomponents_build -->
-<!-- <unit bldFile="mmappcomponents/asxparser/group"/>-->
+<unit bldFile="/mw/mmappfw/mmappcomponents/asxparser/group"/>
 </component>
 <component id="playbackhelper" filter="s60" name="Playback Helper" introduced="^3">
 <unit bldFile="/mw/mmappfw/mmappcomponents/playbackhelper/group"/>
@@ -5826,6 +5819,12 @@
 </component>
 <component id="mmmtpdataprovider" filter="s60" name="Multimedia MTP Data Provider" introduced="^3">
 <unit bldFile="/mw/mmappfw/mmappcomponents/mmmtpdataprovider/group"/>
+</component>
+</collection>
+<collection id="qtms" name="Qt Telephony Multimedia Services" level="fw">
+<component id="qtms_build" filter="s60" name="Qt Telephony Multimedia Services Build" introduced="^4">
+<!--  Collection is really a component. Move down a dir -->
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/mmappfw/qtms" qt:proFile="qtmsapi.pro" qt:qmakeArgs="-r -config rom"/>
 </component>
 </collection>
 <collection id="mmappfw_info" name="Multimedia App Framework Info" level="if">
@@ -5838,22 +5837,29 @@
 </component>
 </collection>
 </package>
-<package id="hgwidgets" level="specific" tech-domain="mm" name="HG Widgets" levels="framework service api">
-<collection id="hgwidgets_plat" name="HG Widgets Platform Interfaces" level="api">
+<package id="hgwidgets" level="specific" tech-domain="mm" name="Multimedia Widgets" levels="framework service api">
+<collection id="hgwidgets_plat" name="Multimedia Widgets Platform Interfaces" level="api">
 <component id="ganeswidgets_api" name="Ganes Widgets API" class="api" introduced="^4">
 <!-- should separate out unit -->
 </component>
+<component id="hgcacheproxymodel_api" name="Hg Cache Proxy Model API" class="api" introduced="^4">
+<!-- should separate out unit -->
+</component>
+<component id="hgwidgets_plat_build" name="Multimedia Widgets Platform Interfaces Build" class="api" introduced="^4">
+<!-- break this up into separate components -->
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/hgwidgets/hgwidgets_plat" qt:proFile="hgwidgets_plat.pro"/>
+</component>
 </collection>
-<collection id="hgwidgets_pub" name="HG Widgets Public Interfaces" level="api"/>
 <collection id="ganeswidgets" name="Ganes Widgets" level="service">
 <!-- really a component, should move down a dir level and have a unit -->
 <component id="ganeswidgets_build" name="Ganes Widgets Build" introduced="^4">
-<!-- should separate out unit -->
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/hgwidgets/ganeswidgets" qt:proFile="ganeswidgets.pro"/>
 </component>
 </collection>
-<collection id="hgwidgets_info" name="HG Widgets Info" level="framework">
-<component id="hgwidgets_build" name="HG Widgets Build" introduced="^4">
-<unit bldFile="/mw/hgwidgets" qt:proFile="hgwidgets.pro"/>
+<collection id="hgcacheproxymodel" name="Hurriganes Cache Proxy Model" level="framework">
+<!-- really a component, should move down a dir level and have a unit -->
+<component id="hgcacheproxymodel_build" name="Hurriganes Cache Proxy Model Build" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/hgwidgets/hgcacheproxymodel" qt:proFile="hgcacheproxymodel.pro"/>
 </component>
 </collection>
 </package>
@@ -5912,27 +5918,13 @@
 <meta rel="config">
 <defined condition="RD_INTELLIGENT_TEXT_INPUT"/>
 </meta>
-<!--uncomment when configuration is turned on and textinput_build is removed-->
-<!--  <unit bldFile="textinput/ptienginev2/group"/>-->
+<unit bldFile="/mw/inputmethods/textinput/ptienginev2/group"/>
 </component>
 <component id="akninputlanguage" filter="s60" name="Avkon Input Language">
 <unit bldFile="/mw/inputmethods/textinput/akninputlanguage/group"/>
 </component>
 <component id="peninputarc" filter="s60" name="Pen Input Arc">
 <unit bldFile="/mw/inputmethods/textinput/peninputarc/group"/>
-</component>
-<component id="peninputcommonctrls" filter="s60" name="Pen Input Common Controls">
-<unit bldFile="/mw/inputmethods/textinput/peninputcommonctrls/group"/>
-</component>
-<component id="peninputcommonlayout" filter="s60" name="Pen Input Common Layout">
-<unit bldFile="/mw/inputmethods/textinput/peninputcommonlayout/group"/>
-</component>
-<component id="peninputhwrtrui" filter="s60" name="Pen Input Handwriting Recognition Training UI" class="plugin" introduced="^3">
-<unit bldFile="/mw/inputmethods/textinput/peninputhwrtrui/group"/>
-</component>
-<component id="textinput_build" filter="s60" name="Text Input Build">
-<!--needed for #ifdef, can be removed when configuration is implemented -->
-<unit bldFile="/mw/inputmethods/textinput/group"/>
 </component>
 </collection>
 <collection id="fep" name="FEP" level="engine">
@@ -5958,18 +5950,14 @@
 </collection>
 <collection id="qt_info" name="Qt Info" level="mw">
 <component id="qt_build" name="Qt Build" introduced="^2">
-<unit bldFile="/mw/qt" qt:proFile="projects.pro" qt:qmakeArgs="-r -config sgimagelite_support"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/qt" qt:proFile="projects.pro" qt:qmakeArgs="&quot;QMAKE_MOC=/epoc32/tools/moc.exe&quot; &quot;QMAKE_RCC=/epoc32/tools/rcc.exe&quot; &quot;QMAKE_UIC=/epoc32/tools/uic.exe&quot; -r"/>
 </component>
 </collection>
 <collection id="qtdemos" name="Qt Demos" level="app">
-<component id="qtdemos_build" name="Qt Demos Build" introduced="^2" filter="qtdemos">
-<unit bldFile="/mw/qt/demos" qt:proFile="demos.pro" qt:qmakeArgs="-r"/>
-</component>
+
 </collection>
 <collection id="qtexamples" name="Qt Examples" level="app">
-<component id="qtexamples_build" name="Qt Examples Build" introduced="^2" filter="qtexamples">
-<unit bldFile="/mw/qt/examples" qt:proFile="examples.pro" qt:qmakeArgs="-r"/>
-</component>
+
 </collection>
 <collection id="qt_tests" name="Qt Tests" level="app">
 
@@ -5979,50 +5967,50 @@
 <package id="qtextensions" level="generic" tech-domain="ui" name="Qt Extensions" levels="tool mw app">
 <collection id="qtecomplugins" name="Qt ECom Plugins" level="app">
 <component id="qtecomplugins_build" filter="qtecomplugins" name="Qt ECom Plugin" purpose="development" introduced="^4" class="plugin">
-<unit bldFile="/mw/qtextensions/qtecomplugins" qt:proFile="qtecomplugins.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/qtextensions/qtecomplugins" qt:proFile="qtecomplugins.pro" qt:qmakeArgs="-r"/>
 </component>
 <component id="qtextensions_examples" filter="qtextensionsexamples" name="Qt ECom Plugin Examples" purpose="development" introduced="^4">
-<unit bldFile="/mw/qtextensions/qtecomplugins/examples" qt:proFile="examples.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/qtextensions/qtecomplugins/examples" qt:proFile="examples.pro" qt:qmakeArgs="-r"/>
 </component>
 </collection>
 <collection id="qthighway" name="Qt Highway" level="app">
 <component id="qthighway_build" filter="qthighway" name="Qt Highway" purpose="development" introduced="^4">
-<unit bldFile="/mw/qtextensions/qthighway" qt:proFile="qthighway.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/qtextensions/qthighway" qt:proFile="qthighway.pro" qt:qmakeArgs="-r"/>
 </component>
 <component id="qthighway_examples" filter="qtextensionsexamples" name="Qt Highway Examples" purpose="development" introduced="^4">
-<unit bldFile="/mw/qtextensions/qthighway/examples" qt:proFile="examples.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/qtextensions/qthighway/examples" qt:proFile="examples.pro" qt:qmakeArgs="-r"/>
 </component>
 
 </collection>
 <collection id="qtmobileextensions" name="Qt Mobile Extensions" level="app">
 <component id="qtmobileextensions_build" filter="qtextension" name="Qt Mobile Extensions" purpose="development" introduced="^4">
-<unit bldFile="/mw/qtextensions/qtmobileextensions" qt:proFile="qtmobileextensions.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/qtextensions/qtmobileextensions" qt:proFile="qtmobileextensions.pro" qt:qmakeArgs="-r"/>
 </component>
 <component id="qtmobileextensions_examples" filter="qtextensionsexamples" name="Qt Mobile Extensions Examples" purpose="development" introduced="^4">
-<unit bldFile="/mw/qtextensions/qtmobileextensions/examples" qt:proFile="examples.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/qtextensions/qtmobileextensions/examples" qt:proFile="examples.pro" qt:qmakeArgs="-r"/>
 </component>
 </collection>
 <collection id="qtmobility" name="Qt Mobility" level="mw">
 <component id="qtmobility_build" filter="qtmobility" name="Qt Mobility" purpose="development" introduced="^4">
-<unit bldFile="/mw/qtextensions/qtmobility" qt:proFile="qtmobility.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/qtextensions/qtmobility" qt:proFile="qtmobility.pro" qt:qmakeArgs="-r"/>
 </component>
 <component id="qtmobility_examples" filter="qtextensionsexamples" name="Qt Mobility Examples" purpose="development" introduced="^4">
-<unit bldFile="/mw/qtextensions/qtmobility/examples" qt:proFile="examples.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/qtextensions/qtmobility/examples" qt:proFile="examples.pro" qt:qmakeArgs="-r"/>
 </component>
 
 </collection>
 <collection id="qhbstyle" level="mw" name="Qt Orbit Style">
 <component id="qhbstyle_build" name="Qt Orbit Style Build" introduced="^4">
-<unit bldFile="/mw/qtextensions/qhbstyle" qt:qmakeArgs="-r" qt:proFile="qhbstyle.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/qtextensions/qhbstyle" qt:qmakeArgs="-r" qt:proFile="qhbstyle.pro"/>
 </component>
 </collection>
 <collection id="qtextensions_info" name="Qt Extensions Info" level="app">
-<component id="qtextensions_conf" name="Qt Extensions Confgure" class="conf" introduced="^4" filter="qt_tools">
+<component id="qtextensions_conf" name="Qt Extensions Confgure" class="config" introduced="^4" filter="qt_tools">
 <unit bldFile="/mw/qtextensions/group"/>
 </component>
 <component id="qtextensions_build" name="Qt Extensions Build" introduced="^4">
 <!-- break this up into the above collections-->
-<unit bldFile="/mw/qtextensions" qt:proFile="qtextensions.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/qtextensions" qt:proFile="qtextensions.pro" qt:qmakeArgs="-r"/>
 </component>
 </collection>
 </package>
@@ -6030,15 +6018,12 @@
 <collection id="hb_info" name="Orbit Info" level="api">
 <component id="hb_build" name="Orbit Build" introduced="^4">
 <!-- should break this down into actual components -->
-<unit bldFile="/mw/hb" qt:proFile="hb.pro" qt:qmakeArgs="-r MMP_RULES+=EXPORTUNFROZEN"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/hb" qt:proFile="hb.pro" qt:qmakeArgs="-r MMP_RULES+=EXPORTUNFROZEN"/>
 </component>
 </collection>
 </package>
 <package id="classicui" level="generic" tech-domain="ui" name="Classic UI" levels="base support server generic specific">
 <collection id="classicui_plat" name="Classic UI Platform Interfaces" level="specific">
-<component id="personalisation_framework_api" name="Personalisation Framework API" class="api" filter="s60">
-<unit bldFile="/mw/classicui/classicui_plat/personalisation_framework_api/group"/>
-</component>
 <component id="signal_pane_api" name="Signal Pane API" class="api" filter="s60">
 <unit bldFile="/mw/classicui/classicui_plat/signal_pane_api/group" filter="!test"/>
 
@@ -6063,15 +6048,9 @@
 <unit bldFile="/mw/classicui/classicui_plat/extended_utilities_api/group" filter="!test"/>
 
 </component>
-<component id="personalisation_plugin_api" name="Personalisation Plugin API" class="api" filter="s60">
-<unit bldFile="/mw/classicui/classicui_plat/personalisation_plugin_api/group"/>
-</component>
 <component id="extended_aiw_criteria_api" name="Extended AIW Criteria API" class="api" filter="s60">
 <unit bldFile="/mw/classicui/classicui_plat/extended_aiw_criteria_api/group" filter="!test"/>
 
-</component>
-<component id="personalisation_application_api" name="Personalisation Application API" class="api" filter="s60">
-<unit bldFile="/mw/classicui/classicui_plat/personalisation_application_api/group"/>
 </component>
 <component id="volume_popup_api" name="Volume Popup API" class="api" filter="s60">
 <unit bldFile="/mw/classicui/classicui_plat/volume_popup_api/group" filter="!test"/>
@@ -6112,9 +6091,6 @@
 <component id="task_list_api" name="Task List API" class="api" filter="s60">
 <unit bldFile="/mw/classicui/classicui_plat/task_list_api/group" filter="!test"/>
 
-</component>
-<component id="personalisation_slide_show_dialog_api" name="Personalisation Slide Show Dialog API" class="api" filter="s60">
-<unit bldFile="/mw/classicui/classicui_plat/personalisation_slide_show_dialog_api/group"/>
 </component>
 <component id="key_event_utilities_api" name="Key Event Utilities API" class="api" filter="s60">
 <unit bldFile="/mw/classicui/classicui_plat/key_event_utilities_api/group"/>
@@ -6174,9 +6150,6 @@
 </component>
 <component id="fep_document_navigation_api" name="FEP Document Navigation API" class="api" filter="s60">
 <unit bldFile="/mw/classicui/classicui_plat/fep_document_navigation_api/group"/>
-</component>
-<component id="personalisation_localised_texts_api" name="Personalisation Localised Texts API" class="api" filter="s60">
-<unit bldFile="/mw/classicui/classicui_plat/personalisation_localised_texts_api/group"/>
 </component>
 <component id="memory_card_ui_api" name="Memory Card UI API" class="api" filter="s60">
 <unit bldFile="/mw/classicui/classicui_plat/memory_card_ui_api/group" filter="!test"/>
@@ -6354,6 +6327,12 @@
 <component id="extended_options_menu_api" name="Extended Options Menu API" class="api" filter="s60">
 <unit bldFile="/mw/classicui/classicui_plat/extended_options_menu_api/group" filter="!test"/>
 
+</component>
+<component id="directory_localizer_api" class="api" name="Directory Localizer API" filter="s60">
+<unit bldFile="/mw/classicui/classicui_plat/directory_localizer_api/group"/>
+</component>
+<component id="findutil_api" class="api" name="Find Util API" filter="s60">
+<unit bldFile="/mw/classicui/classicui_plat/findutil_api/group"/>
 </component>
 </collection>
 <collection id="classicui_pub" name="Classic UI Public Interfaces" level="specific">
@@ -6636,12 +6615,6 @@
 <collection id="applicationinterworkingfw" name="Application Interworking Framework" level="generic">
 <component id="aifwservicehandler" filter="s60" name="Application Interworking Service Handler">
 <unit bldFile="/mw/classicui/applicationinterworkingfw/servicehandler/group"/>
-</component>
-</collection>
-<collection id="psln" name="Personalization" level="specific">
-<!-- the collection is really a component. Move down a directory. Or it could be split into multiple components-->
-<component id="psln_build" filter="s60" name="Personalization Build">
-<unit bldFile="/mw/classicui/psln/group"/>
 </component>
 </collection>
 <collection id="commonadapter" name="Common Adapter" level="support">
@@ -6979,7 +6952,7 @@
 <collection id="platformthemes_info" name="Platform Themes Info">
 <component id="platformthemes_build" name="Platform Themes Build">
 <!-- no real structure in this package. Should break into collections / components -->
-<unit bldFile="/mw/platformthemes" qt:proFile="platformthemes.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/platformthemes" qt:proFile="platformthemes.pro"/>
 </component>
 </collection>
 </package>
@@ -6994,47 +6967,37 @@
 </collection>
 <collection id="gsprofilesrv_plat" name="GS and Profiles Services Platform Interfaces" level="specific">
 <component id="ftuwizardmodel_api" name="FTU Wizard Model API" filter="bldfirst,s60" class="api">
-<unit bldFile="/mw/gsprofilesrv/gsprofilesrv_plat/ftuwizardmodel_api" qt:proFile="ftuwizardmodel_api.pro" qt:qmakeArgs="-r -config rom"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/gsprofilesrv/gsprofilesrv_plat/ftuwizardmodel_api" qt:proFile="ftuwizardmodel_api.pro" qt:qmakeArgs="-r -config rom"/>
 </component>
 <component id="profiles_engine_api" name="Profiles Engine API" class="api" filter="s60">
 <unit bldFile="/mw/gsprofilesrv/gsprofilesrv_plat/profiles_engine_api/group"/>
-</component>
-<component id="settings_backgroundimage_api" name="Settings Background Image API" class="api" filter="s60">
-<unit bldFile="/mw/gsprofilesrv/gsprofilesrv_plat/settings_backgroundimage_api/group"/>
-</component>
-<component id="settings_framework_api" name="Settings Framework API" class="api" filter="s60">
-<unit bldFile="/mw/gsprofilesrv/gsprofilesrv_plat/settings_framework_api/group"/>
-</component>
-<component id="settings_launch_api" name="Settings Launch API" class="api" filter="s60">
-<unit bldFile="/mw/gsprofilesrv/gsprofilesrv_plat/settings_launch_api/group"/>
-</component>
-<component id="settings_listbox_api" name="Settings List Box API" class="api" filter="s60">
-<unit bldFile="/mw/gsprofilesrv/gsprofilesrv_plat/settings_listbox_api/group"/>
-</component>
-<component id="settings_plugin_api" name="Settings Plugin API" class="api" filter="s60">
-<unit bldFile="/mw/gsprofilesrv/gsprofilesrv_plat/settings_plugin_api/group"/>
 </component>
 <component id="settings_uis_cenrep_collection_api" name="Settings UIs CenRep Collection API" class="api" filter="s60">
 <unit bldFile="/mw/gsprofilesrv/gsprofilesrv_plat/settings_uis_cenrep_collection_api/group"/>
 </component>
 </collection>
-<collection id="gssettingsuis" name="General Settings UIs" level="framework">
-<component id="gs" filter="s60" name="General Settings" introduced="9.2">
-<unit bldFile="/mw/gsprofilesrv/gssettingsuis/gs/group"/>
-</component>
-</collection>
 <collection id="ftuwizardmodel" name="FTU Wizard Model" level="generic">
 <component id="ftuwizardmodel_build" name="FTU Wizardmodel Build" filter="bldfirst">
-<unit bldFile="/mw/gsprofilesrv/ftuwizardmodel" qt:proFile="ftuwizardmodel.pro" qt:qmakeArgs="-r -config rom"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/gsprofilesrv/ftuwizardmodel" qt:proFile="ftuwizardmodel.pro" qt:qmakeArgs="-r -config rom"/>
 </component>
 </collection>
 <collection id="controlpanel" name="Control Panel" level="generic">
 
 <component id="controlpanel_rom" name="Control Panel ROM" filter="s60">
-<unit bldFile="/mw/gsprofilesrv/controlpanel/rom" qt:proFile="cp_rom.pri" qt:qmakeArgs="-r -config rom"/>
+<!-- Need to create a real .pro file for this 
+	  <unit bldFile="controlpanel/rom" qt:proFile="cp_rom.pri" qt:qmakeArgs="-r -config rom"/> -->
+</component>
+<component id="controlpanel_config" name="Control Panel Config" filter="s60" class="config" introduced="^4">
+<!-- Need to create a real .pro file for this 
+	  <unit bldFile="controlpanel/conf" qt:proFile="conf.pri" qt:qmakeArgs="-r -config rom"/> -->
 </component>
 <component id="controlpanel_source" name="Control Panel Source" filter="s60">
-<unit bldFile="/mw/gsprofilesrv/controlpanel/src" qt:qmakeArgs="-r -config rom" qt:proFile="src.pro"/>
+<!-- Uncomment when controlpanel_build is removed
+	  <unit bldFile="controlpanel/src" qt:qmakeArgs="-r -config rom" qt:proFile="src.pro"/> -->
+</component>
+<component id="controlpanel_build" name="Control Panel Build" filter="s60">
+<!-- need to make included .pri file into a real .pro file -->
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/gsprofilesrv/controlpanel" qt:qmakeArgs="-r -config rom" qt:proFile="controlpanel.pro"/>
 </component>
 </collection>
 <collection id="profilesservices" name="Profiles Services" level="server">
@@ -7046,46 +7009,37 @@
 <package id="homescreensrv" level="specific" tech-domain="ui" name="Home Screen Services" levels="plugin framework server generic specific">
 <collection id="appfoundation" name="App Foundation" level="generic">
 <component id="appfoundation_build" name="App Foundation Build" introduced="^4">
-<unit bldFile="/mw/homescreensrv/appfoundation" qt:qmakeArgs="-r" qt:proFile="appfoundation.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/homescreensrv/appfoundation" qt:qmakeArgs="-r" qt:proFile="appfoundation.pro"/>
 </component>
 </collection>
 <collection id="hswidgetmodel" name="Home Screen Widget Model" level="framework">
 <component id="hswidgetmodel_build" name="Home Screen Widget Model Build" introduced="^4">
-<unit bldFile="/mw/homescreensrv/hswidgetmodel" qt:qmakeArgs="-r" qt:proFile="hswidgetmodel.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/homescreensrv/hswidgetmodel" qt:qmakeArgs="-r" qt:proFile="hswidgetmodel.pro"/>
 </component>
 </collection>
 <collection id="contentstorage" name="Content Storage" level="framework">
 <component id="cautils" name="Content Arsenal Utils" introduced="^4">
-<unit bldFile="/mw/homescreensrv/contentstorage/cautils" qt:qmakeArgs="-r" qt:proFile="cautils.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/homescreensrv/contentstorage/cautils" qt:qmakeArgs="-r" qt:proFile="cautils.pro"/>
 </component>
 <component id="contentstorage_build" name="Content Storage Build" introduced="^4">
-<unit bldFile="/mw/homescreensrv/contentstorage/group" qt:qmakeArgs="-r" qt:proFile="group.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/homescreensrv/contentstorage/group" qt:qmakeArgs="-r" qt:proFile="group.pro"/>
 </component>
 <component id="casrv/calocalizerscanner" name="Content Arsenal Server Localizer Scanner" introduced="^4">
-<unit bldFile="/mw/homescreensrv/contentstorage/casrv/calocalizerscanner" qt:qmakeArgs="-r" qt:proFile="calocalizerscanner.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/homescreensrv/contentstorage/casrv/calocalizerscanner" qt:qmakeArgs="-r" qt:proFile="calocalizerscanner.pro"/>
 </component>
 <component id="cahandler" name="Content Arsenal Handler" introduced="^4">
-<unit bldFile="/mw/homescreensrv/contentstorage/cahandler" qt:qmakeArgs="-r" qt:proFile="cahandler.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/homescreensrv/contentstorage/cahandler" qt:qmakeArgs="-r" qt:proFile="cahandler.pro"/>
 </component>
 <component id="caclient" name="Content Arsenal Client" introduced="^4">
-<unit bldFile="/mw/homescreensrv/contentstorage/caclient" qt:qmakeArgs="-r" qt:proFile="caclient.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/homescreensrv/contentstorage/caclient" qt:qmakeArgs="-r" qt:proFile="caclient.pro"/>
+</component>
+<component id="casoftwareregistry" name="Content Arsenal Software Registry" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/homescreensrv/contentstorage/casoftwareregistry" qt:qmakeArgs="-r" qt:proFile="casoftwareregistry.pro"/>
 </component>
 </collection>
 <collection id="homescreensrv_plat" name="Home Screen Services Platform Interfaces" level="specific">
 <component id="homescreensrv_plat_build" name="Home Screen Services Platform Interfaces build" introduced="^4">
-<unit bldFile="/mw/homescreensrv/homescreensrv_plat" qt:qmakeArgs="-r" qt:proFile="homescreensrv_plat.pro"/>
-</component>
-<component id="action_handler_plugin_api" name="Action Handler Plugin API" class="api" filter="s60">
-<unit base="/mw/homescreensrv/homescreensrv_plat/action_handler_plugin_api"/>
-</component>
-<component id="content_harvester_plugin_api" name="Content Harvester Plugin API" class="api" filter="s60">
-<unit base="/mw/homescreensrv/homescreensrv_plat/content_harvester_plugin_api"/>
-</component>
-<component id="sapi_contentpublishing" name="SAPI Content Publishing" class="api" filter="s60">
-<unit base="/mw/homescreensrv/homescreensrv_plat/sapi_contentpublishing"/>
-</component>
-<component id="sapi_actionhandler" name="SAPI Action Handler" class="api" filter="s60">
-<unit base="/mw/homescreensrv/homescreensrv_plat/sapi_actionhandler"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/homescreensrv/homescreensrv_plat" qt:qmakeArgs="-r" qt:proFile="homescreensrv_plat.pro"/>
 </component>
 <component id="menu_sat_interface_api" name="Menu SAT Interface API" class="api" filter="s60">
 <unit base="/mw/homescreensrv/homescreensrv_plat/menu_sat_interface_api"/>
@@ -7106,19 +7060,25 @@
 <unit base="/mw/homescreensrv/homescreensrv_plat/homescreen_information_api"/>
 </component>
 </collection>
-<collection id="hsactivityfw" name="Activity Framework" level="activityfw">
+<collection id="hsactivityfw" name="Activity Framework" level="fw">
 <component id="hsactivityfw_build" name="Activity Framework Build" introduced="^4">
-<unit bldFile="/mw/homescreensrv/activityfw" qt:qmakeArgs="-r" qt:proFile="activityfw.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/homescreensrv/activityfw" qt:qmakeArgs="-r" qt:proFile="activityfw.pro"/>
+</component>
+</collection>
+<collection id="tstaskmonitor" name="Task Switcher Task Monitor" level="fw">
+<!-- move collection down to a component directory or split up into component .pro files -->
+<component id="tstaskmonitor_build" name="Task Switcher Task Monitor Build" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/homescreensrv/tstaskmonitor" qt:qmakeArgs="-r" qt:proFile="tstaskmonitor.pro"/>
 </component>
 </collection>
 <collection id="hsappkeyhandler" name="HS Appplication Key Handler" level="server">
 <component id="hsappkeyhandler_build" name="Appplication Key Handler Build" introduced="^4">
-<unit bldFile="/mw/homescreensrv/hsappkeyhandler" qt:qmakeArgs="-r" qt:proFile="hsappkeyhandler.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/homescreensrv/hsappkeyhandler" qt:qmakeArgs="-r" qt:proFile="hsappkeyhandler.pro"/>
 </component>
 </collection>
 <collection id="homescreensrv_info" name="Home Screen Services Info" level="specific">
 <component id="homescreensrvconf" name="Home Screen Services Config" class="config" introduced="^4">
-<unit bldFile="/mw/homescreensrv" qt:qmakeArgs="-r" qt:proFile="homescreensrv.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/homescreensrv" qt:qmakeArgs="-r" qt:proFile="homescreensrv_exports_to_rom.pri"/>
 </component>
 <component id="homescreensrvrom" name="Home Screen Services ROM" introduced="^4">
 <unit bldFile="/mw/homescreensrv/group"/>
@@ -7129,10 +7089,13 @@
 <package id="homescreensrvlegacy" level="generic" tech-domain="ui" name="Legacy Home Screen Services" levels="plugin framework server generic specific">
 <collection id="homescreensrvlegacy_plat" name="Legacy Home Screen Services Platform Interfaces" level="specific">
 <component id="ai_content_model_api" name="AI Content Model API" class="api" filter="s60">
-<unit bldFile="/mw/homescreensrvlegacy/ai_content_model_api/group" qt:proFile="group.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/homescreensrvlegacy/ai_content_model_api/group" qt:proFile="group.pro"/>
 </component>
 <component id="ai_plugin_information_api" name="AI Plug-in Information API" class="api" filter="s60">
-<unit bldFile="/mw/homescreensrvlegacy/ai_plugin_information_api/group" qt:proFile="group.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/homescreensrvlegacy/ai_plugin_information_api/group" qt:proFile="group.pro"/>
+</component>
+<component id="content_harvester_plugin_api" name="Content Harvester Plugin API " class="api" filter="s60">
+<unit bldFile="/mw/homescreensrvlegacy/content_harvester_plugin_api/group"/>
 </component>
 </collection>
 </package>
@@ -7162,9 +7125,6 @@
 <component id="sw_installer_ps_keys" name="SW Installer PS Keys" class="api" filter="s60">
 <unit bldFile="/mw/appinstall/appinstall_plat/sw_installer_ps_keys/group"/>
 </component>
-<component id="appmngr2runtimeapi" name="Application Manager 2 Runtime Plugin API" class="api" filter="s60">
-<unit bldFile="/mw/appinstall/appinstall_plat/appmngr2runtimeapi/group"/>
-</component>
 <component id="sifui_api" name="STIF UI API" class="api" filter="s60">
 <unit bldFile="/mw/appinstall/appinstall_plat/sifui_api/group"/>
 </component>
@@ -7175,13 +7135,7 @@
 </component>
 </collection>
 <collection id="ncdengine" name="Nokia Content Discover" level="framework">
-<!-- is this really just a component? If so move down one diretcory. Otherwise properly split up the bld.inf -->
-<component id="ncdengine_engine" filter="s60" name="NCD Engine" introduced="^1">
-<unit bldFile="/mw/appinstall/ncdengine/engine/group"/>
-</component>
-<component id="debuglogger" filter="s60" name="NCD Debug Logger" introduced="^1">
-<!-- <unit bldFile="ncdengine/debuglogger/group"/> -->
-</component>
+<!-- collection is really just a component. Move down one diretcory -->
 <component id="ncdengine_build" filter="s60" name="NCD Build" introduced="^1">
 <unit bldFile="/mw/appinstall/ncdengine/group"/>
 </component>
@@ -7189,6 +7143,9 @@
 <collection id="appinstaller" name="Application Installer" level="generic">
 <component id="appinstui" filter="s60" name="Application Installer UI" introduced="^2">
 <unit bldFile="/mw/appinstall/appinstaller/appinstui/group"/>
+</component>
+<component id="appinstui_qt" filter="s60" name="Application Installer Qt UI" introduced="^2">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/appinstall/appinstaller/appinstui" qt:proFile="appinstui.pro" qt:qmakeArgs="-r"/>
 </component>
 </collection>
 <collection id="iaupdateapi_stub" name="IA Update API Stub" level="api">
@@ -7198,12 +7155,9 @@
 </component>
 </collection>
 <collection id="iaupdate" name="Independent Apps Update" level="api">
-<!-- is this really just a component? If so move down one diretcory. Otherwise properly split up the bld.inf -->
-<component id="iad" name="Software Update" filter="s60" introduced="^2">
-<unit bldFile="/mw/appinstall/iaupdate/iad/group"/>
-</component>
-<component id="iaupdate_help" filter="s60" name="IA Update Help" introduced="^2">
-<unit bldFile="/mw/appinstall/iaupdate/help/group"/>
+<!-- Should reorganise into actual components -->
+<component id="iad" name="Independent App delivery" filter="s60" introduced="^4" purpose="development">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/appinstall/iaupdate" qt:proFile="iaupdate.pro" qt:qmakeArgs="-r"/>
 </component>
 <component id="iaupdate_build" filter="s60" name="IA Update Build" introduced="^2">
 <unit bldFile="/mw/appinstall/iaupdate/group"/>
@@ -7251,7 +7205,6 @@
 </component>
 </collection>
 <collection id="appinstall_info" name="Application Installation Info" level="api">
-
 
 <component id="appinstall_metadata" name="Application Installation Metadata" class="config" introduced="^2" purpose="development" target="desktop">
 <unit mrp="/mw/appinstall/appinstall_info/appinstall_metadata/appinstall_metadata.mrp"/>
@@ -7313,8 +7266,9 @@
 <package id="serviceapi" level="specific" tech-domain="rt" name="Service API" levels="os mw1 mw2 app">
 <!-- should break up this collection into something meaningful -->
 <collection id="serviceproviders" name="Service Providers" level="mw1">
+<!-- are commented out components to be removed? -->
 <component id="sapi_contacts_vpbk" name="Contacts Phonebook SAPI" filter="s60" class="plugin">
-<unit bldFile="/mw/serviceapi/serviceproviders/sapi_contacts_vpbk/group"/>
+<!--<unit bldFile="serviceproviders/sapi_contacts_vpbk/group"/>-->
 </component>
 <component id="sapi_location" name="Location SAPI" filter="s60" class="plugin">
 <unit bldFile="/mw/serviceapi/serviceproviders/sapi_location/group"/>
@@ -7326,13 +7280,13 @@
 <unit bldFile="/mw/serviceapi/serviceproviders/sapi_landmarks/group"/>
 </component>
 <component id="sapi_messaging" name="Messaging SAPI" filter="s60" class="plugin">
-<unit bldFile="/mw/serviceapi/serviceproviders/sapi_messaging/group"/>
+<!-- <unit bldFile="serviceproviders/sapi_messaging/group"/> -->
 </component>
 <component id="sapi_applicationmanager" name="Application Manager SAPI" filter="s60" class="plugin">
-<unit bldFile="/mw/serviceapi/serviceproviders/sapi_applicationmanager/group"/>
+<!--  <unit bldFile="serviceproviders/sapi_applicationmanager/group"/>-->
 </component>
 <component id="sapi_calendar" name="Calendar SAPI" filter="s60" class="plugin">
-<unit bldFile="/mw/serviceapi/serviceproviders/sapi_calendar/group"/>
+<!-- <unit bldFile="serviceproviders/sapi_calendar/group"/> -->
 </component>
 <component id="sapi_logging" name="Logging SAPI" filter="s60" class="plugin">
 <unit bldFile="/mw/serviceapi/serviceproviders/sapi_logging/group"/>
@@ -7358,7 +7312,7 @@
 <package id="browser" level="specific" tech-domain="rt" name="Browser" levels="plugin utils support main">
 <collection id="bookmarksengine" name="Bookmarks Engine" level="support">
 <component id="bookmarksengine_build" name="Bookmarks Engine Build" introduced="^4">
-<unit bldFile="/mw/browser/bookmarksengine" qt:proFile="bookmarksengine.pro" qt:qmakeArgs="&quot;what+=plat_101&quot;"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/browser/bookmarksengine" qt:proFile="bookmarksengine.pro" qt:qmakeArgs="&quot;what+=plat_101&quot;"/>
 </component>
 </collection>
 </package>
@@ -7439,12 +7393,6 @@
 <unit bldFile="/mw/web/web_plat/xml_parser_api/group"/>
 </component>
 </collection>
-<collection id="web_info" name="Web Info" level="specific">
-<component id="web_build" filter="s60" name="Web Build">
-<!-- when configuration is in place, the #ifdef is no longer needed and this component can be removed -->
-<unit bldFile="/mw/web/group"/>
-</component>
-</collection>
 <collection id="browserutilities" name="Browser Utilities" level="utils">
 <component id="browserdialogsprovider" filter="s60" name="Browser Dialogs Provider">
 <unit bldFile="/mw/web/browserutilities/browserdialogsprovider/group"/>
@@ -7477,8 +7425,7 @@
 <meta rel="config">
 <defined condition="BRDO_MULTIPART_PARSER_FF"/>
 </meta>
-<!-- uncomment the unit when configuration is in place, it's currently #included from browserutilities_build -->
-<!-- <unit bldFile="browserutilities/multipartparser/group"/> -->
+<unit bldFile="/mw/web/browserutilities/multipartparser/group"/>
 </component>
 <component id="schemehandler" filter="s60" name="Scheme Handler">
 <unit bldFile="/mw/web/browserutilities/schemehandler/group"/>
@@ -7488,10 +7435,6 @@
 </component>
 <component id="aiwbrowserprovider" filter="s60" name="AIW Browser Provider" class="plugin">
 <unit bldFile="/mw/web/browserutilities/aiwbrowserprovider/group"/>
-</component>
-<component id="browserutilities_build" filter="s60" name="Browser Utilities Build">
-<!-- when configuration is in place, the #ifdef is no longer needed and this component can be removed -->
-<unit bldFile="/mw/web/browserutilities/group"/>
 </component>
 </collection>
 <collection id="webengine" name="Web Engine" level="server">
@@ -7577,35 +7520,29 @@
 <defined condition="RD_BROWSER_WIDGETS"/>
 <defined condition="__WEB_WIDGETS"/>
 </meta>
-<!-- the following units can be uncommented when configuration is put in place -->
 <component id="widgetrecognizer" filter="s60" name="Widget Recognizer" class="plugin">
-<!--<unit bldFile="widgets/widgetrecognizer/group"/>-->
+<unit bldFile="/mw/web/widgets/widgetrecognizer/group"/>
 </component>
 <component id="widgetinstaller" filter="s60" name="Widget Installer UI" class="plugin">
-<!--<unit bldFile="widgets/widgetinstaller/group"/>-->
+<unit bldFile="/mw/web/widgets/widgetinstaller/group"/>
 </component>
 <component id="widgetlauncher" filter="s60" name="Widget Launcher">
-<!-- <unit bldFile="widgets/widgetlauncher/group"/>-->
+<unit bldFile="/mw/web/widgets/widgetlauncher/group"/>
 </component>
 <component id="widgetapp" filter="s60" name="Widget UI">
-<!--<unit bldFile="widgets/widgetapp/group"/>-->
+<unit bldFile="/mw/web/widgets/widgetapp/group"/>
 </component>
 <component id="widgetpreinstaller" filter="s60" name="Widget Pre-Installer">
 <meta rel="config">
 <defined condition="RD_WIDGET_PREINSTALLER"/>
 </meta>
-<!--<unit bldFile="widgets/widgetpreinstaller/group"/>-->
+<unit bldFile="/mw/web/widgets/widgetpreinstaller/group"/>
 </component>
 <component id="widgetstartup" filter="s60" name="Widget Startup">
 <meta rel="config">
 <defined condition="RD_WIDGET_PREINSTALLER"/>
 </meta>
-<!--<unit bldFile="widgets/widgetstartup/group"/>-->
-</component>
-<component id="widgets_build" filter="s60" name="Widgets Build">
-<!-- when configuration is in place, the #ifdef is no longer needed and this component can be removed 
-      		#included .hrh file needs to be #included in each of the other components -->
-<unit bldFile="/mw/web/widgets/group"/>
+<unit bldFile="/mw/web/widgets/widgetstartup/group"/>
 </component>
 </collection>
 </package>
@@ -7729,17 +7666,17 @@
 </collection>
 </package>
 <package id="webruntime" level="specific" tech-domain="rt" name="Web Runtime">
-<!-- need to break up this package nito collections and components -->
+<!-- need to break up this package into collections and components -->
 <collection id="webruntime_info" name="Web Runtime Info">
 <component id="webruntime_build" name="Web Runtime Build" introduced="^4">
-<unit bldFile="/mw/webruntime" qt:proFile="cwrt.pro" qt:qmakeArgs="&quot;what+=ninetwo&quot; &quot;what+=tenone&quot; &quot;what+=qt_unstable&quot; &quot;what+=wrtlite&quot; &quot;what+=exportiby&quot;"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/mw/webruntime" qt:proFile="cwrt.pro" qt:qmakeArgs="&quot;what+=qtsfw&quot; &quot;what+=qt_unstable&quot; &quot;what+=tenone&quot; &quot;what+=usif&quot; &quot;what+=services&quot; &quot;what+=wrtlite&quot; &quot;what+=exportiby&quot;"/>
 </component>
 </collection>
 </package>
 <package id="platformtools" level="generic" tech-domain="to" name="Platform Tools">
 <collection id="gfxconversion" name="Graphics Conversion">
 <component id="bmconv_s60" filter="s60" name="S60 Bitmap Converter" target="desktop">
-<unit bldFile="/mw/platformtools/gfxconversion/bmconv_s60/group"/>
+<!-- Removed bmconv from builds     <unit bldFile="gfxconversion/bmconv_s60/group"/>   -->
 </component>
 <component id="mifconv" filter="s60" name="Multi Icon File Converter" target="desktop">
 <unit bldFile="/mw/platformtools/gfxconversion/mifconv/group"/>
@@ -7806,19 +7743,19 @@
 <package id="location" level="apps" tech-domain="lo" name="Location Apps" levels="ui events loc api">
 <collection id="location_plat" name="Location Apps Platform Interfaces" level="api">
 <component id="location_picker_service_api" name="Location Picker Service API" introduced="^4" class="api" filter="s60">
-<unit bldFile="/app/location/location_plat" qt:proFile="location_plat.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/location/location_plat" qt:proFile="location_plat.pro"/>
 </component>
 </collection>
 <collection id="locationpickerservice" name="Location Picker Service" level="loc">
 <!--collection is really a component. Should move down a directory -->
 <component id="locationpickerservice_build" filter="s60" name="Location Picker Service Build" introduced="^4">
-<unit bldFile="/app/location/locationpickerservice" qt:proFile="locationpickerservice.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/location/locationpickerservice" qt:proFile="locationpickerservice.pro"/>
 </component>
 </collection>
 <collection id="locationdataharvester" name="Location Data Harvester" level="events">
 <!--collection is really a component. Should move down a directory -->
 <component id="locationdataharvester_build" name="Location Data Harvester Build" filter="s60" introduced="^4">
-<unit bldFile="/app/location/locationdataharvester" qt:proFile="locationdataharvester.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/location/locationdataharvester" qt:proFile="locationdataharvester.pro"/>
 </component>
 </collection>
 </package>
@@ -7844,21 +7781,21 @@
 <unit bldFile="/app/phone/phoneapp/phonemediatorcenter/group"/>
 </component>
 <component id="phoneuiview2" filter="s60" name="Phone UI View">
-<unit bldFile="/app/phone/phoneapp/phoneuiview2" qt:proFile="phoneuiview2.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/phone/phoneapp/phoneuiview2" qt:proFile="phoneuiview2.pro"/>
 </component>
 <component id="phoneuiqtviewadapter" filter="s60" name="Phone UI Qt View Adapter" introduced="^4" class="plugin">
-<unit bldFile="/app/phone/phoneapp/phoneuiqtviewadapter" qt:proFile="phoneuiqtviewadapter.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/phone/phoneapp/phoneuiqtviewadapter" qt:proFile="phoneuiqtviewadapter.pro"/>
 </component>
 <component id="phonestringloader" filter="s60" name="Phone String Loader" introduced="^4">
-<unit bldFile="/app/phone/phoneapp/phonestringloader" qt:proFile="phonestringloader.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/phone/phoneapp/phonestringloader" qt:proFile="phonestringloader.pro"/>
 </component>
 <component id="phoneui2" filter="s60" name="Phone UI">
-<unit bldFile="/app/phone/phoneapp/phoneui2" qt:proFile="phoneui2.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/phone/phoneapp/phoneui2" qt:proFile="phoneui2.pro"/>
 </component>
 </collection>
 <collection id="phoneengine" name="Phone Engine" level="engine">
 <component id="phonecntfinder2" filter="s60" name="Phone Contact Finder">
-<unit bldFile="/app/phone/phoneengine/phonecntfinder2" qt:proFile="phonecntfinder2.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/phone/phoneengine/phonecntfinder2" qt:proFile="phonecntfinder2.pro"/>
 </component>
 <component id="audiohandling" filter="s60" name="Phone Audio Handling">
 <unit bldFile="/app/phone/phoneengine/audiohandling/group"/>
@@ -7876,21 +7813,21 @@
 <unit bldFile="/app/phone/phoneengine/engineinfo/group"/>
 </component>
 <component id="phonemodel" filter="s60" name="Phone Model">
-<unit bldFile="/app/phone/phoneengine/phonemodel" qt:proFile="phonemodel.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/phone/phoneengine/phonemodel" qt:proFile="phonemodel.pro"/>
 </component>
 <component id="servicehandling" filter="s60" name="Phone Service Handling">
 <unit bldFile="/app/phone/phoneengine/servicehandling/group"/>
 </component>
 <component id="phoneservices" filter="s60" name="Phone Server" introduced="^4">
-<unit bldFile="/app/phone/phoneengine/phoneservices" qt:proFile="phoneservices.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/phone/phoneengine/phoneservices" qt:proFile="phoneservices.pro"/>
 </component>
 <component id="parserrecognizer" filter="s60" name="Parser Recognizer" introduced="^4" class="plugin">
-<unit bldFile="/app/phone/phoneengine/parserrecognizer" qt:proFile="parserrecognizer.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/phone/phoneengine/parserrecognizer" qt:proFile="parserrecognizer.pro"/>
 </component>
 </collection>
 <collection id="phoneuis" name="Phone UIs" level="ui">
 <component id="bubblemanager2" filter="s60" name="Phone Bubble Manager">
-<unit bldFile="/app/phone/phoneuis/bubblemanager2" qt:proFile="bubblemanager2.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/phone/phoneuis/bubblemanager2" qt:proFile="bubblemanager2.pro"/>
 </component>
 <component id="telephonydevicemode" filter="s60" name="Telephony Device Mode">
 <unit bldFile="/app/phone/phoneuis/telephonydevicemode/group"/>
@@ -7945,15 +7882,15 @@
 <unit bldFile="/app/phone/phoneplugins/csplugin/group"/>
 </component>
 <component id="hsdialerwidgetplugin" filter="s60" name="Home Screen Dialer Widget Plugin" class="plugin" introduced="^4">
-<unit bldFile="/app/phone/phoneplugins/hsdialerwidgetplugin" qt:proFile="hsdialerwidgetplugin.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/phone/phoneplugins/hsdialerwidgetplugin" qt:proFile="hsdialerwidgetplugin.pro"/>
 </component>
 <component id="infowidgetplugin" filter="s60" name="Info Widget Plugin" class="plugin" introduced="^4">
-<unit bldFile="/app/phone/phoneplugins/infowidgetplugin" qt:proFile="infowidgetplugin.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/phone/phoneplugins/infowidgetplugin" qt:proFile="infowidgetplugin.pro"/>
 </component>
 </collection>
 <collection id="phonesettings" name="Phone Settings" level="plugin">
 <component id="cpphonesettingsplugins" filter="s60" name="CP Phone Settings Plugins" class="plugin" introduced="^4">
-<unit bldFile="/app/phone/phonesettings/cpphonesettingsplugins" qt:proFile="cpphonesettingsplugins.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/phone/phonesettings/cpphonesettingsplugins" qt:proFile="cpphonesettingsplugins.pro"/>
 </component>
 </collection>
 </package>
@@ -7973,22 +7910,34 @@
 </component>
 </collection>
 <collection id="logsui" name="Logs UI" level="ui">
+<!-- split into actual components -->
+<component id="logsservices" filter="s60" name="Logs Services" introduced="^4">
+<!-- <unit bldFile="logsui/logsservices" qt:proFile="logsui.pro"/> -->
+</component>
+<component id="logscntfinder" filter="s60" name="Logs Contact finder">
+<!--<unit bldFile="logsui/logscntfinder" qt:proFile="logscntfinder.pro"/> -->
+</component>
+<component id="logsengine" filter="s60" name="Logs Engine" introduced="^4">
+<!--<unit bldFile="logsui/logsengine" qt:proFile="logsengine.pro"/> -->
+</component>
+<component id="logsapp" filter="s60" name="Logs Application">
+<!--<unit bldFile="logsui/logsengine" qt:proFile="logsengine.pro"/> -->
+</component>
 <component id="logsui_build" filter="s60" name="Logs UI Build">
-<!-- component at too high a rank, should move down one directory -->
-<unit bldFile="/app/recents/logsui" qt:proFile="logsui.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/recents/logsui" qt:proFile="logsui.pro"/>
 </component>
 </collection>
 </package>
 <package id="settingsuis" level="services" tech-domain="dm" name="Settings UIs" levels="plugin ui">
 <collection id="controlpanelplugins" name="Control Panel Plugins" level="plugin">
 <component id="themeplugin" filter="s60" name="Theme Plugin" introduced="^4">
-<unit bldFile="/app/settingsuis/controlpanelplugins/themeplugin" qt:proFile="themeplugin.pro" qt:qmakeArgs="-r -config rom"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/settingsuis/controlpanelplugins/themeplugin" qt:proFile="themeplugin.pro" qt:qmakeArgs="-r -config rom"/>
 </component>
 </collection>
 <collection id="controlpanelui" name="Control Panel UI" level="ui">
 <!-- collection is really a component, move down a dir -->
 <component id="controlpanelui_build" filter="s60" name="Control Panel UI Build" introduced="^4">
-<unit bldFile="/app/settingsuis/controlpanelui" qt:proFile="controlpanelui.pro" qt:qmakeArgs="-r -config rom"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/settingsuis/controlpanelui" qt:proFile="controlpanelui.pro" qt:qmakeArgs="-r -config rom"/>
 </component>
 </collection>
 </package>
@@ -8021,7 +7970,7 @@
 <unit bldFile="/app/contentcontrol/omads/omadsextensions/group"/>
 </component>
 <component id="omadsextensions_qt" filter="s60" name="OMA DS Qt Extensions" class="plugin">
-<unit bldFile="/app/contentcontrol/omads/omadsextensions" qt:proFile="omadsextensions.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/contentcontrol/omads/omadsextensions" qt:proFile="omadsextensions.pro"/>
 </component>
 </collection>
 </package>
@@ -8034,7 +7983,7 @@
 <collection id="runtimeproviders" name="Runtime Providers" level="support"/>
 <collection id="firsttimeuse_info" name="First Time Use Info" level="ui">
 <component id="firsttimeuse_build" name="First Time Use Build">
-<unit bldFile="/app/firsttimeuse" qt:proFile="ftu.pro" qt:qmakeArgs="-r -config rom"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/firsttimeuse" qt:proFile="ftu.pro" qt:qmakeArgs="-r -config rom"/>
 </component>
 </collection>
 </package>
@@ -8044,19 +7993,19 @@
 <unit bldFile="/app/devicecontrol/deviceupdatesui/adapters/bld"/>
 </component>
 <component id="deviceupdates" name="Device Updates" filter="s60" introduced="^4">
-<unit bldFile="/app/devicecontrol/deviceupdatesui/deviceupdates" qt:proFile="deviceupdates.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/devicecontrol/deviceupdatesui/deviceupdates" qt:proFile="deviceupdates.pro"/>
 </component>
 <component id="deviceupdatesplugin" name="Device Updates Plugin" filter="s60" introduced="^4" class="plugin">
-<unit bldFile="/app/devicecontrol/deviceupdatesui/deviceupdatesplugin" qt:proFile="deviceupdatesplugin.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/devicecontrol/deviceupdatesui/deviceupdatesplugin" qt:proFile="deviceupdatesplugin.pro"/>
 </component>
 <component id="deviceupdatesqtsp" name="Device Updates Qt Service Provider" filter="s60" introduced="^4">
-<unit bldFile="/app/devicecontrol/deviceupdatesui/deviceupdatesqtsp" qt:proFile="deviceupdatesqtsp.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/devicecontrol/deviceupdatesui/deviceupdatesqtsp" qt:proFile="deviceupdatesqtsp.pro"/>
 </component>
 <component id="cpqtsp" name="Client Provisioning Qt Service Provider" filter="s60" introduced="^4">
-<unit bldFile="/app/devicecontrol/deviceupdatesui/cpqtsp" qt:proFile="cpqtsp.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/devicecontrol/deviceupdatesui/cpqtsp" qt:proFile="cpqtsp.pro"/>
 </component>
 <component id="devicemanagementnotifiersplugin" name="Device Management Notifiers Plugin" filter="s60" introduced="^4" class="plugin">
-<unit bldFile="/app/devicecontrol/deviceupdatesui/devicemanagementnotifiersplugin" qt:proFile="devicemanagementnotifiersplugin.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/devicecontrol/deviceupdatesui/devicemanagementnotifiersplugin" qt:proFile="devicemanagementnotifiersplugin.pro"/>
 </component>
 </collection>
 </package>
@@ -8066,13 +8015,17 @@
 <component id="filemanager_plat" name="File Manager Platform Interfaces" class="api" filter="s60" introduced="^4">
 <unit base="/app/files/filemanager/filemanager_plat"/>
 </component>
-<component id="fmbkupengine" filter="s60" name="File Manager Backup Engine" introduced="^4">
+<component id="fmbkupengine" filter="s60,bldfirst" name="File Manager Backup Engine" introduced="^4">
 <unit bldFile="/app/files/filemanager/src/fmbkupengine/group"/>
+</component>
+<component id="fmfiledialog" filter="s60,bldfirst" name="File Manager File Dialog" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/files/filemanager/src/fmfiledialog" qt:proFile="fmfiledialog.pro" qt:qmakeArgs="-r -config rom"/>
 </component>
 <component id="filemanager_build" filter="s60" name="File Manager Build">
 <!-- break this up into components or move down a directory -->
-<unit bldFile="/app/files/filemanager" qt:qmakeArgs="-r" qt:proFile="filemanager.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/files/filemanager" qt:qmakeArgs="-r" qt:proFile="filemanager.pro"/>
 </component>
+
 </collection>
 </package>
 <package id="search" level="apps" tech-domain="pr" name="Search Apps" levels="eng base app api">
@@ -8083,7 +8036,7 @@
 </collection>
 <collection id="searchui" name="Search UI">
 <component id="searchui_build" name="Search UI Build" introduced="^4">
-<unit bldFile="/app/search/searchui" qt:proFile="searchui.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/search/searchui" qt:proFile="searchui.pro"/>
 </component>
 </collection>
 </package>
@@ -8094,8 +8047,8 @@
 </component>
 </collection>
 <collection id="phonebookui" name="Phonebook UI" level="ui">
-<component id="mobhistorymodel" filter="s60" name="Mobile History Model" introduced="^4">
-<!--<unit bldFile="phonebookui/mobhistorymodel" qt:proFile="mobhistorymodel.pro"/> -->
+<component id="cnthistorymodel" filter="s60" name="Contacts History Model" introduced="^4">
+<!--<unit bldFile="phonebookui/cnthistorymodel" qt:proFile="cnthistorymodel.pro"/> -->
 </component>
 <component id="pbkcommonui" filter="s60" name="Phonebook Common UI" introduced="^4">
 <!--<unit bldFile="phonebookui/pbkcommonui" qt:proFile="pbkcommonui.pro"/> -->
@@ -8108,39 +8061,37 @@
 </component>
 <component id="phonebookui_build" filter="s60" name="Phonebook UI Build" introduced="^4">
 <!-- break up into components -->
-<unit bldFile="/app/contacts/phonebookui" qt:proFile="phonebookui.pro"/>
-</component>
-</collection>
-<collection id="qtcontactsmobility" name="Qt Contacts Mobility" level="support">
-<component id="qtcontactsmobility_build" filter="s60" name="Qt Contacts Mobility Build" class="plugin" introduced="^4">
-<!-- not really a component, move down a dir? Break up into compnents? -->
-<unit bldFile="/app/contacts/qtcontactsmobility" qt:proFile="qtcontactsmobility.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/contacts/phonebookui" qt:proFile="phonebookui.pro"/>
 </component>
 </collection>
 <collection id="phonebookengines" name="Phonebook Engines" level="engine">
 <component id="cntfindplugin" filter="s60" name="Contacts Find Plugin" class="plugin" introduced="^2">
-<unit bldFile="/app/contacts/phonebookengines/cntfindplugin" qt:proFile="cntfindplugin.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/contacts/phonebookengines/cntfindplugin" qt:proFile="cntfindplugin.pro"/>
 </component>
 <component id="contactsmodel" name="Contacts Model" introduced="ER5" purpose="optional">
 <unit version="2" bldFile="/app/contacts/phonebookengines/contactsmodel/groupsql" mrp="/app/contacts/phonebookengines/contactsmodel/groupsql/app-engines_cntmodel.mrp"/>
 </component>
 <component id="cntsortplugin" filter="s60" name="Contacts Sort Plugin" class="plugin" introduced="^2">
-<unit bldFile="/app/contacts/phonebookengines/cntsortplugin" qt:proFile="cntsortplugin.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/contacts/phonebookengines/cntsortplugin" qt:proFile="cntsortplugin.pro"/>
+</component>
+<component id="qtcontactsmobility" filter="s60" name="Qt Contacts Mobility" class="plugin" introduced="^4">
+<!-- need to move to this actual dir rather than including something from another collection -->
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/contacts/qtcontactsmobility" qt:proFile="qtcontactsmobility.pro"/>
 </component>
 <component id="mobcntmodel" filter="s60" name="Mobile Contacts Model" introduced="^4">
-<unit bldFile="/app/contacts/phonebookengines/mobcntmodel" qt:proFile="mobcntmodel.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/contacts/phonebookengines/mobcntmodel" qt:proFile="mobcntmodel.pro"/>
 </component>
 <component id="mobcntactions" filter="s60" name="Mobile Contacts Actions" introduced="^4">
-<unit bldFile="/app/contacts/phonebookengines/mobcntactions" qt:proFile="mobcntactions.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/contacts/phonebookengines/mobcntactions" qt:proFile="mobcntactions.pro"/>
 </component>
 <component id="cntmaptileservice" filter="s60" name="Contacts Map Tile Service" introduced="^4">
-<unit bldFile="/app/contacts/phonebookengines/cntmaptileservice" qt:proFile="cntmaptileservice.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/contacts/phonebookengines/cntmaptileservice" qt:proFile="cntmaptileservice.pro"/>
 </component>
 <component id="simutility" filter="s60" name="SIM Utility" introduced="^4">
-<unit bldFile="/app/contacts/phonebookengines/simutility" qt:proFile="simutility.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/contacts/phonebookengines/simutility" qt:proFile="simutility.pro"/>
 </component>
 <component id="cntimageutility" name="Contacts Image Utility" filter="s60" introduced="^4">
-<unit bldFile="/app/contacts/phonebookengines/cntimageutility" qt:proFile="cntimageutility.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/contacts/phonebookengines/cntimageutility" qt:proFile="cntimageutility.pro"/>
 </component>
 </collection>
 <collection id="pimprotocols" name="PIM Protocols" level="services">
@@ -8161,13 +8112,13 @@
 <collection id="organizer_pub" name="Organizer Application Suite Public Interfaces" level="app">
 <component id="calendar_interim_utils2_api" name="Calendar Interim Utils 2 API" class="api" filter="s60">
 <!-- move into own .pro file -->
-<unit bldFile="/app/organizer/organizer_pub" qt:proFile="organizer_pub.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/organizer_pub" qt:proFile="organizer_pub.pro"/>
 </component>
 </collection>
 <collection id="organizer_plat" name="Organizer Application Suite Platform Interfaces" level="app">
 <component id="organizer_plat_build" name="Organizer Application Suite Platform Interface Build" class="api" filter="s60">
-<!-- break up into individual .pro files -->
-<unit bldFile="/app/organizer/organizer_plat" qt:proFile="organizer_plat.pro"/>
+<!-- break up into individual .pro files, move the above metaxmls to those components -->
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/organizer_plat" qt:proFile="organizer_plat.pro"/>
 </component>
 <component id="agenda_versit_2_api" name="Agenda Versit 2 API" class="api" filter="s60">
 <!-- <unit bldFile="organizer_plat/agenda_versit_2_api/group"/>-->
@@ -8194,45 +8145,45 @@
 <collection id="agendainterface" name="Agenda Interface" level="services">
 <!-- collection is really a component, should move down a directory -->
 <component id="agendainterface_build" filter="s60" name="Agenda Interface Build">
-<unit bldFile="/app/organizer/agendainterface" qt:proFile="agendainterface.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/agendainterface" qt:proFile="agendainterface.pro"/>
 </component>
 </collection>
 <collection id="calendarui" name="Calendar UI" level="ui">
 <component id="commonutils" filter="s60" name="Calendar Common Utils">
-<unit bldFile="/app/organizer/calendarui/commonutils" qt:proFile="commonutils.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/calendarui/commonutils" qt:proFile="commonutils.pro"/>
 </component>
 <component id="calenlauncher" filter="s60" name="Calendar Launcher">
-<unit bldFile="/app/organizer/calendarui/calenlauncher" qt:proFile="calenlauncher.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/calendarui/calenlauncher" qt:proFile="calenlauncher.pro"/>
 </component>
 <component id="caleneditor" filter="s60" name="Calendar Editor" introduced="^4">
-<unit bldFile="/app/organizer/calendarui/caleneditor" qt:proFile="caleneditor.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/calendarui/caleneditor" qt:proFile="caleneditor.pro"/>
 </component>
 <component id="agendaeventviewer" filter="s60" name="Agenda Event Viewer" introduced="^4">
-<unit bldFile="/app/organizer/calendarui/agendaeventviewer" qt:proFile="agendaeventviewer.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/calendarui/agendaeventviewer" qt:proFile="agendaeventviewer.pro"/>
 </component>
 <component id="globaldata" filter="s60" name="Calendar Global Data">
-<unit bldFile="/app/organizer/calendarui/globaldata" qt:proFile="globaldata.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/calendarui/globaldata" qt:proFile="globaldata.pro"/>
 </component>
 <component id="settings" filter="s60" name="Calendar Settings">
-<unit bldFile="/app/organizer/calendarui/settings" qt:proFile="settings.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/calendarui/settings" qt:proFile="settings.pro"/>
 </component>
 <component id="calenplugins" filter="s60" name="Calendar Plugins" introduced="^4" class="plugin">
-<unit bldFile="/app/organizer/calendarui/calenplugins" qt:proFile="calenplugins.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/calendarui/calenplugins" qt:proFile="calenplugins.pro"/>
 </component>
 <component id="customisationmanager" filter="s60" name="Calendar Customisation Manager">
-<unit bldFile="/app/organizer/calendarui/customisationmanager" qt:proFile="customisationmanager.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/calendarui/customisationmanager" qt:proFile="customisationmanager.pro"/>
 </component>
 <component id="views" filter="s60" name="Calendar Views">
-<unit bldFile="/app/organizer/calendarui/views" qt:proFile="views.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/calendarui/views" qt:proFile="views.pro"/>
 </component>
 <component id="calendarui_controller" filter="s60" name="Calendar Controller">
-<unit bldFile="/app/organizer/calendarui/controller" qt:proFile="controller.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/calendarui/controller" qt:proFile="controller.pro"/>
 </component>
 <component id="calendarui_application" filter="s60" name="Calendar Application">
-<unit bldFile="/app/organizer/calendarui/application" qt:proFile="application.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/calendarui/application" qt:proFile="application.pro"/>
 </component>
 <component id="regionalplugins" name="Regional Plugins" filter="s60" introduced="^4" class="plugin">
-<unit bldFile="/app/organizer/calendarui/regionalplugins" qt:proFile="regionalplugins.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/calendarui/regionalplugins" qt:proFile="regionalplugins.pro"/>
 </component>
 <component id="caldav" filter="sf_build" name="CalDAV" class="plugin" introduced="^3">
 <!-- not yet delivered in S^4 <unit bldFile="calendarui/caldav/group"/>-->
@@ -8240,10 +8191,10 @@
 </collection>
 <collection id="notes" name="Notes" level="ui">
 <component id="noteseditor" filter="s60" name="Notes Editor" introduced="^4">
-<unit bldFile="/app/organizer/notes/notesui/noteseditor" qt:proFile="noteseditor.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/notes/notesui/noteseditor" qt:proFile="noteseditor.pro"/>
 </component>
 <component id="notes_build" filter="s60" name="Notes Build" introduced="^4">
-<unit bldFile="/app/organizer/notes" qt:proFile="notes.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/notes" qt:proFile="notes.pro"/>
 </component>
 </collection>
 <collection id="calendarengines" name="Calendar Engines" level="engine">
@@ -8274,12 +8225,9 @@
 <component id="clockui" filter="s60" name="Clock UI">
 <!--<unit bldFile="clock/clockui" qt:proFile="clockui.pro"/>-->
 </component>
-<component id="ftudatetimewizard" filter="s60" name="First Time Use Date/Time Wizard" introduced="^4">
-<!--<unit bldFile="clock/ftudatetimewizard" qt:proFile="ftudatetimewizard.pro"/>-->
-</component>
 <component id="clock_build" filter="s60" name="Clock Build">
 <!-- make exports into a component, or just move to one of the above components, then remove this and uncomment the above -->
-<unit bldFile="/app/organizer/clock" qt:proFile="clock.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/clock" qt:proFile="clock.pro"/>
 </component>
 </collection>
 <collection id="pimappservices" name="PIM Application Services" level="services">
@@ -8307,7 +8255,7 @@
 <collection id="alarmui" name="Alarm UI" level="app">
 <!-- collection is really a component, should move down a directory -->
 <component id="alarmui_build" filter="s60" name="Alarm UI Build">
-<unit bldFile="/app/organizer/alarmui" qt:proFile="alarmui.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/organizer/alarmui" qt:proFile="alarmui.pro"/>
 </component>
 </collection>
 <collection id="organizer_info" name="Organizer Application Suite Info" level="app">
@@ -8353,7 +8301,7 @@
 </component>
 <component id="msg_plat_build" name="Messaging Apps Platform APIs Build" class="api" filter="s60" introduced="^4">
 <!-- break this up into the above units and replace their base attributes with bldFile, etc -->
-<unit base="/app/messaging/msg_plat" qt:proFile="msg_plat.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" base="/app/messaging/msg_plat" qt:proFile="msg_plat.pro" qt:qmakeArgs="-r"/>
 </component>
 </collection>
 <collection id="msg_pub" name="Messaging Apps Public APIs" level="api">
@@ -8365,7 +8313,7 @@
 </component>
 <component id="msg_pub_build" name="Messaging Apps Public APIs Build" class="api" filter="s60" introduced="^4">
 <!-- break this up into the above units and replace their base attributes with bldFile, etc -->
-<unit base="/app/messaging/msg_pub" qt:proFile="msg_pub.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" base="/app/messaging/msg_pub" qt:proFile="msg_pub.pro" qt:qmakeArgs="-r"/>
 </component>
 </collection>
 <collection id="mobilemessaging" name="Mobile Messaging" level="plugin">
@@ -8376,7 +8324,7 @@
 <collection id="messagingappbase" name="Messaging App Base" level="base">
 <component id="messagingappbase_build" filter="s60" name="Messaging App Base Build" introduced="^4">
 <!-- break this up into the below components -->
-<unit bldFile="/app/messaging/messagingappbase" qt:proFile="messagingappbase.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/messaging/messagingappbase" qt:proFile="messagingappbase.pro" qt:qmakeArgs="-r"/>
 </component>
 <component id="msgmedia" filter="s60" name="Message Media">
 <unit base="/app/messaging/messagingappbase/msgmedia"/>
@@ -8433,34 +8381,36 @@
 </component>
 <component id="mmsengine_build" filter="s60" name="MMS Engine Build">
 <!-- this should be broken up into the individual other components -->
-<unit bldFile="/app/messaging/mmsengine" qt:proFile="mmsengine.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/messaging/mmsengine" qt:proFile="mmsengine.pro" qt:qmakeArgs="-r"/>
 </component>
 </collection>
 <collection id="messagingapp" name="Messaging Application" level="app">
-<component id="messagingapp_build" filter="s60" name="MMS Engine Build">
-<!-- this should be broken up into the individual other components -->
-<unit bldFile="/app/messaging/messagingapp" qt:proFile="messagingapp.pro" qt:qmakeArgs="-r"/>
+<component id="messaging_conf" filter="s60" name="Messaging Application Configuration" class="config" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/messaging/messagingapp/conf" qt:proFile="messaging_conf.pro" qt:qmakeArgs="-r"/>
 </component>
 <component id="msgutils" filter="s60" name="Messaging Utils" introduced="^4">
-<unit bldFile="/app/messaging/messagingapp/msgutils" qt:proFile="msgutils.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/messaging/messagingapp/msgutils" qt:proFile="msgutils.pro" qt:qmakeArgs="-r"/>
 </component>
 <component id="msgappfw" filter="s60" name="Messaging Application Framework" introduced="^4">
-<unit bldFile="/app/messaging/messagingapp/msgappfw" qt:proFile="msgappfw.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/messaging/messagingapp/msgappfw" qt:proFile="msgappfw.pro" qt:qmakeArgs="-r"/>
 </component>
 <component id="msgsettings" filter="s60" name="Messaging Settings" introduced="^4">
-<unit bldFile="/app/messaging/messagingapp/msgsettings" qt:proFile="msgsettings.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/messaging/messagingapp/msgsettings" qt:proFile="msgsettings.pro" qt:qmakeArgs="-r"/>
 </component>
 <component id="msgnotifications" filter="s60" name="Messaging Notifications" introduced="^4">
-<unit bldFile="/app/messaging/messagingapp/msgnotifications" qt:proFile="msgnotifications.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/messaging/messagingapp/msgnotifications" qt:proFile="msgnotifications.pro" qt:qmakeArgs="-r"/>
 </component>
 <component id="smartmessaging" filter="s60" name="Smart Messaging">
-<unit bldFile="/app/messaging/messagingapp/smartmessaging" qt:proFile="smartmessaging.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/messaging/messagingapp/smartmessaging" qt:proFile="smartmessaging.pro" qt:qmakeArgs="-r"/>
 </component>
 <component id="shareui" filter="s60" name="Shared UI" introduced="^4">
-<unit bldFile="/app/messaging/messagingapp/shareui" qt:proFile="shareui.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/messaging/messagingapp/shareui" qt:proFile="shareui.pro" qt:qmakeArgs="-r"/>
 </component>
 <component id="msgui" filter="s60" name="Messaging UI" introduced="^4">
-<unit bldFile="/app/messaging/messagingapp/msgui" qt:proFile="msgui.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/messaging/messagingapp/msgui" qt:proFile="msgui.pro" qt:qmakeArgs="-r"/>
+</component>
+<component id="msgservices" filter="s60" name="Messaging Services" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/messaging/messagingapp/msgservices" qt:proFile="msgservices.pro" qt:qmakeArgs="-r"/>
 </component>
 </collection>
 <collection id="email" name="Email" level="plugin">
@@ -8503,6 +8453,9 @@
 </component>
 <component id="nmailagent" filter="s60" name="Nmail Agent" introduced="^4">
 <!-- <unit bldFile="emailservices/nmailagent" qt:proFile="nmailagent.pro"/>-->
+</component>
+<component id="nmutilities" filter="s60" name="Nmail Utilities" introduced="^4">
+<!-- <unit bldFile="emailservices/nmutilities" qt:proFile="nmutilities.pro"/> -->
 </component>
 </collection>
 <collection id="ipsservices" name="IMAP/POP/SMTP Services" level="service">
@@ -8554,7 +8507,7 @@
 <collection id="commonemail_info" name="Email Apps Info" level="app">
 <component id="commonemail_build" name="Email Apps Build" introduced="^4">
 <!-- split into actual components -->
-<unit bldFile="/app/commonemail" qt:proFile="nmail.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/commonemail" qt:proFile="nmail.pro" qt:qmakeArgs="-r"/>
 </component>
 </collection>
 </package>
@@ -8562,15 +8515,15 @@
 <collection id="camerauis" name="Camera UIs">
 <component id="cameraxui" filter="s60" name="CameraX UIs">
 <meta rel="testbuild">
-<group name="camera_unit_tests"/>
+<group xmlns:qt="http://www.nokia.com/qt" name="camera_unit_tests"/>
 </meta>
-<unit bldFile="/app/camera/camerauis/cameraxui" qt:proFile="camerax.pro" filter="!test"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/camera/camerauis/cameraxui" qt:proFile="camerax.pro" filter="!test"/>
 
 </component>
 </collection>
 </package>
-<!-- <package id="imgeditor" level="apps" tech-domain="ma" href="../../../../app/imgeditor/package_definition.xml"/> -->
-<!-- <package id="videoeditor" level="apps" tech-domain="ma" href="../../../../app/videoeditor/package_definition.xml"/> -->
+<package id="imgeditor" level="apps" tech-domain="ma" name="Image Editor"/>
+<package id="videoeditor" level="apps" tech-domain="ma" name="Video Editor"/>
 <package id="videoplayer" level="apps" tech-domain="ma" name="Video Player Apps" levels="support plugin util apps">
 <collection id="videoplayer_plat" name="Video Player Apps Platform Interfaces" level="apps">
 <component id="videoplayer_startup_api" name="Video Player Startup API" class="api" filter="s60">
@@ -8585,15 +8538,15 @@
 <unit bldFile="/app/videoplayer/videocollection/mpxmyvideoscollection/group"/>
 </component>
 <component id="videocollectionwrapper" filter="s60" name="Video Collection Wrapper" introduced="^4">
-<unit bldFile="/app/videoplayer/videocollection/videocollectionwrapper" qt:proFile="videocollectionwrapper.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/videoplayer/videocollection/videocollectionwrapper" qt:proFile="videocollectionwrapper.pro" qt:qmakeArgs="-r"/>
 </component>
 
 <component id="videocollectionview" filter="s60" name="Video Collection View" introduced="^4">
-<unit bldFile="/app/videoplayer/videocollection/videocollectionview" qt:proFile="videocollectionview.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/videoplayer/videocollection/videocollectionview" qt:proFile="videocollectionview.pro" qt:qmakeArgs="-r"/>
 </component>
 
 <component id="videofiledetailsview" filter="s60" name="Video File Details View" introduced="^4">
-<unit bldFile="/app/videoplayer/videocollection/videofiledetailsview" qt:proFile="videofiledetailsview.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/videoplayer/videocollection/videofiledetailsview" qt:proFile="videofiledetailsview.pro" qt:qmakeArgs="-r"/>
 </component>
 </collection>
 <collection id="mediasettings" name="Media Settings" level="support">
@@ -8604,18 +8557,18 @@
 </collection>
 <collection id="videoplayerapp" name="Video Player App" level="apps">
 <component id="videoplayerengine" name="Video Player Engine" filter="s60" introduced="^4">
-<unit bldFile="/app/videoplayer/videoplayerapp/videoplayerengine" qt:proFile="videoplayerengine.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/videoplayer/videoplayerapp/videoplayerengine" qt:proFile="videoplayerengine.pro" qt:qmakeArgs="-r"/>
 </component>
 <component id="hbvideoplayer" filter="s60" name="HB Video Player" introduced="^4">
-<unit bldFile="/app/videoplayer/videoplayerapp/hbvideoplayer" qt:proFile="hbvideoplayer.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/videoplayer/videoplayerapp/hbvideoplayer" qt:proFile="hbvideoplayer.pro" qt:qmakeArgs="-r"/>
 </component>
 </collection>
 <collection id="videoplayback" name="Video Playback Plugins" level="plugin">
 <component id="hbvideoplaybackview" filter="s60" name="HB Video Playback View" class="plugin" introduced="^4">
-<unit bldFile="/app/videoplayer/videoplayback/hbvideoplaybackview" qt:proFile="hbvideoplaybackview.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/videoplayer/videoplayback/hbvideoplaybackview" qt:proFile="hbvideoplaybackview.pro" qt:qmakeArgs="-r"/>
 </component>
 <component id="hbvideoplaybackviewplugin" filter="s60" name="HB Video Playback View Plugin" introduced="^4" class="plugin">
-<unit bldFile="/app/videoplayer/videoplayback/hbvideoplaybackviewplugin" qt:proFile="hbvideoplaybackviewplugin.pro" qt:qmakeArgs="-r"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/videoplayer/videoplayback/hbvideoplaybackviewplugin" qt:proFile="hbvideoplaybackviewplugin.pro" qt:qmakeArgs="-r"/>
 </component>
 <component id="videohelix" name="Video Helix" filter="s60" introduced="^3" class="plugin">
 <unit bldFile="/app/videoplayer/videoplayback/videohelix/group"/>
@@ -8660,6 +8613,11 @@
 <!--<unit bldFile="main" qt:proFile="main.pro"/> -->
 </component>
 </collection>
+<collection id="gallery" name="Gallery" level="ui">
+<component id="gallery_build" filter="s60" name="Gallery Build" introduced="^4">
+<!--<unit bldFile="gallery" qt:proFile="gallery.pro"/> -->
+</component>
+</collection>
 <collection id="imageviewerapp" name="Image Viewer App" level="support">
 <component id="imageviewerapp_build" filter="s60" name="Image Viewer App Build" introduced="^4">
 <!--<unit bldFile="imageviewerapp" qt:proFile="imageviewerapp.pro"/> -->
@@ -8668,12 +8626,12 @@
 <collection id="photos_info" name="Photos Info" level="support">
 <component id="photos_build" filter="s60" name="Photos Build" introduced="^4">
 <!--  split this up into the above components  -->
-<unit bldFile="/app/photos" qt:proFile="photos.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/photos" qt:proFile="photos.pro"/>
 </component>
 </collection>
 </package>
-<package id="musicplayer" level="apps" tech-domain="ma" name="Music Player Apps" levels="plugins support hs app">
-<!-- move the export .pri files into their components and uncomment the units -->
+<package id="musicplayer" level="apps" tech-domain="ma" name="Music Player Apps" levels="plugins support engine app">
+<!-- move the rom .pri files into their components and uncomment the units -->
 <collection id="musicplayer_utilities " name="Music Player Utilities" level="support">
 <component id="mpnowplayingbanner" filter="s60" name="MP Now Playing Banner" introduced="^4">
 <!-- <unit bldFile="utilities/mpnowplayingbanner" qt:proFile="mpnowplayingbanner.pro" qt:qmakeArgs="-r -config rom"/> -->
@@ -8682,10 +8640,10 @@
 <!-- <unit bldFile="utilities/mpsettingsmanager" qt:proFile="mpsettingsmanager.pro" qt:qmakeArgs="-r -config rom"/> -->
 </component>
 </collection>
-<collection id="musicfetcher " name="Music Fetcher" level="support">
+<collection id="musicservices " name="Music Services" level="support">
 <!-- collection is really a component, move down a directory -->
-<component id="musicfetcher_buld" filter="s60" name="Music Fetcher Build" introduced="^4">
-<!-- <unit bldFile="musicfetcher" qt:proFile="musicfetcher.pro" qt:qmakeArgs="-r -config rom"/> -->
+<component id="musicservices_build" filter="s60" name="Music Services Build" introduced="^4">
+<!-- <unit bldFile="musicservices" qt:proFile="musicservices.pro" qt:qmakeArgs="-r -config rom"/> -->
 </component>
 </collection>
 <collection id="musicplayer_app " name="Music Player Application" level="app">
@@ -8694,12 +8652,33 @@
 <!-- <unit bldFile="app" qt:proFile="app.pro" qt:qmakeArgs="-r -config rom"/> -->
 </component>
 </collection>
-<collection id="mpviewplugins " name="Music Player View Plugins" level="plugins">
+<collection id="mpdata " name="Music Player Data" level="support">
+<!-- collection is really a component, move down a directory -->
+<component id="mpdata_build" filter="s60" name="Music Player Data Build" introduced="^4">
+<!-- <unit bldFile="mpdata" qt:proFile="mpdata.pro" qt:qmakeArgs="-r -config rom"/> -->
+</component>
+</collection>
+<collection id="mpengine " name="Music Player Engine" level="engine">
+<!-- collection is really a component, move down a directory -->
+<component id="mpengine_build" filter="s60" name="Music Player Engine Build" introduced="^4">
+<!-- <unit bldFile="mpengine" qt:proFile="mpengine.pro" qt:qmakeArgs="-r -config rom"/> -->
+</component>
+</collection>
+<collection id="mpviewplugins" name="Music Player View Plugins" level="plugins">
 <component id="mpcollectionviewplugin" filter="s60" name="MP Collection View Plugin" introduced="^4" class="plugin">
-<!--<unit bldFile="mpviewplugins/mpcollectionviewplugin/group"/>-->
+<!--<unit bldFile="mpviewplugins/mpcollectionviewplugin" qt:proFile="mpcollectionviewplugin.pro" qt:qmakeArgs="-r -config rom"/> -->
 </component>
 <component id="mpplaybackviewplugin" filter="s60" name="MP Playback View Plugin" introduced="^4" class="plugin">
-<!--<unit bldFile="mpviewplugins/mpplaybackviewplugin/group"/>-->
+<!--<unit bldFile="mpviewplugins/mpplaybackviewplugin" qt:proFile="mpplaybackviewplugin.pro" qt:qmakeArgs="-r -config rom"/> -->
+</component>
+<component id="mpsettingsviewplugin" filter="s60" name="MP Settings View Plugin" introduced="^4" class="plugin">
+<!--<unit bldFile="mpviewplugins/mpsettingsviewplugin" qt:proFile="mpsettingsviewplugin.pro" qt:qmakeArgs="-r -config rom"/> -->
+</component>
+<component id="mpdetailsviewplugin" filter="s60" name="MP Details View Plugin" introduced="^4" class="plugin">
+<!--<unit bldFile="mpviewplugins/mpdetailsviewplugin" qt:proFile="mpdetailsviewplugin.pro" qt:qmakeArgs="-r -config rom"/> -->
+</component>
+<component id="mpmediawallviewplugin" filter="s60" name="MP Media Wall View Plugin" introduced="^4" class="plugin">
+<!--<unit bldFile="mpviewplugins/mpmediawallviewplugin" qt:proFile="mpmediawallviewplugin.pro" qt:qmakeArgs="-r -config rom"/> -->
 </component>
 </collection>
 <collection id="mpserviceplugins" name="Music Player Service Plugins" level="plugins">
@@ -8713,11 +8692,17 @@
 <component id="mpxsqlitedbcommon" filter="s60" name="MPX SQLite Database Common" introduced="^4">
 <!--<unit bldFile="mpserviceplugins/mpxsqlitedbcommon/group"/>-->
 </component>
+<component id="mpxsqlitedbhgplugin" filter="s60" name="MPX SQLite Database Hg Plugin" introduced="^4" class="plugin">
+<!--<unit bldFile="mpserviceplugins/mpxsqlitedbhgplugin/group"/>-->
+</component>
 <component id="mpxsqlitedbplugin" filter="s60" name="MPX SQLite Database Plugin" introduced="^4" class="plugin">
 <!--<unit bldFile="mpserviceplugins/mpxsqlitedbplugin/group"/>-->
 </component>
 <component id="mpxsqlitepodcastdbplugin" filter="s60" name="MPX SQLlite Podcast Database Plugin" introduced="^4" class="plugin">
 <!--<unit bldFile="mpserviceplugins/mpxsqlitepodcastdbplugin/group"/>-->
+</component>
+<component id="mpxinmemoryplugin" filter="s60" name="MPX In-Memory Plugin" introduced="^4" class="plugin">
+<!--<unit bldFile="mpserviceplugins/mpxinmemoryplugin/group"/>-->
 </component>
 <component id="m3uplaylistplugin" filter="s60" name="M3U Playlist Plugin" introduced="^4" class="plugin">
 <!--<unit bldFile="mpserviceplugins/mpxsqlitepodcastdbplugin/group"/>-->
@@ -8725,12 +8710,12 @@
 </collection>
 <collection id="musicplayer_info" name="Music Player Apps Info" level="app">
 <component id="musicplayer_build" filter="s60" name="Music Player Build">
-<!-- should brak up into individual components  -->
-<unit bldFile="/app/musicplayer" qt:proFile="qtmusicplayer.pro" qt:qmakeArgs="-r -config rom"/>
+<!-- break up into individual components. ROM includes should be in their components -->
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/musicplayer" qt:proFile="qtmusicplayer.pro" qt:qmakeArgs="-r -config rom"/>
 </component>
 </collection>
 </package>
-<package id="radio" level="apps" tech-domain="ma" name="Radio Apps" levels="engine ui">
+<package id="radio" level="apps" tech-domain="ma" name="Radio Apps" levels="engine plugin ui">
 <collection id="radioengine" name="Radio Engine" level="engine">
 <component id="radioengineutils" filter="s60" name="Radio Engine Utils" introduced="^4">
 <unit bldFile="/app/radio/radioengine/utils/group"/>
@@ -8744,22 +8729,33 @@
 </collection>
 <collection id="radioapp" name="Radio App" level="ui">
 <component id="radioenginewrapper" filter="s60" name="Radio Engine Wrapper" introduced="^4">
-<unit bldFile="/app/radio/radioapp/radioenginewrapper" qt:proFile="radioenginewrapper.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/radio/radioapp/radioenginewrapper" qt:proFile="radioenginewrapper.pro"/>
 </component>
 <component id="radiopresetstorage" filter="s60" name="Radio Preset Storage" introduced="^4">
-<unit bldFile="/app/radio/radioapp/radiopresetstorage" qt:proFile="radiopresetstorage.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/radio/radioapp/radiopresetstorage" qt:proFile="radiopresetstorage.pro"/>
 </component>
 <component id="radiouiengine" filter="s60" name="Radio UI Engine" introduced="^4">
-<unit bldFile="/app/radio/radioapp/radiouiengine" qt:proFile="radiouiengine.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/radio/radioapp/radiouiengine" qt:proFile="radiouiengine.pro"/>
 </component>
 <component id="radiowidgets" filter="s60" name="Radio Widgets" introduced="^4">
-<unit bldFile="/app/radio/radioapp/radiowidgets" qt:proFile="radiowidgets.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/radio/radioapp/radiowidgets" qt:proFile="radiowidgets.pro"/>
 </component>
 <component id="radioapplication" filter="s60" name="Radio Application" introduced="^4">
-<unit bldFile="/app/radio/radioapp/radioapplication" qt:proFile="radioapplication.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/radio/radioapp/radioapplication" qt:proFile="radioapplication.pro"/>
 </component>
 <component id="radio_rom" filter="s60" name="Radio ROM" introduced="^4">
 <unit bldFile="/app/radio/rom"/>
+</component>
+</collection>
+<collection id="radio_hswidgetplugin" name="FM Radio Homescreen Widget Plugin" level="plugin">
+<component id="fmradiohswidgetplugin" filter="s60" name="FM Radio HS Widget Plugin" class="plugin" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/radio/hswidgetplugin/fmradiohswidgetplugin" qt:proFile="fmradiohswidgetplugin.pro"/>
+</component>
+<component id="fmradiohswidgetplugininstaller" filter="s60" name="FM Radio HS Widget Plugin Installer" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/radio/hswidgetplugin/fmradiohswidgetplugininstaller" qt:proFile="fmradiohswidgetplugininstaller.pro"/>
+</component>
+<component id="fmradiohswidgetplugin_exports_to_rom" filter="s60" name="FM Radio HS Widget Plugin ROM" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/radio/hswidgetplugin" qt:proFile="fmradiohswidgetplugin_exports_to_rom.pri"/>
 </component>
 </collection>
 </package>
@@ -8779,7 +8775,7 @@
 <collection id="qtinternetradio" name="Qt Internet Radio">
 <component id="qtinternetradio_build" name="Qt Internet Radio Build">
 <!--  Move down a dir or break into components-->
-<unit bldFile="/app/internetradio/qtinternetradio" qt:proFile="all.pro" qt:qmakeArgs="-r -config rom"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/internetradio/qtinternetradio" qt:proFile="all.pro" qt:qmakeArgs="-r -config rom"/>
 </component>
 
 </collection>
@@ -8799,40 +8795,50 @@
 </collection>
 </package>
 <package id="homescreen" level="apps" tech-domain="ui" name="Home Screen Apps" levels="support task ss hs">
-<collection id="homescreen_info" name="Home Screen Info" level="support">
-<component id="homescreen_build" name="Homescreen Build">
-<!-- break this up properly into components -->
-<unit bldFile="/app/homescreen" qt:proFile="homescreen.pro" qt:qmakeArgs="-r -config rom"/>
-</component>
-</collection>
 <collection id="homescreen_test" name="Home Screen Test" level="support">
 
 </collection>
-<!-- fiill in details with broken up homescreen_build -->
 <collection id="homescreenapp" name="Home Screen Application" level="hs">
-<component id="hsutils" name="Home Screen Utils" introduced="^4"/>
-<component id="hsdomainmodel" name="HS Domain Model" introduced="^4"/>
-<component id="hs_runtimeplugins" name="HS Runtime Plugins" introduced="^4" class="plugin"/>
-<component id="hs_serviceproviders" name="HS Service Providers" introduced="^4" class="plugin"/>
-<component id="hs_stateplugins" name="HS State Plugins" introduced="^4" class="plugin"/>
-<component id="hs_widgetplugins" name="HS Widget Plugins" introduced="^4" class="plugin"/>
-<component id="hsapplication" name="Home Screen Application" introduced="^4"/>
-<component id="hshomescreenclientplugin" name="Home Screen Client Plugin" introduced="^4" class="plugin"/>
-<component id="hsmenucontentpublish" name="HS Menu Content Publish" introduced="^4"/>
-</collection>
-<collection id="screensaverapp" name="Screen Saver Application" level="ss">
-<component id="snsrutils" name="Screen Saver Utils" introduced="^4"/>
-<component id="snsr_serviceproviders" name="Screen Saver Service Providers" introduced="^4" class="plugin"/>
-<component id="snsr_stateproviders" name="Screen Saver State Providers" introduced="^4" class="plugin"/>
-<component id="snsr_runtimeproviders" name="Screen Saver Runtime Providers" introduced="^4" class="plugin"/>
-<component id="snsrapplication" name="Screen Saver Application" introduced="^4"/>
-<component id="screensaverproviders" name="Screen Saver Providers" introduced="^4" class="plugin"/>
+<component id="hsutils" name="Home Screen Utils" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/homescreen/homescreenapp/hsutils" qt:proFile="hsutils.pro" qt:qmakeArgs="-r -config rom"/>
+</component>
+<component id="hsdomainmodel" name="HS Domain Model" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/homescreen/homescreenapp/hsdomainmodel" qt:proFile="hsdomainmodel.pro" qt:qmakeArgs="-r -config rom"/>
+</component>
+<component id="hs_runtimeplugins" name="HS Runtime Plugins" introduced="^4" class="plugin">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/homescreen/homescreenapp/runtimeplugins" qt:proFile="runtimeplugins.pro" qt:qmakeArgs="-r -config rom"/>
+</component>
+<component id="hs_serviceproviders" name="HS Service Providers" introduced="^4" class="plugin">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/homescreen/homescreenapp/serviceproviders" qt:proFile="serviceproviders.pro" qt:qmakeArgs="-r -config rom"/>
+</component>
+<component id="hs_stateplugins" name="HS State Plugins" introduced="^4" class="plugin">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/homescreen/homescreenapp/stateplugins" qt:proFile="stateplugins.pro" qt:qmakeArgs="-r -config rom"/>
+</component>
+<component id="hs_widgetplugins" name="HS Widget Plugins" introduced="^4" class="plugin">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/homescreen/homescreenapp/widgetplugins" qt:proFile="widgetplugins.pro" qt:qmakeArgs="-r -config rom"/>
+</component>
+<component id="hsapplication" name="Home Screen Application" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/homescreen/homescreenapp/hsapplication" qt:proFile="hsapplication.pro" qt:qmakeArgs="-r -config rom"/>
+</component>
+<component id="hsmenuclientplugin" name="Home Screen Menu Client Plugin" introduced="^4" class="plugin">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/homescreen/homescreenapp/hsmenuclientplugin" qt:proFile="hsmenuclientplugin.pro" qt:qmakeArgs="-r -config rom"/>
+</component>
+<component id="hshomescreenclientplugin" name="HS Menu Client Plugin" introduced="^4" class="plugin">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/homescreen/homescreenapp/hshomescreenclientplugin" qt:proFile="hshomescreenclientplugin.pro" qt:qmakeArgs="-r -config rom"/>
+</component>
+<component id="hswidgetuninstaller" name="HS Widget Uninstaller" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/homescreen/homescreenapp/hswidgetuninstaller" qt:proFile="hswidgetuninstaller.pro" qt:qmakeArgs="-r -config rom"/>
+</component>
+<component id="homescreenapp_rom" name="Home Screen App ROM" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/homescreen/homescreenapp" qt:proFile="homescreenapp_exports_to_rom.pri" qt:qmakeArgs="-r -config rom"/>
+</component>
 </collection>
 <collection id="taskswitcherapp" name="Task Switcher Application" level="task">
-<component id="taskswitcherappecom" name="Task Switcher Application ECom" introduced="^4"/>
-<component id="tsserviceplugin" name="Task Switcher Service Plugin" introduced="^4" class="plugin"/>
-<component id="ts_runtimeplugins" name="TS Runtime Plugins" introduced="^4" class="plugin"/>
-<component id="tsapplication" name="Task Switcher Application" introduced="^4"/>
+<!-- break collection info components, or move down a dir and make it a component -->
+<component id="taskswitcherapp_build" name="Task Switcher Application Build">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/homescreen/taskswitcherapp" qt:proFile="taskswitcherapp.pro" qt:qmakeArgs="-r -config rom"/>
+</component>
+<component id="tsdevicedialogplugin" name="Task Switcher Device Dialog Plugin" introduced="^4" class="plugin"/>
 </collection>
 </package>
 <package id="jrt" level="services" tech-domain="rt" name="Java Runtime" levels="util generic rt ui">
@@ -8847,53 +8853,58 @@
 <unit bldFile="/app/jrt/jrt_plat/java_debug_api/build"/>
 </component>
 </collection>
+<collection id="java_stubs" name="Java Stubs" level="rt">
+<component id="java_stubs_build" name="Build Native Java" filter="sf_build" introduced="^4">
+<unit bldFile="/app/jrt/java_stubs/group"/>
+</component>
+</collection>
 <collection id="build_nativejava" name="Build Native Java">
 <component id="nativejava" name="Build Native Java" filter="s60" introduced="^4">
-<unit bldFile="/app/jrt/build/nativejava" qt:proFile="nativejava.pro" qt:qmakeArgs="-r" filter="!sf_build"/>
-<unit bldFile="/app/jrt/build/nativejava" qt:proFile="nativejava.pro" qt:qmakeArgs="-r RD_JAVA_SF_BUILD=1" filter="sf_build"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/jrt/build/nativejava" qt:proFile="nativejava.pro" qt:qmakeArgs="-r" filter="!sf_build"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/jrt/build/nativejava" qt:proFile="nativejava.pro" qt:qmakeArgs="-r RD_JAVA_SF_BUILD=1" filter="sf_build"/>
 </component>
 </collection>
 <collection id="javacommons" name="Java Commons" level="generic">
 <component id="javacommons_build" filter="s60" name="JRT Build">
-<unit bldFile="/app/jrt/javacommons" qt:proFile="javacommons.pro" qt:qmakeArgs="-r" filter="!sf_build"/>
-<unit bldFile="/app/jrt/javacommons" qt:proFile="javacommons.pro" qt:qmakeArgs="-r RD_JAVA_SF_BUILD=1" filter="sf_build"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/jrt/javacommons" qt:proFile="javacommons.pro" qt:qmakeArgs="-r" filter="!sf_build"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/jrt/javacommons" qt:proFile="javacommons.pro" qt:qmakeArgs="-r RD_JAVA_SF_BUILD=1" filter="sf_build"/>
 </component>
 </collection>
 <collection id="javaruntimes" name="Java Runtimes" level="rt">
 <component id="javaruntimes_build" filter="s60" name="JRT Build">
-<unit bldFile="/app/jrt/javaruntimes" qt:proFile="javaruntimes.pro" qt:qmakeArgs="-r" filter="!sf_build"/>
-<unit bldFile="/app/jrt/javaruntimes" qt:proFile="javaruntimes.pro" qt:qmakeArgs="-r RD_JAVA_SF_BUILD=1" filter="sf_build"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/jrt/javaruntimes" qt:proFile="javaruntimes.pro" qt:qmakeArgs="-r" filter="!sf_build"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/jrt/javaruntimes" qt:proFile="javaruntimes.pro" qt:qmakeArgs="-r RD_JAVA_SF_BUILD=1" filter="sf_build"/>
 </component>
 </collection>
 <collection id="javauis" name="Java UIs" level="ui">
 <component id="javauis_build" filter="s60" name="JRT Build">
-<unit bldFile="/app/jrt/javauis" qt:proFile="javauis.pro" qt:qmakeArgs="-r" filter="!sf_build"/>
-<unit bldFile="/app/jrt/javauis" qt:proFile="javauis.pro" qt:qmakeArgs="-r RD_JAVA_SF_BUILD=1" filter="sf_build"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/jrt/javauis" qt:proFile="javauis.pro" qt:qmakeArgs="-r" filter="!sf_build"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/jrt/javauis" qt:proFile="javauis.pro" qt:qmakeArgs="-r RD_JAVA_SF_BUILD=1" filter="sf_build"/>
 </component>
 </collection>
 <collection id="javamanager" level="generic">
 <component id="javamanager_build" filter="s60" name="JRT Build">
-<unit bldFile="/app/jrt/javamanager" qt:proFile="javamanager.pro" qt:qmakeArgs="-r" filter="!sf_build"/>
-<unit bldFile="/app/jrt/javamanager" qt:proFile="javamanager.pro" qt:qmakeArgs="-r RD_JAVA_SF_BUILD=1" filter="sf_build"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/jrt/javamanager" qt:proFile="javamanager.pro" qt:qmakeArgs="-r" filter="!sf_build"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/jrt/javamanager" qt:proFile="javamanager.pro" qt:qmakeArgs="-r RD_JAVA_SF_BUILD=1" filter="sf_build"/>
 </component>
 </collection>
 <collection id="javatools" name="Java Tools" level="util">
 <component id="javatools_build" filter="s60" name="JRT Build">
-<unit bldFile="/app/jrt/javatools" qt:proFile="javatools.pro" qt:qmakeArgs="-r" filter="!sf_build"/>
-<unit bldFile="/app/jrt/javatools" qt:proFile="javatools.pro" qt:qmakeArgs="-r RD_JAVA_SF_BUILD=1" filter="sf_build"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/jrt/javatools" qt:proFile="javatools.pro" qt:qmakeArgs="-r" filter="!sf_build"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/jrt/javatools" qt:proFile="javatools.pro" qt:qmakeArgs="-r RD_JAVA_SF_BUILD=1" filter="sf_build"/>
 </component>
 </collection>
 <collection id="javaextensions" name="Java Extensions" level="generic">
 <component id="javaextensions_build" filter="s60" name="JRT Build">
-<unit bldFile="/app/jrt/javaextensions" qt:proFile="javaextensions.pro" qt:qmakeArgs="-r" filter="!sf_build"/>
-<unit bldFile="/app/jrt/javaextensions" qt:proFile="javaextensions.pro" qt:qmakeArgs="-r RD_JAVA_SF_BUILD=1" filter="sf_build"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/jrt/javaextensions" qt:proFile="javaextensions.pro" qt:qmakeArgs="-r" filter="!sf_build"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/jrt/javaextensions" qt:proFile="javaextensions.pro" qt:qmakeArgs="-r RD_JAVA_SF_BUILD=1" filter="sf_build"/>
 </component>
 </collection>
 </package>
 <package id="browserui" level="services" tech-domain="rt" name="Browser UI" levels="utils support ui">
 <collection id="browserui_info" name="Browser UI Info" level="ui">
 <component id="browserui_build" name="Bookmarks Engine Build" introduced="^4">
-<unit bldFile="/app/browserui" qt:proFile="browserui.pro" qt:qmakeArgs="&quot;what+=plat_101&quot;"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/browserui" qt:proFile="browserui.pro" qt:qmakeArgs="&quot;what+=plat_101&quot;"/>
 </component>
 </collection>
 </package>
@@ -8914,79 +8925,64 @@
 <collection id="creator" name="Creator" level="support">
 <!-- collection is really a component. Should move down a directory -->
 <component id="creator_build" filter="s60" name="Creator Tool" purpose="development" target="device" class="tool">
-<unit bldFile="/app/rndtools/creator" qt:qmakeArgs="-r" qt:proFile="creator.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/rndtools/creator" qt:proFile="creator.pro"/>
 </component>
 </collection>
 <collection id="filebrowser" name="File Browser" level="util">
-<!-- consider collapsing into a single component -->
-<component id="fileopserver" filter="s60" name="File Operations Server" purpose="development" target="device" class="tool">
-<meta rel="config">
-<not-defined condition="FILEBROWSER_LITE"/>
-</meta>
-<!-- uncomment the unit when configuration is in place, it's currently #included from filebrowser_build -->
-<!-- <unit bldFile="filebrowser/fileopserver/group"/>-->
-</component>
-<component id="fileopclient" filter="s60" name="File Operations Client" purpose="development" target="device" class="tool">
-<meta rel="config">
-<not-defined condition="FILEBROWSER_LITE"/>
-</meta>
-<!-- uncomment the unit when configuration is in place, it's currently #included from filebrowser_build -->
-<!--<unit bldFile="filebrowser/fileopclient/group"/>-->
-</component>
-<component id="filebrowser_build" filter="s60" name="File Browser Application" purpose="development" target="device" class="tool">
-<!-- Need to make this a self-contained component by removing #includes. Can only do when configuration is in place-->
-<unit bldFile="/app/rndtools/filebrowser/group"/>
+<!-- collection is really a component. Should move down a directory -->
+<component id="filebrowser_build" filter="s60" name="File Browser Build" purpose="development" target="device" class="tool">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/rndtools/filebrowser" qt:proFile="filebrowser.pro"/>
 </component>
 </collection>
 <collection id="launcher" name="Launcher" level="util">
 <!-- collection is really a component. Should move down a directory -->
 <component id="launcher_build" filter="s60" name="Launcher Utility" purpose="development" target="device" class="tool">
-<unit bldFile="/app/rndtools/launcher/group"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/rndtools/launcher" qt:proFile="launcher.pro"/>
 </component>
 </collection>
 <collection id="loadgen" name="Load Generator" level="test">
 <!-- collection is really a component. Should move down a directory -->
 <component id="loadgen_build" filter="s60" name="Load Generator Application" purpose="development" target="device" class="tool">
-<unit bldFile="/app/rndtools/loadgen/group"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/rndtools/loadgen" qt:proFile="loadgen.pro"/>
 </component>
 </collection>
 <collection id="perfmon" name="Performance Monitor" level="test">
 <!-- collection is really a component. Should move down a directory -->
 <component id="perfmon_build" filter="s60" name="Performance Monitor Tool" purpose="development" target="device" class="tool">
-<unit bldFile="/app/rndtools/perfmon" qt:proFile="perfmon.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/rndtools/perfmon" qt:proFile="perfmon.pro"/>
+</component>
+</collection>
+<collection id="piprofilerui" name="Performance Investigator Profiler UI" level="generic">
+<!-- collection is really a component. Should move down a directory -->
+<component id="piprofilerui_build" filter="s60" name="Performance Investigator Profiler UI Build" purpose="development" target="device" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/rndtools/piprofilerui" qt:proFile="piprofilerui.pro"/>
 </component>
 </collection>
 <collection id="screengrabber" name="Screen Grabber" level="util">
 <!-- collection is really a component. Should move down a directory -->
 <component id="screengrabber_build" filter="s60" name="ScreenGrabber" purpose="development" target="device" class="tool">
-<unit bldFile="/app/rndtools/screengrabber" qt:proFile="screengrabber.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/rndtools/screengrabber" qt:proFile="screengrabber.pro"/>
 </component>
 </collection>
 <collection id="stifui" name="STIF UI" level="generic">
-<component id="stifui_avkon" filter="s60" name="STIF UI for Avkon" purpose="development" target="device">
-<unit bldFile="/app/rndtools/stifui/akvon/group"/>
+<component id="stifuiqt" filter="s60" name="STIF Qt UI" purpose="development" target="device" introduced="^4">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/rndtools/stifui/qt" qt:proFile="stifqtui.pro"/>
+<!-- should use stifuiqt as the dir name -->
+</component>
+</collection>
+<collection id="memspyui" name="Memspy UI" level="generic">
+<!-- collection is really a component. Should move down a directory -->
+<component id="memspyui_build" filter="s60" name="Memspy UI Application" purpose="development" target="device" class="tool">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/rndtools/memspyui" qt:proFile="memspyui.pro"/>
 </component>
 </collection>
 <collection id="htiui" name="Harmonized Test Interface UI" level="generic">
-<component id="HtiServicePlugins" filter="s60" name="HTI Service Plugins" purpose="development" target="device" class="plugin">
-<!-- can only have a single unit. Should #include from a common bld.inf file -->
-<unit bldFile="/app/rndtools/htiui/HtiServicePlugins/HtiAppServicePlugin/group"/>
-<unit bldFile="/app/rndtools/htiui/HtiServicePlugins/HtiAudioServicePlugin/group"/>
-<unit bldFile="/app/rndtools/htiui/HtiServicePlugins/HtiKeyEventServicePlugin/group"/>
-<unit bldFile="/app/rndtools/htiui/HtiServicePlugins/HtiMessagesServicePlugin/group"/>
-<unit bldFile="/app/rndtools/htiui/HtiServicePlugins/HtiPIMServicePlugin/group"/>
-<unit bldFile="/app/rndtools/htiui/HtiServicePlugins/HtiScreenshotServicePlugin/group"/>
-<unit bldFile="/app/rndtools/htiui/HtiServicePlugins/HtiSysInfoServicePlugin/group"/>
-<unit bldFile="/app/rndtools/htiui/HtiServicePlugins/HtiFtpBackupFake/group"/>
+<component id="htiui_build" filter="s60" name="HTI UI Build" purpose="development" target="device">
+<!-- should split up into individual components -->
+<unit bldFile="/app/rndtools/htiui/group"/>
 </component>
-<component id="htidevicereboot" filter="s60" name="HTI Device Reboot" purpose="development" target="device">
-<unit bldFile="/app/rndtools/htiui/htidevicereboot/group"/>
-</component>
-<component id="htistartupwait" filter="s60" name="HTI Startup Wait" purpose="development" target="device">
-<unit bldFile="/app/rndtools/htiui/htistartupwait/group"/>
-</component>
-<component id="htiadmin" filter="s60" name="HTI Admin" purpose="development" target="device">
-<unit bldFile="/app/rndtools/htiui/htiadmin/group"/>
+<component id="htiadminqt" filter="s60" name="HTI Admin Qt" purpose="development" target="device">
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/rndtools/htiui/htiadminqt" qt:proFile="HtiAdmin.pro"/>
 </component>
 </collection>
 </package>
@@ -8994,7 +8990,7 @@
 <collection id="userguide" name="User Guide" level="if">
 <!-- collection is really a component. Move down a directory -->
 <component id="userguide_build" name="User Guide Build" filter="s60" introduced="^4">
-<unit bldFile="/app/helps/userguide" qt:proFile="Userguide.pro"/>
+<unit xmlns:qt="http://www.nokia.com/qt" bldFile="/app/helps/userguide" qt:proFile="Userguide.pro"/>
 </component>
 </collection>
 <collection id="symhelp" name="Symbian Help" level="eng">
