@@ -49,7 +49,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/hgwidgets/,/sf/mw/hgwidgets,branch,de
 http://developer.symbian.org/oss/FCL/sf/mw/homescreensrv/,/sf/mw/homescreensrv,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/homescreensrvlegacy/,/sf/mw/homescreensrvlegacy,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/imghandling/,/sf/mw/imghandling,branch,default,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/imsrv/,/sf/mw/imsrv,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/imsrv/,/sf/mw/imsrv,changeset,f4f0635530ce,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/inputmethods/,/sf/mw/inputmethods,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/ipappprotocols/,/sf/mw/ipappprotocols,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/ipappsrv/,/sf/mw/ipappsrv,branch,default,layers.sysdef.xml
