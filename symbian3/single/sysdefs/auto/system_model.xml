@@ -6273,7 +6273,7 @@
 </collection>
 <collection name="qt_tests" long-name="Qt Tests" level="app">
 <component name="qttestsauto" long-name="Qt Automated Tests" introduced="^2" filter="qttestsauto">
-<unit bldFile="mw/qt/tests/auto" proFile="qtpauto.pro"/>
+<unit bldFile="mw/qt/tests/auto" proFile="qtpauto.pro" makeArgs="-r"/>
 </component>
 <component name="qttestsbenchmarks" long-name="Qt Benchmarks Tests" introduced="^2" filter="qttestsbenchmarks">
 <unit bldFile="mw/qt/tests/benchmarks" proFile="benchmarks.pro" qmakeArgs="-r"/>
