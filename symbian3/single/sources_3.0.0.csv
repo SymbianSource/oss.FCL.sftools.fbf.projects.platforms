@@ -97,9 +97,9 @@ http://developer.symbian.org/oss/FCL/sf/os/cellularsrv/,/sf/os/cellularsrv,chang
 http://developer.symbian.org/oss/MCL/sf/os/commsfw/,/sf/os/commsfw,changeset,9644881fedd0,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,changeset,c87356751616,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/devicesrv/,/sf/os/devicesrv,changeset,5ced40f3c181,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/os/graphics/,/sf/os/graphics,changeset,0709f76d91e5,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/graphics/,/sf/os/graphics,changeset,de3e07519bb7,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/imagingext/,/sf/os/imagingext,changeset,e5ca06a707ac,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,changeset,cc88aabd867b,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,changeset,99e0f09d12c3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/lbs/,/sf/os/lbs,changeset,24bd7242888d,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/mm/,/sf/os/mm,changeset,67584cc761d1,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/networkingsrv/,/sf/os/networkingsrv,changeset,f44b73583a2f,layers.sysdef.xml
