@@ -1,7 +1,7 @@
 source,dst,type,pattern,sysdef
-http://developer.symbian.org/oss/FCL/sftools/fbf/utilities/,/utilities,branch,default,
-http://developer.symbian.org/oss/FCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,branch,default,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,branch,default,modified-FCL
+http://developer.symbian.org/oss/FCL/sftools/fbf/utilities/,/utilities,branch,default,NON-NOKIA
+http://developer.symbian.org/oss/FCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,branch,default,NON-NOKIA
+http://developer.symbian.org/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,branch,default,NON-NOKIA
 http://developer.symbian.org/oss/FCL/sf/adaptation/stubs/,/sf/adaptation/stubs,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/browserui/,/sf/app/browserui,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/camera/,/sf/app/camera,tag,tip_bulk,layers.sysdef.xml
@@ -24,7 +24,7 @@ http://developer.symbian.org/oss/FCL/sf/app/musicplayer/,/sf/app/musicplayer,tag
 http://developer.symbian.org/oss/FCL/sf/app/organizer/,/sf/app/organizer,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/phone/,/sf/app/phone,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/photos/,/sf/app/photos,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/app/podcatcher/,/sf/app/podcatcher,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/podcatcher/,/sf/app/podcatcher,branch,default,NON-NOKIA
 http://developer.symbian.org/oss/FCL/sf/app/printing/,/sf/app/printing,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/radio/,/sf/app/radio,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/recents/,/sf/app/recents,tag,tip_bulk,layers.sysdef.xml
@@ -93,10 +93,10 @@ http://developer.symbian.org/oss/FCL/sf/mw/websrv/,/sf/mw/websrv,tag,tip_bulk,la
 http://developer.symbian.org/oss/FCL/sf/mw/wirelessacc/,/sf/mw/wirelessacc,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/boardsupport/,/sf/os/boardsupport,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/bt/,/sf/os/bt,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/os/buildtools/,/sf/os/buildtools,tag,tip_bulk,modified-FCL
+http://developer.symbian.org/oss/FCL/sf/os/buildtools/,/sf/os/buildtools,branch,default,modified-FCL
 http://developer.symbian.org/oss/FCL/sf/os/cellularsrv/,/sf/os/cellularsrv,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/commsfw/,/sf/os/commsfw,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,tag,tip_bulk,modified-FCL
+http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,branch,default,modified-FCL
 http://developer.symbian.org/oss/FCL/sf/os/devicesrv/,/sf/os/devicesrv,tag,tip_bulk,modified-FCL
 http://developer.symbian.org/oss/FCL/sf/os/graphics/,/sf/os/graphics,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/imagingext/,/sf/os/imagingext,tag,tip_bulk,layers.sysdef.xml
