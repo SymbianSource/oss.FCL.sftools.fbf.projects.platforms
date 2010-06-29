@@ -1,6 +1,6 @@
 source,dst,type,pattern,sysdef
 http://developer.symbian.org/oss/FCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,changeset,2905910218db,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,changeset,bb16bb5b2818,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,changeset,e9514b7eeead,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/adaptation/stubs/,/sf/adaptation/stubs,changeset,ac0dcfe5059d,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/camera/,/sf/app/camera,changeset,53c8aa5d97a3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/commonemail/,/sf/app/commonemail,changeset,67369d1b217f,layers.sysdef.xml
@@ -82,7 +82,7 @@ http://developer.symbian.org/oss/MCL/sf/mw/shortlinkconn/,/sf/mw/shortlinkconn,c
 http://developer.symbian.org/oss/MCL/sf/mw/srvdiscovery/,/sf/mw/srvdiscovery,changeset,8116cc943311,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/svgt/,/sf/mw/svgt,changeset,9be6eed35a80,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/uiaccelerator/,/sf/mw/uiaccelerator,changeset,f93c875b566e,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/uiresources/,/sf/mw/uiresources,changeset,5ccc719da1f3,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/uiresources/,/sf/mw/uiresources,changeset,9f7689c0f138,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/uitools/,/sf/mw/uitools,changeset,3c40afc7ecad,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/usbservices/,/sf/mw/usbservices,changeset,d895b6d953c9,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/videoutils/,/sf/mw/videoutils,changeset,913622afaa4b,layers.sysdef.xml
@@ -95,7 +95,7 @@ http://developer.symbian.org/oss/MCL/sf/os/bt/,/sf/os/bt,changeset,32ba20339036,
 http://developer.symbian.org/oss/FCL/sf/os/buildtools/,/sf/os/buildtools,changeset,06f00a153f2a,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/cellularsrv/,/sf/os/cellularsrv,changeset,664a5fed40c6,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/commsfw/,/sf/os/commsfw,changeset,9644881fedd0,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,changeset,c87356751616,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,changeset,9c02609592b9,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/devicesrv/,/sf/os/devicesrv,changeset,5ced40f3c181,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/graphics/,/sf/os/graphics,changeset,de3e07519bb7,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/imagingext/,/sf/os/imagingext,changeset,e5ca06a707ac,layers.sysdef.xml
