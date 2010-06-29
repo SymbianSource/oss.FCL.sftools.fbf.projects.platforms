@@ -103,7 +103,7 @@ http://developer.symbian.org/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,chang
 http://developer.symbian.org/oss/FCL/sf/os/lbs/,/sf/os/lbs,changeset,24bd7242888d,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/mm/,/sf/os/mm,changeset,67584cc761d1,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/networkingsrv/,/sf/os/networkingsrv,changeset,f44b73583a2f,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/os/ossrv/,/sf/os/ossrv,changeset,3520f1ef6bf6,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/ossrv/,/sf/os/ossrv,changeset,ddd39d92c350,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/persistentdata/,/sf/os/persistentdata,changeset,fcc16690f446,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/security/,/sf/os/security,changeset,564220cc963b,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/textandloc/,/sf/os/textandloc,changeset,c83f1006fff0,layers.sysdef.xml
