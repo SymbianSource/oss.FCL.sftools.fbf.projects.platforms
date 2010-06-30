@@ -15,7 +15,7 @@ http://developer.symbian.org/oss/FCL/sf/app/firsttimeuse/,/sf/app/firsttimeuse,t
 http://developer.symbian.org/oss/FCL/sf/app/helps/,/sf/app/helps,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/homescreen/,/sf/app/homescreen,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/homescreentools/,/sf/app/homescreentools,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/app/jrt/,/sf/app/jrt,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/jrt/,/sf/app/jrt,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/app/internetradio/,/sf/app/internetradio,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/location/,/sf/app/location,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/messaging/,/sf/app/messaging,tag,tip_bulk,layers.sysdef.xml
@@ -107,7 +107,7 @@ http://developer.symbian.org/oss/FCL/sf/os/networkingsrv/,/sf/os/networkingsrv,t
 http://developer.symbian.org/oss/FCL/sf/os/ossrv/,/sf/os/ossrv,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/persistentdata/,/sf/os/persistentdata,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/security/,/sf/os/security,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/os/textandloc/,/sf/os/textandloc,tag,tip_bulk,modified-FCL
+http://developer.symbian.org/oss/FCL/sf/os/textandloc/,/sf/os/textandloc,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/os/usb/,/sf/os/usb,tag,tip_bulk,
 http://developer.symbian.org/oss/FCL/sf/os/wlan/,/sf/os/wlan,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/xmlsrv/,/sf/os/xmlsrv,tag,tip_bulk,layers.sysdef.xml
