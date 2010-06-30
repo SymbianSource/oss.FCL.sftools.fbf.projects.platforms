@@ -7438,9 +7438,6 @@
 <component name="phoneservices" filter="s60" long-name="Phone Server" introduced="^4">
 <unit bldFile="app/phone/phoneengine/phoneservices" proFile="phoneservices.pro"/>
 </component>
-<component name="parserrecognizer" filter="s60" long-name="Parser Recognizer" introduced="^4" plugin="Y">
-<unit bldFile="app/phone/phoneengine/parserrecognizer" proFile="parserrecognizer.pro"/>
-</component>
 </collection>
 <collection name="phoneuis" long-name="Phone UIs" level="ui">
 <component name="bubblemanager2" filter="s60" long-name="Phone Bubble Manager">
@@ -7596,11 +7593,14 @@
 </component>
 </collection>
 </block>
-<block name="devicecontrol" level="services" long-name="Device Control Daemons" levels="oma mid app">
-<collection name="deviceupdatesui" long-name="Device Updates UI" level="app">
-<component name="deviceupdatesui_adapters" long-name="Device Updates Adapters" filter="s60" introduced="^4" plugin="Y">
-<unit bldFile="app/devicecontrol/deviceupdatesui/adapters/bld"/>
+<block name="devicecontrol" level="services" long-name="Device Control Daemons" levels="support mid app">
+<collection name="devicemgmtdialogsplugin" long-name="Device Management Dialogs Plugin" level="support">
+<!-- need to put component at the proper directory level -->
+<component name="devicemanagementnotifiersplugin" long-name="Device Management Notifiers Plugin" filter="s60" introduced="^4" plugin="Y">
+<unit bldFile="app/devicecontrol/devicemgmtdialogsplugin" proFile="devicemgmtdialogsplugin.pro"/>
 </component>
+</collection>
+<collection name="deviceupdatesui" long-name="Device Updates UI" level="app">
 <component name="deviceupdates" long-name="Device Updates" filter="s60" introduced="^4">
 <unit bldFile="app/devicecontrol/deviceupdatesui/deviceupdates" proFile="deviceupdates.pro"/>
 </component>
@@ -7610,11 +7610,67 @@
 <component name="deviceupdatesqtsp" long-name="Device Updates Qt Service Provider" filter="s60" introduced="^4">
 <unit bldFile="app/devicecontrol/deviceupdatesui/deviceupdatesqtsp" proFile="deviceupdatesqtsp.pro"/>
 </component>
+</collection>
+<collection name="clientprovisioning" long-name="Client Provisioning" level="mid">
 <component name="cpqtsp" long-name="Client Provisioning Qt Service Provider" filter="s60" introduced="^4">
-<unit bldFile="app/devicecontrol/deviceupdatesui/cpqtsp" proFile="cpqtsp.pro"/>
+<unit bldFile="app/devicecontrol/clientprovisioning/cpqtsp" proFile="cpqtsp.pro"/>
 </component>
-<component name="devicemanagementnotifiersplugin" long-name="Device Management Notifiers Plugin" filter="s60" introduced="^4" plugin="Y">
-<unit bldFile="app/devicecontrol/deviceupdatesui/devicemanagementnotifiersplugin" proFile="devicemanagementnotifiersplugin.pro"/>
+</collection>
+<collection name="omadmadapters" long-name="OMA DM Adapters" level="support">
+<component name="omadmadapters_build" long-name="OMA DM Adapters Build" filter="s60">
+<!-- need to split IBY into the components or make this a ROM component -->
+<unit bldFile="app/devicecontrol/omadmadapters/bld"/>
+</component>
+<component name="devinfo" long-name="Device Info" filter="s60">
+<unit bldFile="app/devicecontrol/omadmadapters/devinfo/bld"/>
+</component>
+<component name="devdetail" long-name="Device Detail" filter="s60">
+<unit bldFile="app/devicecontrol/omadmadapters/devdetail/bld"/>
+</component>
+<component name="syncmldm" long-name="SyncML DM" filter="s60">
+<unit bldFile="app/devicecontrol/omadmadapters/syncmldm/bld"/>
+</component>
+<component name="syncmldm12" long-name="SyncML DM 1.2" filter="s60">
+<unit bldFile="app/devicecontrol/omadmadapters/syncmldm12/bld"/>
+</component>
+<component name="omadm_browseradapter" long-name="Browser Adapter" filter="s60" plugin="Y" class="placeholder">
+<!--  <unit bldFile="omadmadapters/browseradapter/bld"/> -->
+</component>
+<component name="omadm_streamingadapter" long-name="Streaming Adapter" filter="s60" plugin="Y">
+<unit bldFile="app/devicecontrol/omadmadapters/streamingadapter/bld"/>
+</component>
+<component name="globalwlansettings" long-name="Global WLAN Settings" filter="s60">
+<unit bldFile="app/devicecontrol/omadmadapters/globalwlansettings/group"/>
+</component>
+<component name="nsmldminternet" filter="s60" class="placeholder">
+<!--  <unit bldFile="omadmadapters/nsmldminternet/group"/> -->
+</component>
+<component name="nsmldmalwaysonadapter" long-name="Always Online Device Management Adapter" filter="s60" introduced="9.1" plugin="Y">
+<unit bldFile="app/devicecontrol/omadmadapters/nsmldmalwaysonadapter/group"/>
+</component>
+<component name="nsmldmbmadapter" long-name="NSML DM BM Adapter" filter="s60" plugin="Y">
+<unit bldFile="app/devicecontrol/omadmadapters/nsmldmbmadapter/group"/>
+</component>
+<component name="connmoadapter" long-name="Connection Management Object Adapter" filter="s60" plugin="Y">
+<unit bldFile="app/devicecontrol/omadmadapters/connmoadapter/group"/>
+</component>
+<component name="syncmlds" long-name="SyncML Data Sync" filter="s60">
+<unit bldFile="app/devicecontrol/omadmadapters/syncmlds/bld"/>
+</component>
+<component name="omadm_email" long-name="OMA DM Email" filter="s60">
+<unit bldFile="app/devicecontrol/omadmadapters/email/bld"/>
+</component>
+<component name="omadm_mms" long-name="OMA DM MMS" filter="s60">
+<unit bldFile="app/devicecontrol/omadmadapters/mms/bld"/>
+</component>
+<component name="omadm_fota" long-name="OMA DM FOTA" filter="s60">
+<!--  <unit bldFile="omadmadapters/fota/bld"/> -->
+</component>
+<component name="omadm_imps" long-name="OMA DM IMPS" filter="s60">
+<!--  <unit bldFile="omadmadapters/imps/bld"/> -->
+</component>
+<component name="dcmodmadapter" long-name="DC Management Object  DM Adapter" filter="s60" plugin="Y" class="placeholder">
+<!--  <unit bldFile="omadmadapters/dcmodmadapter/group"/> -->
 </component>
 </collection>
 </block>
@@ -7672,10 +7728,7 @@
 <component name="cntfindplugin" filter="s60" long-name="Contacts Find Plugin" introduced="^2" plugin="Y">
 <unit bldFile="app/contacts/phonebookengines/cntfindplugin" proFile="cntfindplugin.pro"/>
 </component>
-<component name="contactsmodel" filter="s60" long-name="Mobile Contacts Model" introduced="^4">
-<unit bldFile="app/contacts/phonebookengines/contactsmodel" proFile="contactsmodel.pro"/>
-</component>
-<component name="contactsmodel_old" long-name="Contacts Model" introduced="ER5" purpose="optional">
+<component name="contactsmodel" long-name="Contacts Model" introduced="ER5" purpose="optional">
 <unit bldFile="app/contacts/phonebookengines_old/contactsmodel/groupsql" mrp="app/contacts/phonebookengines_old/contactsmodel/groupsql/app-engines_cntmodel.mrp" version="2"/>
 </component>
 <component name="cntsortplugin" filter="s60" long-name="Contacts Sort Plugin" introduced="^2" plugin="Y">
@@ -7685,13 +7738,16 @@
 <!-- need to move to this actual dir rather than including something from another collection -->
 <unit bldFile="app/contacts/qtcontactsmobility" proFile="qtcontactsmobility.pro"/>
 </component>
-<component name="cntactions" filter="s60" long-name="Mobile Contacts Actions" introduced="^4">
+<component name="cntlistmodel" filter="s60" long-name="Contact List Model" introduced="^4">
+<unit bldFile="app/contacts/phonebookengines/cntlistmodel" proFile="cntlistmodel.pro"/>
+</component>
+<component name="cntactions" filter="s60" long-name="Contacts Actions" introduced="^4">
 <unit bldFile="app/contacts/phonebookengines/cntactions" proFile="cntactions.pro"/>
 </component>
 <component name="cntmaptileservice" filter="s60" long-name="Contacts Map Tile Service" introduced="^4">
 <unit bldFile="app/contacts/phonebookengines/cntmaptileservice" proFile="cntmaptileservice.pro"/>
 </component>
-<component name="simutility" filter="s60" long-name="SIM Utility" introduced="^4">
+<component name="cntsimutility" filter="s60" long-name="Contacts SIM Utility" introduced="^4">
 <unit bldFile="app/contacts/phonebookengines/cntsimutility" proFile="cntsimutility.pro"/>
 </component>
 <component name="cntimageutility" long-name="Contacts Image Utility" filter="s60" introduced="^4">
@@ -7702,15 +7758,15 @@
 <component name="phonebooksync" long-name="Phonebook Sync" purpose="optional" plugin="Y">
 <unit bldFile="app/contacts/pimprotocols/phonebooksync/group" mrp="app/contacts/pimprotocols/phonebooksync/group/telephony_phbksync.mrp"/>
 </component>
-<component name="pbap" long-name="Bluetooth PBAP" introduced="9.2" purpose="optional">
+<component name="pbap" filter="s60" long-name="Bluetooth PBAP" introduced="9.2" purpose="optional">
 <unit bldFile="app/contacts/pimprotocols/pbap/group" mrp="app/contacts/pimprotocols/pbap/group/bluetooth_accesshost.mrp"/>
 </component>
 </collection>
-<collection name="presencecache" long-name="Presence Cache" level="services">
-<component name="presencecachesymbian" long-name="Presence Cache Symbian">
+<collection name="presencecache" long-name="Presence Cache" level="support">
+<component name="presencecachesymbian" filter="s60" long-name="Presence Cache Symbian" introduced="^4">
 <unit bldFile="app/contacts/presencecache/presencecachesymbian" proFile="presencecachesymbian.pro"/>
 </component>
-<component name="presencecacheqt" long-name="Presence Cache Qt">
+<component name="presencecacheqt" filter="s60" long-name="Presence Cache Qt" introduced="^4">
 <unit bldFile="app/contacts/presencecache/presencecacheqt" proFile="presencecacheqt.pro"/>
 </component>
 </collection>
@@ -7747,6 +7803,7 @@
 <component name="agenda_interface_api" long-name="Agenda Interface API" filter="s60" introduced="^4" class="api"/>
 <component name="calendar_editor_api" long-name="Calendar Editor API" filter="s60" introduced="^4" class="api"/>
 <component name="notes_editor_api" long-name="Notes Editor API" filter="s60" introduced="^4" class="api"/>
+<component name="clock_settingsview_plugin_api" long-name="Clock Settings View Plugin API" filter="s60" introduced="^4" class="api"/>
 </collection>
 <collection name="agendainterface" long-name="Agenda Interface" level="services">
 <!-- collection is really a component, should move down a directory -->
@@ -7779,7 +7836,7 @@
 <component name="customisationmanager" filter="s60" long-name="Calendar Customisation Manager">
 <unit bldFile="app/organizer/calendarui/customisationmanager" proFile="customisationmanager.pro"/>
 </component>
-<component name="views" filter="s60" long-name="Calendar Views">
+<component name="calendarui_views" filter="s60" long-name="Calendar Views">
 <unit bldFile="app/organizer/calendarui/views" proFile="views.pro"/>
 </component>
 <component name="calendarui_controller" filter="s60" long-name="Calendar Controller">
@@ -7791,14 +7848,14 @@
 <component name="regionalplugins" long-name="Regional Plugins" filter="s60" introduced="^4" plugin="Y">
 <unit bldFile="app/organizer/calendarui/regionalplugins" proFile="regionalplugins.pro"/>
 </component>
+<component name="calenviewerservice" long-name="Calendar Viewer Service" filter="s60" introduced="^4" plugin="Y">
+<unit bldFile="app/organizer/calendarui/calenviewerservice" proFile="calenviewerservice.pro"/>
+</component>
 <component name="caldav" filter="sf_build" long-name="CalDAV" introduced="^3" plugin="Y" class="placeholder">
 <!-- not yet delivered in S^4 <unit bldFile="calendarui/caldav/group"/>-->
 </component>
 </collection>
 <collection name="notes" long-name="Notes" level="ui">
-<component name="noteseditor" filter="s60" long-name="Notes Editor" introduced="^4">
-<unit bldFile="app/organizer/notes/notesui/noteseditor" proFile="noteseditor.pro"/>
-</component>
 <component name="notes_build" filter="s60" long-name="Notes Build" introduced="^4">
 <unit bldFile="app/organizer/notes" proFile="notes.pro"/>
 </component>
@@ -7893,6 +7950,7 @@
 <component name="msg_smil_dtd_api" long-name="Messaging SMIL DTD API" filter="s60" introduced="^4" class="api"/>
 <component name="msg_pub_build" long-name="Messaging Apps Public APIs Build" filter="s60" introduced="^4" class="api">
 <!-- break this up into the above units and replace their base attributes with bldFile, etc -->
+<unit bldFile="app/messaging/msg_pub" proFile="msg_pub.pro" qmakeArgs="-r"/>
 </component>
 </collection>
 <collection name="mobilemessaging" long-name="Mobile Messaging" level="plugin">
@@ -8107,7 +8165,7 @@
 </collection>
 <collection name="videocollection" long-name="Video Collection" level="util">
 <component name="mpxmyvideoscollection" filter="s60" long-name="MPX My Videos Collection" introduced="^3">
-<unit bldFile="app/videoplayer/videocollection/mpxmyvideoscollection/group"/>
+<unit bldFile="app/videoplayer/videocollection/mpxmyvideoscollection/group" filter="!test"/>
 </component>
 <component name="videocollectionwrapper" filter="s60" long-name="Video Collection Wrapper" introduced="^4">
 <unit bldFile="app/videoplayer/videocollection/videocollectionwrapper" proFile="videocollectionwrapper.pro" qmakeArgs="-r"/>
@@ -8120,17 +8178,19 @@
 </component>
 </collection>
 <collection name="mediasettings" long-name="Media Settings" level="support">
-<!--  this is really a component. Should be moved down a directory -->
-<component name="mediasettings_build" filter="s60" long-name="Media Settings Build">
-<unit bldFile="app/videoplayer/mediasettings/group"/>
+<component name="mediasettingsengine" filter="s60" long-name="Media Settings Engine">
+<unit bldFile="app/videoplayer/mediasettings/mediasettingsengine/group"/>
+</component>
+<component name="videosettingsplugin" filter="s60" long-name="Video Settings Plugin" plugin="Y" class="placeholder">
+<!--<unit bldFile="mediasettings/videosettingsplugin" qt:proFile="videosettingsplugin.pro"/> -->
 </component>
 </collection>
 <collection name="videoplayerapp" long-name="Video Player App" level="apps">
 <component name="videoplayerengine" long-name="Video Player Engine" filter="s60" introduced="^4">
 <unit bldFile="app/videoplayer/videoplayerapp/videoplayerengine" proFile="videoplayerengine.pro" qmakeArgs="-r"/>
 </component>
-<component name="hbvideoplayer" filter="s60" long-name="HB Video Player" introduced="^4">
-<unit bldFile="app/videoplayer/videoplayerapp/hbvideoplayer" proFile="hbvideoplayer.pro" qmakeArgs="-r"/>
+<component name="hbvideoplayer" filter="s60" long-name="Video Player" introduced="^4">
+<unit bldFile="app/videoplayer/videoplayerapp/videoplayer" proFile="videoplayer.pro" qmakeArgs="-r"/>
 </component>
 </collection>
 <collection name="videoplayback" long-name="Video Playback Plugins" level="plugin">
@@ -8141,7 +8201,7 @@
 <unit bldFile="app/videoplayer/videoplayback/hbvideoplaybackviewplugin" proFile="hbvideoplaybackviewplugin.pro" qmakeArgs="-r"/>
 </component>
 <component name="videohelix" long-name="Video Helix" filter="s60" introduced="^3" plugin="Y">
-<unit bldFile="app/videoplayer/videoplayback/videohelix/group"/>
+<unit bldFile="app/videoplayer/videoplayback/videohelix/group" filter="!test"/>
 </component>
 </collection>
 </block>
@@ -8165,11 +8225,21 @@
 </component>
 </collection>
 <collection name="photos_ui" long-name="Photos UI" level="ui">
+<!-- need to move exports from ui.pro into separate .pro or bld.inf -->
+<component name="detailscustomwidget " filter="s60" long-name="Details Custom Widget" introduced="^4" class="placeholder">
+<!--<unit bldFile="ui/detailscustomwidget " qt:proFile="detailscustomwidget .pro"/> -->
+</component>
 <component name="photos_uiengine" filter="s60" long-name="Photos UI Engine" introduced="^4" class="placeholder">
 <!--<unit bldFile="ui/uiengine" qt:proFile="uiengine.pro"/> -->
 </component>
 <component name="photos_commandhandlers" filter="s60" long-name="Photos Command Handlers" introduced="^4" class="placeholder">
 <!--<unit bldFile="ui/commandhandlers" qt:proFile="commandhandlers.pro"/> -->
+</component>
+<component name="photos_viewutilities" filter="s60" long-name="Photos View Utilities" introduced="^4" class="placeholder">
+<!--<unit bldFile="ui/viewutilities" qt:proFile="commandhandlers.pro"/> -->
+</component>
+<component name="photos_widgets" filter="s60" long-name="Photos Widgets" introduced="^4" class="placeholder">
+<!--<unit bldFile="ui/widgets" qt:proFile="widgets.pro"/> -->
 </component>
 <component name="photos_views" filter="s60" long-name="Photos Views" introduced="^4" class="placeholder">
 <!--<unit bldFile="ui/views" qt:proFile="views.pro"/> -->
@@ -8202,6 +8272,18 @@
 </block>
 <block name="musicplayer" level="apps" long-name="Music Player Apps" levels="plugins support engine app">
 <!-- move the rom .pri files into their components and uncomment the units -->
+<collection name="mpdata " long-name="Music Player Data" level="support">
+<!-- collection is really a component, move down a directory -->
+<component name="mpdata_build" filter="s60" long-name="Music Player Data Build" introduced="^4" class="placeholder">
+<!-- <unit bldFile="mpdata" qt:proFile="mpdata.pro" qt:qmakeArgs="-r -config rom"/> -->
+</component>
+</collection>
+<collection name="mpengine " long-name="Music Player Engine" level="engine">
+<!-- collection is really a component, move down a directory -->
+<component name="mpengine_build" filter="s60" long-name="Music Player Engine Build" introduced="^4" class="placeholder">
+<!-- <unit bldFile="mpengine" qt:proFile="mpengine.pro" qt:qmakeArgs="-r -config rom"/> -->
+</component>
+</collection>
 <collection name="musicplayer_utilities " long-name="Music Player Utilities" level="support">
 <component name="mpnowplayingbanner" filter="s60" long-name="MP Now Playing Banner" introduced="^4" class="placeholder">
 <!-- <unit bldFile="utilities/mpnowplayingbanner" qt:proFile="mpnowplayingbanner.pro" qt:qmakeArgs="-r -config rom"/> -->
@@ -8222,18 +8304,6 @@
 <!-- <unit bldFile="app" qt:proFile="app.pro" qt:qmakeArgs="-r -config rom"/> -->
 </component>
 </collection>
-<collection name="mpdata " long-name="Music Player Data" level="support">
-<!-- collection is really a component, move down a directory -->
-<component name="mpdata_build" filter="s60" long-name="Music Player Data Build" introduced="^4" class="placeholder">
-<!-- <unit bldFile="mpdata" qt:proFile="mpdata.pro" qt:qmakeArgs="-r -config rom"/> -->
-</component>
-</collection>
-<collection name="mpengine " long-name="Music Player Engine" level="engine">
-<!-- collection is really a component, move down a directory -->
-<component name="mpengine_build" filter="s60" long-name="Music Player Engine Build" introduced="^4" class="placeholder">
-<!-- <unit bldFile="mpengine" qt:proFile="mpengine.pro" qt:qmakeArgs="-r -config rom"/> -->
-</component>
-</collection>
 <collection name="mpviewplugins" long-name="Music Player View Plugins" level="plugins">
 <component name="mpcollectionviewplugin" filter="s60" long-name="MP Collection View Plugin" introduced="^4" plugin="Y" class="placeholder">
 <!--<unit bldFile="mpviewplugins/mpcollectionviewplugin" qt:proFile="mpcollectionviewplugin.pro" qt:qmakeArgs="-r -config rom"/> -->
@@ -8249,6 +8319,11 @@
 </component>
 <component name="mpmediawallviewplugin" filter="s60" long-name="MP Media Wall View Plugin" introduced="^4" plugin="Y" class="placeholder">
 <!--<unit bldFile="mpviewplugins/mpmediawallviewplugin" qt:proFile="mpmediawallviewplugin.pro" qt:qmakeArgs="-r -config rom"/> -->
+</component>
+</collection>
+<collection name="musicwidgetplugin" long-name="Music Widget Plugin" level="plugins">
+<component name="musicwidgetplugin_build" filter="s60" long-name="Music Widget Plugin" introduced="^4" plugin="Y" class="placeholder">
+<!--<unit bldFile="musicwidgetplugin" qt:proFile="musicwidgetplugin.pro" qt:qmakeArgs="-r -config rom"/> -->
 </component>
 </collection>
 <collection name="mpserviceplugins" long-name="Music Player Service Plugins" level="plugins">
@@ -8317,15 +8392,10 @@
 <unit bldFile="app/radio/rom"/>
 </component>
 </collection>
-<collection name="radio_hswidgetplugin" long-name="FM Radio Homescreen Widget Plugin" level="plugin">
-<component name="fmradiohswidgetplugin" filter="s60" long-name="FM Radio HS Widget Plugin" introduced="^4" plugin="Y">
-<unit bldFile="app/radio/hswidgetplugin/fmradiohswidgetplugin" proFile="fmradiohswidgetplugin.pro"/>
-</component>
-<component name="fmradiohswidgetplugininstaller" filter="s60" long-name="FM Radio HS Widget Plugin Installer" introduced="^4">
-<unit bldFile="app/radio/hswidgetplugin/fmradiohswidgetplugininstaller" proFile="fmradiohswidgetplugininstaller.pro"/>
-</component>
-<component name="fmradiohswidgetplugin_exports_to_rom" filter="s60" long-name="FM Radio HS Widget Plugin ROM" introduced="^4">
-<unit bldFile="app/radio/hswidgetplugin" proFile="fmradiohswidgetplugin_exports_to_rom.pri"/>
+<collection name="radiohswidget" long-name="Radio Homescreen Widget" level="plugin">
+<!-- collection is really a component. Move down a directory -->
+<component name="radiohswidget_build" filter="s60" long-name="Radio HS Widget Build" introduced="^4">
+<unit bldFile="app/radio/radiohswidget" proFile="radiohswidget.pro"/>
 </component>
 </collection>
 </block>
@@ -8471,7 +8541,7 @@
 <block name="browserui" level="services" long-name="Browser UI" levels="utils support ui">
 <collection name="browserui_info" long-name="Browser UI Info" level="ui">
 <component name="browserui_build" long-name="Bookmarks Engine Build" introduced="^4">
-<unit bldFile="app/browserui" proFile="browserui.pro" qmakeArgs="&quot;what+=plat_101&quot;"/>
+<unit bldFile="app/browserui" proFile="browserui.pro"/>
 </component>
 </collection>
 </block>
@@ -8563,11 +8633,6 @@
 <collection name="symhelp" long-name="Symbian Help" level="eng">
 <component name="helpmodel" long-name="Help" introduced="6.0" purpose="optional">
 <unit bldFile="app/helps/symhelp/helpmodel/group" mrp="app/helps/symhelp/helpmodel/group/app-services_hlpmodel.mrp"/>
-</component>
-</collection>
-<collection name="helps_info" long-name="Help Apps Info" level="ui">
-<component name="helps_metadata" long-name="Help Apps Metadata" introduced="^2" purpose="development" class="config PC">
-<unit mrp="app/helps/helps_info/helps_metadata/helps_metadata.mrp"/>
 </component>
 </collection>
 </block>
