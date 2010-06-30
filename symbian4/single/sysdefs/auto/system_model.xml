@@ -3050,7 +3050,7 @@
 <unit bldFile="mw/securitysrv/securitydialogs/keylockpolicyapi/group"/>
 </component>
 <component name="autolock" long-name="Autolock" filter="s60">
-<unit bldFile="mw/securitysrv/securitydialogs/autolock/group"/>
+<unit bldFile="mw/securitysrv/securitydialogs/autolock" proFile="autolock.pro"/>
 </component>
 <component name="secui" filter="s60" long-name="Security UI">
 <unit bldFile="mw/securitysrv/securitydialogs/secui/group"/>
@@ -3068,17 +3068,8 @@
 <component name="secuinotifications" long-name="Security UI Notifications" introduced="^4" filter="s60">
 <unit bldFile="mw/securitysrv/securitydialogs/secuinotifications" proFile="secuinotifications.pro" qmakeArgs="-r"/>
 </component>
-<component name="indicatorautolockplugin" long-name="Auto Lock Indicator Plugin" introduced="^4" filter="s60" plugin="Y">
-<!-- directory at the wrong level to be a component-->
-<unit bldFile="mw/securitysrv/securitydialogs/AutolockSrv/indicatorplugin" proFile="indicatorautolockplugin.pro" qmakeArgs="-r"/>
-</component>
 <component name="autolockuseractivityservice" long-name="Auto Lock User Activity Service" introduced="^4" filter="s60">
-<!-- Can't have two .pro files in the same dir: their generated bld.infs will overwrite each other-->
-<unit bldFile="mw/securitysrv/securitydialogs/AutolockSrv" proFile="autolockuseractivityservice.pro" qmakeArgs="-r"/>
-</component>
-<component name="autolocksrv" long-name="Auto Lock Server" introduced="^4" filter="s60">
-<!-- directory at the wrong level to be a component-->
-<unit bldFile="mw/securitysrv/securitydialogs/AutolockSrv" proFile="AutolockSrv.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/securitysrv/securitydialogs/Autolock/autolockuseractivityservice" proFile="autolockuseractivityservice.pro" qmakeArgs="-r"/>
 </component>
 </collection>
 <collection name="cpsecplugins" long-name="Security Settings Plugins" level="plugin">
@@ -5036,26 +5027,13 @@
 <component name="usbmscpersonality" filter="s60" long-name="USB MSC Personality" plugin="Y">
 <unit bldFile="mw/usbservices/usbclasses/usbmscpersonality/group"/>
 </component>
-<!--	commented out in bld.inf. Should this be deleted?     
-  <component id="ptpstack" filter="s60" name="Picture Transfer Protocol Stack">
-        <unit bldFile="usbclasses/ptpstack/group"/>
-      </component>
-      <component id="sicdusbplugin" filter="s60" name="SICD USB Plugin" class="plugin">
-        <unit bldFile="usbclasses/sicdusbplugin/group"/>
-      </component>
-      <component id="ptpserver" filter="s60" name="Picture Transfer Protocol Server">
-        <unit bldFile="usbclasses/ptpserver/group"/>
-      </component>-->
-<component name="pictbridgeengine" filter="s60" long-name="PictBridge Engine">
-<unit bldFile="mw/usbservices/usbclasses/pictbridgeengine/group"/>
-</component>
 <component name="usbphoneasmodem" filter="s60" long-name="USB Phone as Modem" introduced="^3">
 <unit bldFile="mw/usbservices/usbclasses/usbphoneasmodem/group"/>
 </component>
 </collection>
 <collection name="usbuis" long-name="USB UIs" level="specific">
 <component name="usbuinotif" filter="s60" long-name="USB UI Notifiers">
-<unit bldFile="mw/usbservices/usbuis/usbuinotif/group"/>
+<unit bldFile="mw/usbservices/usbuis/usbuinotif" proFile="usbuinotif.pro" qmakeArgs="-r"/>
 </component>
 <component name="imageprintuiprovider" filter="s60" long-name="ImagePrint UI Provider" plugin="Y">
 <unit bldFile="mw/usbservices/usbuis/imageprintuiprovider/group"/>
