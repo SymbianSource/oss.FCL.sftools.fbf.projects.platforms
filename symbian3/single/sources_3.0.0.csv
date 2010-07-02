@@ -55,7 +55,7 @@ http://developer.symbian.org/oss/MCL/sf/mw/helix/,/sf/mw/helix,changeset,c0474fa
 http://developer.symbian.org/oss/FCL/sf/mw/homescreensrv/,/sf/mw/homescreensrv,changeset,8a75bf74485c,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/imghandling/,/sf/mw/imghandling,changeset,ad31f4183ddc,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/imsrv/,/sf/mw/imsrv,changeset,7797b2f86d2b,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/mw/inputmethods/,/sf/mw/inputmethods,changeset,5e18d8c489d6,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/inputmethods/,/sf/mw/inputmethods,changeset,ca8eb568b410,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/ipappprotocols/,/sf/mw/ipappprotocols,changeset,a7d1e54a7332,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/ipappsrv/,/sf/mw/ipappsrv,changeset,91f50911ea81,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/ipconnmgmt/,/sf/mw/ipconnmgmt,changeset,0a9e01492035,layers.sysdef.xml
@@ -95,9 +95,9 @@ http://developer.symbian.org/oss/MCL/sf/os/bt/,/sf/os/bt,changeset,32ba20339036,
 http://developer.symbian.org/oss/FCL/sf/os/buildtools/,/sf/os/buildtools,changeset,06f00a153f2a,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/cellularsrv/,/sf/os/cellularsrv,changeset,664a5fed40c6,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/commsfw/,/sf/os/commsfw,changeset,9644881fedd0,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,changeset,89a5a549046a,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,changeset,ce220d94201c,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/devicesrv/,/sf/os/devicesrv,changeset,5ced40f3c181,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/os/graphics/,/sf/os/graphics,changeset,2ae553ab1feb,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/graphics/,/sf/os/graphics,changeset,97c593d3e0a5,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/imagingext/,/sf/os/imagingext,changeset,e5ca06a707ac,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,changeset,99e0f09d12c3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/lbs/,/sf/os/lbs,changeset,24bd7242888d,layers.sysdef.xml
