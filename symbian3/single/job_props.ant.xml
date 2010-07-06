@@ -5,7 +5,7 @@
     <dirname property="sf.spec.job.dir" file="${ant.file.SF-JOB-PROPS}"/>
     <property name="sf.project.type" value="platform" />
 
-    <property name="sf.previous.pdk.tag" value="PDK_3.0.i" />
+    <property name="sf.previous.pdk.tag" value="PDK_3.0.0" />
 
     <property name="sf.spec.job.name" value="symbian3"/>
     <property name="sf.spec.corebuildversion" value="week37"/>
