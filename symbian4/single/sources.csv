@@ -72,7 +72,6 @@ http://developer.symbian.org/oss/FCL/sf/mw/searchsrv/,/sf/mw/searchsrv,branch,de
 http://developer.symbian.org/oss/FCL/sf/mw/securitysrv/,/sf/mw/securitysrv,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/serviceapi/,/sf/mw/serviceapi,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/serviceapifw/,/sf/mw/serviceapifw,branch,default,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/shortlinkconn/,/sf/mw/shortlinkconn,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/srvdiscovery/,/sf/mw/srvdiscovery,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/svgt/,/sf/mw/svgt,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/uiaccelerator/,/sf/mw/uiaccelerator,branch,default,layers.sysdef.xml
