@@ -64,7 +64,7 @@ http://developer.symbian.org/oss/MCL/sf/mw/locationsrv/,/sf/mw/locationsrv,branc
 http://developer.symbian.org/oss/MCL/sf/mw/mds/,/sf/mw/mds,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/messagingmw/,/sf/mw/messagingmw,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/metadatasrv/,/sf/mw/metadatasrv,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/mmappfw/,/sf/mw/mmappfw,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/mw/mmappfw/,/sf/mw/mmappfw,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/mmmw/,/sf/mw/mmmw,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/mmuifw/,/sf/mw/mmuifw,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/netprotocols/,/sf/mw/netprotocols,branch,RCL_3,layers.sysdef.xml
