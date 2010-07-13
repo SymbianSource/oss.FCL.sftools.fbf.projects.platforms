@@ -66,6 +66,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/platformthemes/,/sf/mw/platformthemes
 http://developer.symbian.org/oss/FCL/sf/mw/phonesrv/,/sf/mw/phonesrv,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/qt/,/sf/mw/qt,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/qtextensions/,/sf/mw/qtextensions,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/qttranslations/,/sf/mw/qttranslations,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/remoteconn/,/sf/mw/remoteconn,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/remotemgmt/,/sf/mw/remotemgmt,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/searchsrv/,/sf/mw/searchsrv,branch,default,layers.sysdef.xml
