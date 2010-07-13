@@ -101,7 +101,7 @@ http://developer.symbian.org/oss/FCL/sf/os/devicesrv/,/sf/os/devicesrv,tag,tip_b
 http://developer.symbian.org/oss/FCL/sf/os/graphics/,/sf/os/graphics,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/os/imagingext/,/sf/os/imagingext,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,tag,tip_bulk,modified-FCL
-http://developer.symbian.org/oss/FCL/sf/os/lbs/,/sf/os/lbs,tag,S4_PDK_FIX,
+http://developer.symbian.org/oss/FCL/sf/os/lbs/,/sf/os/lbs,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/mm/,/sf/os/mm,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/networkingsrv/,/sf/os/networkingsrv,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/ossrv/,/sf/os/ossrv,tag,tip_bulk,layers.sysdef.xml
