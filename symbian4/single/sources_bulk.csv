@@ -47,7 +47,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/drm/,/sf/mw/drm,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/mw/gsprofilesrv/,/sf/mw/gsprofilesrv,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/gstreamer/,/sf/mw/gstreamer,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/hapticsservices/,/sf/mw/hapticsservices,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/hb/,/sf/mw/hb,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/hb/,/sf/mw/hb,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/mw/helix/,/sf/mw/helix,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/hgwidgets/,/sf/mw/hgwidgets,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/homescreensrv/,/sf/mw/homescreensrv,tag,tip_bulk,layers.sysdef.xml
