@@ -29,7 +29,7 @@ http://developer.symbian.org/oss/MCL/sf/os/security/,/sf/os/security,branch,RCL_
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/mm/,/sf/os/mm,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/imagingext/,/sf/os/imagingext,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/os/graphics/,/sf/os/graphics,branch,RCL_1,layers.sysdef.xml
-//v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/textandloc/,/sf/os/textandloc,branch,RCL_1,layers.sysdef.xml
+//v800008/Builds01/mercurial_development/sfl/FCL/sf/os/textandloc/,/sf/os/textandloc,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/xmlsrv/,/sf/os/xmlsrv,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/sfl/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,branch,RCL_1,layers.sysdef.xml
