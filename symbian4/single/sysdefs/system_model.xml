@@ -3087,11 +3087,9 @@
 <unit bldFile="mw/securitysrv/securitydialogs/autolock/indicatorplugin" proFile="indicatorautolockplugin.pro" qmakeArgs="-r"/>
 </component>
 <component name="autolockuseractivityservice" long-name="Auto Lock User Activity Service" introduced="^4" filter="s60">
-<!-- Can't have two .pro files in the same dir: their generated bld.infs will overwrite each other-->
-<unit bldFile="mw/securitysrv/securitydialogs/autolock" proFile="autolockuseractivityservice.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/securitysrv/securitydialogs/autolock/autolockuseractivityservice" proFile="autolockuseractivityservice.pro" qmakeArgs="-r"/>
 </component>
 <component name="autolocksrv" long-name="Auto Lock Server" introduced="^4" filter="s60">
-<!-- Can't have two .pro files in the same dir: their generated bld.infs will overwrite each other-->
 <unit bldFile="mw/securitysrv/securitydialogs/autolock" proFile="autolock.pro" qmakeArgs="-r"/>
 </component>
 </collection>
@@ -4583,10 +4581,30 @@
 </component>
 </collection>
 </block>
-<block name="remoteconn" level="generic" long-name="Remote Connectivity" levels="plugin framework server generic specific">
-<collection name="remoteconn_info" long-name="Remote Connectivity Info" level="specific">
+<block name="remoteconn" level="generic" long-name="Remote Connectivity" levels="plugin framework server generic api">
+<collection name="remoteconn_info" long-name="Remote Connectivity Info" level="api">
 <component name="remoteconn_metadata" long-name="Remote Connectivity Metadata" introduced="^2" purpose="development" class="config PC">
 <unit mrp="mw/remoteconn/remoteconn_info/remoteconn_metadata/remoteconn_metadata.mrp"/>
+</component>
+</collection>
+<collection name="remoteconn_plat" long-name="Remote Connectivity Platform Interfaces" level="api">
+<component name="dialup_connection_status_api" long-name="Dialup Connection Status API" filter="s60" class="api">
+<unit bldFile="mw/remoteconn/remoteconn_plat/dialup_connection_status_api/group"/>
+</component>
+<component name="dun_secondary_display_notification_api" long-name="Dialup Secondary Display Notification API" filter="s60" class="api">
+<unit bldFile="mw/remoteconn/remoteconn_plat/dun_secondary_display_notification_api/group"/>
+</component>
+<component name="generic_hid_api" long-name="Generic HID API" filter="s60" class="api">
+<!-- Missing? <meta rel="Api" href="remoteconn_plat/generic_hid_api/generic_hid_api.metaxml"/> -->
+<unit bldFile="mw/remoteconn/remoteconn_plat/generic_hid_api/group"/>
+</component>
+<component name="locod_bearer_plugin_api" long-name="LOCOD Bearer Plugin API" filter="s60" class="api">
+<!-- Missing? <meta rel="Api" href="remoteconn_plat/locod_bearer_plugin_api/locod_bearer_plugin_api.metaxml"/> -->
+<unit bldFile="mw/remoteconn/remoteconn_plat/locod_bearer_plugin_api/group"/>
+</component>
+<component name="locod_service_plugin_api" long-name="LOCOD Service Plugin API" filter="s60" class="api">
+<!-- Missing? <meta rel="Api" href="remoteconn_plat/locod_service_plugin_api/locod_service_plugin_api.metaxml"/> -->
+<unit bldFile="mw/remoteconn/remoteconn_plat/locod_service_plugin_api/group"/>
 </component>
 </collection>
 <collection name="mtptransports" long-name="MTP Transports" level="plugin">
@@ -5679,6 +5697,10 @@
 </component>
 <component name="input_language_info_api" long-name="Input Language Info API" filter="s60" class="api">
 <unit bldFile="mw/inputmethods/inputmethods_pub/input_language_info_api/group"/>
+</component>
+<component name="ptiengine_iti_api" long-name="PtiEngine API" filter="s60" class="api">
+<!-- conditional on RD_INTELLIGENT_TEXT_INPUT, but this is #defined in SF builds -->
+<unit bldFile="mw/inputmethods/inputmethods_pub/ptiengine_iti_api/group"/>
 </component>
 </collection>
 <collection name="inputmethods_plat" long-name="Input Methods Platform Interfaces" level="api">
