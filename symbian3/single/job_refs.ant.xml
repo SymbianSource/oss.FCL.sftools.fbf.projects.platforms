@@ -47,6 +47,16 @@
          </variableset>
      </imakerconfiguration -->
      
+     <imakerconfiguration>
+         <makefileset>
+             <include name="/epoc32/rom/config/sf_refhw/beagle/image_conf_beagle.mk"/>
+         </makefileset>
+         <targetset>
+             <include name="^flash$" />
+         </targetset>
+         <variableset/>
+     </imakerconfiguration>
+     
   </hlm:imakerconfigurationset>
     
  </project>
