@@ -21,7 +21,7 @@ http://developer.symbian.org/oss/FCL/sf/app/location/,/sf/app/location,tag,tip_b
 http://developer.symbian.org/oss/FCL/sf/app/messaging/,/sf/app/messaging,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/mmsharinguis/,/sf/app/mmsharinguis,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/musicplayer/,/sf/app/musicplayer,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/app/organizer/,/sf/app/organizer,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/organizer/,/sf/app/organizer,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/app/phone/,/sf/app/phone,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/photos/,/sf/app/photos,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/podcatcher/,/sf/app/podcatcher,branch,default,NON-NOKIA
@@ -46,7 +46,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/dlnasrv/,/sf/mw/dlnasrv,tag,tip_bulk,
 http://developer.symbian.org/oss/FCL/sf/mw/drm/,/sf/mw/drm,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/mw/gsprofilesrv/,/sf/mw/gsprofilesrv,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/gstreamer/,/sf/mw/gstreamer,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/hapticsservices/,/sf/mw/hapticsservices,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/hapticsservices/,/sf/mw/hapticsservices,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/mw/hb/,/sf/mw/hb,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/mw/helix/,/sf/mw/helix,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/hgwidgets/,/sf/mw/hgwidgets,tag,tip_bulk,layers.sysdef.xml
