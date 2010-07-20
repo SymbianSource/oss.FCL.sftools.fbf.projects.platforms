@@ -3087,6 +3087,7 @@
 <unit bldFile="mw/securitysrv/securitydialogs/autolock/indicatorplugin" proFile="indicatorautolockplugin.pro" qmakeArgs="-r"/>
 </component>
 <component name="autolockuseractivityservice" long-name="Auto Lock User Activity Service" introduced="^4" filter="s60">
+<!-- Can't have a component inside another. Need to move to securitydialogs/autolockuseractivityservice -->
 <unit bldFile="mw/securitysrv/securitydialogs/autolock/autolockuseractivityservice" proFile="autolockuseractivityservice.pro" qmakeArgs="-r"/>
 </component>
 <component name="autolocksrv" long-name="Auto Lock Server" introduced="^4" filter="s60">
@@ -4581,13 +4582,13 @@
 </component>
 </collection>
 </block>
-<block name="remoteconn" level="generic" long-name="Remote Connectivity" levels="plugin framework server generic api">
-<collection name="remoteconn_info" long-name="Remote Connectivity Info" level="api">
+<block name="remoteconn" level="generic" long-name="Remote Connectivity" levels="plugin framework server generic specific">
+<collection name="remoteconn_info" long-name="Remote Connectivity Info" level="specific">
 <component name="remoteconn_metadata" long-name="Remote Connectivity Metadata" introduced="^2" purpose="development" class="config PC">
 <unit mrp="mw/remoteconn/remoteconn_info/remoteconn_metadata/remoteconn_metadata.mrp"/>
 </component>
 </collection>
-<collection name="remoteconn_plat" long-name="Remote Connectivity Platform Interfaces" level="api">
+<collection name="remoteconn_plat" long-name="Remote Connectivity Platform Interfaces" level="specific">
 <component name="dialup_connection_status_api" long-name="Dialup Connection Status API" filter="s60" class="api">
 <unit bldFile="mw/remoteconn/remoteconn_plat/dialup_connection_status_api/group"/>
 </component>
@@ -4598,34 +4599,34 @@
 <!-- Missing? <meta rel="Api" href="remoteconn_plat/generic_hid_api/generic_hid_api.metaxml"/> -->
 <unit bldFile="mw/remoteconn/remoteconn_plat/generic_hid_api/group"/>
 </component>
-<component name="locod_bearer_plugin_api" long-name="LOCOD Bearer Plugin API" filter="s60" class="api">
+<component name="locod_bearer_plugin_api" long-name="Local Connectivity Daemon Bearer Plugin API" filter="s60" class="api">
 <!-- Missing? <meta rel="Api" href="remoteconn_plat/locod_bearer_plugin_api/locod_bearer_plugin_api.metaxml"/> -->
 <unit bldFile="mw/remoteconn/remoteconn_plat/locod_bearer_plugin_api/group"/>
 </component>
-<component name="locod_service_plugin_api" long-name="LOCOD Service Plugin API" filter="s60" class="api">
+<component name="locod_service_plugin_api" long-name="Local Connectivity Daemon Service Plugin API" filter="s60" class="api">
 <!-- Missing? <meta rel="Api" href="remoteconn_plat/locod_service_plugin_api/locod_service_plugin_api.metaxml"/> -->
 <unit bldFile="mw/remoteconn/remoteconn_plat/locod_service_plugin_api/group"/>
 </component>
 </collection>
-<collection name="localconnectivityservice" long-name="Local Connectivity Service" level="plugin">
-<component name="locod" long-name="LOCOD" introduced="^4">
-<unit bldFile="mw/remoteconn/localconnectivityservice/locod/group" mrp="mw/remoteconn/localconnectivityservice/locod/group/locod.mrp"/>
+<collection name="localconnectivityservice" long-name="Local Connectivity Service" level="server">
+<component name="locod" long-name="Local Connectivity Daemon" introduced="^4" purpose="optional" filter="s60">
+<unit bldFile="mw/remoteconn/localconnectivityservice/locod/group"/>
 </component>
-<component name="dun" introduced="^4">
-<unit bldFile="mw/remoteconn/localconnectivityservice/dun/group" mrp="mw/remoteconn/localconnectivityservice/dun/group/dun.mrp"/>
+<component name="dun" long-name="Dial-Up Networking" introduced="^4" purpose="optional" filter="s60">
+<unit bldFile="mw/remoteconn/localconnectivityservice/dun/group"/>
 </component>
-<component name="generichid" long-name="Generic HID" introduced="^4">
-<unit bldFile="mw/remoteconn/localconnectivityservice/generichid/group" mrp="mw/remoteconn/localconnectivityservice/generichid/group/generichid.mrp"/>
+<component name="generichid" long-name="Generic Human-Interface Device" introduced="^4" purpose="optional" filter="s60">
+<unit bldFile="mw/remoteconn/localconnectivityservice/generichid/group"/>
 </component>
-<component name="headset" long-name="Headset" introduced="^4">
-<unit bldFile="mw/remoteconn/localconnectivityservice/headset/group" mrp="mw/remoteconn/localconnectivityservice/headset/group/headset.mrp"/>
+<component name="headset" long-name="Headset" introduced="^4" purpose="optional" filter="s60">
+<unit bldFile="mw/remoteconn/localconnectivityservice/headset/group"/>
 </component>
 </collection>
 <collection name="mtptransports" long-name="MTP Transports" level="plugin">
-<component name="mtpusbtransport" long-name="MTP USB Transport" introduced="^2" purpose="optional" plugin="Y">
+<component name="mtpusbtransport" long-name="MTP USB Transport" introduced="^2" purpose="optional" filter="s60" plugin="Y">
 <unit bldFile="mw/remoteconn/mtptransports/mtpusbtransport/group" mrp="mw/remoteconn/mtptransports/mtpusbtransport/group/mtp_usbsic.mrp"/>
 </component>
-<component name="mtpptpiptransport" long-name="MTP PTP-IP Transport" introduced="^3" purpose="optional" plugin="Y">
+<component name="mtpptpiptransport" long-name="MTP PTP-IP Transport" introduced="^3" purpose="optional" filter="s60" plugin="Y">
 <unit bldFile="mw/remoteconn/mtptransports/mtpptpiptransport/group" mrp="mw/remoteconn/mtptransports/mtpptpiptransport/group/mtp_ptpip.mrp"/>
 </component>
 <component name="mtpcontroller" long-name="MTP Controller" introduced="^3" purpose="optional" plugin="Y">
@@ -4633,26 +4634,34 @@
 </component>
 </collection>
 <collection name="mtpfws" long-name="MTP Frameworks" level="framework">
-<component name="mtpfw" long-name="MTP Framework" introduced="^2" purpose="optional">
+<component name="mtpfw" long-name="MTP Framework" introduced="^2" purpose="optional" filter="s60">
 <unit bldFile="mw/remoteconn/mtpfws/mtpfw/group" mrp="mw/remoteconn/mtpfws/mtpfw/group/mtp_framework.mrp"/>
+</component>
+<component name="devdpextn" long-name="MTP Device Provider Extension" introduced="^4" purpose="optional" filter="s60">
+<!-- can't have a component inside another component. Need to move to mtpfws/devdpextn/group -->
+<unit bldFile="mw/remoteconn/mtpfws/mtpfw/dataproviders/devdp/devdpextn/group"/>
 </component>
 </collection>
 <collection name="mtpdataproviders" long-name="MTP Data Providers" level="generic">
-<component name="mtpfileandfolderdp" long-name="MTP File and Folder Provider" introduced="^2" purpose="optional" plugin="Y">
+<component name="mtpfileandfolderdp" long-name="MTP File and Folder Provider" introduced="^2" purpose="optional" filter="s60" plugin="Y">
 <unit bldFile="mw/remoteconn/mtpdataproviders/mtpfileandfolderdp/group" mrp="mw/remoteconn/mtpdataproviders/mtpfileandfolderdp/group/mtp_filedp.mrp"/>
 </component>
-<component name="mtpimagedp" long-name="MTP Image Data Provider" filter="gt" introduced="^3" purpose="optional" plugin="Y">
+<component name="mtpimagedp" long-name="MTP Image Data Provider" introduced="^3" purpose="optional" filter="s60" plugin="Y">
 <unit bldFile="mw/remoteconn/mtpdataproviders/mtpimagedp/group" mrp="mw/remoteconn/mtpdataproviders/mtpimagedp/group/mtp_imagedp.mrp"/>
 </component>
-<component name="mtppictbridgedp" long-name="MTP PictBridge Data Provider" filter="gt" introduced="^3" purpose="optional" plugin="Y">
+<component name="mtppictbridgedp" long-name="MTP PictBridge Data Provider" introduced="^3" purpose="optional" filter="s60" plugin="Y">
 <unit bldFile="mw/remoteconn/mtpdataproviders/mtppictbridgedp/group" mrp="mw/remoteconn/mtpdataproviders/mtppictbridgedp/group/mtp_pictbridgedp.mrp"/>
 </component>
-<component name="mtpplaybackcontroldp" long-name="MTP Playback Control Data Provider" introduced="^4" purpose="optional" plugin="Y">
+<component name="pictbridgeengine" long-name="MTP PictBridge Engine" introduced="^4" purpose="optional" filter="s60">
+<!-- can't have a component inside another component. Need to move to mtpdataproviders/pictbridgeengine/group -->
+<unit bldFile="mw/remoteconn/mtpdataproviders/mtppictbridgedp/pictbridgeengine/group"/>
+</component>
+<component name="mtpplaybackcontroldp" long-name="MTP Playback Control Data Provider" introduced="^4" purpose="optional" filter="s60" plugin="Y">
 <unit bldFile="mw/remoteconn/mtpdataproviders/mtpplaybackcontroldp/group" mrp="mw/remoteconn/mtpdataproviders/mtpplaybackcontroldp/group/mtp_playbackcontroldp.mrp"/>
 </component>
 </collection>
 <collection name="backupandrestore" long-name="Backup and Restore" level="specific">
-<component name="backupengine" long-name="Backup Engine" introduced="9.0" purpose="optional">
+<component name="backupengine" long-name="Backup Engine" introduced="9.0" purpose="optional" filter="s60">
 <unit bldFile="mw/remoteconn/backupandrestore/backupengine/group" mrp="mw/remoteconn/backupandrestore/backupengine/group/connectivity_backupengine.mrp"/>
 </component>
 <component name="backuptest" long-name="Backup Test" introduced="^2" purpose="development">
@@ -5706,15 +5715,14 @@
 </block>
 <block name="inputmethods" level="generic" long-name="Input Methods" levels="plugin engine framework api">
 <collection name="inputmethods_pub" long-name="Input Methods Public Interfaces" level="api">
+<component name="ptiengine_iti_api" long-name="PTI Engine API" filter="s60" class="api">
+<unit bldFile="mw/inputmethods/inputmethods_pub/ptiengine_iti_api/group"/>
+</component>
 <component name="optical_character_recognition_api" long-name="Optical Character Recognition API" filter="s60" class="api">
 <unit bldFile="mw/inputmethods/inputmethods_pub/optical_character_recognition_api/group"/>
 </component>
 <component name="input_language_info_api" long-name="Input Language Info API" filter="s60" class="api">
 <unit bldFile="mw/inputmethods/inputmethods_pub/input_language_info_api/group"/>
-</component>
-<component name="ptiengine_iti_api" long-name="PtiEngine API" filter="s60" class="api">
-<!-- conditional on RD_INTELLIGENT_TEXT_INPUT, but this is #defined in SF builds -->
-<unit bldFile="mw/inputmethods/inputmethods_pub/ptiengine_iti_api/group"/>
 </component>
 </collection>
 <collection name="inputmethods_plat" long-name="Input Methods Platform Interfaces" level="api">
