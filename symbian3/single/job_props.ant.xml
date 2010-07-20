@@ -33,7 +33,7 @@
     <!-- and set sf.spec.baseline.enable to 'true'                                                          -->        
 
     <!-- get full source env and binaries from pdk -->
-    <property name="sf.spec.baseline.location"       value="\\v800008\PDT\prebuilt_default.41" /> <!-- prebuilt stuff etc. -->
+    <property name="sf.spec.baseline.location"       value="\\v800008\PDT\prebuilt_default.42" /> <!-- prebuilt stuff etc. -->
     <property name="sf.spec.toolsbaseline.location"       value="\\v800008\Builds01\Releases\${sf.previous.pdk.tag}_custom" /> <!-- tools baseline location e.g. tools_epoc.zip -->
     
     <!-- platform build specific properties -->
