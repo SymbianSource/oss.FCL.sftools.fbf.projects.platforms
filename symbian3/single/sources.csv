@@ -55,7 +55,7 @@ http://developer.symbian.org/oss/MCL/sf/mw/helix/,/sf/mw/helix,branch,RCL_3,laye
 http://developer.symbian.org/oss/MCL/sf/mw/homescreensrv/,/sf/mw/homescreensrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/imghandling/,/sf/mw/imghandling,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/imsrv/,/sf/mw/imsrv,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/mw/inputmethods/,/sf/mw/inputmethods,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/inputmethods/,/sf/mw/inputmethods,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/ipappprotocols/,/sf/mw/ipappprotocols,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/ipappsrv/,/sf/mw/ipappsrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/ipconnmgmt/,/sf/mw/ipconnmgmt,branch,RCL_3,layers.sysdef.xml
