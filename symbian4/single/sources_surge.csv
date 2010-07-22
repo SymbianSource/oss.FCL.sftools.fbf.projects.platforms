@@ -78,7 +78,6 @@ http://developer.symbian.org/oss/FCL/sf/mw/searchsrv/,/sf/mw/searchsrv,branch,GC
 http://developer.symbian.org/oss/FCL/sf/mw/securitysrv/,/sf/mw/securitysrv,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/serviceapi/,/sf/mw/serviceapi,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/serviceapifw/,/sf/mw/serviceapifw,branch,GCC_SURGE,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/shortlinkconn/,/sf/mw/shortlinkconn,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/srvdiscovery/,/sf/mw/srvdiscovery,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/svgt/,/sf/mw/svgt,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/uiaccelerator/,/sf/mw/uiaccelerator,branch,GCC_SURGE,layers.sysdef.xml
@@ -88,7 +87,6 @@ http://developer.symbian.org/oss/FCL/sf/mw/usbservices/,/sf/mw/usbservices,branc
 http://developer.symbian.org/oss/FCL/sf/mw/videoutils/,/sf/mw/videoutils,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/vpnclient/,/sf/mw/vpnclient,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/web/,/sf/mw/web,branch,GCC_SURGE,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/webruntime/,/sf/mw/webruntime,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/websrv/,/sf/mw/websrv,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/wirelessacc/,/sf/mw/wirelessacc,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/boardsupport/,/sf/os/boardsupport,branch,GCC_SURGE,layers.sysdef.xml
