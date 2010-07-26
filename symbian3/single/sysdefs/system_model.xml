@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE SystemDefinition [
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE SystemDefinition [
 <!ELEMENT SystemDefinition ( systemModel )>
 <!ATTLIST SystemDefinition
   name CDATA #REQUIRED
@@ -72,7 +73,7 @@
   priority CDATA #IMPLIED
 >
 ]>
-<SystemDefinition schema="2.0.1" name="Symbian^3">
+<SystemDefinition name="Symbian^3" schema="2.0.1">
 <systemModel>
 <layer name="adaptation" long-name="Adaptation" levels="low mw high">
 <block name="stubs" level="high" long-name="Stubs" levels="stub">
@@ -129,6 +130,66 @@
 <collection name="qemu_baseport" long-name="Baseport" level="hw-if">
 <component name="syborg" long-name="Syborg" introduced="^2" purpose="optional" filter="sf_build">
 <unit bldFile="adaptation/qemu/baseport/syborg" mrp="adaptation/qemu/baseport/syborg/syborg.mrp"/>
+</component>
+</collection>
+</block>
+<block name="codecs.aricent" level="low" long-name="Aricent Codecs">
+<collection name="utilities" long-name="Aricent Utilities">
+<component name="ariprocessengine" long-name="Aricent Process Engine">
+<unit bldFile="adaptation/codecs.aricent/utilities/ariprocessengine/group"/>
+</component>
+<component name="aristatemachine" long-name="Aricent State Machine">
+<unit bldFile="adaptation/codecs.aricent/utilities/aristatemachine/group"/>
+</component>
+</collection>
+<collection name="aaclc_enc" level="plugin">
+<component name="ariaaclcencmmfcodec">
+<unit bldFile="adaptation/codecs.aricent/aaclc_enc/ariaaclcencmmfcodec/group"/>
+</component>
+</collection>
+<collection name="amrnb_dec" level="plugin">
+<component name="ariamrnbdecmmfcodec">
+<unit bldFile="adaptation/codecs.aricent/amrnb_dec/ariamrnbdecmmfcodec/group"/>
+</component>
+</collection>
+<collection name="amrnb_enc" level="plugin">
+<component name="ariamrnbencmmfcodec">
+<unit bldFile="adaptation/codecs.aricent/amrnb_enc/ariamrnbencmmfcodec/group"/>
+</component>
+</collection>
+<collection name="amrwb_dec" level="plugin">
+<component name="ariamrwbdecmmfcodec">
+<unit bldFile="adaptation/codecs.aricent/amrwb_dec/ariamrwbdecmmfcodec/group"/>
+</component>
+</collection>
+<collection name="h264_dec" level="plugin">
+<component name="arih264dechwdevice">
+<unit bldFile="adaptation/codecs.aricent/h264_dec/arih264dechwdevice/group"/>
+</component>
+</collection>
+<collection name="h264_enc" level="plugin">
+<component name="arih264enchwdevice">
+<unit bldFile="adaptation/codecs.aricent/h264_enc/arih264enchwdevice/group"/>
+</component>
+</collection>
+<collection name="heaac_dec" level="plugin">
+<component name="ariheaacdecmmfcodec">
+<unit bldFile="adaptation/codecs.aricent/heaac_dec/ariheaacdecmmfcodec/group"/>
+</component>
+</collection>
+<collection name="mp3_dec" level="plugin">
+<component name="arimp3decmmfcodec">
+<unit bldFile="adaptation/codecs.aricent/mp3_dec/arimp3decmmfcodec/group"/>
+</component>
+</collection>
+<collection name="mp4asp_dec" level="plugin">
+<component name="arimpeg4aspdechwdevice">
+<unit bldFile="adaptation/codecs.aricent/mp4asp_dec/arimpeg4aspdechwdevice/group"/>
+</component>
+</collection>
+<collection name="mp4sp_enc" level="plugin">
+<component name="arimp4spenchwdevice">
+<unit bldFile="adaptation/codecs.aricent/mp4sp_enc/arimp4spenchwdevice/group"/>
 </component>
 </collection>
 </block>
@@ -2666,9 +2727,6 @@
 </component>
 <component name="rombuild_zoom2" filter="sf_build" long-name="Zoom2 iMaker Config" purpose="development" introduced="^3" class="config">
 <unit bldFile="os/deviceplatformrelease/sf_config/rombuild/zoom2/group"/>
-</component>
-<component name="rombuild_sfrefhw" filter="sf_build" long-name="sf_refhw iMaker Config" purpose="development" introduced="^3" class="config">
-<unit bldFile="os/deviceplatformrelease/sf_config/rombuild/sf_refhw/group"/>
 </component>
 </collection>
 <!-- should be located locally in buildplatforms/group. NB. This is a different package! -->
@@ -6273,6 +6331,14 @@
 <unit bldFile="mw/qt/examples" proFile="examples.pro" qmakeArgs="-r"/>
 </component>
 </collection>
+<collection name="qt_tests" long-name="Qt Tests" level="app">
+<component name="qttestsauto" long-name="Qt Automated Tests" introduced="^2" filter="qttestsauto">
+<unit bldFile="mw/qt/tests/auto" proFile="qtpauto.pro" makeArgs="-r"/>
+</component>
+<component name="qttestsbenchmarks" long-name="Qt Benchmarks Tests" introduced="^2" filter="qttestsbenchmarks">
+<unit bldFile="mw/qt/tests/benchmarks" proFile="benchmarks.pro" qmakeArgs="-r"/>
+</component>
+</collection>
 </block>
 <block name="classicui" level="generic" long-name="Classic UI" levels="base support server generic specific">
 <collection name="classicui_plat" long-name="Classic UI Platform Interfaces" level="specific">
@@ -7011,7 +7077,7 @@
 <component name="aknskincontent" filter="s60" long-name="Avkon Skin Content" class="config">
 <unit bldFile="mw/uiresources/skins/aknskincontent/group"/>
 </component>
-<component name="symbiantheme" filter="sf_build" long-name="Symbian^3 Theme">
+<component name="symbiantheme" filter="sf_build" long-name="Symbian^3 Theme" class="config">
 <unit bldFile="mw/uiresources/skins/Symbian/group"/>
 </component>
 <component name="aknskins" filter="s60" long-name="Avkon Skin Compiler">
