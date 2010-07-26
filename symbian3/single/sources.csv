@@ -1,5 +1,6 @@
 source,dst,type,pattern,sysdef
 http://developer.symbian.org/oss/FCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/adaptation/codecs.aricent/,/sf/adaptation/codecs.aricent,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/adaptation/stubs/,/sf/adaptation/stubs,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/camera/,/sf/app/camera,branch,RCL_3,layers.sysdef.xml
