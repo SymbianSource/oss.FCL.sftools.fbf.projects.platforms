@@ -35,7 +35,7 @@ http://developer.symbian.org/oss/FCL/sf/app/techview/,/sf/app/techview,branch,GC
 http://developer.symbian.org/oss/FCL/sf/app/videoplayer/,/sf/app/videoplayer,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/videotelephony/,/sf/app/videotelephony,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/webuis/,/sf/app/webuis,branch,GCC_SURGE,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/accesssec/,/sf/mw/accesssec,changeset,093cf0757204,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/accesssec/,/sf/mw/accesssec,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/appinstall/,/sf/mw/appinstall,branch,GCC_SURGE,modified-FCL
 http://developer.symbian.org/oss/FCL/sf/mw/appsupport/,/sf/mw/appsupport,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/browser/,/sf/mw/browser,branch,GCC_SURGE,layers.sysdef.xml
@@ -67,7 +67,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/mmappfw/,/sf/mw/mmappfw,branch,GCC_SU
 http://developer.symbian.org/oss/FCL/sf/mw/mmmw/,/sf/mw/mmmw,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/netprotocols/,/sf/mw/netprotocols,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/networkingdm/,/sf/mw/networkingdm,branch,GCC_SURGE,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/platformthemes/,/sf/mw/platformthemes,changeset,28e8d4c0e55e,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/platformthemes/,/sf/mw/platformthemes,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/platformtools/,/sf/mw/platformtools,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/phonesrv/,/sf/mw/phonesrv,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/qt/,/sf/mw/qt,branch,GCC_SURGE,layers.sysdef.xml
