@@ -14,7 +14,7 @@ http://developer.symbian.org/oss/FCL/sf/app/devicecontrol/,/sf/app/devicecontrol
 http://developer.symbian.org/oss/FCL/sf/app/files/,/sf/app/files,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/firsttimeuse/,/sf/app/firsttimeuse,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/helps/,/sf/app/helps,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/app/homescreen/,/sf/app/homescreen,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/homescreen/,/sf/app/homescreen,tag,S4_PDK_FIX,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/homescreentools/,/sf/app/homescreentools,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/jrt/,/sf/app/jrt,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/app/internetradio/,/sf/app/internetradio,tag,tip_bulk,layers.sysdef.xml
