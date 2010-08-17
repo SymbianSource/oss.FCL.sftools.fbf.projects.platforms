@@ -8616,9 +8616,9 @@
 <block name="homescreen" level="apps" long-name="Home Screen Apps" levels="support task ss hs">
 <collection name="homescreen_test" long-name="Home Screen Test" level="support"/>
 <collection name="homescreenapp" long-name="Home Screen Application" level="hs">
-<!-- component name="hsutils" long-name="Home Screen Utils" introduced="^4">
+<component name="hsutils" long-name="Home Screen Utils" introduced="^4">
 <unit bldFile="app/homescreen/homescreenapp/hsutils" proFile="hsutils.pro" qmakeArgs="-r -config rom"/>
-</component -->
+</component>
 <component name="hsdomainmodel" long-name="HS Domain Model" introduced="^4">
 <unit bldFile="app/homescreen/homescreenapp/hsdomainmodel" proFile="hsdomainmodel.pro" qmakeArgs="-r -config rom"/>
 </component>
