@@ -14,7 +14,7 @@ http://developer.symbian.org/oss/FCL/sf/app/devicecontrol/,/sf/app/devicecontrol
 http://developer.symbian.org/oss/FCL/sf/app/files/,/sf/app/files,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/firsttimeuse/,/sf/app/firsttimeuse,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/helps/,/sf/app/helps,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/app/homescreen/,/sf/app/homescreen,tag,S4_PDK_FIX,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/homescreen/,/sf/app/homescreen,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/homescreentools/,/sf/app/homescreentools,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/jrt/,/sf/app/jrt,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/app/internetradio/,/sf/app/internetradio,tag,tip_bulk,layers.sysdef.xml
@@ -44,11 +44,11 @@ http://developer.symbian.org/oss/FCL/sf/mw/btservices/,/sf/mw/btservices,tag,tip
 http://developer.symbian.org/oss/FCL/sf/mw/camerasrv/,/sf/mw/camerasrv,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/classicui/,/sf/mw/classicui,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/dlnasrv/,/sf/mw/dlnasrv,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/drm/,/sf/mw/drm,tag,S4_PDK_FIX,
+http://developer.symbian.org/oss/FCL/sf/mw/drm/,/sf/mw/drm,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/gsprofilesrv/,/sf/mw/gsprofilesrv,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/gstreamer/,/sf/mw/gstreamer,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/hapticsservices/,/sf/mw/hapticsservices,tag,S4_PDK_FIX,
-http://developer.symbian.org/oss/FCL/sf/mw/hb/,/sf/mw/hb,tag,S4_PDK_FIX,
+http://developer.symbian.org/oss/FCL/sf/mw/hb/,/sf/mw/hb,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/helix/,/sf/mw/helix,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/hgwidgets/,/sf/mw/hgwidgets,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/homescreensrv/,/sf/mw/homescreensrv,tag,tip_bulk,layers.sysdef.xml
