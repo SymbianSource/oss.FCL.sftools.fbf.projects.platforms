@@ -6414,6 +6414,9 @@
 <component name="uikon" long-name="Uikon" introduced="6.0" purpose="mandatory">
 <unit bldFile="mw/classicui/commonuisupport/uikon/group" mrp="mw/classicui/commonuisupport/uikon/group/app-framework_uikon.mrp"/>
 </component>
+<component name="uikon_ncp" long-name="Uikon (NCP)" introduced="S^4" purpose="mandatory">
+<unit bldFile="mw/classicui/commonuisupport/uikon_ncp/group"/>
+</component>
 <component name="errorresolverdata" long-name="Error Resolver Data" purpose="mandatory">
 <unit bldFile="mw/classicui/commonuisupport/errorresolverdata/group" mrp="mw/classicui/commonuisupport/errorresolverdata/group/app-framework_errorresgt.mrp"/>
 </component>
