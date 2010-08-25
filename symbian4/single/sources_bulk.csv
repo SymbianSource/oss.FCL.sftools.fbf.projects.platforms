@@ -73,6 +73,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/platformtools/,/sf/mw/platformtools,t
 http://developer.symbian.org/oss/FCL/sf/mw/phonesrv/,/sf/mw/phonesrv,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/qt/,/sf/mw/qt,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/qtextensions/,/sf/mw/qtextensions,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/qtmobility/,/sf/mw/qtmobility,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/remoteconn/,/sf/mw/remoteconn,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/remotemgmt/,/sf/mw/remotemgmt,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/searchsrv/,/sf/mw/searchsrv,tag,tip_bulk,layers.sysdef.xml
@@ -103,7 +104,9 @@ http://developer.symbian.org/oss/FCL/sf/os/imagingext/,/sf/os/imagingext,tag,tip
 http://developer.symbian.org/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/os/lbs/,/sf/os/lbs,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/mm/,/sf/os/mm,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/mmimaging/,/sf/os/mmimaging,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/networkingsrv/,/sf/os/networkingsrv,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/openmaxil/,/sf/os/openmaxil,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/ossrv/,/sf/os/ossrv,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/persistentdata/,/sf/os/persistentdata,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/security/,/sf/os/security,tag,tip_bulk,layers.sysdef.xml
