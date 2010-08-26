@@ -68,7 +68,7 @@ http://developer.symbian.org/oss/MCL/sf/mw/metadatasrv/,/sf/mw/metadatasrv,branc
 http://developer.symbian.org/oss/MCL/sf/mw/mmappfw/,/sf/mw/mmappfw,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/mmmw/,/sf/mw/mmmw,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/mmuifw/,/sf/mw/mmuifw,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/mw/netprotocols/,/sf/mw/netprotocols,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/netprotocols/,/sf/mw/netprotocols,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/phonesrv/,/sf/mw/phonesrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/platformtools/,/sf/mw/platformtools,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/qt/,/sf/mw/qt,branch,RCL_3,layers.sysdef.xml
