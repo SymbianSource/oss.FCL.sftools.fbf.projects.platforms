@@ -73,7 +73,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/platformtools/,/sf/mw/platformtools,t
 http://developer.symbian.org/oss/FCL/sf/mw/phonesrv/,/sf/mw/phonesrv,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/qt/,/sf/mw/qt,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/qtextensions/,/sf/mw/qtextensions,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/os/qtmobility/,/sf/mw/qtmobility,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/qtmobility/,/sf/mw/qtmobility,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/remoteconn/,/sf/mw/remoteconn,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/remotemgmt/,/sf/mw/remotemgmt,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/searchsrv/,/sf/mw/searchsrv,tag,tip_bulk,layers.sysdef.xml
