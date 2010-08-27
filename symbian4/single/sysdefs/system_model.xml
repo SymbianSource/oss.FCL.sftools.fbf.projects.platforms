@@ -2312,6 +2312,12 @@
 <component name="surfaceupdate" long-name="Surface Update" introduced="^3" purpose="optional">
 <unit bldFile="os/graphics/graphicscomposition/surfaceupdate/group" mrp="os/graphics/graphicscomposition/surfaceupdate/group/graphics_surfaceupdate.mrp"/>
 </component>
+<component name="openwfc_ri_displaychannel" long-name="OpenWFC RI Display Channel" introduced="^4" purpose="optional">
+<unit bldFile="os/graphics/graphicscomposition/openwfc_ri_displaychannel/group" mrp="os/graphics/graphicscomposition/openwfc_ri_displaychannel/group/openwfc_ri_displaychannel.mrp"/>
+</component>
+<component name="openwfc_ri_displayupdater" long-name="OpenWFC RI Display Update" introduced="^4" purpose="optional">
+<unit bldFile="os/graphics/graphicscomposition/openwfc_ri_displayupdater/group" mrp="os/graphics/graphicscomposition/openwfc_ri_displayupdater/group/openwfc_ri_displayupdater.mrp"/>
+</component>
 </collection>
 <collection name="graphicstest" long-name="Graphics Test" level="app-if">
 <component name="uibench" long-name="UI Bench" introduced="9.2" purpose="development">
@@ -2611,54 +2617,6 @@
 </collection>
 </block>
 <block name="osrndtools" level="services" levels="fw trace analysis" long-name="OS R&amp;D tools">
-<collection name="stif" long-name="STIF" level="fw">
-<component name="stif_plat" long-name="STIF Platform Interfaces" filter="s60" purpose="development" class="api">
-<unit bldFile="os/osrndtools/stif/stif_plat/group"/>
-</component>
-<component name="testinterface" long-name="Test Interface" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/stif/testinterface/group"/>
-</component>
-<component name="testserver" long-name="Test Server" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/stif/testserver/group"/>
-</component>
-<component name="testengine" long-name="Test Engine" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/stif/testengine/group"/>
-</component>
-<component name="testserverstarter" long-name="Test Server Starter" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/stif/testserverstarter/group"/>
-</component>
-<component name="stiftfwif" long-name="STIF Test Framework Interface" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/stif/stiftfwif/group"/>
-</component>
-<component name="consoleui" long-name="Console UI" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/stif/consoleui/group"/>
-</component>
-<component name="testcombiner" long-name="Test Combiner" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/stif/testcombiner/group"/>
-</component>
-<component name="demomodule" long-name="Demo Module" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/stif/demomodule/group"/>
-</component>
-<component name="atslogger" long-name="ATS Logger" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/stif/atslogger/group"/>
-</component>
-<component name="atsinterface" long-name="ATS Interface" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/stif/atsinterface/group"/>
-</component>
-<component name="testscripter" long-name="Test Scripter" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/stif/testscripter/group"/>
-</component>
-<component name="suevent" long-name="SU Event" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/stif/suevent/group"/>
-</component>
-<component name="stifkerneltestclassbase" long-name="STIF Kernel Test Class Base" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/stif/stifkerneltestclassbase/group"/>
-</component>
-<component name="stif_data" long-name="STIF Data" filter="s60" purpose="development" class="config">
-<!--  This is a component. Should move down a directory. or move into other STIF components-->
-<unit bldFile="os/osrndtools/stif/group"/>
-</component>
-</collection>
 <collection name="memspy" long-name="MemSpy" level="trace">
 <component name="memspy_plat" long-name="MemSpy Platform Interfaces" filter="s60" purpose="development" class="api">
 <unit bldFile="os/osrndtools/memspy/memspy_plat/group"/>
@@ -2683,45 +2641,6 @@
 <unit bldFile="os/osrndtools/memspy/group"/>
 </component>
 </collection>
-<collection name="hti" long-name="Harmonized Test Interface" level="trace">
-<component name="hti_plat" long-name="HTI Platform Interfaces" filter="s60" purpose="development" class="api">
-<unit bldFile="os/osrndtools/hti/hti_plat/group"/>
-</component>
-<component name="hticfg" long-name="HTI Config" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/hti/hticfg/group"/>
-</component>
-<component name="htiautostart" long-name="HTI Autostart" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/hti/htiautostart/group"/>
-</component>
-<component name="htiframework" long-name="HTI Framework" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/hti/htiframework/group"/>
-</component>
-<component name="hticommplugins" long-name="HTI Communication Plugins" filter="s60" purpose="development" plugin="Y">
-<!-- need to #include these from a single unit or separate into component at the right directory level -->
-<unit bldFile="os/osrndtools/hti/HtiCommPlugins/HtiBtCommPlugin/group"/>
-<unit bldFile="os/osrndtools/hti/HtiCommPlugins/HtiIPCommPlugin/group"/>
-<unit bldFile="os/osrndtools/hti/HtiCommPlugins/HtiSerialCommPlugin/group"/>
-<unit bldFile="os/osrndtools/hti/HtiCommPlugins/HtiUsbSerialCommPlugin/group"/>
-</component>
-<component name="htiserviceplugins" long-name="HTI Service Plugins" filter="s60" purpose="development" plugin="Y">
-<!-- need to #include these from a single unit or separate into component at the right directory level -->
-<unit bldFile="os/osrndtools/hti/HtiServicePlugins/HtiAppServicePlugin/group"/>
-<unit bldFile="os/osrndtools/hti/HtiServicePlugins/HtiEchoServicePlugin/group"/>
-<unit bldFile="os/osrndtools/hti/HtiServicePlugins/HtiFtpServicePlugin/group"/>
-<unit bldFile="os/osrndtools/hti/HtiServicePlugins/HtiIpProxyServicePlugin/group"/>
-<unit bldFile="os/osrndtools/hti/HtiServicePlugins/HtiStifTfServicePlugin/group"/>
-</component>
-<component name="htifilehlp" long-name="HTI File Help" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/hti/htifilehlp/group"/>
-</component>
-<component name="htiwatchdog" long-name="HTI Watchdog" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/hti/htiwatchdog/group"/>
-</component>
-<component name="hti_build" long-name="HTI Build" filter="s60" purpose="development">
-<!--  move exports into self-contained component.-->
-<unit bldFile="os/osrndtools/hti/group"/>
-</component>
-</collection>
 <collection name="piprofiler" long-name="Performance Investigator Profiler" level="analysis">
 <component name="piprofiler_build" long-name="Performance Investigator Profiler Build" introduced="^4" purpose="optional">
 <unit bldFile="os/osrndtools/piprofiler/group"/>
@@ -2730,6 +2649,105 @@
 <collection name="analyzetool" long-name="Analyze Tool" level="analysis">
 <component name="analyzetool_build" long-name="Analyze Tool Build" introduced="^4" purpose="optional">
 <unit bldFile="os/osrndtools/analyzetool/group"/>
+</component>
+</collection>
+</block>
+<block name="ostesttools" level="services" levels="fw trace analysis" long-name="OS Test tools">
+<collection name="stif" long-name="STIF" level="fw">
+<component name="stif_plat" long-name="STIF Platform Interfaces" filter="s60" purpose="development" class="api">
+<unit bldFile="os/ostesttools/stif/stif_plat/group"/>
+</component>
+<component name="TestInterface" long-name="Test Interface" filter="s60" purpose="development">
+<unit bldFile="os/ostesttools/stif/TestInterface/group"/>
+</component>
+<component name="TestServer" long-name="Test Server" filter="s60" purpose="development">
+<unit bldFile="os/ostesttools/stif/TestServer/group"/>
+</component>
+<component name="TestEngine" long-name="Test Engine" filter="s60" purpose="development">
+<unit bldFile="os/ostesttools/stif/TestEngine/group"/>
+</component>
+<component name="TestServerStarter" long-name="Test Server Starter" filter="s60" purpose="development">
+<unit bldFile="os/ostesttools/stif/TestServerStarter/group"/>
+</component>
+<component name="StifTFwIf" long-name="STIF Test Framework Interface" filter="s60" purpose="development">
+<unit bldFile="os/ostesttools/stif/StifTFwIf/group"/>
+</component>
+<component name="ConsoleUI" long-name="Console UI" filter="s60" purpose="development">
+<unit bldFile="os/ostesttools/stif/ConsoleUI/group"/>
+</component>
+<component name="TestCombiner" long-name="Test Combiner" filter="s60" purpose="development">
+<unit bldFile="os/ostesttools/stif/TestCombiner/group"/>
+</component>
+<component name="DemoModule" long-name="Demo Module" filter="s60" purpose="development">
+<unit bldFile="os/ostesttools/stif/DemoModule/group"/>
+</component>
+<component name="ATSLogger" long-name="ATS Logger" filter="s60" purpose="development">
+<unit bldFile="os/ostesttools/stif/ATSLogger/group"/>
+</component>
+<component name="ATSInterface" long-name="ATS Interface" filter="s60" purpose="development">
+<unit bldFile="os/ostesttools/stif/ATSInterface/group"/>
+</component>
+<component name="TestScripter" long-name="Test Scripter" filter="s60" purpose="development">
+<unit bldFile="os/ostesttools/stif/TestScripter/group"/>
+</component>
+<component name="SUEvent" long-name="SU Event" filter="s60" purpose="development">
+<unit bldFile="os/ostesttools/stif/SUEvent/group"/>
+</component>
+<component name="StifKernelTestClassBase" long-name="STIF Kernel Test Class Base" filter="s60" purpose="development">
+<unit bldFile="os/ostesttools/stif/StifKernelTestClassBase/group"/>
+</component>
+<component name="stif_data" long-name="STIF Data" filter="s60" purpose="development" class="config">
+<!--  This is a component. Should move down a directory. or move into other STIF components-->
+<unit bldFile="os/ostesttools/stif/group"/>
+</component>
+</collection>
+<collection name="hti" long-name="Harmonized Test Interface" level="trace">
+<component name="hti_plat" long-name="HTI Platform Interfaces" filter="s60" purpose="development" class="api">
+<unit bldFile="os/ostesttools/hti/hti_plat/group"/>
+</component>
+<component name="HtiCfg" long-name="HTI Config" filter="s60" purpose="development">
+<unit bldFile="os/ostesttools/hti/HtiCfg/group"/>
+</component>
+<component name="HtiAutoStart" long-name="HTI Autostart" filter="s60" purpose="development">
+<unit bldFile="os/ostesttools/hti/HtiAutoStart/group"/>
+</component>
+<component name="HtiFramework" long-name="HTI Framework" filter="s60" purpose="development">
+<unit bldFile="os/ostesttools/hti/HtiFramework/group"/>
+</component>
+<component name="hticommplugins" long-name="HTI Communication Plugins" filter="s60" purpose="development" plugin="Y">
+<!-- need to #include these from a single unit or separate into component at the right directory level -->
+<unit bldFile="os/ostesttools/hti/HtiCommPlugins/HtiBtCommPlugin/group"/>
+<unit bldFile="os/ostesttools/hti/HtiCommPlugins/HtiIPCommPlugin/group"/>
+<unit bldFile="os/ostesttools/hti/HtiCommPlugins/HtiSerialCommPlugin/group"/>
+<unit bldFile="os/ostesttools/hti/HtiCommPlugins/HtiUsbSerialCommPlugin/group"/>
+</component>
+<component name="htiserviceplugins" long-name="HTI Service Plugins" filter="s60" purpose="development" plugin="Y">
+<!-- need to #include these from a single unit or separate into component at the right directory level -->
+<unit bldFile="os/ostesttools/hti/HtiServicePlugins/HtiAppServicePlugin/group"/>
+<unit bldFile="os/ostesttools/hti/HtiServicePlugins/HtiEchoServicePlugin/group"/>
+<unit bldFile="os/ostesttools/hti/HtiServicePlugins/HtiFtpServicePlugin/group"/>
+<unit bldFile="os/ostesttools/hti/HtiServicePlugins/HtiIpProxyServicePlugin/group"/>
+<unit bldFile="os/ostesttools/hti/HtiServicePlugins/HtiStifTfServicePlugin/group"/>
+</component>
+<component name="HtiFileHlp" long-name="HTI File Help" filter="s60" purpose="development">
+<unit bldFile="os/ostesttools/hti/HtiFileHlp/group"/>
+</component>
+<component name="HtiWatchdog" long-name="HTI Watchdog" filter="s60" purpose="development">
+<unit bldFile="os/ostesttools/hti/HtiWatchdog/group"/>
+</component>
+<component name="hti_build" long-name="HTI Build" filter="s60" purpose="development">
+<!--  move exports into self-contained component.-->
+<unit bldFile="os/ostesttools/hti/group"/>
+</component>
+</collection>
+<collection name="symbianunittestfw" long-name="Symbian Unit Test Framework" level="analysis">
+<component name="symbianunittestfw_build" long-name="Symbian Unit Test Framework Build" introduced="^4" purpose="optional">
+<unit bldFile="os/ostesttools/symbianunittestfw/group"/>
+</component>
+</collection>
+<collection name="testexecmdw" level="analysis">
+<component name="tef" long-name="Test Execute Framework" introduced="^4" purpose="optional">
+<unit bldFile="os/ostesttools/testexecmdw/tef/group"/>
 </component>
 </collection>
 </block>

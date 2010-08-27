@@ -131,6 +131,66 @@
       </component>
     </collection>
   </package>
+      <package id="codecs.aricent" tech-domain="mm" level="low" name="Aricent Codecs">
+    <collection id="utilities" name="Aricent Utilities">
+      <component id="ariprocessengine" name="Aricent Process Engine" target="device" purpose="optional">
+        <unit bldFile="/adaptation/codecs.aricent/utilities/ariprocessengine/group"/>
+      </component>
+      <component id="aristatemachine" name="Aricent State Machine" target="device" purpose="optional">
+        <unit bldFile="/adaptation/codecs.aricent/utilities/aristatemachine/group"/>
+      </component>
+    </collection>
+    <collection id="aaclc_enc" level="plugin">
+      <component id="ariaaclcencmmfcodec" target="device" purpose="optional">
+        <unit bldFile="/adaptation/codecs.aricent/aaclc_enc/ariaaclcencmmfcodec/group"/>
+      </component>
+    </collection>
+    <collection id="amrnb_dec" level="plugin">
+      <component id="ariamrnbdecmmfcodec" target="device" purpose="optional">
+        <unit bldFile="/adaptation/codecs.aricent/amrnb_dec/ariamrnbdecmmfcodec/group"/>
+      </component>
+    </collection>
+    <collection id="amrnb_enc" level="plugin">
+      <component id="ariamrnbencmmfcodec" target="device" purpose="optional">
+        <unit bldFile="/adaptation/codecs.aricent/amrnb_enc/ariamrnbencmmfcodec/group"/>
+      </component>
+    </collection>
+    <collection id="amrwb_dec" level="plugin">
+      <component id="ariamrwbdecmmfcodec" target="device" purpose="optional">
+        <unit bldFile="/adaptation/codecs.aricent/amrwb_dec/ariamrwbdecmmfcodec/group"/>
+      </component>
+    </collection>
+    <collection id="h264_dec" level="plugin">
+      <component id="arih264dechwdevice" target="device" purpose="optional">
+        <unit bldFile="/adaptation/codecs.aricent/h264_dec/arih264dechwdevice/group"/>
+      </component>
+    </collection>
+    <collection id="h264_enc" level="plugin">
+      <component id="arih264enchwdevice" target="device" purpose="optional">
+        <unit bldFile="/adaptation/codecs.aricent/h264_enc/arih264enchwdevice/group"/>
+      </component>
+    </collection>
+    <collection id="heaac_dec" level="plugin">
+      <component id="ariheaacdecmmfcodec" target="device" purpose="optional">
+        <unit bldFile="/adaptation/codecs.aricent/heaac_dec/ariheaacdecmmfcodec/group"/>
+      </component>
+    </collection>
+    <collection id="mp3_dec" level="plugin">
+      <component id="arimp3decmmfcodec" target="device" purpose="optional">
+        <unit bldFile="/adaptation/codecs.aricent/mp3_dec/arimp3decmmfcodec/group"/>
+      </component>
+    </collection>
+    <collection id="mp4asp_dec" level="plugin">
+      <component id="arimpeg4aspdechwdevice" target="device" purpose="optional">
+        <unit bldFile="/adaptation/codecs.aricent/mp4asp_dec/arimpeg4aspdechwdevice/group"/>
+      </component>
+    </collection>
+    <collection id="mp4sp_enc" level="plugin">
+      <component id="arimp4spenchwdevice" target="device" purpose="optional">
+        <unit bldFile="/adaptation/codecs.aricent/mp4sp_enc/arimp4spenchwdevice/group"/>
+      </component>
+    </collection>
+  </package>
     </layer>
     <layer id="os" name="OS" levels="hw services">
       <package id="kernelhwsrv" level="hw" tech-domain="hb" levels="hw-if adaptation framework test" name="Kernel and Hardware Services">
@@ -2218,17 +2278,6 @@
     <unit bldFile="/os/mm/eaacplusutil_stub/group"/>
    </component>
   </collection>
-  <collection id="imagingandcamerafws" name="Imaging and Camera Frameworks" level="app-if">
-   <component id="imagingfws" name="Imaging Frameworks" introduced="7.0s" purpose="mandatory" target="device">
-    <unit bldFile="/os/mm/imagingandcamerafws/imagingfws/group" mrp="/os/mm/imagingandcamerafws/imagingfws/group/multimedia_icl.mrp"/>
-   </component>
-   
-   
-   <component id="camerafw" name="Camera Framework" introduced="7.0s" purpose="optional" target="device">
-    <unit bldFile="/os/mm/imagingandcamerafws/camerafw/group" mrp="/os/mm/imagingandcamerafws/camerafw/group/multimedia_ecam_framework.mrp"/>
-   </component>
-   
-  </collection>
   <collection id="mmlibs" name="Multimedia Libraries" level="middleware">
    <component id="mmutilitylib" name="Multimedia Utility Library" introduced="8.1" purpose="mandatory" target="device">
     <unit bldFile="/os/mm/mmlibs/mmutilitylib/group" mrp="/os/mm/mmlibs/mmutilitylib/group/multimedia_common.mrp"/>
@@ -2285,25 +2334,6 @@
    
    
   </collection>
-  <collection id="omxil" name="OpenMAX IL" level="hw-if">
-   <component id="omxilapi" name="OpenMAX IL API" introduced="^3" purpose="optional" target="device">
-    <unit bldFile="/os/mm/omxil/omxilapi/group" mrp="/os/mm/omxil/omxilapi/group/multimedia_omx_il_api.mrp" version="1"/>
-   </component>
-   <component id="omxilcore" name="OpenMAX IL Core" introduced="^3" purpose="optional" target="device">
-    <unit bldFile="/os/mm/omxil/omxilcore/group" mrp="/os/mm/omxil/omxilcore/group/multimedia_omx_il_core.mrp" version="1"/>
-   </component>
-   <component id="omxilcomponentcommon" name="OpenMAX IL Component Framework" introduced="^3" purpose="optional" target="device">
-    <unit bldFile="/os/mm/omxil/omxilcomponentcommon/group" mrp="/os/mm/omxil/omxilcomponentcommon/group/multimedia_omx_il_comp.mrp" version="1"/>
-   </component>
-   <component id="omxilrefcomps" name="OpenMAX IL Reference Components" introduced="^3" purpose="optional" target="device">
-    <unit bldFile="/os/mm/omxil/omxilrefcomps/ref_components/group" mrp="/os/mm/omxil/omxilrefcomps/ref_components/group/multimedia_omx_il_comp_ref.mrp" version="1"/>
-   </component>
-   
-   
-   <component id="mmilapi" name="Multimedia Integration Layer API" introduced="^3" purpose="development" target="device">
-    <unit bldFile="/os/mm/omxil/mmilapi/group" mrp="/os/mm/omxil/mmilapi/group/multimedia_il_api.mrp"/>
-   </component>
-  </collection>
   <collection id="devsound" name="Sound Device" level="devices">
    <component id="devsoundapi" name="DevSound API" introduced="7.0s" purpose="mandatory" target="device">
     <unit bldFile="/os/mm/devsound/devsoundapi/group" mrp="/os/mm/devsound/devsoundapi/group/multimedia_mdf_devsound_api.mrp"/>
@@ -2353,6 +2383,61 @@
    
   </collection>
  </package>
+      <package id="mmimaging" level="services" tech-domain="mm" levels="adaptation hw-if device-fw devices middleware app-if" name="Multimedia Imaging">
+    <collection id="imaging" name="Imaging Frameworks and Plugins" level="app-if">
+      <component id="imagingfws" name="Imaging Frameworks" introduced="7.0s" purpose="mandatory" target="device">
+        <unit bldFile="/os/mmimaging/imaging/imagingfws/group" mrp="/os/mmimaging/imaging/imagingfws/group/multimedia_icl.mrp"/>
+      </component>
+      <component id="imagingplugins" name="Imaging Plugins" introduced="7.0s" purpose="optional" class="plugin" target="device">
+        <unit bldFile="/os/mmimaging/imaging/imagingplugins/group" mrp="/os/mmimaging/imaging/imagingplugins/group/multimedia_icl_plugin.mrp"/>
+      </component>
+      
+      
+      <component id="imagingdocs" name="Imaging Documentation" purpose="development" class="doc" target="device">
+      	<unit mrp="/os/mmimaging/imaging/imagingdocs/imaging_documentation.mrp"/>
+      </component>	  
+    </collection>
+    <collection id="imagingtestenv" name="Imaging Test Environment" level="device-fw">
+      
+      
+      
+      
+    </collection>
+  </package>
+      <package id="openmaxil" level="services" tech-domain="mm" levels="adaptation hw-if device-fw devices middleware app-if" name="openmaxil">
+
+
+    <collection id="openmaxil_plat" name="OpenMAX IL Platform Exports" level="hw-if">
+      <component id="khronos_api" name="OpenMAX IL API" introduced="^3" purpose="mandatory" class="api" target="device">
+        <unit bldFile="/os/openmaxil/openmaxil_plat/khronos_api/group" version="1"/>
+      </component>
+      <component id="symbian_api" name="OpenMAX IL Symbian API" introduced="^3" purpose="mandatory" class="api" target="device">
+        <unit bldFile="/os/openmaxil/openmaxil_plat/symbian_api/group" version="1"/>
+      </component>
+      <component id="test_api" name="OpenMAX IL test headers" introduced="^3" purpose="development" class="api" target="device">
+        <unit bldFile="/os/openmaxil/openmaxil_plat/test_api/group" version="1"/>
+      </component>
+    </collection>
+
+    <collection id="omxil_generic" name="OpenMAX IL Implementation" level="device-fw">
+      <component id="omxilcomplib" name="OpenMAX IL Component Framework" introduced="^3" purpose="optional" target="device">
+        <unit bldFile="/os/openmaxil/omxil_generic/omxilcomplib/group" version="1"/>
+      </component>
+      <component id="omxilcore" name="OpenMAX IL Core" introduced="^3" purpose="mandatory" target="device">
+        <unit bldFile="/os/openmaxil/omxil_generic/omxilcore/group" version="1"/>
+      </component>
+      <component id="omxilloader" name="OpenMAX IL Loader" introduced="^3" purpose="mandatory" target="device">
+        <unit bldFile="/os/openmaxil/omxil_generic/omxilloader/group" version="1"/>
+      </component>
+    </collection>
+
+    <collection id="tsrc" name="OpenMAX IL Test code" level="hw-if">
+      <component id="xmltestharness" name="OpenMAX IL XML Test Harness" introduced="^3" purpose="development" target="device">
+        <unit bldFile="/os/openmaxil/tsrc/xmltestharness/group" version="1"/>
+      </component>
+    </collection>
+
+  </package>
       <package id="imagingext" level="services" tech-domain="mm" levels="adaptation hw-if plugin framework server app-if" name="Imaging Extensions">
   <collection id="imagingext_pub" name="Imaging Extensions Public Interfaces" level="app-if">
    <component id="exif_api" name="Exif API" filter="s60" class="api" target="device" purpose="optional">
@@ -2458,6 +2543,12 @@
       </component>
      <component id="surfaceupdate" name="Surface Update" introduced="^3" purpose="optional" target="device">
       <unit bldFile="/os/graphics/graphicscomposition/surfaceupdate/group" mrp="/os/graphics/graphicscomposition/surfaceupdate/group/graphics_surfaceupdate.mrp"/>
+     </component>
+     <component id="openwfc_ri_displaychannel" name="OpenWFC RI Display Channel" introduced="^4" purpose="optional" target="device">
+      <unit bldFile="/os/graphics/graphicscomposition/openwfc_ri_displaychannel/group" mrp="/os/graphics/graphicscomposition/openwfc_ri_displaychannel/group/openwfc_ri_displaychannel.mrp"/>
+     </component>
+     <component id="openwfc_ri_displayupdater" name="OpenWFC RI Display Update" introduced="^4" purpose="optional" target="device">
+      <unit bldFile="/os/graphics/graphicscomposition/openwfc_ri_displayupdater/group" mrp="/os/graphics/graphicscomposition/openwfc_ri_displayupdater/group/openwfc_ri_displayupdater.mrp"/>
      </component>
     </collection>
     <collection id="graphicstest" name="Graphics Test" level="app-if">
@@ -2807,55 +2898,6 @@
     </collection>
   </package>
       <package id="osrndtools" level="services" tech-domain="to" levels="fw trace analysis" name="OS R&amp;D tools">
-  <collection id="stif" name="STIF" level="fw">
-    <component id="stif_plat" name="STIF Platform Interfaces" filter="s60" purpose="development" class="api" target="device">
-      <unit bldFile="/os/osrndtools/stif/stif_plat/group"/>
-    </component>
-   <component id="testinterface" name="Test Interface" filter="s60" purpose="development" target="device">
-    <unit bldFile="/os/osrndtools/stif/testinterface/group"/>
-   </component>
-   <component id="testserver" name="Test Server" filter="s60" purpose="development" target="device">
-    <unit bldFile="/os/osrndtools/stif/testserver/group"/>
-   </component>
-   <component id="testengine" name="Test Engine" filter="s60" purpose="development" target="device">
-    <unit bldFile="/os/osrndtools/stif/testengine/group"/>
-   </component>
-   <component id="testserverstarter" name="Test Server Starter" filter="s60" purpose="development" target="device">
-    <unit bldFile="/os/osrndtools/stif/testserverstarter/group"/>
-   </component>
-   <component id="stiftfwif" name="STIF Test Framework Interface" filter="s60" purpose="development" target="device">
-    <unit bldFile="/os/osrndtools/stif/stiftfwif/group"/>
-   </component>
-   <component id="consoleui" name="Console UI" filter="s60" purpose="development" target="device">
-    <unit bldFile="/os/osrndtools/stif/consoleui/group"/>
-   </component>
-   <component id="testcombiner" name="Test Combiner" filter="s60" purpose="development" target="device">
-    <unit bldFile="/os/osrndtools/stif/testcombiner/group"/>
-   </component>
-   <component id="demomodule" name="Demo Module" filter="s60" purpose="development" target="device">
-    <unit bldFile="/os/osrndtools/stif/demomodule/group"/>
-   </component>
-   <component id="atslogger" name="ATS Logger" filter="s60" purpose="development" target="device">
-    <unit bldFile="/os/osrndtools/stif/atslogger/group"/>
-   </component>
-   <component id="atsinterface" name="ATS Interface" filter="s60" purpose="development" target="device">
-    <unit bldFile="/os/osrndtools/stif/atsinterface/group"/>
-   </component>
-   <component id="testscripter" name="Test Scripter" filter="s60" purpose="development" target="device">
-    <unit bldFile="/os/osrndtools/stif/testscripter/group"/>
-   </component>
-   <component id="suevent" name="SU Event" filter="s60" purpose="development" target="device">
-    <unit bldFile="/os/osrndtools/stif/suevent/group"/>
-   </component>
-   <component id="stifkerneltestclassbase" name="STIF Kernel Test Class Base" filter="s60" purpose="development" target="device">
-    
-    <unit bldFile="/os/osrndtools/stif/stifkerneltestclassbase/group"/>
-   </component>
-   <component id="stif_data" name="STIF Data" filter="s60" purpose="development" class="config" target="device">
-    <!--  This is a component. Should move down a directory. or move into other STIF components-->
-    <unit bldFile="/os/osrndtools/stif/group"/>
-   </component>
-  </collection>
   <collection id="memspy" name="MemSpy" level="trace">
     <component id="memspy_plat" name="MemSpy Platform Interfaces" filter="s60" purpose="development" class="api" target="device">
     
@@ -2881,46 +2923,6 @@
     <unit bldFile="/os/osrndtools/memspy/group"/>
    </component>
   </collection>
-  <collection id="hti" name="Harmonized Test Interface" level="trace">
-    <component id="hti_plat" name="HTI Platform Interfaces" filter="s60" purpose="development" class="api" target="device">
-    
-      <unit bldFile="/os/osrndtools/hti/hti_plat/group"/>
-    </component>
-   <component id="hticfg" name="HTI Config" filter="s60" purpose="development" target="device">
-    <unit bldFile="/os/osrndtools/hti/hticfg/group"/>
-   </component>
-   <component id="htiautostart" name="HTI Autostart" filter="s60" purpose="development" target="device">
-    <unit bldFile="/os/osrndtools/hti/htiautostart/group"/>
-   </component>
-   <component id="htiframework" name="HTI Framework" filter="s60" purpose="development" target="device">
-    <unit bldFile="/os/osrndtools/hti/htiframework/group"/>
-   </component>
-   <component id="hticommplugins" name="HTI Communication Plugins" filter="s60" purpose="development" class="plugin" target="device">
-    <!-- need to #include these from a single unit or separate into component at the right directory level -->
-    <unit bldFile="/os/osrndtools/hti/HtiCommPlugins/HtiBtCommPlugin/group"/>
-    <unit bldFile="/os/osrndtools/hti/HtiCommPlugins/HtiIPCommPlugin/group"/>
-    <unit bldFile="/os/osrndtools/hti/HtiCommPlugins/HtiSerialCommPlugin/group"/>
-    <unit bldFile="/os/osrndtools/hti/HtiCommPlugins/HtiUsbSerialCommPlugin/group"/>
-   </component>
-   <component id="htiserviceplugins" name="HTI Service Plugins" filter="s60" purpose="development" class="plugin" target="device">
-    <!-- need to #include these from a single unit or separate into component at the right directory level -->
-    <unit bldFile="/os/osrndtools/hti/HtiServicePlugins/HtiAppServicePlugin/group"/>
-    <unit bldFile="/os/osrndtools/hti/HtiServicePlugins/HtiEchoServicePlugin/group"/>
-    <unit bldFile="/os/osrndtools/hti/HtiServicePlugins/HtiFtpServicePlugin/group"/>
-    <unit bldFile="/os/osrndtools/hti/HtiServicePlugins/HtiIpProxyServicePlugin/group"/>
-    <unit bldFile="/os/osrndtools/hti/HtiServicePlugins/HtiStifTfServicePlugin/group"/>
-   </component>
-   <component id="htifilehlp" name="HTI File Help" filter="s60" purpose="development" target="device">
-    <unit bldFile="/os/osrndtools/hti/htifilehlp/group"/>
-   </component>
-   <component id="htiwatchdog" name="HTI Watchdog" filter="s60" purpose="development" target="device">
-    <unit bldFile="/os/osrndtools/hti/htiwatchdog/group"/>
-   </component>
-   <component id="hti_build" name="HTI Build" filter="s60" purpose="development" target="device">
-    <!--  move exports into self-contained component.-->
-    <unit bldFile="/os/osrndtools/hti/group"/>
-   </component>
-  </collection>
   <collection id="piprofiler" name="Performance Investigator Profiler" level="analysis">
      <component id="piprofiler_build" name="Performance Investigator Profiler Build" introduced="^4" target="device" purpose="optional">
       <unit bldFile="/os/osrndtools/piprofiler/group"/>
@@ -2929,6 +2931,107 @@
   <collection id="analyzetool" name="Analyze Tool" level="analysis">
      <component id="analyzetool_build" name="Analyze Tool Build" introduced="^4" target="device" purpose="optional">
       <unit bldFile="/os/osrndtools/analyzetool/group"/>
+     </component>
+  </collection>
+ </package>
+      <package id="ostesttools" level="services" tech-domain="to" levels="fw trace analysis" name="OS Test tools">
+  <collection id="stif" name="STIF" level="fw">
+    <component id="stif_plat" name="STIF Platform Interfaces" filter="s60" purpose="development" class="api" target="device">
+      <unit bldFile="/os/ostesttools/stif/stif_plat/group"/>
+    </component>
+   <component id="TestInterface" name="Test Interface" filter="s60" purpose="development" target="device">
+    <unit bldFile="/os/ostesttools/stif/TestInterface/group"/>
+   </component>
+   <component id="TestServer" name="Test Server" filter="s60" purpose="development" target="device">
+    <unit bldFile="/os/ostesttools/stif/TestServer/group"/>
+   </component>
+   <component id="TestEngine" name="Test Engine" filter="s60" purpose="development" target="device">
+    <unit bldFile="/os/ostesttools/stif/TestEngine/group"/>
+   </component>
+   <component id="TestServerStarter" name="Test Server Starter" filter="s60" purpose="development" target="device">
+    <unit bldFile="/os/ostesttools/stif/TestServerStarter/group"/>
+   </component>
+   <component id="StifTFwIf" name="STIF Test Framework Interface" filter="s60" purpose="development" target="device">
+    <unit bldFile="/os/ostesttools/stif/StifTFwIf/group"/>
+   </component>
+   <component id="ConsoleUI" name="Console UI" filter="s60" purpose="development" target="device">
+    <unit bldFile="/os/ostesttools/stif/ConsoleUI/group"/>
+   </component>
+   <component id="TestCombiner" name="Test Combiner" filter="s60" purpose="development" target="device">
+    <unit bldFile="/os/ostesttools/stif/TestCombiner/group"/>
+   </component>
+   <component id="DemoModule" name="Demo Module" filter="s60" purpose="development" target="device">
+    <unit bldFile="/os/ostesttools/stif/DemoModule/group"/>
+   </component>
+   <component id="ATSLogger" name="ATS Logger" filter="s60" purpose="development" target="device">
+    <unit bldFile="/os/ostesttools/stif/ATSLogger/group"/>
+   </component>
+   <component id="ATSInterface" name="ATS Interface" filter="s60" purpose="development" target="device">
+    <unit bldFile="/os/ostesttools/stif/ATSInterface/group"/>
+   </component>
+   <component id="TestScripter" name="Test Scripter" filter="s60" purpose="development" target="device">
+    <unit bldFile="/os/ostesttools/stif/TestScripter/group"/>
+   </component>
+   <component id="SUEvent" name="SU Event" filter="s60" purpose="development" target="device">
+    <unit bldFile="/os/ostesttools/stif/SUEvent/group"/>
+   </component>
+   <component id="StifKernelTestClassBase" name="STIF Kernel Test Class Base" filter="s60" purpose="development" target="device">
+    
+    <unit bldFile="/os/ostesttools/stif/StifKernelTestClassBase/group"/>
+   </component>
+   <component id="stif_data" name="STIF Data" filter="s60" purpose="development" class="config" target="device">
+    <!--  This is a component. Should move down a directory. or move into other STIF components-->
+    <unit bldFile="/os/ostesttools/stif/group"/>
+   </component>
+  </collection>
+  <collection id="hti" name="Harmonized Test Interface" level="trace">
+    <component id="hti_plat" name="HTI Platform Interfaces" filter="s60" purpose="development" class="api" target="device">
+    
+      <unit bldFile="/os/ostesttools/hti/hti_plat/group"/>
+    </component>
+   <component id="HtiCfg" name="HTI Config" filter="s60" purpose="development" target="device">
+    <unit bldFile="/os/ostesttools/hti/HtiCfg/group"/>
+   </component>
+   <component id="HtiAutoStart" name="HTI Autostart" filter="s60" purpose="development" target="device">
+    <unit bldFile="/os/ostesttools/hti/HtiAutoStart/group"/>
+   </component>
+   <component id="HtiFramework" name="HTI Framework" filter="s60" purpose="development" target="device">
+    <unit bldFile="/os/ostesttools/hti/HtiFramework/group"/>
+   </component>
+   <component id="hticommplugins" name="HTI Communication Plugins" filter="s60" purpose="development" class="plugin" target="device">
+    <!-- need to #include these from a single unit or separate into component at the right directory level -->
+    <unit bldFile="/os/ostesttools/hti/HtiCommPlugins/HtiBtCommPlugin/group"/>
+    <unit bldFile="/os/ostesttools/hti/HtiCommPlugins/HtiIPCommPlugin/group"/>
+    <unit bldFile="/os/ostesttools/hti/HtiCommPlugins/HtiSerialCommPlugin/group"/>
+    <unit bldFile="/os/ostesttools/hti/HtiCommPlugins/HtiUsbSerialCommPlugin/group"/>
+   </component>
+   <component id="htiserviceplugins" name="HTI Service Plugins" filter="s60" purpose="development" class="plugin" target="device">
+    <!-- need to #include these from a single unit or separate into component at the right directory level -->
+    <unit bldFile="/os/ostesttools/hti/HtiServicePlugins/HtiAppServicePlugin/group"/>
+    <unit bldFile="/os/ostesttools/hti/HtiServicePlugins/HtiEchoServicePlugin/group"/>
+    <unit bldFile="/os/ostesttools/hti/HtiServicePlugins/HtiFtpServicePlugin/group"/>
+    <unit bldFile="/os/ostesttools/hti/HtiServicePlugins/HtiIpProxyServicePlugin/group"/>
+    <unit bldFile="/os/ostesttools/hti/HtiServicePlugins/HtiStifTfServicePlugin/group"/>
+   </component>
+   <component id="HtiFileHlp" name="HTI File Help" filter="s60" purpose="development" target="device">
+    <unit bldFile="/os/ostesttools/hti/HtiFileHlp/group"/>
+   </component>
+   <component id="HtiWatchdog" name="HTI Watchdog" filter="s60" purpose="development" target="device">
+    <unit bldFile="/os/ostesttools/hti/HtiWatchdog/group"/>
+   </component>
+   <component id="hti_build" name="HTI Build" filter="s60" purpose="development" target="device">
+    <!--  move exports into self-contained component.-->
+    <unit bldFile="/os/ostesttools/hti/group"/>
+   </component>
+  </collection>
+  <collection id="symbianunittestfw" name="Symbian Unit Test Framework" level="analysis">
+     <component id="symbianunittestfw_build" name="Symbian Unit Test Framework Build" introduced="^4" target="device" purpose="optional">
+      <unit bldFile="/os/ostesttools/symbianunittestfw/group"/>
+     </component>
+  </collection>
+  <collection id="testexecmdw" name="testexecmdw" level="analysis">
+     <component id="tef" name="Test Execute Framework" introduced="^4" target="device" purpose="optional">
+      <unit bldFile="/os/ostesttools/testexecmdw/tef/group"/>
      </component>
   </collection>
  </package>
@@ -6416,6 +6519,14 @@
             
     </collection>
   </package>
+      <package id="qtmobility" level="generic" tech-domain="ui" levels="tool mw app" name="Qt Mobility">
+   <collection id="qtmobility_collection" name="Qt Mobility collection" level="app">
+     <component id="qtmobility_build" name="Qt Mobility Build" introduced="^4" target="device" purpose="optional">
+		<!-- break this up into the above collections-->
+      <unit bldFile="/mw/qtmobility/." qt:proFile="qtmobility.pro" qt:qmakeArgs="-r"/>
+     </component>
+    </collection>
+  </package>
       <package id="qtextensions" level="generic" tech-domain="ui" levels="tool mw app" name="Qt Extensions">
    <collection id="qtecomplugins" name="Qt ECom Plugins" level="app">
      <component id="qtecomplugins_build" name="Qt ECom Plugin" introduced="^4" filter="qtecomplugins" purpose="development" class="plugin" target="device">
@@ -6451,18 +6562,6 @@
       <unit bldFile="/mw/qtextensions/qtmobileextensions/examples" qt:proFile="examples.pro" qt:qmakeArgs="-r"/>
      </component>
     </collection>
-    <collection id="qtmobility" name="Qt Mobility" level="mw">
-	 <component id="qtmobility_build" name="Qt Mobility" introduced="^4" filter="qtmobility" purpose="development" target="device">
-      <unit bldFile="/mw/qtextensions/qtmobility" qt:proFile="qtmobility.pro" qt:qmakeArgs="-r"/>
-     </component>
-    <component id="qtmobility_examples" name="Qt Mobility Examples" introduced="^4" filter="qtextensionsexamples,build_as_app" purpose="development" target="device">
-      <meta rel="testbuild" type="auto">
-       <group name="qtextensionsexamples"/>
-      </meta>
-      <unit bldFile="/mw/qtextensions/qtmobility/examples" qt:proFile="examples.pro" qt:qmakeArgs="-r"/>
-     </component>
-     
-    </collection>
     <collection id="qhbstyle" name="Qt Orbit Style" level="mw">
      <component id="qhbstyle_build" name="Qt Orbit Style Build" introduced="^4" target="device" purpose="optional">
       <unit bldFile="/mw/qtextensions/qhbstyle" qt:proFile="qhbstyle.pro" qt:qmakeArgs="-r"/>
@@ -6491,11 +6590,6 @@
    <component id="signal_pane_api" name="Signal Pane API" filter="s60" class="api" target="device" purpose="optional">
     
     <unit bldFile="/mw/classicui/classicui_plat/signal_pane_api/group" filter="!test"/>
-    
-   </component>
-   <component id="japanese_reading_api" name="Japanese Reading API" filter="s60" class="api" target="device" purpose="optional">
-    
-    <unit bldFile="/mw/classicui/classicui_plat/japanese_reading_api/group" filter="!test"/>
     
    </component>
    <component id="global_popup_priority_controller_api" name="Global Popup Priority Controller API" filter="s60" class="api" target="device" purpose="optional">
@@ -6551,11 +6645,6 @@
    <component id="avkon_ui_server_api" name="AVKON UI Server API" filter="s60" class="api" target="device" purpose="optional">
     
     <unit bldFile="/mw/classicui/classicui_plat/avkon_ui_server_api/group" filter="!test"/>
-    
-   </component>
-   <component id="number_grouping_api" name="Number Grouping API" filter="s60" class="api" target="device" purpose="optional">
-    
-    <unit bldFile="/mw/classicui/classicui_plat/number_grouping_api/group" filter="!test"/>
     
    </component>
    <component id="extended_status_pane_api" name="Extended Status Pane API" filter="s60" class="api" target="device" purpose="optional">
@@ -6833,10 +6922,6 @@
     
     <unit bldFile="/mw/classicui/classicui_plat/avkon_testability_api/group"/>
    </component>
-   <component id="ganes_api" name="ganes_api" filter="s60" class="api" target="device" purpose="optional">
-    
-    <unit bldFile="/mw/classicui/classicui_plat/ganes_api/group"/>
-   </component>
    <component id="ode_api" name="Ode API" filter="s60" class="api" target="device" purpose="optional">
     <unit bldFile="/mw/classicui/classicui_plat/ode_api/group"/>
    </component>
@@ -6859,11 +6944,6 @@
    <component id="discreet_popup_api" name="Discreet Popup API" filter="s60" class="api" target="device" purpose="optional">
     <unit bldFile="/mw/classicui/classicui_plat/discreet_popup_api/group"/>
    </component>
-   <component id="touch_gesture_framework_api" name="Touch Gesture Framework API" filter="s60" class="api" target="device" purpose="optional">
-    
-    <unit bldFile="/mw/classicui/classicui_plat/touch_gesture_framework_api/group"/> <!-- should this be commented out? -->
-    <!--<unit bldFile="classicui_plat/touch_gesture_framework_api/tsrc/group" filter="test,api_test"/> -->
-   </component>
    <component id="extended_options_menu_api" name="Extended Options Menu API" filter="s60" class="api" target="device" purpose="optional">
     
     <unit bldFile="/mw/classicui/classicui_plat/extended_options_menu_api/group" filter="!test"/>
@@ -6877,304 +6957,302 @@
       
       <unit bldFile="/mw/classicui/classicui_plat/findutil_api/group"/>
    </component>
-  </collection>
-  <collection id="classicui_pub" name="Classic UI Public Interfaces" level="specific">
    <component id="input_frame_api" name="Input Frame API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/input_frame_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/input_frame_api/group" filter="!test"/>
     
    </component>
    <component id="window_server_event_observer_api" name="Window Server Event Observer API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/window_server_event_observer_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/window_server_event_observer_api/group" filter="!test"/>
     
    </component>
    <component id="application_framework_api" name="Application Framework API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/application_framework_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/application_framework_api/group" filter="!test"/>
     
    </component>
    <component id="scroller_api" name="Scroller API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/scroller_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/scroller_api/group" filter="!test"/>
     
    </component>
    <component id="ui_framework_utilities_api" name="UI Framework Utilities API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/ui_framework_utilities_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/ui_framework_utilities_api/group" filter="!test"/>
     
    </component>
    <component id="ui_framework_definitions_api" name="UI Framework Definitions API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/ui_framework_definitions_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/ui_framework_definitions_api/group" filter="!test"/>
     
    </component>
    <component id="buttons_api" name="Buttons API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/buttons_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/buttons_api/group" filter="!test"/>
     
    </component>
    <component id="queries_api" name="Queries API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/queries_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/queries_api/group" filter="!test"/>
     
    </component>
    <component id="aiw_generic_parameter_api" name="AIW Generic Parameter API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/aiw_generic_parameter_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/aiw_generic_parameter_api/group" filter="!test"/>
     
    </component>
    <component id="editors_api" name="Editors API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/editors_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/editors_api/group" filter="!test"/>
     
    </component>
    <component id="common_file_dialogs_api" name="Common File Dialogs API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/common_file_dialogs_api/group"/>
+    <unit bldFile="/mw/classicui/classicui_plat/common_file_dialogs_api/group"/>
    </component>
    <component id="dialog_shutter_api" name="Dialog Shutter API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/dialog_shutter_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/dialog_shutter_api/group" filter="!test"/>
     
    </component>
    <component id="fonts_api" name="Fonts API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/fonts_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/fonts_api/group" filter="!test"/>
     
    </component>
    <component id="screen_clearer_api" name="Screen Clearer API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/screen_clearer_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/screen_clearer_api/group" filter="!test"/>
     
    </component>
    <component id="notifiers_api" name="Notifiers API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/notifiers_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/notifiers_api/group" filter="!test"/>
     
    </component>
    <component id="notes_api" name="Notes API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/notes_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/notes_api/group" filter="!test"/>
     
    </component>
    <component id="status_pane_api" name="Status Pane API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/status_pane_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/status_pane_api/group" filter="!test"/>
     
    </component>
    <component id="base_controls_api" name="Base Controls API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/base_controls_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/base_controls_api/group" filter="!test"/>
     
    </component>
    <component id="grids_api" name="Grids API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/grids_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/grids_api/group" filter="!test"/>
     
    </component>
    <component id="context_pane_api" name="Context Pane API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/context_pane_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/context_pane_api/group" filter="!test"/>
     
    </component>
    <component id="lists_api" name="Lists API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/lists_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/lists_api/group" filter="!test"/>
     
    </component>
    <component id="popups_api" name="Popups API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/popups_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/popups_api/group" filter="!test"/>
     
    </component>
    <component id="misc_controls_api" name="Misc Controls API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/misc_controls_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/misc_controls_api/group" filter="!test"/>
     
    </component>
    <component id="keylock_api" name="Keylock API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/keylock_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/keylock_api/group" filter="!test"/>
     
    </component>
    <component id="options_menu_api" name="Options Menu API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/options_menu_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/options_menu_api/group" filter="!test"/>
     
    </component>
    <component id="hierarchical_lists_api" name="Hierarchical Lists API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/hierarchical_lists_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/hierarchical_lists_api/group" filter="!test"/>
     
    </component>
    <component id="navigation_pane_api" name="Navigation Pane API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/navigation_pane_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/navigation_pane_api/group" filter="!test"/>
     
    </component>
    <component id="tabs_api" name="Tabs API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/tabs_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/tabs_api/group" filter="!test"/>
     
    </component>
    <component id="title_pane_touch_observer_api" name="Title Pane Touch Observer API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/title_pane_touch_observer_api/group"/>
+    <unit bldFile="/mw/classicui/classicui_plat/title_pane_touch_observer_api/group"/>
    </component>
    <component id="choice_list_api" name="Choice List API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/choice_list_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/choice_list_api/group" filter="!test"/>
     
    </component>
    <component id="info_popup_note_api" name="Info Popup Note API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/info_popup_note_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/info_popup_note_api/group" filter="!test"/>
     
    </component>
    <component id="setting_pages_api" name="Setting Pages API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/setting_pages_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/setting_pages_api/group" filter="!test"/>
     
    </component>
    <component id="screen_mode_api" name="Screen Mode API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/screen_mode_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/screen_mode_api/group" filter="!test"/>
     
    </component>
    <component id="indicators_api" name="Indicators API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/indicators_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/indicators_api/group" filter="!test"/>
     
    </component>
    <component id="error_ui_api" name="Error UI API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/error_ui_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/error_ui_api/group" filter="!test"/>
     
    </component>
    <component id="animation_api" name="Animation API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/animation_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/animation_api/group" filter="!test"/>
     
    </component>
    <component id="searchfield_api" name="Searchfield API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/searchfield_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/searchfield_api/group" filter="!test"/>
     
    </component>
    <component id="labels_api" name="Labels API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/labels_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/labels_api/group" filter="!test"/>
     
    </component>
    <component id="hotkeys_api" name="Hotkeys API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/hotkeys_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/hotkeys_api/group" filter="!test"/>
     
    </component>
    <component id="initialization_api" name="Initialization API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/initialization_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/initialization_api/group" filter="!test"/>
     
    </component>
    <component id="volume_control_api" name="Volume Control API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/volume_control_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/volume_control_api/group" filter="!test"/>
     
    </component>
    <component id="title_pane_api" name="Title Pane API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/title_pane_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/title_pane_api/group" filter="!test"/>
     
    </component>
    <component id="sounds_api" name="Sounds API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/sounds_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/sounds_api/group" filter="!test"/>
     
    </component>
    <component id="aiw_service_handler_api" name="AIW Service Handler API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/aiw_service_handler_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/aiw_service_handler_api/group" filter="!test"/>
     
    </component>
    <component id="aiw_criteria_api" name="AIW Criteria API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/aiw_criteria_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/aiw_criteria_api/group" filter="!test"/>
     
    </component>
    <component id="touch_ui_utilities_api" name="Touch UI Utilities API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/touch_ui_utilities_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/touch_ui_utilities_api/group" filter="!test"/>
     
    </component>
    <component id="generic_button_api" name="Generic Button API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/generic_button_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/generic_button_api/group" filter="!test"/>
     
    </component>
    <component id="form_api" name="Form API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/form_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/form_api/group" filter="!test"/>
     
    </component>
    <component id="uikon_core_controls" name="Uikon Core Controls" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/uikon_core_controls/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/uikon_core_controls/group" filter="!test"/>
     
    </component>
    <component id="calendar_api" name="Calendar API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/calendar_api/group"/>
+    <unit bldFile="/mw/classicui/classicui_plat/calendar_api/group"/>
    </component>
    <component id="toolbar_api" name="Toolbar API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/toolbar_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/toolbar_api/group" filter="!test"/>
     
    </component>
    <component id="server_application_api" name="Server Application API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/server_application_api/group"/>
+    <unit bldFile="/mw/classicui/classicui_plat/server_application_api/group"/>
    </component>
    <component id="slider_api" name="Slider API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/slider_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/slider_api/group" filter="!test"/>
     
    </component>
    <component id="private_ui_framework_api" name="Private UI Framework API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/private_ui_framework_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/private_ui_framework_api/group" filter="!test"/>
     
    </component>
    <component id="dialogs_api" name="Dialogs API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/dialogs_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/dialogs_api/group" filter="!test"/>
     
    </component>
    <component id="document_handler_api" name="Document handler API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/document_handler_api/group"/>
+    <unit bldFile="/mw/classicui/classicui_plat/document_handler_api/group"/>
    </component>
    <component id="images_api" name="Images API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/images_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/images_api/group" filter="!test"/>
     
    </component>
    <component id="stylus_popup_menu_api" name="Stylus Pop-up Menu API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/stylus_popup_menu_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/stylus_popup_menu_api/group" filter="!test"/>
     
    </component>
    <component id="information_preview_popup_api" name="Information Preview Popup API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/information_preview_popup_api/group" filter="!test"/>
+    <unit bldFile="/mw/classicui/classicui_plat/information_preview_popup_api/group" filter="!test"/>
     
    </component>
    <component id="intermediate_state_api" name="Intermediate State API" filter="s60" class="api" target="device" purpose="optional">
     
-    <unit bldFile="/mw/classicui/classicui_pub/intermediate_state_api/group"/>
+    <unit bldFile="/mw/classicui/classicui_plat/intermediate_state_api/group"/>
    </component>
    <component id="help_launcher_api" name="Help Launcher API" filter="s60" class="api" target="device" purpose="optional">
-    <unit bldFile="/mw/classicui/classicui_pub/help_launcher_api/group"/>
+    <unit bldFile="/mw/classicui/classicui_plat/help_launcher_api/group"/>
    </component>
   </collection>
   <collection id="ode" name="Open Dynamics Engine" level="support">
@@ -7251,6 +7329,9 @@
   <collection id="commonuisupport" name="Common UI Support" level="support">
    <component id="uikon" name="Uikon" introduced="6.0" purpose="mandatory" target="device">
     <unit bldFile="/mw/classicui/commonuisupport/uikon/group" mrp="/mw/classicui/commonuisupport/uikon/group/app-framework_uikon.mrp"/>
+   </component>
+   <component id="uikon_ncp" name="Uikon (NCP)" introduced="S^4" purpose="mandatory" target="device">
+    <unit bldFile="/mw/classicui/commonuisupport/uikon/group_ncp"/>
    </component>
    <component id="errorresolverdata" name="Error Resolver Data" purpose="mandatory" target="device">
     <unit bldFile="/mw/classicui/commonuisupport/errorresolverdata/group" mrp="/mw/classicui/commonuisupport/errorresolverdata/group/app-framework_errorresgt.mrp"/>
