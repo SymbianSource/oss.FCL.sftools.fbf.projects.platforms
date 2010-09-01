@@ -304,9 +304,6 @@
 <component name="btrace" long-name="Kernel Trace Tool" purpose="mandatory">
 <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/trace" mrp="os/kernelhwsrv/kernel/eka/drivers/trace/base_e32_drivers_trace.mrp"/>
 </component>
-<component name="cameraldd" long-name="Camera Drivers" introduced="^3" purpose="optional">
-<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/camerasc" mrp="os/kernelhwsrv/kernel/eka/drivers/camerasc/base_drivers_camerasc.mrp"/>
-</component>
 <component name="displayldd" long-name="Display Drivers" introduced="^3" purpose="optional">
 <!-- owned and maintained by graphics package. To be moved there as soon as technical limitations are resolved -->
 <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/display" mrp="os/kernelhwsrv/kernel/eka/drivers/display/base_e32_drivers_display.mrp"/>
@@ -342,6 +339,9 @@
 </component>
 <component name="fileserver" long-name="File Server" filter="gt" purpose="mandatory">
 <unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/group" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/group/base_f32.mrp"/>
+</component>
+<component name="automounter" long-name="Automounter" filter="gt" purpose="mandatory">
+<unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/automounter" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/automounter/base_f32_automounter.mrp"/>
 </component>
 <component name="estart" long-name="Base Starter" filter="gt" purpose="optional">
 <unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/estart" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/estart/base_f32_estart.mrp"/>
@@ -2077,6 +2077,11 @@
 <unit bldFile="os/mm/eaacplusutil_stub/group"/>
 </component>
 </collection>
+<collection name="imagingandcamerafws" long-name="Imaging and Camera Frameworks" level="app-if">
+<component name="camerafw" long-name="Camera Framework" introduced="7.0s" purpose="optional">
+<unit bldFile="os/mm/imagingandcamerafws/camerafw/group" mrp="os/mm/imagingandcamerafws/camerafw/group/multimedia_ecam_framework.mrp"/>
+</component>
+</collection>
 <collection name="mmlibs" long-name="Multimedia Libraries" level="middleware">
 <component name="mmutilitylib" long-name="Multimedia Utility Library" introduced="8.1" purpose="mandatory">
 <unit bldFile="os/mm/mmlibs/mmutilitylib/group" mrp="os/mm/mmlibs/mmutilitylib/group/multimedia_common.mrp"/>
@@ -2086,9 +2091,6 @@
 </component>
 </collection>
 <collection name="mmplugins" long-name="Multimedia Plugins" level="middleware">
-<component name="imagingplugins" long-name="Imaging Plugins" introduced="7.0s" purpose="optional" plugin="Y">
-<unit bldFile="os/mm/mmplugins/imagingplugins/group" mrp="os/mm/mmplugins/imagingplugins/group/multimedia_icl_plugin.mrp"/>
-</component>
 <component name="cameraplugins" long-name="Camera Plugins" introduced="7.0s" purpose="optional" plugin="Y">
 <unit bldFile="os/mm/mmplugins/cameraplugins/group" mrp="os/mm/mmplugins/cameraplugins/group/multimedia_ecam_plugins.mrp"/>
 </component>
@@ -2898,7 +2900,7 @@
 <unit bldFile="mw/appsupport/coreapplicationuis/advancedtspcontroller/group"/>
 </component>
 <component name="powersaveutilities" long-name="Power Save Utilities" filter="s60" purpose="optional">
-<unit bldFile="mw/appsupport/coreapplicationuis/powersaveutilities/group"/>
+<unit bldFile="mw/appsupport/coreapplicationuis/powersaveutilities" proFile="powersaveutilities.pro"/>
 </component>
 <component name="gsserverenginestub" long-name="GS Server Engine Stub" deprecated="^4" filter="s60" purpose="optional">
 <unit bldFile="mw/appsupport/coreapplicationuis/gsserverenginestub/group"/>
@@ -4467,7 +4469,7 @@
 </collection>
 <collection name="qcpix" long-name="Qt CPIX" level="engine">
 <component name="qcpix_build" long-name="Qt CPIX Build" introduced="^4" purpose="optional">
-<unit bldFile="mw/searchsrv/qcpix" proFile="qcpix.pro"/>
+<unit bldFile="mw/searchsrv/qcpix" proFile="cpix.pro"/>
 </component>
 </collection>
 <collection name="searchsrv_info" long-name="Search Services Info">
@@ -4501,9 +4503,6 @@
 </component>
 <component name="sync_alert_handler_api" long-name="Sync Alert Handler API" filter="s60" purpose="optional" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/sync_alert_handler_api/group"/>
-</component>
-<component name="syncml_notifier_api" long-name="SyncML Notifier API" filter="s60" purpose="optional" class="api">
-<unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_notifier_api/group"/>
 </component>
 <component name="syncml_client_api" long-name="SyncML Client API" filter="s60" purpose="optional" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_client_api/group"/>
@@ -4564,9 +4563,6 @@
 </component>
 <component name="update_package_storage_plugin_api" long-name="Update Package Storage Plug-in API" filter="s60" purpose="optional" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/update_package_storage_plugin_api/group"/>
-</component>
-<component name="syncml_notifier_roaming_api" long-name="SyncML Notifier Roaming API" filter="s60" purpose="optional" class="api">
-<unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_notifier_roaming_api/group"/>
 </component>
 <component name="dcmo_adapter_api" long-name="DCMO Adapter API" filter="s60" purpose="optional" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/dcmo_adapter_api/group"/>
@@ -4661,7 +4657,7 @@
 </collection>
 <collection name="devicemgmtnotifications" long-name="Device Management Notifications" level="server">
 <component name="devicemgmtnotifications_rom" long-name="DM Notifications ROM" introduced="^4" filter="s60" purpose="optional">
-<unit bldFile="mw/remotemgmt/devicemgmtnotifications/rom"/>
+<unit bldFile="mw/remotemgmt/devicemgmtnotifications/group"/>
 </component>
 <component name="dmdevdialogclient" long-name="DM Device Dialog Client" introduced="^4" filter="s60" purpose="optional">
 <unit bldFile="mw/remotemgmt/devicemgmtnotifications/dmdevdialogclient/bld"/>
@@ -4749,9 +4745,6 @@
 <collection name="backupandrestore" long-name="Backup and Restore" level="specific">
 <component name="backupengine" long-name="Backup Engine" introduced="9.0" filter="s60" purpose="optional">
 <unit bldFile="mw/remoteconn/backupandrestore/backupengine/group" mrp="mw/remoteconn/backupandrestore/backupengine/group/connectivity_backupengine.mrp"/>
-</component>
-<component name="backuptest" long-name="Backup Test" introduced="^2" purpose="development">
-<unit bldFile="mw/remoteconn/backupandrestore/backuptest/group" mrp="mw/remoteconn/backupandrestore/backuptest/group/connectivity_backuptest.mrp"/>
 </component>
 </collection>
 <collection name="obex" long-name="OBEX" level="generic">
@@ -5040,9 +5033,6 @@
 </component>
 <component name="btindicator" long-name="Bluetooth Indicator" introduced="^4" filter="s60" purpose="optional">
 <unit bldFile="mw/btservices/bluetoothengine/btindicator" proFile="btindicator.pro"/>
-</component>
-<component name="bluetoothengine_conf" long-name="Bluetooth Engine Config" introduced="^4" filter="s60" purpose="optional" class="config">
-<unit bldFile="mw/btservices/bluetoothengine/conf"/>
 </component>
 </collection>
 <collection name="bluetoothappprofiles" long-name="Bluetooth Application Profiles" level="plugin">
@@ -6270,9 +6260,6 @@
 <component name="aknglobalui" long-name="Avkon Global UI" filter="s60" purpose="optional">
 <unit bldFile="mw/classicui/uifw/aknglobalui/group"/>
 </component>
-<component name="ganes" long-name="Ganes" filter="s60" purpose="optional">
-<unit bldFile="mw/classicui/uifw/ganes/group"/>
-</component>
 </collection>
 <collection name="commonuis" long-name="Common UIs" level="specific">
 <component name="commonui" long-name="Common UI" filter="s60" purpose="optional">
@@ -6287,30 +6274,12 @@
 <unit bldFile="mw/classicui/applicationinterworkingfw/servicehandler/group"/>
 </component>
 </collection>
-<collection name="commonadapter" long-name="Common Adapter" level="support">
-<!-- the collection is really a component. Move down a directory.-->
-<component name="commonadapter_build" long-name="Common Adapter Build" filter="s60" purpose="optional">
-<unit bldFile="mw/classicui/commonadapter/group"/>
-</component>
-</collection>
-<collection name="akntouchgesturefw" long-name="Avkon Touch Gesture Framework" level="generic">
-<!-- the collection is really a component. Move down a directory.-->
-<component name="akntouchgesturefw_build" long-name="Avkon Touch Gesture Framework Build" introduced="^3" filter="s60" purpose="optional">
-<unit bldFile="mw/classicui/akntouchgesturefw/group"/>
-</component>
-</collection>
 <collection name="uiutils" long-name="UI Utils" level="specific">
 <component name="localizer" long-name="Directory Localizer" filter="s60" purpose="optional">
 <unit bldFile="mw/classicui/uiutils/localizer/group"/>
 </component>
 <component name="findutil" long-name="Find Utility" filter="s60" purpose="optional">
 <unit bldFile="mw/classicui/uiutils/findutil/group"/>
-</component>
-<component name="gamerecognizer" long-name="Game Recognizer" filter="s60" purpose="optional" plugin="Y">
-<unit bldFile="mw/classicui/uiutils/gamerecognizer/group"/>
-</component>
-<component name="aknjapanesereading" long-name="Avkon Japanese Reading" filter="s60" purpose="optional">
-<unit bldFile="mw/classicui/uiutils/aknjapanesereading/group"/>
 </component>
 <component name="hlplch" long-name="Help Launcher" filter="s60,bldfirst" purpose="optional">
 <unit bldFile="mw/classicui/uiutils/hlplch/group"/>
@@ -6376,9 +6345,6 @@
 <component name="svgtopt_build" long-name="SVG Engine" introduced="9.2" filter="s60" purpose="optional">
 <!-- component is at collection level. Needs to be moved down a directory -->
 <unit bldFile="mw/svgt/svgtopt/group"/>
-</component>
-<component name="svgtplugin" long-name="SVG Plugin" introduced="9.2" filter="s60" purpose="optional" plugin="Y">
-<unit bldFile="mw/svgt/svgtopt/svgtplugin/group"/>
 </component>
 </collection>
 </block>
@@ -6777,7 +6743,10 @@
 </component>
 </collection>
 <collection name="ncdengine" long-name="Nokia Content Discover" level="framework">
-<component name="ncdengine_build" long-name="NCD Engine" introduced="^1" filter="s60" purpose="optional">
+<component name="ncdengine_build" long-name="NCD API" introduced="^1" filter="s60" purpose="optional">
+<unit bldFile="mw/appinstall/ncdengine/group"/>
+</component>
+<component name="ncdengine_engine" long-name="NCD Engine" introduced="^1" filter="s60" purpose="optional">
 <unit bldFile="mw/appinstall/ncdengine/engine" proFile="engine.pro" qmakeArgs="-r"/>
 </component>
 </collection>
@@ -8258,11 +8227,11 @@
 </component>
 </collection>
 <collection name="videoplayback" long-name="Video Playback Plugins" level="plugin">
-<component name="hbvideoplaybackview" long-name="HB Video Playback View" introduced="^4" filter="s60" purpose="optional" plugin="Y">
-<unit bldFile="app/videoplayer/videoplayback/hbvideoplaybackview" proFile="hbvideoplaybackview.pro" qmakeArgs="-r"/>
+<component name="videoplaybackview" long-name="HB Video Playback View" introduced="^4" filter="s60" purpose="optional" plugin="Y">
+<unit bldFile="app/videoplayer/videoplayback/videoplaybackview" proFile="videoplaybackview.pro" qmakeArgs="-r"/>
 </component>
-<component name="hbvideoplaybackviewplugin" long-name="HB Video Playback View Plugin" introduced="^4" filter="s60" purpose="optional" plugin="Y">
-<unit bldFile="app/videoplayer/videoplayback/hbvideoplaybackviewplugin" proFile="hbvideoplaybackviewplugin.pro" qmakeArgs="-r"/>
+<component name="videoplaybackviewplugin" long-name="HB Video Playback View Plugin" introduced="^4" filter="s60" purpose="optional" plugin="Y">
+<unit bldFile="app/videoplayer/videoplayback/videoplaybackviewplugin" proFile="videoplaybackviewplugin.pro" qmakeArgs="-r"/>
 </component>
 <component name="videohelix" long-name="Video Helix" introduced="^3" filter="s60" purpose="optional" plugin="Y">
 <unit bldFile="app/videoplayer/videoplayback/videohelix/group" filter="!test"/>
@@ -8499,15 +8468,17 @@
 </block>
 <block name="homescreen" level="apps" levels="support task ss hs" long-name="Home Screen Apps">
 <collection name="homescreen_test" long-name="Home Screen Test" level="support"/>
+<collection name="homescreen_plat" long-name="Home Screen Platform API" level="support">
+<component name="homescreen_plat_build" long-name="Home Screen Platform API Build" purpose="optional">
+<unit bldFile="app/homescreen/homescreen_plat" proFile="homescreen_plat.pro"/>
+</component>
+</collection>
 <collection name="homescreenapp" long-name="Home Screen Application" level="hs">
 <component name="hsutils" long-name="Home Screen Utils" introduced="^4" purpose="optional">
 <unit bldFile="app/homescreen/homescreenapp/hsutils" proFile="hsutils.pro" qmakeArgs="-r -config rom"/>
 </component>
 <component name="hsdomainmodel" long-name="HS Domain Model" introduced="^4" purpose="optional">
 <unit bldFile="app/homescreen/homescreenapp/hsdomainmodel" proFile="hsdomainmodel.pro" qmakeArgs="-r -config rom"/>
-</component>
-<component name="hs_runtimeplugins" long-name="HS Runtime Plugins" introduced="^4" purpose="optional" plugin="Y">
-<unit bldFile="app/homescreen/homescreenapp/runtimeplugins" proFile="runtimeplugins.pro" qmakeArgs="-r -config rom"/>
 </component>
 <component name="hs_serviceproviders" long-name="HS Service Providers" introduced="^4" purpose="optional" plugin="Y">
 <unit bldFile="app/homescreen/homescreenapp/serviceproviders" proFile="serviceproviders.pro" qmakeArgs="-r -config rom"/>
@@ -8529,9 +8500,6 @@
 </component>
 <component name="hswidgetuninstaller" long-name="HS Widget Uninstaller" introduced="^4" purpose="optional">
 <unit bldFile="app/homescreen/homescreenapp/hswidgetuninstaller" proFile="hswidgetuninstaller.pro" qmakeArgs="-r -config rom"/>
-</component>
-<component name="homescreenapp_rom" long-name="Home Screen App ROM" introduced="^4" purpose="optional">
-<unit bldFile="app/homescreen/homescreenapp" proFile="homescreenapp_exports_to_rom.pri" qmakeArgs="-r -config rom"/>
 </component>
 </collection>
 <collection name="screensaver" long-name="Screen Saver" level="ss">
@@ -8699,14 +8667,6 @@
 </collection>
 </block>
 <block name="techview" level="apps" span="2" levels="services ui utils apps1 apps2 apps3" long-name="Techview">
-<collection name="buildverification" long-name="Build Verification" level="services">
-<component name="autosmoketest" long-name="Auto Smoke Test" introduced="9.1" filter="gt" purpose="development">
-<unit bldFile="app/techview/buildverification/autosmoketest/Group" mrp="app/techview/buildverification/autosmoketest/Group/testtools_autosmoketest.mrp"/>
-</component>
-<component name="smoketest" long-name="Smoke Test" filter="gt" purpose="development">
-<unit bldFile="app/techview/buildverification/smoketest/Group" mrp="app/techview/buildverification/smoketest/Group/testtools_smoketest.mrp"/>
-</component>
-</collection>
 <collection name="techviewplat" long-name="Techview Platform" level="services"/>
 <collection name="techviewui" long-name="Techview UI" level="ui"/>
 <collection name="tv_controlpanel" long-name="Control Panel" level="ui"/>
