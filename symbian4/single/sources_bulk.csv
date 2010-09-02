@@ -113,7 +113,7 @@ http://developer.symbian.org/oss/FCL/sf/os/ostesttools/,/sf/os/ostesttools,branc
 http://developer.symbian.org/oss/FCL/sf/os/persistentdata/,/sf/os/persistentdata,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/security/,/sf/os/security,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/textandloc/,/sf/os/textandloc,tag,S4_PDK_FIX,
-http://developer.symbian.org/oss/FCL/sf/os/usb/,/sf/os/usb,tag,tip_bulk,
+http://developer.symbian.org/oss/FCL/sf/os/usb/,/sf/os/usb,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/os/wlan/,/sf/os/wlan,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/xmlsrv/,/sf/os/xmlsrv,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/tools/buildplatforms/,/sf/tools/buildplatforms,tag,tip_bulk,layers.sysdef.xml
