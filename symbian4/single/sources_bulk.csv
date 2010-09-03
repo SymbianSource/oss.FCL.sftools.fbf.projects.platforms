@@ -2,10 +2,12 @@ source,dst,type,pattern,sysdef
 http://developer.symbian.org/oss/FCL/sftools/fbf/utilities/,/utilities,branch,default,NON-NOKIA
 http://developer.symbian.org/oss/FCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,branch,default,NON-NOKIA
 http://developer.symbian.org/oss/MCL/sf/adaptation/codecs.aricent/,/sf/adaptation/codecs.aricent,branch,default,NON-NOKIA
+http://developer.symbian.org/oss/FCL/sf/adaptation/openmaxil.nokia/,/sf/adaptation/openmaxil.nokia,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,branch,default,NON-NOKIA
 http://developer.symbian.org/oss/FCL/sf/adaptation/stubs/,/sf/adaptation/stubs,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/browserui/,/sf/app/browserui,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/camera/,/sf/app/camera,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/calendarwidget/,/sf/app/calendarwidget,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/commonemail/,/sf/app/commonemail,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/conntools/,/sf/app/conntools,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/contacts/,/sf/app/contacts,tag,tip_bulk,layers.sysdef.xml
@@ -16,7 +18,7 @@ http://developer.symbian.org/oss/FCL/sf/app/firsttimeuse/,/sf/app/firsttimeuse,t
 http://developer.symbian.org/oss/FCL/sf/app/helps/,/sf/app/helps,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/homescreen/,/sf/app/homescreen,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/homescreentools/,/sf/app/homescreentools,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/app/jrt/,/sf/app/jrt,tag,S4_PDK_FIX,
+http://developer.symbian.org/oss/FCL/sf/app/jrt/,/sf/app/jrt,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/internetradio/,/sf/app/internetradio,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/location/,/sf/app/location,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/messaging/,/sf/app/messaging,tag,tip_bulk,layers.sysdef.xml
@@ -33,6 +35,7 @@ http://developer.symbian.org/oss/FCL/sf/app/rndtools/,/sf/app/rndtools,tag,tip_b
 http://developer.symbian.org/oss/FCL/sf/app/settingsuis/,/sf/app/settingsuis,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/search/,/sf/app/search,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/techview/,/sf/app/techview,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/testtools/,/sf/app/testtools,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/videoplayer/,/sf/app/videoplayer,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/videotelephony/,/sf/app/videotelephony,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/webuis/,/sf/app/webuis,tag,tip_bulk,layers.sysdef.xml
@@ -77,7 +80,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/qtmobility/,/sf/mw/qtmobility,tag,tip
 http://developer.symbian.org/oss/FCL/sf/mw/remoteconn/,/sf/mw/remoteconn,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/remotemgmt/,/sf/mw/remotemgmt,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/searchsrv/,/sf/mw/searchsrv,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/securitysrv/,/sf/mw/securitysrv,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/securitysrv/,/sf/mw/securitysrv,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/mw/serviceapi/,/sf/mw/serviceapi,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/serviceapifw/,/sf/mw/serviceapifw,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/srvdiscovery/,/sf/mw/srvdiscovery,tag,tip_bulk,layers.sysdef.xml
@@ -98,7 +101,8 @@ http://developer.symbian.org/oss/FCL/sf/os/buildtools/,/sf/os/buildtools,tag,S4_
 http://developer.symbian.org/oss/FCL/sf/os/cellularsrv/,/sf/os/cellularsrv,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/commsfw/,/sf/os/commsfw,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,tag,S4_PDK_FIX,
-http://developer.symbian.org/oss/FCL/sf/os/devicesrv/,/sf/os/devicesrv,tag,S4_PDK_FIX,
+http://developer.symbian.org/oss/FCL/sf/os/devicesrv/,/sf/os/devicesrv,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/fshell/,/sf/os/fshell,branch,default,NON_NOKIA
 http://developer.symbian.org/oss/FCL/sf/os/graphics/,/sf/os/graphics,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/os/imagingext/,/sf/os/imagingext,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,tag,S4_PDK_FIX,
