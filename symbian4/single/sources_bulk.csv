@@ -35,7 +35,7 @@ http://developer.symbian.org/oss/FCL/sf/app/rndtools/,/sf/app/rndtools,tag,tip_b
 http://developer.symbian.org/oss/FCL/sf/app/settingsuis/,/sf/app/settingsuis,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/search/,/sf/app/search,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/techview/,/sf/app/techview,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/app/testtools/,/sf/app/testtools,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/testtools/,/sf/app/testtools,branch,default,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/videoplayer/,/sf/app/videoplayer,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/videotelephony/,/sf/app/videotelephony,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/webuis/,/sf/app/webuis,tag,tip_bulk,layers.sysdef.xml
