@@ -1861,7 +1861,12 @@
     </collection>
     <collection name="openvgref" long-name="OpenVG Ref">
      <component name="openvgrefimpl" long-name="OpenVG Ref Implementation" origin-model="foundation">
-      <unit bldFile="os/graphics/openvg/openvgrefimplementation/sfopenvg/group"/>
+      <unit bldFile="os/graphics/openvg/khropenvgri/group"/>
+     </component>    
+    </collection>
+    <collection name="eglref" long-name="EGL Ref">
+     <component name="eglrefimpl" long-name="EGL Ref Implementation" origin-model="foundation">
+      <unit bldFile="os/graphics/egl/khreglri/group"/>
      </component>    
     </collection>
     <collection name="graphicstest" long-name="Graphics Test" level="app-if">
