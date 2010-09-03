@@ -2550,9 +2550,6 @@
      <component id="openwfc_ri_displaychannel" name="OpenWFC RI Display Channel" introduced="^4" purpose="optional" target="device">
       <unit bldFile="/os/graphics/graphicscomposition/openwfc_ri_displaychannel/group" mrp="/os/graphics/graphicscomposition/openwfc_ri_displaychannel/group/openwfc_ri_displaychannel.mrp"/>
      </component>
-     <component id="openwfc_ri_displayupdater" name="OpenWFC RI Display Update" introduced="^4" purpose="optional" target="device">
-      <unit bldFile="/os/graphics/graphicscomposition/openwfc_ri_displayupdater/group" mrp="/os/graphics/graphicscomposition/openwfc_ri_displayupdater/group/openwfc_ri_displayupdater.mrp"/>
-     </component>
     </collection>
     <collection id="graphicstest" name="Graphics Test" level="app-if">
       

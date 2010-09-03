@@ -2317,9 +2317,6 @@
 <component name="openwfc_ri_displaychannel" long-name="OpenWFC RI Display Channel" introduced="^4" purpose="optional">
 <unit bldFile="os/graphics/graphicscomposition/openwfc_ri_displaychannel/group" mrp="os/graphics/graphicscomposition/openwfc_ri_displaychannel/group/openwfc_ri_displaychannel.mrp"/>
 </component>
-<component name="openwfc_ri_displayupdater" long-name="OpenWFC RI Display Update" introduced="^4" purpose="optional">
-<unit bldFile="os/graphics/graphicscomposition/openwfc_ri_displayupdater/group" mrp="os/graphics/graphicscomposition/openwfc_ri_displayupdater/group/openwfc_ri_displayupdater.mrp"/>
-</component>
 </collection>
 <collection name="graphicstest" long-name="Graphics Test" level="app-if">
 <component name="uibench" long-name="UI Bench" introduced="9.2" purpose="development">
