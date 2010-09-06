@@ -1347,19 +1347,27 @@
 </component>
 <component name="suplproxyprotocolmodule" long-name="SUPL Proxy Protocol Module" introduced="^3" purpose="optional" plugin="Y">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
-<unit bldFile="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/sfgroup" mrp="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/group/lbs_suplproxyprotocolmodule.mrp"/>
+<unit bldFile="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/group/lbs_suplproxyprotocolmodule.mrp"/>
 </component>
 <component name="suplprotocolmodule" long-name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" plugin="Y">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
-<unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/sfgroup" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
+<unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/SuplConnectionManager/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
+</component>
+<component name="suplprotocolmodule" long-name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" plugin="Y">
+<!-- hack for Foundation builds needed while collection is reorganised into proper components -->
+<unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/HostSettingsApi/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
+</component>
+<component name="suplprotocolmodule" long-name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" plugin="Y">
+<!-- hack for Foundation builds needed while collection is reorganised into proper components -->
+<unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/SuplPushAPI/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
 </component>
 <component name="suplrrlpasn1" filter="sf_build" long-name="SUPL RRLP ASN1 Parser">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
-<unit bldFile="os/lbs/networkprotocolmodules/common/suplrrlpasn1/group"/>
+<unit bldFile="os/lbs/networkprotocolmodules/suplpmcore/suplrrlpasn1/group"/>
 </component>
 <component name="suplrrlpprotocol" long-name="SUPL RRLP Protocol Module">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
-<unit bldFile="os/lbs/networkprotocolmodules/suplcontrolplaneprotocols/common/suplrrlpprotocol/sfgroup"/>
+<unit bldFile="os/lbs/networkprotocolmodules/suplcontrolplaneprotocols/suplrrlpprotocol/group"/>
 </component>
 </collection>
 <collection name="lbsapitest" long-name="Location API Tests" level="application-interface"/>
@@ -2728,8 +2736,8 @@
 <component name="rombuild_zoom2" filter="sf_build" long-name="Zoom2 iMaker Config" purpose="development" introduced="^3" class="config">
 <unit bldFile="os/deviceplatformrelease/sf_config/rombuild/zoom2/group"/>
 </component>
-<component name="rombuild_sfrefhw" filter="sf_build" long-name="sf_refhw iMaker Config" purpose="development" introduced="^3" class="config">
-<unit bldFile="os/deviceplatformrelease/sf_config/rombuild/sf_refhw/group"/>
+<component filter="sf_build" purpose="development" introduced="^3" class="config">
+<unit bldFile="os/deviceplatformrelease/os/deviceplatformrelease/sf_config/rombuild/sf_refhw/group"/>
 </component>
 </collection>
 <!-- should be located locally in buildplatforms/group. NB. This is a different package! -->
@@ -4851,6 +4859,9 @@
 </component>
 <component name="syncml_ds_customization_api" long-name="SyncML DS Customization API" filter="s60" introduced="^3" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_ds_customization_api/group"/>
+</component>
+<component name="lawmo_plugin_api" long-name="Lawmo Plugin API" filter="s60" introduced="^3" class="api">
+<unit bldFile="mw/remotemgmt/remotemgmt_plat/lawmo_plugin_api/group"/>
 </component>
 </collection>
 <collection name="policymanagement" long-name="Policy Management" level="generic">
