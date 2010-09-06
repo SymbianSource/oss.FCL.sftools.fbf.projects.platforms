@@ -305,9 +305,6 @@
 <component name="btrace" long-name="Kernel Trace Tool" purpose="mandatory">
 <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/trace" mrp="os/kernelhwsrv/kernel/eka/drivers/trace/base_e32_drivers_trace.mrp"/>
 </component>
-<component name="cameraldd" long-name="Camera Drivers" introduced="^3" purpose="optional">
-<unit bldFile="os/kernelhwsrv/kernel/eka/drivers/camerasc" mrp="os/kernelhwsrv/kernel/eka/drivers/camerasc/base_drivers_camerasc.mrp"/>
-</component>
 <component name="displayldd" long-name="Display Drivers" introduced="^3" purpose="optional">
 <!-- owned and maintained by graphics package. To be moved there as soon as technical limitations are resolved -->
 <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/display" mrp="os/kernelhwsrv/kernel/eka/drivers/display/base_e32_drivers_display.mrp"/>
@@ -343,6 +340,9 @@
 </component>
 <component name="fileserver" long-name="File Server" filter="gt" purpose="mandatory">
 <unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/group" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/group/base_f32.mrp"/>
+</component>
+<component name="automounter" long-name="Automounter" filter="gt" purpose="mandatory">
+<unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/automounter" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/automounter/base_f32_automounter.mrp"/>
 </component>
 <component name="estart" long-name="Base Starter" filter="gt" purpose="optional">
 <unit bldFile="os/kernelhwsrv/userlibandfileserver/fileserver/estart" mrp="os/kernelhwsrv/userlibandfileserver/fileserver/estart/base_f32_estart.mrp"/>
@@ -2085,9 +2085,6 @@
 </component>
 </collection>
 <collection name="imagingandcamerafws" long-name="Imaging and Camera Frameworks" level="app-if">
-<component name="imagingfws" long-name="Imaging Frameworks" introduced="7.0s" purpose="mandatory">
-<unit bldFile="os/mm/imagingandcamerafws/imagingfws/group" mrp="os/mm/imagingandcamerafws/imagingfws/group/multimedia_icl.mrp"/>
-</component>
 <component name="camerafw" long-name="Camera Framework" introduced="7.0s" purpose="optional">
 <unit bldFile="os/mm/imagingandcamerafws/camerafw/group" mrp="os/mm/imagingandcamerafws/camerafw/group/multimedia_ecam_framework.mrp"/>
 </component>
@@ -2101,9 +2098,6 @@
 </component>
 </collection>
 <collection name="mmplugins" long-name="Multimedia Plugins" level="middleware">
-<component name="imagingplugins" long-name="Imaging Plugins" introduced="7.0s" purpose="optional" plugin="Y">
-<unit bldFile="os/mm/mmplugins/imagingplugins/group" mrp="os/mm/mmplugins/imagingplugins/group/multimedia_icl_plugin.mrp"/>
-</component>
 <component name="cameraplugins" long-name="Camera Plugins" introduced="7.0s" purpose="optional" plugin="Y">
 <unit bldFile="os/mm/mmplugins/cameraplugins/group" mrp="os/mm/mmplugins/cameraplugins/group/multimedia_ecam_plugins.mrp"/>
 </component>
@@ -2141,23 +2135,6 @@
 </component>
 </collection>
 <collection name="mmtestenv" long-name="Multimedia Test Environment" level="device-fw"/>
-<collection name="omxil" long-name="OpenMAX IL" level="hw-if">
-<component name="omxilapi" long-name="OpenMAX IL API" introduced="^3" purpose="optional">
-<unit bldFile="os/mm/omxil/omxilapi/group" mrp="os/mm/omxil/omxilapi/group/multimedia_omx_il_api.mrp" version="1"/>
-</component>
-<component name="omxilcore" long-name="OpenMAX IL Core" introduced="^3" purpose="optional">
-<unit bldFile="os/mm/omxil/omxilcore/group" mrp="os/mm/omxil/omxilcore/group/multimedia_omx_il_core.mrp" version="1"/>
-</component>
-<component name="omxilcomponentcommon" long-name="OpenMAX IL Component Framework" introduced="^3" purpose="optional">
-<unit bldFile="os/mm/omxil/omxilcomponentcommon/group" mrp="os/mm/omxil/omxilcomponentcommon/group/multimedia_omx_il_comp.mrp" version="1"/>
-</component>
-<component name="omxilrefcomps" long-name="OpenMAX IL Reference Components" introduced="^3" purpose="optional">
-<unit bldFile="os/mm/omxil/omxilrefcomps/ref_components/group" mrp="os/mm/omxil/omxilrefcomps/ref_components/group/multimedia_omx_il_comp_ref.mrp" version="1"/>
-</component>
-<component name="mmilapi" long-name="Multimedia Integration Layer API" introduced="^3" purpose="development">
-<unit bldFile="os/mm/omxil/mmilapi/group" mrp="os/mm/omxil/mmilapi/group/multimedia_il_api.mrp"/>
-</component>
-</collection>
 <collection name="devsound" long-name="Sound Device" level="devices">
 <component name="devsoundapi" long-name="DevSound API" introduced="7.0s" purpose="mandatory">
 <unit bldFile="os/mm/devsound/devsoundapi/group" mrp="os/mm/devsound/devsoundapi/group/multimedia_mdf_devsound_api.mrp"/>
@@ -2202,6 +2179,49 @@
 </component>
 <component name="dvbhreceiverhai" long-name="Mobile TV DVB-H Receiver HAI" introduced="^2" purpose="optional">
 <unit bldFile="os/mm/mmhais/dvbhreceiverhai/hai/dvbh/group" mrp="os/mm/mmhais/dvbhreceiverhai/hai/dvbh/group/multimedia_mobiletv_dvbh_hai.mrp"/>
+</component>
+</collection>
+</block>
+<block name="mmimaging" level="services" long-name="Multimedia Imaging" levels="adaptation hw-if device-fw devices middleware app-if">
+<collection name="imaging" long-name="Imaging Frameworks and Plugins" level="app-if">
+<component name="imagingfws" long-name="Imaging Frameworks" introduced="7.0s" purpose="mandatory">
+<unit bldFile="os/mmimaging/imaging/imagingfws/group" mrp="os/mmimaging/imaging/imagingfws/group/multimedia_icl.mrp"/>
+</component>
+<component name="imagingplugins" long-name="Imaging Plugins" introduced="7.0s" purpose="optional" plugin="Y">
+<unit bldFile="os/mmimaging/imaging/imagingplugins/group" mrp="os/mmimaging/imaging/imagingplugins/group/multimedia_icl_plugin.mrp"/>
+</component>
+<component name="imagingdocs" long-name="Imaging Documentation" purpose="development" class="doc">
+<unit mrp="os/mmimaging/imaging/imagingdocs/imaging_documentation.mrp"/>
+</component>
+</collection>
+<collection name="imagingtestenv" long-name="Imaging Test Environment" level="device-fw"/>
+</block>
+<block name="openmaxil" level="services" levels="adaptation hw-if device-fw devices middleware app-if">
+<collection name="openmaxil_plat" long-name="OpenMAX IL Platform Exports" level="hw-if">
+<component name="khronos_api" long-name="OpenMAX IL API" introduced="^3" purpose="mandatory" class="api">
+<unit bldFile="os/openmaxil/openmaxil_plat/khronos_api/group" version="1"/>
+</component>
+<component name="symbian_api" long-name="OpenMAX IL Symbian API" introduced="^3" purpose="mandatory" class="api">
+<unit bldFile="os/openmaxil/openmaxil_plat/symbian_api/group" version="1"/>
+</component>
+<component name="test_api" long-name="OpenMAX IL test headers" introduced="^3" purpose="development" class="api">
+<unit bldFile="os/openmaxil/openmaxil_plat/test_api/group" version="1"/>
+</component>
+</collection>
+<collection name="omxil_generic" long-name="OpenMAX IL Implementation" level="device-fw">
+<component name="omxilcomplib" long-name="OpenMAX IL Component Framework" introduced="^3" purpose="optional">
+<unit bldFile="os/openmaxil/omxil_generic/omxilcomplib/group" version="1"/>
+</component>
+<component name="omxilcore" long-name="OpenMAX IL Core" introduced="^3" purpose="mandatory">
+<unit bldFile="os/openmaxil/omxil_generic/omxilcore/group" version="1"/>
+</component>
+<component name="omxilloader" long-name="OpenMAX IL Loader" introduced="^3" purpose="mandatory">
+<unit bldFile="os/openmaxil/omxil_generic/omxilloader/group" version="1"/>
+</component>
+</collection>
+<collection name="tsrc" long-name="OpenMAX IL Test code" level="hw-if">
+<component name="xmltestharness" long-name="OpenMAX IL XML Test Harness" introduced="^3" purpose="development">
+<unit bldFile="os/openmaxil/tsrc/xmltestharness/group" version="1"/>
 </component>
 </collection>
 </block>
@@ -2300,6 +2320,9 @@
 </component>
 <component name="surfaceupdate" long-name="Surface Update" introduced="^3" purpose="optional">
 <unit bldFile="os/graphics/graphicscomposition/surfaceupdate/group" mrp="os/graphics/graphicscomposition/surfaceupdate/group/graphics_surfaceupdate.mrp"/>
+</component>
+<component name="openwfc_ri_displaychannel" long-name="OpenWFC RI Display Channel" introduced="^4" purpose="optional">
+<unit bldFile="os/graphics/graphicscomposition/openwfc_ri_displaychannel/group" mrp="os/graphics/graphicscomposition/openwfc_ri_displaychannel/group/openwfc_ri_displaychannel.mrp"/>
 </component>
 </collection>
 <collection name="graphicstest" long-name="Graphics Test" level="app-if">
@@ -2600,54 +2623,6 @@
 </collection>
 </block>
 <block name="osrndtools" level="services" long-name="OS R&amp;D tools" levels="fw trace analysis">
-<collection name="stif" long-name="STIF" level="fw">
-<component name="stif_plat" filter="s60" long-name="STIF Platform Interfaces" purpose="development" class="api">
-<unit bldFile="os/osrndtools/stif/stif_plat/group"/>
-</component>
-<component name="testinterface" filter="s60" long-name="Test Interface" purpose="development">
-<unit bldFile="os/osrndtools/stif/testinterface/group"/>
-</component>
-<component name="testserver" filter="s60" long-name="Test Server" purpose="development">
-<unit bldFile="os/osrndtools/stif/testserver/group"/>
-</component>
-<component name="testengine" filter="s60" long-name="Test Engine" purpose="development">
-<unit bldFile="os/osrndtools/stif/testengine/group"/>
-</component>
-<component name="testserverstarter" filter="s60" long-name="Test Server Starter" purpose="development">
-<unit bldFile="os/osrndtools/stif/testserverstarter/group"/>
-</component>
-<component name="stiftfwif" filter="s60" long-name="STIF Test Framework Interface" purpose="development">
-<unit bldFile="os/osrndtools/stif/stiftfwif/group"/>
-</component>
-<component name="consoleui" filter="s60" long-name="Console UI" purpose="development">
-<unit bldFile="os/osrndtools/stif/consoleui/group"/>
-</component>
-<component name="testcombiner" filter="s60" long-name="Test Combiner" purpose="development">
-<unit bldFile="os/osrndtools/stif/testcombiner/group"/>
-</component>
-<component name="demomodule" filter="s60" long-name="Demo Module" purpose="development">
-<unit bldFile="os/osrndtools/stif/demomodule/group"/>
-</component>
-<component name="atslogger" filter="s60" long-name="ATS Logger" purpose="development">
-<unit bldFile="os/osrndtools/stif/atslogger/group"/>
-</component>
-<component name="atsinterface" filter="s60" long-name="ATS Interface" purpose="development">
-<unit bldFile="os/osrndtools/stif/atsinterface/group"/>
-</component>
-<component name="testscripter" filter="s60" long-name="Test Scripter" purpose="development">
-<unit bldFile="os/osrndtools/stif/testscripter/group"/>
-</component>
-<component name="suevent" filter="s60" long-name="SU Event" purpose="development">
-<unit bldFile="os/osrndtools/stif/suevent/group"/>
-</component>
-<component name="stifkerneltestclassbase" filter="s60" long-name="STIF Kernel Test Class Base" purpose="development">
-<unit bldFile="os/osrndtools/stif/stifkerneltestclassbase/group"/>
-</component>
-<component name="stif_data" filter="s60" long-name="STIF Data" purpose="development" class="config">
-<!--  This is a component. Should move down a directory. or move into other STIF components-->
-<unit bldFile="os/osrndtools/stif/group"/>
-</component>
-</collection>
 <collection name="memspy" long-name="MemSpy" level="trace">
 <component name="memspy_plat" filter="s60" long-name="MemSpy Platform Interfaces" purpose="development" class="api">
 <unit bldFile="os/osrndtools/memspy/memspy_plat/group"/>
@@ -2672,45 +2647,6 @@
 <unit bldFile="os/osrndtools/memspy/group"/>
 </component>
 </collection>
-<collection name="hti" long-name="Harmonized Test Interface" level="trace">
-<component name="hti_plat" filter="s60" long-name="HTI Platform Interfaces" purpose="development" class="api">
-<unit bldFile="os/osrndtools/hti/hti_plat/group"/>
-</component>
-<component name="hticfg" filter="s60" long-name="HTI Config" purpose="development">
-<unit bldFile="os/osrndtools/hti/hticfg/group"/>
-</component>
-<component name="htiautostart" filter="s60" long-name="HTI Autostart" purpose="development">
-<unit bldFile="os/osrndtools/hti/htiautostart/group"/>
-</component>
-<component name="htiframework" filter="s60" long-name="HTI Framework" purpose="development">
-<unit bldFile="os/osrndtools/hti/htiframework/group"/>
-</component>
-<component name="hticommplugins" filter="s60" long-name="HTI Communication Plugins" purpose="development" plugin="Y">
-<!-- need to #include these from a single unit or separate into component at the right directory level -->
-<unit bldFile="os/osrndtools/hti/HtiCommPlugins/HtiBtCommPlugin/group"/>
-<unit bldFile="os/osrndtools/hti/HtiCommPlugins/HtiIPCommPlugin/group"/>
-<unit bldFile="os/osrndtools/hti/HtiCommPlugins/HtiSerialCommPlugin/group"/>
-<unit bldFile="os/osrndtools/hti/HtiCommPlugins/HtiUsbSerialCommPlugin/group"/>
-</component>
-<component name="htiserviceplugins" filter="s60" long-name="HTI Service Plugins" purpose="development" plugin="Y">
-<!-- need to #include these from a single unit or separate into component at the right directory level -->
-<unit bldFile="os/osrndtools/hti/HtiServicePlugins/HtiAppServicePlugin/group"/>
-<unit bldFile="os/osrndtools/hti/HtiServicePlugins/HtiEchoServicePlugin/group"/>
-<unit bldFile="os/osrndtools/hti/HtiServicePlugins/HtiFtpServicePlugin/group"/>
-<unit bldFile="os/osrndtools/hti/HtiServicePlugins/HtiIpProxyServicePlugin/group"/>
-<unit bldFile="os/osrndtools/hti/HtiServicePlugins/HtiStifTfServicePlugin/group"/>
-</component>
-<component name="htifilehlp" filter="s60" long-name="HTI File Help" purpose="development">
-<unit bldFile="os/osrndtools/hti/htifilehlp/group"/>
-</component>
-<component name="htiwatchdog" filter="s60" long-name="HTI Watchdog" purpose="development">
-<unit bldFile="os/osrndtools/hti/htiwatchdog/group"/>
-</component>
-<component name="hti_build" filter="s60" long-name="HTI Build" purpose="development">
-<!--  move exports into self-contained component.-->
-<unit bldFile="os/osrndtools/hti/group"/>
-</component>
-</collection>
 <collection name="piprofiler" long-name="Performance Investigator Profiler" level="analysis">
 <component name="piprofiler_build" long-name="Performance Investigator Profiler Build" introduced="^4">
 <unit bldFile="os/osrndtools/piprofiler/group"/>
@@ -2719,6 +2655,105 @@
 <collection name="analyzetool" long-name="Analyze Tool" level="analysis">
 <component name="analyzetool_build" long-name="Analyze Tool Build" introduced="^4">
 <unit bldFile="os/osrndtools/analyzetool/group"/>
+</component>
+</collection>
+</block>
+<block name="ostesttools" level="services" long-name="OS Test tools" levels="fw trace analysis">
+<collection name="stif" long-name="STIF" level="fw">
+<component name="stif_plat" filter="s60" long-name="STIF Platform Interfaces" purpose="development" class="api">
+<unit bldFile="os/ostesttools/stif/stif_plat/group"/>
+</component>
+<component name="TestInterface" filter="s60" long-name="Test Interface" purpose="development">
+<unit bldFile="os/ostesttools/stif/TestInterface/group"/>
+</component>
+<component name="TestServer" filter="s60" long-name="Test Server" purpose="development">
+<unit bldFile="os/ostesttools/stif/TestServer/group"/>
+</component>
+<component name="TestEngine" filter="s60" long-name="Test Engine" purpose="development">
+<unit bldFile="os/ostesttools/stif/TestEngine/group"/>
+</component>
+<component name="TestServerStarter" filter="s60" long-name="Test Server Starter" purpose="development">
+<unit bldFile="os/ostesttools/stif/TestServerStarter/group"/>
+</component>
+<component name="StifTFwIf" filter="s60" long-name="STIF Test Framework Interface" purpose="development">
+<unit bldFile="os/ostesttools/stif/StifTFwIf/group"/>
+</component>
+<component name="ConsoleUI" filter="s60" long-name="Console UI" purpose="development">
+<unit bldFile="os/ostesttools/stif/ConsoleUI/group"/>
+</component>
+<component name="TestCombiner" filter="s60" long-name="Test Combiner" purpose="development">
+<unit bldFile="os/ostesttools/stif/TestCombiner/group"/>
+</component>
+<component name="DemoModule" filter="s60" long-name="Demo Module" purpose="development">
+<unit bldFile="os/ostesttools/stif/DemoModule/group"/>
+</component>
+<component name="ATSLogger" filter="s60" long-name="ATS Logger" purpose="development">
+<unit bldFile="os/ostesttools/stif/ATSLogger/group"/>
+</component>
+<component name="ATSInterface" filter="s60" long-name="ATS Interface" purpose="development">
+<unit bldFile="os/ostesttools/stif/ATSInterface/group"/>
+</component>
+<component name="TestScripter" filter="s60" long-name="Test Scripter" purpose="development">
+<unit bldFile="os/ostesttools/stif/TestScripter/group"/>
+</component>
+<component name="SUEvent" filter="s60" long-name="SU Event" purpose="development">
+<unit bldFile="os/ostesttools/stif/SUEvent/group"/>
+</component>
+<component name="StifKernelTestClassBase" filter="s60" long-name="STIF Kernel Test Class Base" purpose="development">
+<unit bldFile="os/ostesttools/stif/StifKernelTestClassBase/group"/>
+</component>
+<component name="stif_data" filter="s60" long-name="STIF Data" purpose="development" class="config">
+<!--  This is a component. Should move down a directory. or move into other STIF components-->
+<unit bldFile="os/ostesttools/stif/group"/>
+</component>
+</collection>
+<collection name="hti" long-name="Harmonized Test Interface" level="trace">
+<component name="hti_plat" filter="s60" long-name="HTI Platform Interfaces" purpose="development" class="api">
+<unit bldFile="os/ostesttools/hti/hti_plat/group"/>
+</component>
+<component name="HtiCfg" filter="s60" long-name="HTI Config" purpose="development">
+<unit bldFile="os/ostesttools/hti/HtiCfg/group"/>
+</component>
+<component name="HtiAutoStart" filter="s60" long-name="HTI Autostart" purpose="development">
+<unit bldFile="os/ostesttools/hti/HtiAutoStart/group"/>
+</component>
+<component name="HtiFramework" filter="s60" long-name="HTI Framework" purpose="development">
+<unit bldFile="os/ostesttools/hti/HtiFramework/group"/>
+</component>
+<component name="hticommplugins" filter="s60" long-name="HTI Communication Plugins" purpose="development" plugin="Y">
+<!-- need to #include these from a single unit or separate into component at the right directory level -->
+<unit bldFile="os/ostesttools/hti/HtiCommPlugins/HtiBtCommPlugin/group"/>
+<unit bldFile="os/ostesttools/hti/HtiCommPlugins/HtiIPCommPlugin/group"/>
+<unit bldFile="os/ostesttools/hti/HtiCommPlugins/HtiSerialCommPlugin/group"/>
+<unit bldFile="os/ostesttools/hti/HtiCommPlugins/HtiUsbSerialCommPlugin/group"/>
+</component>
+<component name="htiserviceplugins" filter="s60" long-name="HTI Service Plugins" purpose="development" plugin="Y">
+<!-- need to #include these from a single unit or separate into component at the right directory level -->
+<unit bldFile="os/ostesttools/hti/HtiServicePlugins/HtiAppServicePlugin/group"/>
+<unit bldFile="os/ostesttools/hti/HtiServicePlugins/HtiEchoServicePlugin/group"/>
+<unit bldFile="os/ostesttools/hti/HtiServicePlugins/HtiFtpServicePlugin/group"/>
+<unit bldFile="os/ostesttools/hti/HtiServicePlugins/HtiIpProxyServicePlugin/group"/>
+<unit bldFile="os/ostesttools/hti/HtiServicePlugins/HtiStifTfServicePlugin/group"/>
+</component>
+<component name="HtiFileHlp" filter="s60" long-name="HTI File Help" purpose="development">
+<unit bldFile="os/ostesttools/hti/HtiFileHlp/group"/>
+</component>
+<component name="HtiWatchdog" filter="s60" long-name="HTI Watchdog" purpose="development">
+<unit bldFile="os/ostesttools/hti/HtiWatchdog/group"/>
+</component>
+<component name="hti_build" filter="s60" long-name="HTI Build" purpose="development">
+<!--  move exports into self-contained component.-->
+<unit bldFile="os/ostesttools/hti/group"/>
+</component>
+</collection>
+<collection name="symbianunittestfw" long-name="Symbian Unit Test Framework" level="analysis">
+<component name="symbianunittestfw_build" long-name="Symbian Unit Test Framework Build" introduced="^4">
+<unit bldFile="os/ostesttools/symbianunittestfw/group"/>
+</component>
+</collection>
+<collection name="testexecmdw" level="analysis">
+<component name="tef" long-name="Test Execute Framework" introduced="^4">
+<unit bldFile="os/ostesttools/testexecmdw/tef/group"/>
 </component>
 </collection>
 </block>
@@ -2869,7 +2904,7 @@
 <unit bldFile="mw/appsupport/coreapplicationuis/advancedtspcontroller/group"/>
 </component>
 <component name="powersaveutilities" filter="s60" long-name="Power Save Utilities">
-<unit bldFile="mw/appsupport/coreapplicationuis/powersaveutilities/group"/>
+<unit bldFile="mw/appsupport/coreapplicationuis/powersaveutilities" proFile="powersaveutilities.pro"/>
 </component>
 <component name="gsserverenginestub" filter="s60" long-name="GS Server Engine Stub" deprecated="^4">
 <unit bldFile="mw/appsupport/coreapplicationuis/gsserverenginestub/group"/>
@@ -4438,7 +4473,7 @@
 </collection>
 <collection name="qcpix" long-name="Qt CPIX" level="engine">
 <component name="qcpix_build" long-name="Qt CPIX Build" introduced="^4">
-<unit bldFile="mw/searchsrv/qcpix" proFile="qcpix.pro"/>
+<unit bldFile="mw/searchsrv/qcpix" proFile="cpix.pro"/>
 </component>
 </collection>
 <collection name="searchsrv_info" long-name="Search Services Info">
@@ -4472,9 +4507,6 @@
 </component>
 <component name="sync_alert_handler_api" long-name="Sync Alert Handler API" filter="s60" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/sync_alert_handler_api/group"/>
-</component>
-<component name="syncml_notifier_api" long-name="SyncML Notifier API" filter="s60" class="api">
-<unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_notifier_api/group"/>
 </component>
 <component name="syncml_client_api" long-name="SyncML Client API" filter="s60" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_client_api/group"/>
@@ -4535,9 +4567,6 @@
 </component>
 <component name="update_package_storage_plugin_api" long-name="Update Package Storage Plug-in API" filter="s60" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/update_package_storage_plugin_api/group"/>
-</component>
-<component name="syncml_notifier_roaming_api" long-name="SyncML Notifier Roaming API" filter="s60" class="api">
-<unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_notifier_roaming_api/group"/>
 </component>
 <component name="dcmo_adapter_api" long-name="DCMO Adapter API" filter="s60" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/dcmo_adapter_api/group"/>
@@ -4632,7 +4661,7 @@
 </collection>
 <collection name="devicemgmtnotifications" long-name="Device Management Notifications" level="server">
 <component name="devicemgmtnotifications_rom" filter="s60" long-name="DM Notifications ROM" introduced="^4">
-<unit bldFile="mw/remotemgmt/devicemgmtnotifications/rom"/>
+<unit bldFile="mw/remotemgmt/devicemgmtnotifications/group"/>
 </component>
 <component name="dmdevdialogclient" filter="s60" long-name="DM Device Dialog Client" introduced="^4">
 <unit bldFile="mw/remotemgmt/devicemgmtnotifications/dmdevdialogclient/bld"/>
@@ -4723,9 +4752,6 @@
 <collection name="backupandrestore" long-name="Backup and Restore" level="specific">
 <component name="backupengine" long-name="Backup Engine" introduced="9.0" purpose="optional" filter="s60">
 <unit bldFile="mw/remoteconn/backupandrestore/backupengine/group" mrp="mw/remoteconn/backupandrestore/backupengine/group/connectivity_backupengine.mrp"/>
-</component>
-<component name="backuptest" long-name="Backup Test" introduced="^2" purpose="development">
-<unit bldFile="mw/remoteconn/backupandrestore/backuptest/group" mrp="mw/remoteconn/backupandrestore/backuptest/group/connectivity_backuptest.mrp"/>
 </component>
 </collection>
 <collection name="obex" long-name="OBEX" level="generic">
@@ -5072,9 +5098,6 @@
 </component>
 <component name="btindicator" filter="s60" long-name="Bluetooth Indicator" introduced="^4">
 <unit bldFile="mw/btservices/bluetoothengine/btindicator" proFile="btindicator.pro"/>
-</component>
-<component name="bluetoothengine_conf" filter="s60" long-name="Bluetooth Engine Config" introduced="^4" class="config">
-<unit bldFile="mw/btservices/bluetoothengine/conf"/>
 </component>
 </collection>
 <collection name="bluetoothappprofiles" long-name="Bluetooth Application Profiles" level="plugin">
@@ -5854,6 +5877,14 @@
 <collection name="qtexamples" long-name="Qt Examples" level="app"/>
 <collection name="qt_tests" long-name="Qt Tests" level="app"/>
 </block>
+<block name="qtmobility" level="generic" long-name="Qt Mobility" levels="tool mw app">
+<collection name="qtmobility_collection" long-name="Qt Mobility collection" level="app">
+<component name="qtmobility_build" long-name="Qt Mobility Build" introduced="^4">
+<!-- break this up into the above collections-->
+<unit bldFile="mw/qtmobility" proFile="qtmobility.pro" qmakeArgs="-r"/>
+</component>
+</collection>
+</block>
 <block name="qtextensions" level="generic" long-name="Qt Extensions" levels="tool mw app">
 <collection name="qtecomplugins" long-name="Qt ECom Plugins" level="app">
 <component name="qtecomplugins_build" filter="qtecomplugins" long-name="Qt ECom Plugin" purpose="development" introduced="^4" plugin="Y">
@@ -5877,14 +5908,6 @@
 </component>
 <component name="qtmobileextensions_examples" filter="qtextensionsexamples,build_as_app" long-name="Qt Mobile Extensions Examples" purpose="development" introduced="^4">
 <unit bldFile="mw/qtextensions/qtmobileextensions/examples" proFile="examples.pro" qmakeArgs="-r"/>
-</component>
-</collection>
-<collection name="qtmobility" long-name="Qt Mobility" level="mw">
-<component name="qtmobility_build" filter="qtmobility" long-name="Qt Mobility" purpose="development" introduced="^4">
-<unit bldFile="mw/qtextensions/qtmobility" proFile="qtmobility.pro" qmakeArgs="-r"/>
-</component>
-<component name="qtmobility_examples" filter="qtextensionsexamples,build_as_app" long-name="Qt Mobility Examples" purpose="development" introduced="^4">
-<unit bldFile="mw/qtextensions/qtmobility/examples" proFile="examples.pro" qmakeArgs="-r"/>
 </component>
 </collection>
 <collection name="qhbstyle" level="mw" long-name="Qt Orbit Style">
@@ -5914,9 +5937,6 @@
 <collection name="classicui_plat" long-name="Classic UI Platform Interfaces" level="specific">
 <component name="signal_pane_api" long-name="Signal Pane API" filter="s60" class="api">
 <unit bldFile="mw/classicui/classicui_plat/signal_pane_api/group" filter="!test"/>
-</component>
-<component name="japanese_reading_api" long-name="Japanese Reading API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_plat/japanese_reading_api/group" filter="!test"/>
 </component>
 <component name="global_popup_priority_controller_api" long-name="Global Popup Priority Controller API" filter="s60" class="api">
 <unit bldFile="mw/classicui/classicui_plat/global_popup_priority_controller_api/group" filter="!test"/>
@@ -5950,9 +5970,6 @@
 </component>
 <component name="avkon_ui_server_api" long-name="AVKON UI Server API" filter="s60" class="api">
 <unit bldFile="mw/classicui/classicui_plat/avkon_ui_server_api/group" filter="!test"/>
-</component>
-<component name="number_grouping_api" long-name="Number Grouping API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_plat/number_grouping_api/group" filter="!test"/>
 </component>
 <component name="extended_status_pane_api" long-name="Extended Status Pane API" filter="s60" class="api">
 <unit bldFile="mw/classicui/classicui_plat/extended_status_pane_api/group" filter="!test"/>
@@ -6131,9 +6148,6 @@
 <component name="avkon_testability_api" long-name="AVKON Testability API" filter="s60" class="api">
 <unit bldFile="mw/classicui/classicui_plat/avkon_testability_api/group"/>
 </component>
-<component name="ganes_api" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_plat/ganes_api/group"/>
-</component>
 <component name="ode_api" long-name="Ode API" filter="s60" class="api">
 <unit bldFile="mw/classicui/classicui_plat/ode_api/group"/>
 </component>
@@ -6152,11 +6166,6 @@
 <component name="discreet_popup_api" long-name="Discreet Popup API" filter="s60" class="api">
 <unit bldFile="mw/classicui/classicui_plat/discreet_popup_api/group"/>
 </component>
-<component name="touch_gesture_framework_api" long-name="Touch Gesture Framework API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_plat/touch_gesture_framework_api/group"/>
-<!-- should this be commented out? -->
-<!--<unit bldFile="classicui_plat/touch_gesture_framework_api/tsrc/group" filter="test,api_test"/> -->
-</component>
 <component name="extended_options_menu_api" long-name="Extended Options Menu API" filter="s60" class="api">
 <unit bldFile="mw/classicui/classicui_plat/extended_options_menu_api/group" filter="!test"/>
 </component>
@@ -6166,190 +6175,188 @@
 <component name="findutil_api" long-name="Find Util API" filter="s60" class="api">
 <unit bldFile="mw/classicui/classicui_plat/findutil_api/group"/>
 </component>
-</collection>
-<collection name="classicui_pub" long-name="Classic UI Public Interfaces" level="specific">
 <component name="input_frame_api" long-name="Input Frame API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/input_frame_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/input_frame_api/group" filter="!test"/>
 </component>
 <component name="window_server_event_observer_api" long-name="Window Server Event Observer API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/window_server_event_observer_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/window_server_event_observer_api/group" filter="!test"/>
 </component>
 <component name="application_framework_api" long-name="Application Framework API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/application_framework_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/application_framework_api/group" filter="!test"/>
 </component>
 <component name="scroller_api" long-name="Scroller API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/scroller_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/scroller_api/group" filter="!test"/>
 </component>
 <component name="ui_framework_utilities_api" long-name="UI Framework Utilities API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/ui_framework_utilities_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/ui_framework_utilities_api/group" filter="!test"/>
 </component>
 <component name="ui_framework_definitions_api" long-name="UI Framework Definitions API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/ui_framework_definitions_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/ui_framework_definitions_api/group" filter="!test"/>
 </component>
 <component name="buttons_api" long-name="Buttons API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/buttons_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/buttons_api/group" filter="!test"/>
 </component>
 <component name="queries_api" long-name="Queries API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/queries_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/queries_api/group" filter="!test"/>
 </component>
 <component name="aiw_generic_parameter_api" long-name="AIW Generic Parameter API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/aiw_generic_parameter_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/aiw_generic_parameter_api/group" filter="!test"/>
 </component>
 <component name="editors_api" long-name="Editors API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/editors_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/editors_api/group" filter="!test"/>
 </component>
 <component name="common_file_dialogs_api" long-name="Common File Dialogs API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/common_file_dialogs_api/group"/>
+<unit bldFile="mw/classicui/classicui_plat/common_file_dialogs_api/group"/>
 </component>
 <component name="dialog_shutter_api" long-name="Dialog Shutter API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/dialog_shutter_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/dialog_shutter_api/group" filter="!test"/>
 </component>
 <component name="fonts_api" long-name="Fonts API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/fonts_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/fonts_api/group" filter="!test"/>
 </component>
 <component name="screen_clearer_api" long-name="Screen Clearer API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/screen_clearer_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/screen_clearer_api/group" filter="!test"/>
 </component>
 <component name="notifiers_api" long-name="Notifiers API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/notifiers_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/notifiers_api/group" filter="!test"/>
 </component>
 <component name="notes_api" long-name="Notes API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/notes_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/notes_api/group" filter="!test"/>
 </component>
 <component name="status_pane_api" long-name="Status Pane API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/status_pane_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/status_pane_api/group" filter="!test"/>
 </component>
 <component name="base_controls_api" long-name="Base Controls API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/base_controls_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/base_controls_api/group" filter="!test"/>
 </component>
 <component name="grids_api" long-name="Grids API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/grids_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/grids_api/group" filter="!test"/>
 </component>
 <component name="context_pane_api" long-name="Context Pane API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/context_pane_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/context_pane_api/group" filter="!test"/>
 </component>
 <component name="lists_api" long-name="Lists API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/lists_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/lists_api/group" filter="!test"/>
 </component>
 <component name="popups_api" long-name="Popups API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/popups_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/popups_api/group" filter="!test"/>
 </component>
 <component name="misc_controls_api" long-name="Misc Controls API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/misc_controls_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/misc_controls_api/group" filter="!test"/>
 </component>
 <component name="keylock_api" long-name="Keylock API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/keylock_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/keylock_api/group" filter="!test"/>
 </component>
 <component name="options_menu_api" long-name="Options Menu API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/options_menu_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/options_menu_api/group" filter="!test"/>
 </component>
 <component name="hierarchical_lists_api" long-name="Hierarchical Lists API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/hierarchical_lists_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/hierarchical_lists_api/group" filter="!test"/>
 </component>
 <component name="navigation_pane_api" long-name="Navigation Pane API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/navigation_pane_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/navigation_pane_api/group" filter="!test"/>
 </component>
 <component name="tabs_api" long-name="Tabs API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/tabs_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/tabs_api/group" filter="!test"/>
 </component>
 <component name="title_pane_touch_observer_api" long-name="Title Pane Touch Observer API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/title_pane_touch_observer_api/group"/>
+<unit bldFile="mw/classicui/classicui_plat/title_pane_touch_observer_api/group"/>
 </component>
 <component name="choice_list_api" long-name="Choice List API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/choice_list_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/choice_list_api/group" filter="!test"/>
 </component>
 <component name="info_popup_note_api" long-name="Info Popup Note API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/info_popup_note_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/info_popup_note_api/group" filter="!test"/>
 </component>
 <component name="setting_pages_api" long-name="Setting Pages API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/setting_pages_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/setting_pages_api/group" filter="!test"/>
 </component>
 <component name="screen_mode_api" long-name="Screen Mode API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/screen_mode_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/screen_mode_api/group" filter="!test"/>
 </component>
 <component name="indicators_api" long-name="Indicators API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/indicators_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/indicators_api/group" filter="!test"/>
 </component>
 <component name="error_ui_api" long-name="Error UI API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/error_ui_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/error_ui_api/group" filter="!test"/>
 </component>
 <component name="animation_api" long-name="Animation API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/animation_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/animation_api/group" filter="!test"/>
 </component>
 <component name="searchfield_api" long-name="Searchfield API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/searchfield_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/searchfield_api/group" filter="!test"/>
 </component>
 <component name="labels_api" long-name="Labels API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/labels_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/labels_api/group" filter="!test"/>
 </component>
 <component name="hotkeys_api" long-name="Hotkeys API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/hotkeys_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/hotkeys_api/group" filter="!test"/>
 </component>
 <component name="initialization_api" long-name="Initialization API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/initialization_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/initialization_api/group" filter="!test"/>
 </component>
 <component name="volume_control_api" long-name="Volume Control API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/volume_control_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/volume_control_api/group" filter="!test"/>
 </component>
 <component name="title_pane_api" long-name="Title Pane API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/title_pane_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/title_pane_api/group" filter="!test"/>
 </component>
 <component name="sounds_api" long-name="Sounds API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/sounds_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/sounds_api/group" filter="!test"/>
 </component>
 <component name="aiw_service_handler_api" long-name="AIW Service Handler API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/aiw_service_handler_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/aiw_service_handler_api/group" filter="!test"/>
 </component>
 <component name="aiw_criteria_api" long-name="AIW Criteria API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/aiw_criteria_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/aiw_criteria_api/group" filter="!test"/>
 </component>
 <component name="touch_ui_utilities_api" long-name="Touch UI Utilities API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/touch_ui_utilities_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/touch_ui_utilities_api/group" filter="!test"/>
 </component>
 <component name="generic_button_api" long-name="Generic Button API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/generic_button_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/generic_button_api/group" filter="!test"/>
 </component>
 <component name="form_api" long-name="Form API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/form_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/form_api/group" filter="!test"/>
 </component>
 <component name="uikon_core_controls" long-name="Uikon Core Controls" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/uikon_core_controls/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/uikon_core_controls/group" filter="!test"/>
 </component>
 <component name="calendar_api" long-name="Calendar API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/calendar_api/group"/>
+<unit bldFile="mw/classicui/classicui_plat/calendar_api/group"/>
 </component>
 <component name="toolbar_api" long-name="Toolbar API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/toolbar_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/toolbar_api/group" filter="!test"/>
 </component>
 <component name="server_application_api" long-name="Server Application API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/server_application_api/group"/>
+<unit bldFile="mw/classicui/classicui_plat/server_application_api/group"/>
 </component>
 <component name="slider_api" long-name="Slider API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/slider_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/slider_api/group" filter="!test"/>
 </component>
 <component name="private_ui_framework_api" long-name="Private UI Framework API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/private_ui_framework_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/private_ui_framework_api/group" filter="!test"/>
 </component>
 <component name="dialogs_api" long-name="Dialogs API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/dialogs_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/dialogs_api/group" filter="!test"/>
 </component>
 <component name="document_handler_api" long-name="Document handler API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/document_handler_api/group"/>
+<unit bldFile="mw/classicui/classicui_plat/document_handler_api/group"/>
 </component>
 <component name="images_api" long-name="Images API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/images_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/images_api/group" filter="!test"/>
 </component>
 <component name="stylus_popup_menu_api" long-name="Stylus Pop-up Menu API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/stylus_popup_menu_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/stylus_popup_menu_api/group" filter="!test"/>
 </component>
 <component name="information_preview_popup_api" long-name="Information Preview Popup API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/information_preview_popup_api/group" filter="!test"/>
+<unit bldFile="mw/classicui/classicui_plat/information_preview_popup_api/group" filter="!test"/>
 </component>
 <component name="intermediate_state_api" long-name="Intermediate State API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/intermediate_state_api/group"/>
+<unit bldFile="mw/classicui/classicui_plat/intermediate_state_api/group"/>
 </component>
 <component name="help_launcher_api" long-name="Help Launcher API" filter="s60" class="api">
-<unit bldFile="mw/classicui/classicui_pub/help_launcher_api/group"/>
+<unit bldFile="mw/classicui/classicui_plat/help_launcher_api/group"/>
 </component>
 </collection>
 <collection name="ode" long-name="Open Dynamics Engine" level="support">
@@ -6377,9 +6384,6 @@
 <component name="aknglobalui" filter="s60" long-name="Avkon Global UI">
 <unit bldFile="mw/classicui/uifw/aknglobalui/group"/>
 </component>
-<component name="ganes" filter="s60" long-name="Ganes">
-<unit bldFile="mw/classicui/uifw/ganes/group"/>
-</component>
 </collection>
 <collection name="commonuis" long-name="Common UIs" level="specific">
 <component name="commonui" filter="s60" long-name="Common UI">
@@ -6394,30 +6398,12 @@
 <unit bldFile="mw/classicui/applicationinterworkingfw/servicehandler/group"/>
 </component>
 </collection>
-<collection name="commonadapter" long-name="Common Adapter" level="support">
-<!-- the collection is really a component. Move down a directory.-->
-<component name="commonadapter_build" filter="s60" long-name="Common Adapter Build">
-<unit bldFile="mw/classicui/commonadapter/group"/>
-</component>
-</collection>
-<collection name="akntouchgesturefw" long-name="Avkon Touch Gesture Framework" level="generic">
-<!-- the collection is really a component. Move down a directory.-->
-<component name="akntouchgesturefw_build" filter="s60" long-name="Avkon Touch Gesture Framework Build" introduced="^3">
-<unit bldFile="mw/classicui/akntouchgesturefw/group"/>
-</component>
-</collection>
 <collection name="uiutils" long-name="UI Utils" level="specific">
 <component name="localizer" filter="s60" long-name="Directory Localizer">
 <unit bldFile="mw/classicui/uiutils/localizer/group"/>
 </component>
 <component name="findutil" filter="s60" long-name="Find Utility">
 <unit bldFile="mw/classicui/uiutils/findutil/group"/>
-</component>
-<component name="gamerecognizer" filter="s60" long-name="Game Recognizer" plugin="Y">
-<unit bldFile="mw/classicui/uiutils/gamerecognizer/group"/>
-</component>
-<component name="aknjapanesereading" filter="s60" long-name="Avkon Japanese Reading">
-<unit bldFile="mw/classicui/uiutils/aknjapanesereading/group"/>
 </component>
 <component name="hlplch" long-name="Help Launcher" filter="s60,bldfirst">
 <unit bldFile="mw/classicui/uiutils/hlplch/group"/>
@@ -6426,6 +6412,9 @@
 <collection name="commonuisupport" long-name="Common UI Support" level="support">
 <component name="uikon" long-name="Uikon" introduced="6.0" purpose="mandatory">
 <unit bldFile="mw/classicui/commonuisupport/uikon/group" mrp="mw/classicui/commonuisupport/uikon/group/app-framework_uikon.mrp"/>
+</component>
+<component name="uikon_ncp" long-name="Uikon (NCP)" introduced="S^4" purpose="mandatory">
+<unit bldFile="mw/classicui/commonuisupport/uikon/group_ncp"/>
 </component>
 <component name="errorresolverdata" long-name="Error Resolver Data" purpose="mandatory">
 <unit bldFile="mw/classicui/commonuisupport/errorresolverdata/group" mrp="mw/classicui/commonuisupport/errorresolverdata/group/app-framework_errorresgt.mrp"/>
@@ -6480,9 +6469,6 @@
 <component name="svgtopt_build" filter="s60" long-name="SVG Engine" introduced="9.2">
 <!-- component is at collection level. Needs to be moved down a directory -->
 <unit bldFile="mw/svgt/svgtopt/group"/>
-</component>
-<component name="svgtplugin" filter="s60" long-name="SVG Plugin" introduced="9.2" plugin="Y">
-<unit bldFile="mw/svgt/svgtopt/svgtplugin/group"/>
 </component>
 </collection>
 </block>
@@ -6881,7 +6867,10 @@
 </component>
 </collection>
 <collection name="ncdengine" long-name="Nokia Content Discover" level="framework">
-<component name="ncdengine_build" filter="s60" long-name="NCD Engine" introduced="^1">
+<component name="ncdengine_build" filter="s60" long-name="NCD API" introduced="^1">
+<unit bldFile="mw/appinstall/ncdengine/group"/>
+</component>
+<component name="ncdengine_engine" filter="s60" long-name="NCD Engine" introduced="^1">
 <unit bldFile="mw/appinstall/ncdengine/engine" proFile="engine.pro" qmakeArgs="-r"/>
 </component>
 </collection>
@@ -7477,6 +7466,9 @@
 <component name="blacklist" filter="s60" long-name="Phone Blacklist Clearing" plugin="Y">
 <unit bldFile="app/phone/phoneapp/blacklist/group"/>
 </component>
+<component name="phoneringingtoneplayer" filter="s60" long-name="Phone Ringingtone Player" introduced="^4">
+<unit bldFile="app/phone/phoneapp/phoneringingtoneplayer/group"/>
+</component>
 <component name="phoneuicontrol" filter="s60" long-name="Phone UI Control">
 <unit bldFile="app/phone/phoneapp/phoneuicontrol/group"/>
 </component>
@@ -7533,6 +7525,9 @@
 <component name="phoneservices" filter="s60" long-name="Phone Server" introduced="^4">
 <unit bldFile="app/phone/phoneengine/phoneservices" proFile="phoneservices.pro"/>
 </component>
+<component name="networkhandlingstarter" filter="s60" long-name="Network Handling Starter" introduced="^4">
+<unit bldFile="app/phone/phoneengine/networkhandlingstarter" proFile="networkhandlingstarter.pro"/>
+</component>
 </collection>
 <collection name="phoneuis" long-name="Phone UIs" level="ui">
 <component name="bubblemanager2" filter="s60" long-name="Phone Bubble Manager">
@@ -7540,6 +7535,9 @@
 </component>
 <component name="telephonydevicemode" filter="s60" long-name="Telephony Device Mode">
 <unit bldFile="app/phone/phoneuis/telephonydevicemode/group"/>
+</component>
+<component name="ussdeditor" filter="s60" long-name="USSD Editor" introduced="^4">
+<unit bldFile="app/phone/phoneuis/ussdeditor" proFile="ussdeditor.pro"/>
 </component>
 </collection>
 <collection name="phone_plat" long-name="Phone Apps Platform Interfaces" level="app">
@@ -7554,6 +7552,9 @@
 </component>
 <component name="telephony_device_mode_api" long-name="Telephony Device Mode API" filter="s60" class="api">
 <unit bldFile="app/phone/phone_plat/telephony_device_mode_api/group"/>
+</component>
+<component name="telephony_menu_extension_api" long-name="Telephony Menu Extension API" filter="s60" introduced="^4" class="api">
+<unit bldFile="app/phone/phone_plat/telephony_menu_extension_api/group"/>
 </component>
 <component name="telephony_remote_party_information_api" long-name="Telephony Remote Party Information API" filter="s60" class="api">
 <unit bldFile="app/phone/phone_plat/telephony_remote_party_information_api/group"/>
@@ -7576,9 +7577,6 @@
 <component name="phone_application_voip_commands_api" long-name="Phone Application VOIP Commands API" filter="s60" class="api">
 <unit bldFile="app/phone/phone_plat/phone_application_voip_commands_api/group"/>
 </component>
-<component name="phone_telephony_menu_extension_api" long-name="Telephony Menu Extension API" filter="s60" class="api">
-<unit bldFile="app/phone/phone_plat/telephony_menu_extension_api/group"/>
-</component>
 <component name="phone_telephony_mediator_api" long-name="Telephony Mediator API" filter="s60" class="api">
 <unit bldFile="app/phone/phone_plat/telephony_mediator_api/group"/>
 </component>
@@ -7593,18 +7591,18 @@
 <component name="csplugin" filter="s60" long-name="Circuit Switched Plugin" introduced="^4" plugin="Y">
 <unit bldFile="app/phone/phoneplugins/csplugin/group"/>
 </component>
+<component name="phoneindicatorplugin" filter="s60" long-name="Phone Indicator Plugin" introduced="^4" plugin="Y">
+<unit bldFile="app/phone/phoneplugins/phoneindicatorplugin" proFile="phoneindicatorplugin.pro"/>
+</component>
 <component name="dialerwidgetplugin" filter="s60" long-name="Dialer Widget Plugin" introduced="^4" plugin="Y">
 <unit bldFile="app/phone/phoneplugins/dialerwidgetplugin" proFile="dialerwidgetplugin.pro"/>
 </component>
 <component name="infowidgetplugin" filter="s60" long-name="Info Widget Plugin" introduced="^4" plugin="Y">
 <unit bldFile="app/phone/phoneplugins/infowidgetplugin" proFile="infowidgetplugin.pro"/>
 </component>
-<component name="phoneindicatorplugin" filter="s60" long-name="Phone Indicator Plugin" introduced="^4" plugin="Y">
-<unit bldFile="app/phone/phoneplugins/phoneindicatorplugin" proFile="phoneindicatorplugin.pro"/>
-</component>
 </collection>
 <collection name="phonesettings" long-name="Phone Settings" level="plugin">
-<component name="cpphonesettingsplugins" filter="s60" long-name="CP Phone Settings Plugins" introduced="^4" plugin="Y">
+<component name="cpphonesettingsplugins" filter="s60" long-name="Control Panel Phone Settings Plugins" introduced="^4" plugin="Y">
 <unit bldFile="app/phone/phonesettings/cpphonesettingsplugins" proFile="cpphonesettingsplugins.pro"/>
 </component>
 </collection>
@@ -8374,11 +8372,11 @@
 </component>
 </collection>
 <collection name="videoplayback" long-name="Video Playback Plugins" level="plugin">
-<component name="hbvideoplaybackview" filter="s60" long-name="HB Video Playback View" introduced="^4" plugin="Y">
-<unit bldFile="app/videoplayer/videoplayback/hbvideoplaybackview" proFile="hbvideoplaybackview.pro" qmakeArgs="-r"/>
+<component name="videoplaybackview" filter="s60" long-name="HB Video Playback View" introduced="^4" plugin="Y">
+<unit bldFile="app/videoplayer/videoplayback/videoplaybackview" proFile="videoplaybackview.pro" qmakeArgs="-r"/>
 </component>
-<component name="hbvideoplaybackviewplugin" filter="s60" long-name="HB Video Playback View Plugin" introduced="^4" plugin="Y">
-<unit bldFile="app/videoplayer/videoplayback/hbvideoplaybackviewplugin" proFile="hbvideoplaybackviewplugin.pro" qmakeArgs="-r"/>
+<component name="videoplaybackviewplugin" filter="s60" long-name="HB Video Playback View Plugin" introduced="^4" plugin="Y">
+<unit bldFile="app/videoplayer/videoplayback/videoplaybackviewplugin" proFile="videoplaybackviewplugin.pro" qmakeArgs="-r"/>
 </component>
 <component name="videohelix" long-name="Video Helix" filter="s60" introduced="^3" plugin="Y">
 <unit bldFile="app/videoplayer/videoplayback/videohelix/group" filter="!test"/>
@@ -8615,15 +8613,17 @@
 </block>
 <block name="homescreen" level="apps" long-name="Home Screen Apps" levels="support task ss hs">
 <collection name="homescreen_test" long-name="Home Screen Test" level="support"/>
+<collection name="homescreen_plat" long-name="Home Screen Platform API" level="support">
+<component name="homescreen_plat_build" long-name="Home Screen Platform API Build">
+<unit bldFile="app/homescreen/homescreen_plat" proFile="homescreen_plat.pro"/>
+</component>
+</collection>
 <collection name="homescreenapp" long-name="Home Screen Application" level="hs">
 <component name="hsutils" long-name="Home Screen Utils" introduced="^4">
 <unit bldFile="app/homescreen/homescreenapp/hsutils" proFile="hsutils.pro" qmakeArgs="-r -config rom"/>
 </component>
 <component name="hsdomainmodel" long-name="HS Domain Model" introduced="^4">
 <unit bldFile="app/homescreen/homescreenapp/hsdomainmodel" proFile="hsdomainmodel.pro" qmakeArgs="-r -config rom"/>
-</component>
-<component name="hs_runtimeplugins" long-name="HS Runtime Plugins" introduced="^4" plugin="Y">
-<unit bldFile="app/homescreen/homescreenapp/runtimeplugins" proFile="runtimeplugins.pro" qmakeArgs="-r -config rom"/>
 </component>
 <component name="hs_serviceproviders" long-name="HS Service Providers" introduced="^4" plugin="Y">
 <unit bldFile="app/homescreen/homescreenapp/serviceproviders" proFile="serviceproviders.pro" qmakeArgs="-r -config rom"/>
@@ -8645,9 +8645,6 @@
 </component>
 <component name="hswidgetuninstaller" long-name="HS Widget Uninstaller" introduced="^4">
 <unit bldFile="app/homescreen/homescreenapp/hswidgetuninstaller" proFile="hswidgetuninstaller.pro" qmakeArgs="-r -config rom"/>
-</component>
-<component name="homescreenapp_rom" long-name="Home Screen App ROM" introduced="^4">
-<unit bldFile="app/homescreen/homescreenapp" proFile="homescreenapp_exports_to_rom.pri" qmakeArgs="-r -config rom"/>
 </component>
 </collection>
 <collection name="screensaver" long-name="Screen Saver" level="ss">
@@ -8815,14 +8812,6 @@
 </collection>
 </block>
 <block name="techview" level="apps" span="2" long-name="Techview" levels="services ui utils apps1 apps2 apps3">
-<collection name="buildverification" long-name="Build Verification" level="services">
-<component name="autosmoketest" long-name="Auto Smoke Test" filter="gt" purpose="development" introduced="9.1">
-<unit bldFile="app/techview/buildverification/autosmoketest/Group" mrp="app/techview/buildverification/autosmoketest/Group/testtools_autosmoketest.mrp"/>
-</component>
-<component name="smoketest" long-name="Smoke Test" filter="gt" purpose="development">
-<unit bldFile="app/techview/buildverification/smoketest/Group" mrp="app/techview/buildverification/smoketest/Group/testtools_smoketest.mrp"/>
-</component>
-</collection>
 <collection name="techviewplat" long-name="Techview Platform" level="services"/>
 <collection name="techviewui" long-name="Techview UI" level="ui"/>
 <collection name="tv_controlpanel" long-name="Control Panel" level="ui"/>
