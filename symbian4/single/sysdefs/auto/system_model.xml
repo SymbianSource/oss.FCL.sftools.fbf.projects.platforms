@@ -193,62 +193,62 @@
 </component>
 </collection>
 </block>
-<block name="codecs.aricent" level="low" long-name="Aricent Codecs">
-<collection name="utilities" long-name="Aricent Utilities">
-<component name="ariprocessengine" long-name="Aricent Process Engine">
+<block name="codecs.aricent" level="low" long-name="Aricent Codecs" levels="util plugin">
+<collection name="aricent_utilities" long-name="Aricent Utilities" level="util">
+<component name="ariprocessengine" long-name="Aricent Process Engine" filter="sf_build" introduced="^4">
 <unit bldFile="adaptation/codecs.aricent/utilities/ariprocessengine/group"/>
 </component>
-<component name="aristatemachine" long-name="Aricent State Machine">
+<component name="aristatemachine" long-name="Aricent State Machine" filter="sf_build" introduced="^4">
 <unit bldFile="adaptation/codecs.aricent/utilities/aristatemachine/group"/>
 </component>
 </collection>
-<collection name="aaclc_enc" level="plugin">
-<component name="ariaaclcencmmfcodec">
+<collection name="aaclc_enc" long-name="AAC LC Encoding" level="plugin">
+<component name="ariaaclcencmmfcodec" long-name="Aricent AAC LC Encoding MMF Codec" filter="sf_build" introduced="^4" plugin="Y">
 <unit bldFile="adaptation/codecs.aricent/aaclc_enc/ariaaclcencmmfcodec/group"/>
 </component>
 </collection>
-<collection name="amrnb_dec" level="plugin">
-<component name="ariamrnbdecmmfcodec">
+<collection name="amrnb_dec" long-name="AMR NB Decoding" level="plugin">
+<component name="ariamrnbdecmmfcodec" long-name="Aricent AMR NB Decoding MMF Codec" filter="sf_build" introduced="^4" plugin="Y">
 <unit bldFile="adaptation/codecs.aricent/amrnb_dec/ariamrnbdecmmfcodec/group"/>
 </component>
 </collection>
-<collection name="amrnb_enc" level="plugin">
-<component name="ariamrnbencmmfcodec">
+<collection name="amrnb_enc" long-name="AMR NB Encoding" level="plugin">
+<component name="ariamrnbencmmfcodec" long-name="Aricent AMR NB Encoding MMF Codec" filter="sf_build" introduced="^4" plugin="Y">
 <unit bldFile="adaptation/codecs.aricent/amrnb_enc/ariamrnbencmmfcodec/group"/>
 </component>
 </collection>
-<collection name="amrwb_dec" level="plugin">
-<component name="ariamrwbdecmmfcodec">
+<collection name="amrwb_dec" long-name="AMR WB Decoding" level="plugin">
+<component name="ariamrwbdecmmfcodec" long-name="Aricent AMR WB Decoding MMF Codec" filter="sf_build" introduced="^4" plugin="Y">
 <unit bldFile="adaptation/codecs.aricent/amrwb_dec/ariamrwbdecmmfcodec/group"/>
 </component>
 </collection>
-<collection name="h264_dec" level="plugin">
-<component name="arih264dechwdevice">
+<collection name="h264_dec" long-name="H264 Decoding" level="plugin">
+<component name="arih264dechwdevice" long-name="Aricent H264 Decoding Hardware Device" filter="sf_build" introduced="^4" plugin="Y">
 <unit bldFile="adaptation/codecs.aricent/h264_dec/arih264dechwdevice/group"/>
 </component>
 </collection>
-<collection name="h264_enc" level="plugin">
-<component name="arih264enchwdevice">
+<collection name="h264_enc" long-name="H264 Encoding" level="plugin">
+<component name="arih264enchwdevice" long-name="Aricent H264 Encoding Hardware Device" filter="sf_build" introduced="^4" plugin="Y">
 <unit bldFile="adaptation/codecs.aricent/h264_enc/arih264enchwdevice/group"/>
 </component>
 </collection>
-<collection name="heaac_dec" level="plugin">
-<component name="ariheaacdecmmfcodec">
+<collection name="heaac_dec" long-name="HE AAC Decoding" level="plugin">
+<component name="ariheaacdecmmfcodec" long-name="Aricent HE AAC Decoding MMF Codec" filter="sf_build" introduced="^4" plugin="Y">
 <unit bldFile="adaptation/codecs.aricent/heaac_dec/ariheaacdecmmfcodec/group"/>
 </component>
 </collection>
-<collection name="mp3_dec" level="plugin">
-<component name="arimp3decmmfcodec">
+<collection name="mp3_dec" long-name="MP3 Decoding" level="plugin">
+<component name="arimp3decmmfcodec" long-name="Aricent MP3 Decoding MMF Codec" filter="sf_build" introduced="^4" plugin="Y">
 <unit bldFile="adaptation/codecs.aricent/mp3_dec/arimp3decmmfcodec/group"/>
 </component>
 </collection>
-<collection name="mp4asp_dec" level="plugin">
-<component name="arimpeg4aspdechwdevice">
+<collection name="mp4asp_dec" long-name="MP4 ASP Decoding" level="plugin">
+<component name="arimpeg4aspdechwdevice" long-name="Aricent MP4 ASP Decoding Hardware Device" filter="sf_build" introduced="^4" plugin="Y">
 <unit bldFile="adaptation/codecs.aricent/mp4asp_dec/arimpeg4aspdechwdevice/group"/>
 </component>
 </collection>
-<collection name="mp4sp_enc" level="plugin">
-<component name="arimp4spenchwdevice">
+<collection name="mp4sp_enc" long-name="MP4 SP Encoding" level="plugin">
+<component name="arimp4spenchwdevice" long-name="MP4 SP Encoding Hardware Device" filter="sf_build" introduced="^4" plugin="Y">
 <unit bldFile="adaptation/codecs.aricent/mp4sp_enc/arimp4spenchwdevice/group"/>
 </component>
 </collection>
@@ -281,6 +281,12 @@
 <component name="f32test" long-name="File Server Tests" purpose="development">
 <unit bldFile="os/kernelhwsrv/kerneltest/f32test/group" mrp="os/kernelhwsrv/kerneltest/f32test/group/base_f32test.mrp"/>
 </component>
+<component name="rofstests" long-name="Read Only File System Tests" purpose="development">
+<unit bldFile="os/kernelhwsrv/kerneltest/f32test/rofs" mrp="os/kernelhwsrv/kerneltest/f32test/rofs/rofs_tests.mrp"/>
+</component>
+<component name="loadertest" long-name="Loader Tests" purpose="development">
+<unit bldFile="os/kernelhwsrv/kerneltest/f32test/loader" mrp="os/kernelhwsrv/kerneltest/f32test/loader/base_loader.mrp"/>
+</component>
 </collection>
 <collection name="ldds" long-name="Logical Device Drivers" level="adaptation">
 <component name="ethernetldd" long-name="Ethernet Drivers" purpose="optional">
@@ -299,7 +305,7 @@
 <!-- these are LDDs for storage media-->
 <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/locmedia" mrp="os/kernelhwsrv/kernel/eka/drivers/locmedia/base_e32_drivers_locmedia.mrp"/>
 </component>
-<component name="runmodedebugger" long-name="Run Mode Debugger" purpose="mandatory">
+<component name="stopmodedebugdriver" long-name="Stop Mode Debug Driver" purpose="mandatory">
 <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/debug/group" mrp="os/kernelhwsrv/kernel/eka/drivers/debug/group/base_e32_drivers_debug.mrp"/>
 </component>
 <component name="btrace" long-name="Kernel Trace Tool" purpose="mandatory">
@@ -953,7 +959,7 @@
 <component name="tspclientmapper" filter="s60" long-name="TSP Client Mapper">
 <unit bldFile="os/devicesrv/accessoryservices/tspclientmapper/group"/>
 </component>
-<component name="remotecontrolfw" long-name="Remote Control Framework" introduced="9.1" purpose="optional" filter="s60">
+<component name="remotecontrolfw" long-name="Remote Control Framework" introduced="9.1" purpose="optional">
 <unit bldFile="os/devicesrv/accessoryservices/remotecontrolfw/group" mrp="os/devicesrv/accessoryservices/remotecontrolfw/group/bluetooth_remotecontrol.mrp"/>
 </component>
 <component name="gid_pc_tool" filter="s60" long-name="Generic ID PC Tool" class="tool PC">
@@ -973,10 +979,10 @@
 <component name="platformenv" filter="s60" long-name="Platform Environment">
 <unit bldFile="os/devicesrv/commonservices/platformenv/group"/>
 </component>
-<component name="sysutil" long-name="System Utilities" purpose="mandatory" introduced="ER5" filter="s60">
+<component name="sysutil" long-name="System Utilities" purpose="mandatory" introduced="ER5">
 <unit bldFile="os/devicesrv/commonservices/sysutil/group" mrp="os/devicesrv/commonservices/sysutil/group/sysutil.mrp"/>
 </component>
-<component name="activitymanager" long-name="Activity Manager" purpose="mandatory" introduced="ER5" filter="s60">
+<component name="activitymanager" long-name="Activity Manager" purpose="mandatory" introduced="ER5">
 <unit bldFile="os/devicesrv/commonservices/activitymanager/group" mrp="os/devicesrv/commonservices/activitymanager/group/activitymanager.mrp"/>
 </component>
 </collection>
@@ -1047,17 +1053,16 @@
 <component name="vibractrl" filter="s60" long-name="Vibra Control" deprecated="9.1">
 <unit bldFile="os/devicesrv/resourcemgmt/vibractrl/group"/>
 </component>
-<component name="hwresourcesmgr" long-name="Hardware Resources Manager" introduced="^2" purpose="optional" filter="s60">
+<component name="hwresourcesmgr" long-name="Hardware Resources Manager" introduced="^2" purpose="optional">
 <unit bldFile="os/devicesrv/resourcemgmt/hwresourcesmgr/group" mrp="os/devicesrv/resourcemgmt/hwresourcesmgr/group/telephony_hwrm.mrp"/>
 </component>
-<component name="hwresourcesmgrconfig" long-name="Hardware Resources Manager Config" introduced="^3" purpose="optional" filter="s60" class="config">
+<component name="hwresourcesmgrconfig" long-name="Hardware Resources Manager Config" introduced="^3" purpose="optional" class="config">
 <unit bldFile="os/devicesrv/resourcemgmt/hwresourcesmgrconfig" mrp="os/devicesrv/resourcemgmt/hwresourcesmgrconfig/telephony_hwrm-config.mrp"/>
 </component>
 <component name="resourcemgmt_data" filter="s60" long-name="Resource Management Data" class="config">
-<!-- Move exports to a self-contained component. Or leave as a component but move down a dir -->
-<unit bldFile="os/devicesrv/resourcemgmt/group"/>
+<unit bldFile="os/devicesrv/resourcemgmt/data"/>
 </component>
-<component name="powerandmemorynotificationservice" long-name="Power and Memory Notification Service" introduced="6.0" purpose="mandatory" filter="s60">
+<component name="powerandmemorynotificationservice" long-name="Power and Memory Notification Service" introduced="6.0" purpose="mandatory">
 <unit bldFile="os/devicesrv/resourcemgmt/powerandmemorynotificationservice/group" mrp="os/devicesrv/resourcemgmt/powerandmemorynotificationservice/group/syslibs_pwrcli.mrp"/>
 </component>
 </collection>
@@ -1086,16 +1091,16 @@
 <component name="sysuiprovider" filter="s60" long-name="System UI Provider" introduced="^3">
 <unit bldFile="os/devicesrv/sysstatemgmt/sysuiprovider/group"/>
 </component>
-<component name="systemstarter" long-name="System Starter" introduced="9.1" deprecated="^3" purpose="mandatory" filter="s60">
+<component name="systemstarter" long-name="System Starter" introduced="9.1" deprecated="^3" purpose="mandatory">
 <unit bldFile="os/devicesrv/sysstatemgmt/systemstarter/group" mrp="os/devicesrv/sysstatemgmt/systemstarter/group/app-framework_sysstart.mrp"/>
 </component>
-<component name="systemstatemgr" long-name="System State Manager" introduced="^3" purpose="mandatory" filter="s60">
+<component name="systemstatemgr" long-name="System State Manager" introduced="^3" purpose="mandatory">
 <unit bldFile="os/devicesrv/sysstatemgmt/systemstatemgr/group" mrp="os/devicesrv/sysstatemgmt/systemstatemgr/group/app-framework_ssma.mrp"/>
 </component>
-<component name="systemstateplugins" long-name="System State Plugins" introduced="^3" purpose="optional" filter="s60" plugin="Y">
+<component name="systemstateplugins" long-name="System State Plugins" introduced="^3" purpose="optional" plugin="Y">
 <unit bldFile="os/devicesrv/sysstatemgmt/systemstateplugins/group" mrp="os/devicesrv/sysstatemgmt/systemstateplugins/group/app-framework_ssplugins.mrp"/>
 </component>
-<component name="systemstatereferenceplugins" long-name="System State Reference Plugins" introduced="^3" purpose="optional" filter="s60" plugin="Y">
+<component name="systemstatereferenceplugins" long-name="System State Reference Plugins" introduced="^3" purpose="optional" plugin="Y">
 <unit bldFile="os/devicesrv/sysstatemgmt/systemstatereferenceplugins/group" mrp="os/devicesrv/sysstatemgmt/systemstatereferenceplugins/group/app-framework_ssrefplugins.mrp"/>
 </component>
 </collection>
@@ -1105,7 +1110,7 @@
 </component>
 </collection>
 <collection name="systemhealthmanagement" long-name="System Health Management" level="server">
-<component name="systemhealthmgr" long-name="System Health Manager" introduced="^3" purpose="optional" filter="s60">
+<component name="systemhealthmgr" long-name="System Health Manager" introduced="^3" purpose="optional">
 <unit bldFile="os/devicesrv/systemhealthmanagement/systemhealthmgr/group" mrp="os/devicesrv/systemhealthmanagement/systemhealthmgr/group/app-framework_shma.mrp"/>
 </component>
 </collection>
@@ -1185,6 +1190,9 @@
 </component>
 <component name="filebasedcertificateandkeystores" long-name="File-based Certificate and Key Stores" introduced="8.0" purpose="optional">
 <unit bldFile="os/security/cryptoservices/filebasedcertificateandkeystores/group" mrp="os/security/cryptoservices/filebasedcertificateandkeystores/group/security_filetokens.mrp"/>
+</component>
+<component name="rootcertificates" long-name="Root Certificates" introduced="7.0s" purpose="optional" filter="sf_build">
+<unit bldFile="os/security/cryptoservices/rootcertificates/group" mrp="os/security/cryptoservices/rootcertificates/group/rootcerts.mrp"/>
 </component>
 <component name="browserrootcertificates" long-name="Browser Root Certificates" introduced="^2" purpose="optional" filter="sf_build">
 <unit mrp="os/security/cryptoservices/browserrootcertificates/browserrootcerts.mrp"/>
@@ -1524,8 +1532,8 @@
 <component name="wlan_osa_api" long-name="WLAN OSA API" filter="s60" class="api">
 <unit bldFile="os/wlan/wlan_plat/wlan_osa_api/group"/>
 </component>
-<component name="wlan_spia_api" long-name="WLAN SPIA API" filter="s60" class="api">
-<unit bldFile="os/wlan/wlan_plat/wlan_spia_api/group"/>
+<component name="wlan_busaccess_api" long-name="WLAN Bus Access API" filter="s60" class="api">
+<unit bldFile="os/wlan/wlan_plat/wlan_busaccess_api/group"/>
 </component>
 <component name="wlan_hpa_api" long-name="WLAN HPA API" filter="s60" class="api">
 <unit bldFile="os/wlan/wlan_plat/wlan_hpa_api/group"/>
@@ -2198,13 +2206,13 @@
 </block>
 <block name="openmaxil" level="services" levels="adaptation hw-if device-fw devices middleware app-if">
 <collection name="openmaxil_plat" long-name="OpenMAX IL Platform Exports" level="hw-if">
-<component name="khronos_api" long-name="OpenMAX IL API" introduced="^3" purpose="mandatory" class="api">
+<component name="openmaxil_khronos_api" long-name="OpenMAX IL API" introduced="^3" purpose="mandatory" class="api">
 <unit bldFile="os/openmaxil/openmaxil_plat/khronos_api/group" version="1"/>
 </component>
-<component name="symbian_api" long-name="OpenMAX IL Symbian API" introduced="^3" purpose="mandatory" class="api">
+<component name="openmaxil_symbian_api" long-name="OpenMAX IL Symbian API" introduced="^3" purpose="mandatory" class="api">
 <unit bldFile="os/openmaxil/openmaxil_plat/symbian_api/group" version="1"/>
 </component>
-<component name="test_api" long-name="OpenMAX IL test headers" introduced="^3" purpose="development" class="api">
+<component name="openmaxil_test_api" long-name="OpenMAX IL test headers" introduced="^3" purpose="development" class="api">
 <unit bldFile="os/openmaxil/openmaxil_plat/test_api/group" version="1"/>
 </component>
 </collection>
@@ -2219,7 +2227,7 @@
 <unit bldFile="os/openmaxil/omxil_generic/omxilloader/group" version="1"/>
 </component>
 </collection>
-<collection name="tsrc" long-name="OpenMAX IL Test code" level="hw-if">
+<collection name="openmaxil_tsrc" long-name="OpenMAX IL Test code" level="hw-if">
 <component name="xmltestharness" long-name="OpenMAX IL XML Test Harness" introduced="^3" purpose="development">
 <unit bldFile="os/openmaxil/tsrc/xmltestharness/group" version="1"/>
 </component>
@@ -3423,9 +3431,8 @@
 <component name="locationsuplpsy" filter="s60" long-name="Location SUPL PSY" introduced="^3" plugin="Y">
 <unit bldFile="mw/locationsrv/genericpositioningplugins/locationsuplpsy/group"/>
 </component>
-<component name="genericpositioningplugins_build" filter="s60" long-name="Generic Positioning Plugins Build">
-<!-- need to break this up into the other components -->
-<unit bldFile="mw/locationsrv/genericpositioningplugins/group"/>
+<component name="genericpositioningplugins_rom" filter="s60" long-name="Generic Positioning Plugins ROM" class="config">
+<unit bldFile="mw/locationsrv/genericpositioningplugins/rom"/>
 </component>
 </collection>
 <collection name="landmarks" long-name="Landmarks" level="server">
@@ -3483,9 +3490,8 @@
 <component name="ltcontextsourceplugin" filter="s60" long-name="LT Context Source Plugin" introduced="^3" plugin="Y">
 <unit bldFile="mw/locationsrv/locationtriggering/ltcontextsourceplugin/group"/>
 </component>
-<component name="locationtriggering_build" filter="s60" long-name="Location Triggering Build">
-<!--  should remove #include from this and maybe put exports in the above components -->
-<unit bldFile="mw/locationsrv/locationtriggering/group"/>
+<component name="locationtriggering_rom" filter="s60" long-name="Location Triggering ROM" class="config">
+<unit bldFile="mw/locationsrv/locationtriggering/rom"/>
 </component>
 </collection>
 </block>
@@ -3498,21 +3504,21 @@
 <unit bldFile="mw/accesssec/accesssec_plat/eap_type_api/group"/>
 </component>
 <component name="eap_qt_configuration_api" long-name="EAP Qt Configuration API" filter="s60" introduced="^4" class="api">
-<unit bldFile="mw/accesssec/accesssec_plat" proFile="accesssec_plat.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/accesssec/accesssec_plat" proFile="accesssec_plat.pro"/>
 </component>
 </collection>
 <collection name="securitysettings" long-name="WLAN Security Settings" level="specific">
 <component name="accesssec_qtconfigutils" filter="s60" long-name="Access Security Config Utils" introduced="^4">
-<unit bldFile="mw/accesssec/securitysettings/qtconfigutils" proFile="qtconfigutils.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/accesssec/securitysettings/qtconfigutils" proFile="qtconfigutils.pro"/>
 </component>
 <component name="cpwlansecurityuiplugins" filter="s60" long-name="Control Panel WLAN Security UI Plugins" introduced="^4" plugin="Y">
-<unit bldFile="mw/accesssec/securitysettings/cpwlansecurityuiplugins" proFile="cpwlansecurityuiplugins.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/accesssec/securitysettings/cpwlansecurityuiplugins" proFile="cpwlansecurityuiplugins.pro"/>
 </component>
 <component name="cpeapuiplugins" filter="s60" long-name="Control Panel EAP UI Pugins" introduced="^4" plugin="Y">
-<unit bldFile="mw/accesssec/securitysettings/cpeapuiplugins" proFile="cpeapuiplugins.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/accesssec/securitysettings/cpeapuiplugins" proFile="cpeapuiplugins.pro"/>
 </component>
 <component name="eapqtdialogs" filter="s60" long-name="EAP Qt Dialogs" introduced="^4">
-<unit bldFile="mw/accesssec/securitysettings/eapqtdialogs" proFile="eapqtdialogs.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/accesssec/securitysettings/eapqtdialogs" proFile="eapqtdialogs.pro"/>
 </component>
 </collection>
 <collection name="eapol" long-name="EAPOL" level="framework">
@@ -3620,29 +3626,26 @@
 <component name="cmmgr" filter="s60" long-name="CM Manager">
 <unit bldFile="mw/ipconnmgmt/cmmanager/cmmgr/group"/>
 </component>
-<component name="connection_settings_shim" long-name="Connection Settings Shim" introduced="^4">
-<unit bldFile="mw/ipconnmgmt/cmmanager/connection_settings_shim" proFile="connection_settings_shim.pro" qmakeArgs="-r"/>
+<component name="connection_settings_shim" long-name="Connection Settings Shim" introduced="^4" filter="s60">
+<unit bldFile="mw/ipconnmgmt/cmmanager/connection_settings_shim" proFile="connection_settings_shim.pro"/>
 </component>
-<component name="cmapplsettingsui" long-name="Connection Settings UI" introduced="^4">
-<unit bldFile="mw/ipconnmgmt/cmmanager/cmapplsettingsui" proFile="cmapplsettingsui.pro" qmakeArgs="-r"/>
+<component name="cmapplsettingsui" long-name="Connection Settings UI" introduced="^4" filter="s60">
+<unit bldFile="mw/ipconnmgmt/cmmanager/cmapplsettingsui" proFile="cmapplsettingsui.pro"/>
 </component>
-<component name="cpipsettingsplugin" long-name="Connection Settings IP Plugin" introduced="^4" plugin="Y">
-<unit bldFile="mw/ipconnmgmt/cmmanager/cpipsettingsplugin" proFile="cpipsettingsplugin.pro" qmakeArgs="-r"/>
+<component name="cpipsettingsplugin" long-name="Connection Settings IP Plugin" introduced="^4" filter="s60" plugin="Y">
+<unit bldFile="mw/ipconnmgmt/cmmanager/cpipsettingsplugin" proFile="cpipsettingsplugin.pro"/>
 </component>
-<component name="cpdestinationplugin" long-name="CP Destination Plugin" introduced="^4" plugin="Y">
-<unit bldFile="mw/ipconnmgmt/cmmanager/cpdestinationplugin" proFile="cpdestinationplugin.pro" qmakeArgs="-r"/>
+<component name="cpdestinationplugin" long-name="CP Destination Plugin" introduced="^4" filter="s60" plugin="Y">
+<unit bldFile="mw/ipconnmgmt/cmmanager/cpdestinationplugin" proFile="cpdestinationplugin.pro"/>
 </component>
-<component name="cppacketdataapplugin" long-name="CP Packet Data AP Pplugin" introduced="^4" plugin="Y">
-<unit bldFile="mw/ipconnmgmt/cmmanager/cppacketdataapplugin" proFile="cppacketdataapplugin.pro" qmakeArgs="-r"/>
+<component name="cppacketdataapplugin" long-name="CP Packet Data AP Pplugin" introduced="^4" filter="s60" plugin="Y">
+<unit bldFile="mw/ipconnmgmt/cmmanager/cppacketdataapplugin" proFile="cppacketdataapplugin.pro"/>
 </component>
-<component name="cpwlanapplugin" long-name="CP WLAN AP Plugin" introduced="^4" plugin="Y">
-<unit bldFile="mw/ipconnmgmt/cmmanager/cpwlanapplugin" proFile="cpwlanapplugin.pro" qmakeArgs="-r"/>
+<component name="cpwlanapplugin" long-name="CP WLAN AP Plugin" introduced="^4" filter="s60" plugin="Y">
+<unit bldFile="mw/ipconnmgmt/cmmanager/cpwlanapplugin" proFile="cpwlanapplugin.pro"/>
 </component>
 </collection>
 <collection name="connectionmonitoring" long-name="Connection Monitoring" level="server">
-<component name="connectionmonitorui" filter="s60" long-name="Connection Monitor UI">
-<unit bldFile="mw/ipconnmgmt/connectionmonitoring/connectionmonitorui/group"/>
-</component>
 <component name="connmon" filter="s60" long-name="Connection Monitor">
 <!-- either split into two components, or #include from a common bld.inf -->
 <unit bldFile="mw/ipconnmgmt/connectionmonitoring/connmon/connectionmonitor/group"/>
@@ -3651,22 +3654,22 @@
 <component name="connmonext" filter="s60" long-name="Connection Monitor Extension API">
 <unit bldFile="mw/ipconnmgmt/connectionmonitoring/connmonext/group"/>
 </component>
-<component name="cellularindicatorplugin" long-name="Cellular Indicator Plugin" introduced="^4" plugin="Y">
-<unit bldFile="mw/ipconnmgmt/connectionmonitoring/cellularindicatorplugin" proFile="cellularindicatorplugin.pro" qmakeArgs="-r"/>
+<component name="cellularindicatorplugin" long-name="Cellular Indicator Plugin" introduced="^4" filter="s60" plugin="Y">
+<unit bldFile="mw/ipconnmgmt/connectionmonitoring/cellularindicatorplugin" proFile="cellularindicatorplugin.pro"/>
 </component>
-<component name="indicatorobserver" long-name="Indicator Observer" introduced="^4">
-<unit bldFile="mw/ipconnmgmt/connectionmonitoring/indicatorobserver" proFile="indicatorobserver.pro" qmakeArgs="-r"/>
+<component name="indicatorobserver" long-name="Indicator Observer" introduced="^4" filter="s60">
+<unit bldFile="mw/ipconnmgmt/connectionmonitoring/indicatorobserver" proFile="indicatorobserver.pro"/>
 </component>
-<component name="connectionmonitoringnview" long-name="Connection View" introduced="^4">
-<unit bldFile="mw/ipconnmgmt/connectionmonitoring/connectionview" proFile="connectionview.pro" qmakeArgs="-r"/>
+<component name="connectionmonitoringnview" long-name="Connection View" introduced="^4" filter="s60">
+<unit bldFile="mw/ipconnmgmt/connectionmonitoring/connectionview" proFile="connectionview.pro"/>
 </component>
 </collection>
 <collection name="connectionutilities" long-name="Connection Utilities" level="utils">
 <component name="connectiondialogs" filter="s60" long-name="Connection Dialogs">
 <unit bldFile="mw/ipconnmgmt/connectionutilities/connectiondialogs/group"/>
 </component>
-<component name="confirmqueries" long-name="Confirm Queries" introduced="^4">
-<unit bldFile="mw/ipconnmgmt/connectionutilities/confirmqueries" proFile="confirmqueries.pro" qmakeArgs="-r"/>
+<component name="confirmqueries" long-name="Confirm Queries" introduced="^4" filter="s60">
+<unit bldFile="mw/ipconnmgmt/connectionutilities/confirmqueries" proFile="confirmqueries.pro"/>
 </component>
 </collection>
 <collection name="keepalive" long-name="Keep Alive" level="server">
@@ -3687,15 +3690,13 @@
 <component name="dbcreatorexe" filter="s60" long-name="DB Creator" introduced="9.3">
 <unit bldFile="mw/ipconnmgmt/dbcreator/dbcreatorexe/group"/>
 </component>
-<component name="dbcreator_build" filter="s60" long-name="DB Creator Build" introduced="9.3">
-<!-- move exports to another component, this is needed for the #ifndef for commsdatcreatorrfsplugin until configuration is in place-->
-<unit bldFile="mw/ipconnmgmt/dbcreator/group"/>
+<component name="dbcreator_conf" filter="s60" long-name="DB Creator Config" introduced="9.3" class="config">
+<unit bldFile="mw/ipconnmgmt/dbcreator/conf"/>
 </component>
 </collection>
 <collection name="ipconnmgmt_info" long-name="IP Connectivity Management Info" level="api">
-<component name="ipcm_build" filter="s60" long-name="IP Connectivity Management Build">
-<!-- need to move exports to another component, or make this a config component and revmove the #includes -->
-<unit bldFile="mw/ipconnmgmt/group"/>
+<component name="ipcm_data" filter="s60" long-name="IP Connectivity Management Data" class="config">
+<unit bldFile="mw/ipconnmgmt/data"/>
 </component>
 </collection>
 </block>
@@ -3795,11 +3796,11 @@
 </component>
 </collection>
 <collection name="realtimenetprots" long-name="Real Time Net Protocols" level="server">
-<component name="symrtp" long-name="RTP" introduced="9.0" purpose="optional">
+<component name="symrtp" long-name="RTP" introduced="9.0" filter="s60" purpose="optional">
 <!-- Real Time Data Protocol -->
 <unit bldFile="mw/ipappprotocols/realtimenetprots/rtp/group" mrp="mw/ipappprotocols/realtimenetprots/rtp/group/mm-protocols_rtp.mrp"/>
 </component>
-<component name="sipfw" long-name="SIP Framework" introduced="9.2" purpose="optional">
+<component name="sipfw" long-name="SIP Framework" introduced="9.2" filter="s60" purpose="optional">
 <unit bldFile="mw/ipappprotocols/realtimenetprots/sipfw/Group" mrp="mw/ipappprotocols/realtimenetprots/sipfw/Group/mm-protocols_SIP2_Com.mrp" version="2"/>
 </component>
 </collection>
@@ -3821,7 +3822,7 @@
 </component>
 </collection>
 <collection name="sipproviderplugins" long-name="SIP Provider Plugins" level="conn">
-<component name="sipprovider" long-name="SIP Provider" introduced="^2" purpose="optional" plugin="Y">
+<component name="sipprovider" long-name="SIP Provider" introduced="^2" filter="s60" purpose="optional" plugin="Y">
 <unit bldFile="mw/ipappprotocols/sipproviderplugins/sipprovider/group" mrp="mw/ipappprotocols/sipproviderplugins/sipprovider/group/mm-protocols_SipProvider.mrp"/>
 </component>
 </collection>
@@ -3854,31 +3855,31 @@
 </collection>
 <collection name="wlanutilities" long-name="WLAN Utilities" level="generic">
 <component name="wlanqtutilities" filter="s60" long-name="WLAN Qt Utilities" introduced="^4">
-<unit bldFile="mw/wirelessacc/wlanutilities/wlanqtutilities" proFile="wlanqtutilities.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/wirelessacc/wlanutilities/wlanqtutilities" proFile="wlanqtutilities.pro"/>
 </component>
 <component name="eapwizard " filter="s60" long-name="EAP Wizard" introduced="^4">
-<unit bldFile="mw/wirelessacc/wlanutilities/eapwizard" proFile="eapwizard.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/wirelessacc/wlanutilities/eapwizard" proFile="eapwizard.pro"/>
 </component>
 <component name="wpswizard " filter="s60" long-name="WPS Wizard" introduced="^4">
-<unit bldFile="mw/wirelessacc/wlanutilities/wpswizard" proFile="wpswizard.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/wirelessacc/wlanutilities/wpswizard" proFile="wpswizard.pro"/>
 </component>
 <component name="wlanwizard " filter="s60" long-name="WLAN Wizard" introduced="^4">
-<unit bldFile="mw/wirelessacc/wlanutilities/wlanwizard" proFile="wlanwizard.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/wirelessacc/wlanutilities/wlanwizard" proFile="wlanwizard.pro"/>
 </component>
 <component name="wlansniffer" filter="s60" long-name="WLAN Sniffer">
-<unit bldFile="mw/wirelessacc/wlanutilities/wlansniffer" proFile="wlansniffer.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/wirelessacc/wlanutilities/wlansniffer" proFile="wlansniffer.pro"/>
 </component>
 <component name="wlanentryplugin" filter="s60" long-name="WLAN Entry Plugin" plugin="Y">
-<unit bldFile="mw/wirelessacc/wlanutilities/wlanentryplugin" proFile="wlanentryplugin.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/wirelessacc/wlanutilities/wlanentryplugin" proFile="wlanentryplugin.pro"/>
 </component>
 <component name="wlanindicatorplugin" filter="s60" long-name="WLAN Indicator Plugin" plugin="Y">
-<unit bldFile="mw/wirelessacc/wlanutilities/wlanindicatorplugin" proFile="wlanindicatorplugin.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/wirelessacc/wlanutilities/wlanindicatorplugin" proFile="wlanindicatorplugin.pro"/>
 </component>
 <component name="cpwlansettingsplugin" filter="s60" long-name="WLAN Settings Control Panel Plugin" introduced="^4" plugin="Y">
-<unit bldFile="mw/wirelessacc/wlanutilities/cpwlansettingsplugin" proFile="cpwlansettingsplugin.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/wirelessacc/wlanutilities/cpwlansettingsplugin" proFile="cpwlansettingsplugin.pro"/>
 </component>
 <component name="wlanlogin" filter="s60" long-name="WLAN Login" introduced="^4">
-<unit bldFile="mw/wirelessacc/wlanutilities/wlanlogin" proFile="wlanlogin.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/wirelessacc/wlanutilities/wlanlogin" proFile="wlanlogin.pro"/>
 </component>
 </collection>
 </block>
@@ -4421,6 +4422,18 @@
 <unit bldFile="mw/legacypresence/pressrv_plat/simple_instant_msg_api/group"/>
 </component>
 </collection>
+<collection name="xdmengine" long-name="XDM Engine" level="engine">
+<!-- collection is really a component. Need to move down a directory (eg xdm/xdmengine)-->
+<component name="xdmengine_build" filter="s60" long-name="XDM Engine Build">
+<unit bldFile="mw/legacypresence/xdmengine/group"/>
+</component>
+</collection>
+<collection name="simpleengine" long-name="SIMPLE Engine" level="engine">
+<!-- collection is really a component. Need to move down a directory-->
+<component name="simpleengine_build" filter="s60" long-name="SIMPLE Engine Build" class="placeholder">
+<!-- <unit bldFile="simpleengine/group"/> not built -->
+</component>
+</collection>
 </block>
 <block name="searchsrv" level="specific" long-name="Search Services" levels="services engine generic api">
 <collection name="searchsrv_plat" long-name="Search Services Platform Interfaces" level="api">
@@ -4672,11 +4685,6 @@
 </collection>
 </block>
 <block name="remoteconn" level="generic" long-name="Remote Connectivity" levels="plugin framework server generic specific">
-<collection name="remoteconn_info" long-name="Remote Connectivity Info" level="specific">
-<component name="remoteconn_metadata" long-name="Remote Connectivity Metadata" introduced="^2" purpose="development" class="config PC">
-<unit mrp="mw/remoteconn/remoteconn_info/remoteconn_metadata/remoteconn_metadata.mrp"/>
-</component>
-</collection>
 <collection name="remoteconn_plat" long-name="Remote Connectivity Platform Interfaces" level="specific">
 <component name="dialup_connection_status_api" long-name="Dialup Connection Status API" filter="s60" class="api">
 <unit bldFile="mw/remoteconn/remoteconn_plat/dialup_connection_status_api/group"/>
@@ -4712,10 +4720,10 @@
 </component>
 </collection>
 <collection name="mtptransports" long-name="MTP Transports" level="plugin">
-<component name="mtpusbtransport" long-name="MTP USB Transport" introduced="^2" purpose="optional" filter="s60" plugin="Y">
+<component name="mtpusbtransport" long-name="MTP USB Transport" introduced="^2" purpose="optional" plugin="Y">
 <unit bldFile="mw/remoteconn/mtptransports/mtpusbtransport/group" mrp="mw/remoteconn/mtptransports/mtpusbtransport/group/mtp_usbsic.mrp"/>
 </component>
-<component name="mtpptpiptransport" long-name="MTP PTP-IP Transport" introduced="^3" purpose="optional" filter="s60" plugin="Y">
+<component name="mtpptpiptransport" long-name="MTP PTP-IP Transport" introduced="^3" purpose="optional" plugin="Y">
 <unit bldFile="mw/remoteconn/mtptransports/mtpptpiptransport/group" mrp="mw/remoteconn/mtptransports/mtpptpiptransport/group/mtp_ptpip.mrp"/>
 </component>
 <component name="mtpcontroller" long-name="MTP Controller" introduced="^3" purpose="optional" plugin="Y">
@@ -4723,35 +4731,38 @@
 </component>
 </collection>
 <collection name="mtpfws" long-name="MTP Frameworks" level="framework">
-<component name="mtpfw" long-name="MTP Framework" introduced="^2" purpose="optional" filter="s60">
+<component name="mtpfw" long-name="MTP Framework" introduced="^2" purpose="optional">
 <unit bldFile="mw/remoteconn/mtpfws/mtpfw/group" mrp="mw/remoteconn/mtpfws/mtpfw/group/mtp_framework.mrp"/>
 </component>
-<component name="devdpextn" long-name="MTP Device Provider Extension" introduced="^4" purpose="optional" filter="s60">
+<component name="devdpextn" long-name="MTP Device Provider Extension" introduced="^4" purpose="optional">
 <!-- can't have a component inside another component. Need to move to mtpfws/devdpextn/group -->
 <unit bldFile="mw/remoteconn/mtpfws/mtpfw/dataproviders/devdp/devdpextn/group"/>
 </component>
 </collection>
 <collection name="mtpdataproviders" long-name="MTP Data Providers" level="generic">
-<component name="mtpfileandfolderdp" long-name="MTP File and Folder Provider" introduced="^2" purpose="optional" filter="s60" plugin="Y">
+<component name="mtpfileandfolderdp" long-name="MTP File and Folder Provider" introduced="^2" purpose="optional" plugin="Y">
 <unit bldFile="mw/remoteconn/mtpdataproviders/mtpfileandfolderdp/group" mrp="mw/remoteconn/mtpdataproviders/mtpfileandfolderdp/group/mtp_filedp.mrp"/>
 </component>
-<component name="mtpimagedp" long-name="MTP Image Data Provider" introduced="^3" purpose="optional" filter="s60" plugin="Y">
+<component name="mtpimagedp" long-name="MTP Image Data Provider" filter="gt" introduced="^3" purpose="optional" plugin="Y">
 <unit bldFile="mw/remoteconn/mtpdataproviders/mtpimagedp/group" mrp="mw/remoteconn/mtpdataproviders/mtpimagedp/group/mtp_imagedp.mrp"/>
 </component>
-<component name="mtppictbridgedp" long-name="MTP PictBridge Data Provider" introduced="^3" purpose="optional" filter="s60" plugin="Y">
+<component name="mtppictbridgedp" long-name="MTP PictBridge Data Provider" introduced="^3" purpose="optional" filter="gt" plugin="Y">
 <unit bldFile="mw/remoteconn/mtpdataproviders/mtppictbridgedp/group" mrp="mw/remoteconn/mtpdataproviders/mtppictbridgedp/group/mtp_pictbridgedp.mrp"/>
 </component>
 <component name="pictbridgeengine" long-name="MTP PictBridge Engine" introduced="^4" purpose="optional" filter="s60">
 <!-- can't have a component inside another component. Need to move to mtpdataproviders/pictbridgeengine/group -->
 <unit bldFile="mw/remoteconn/mtpdataproviders/mtppictbridgedp/pictbridgeengine/group"/>
 </component>
-<component name="mtpplaybackcontroldp" long-name="MTP Playback Control Data Provider" introduced="^4" purpose="optional" filter="s60" plugin="Y">
+<component name="mtpplaybackcontroldp" long-name="MTP Playback Control Data Provider" introduced="^4" filter="s60" purpose="optional" plugin="Y">
 <unit bldFile="mw/remoteconn/mtpdataproviders/mtpplaybackcontroldp/group" mrp="mw/remoteconn/mtpdataproviders/mtpplaybackcontroldp/group/mtp_playbackcontroldp.mrp"/>
 </component>
 </collection>
 <collection name="backupandrestore" long-name="Backup and Restore" level="specific">
-<component name="backupengine" long-name="Backup Engine" introduced="9.0" purpose="optional" filter="s60">
+<component name="backupengine" long-name="Backup Engine" introduced="9.0" purpose="optional">
 <unit bldFile="mw/remoteconn/backupandrestore/backupengine/group" mrp="mw/remoteconn/backupandrestore/backupengine/group/connectivity_backupengine.mrp"/>
+</component>
+<component name="backuptest" long-name="Backup Test" introduced="^2" purpose="development">
+<unit bldFile="mw/remoteconn/backupandrestore/backuptest/group" mrp="mw/remoteconn/backupandrestore/backuptest/group/connectivity_backuptest.mrp"/>
 </component>
 </collection>
 <collection name="obex" long-name="OBEX" level="generic">
@@ -4765,22 +4776,22 @@
 </block>
 <block name="srvdiscovery" level="generic" long-name="Service Discovery and Usage" levels="plugin framework server generic specific">
 <collection name="upnpstack_plat" long-name="UPnP Stack Platform Interfaces" level="specific">
-<component name="upnp_device_api" long-name="UPnP Device API" purpose="optional" introduced="^3" class="api">
+<component name="upnp_device_api" long-name="UPnP Device API" purpose="optional" introduced="^3" filter="s60" class="api">
 <unit bldFile="mw/srvdiscovery/upnp/upnpstack_plat/upnp_device_api/group"/>
 </component>
-<component name="upnp_common_api" long-name="UPnP Common API" purpose="optional" introduced="^3" class="api">
+<component name="upnp_common_api" long-name="UPnP Common API" purpose="optional" introduced="^3" filter="s60" class="api">
 <unit bldFile="mw/srvdiscovery/upnp/upnpstack_plat/upnp_common_api/group"/>
 </component>
-<component name="upnp_utils_api" long-name="UPnP Utils API" purpose="optional" introduced="^3" class="api">
+<component name="upnp_utils_api" long-name="UPnP Utils API" purpose="optional" introduced="^3" filter="s60" class="api">
 <unit bldFile="mw/srvdiscovery/upnp/upnpstack_plat/upnp_utils_api/group"/>
 </component>
-<component name="upnp_control_point_api" long-name="UPnP Control Point API" purpose="optional" introduced="^3" class="api">
+<component name="upnp_control_point_api" long-name="UPnP Control Point API" purpose="optional" introduced="^3" filter="s60" class="api">
 <unit bldFile="mw/srvdiscovery/upnp/upnpstack_plat/upnp_control_point_api/group"/>
 </component>
-<component name="upnp_httpserver_api" long-name="UPnP HTTP Server API" purpose="optional" introduced="^3" class="api">
+<component name="upnp_httpserver_api" long-name="UPnP HTTP Server API" purpose="optional" introduced="^3" filter="s60" class="api">
 <unit bldFile="mw/srvdiscovery/upnp/upnpstack_plat/upnp_httpserver_api/group"/>
 </component>
-<component name="upnp_http_transfer_api" long-name="UPnP HTTP Transfer API" purpose="optional" introduced="^3" class="api">
+<component name="upnp_http_transfer_api" long-name="UPnP HTTP Transfer API" purpose="optional" introduced="^3" filter="s60" class="api">
 <unit bldFile="mw/srvdiscovery/upnp/upnpstack_plat/upnp_http_transfer_api/group"/>
 </component>
 </collection>
@@ -4792,6 +4803,14 @@
 <collection name="upnp" long-name="UPnP" level="server">
 <component name="upnpstack" long-name="UPnP Stack" introduced="^3" purpose="optional" filter="s60">
 <unit bldFile="mw/srvdiscovery/upnp/upnpstack/group"/>
+</component>
+</collection>
+<collection name="srvdiscovery_services" long-name="Service Discovery Services" level="server">
+<component name="terminalmodeservice_plat" long-name="Terminal Mode Service Platform Interfaces" introduced="^4" filter="s60" class="api">
+<unit bldFile="mw/srvdiscovery/services/terminalmodeservice_plat/group"/>
+</component>
+<component name="terminalmodeservice" long-name="Terminal Mode Service" introduced="^4" filter="s60">
+<unit bldFile="mw/srvdiscovery/services/terminalmodeservice/group"/>
 </component>
 </collection>
 <collection name="srvdiscovery_info" long-name="Service Discovery and Usage Info" level="specific">
@@ -5178,7 +5197,7 @@
 </collection>
 <collection name="usbengines" long-name="USB Engines" level="generic">
 <component name="usbotgwatcher" filter="s60" long-name="USB OTG Watcher">
-<unit bldFile="mw/usbservices/usbengines/usbotgwatcher/group"/>
+<unit bldFile="mw/usbservices/usbengines/usbotgwatcher/group" filter="!test"/>
 </component>
 <component name="usbwatcher" filter="s60" long-name="USB Watcher">
 <unit bldFile="mw/usbservices/usbengines/usbwatcher/group"/>
@@ -5209,7 +5228,7 @@
 </collection>
 <collection name="usbuis" long-name="USB UIs" level="specific">
 <component name="usbuinotif" filter="s60" long-name="USB UI Notifiers">
-<unit bldFile="mw/usbservices/usbuis/usbuinotif" filter="!test" proFile="usbuinotif.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/usbservices/usbuis/usbuinotif" filter="!test" proFile="usbuinotif.pro"/>
 </component>
 <component name="imageprintuiprovider" filter="s60" long-name="ImagePrint UI Provider" plugin="Y">
 <unit bldFile="mw/usbservices/usbuis/imageprintuiprovider/group"/>
@@ -5218,10 +5237,15 @@
 <unit bldFile="mw/usbservices/usbuis/imageprintui/group"/>
 </component>
 <component name="usbsettingsapp" long-name="USB Settings Application" introduced="^4" filter="s60">
-<unit bldFile="mw/usbservices/usbuis/usbsettingsapp" proFile="usbsettingsapp.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/usbservices/usbuis/usbsettingsapp" proFile="usbsettingsapp.pro"/>
 </component>
 <component name="usbindicatorplugin" long-name="USB Indicator Plugin" introduced="^4" filter="s60" plugin="Y">
-<unit bldFile="mw/usbservices/usbuis/usbindicatorplugin" proFile="usbindicatorplugin.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/usbservices/usbuis/usbindicatorplugin" proFile="usbindicatorplugin.pro"/>
+</component>
+</collection>
+<collection name="usb_testtools" long-name="USB Test Tools" level="server">
+<component name="usb_stubsrv" long-name="USB Stub Server" introduced="^4" filter="s60">
+<unit bldFile="mw/usbservices/tsrc/testtools/stubsrv/group"/>
 </component>
 </collection>
 </block>
@@ -5297,17 +5321,8 @@
 </component>
 </collection>
 <collection name="metadataengine" long-name="Metadata Engine" level="eng">
-<component name="metadataengine_common" filter="s60" long-name="Metadata Engine Common" introduced="^2">
-<unit bldFile="mw/mds/metadataengine/common/group"/>
-</component>
-<component name="metadataengine_server" filter="s60" long-name="Metadata Engine Server" introduced="^2">
-<unit bldFile="mw/mds/metadataengine/server/group"/>
-</component>
-<component name="metadataengine_client" filter="s60" long-name="Metadata Engine Client" introduced="^2">
-<unit bldFile="mw/mds/metadataengine/client/group"/>
-</component>
 <component name="metadataengine_build" filter="s60" long-name="Metadata Engine Build" introduced="^2">
-<!--make this collection a single component, or split this bld.inf into the other units  -->
+<!--collection is really a component. Move down a directory  -->
 <unit bldFile="mw/mds/metadataengine/group"/>
 </component>
 </collection>
@@ -5336,17 +5351,13 @@
 <component name="locationmanager_client" filter="s60" long-name="Location Manager Client" introduced="^2">
 <unit bldFile="mw/mds/locationmanager/client/group"/>
 </component>
-<component name="locationmanager_build" filter="s60" long-name="Location Manager Build" introduced="^2">
-<!--make this collection a single component, or split this bld.inf into the other units  -->
-<unit bldFile="mw/mds/locationmanager/group"/>
+<component name="locationmanager_data" filter="s60" long-name="Location Manager Data" introduced="^2">
+<unit bldFile="mw/mds/locationmanager/data"/>
 </component>
 </collection>
 <collection name="contextengine" long-name="Context Engine" level="eng">
-<component name="contextengine_plugins" filter="s60" long-name="Context Engine Plugins" introduced="^2" plugin="Y">
-<unit bldFile="mw/mds/contextengine/plugins/group"/>
-</component>
 <component name="contextengine_build" filter="s60" long-name="Context Engine Build" introduced="^2">
-<!--make this collection a single component, or make this unit self-contained  -->
+<!-- collection is really a component. Move down a directory -->
 <unit bldFile="mw/mds/contextengine/group"/>
 </component>
 </collection>
@@ -5375,9 +5386,9 @@
 <component name="harvester_client" filter="s60" long-name="Harvester Client" introduced="^2">
 <unit bldFile="mw/mds/harvester/client/group"/>
 </component>
-<component name="harvester_build" filter="s60" long-name="Harvester Build" introduced="^2">
-<!-- split these exports into the other components -->
-<unit bldFile="mw/mds/harvester/group"/>
+<component name="harvester_data" filter="s60" long-name="Harvester Data" introduced="^2" class="config">
+<!-- consider moving these exports into the other components -->
+<unit bldFile="mw/mds/harvester/data"/>
 </component>
 </collection>
 <collection name="watchdog" long-name="Watchdog" level="server">
@@ -5393,25 +5404,17 @@
 </component>
 </collection>
 <collection name="mds_info" long-name="Metadata Services Info" level="int">
-<component name="mds_build" filter="s60" long-name="Metadata Services Build" introduced="^2">
-<!-- consider distributiing this into the rest of the components in the package -->
-<unit bldFile="mw/mds/group"/>
+<component name="mds_rom" filter="s60" long-name="Metadata Services ROM" introduced="^2" class="config">
+<!-- consider moving these exports into the other collections -->
+<unit bldFile="mw/mds/rom"/>
 </component>
 </collection>
 </block>
 <block name="videoutils" level="specific" long-name="Video Utils" levels="eng util if">
 <collection name="videoutils_plat" long-name="Video Utils Platform Interfaces" level="if">
-<component name="videoscheduler_api" long-name="Video Scheduler API" filter="s60" class="api">
-<unit bldFile="mw/videoutils/videoutils_plat/videoscheduler_api/group"/>
-</component>
 <component name="videoplayer_constants_api" long-name="Videoplayer Constants API" filter="s60" class="api">
 <unit bldFile="mw/videoutils/videoutils_plat/videoplayer_constants_api/group"/>
 </component>
-</collection>
-<collection name="videoscheduler" long-name="Video Scheduler" level="util">
-<!-- don't build these -->
-<component name="schedulerclient" filter="s60" long-name="Video Scheduler Client"/>
-<component name="schedulerserver" filter="s60" long-name="Video Scheduler Server"/>
 </collection>
 </block>
 <block name="mmmw" level="generic" long-name="Multimedia Middleware" levels="plugin framework server generic specific">
@@ -5548,48 +5551,46 @@
 </collection>
 </block>
 <block name="gstreamer" level="generic" long-name="GStreamer" levels="plugin core api">
-<!-- Uncomment all units when configuration is in place. All currently #included from gstreamer_build -->
 <!-- structure matches planned directory layout -->
 <collection name="gstreamerfw" long-name="GStreamer Framework" level="core">
-<component name="gstreamer_core" long-name="GStreamer Core" introduced="^3" class="placeholder">
-<!--<unit bldFile="gstreamer_core/group"/>-->
+<component name="gstreamer_core" long-name="GStreamer Core" introduced="^3" filter="s60">
+<unit bldFile="mw/gstreamer/gstreamer_core/group"/>
 </component>
 </collection>
 <collection name="gst_plugins" long-name="GStreamer Plugins" level="plugin">
-<component name="gst_plugins_base" long-name="GStreamer Base Plugins" introduced="^3" class="placeholder">
-<!--<unit bldFile="gst_plugins_base/group"/>-->
+<component name="gst_plugins_base" long-name="GStreamer Base Plugins" introduced="^3" filter="s60">
+<unit bldFile="mw/gstreamer/gst_plugins_base/group"/>
 </component>
-<component name="gst_plugins_good" long-name="GStreamer Good Plugins" introduced="^3" class="placeholder">
-<!--<unit bldFile="gst_plugins_good/group"/>-->
+<component name="gst_plugins_good" long-name="GStreamer Good Plugins" introduced="^3" filter="s60">
+<unit bldFile="mw/gstreamer/gst_plugins_good/group"/>
 </component>
-<component name="gst_plugins_symbian" filter="s60" long-name="GStreamer Sybmian Plugins" introduced="^3" class="placeholder">
-<!--<unit bldFile="gst_plugins_symbian/group" filter="!test"/>-->
-<!-- add ,pref_test,TA_GSTREAMER filters later -->
+<component name="gst_plugins_symbian" filter="s60" long-name="GStreamer Sybmian Plugins" introduced="^3">
+<unit bldFile="mw/gstreamer/gst_plugins_symbian/group" filter="!test"/>
 </component>
 </collection>
 <collection name="gstregistrygenerator" long-name="GStreamer Registry Generator" level="core">
-<!-- collection is really a component. Move down an directory -->
-<component name="gstregistrygenerator_build" filter="s60" long-name="GStreamer Registry Generator Build" introduced="^3" class="placeholder">
-<!-- <unit bldFile="gstregistrygenerator/group"/>-->
+<!-- collection is really a component. Move down an directory  -->
+<component name="gstregistrygenerator_build" filter="s60" long-name="GStreamer Registry Generator Build" introduced="^3">
+<unit bldFile="mw/gstreamer/gstregistrygenerator/group"/>
 </component>
 </collection>
-<collection name="gst_test_apps" long-name="GStreamer Test Applications" level="api">
-<component name="gst_player" filter="s60" long-name="GStreamer Player" introduced="^3" purpose="development" class="placeholder">
-<!-- <unit bldFile="gst_test_apps/gst_player/group"/>-->
-</component>
-</collection>
+<collection name="gst_test_apps" long-name="GStreamer Test Applications" level="api"/>
 <collection name="gstreamer_info" long-name="GStreamer Info" level="api">
-<component name="gstreamer_build" filter="s60" long-name="GStreamer Build" introduced="^3">
-<!-- make this a ROM component or split up instead? -->
-<unit bldFile="mw/gstreamer/group"/>
+<component name="gstreamer_rom" filter="s60" long-name="GStreamer ROM" introduced="^3" class="config">
+<unit bldFile="mw/gstreamer/rom"/>
 </component>
 </collection>
 </block>
 <block name="helix" level="generic" long-name="Helix" levels="plugin framework server generic specific">
 <collection name="helix_ren" long-name="Helix Engine" level="framework">
-<!-- what does "ren" stand for? -->
-<component name="helix_stub" filter="s60" long-name="Helix Stub" introduced="^2" class="api">
+<component name="helix_ren_build" filter="s60" long-name="Helix Engine Build" introduced="^2">
+<unit bldFile="mw/helix/helix_ren/group"/>
+</component>
+<component name="helix_stub" filter="sf_build" long-name="Helix Stub" introduced="^2" class="api">
 <unit bldFile="mw/helix/helix_ren/helix_stub/group"/>
+</component>
+<component name="helixrfsplugin" filter="s60" long-name="Helix RFS Plugin" introduced="^2" plugin="Y">
+<unit bldFile="mw/helix/helix_ren/helixrfsplugin/group"/>
 </component>
 </collection>
 </block>
@@ -5620,12 +5621,6 @@
 <collection name="configmanagers" long-name="Config Managers" level="api">
 <component name="imagingconfigmanager" filter="s60" long-name="Imaging Config Manager">
 <unit bldFile="mw/camerasrv/configmanagers/imagingconfigmanager/group"/>
-</component>
-</collection>
-<collection name="camerasrv_info" long-name="Camera Services Info" level="api">
-<component name="camerasrv_build" filter="s60" long-name="Camera Services Build">
-<!-- should split into individual bld.infs -->
-<unit bldFile="mw/camerasrv/group"/>
 </component>
 </collection>
 </block>
@@ -5864,13 +5859,13 @@
 </block>
 <block name="qt" level="generic" long-name="Qt" levels="tool mw app">
 <collection name="qtconf" long-name="Qt Config" level="tool">
-<component name="qt_deviceconfiguration" long-name="Qt Device Configuration" filter="qt_tools" introduced="^2" class="config tool">
+<component name="qt_deviceconfiguration" long-name="Qt Device Configuration" filter="s60,qt_tools" introduced="^2" class="config tool">
 <unit bldFile="mw/qt/src/s60installs/deviceconfiguration"/>
 </component>
 </collection>
 <collection name="qt_info" long-name="Qt Info" level="mw">
-<component name="qt_build" long-name="Qt Build" introduced="^2">
-<unit bldFile="mw/qt" proFile="projects.pro" qmakeArgs="-r"/>
+<component name="qt_build" long-name="Qt Build" introduced="^2" filter="s60">
+<unit bldFile="mw/qt" proFile="projects.pro"/>
 </component>
 </collection>
 <collection name="qtdemos" long-name="Qt Demos" level="app"/>
@@ -5878,56 +5873,53 @@
 <collection name="qt_tests" long-name="Qt Tests" level="app"/>
 </block>
 <block name="qtmobility" level="generic" long-name="Qt Mobility" levels="tool mw app">
-<collection name="qtmobility_collection" long-name="Qt Mobility collection" level="app">
-<component name="qtmobility_build" long-name="Qt Mobility Build" introduced="^4">
-<!-- break this up into the above collections-->
-<unit bldFile="mw/qtmobility" proFile="qtmobility.pro" qmakeArgs="-r"/>
+<collection name="qtmobility_info" long-name="Qt Mobility Info" level="mw">
+<component name="qtmobilityconf" long-name="Qt Mobility Config" filter="s60,tools" introduced="^4">
+<unit bldFile="mw/qtmobility/group"/>
+</component>
+<component name="qtmobility_build" long-name="Qt Mobility Build" introduced="^4" filter="s60">
+<unit bldFile="mw/qtmobility" proFile="qtmobility.pro"/>
 </component>
 </collection>
+<collection name="qtmobility_examples" long-name="Qt Mobility Examples" level="app"/>
+<collection name="tests" long-name="Qt Mobility Tests"/>
 </block>
 <block name="qtextensions" level="generic" long-name="Qt Extensions" levels="tool mw app">
 <collection name="qtecomplugins" long-name="Qt ECom Plugins" level="app">
-<component name="qtecomplugins_build" filter="qtecomplugins" long-name="Qt ECom Plugin" purpose="development" introduced="^4" plugin="Y">
-<unit bldFile="mw/qtextensions/qtecomplugins" proFile="qtecomplugins.pro" qmakeArgs="-r"/>
+<component name="qtecomplugins_build" filter="s60,qtecomplugins" long-name="Qt ECom Plugin" purpose="development" introduced="^4" plugin="Y">
+<unit bldFile="mw/qtextensions/qtecomplugins" proFile="qtecomplugins.pro"/>
 </component>
-<component name="qtextensions_examples" filter="qtextensionsexamples,build_as_app" long-name="Qt ECom Plugin Examples" purpose="development" introduced="^4">
-<unit bldFile="mw/qtextensions/qtecomplugins/examples" proFile="examples.pro" qmakeArgs="-r"/>
+<component name="qtextensions_examples" filter="s60,qtextensionsexamples,build_as_app" long-name="Qt ECom Plugin Examples" purpose="development" introduced="^4">
+<unit bldFile="mw/qtextensions/qtecomplugins/examples" proFile="examples.pro"/>
 </component>
 </collection>
 <collection name="qthighway" long-name="Qt Highway" level="app">
-<component name="qthighway_build" filter="qthighway" long-name="Qt Highway" purpose="development" introduced="^4">
-<unit bldFile="mw/qtextensions/qthighway" proFile="qthighway.pro" qmakeArgs="-r"/>
-</component>
-<component name="qthighway_examples" filter="qtextensionsexamples,build_as_app" long-name="Qt Highway Examples" purpose="development" introduced="^4">
-<unit bldFile="mw/qtextensions/qthighway/examples" proFile="examples.pro" qmakeArgs="-r"/>
+<component name="qthighway_build" filter="s60,qthighway" long-name="Qt Highway" purpose="development" introduced="^4">
+<unit bldFile="mw/qtextensions/qthighway" proFile="qthighway.pro"/>
 </component>
 </collection>
 <collection name="qtmobileextensions" long-name="Qt Mobile Extensions" level="app">
-<component name="qtmobileextensions_build" filter="qtextension" long-name="Qt Mobile Extensions" purpose="development" introduced="^4">
-<unit bldFile="mw/qtextensions/qtmobileextensions" proFile="qtmobileextensions.pro" qmakeArgs="-r"/>
+<component name="qtmobileextensions_build" filter="s60,qtextension" long-name="Qt Mobile Extensions" purpose="development" introduced="^4">
+<unit bldFile="mw/qtextensions/qtmobileextensions" proFile="qtmobileextensions.pro"/>
 </component>
-<component name="qtmobileextensions_examples" filter="qtextensionsexamples,build_as_app" long-name="Qt Mobile Extensions Examples" purpose="development" introduced="^4">
-<unit bldFile="mw/qtextensions/qtmobileextensions/examples" proFile="examples.pro" qmakeArgs="-r"/>
+<component name="qtmobileextensions_examples" filter="s60,qtextensionsexamples,build_as_app" long-name="Qt Mobile Extensions Examples" purpose="development" introduced="^4">
+<unit bldFile="mw/qtextensions/qtmobileextensions/examples" proFile="examples.pro"/>
 </component>
 </collection>
 <collection name="qhbstyle" level="mw" long-name="Qt Orbit Style">
-<component name="qhbstyle_build" long-name="Qt Orbit Style Build" introduced="^4">
-<unit bldFile="mw/qtextensions/qhbstyle" qmakeArgs="-r" proFile="qhbstyle.pro"/>
+<component name="qhbstyle_build" long-name="Qt Orbit Style Build" introduced="^4" filter="s60">
+<unit bldFile="mw/qtextensions/qhbstyle" proFile="qhbstyle.pro"/>
 </component>
 </collection>
 <collection name="qtextensions_info" long-name="Qt Extensions Info" level="app">
-<component name="qtextensions_conf" long-name="Qt Extensions Confgure" introduced="^4" filter="qt_tools" class="config">
+<component name="qtextensions_conf" long-name="Qt Extensions Confgure" introduced="^4" filter="s60,qt_tools" class="config">
 <unit bldFile="mw/qtextensions/group"/>
-</component>
-<component name="qtextensions_build" long-name="Qt Extensions Build" introduced="^4">
-<!-- break this up into the above collections-->
-<unit bldFile="mw/qtextensions" proFile="qtextensions.pro" qmakeArgs="-r"/>
 </component>
 </collection>
 </block>
 <block name="hb" level="generic" long-name="Orbit" levels="engine test api">
 <collection name="hb_info" long-name="Orbit Info" level="api">
-<component name="hb_build" long-name="Orbit Build" introduced="^4">
+<component name="hb_build" long-name="Orbit Build" introduced="^4" filter="s60">
 <!-- should break this down into actual components -->
 <unit bldFile="mw/hb" proFile="hb.pro" qmakeArgs="-r MMP_RULES+=EXPORTUNFROZEN"/>
 </component>
@@ -6633,12 +6625,7 @@
 <component name="fontprovider" filter="s60" long-name="Font Provider">
 <unit bldFile="mw/uiresources/fontsupport/fontprovider/group"/>
 </component>
-<!-- R&D materials, should be Nokia only: exports S60 fonts, removes freetype
-      <component id="s60_fonts" filter="s60" name="S60 Fonts">
-        <unit bldFile="fontsupport/fontutils/group"/>
-      </component>
--->
-<component name="fontutils" filter="sf_build" long-name="Font Utils">
+<component name="fontutils" long-name="Font Utils" filter="s60">
 <unit bldFile="mw/uiresources/fontsupport/fontutils/FontUtils/group"/>
 </component>
 </collection>
@@ -6670,7 +6657,10 @@
 <!-- collection is really a component. Move down a directory  -->
 <component name="tacticonserver_build" filter="s60" long-name="Tacticon Server Build" introduced="^3">
 <unit bldFile="mw/hapticsservices/tacticonserver/group"/>
-<!-- clients and servers are suauly the same component. Consider moving pluign to a separate component if needed -->
+<!-- clients and servers are usualy the same component. Consider moving plugins to separate components if needed -->
+</component>
+<component name="tacticonhapticsplugin" long-name="Tacticon Haptics Plugin" introduced="^3" filter="s60,dfs_build" plugin="Y">
+<unit bldFile="mw/hapticsservices/tacticonserver/server/tacticonpluginfw/tacticonhapticsplugin/group"/>
 </component>
 </collection>
 <collection name="tactilefeedback" long-name="Tactile Feedback" level="fw">
@@ -6679,6 +6669,9 @@
 </component>
 <component name="tactilefeedbackresolver" filter="s60" long-name="Tactile Feedback Resolver" introduced="^1">
 <unit bldFile="mw/hapticsservices/tactilefeedback/tactilefeedbackresolver/group"/>
+</component>
+<component name="tactilefeedbackresolver_plugins" long-name="Tactile Feedback Resolver Plugins" introduced="^1" filter="s60,dfs_build" plugin="Y">
+<unit bldFile="mw/hapticsservices/tactilefeedback/tactilefeedbackresolver/plugins/group"/>
 </component>
 <component name="tactileclickplugin" filter="s60" long-name="Tactile Click Plugin" introduced="^1" plugin="Y">
 <unit bldFile="mw/hapticsservices/tactilefeedback/tactileclickplugin/group"/>
@@ -6689,15 +6682,14 @@
 <component name="tactileactionplugin" filter="s60" long-name="Tactile Action Plugin" introduced="^1" plugin="Y">
 <unit bldFile="mw/hapticsservices/tactilefeedback/tactileactionplugin/group"/>
 </component>
-<component name="tactilefeedback_build" filter="s60" long-name="Tactile Feedback Build" introduced="^1">
-<!-- consider moving IBY to one fo the above components -->
-<unit bldFile="mw/hapticsservices/tactilefeedback/group"/>
+<component name="tactilefeedback_rom" filter="s60" long-name="Tactile Feedback ROM" introduced="^1">
+<unit bldFile="mw/hapticsservices/tactilefeedback/rom"/>
 </component>
 </collection>
 </block>
 <block name="platformthemes" level="specific" long-name="Platform Themes" levels="framework generic ui">
 <collection name="platformthemes_info" long-name="Platform Themes Info">
-<component name="platformthemes_build" long-name="Platform Themes Build">
+<component name="platformthemes_build" long-name="Platform Themes Build" filter="s60">
 <!-- no real structure in this package. Should break into collections / components -->
 <unit bldFile="mw/platformthemes" proFile="platformthemes.pro"/>
 </component>
@@ -6867,11 +6859,11 @@
 </component>
 </collection>
 <collection name="ncdengine" long-name="Nokia Content Discover" level="framework">
-<component name="ncdengine_build" filter="s60" long-name="NCD API" introduced="^1">
+<component name="ncdengine_build" filter="s60" long-name="NCD Engine" introduced="^1">
 <unit bldFile="mw/appinstall/ncdengine/group"/>
 </component>
-<component name="ncdengine_engine" filter="s60" long-name="NCD Engine" introduced="^1">
-<unit bldFile="mw/appinstall/ncdengine/engine" proFile="engine.pro" qmakeArgs="-r"/>
+<component name="ncdengine_qt_build" filter="s60" long-name="NCD Qt Engine">
+<unit bldFile="mw/appinstall/ncdengine/engine" proFile="engine.pro"/>
 </component>
 </collection>
 <collection name="appinstaller" long-name="Application Installer" level="generic">
@@ -6879,7 +6871,7 @@
 <unit bldFile="mw/appinstall/appinstaller/appinstui/group"/>
 </component>
 <component name="appinstui_qt" filter="s60" long-name="Application Installer Qt UI" introduced="^2">
-<unit bldFile="mw/appinstall/appinstaller/appinstui" proFile="appinstui.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/appinstall/appinstaller/appinstui" proFile="appinstui.pro"/>
 </component>
 </collection>
 <collection name="iaupdateapi_stub" long-name="IA Update API Stub" level="api">
@@ -6891,7 +6883,7 @@
 <collection name="iaupdate" long-name="Independent Apps Update" level="api">
 <!-- Should reorganise into actual components -->
 <component name="iad" long-name="Independent App delivery" filter="s60" introduced="^4" purpose="development">
-<unit bldFile="mw/appinstall/iaupdate" proFile="iaupdate.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/appinstall/iaupdate" proFile="iaupdate.pro"/>
 </component>
 <component name="iaupdate_build" filter="s60" long-name="IA Update Build" introduced="^2">
 <unit bldFile="mw/appinstall/iaupdate/group"/>
@@ -7043,7 +7035,7 @@
 </block>
 <block name="browser" level="specific" long-name="Browser" levels="plugin utils support main">
 <collection name="bookmarksengine" long-name="Bookmarks Engine" level="support">
-<component name="bookmarksengine_build" long-name="Bookmarks Engine Build" introduced="^4">
+<component name="bookmarksengine_build" long-name="Bookmarks Engine Build" introduced="^4" filter="s60">
 <unit bldFile="mw/browser/bookmarksengine" proFile="bookmarksengine.pro"/>
 </component>
 </collection>
@@ -7496,6 +7488,9 @@
 <component name="phoneui2" filter="s60" long-name="Phone UI">
 <unit bldFile="app/phone/phoneapp/phoneui2" proFile="phoneui2.pro"/>
 </component>
+<component name="phoneuivoipextension" filter="s60" long-name="Phone UI VOIP Extension" introduced="^4">
+<unit bldFile="app/phone/phoneapp/phoneuivoipextension/group"/>
+</component>
 </collection>
 <collection name="phoneengine" long-name="Phone Engine" level="engine">
 <component name="phonecntfinder2" filter="s60" long-name="Phone Contact Finder">
@@ -7654,6 +7649,9 @@
 <component name="ds_data_modification_api" long-name="DS Data Modification API" filter="s60" introduced="^3" class="api">
 <unit bldFile="app/contentcontrol/contentctrl_plat/ds_data_modification_api/group"/>
 </component>
+<component name="ds_contact_adapter_customization_api" long-name="DS Contact Adapter Customization API" filter="s60" introduced="^4" class="api">
+<unit bldFile="app/contentcontrol/contentctrl_plat/ds_contact_adapter_customization_api/group"/>
+</component>
 </collection>
 <collection name="connectivitymodules" long-name="Connectivity Modules" level="framework">
 <component name="secon" filter="s60" long-name="Service Controllers">
@@ -7687,7 +7685,7 @@
 <collection name="stateproviders" long-name="State Providers" level="support"/>
 <collection name="runtimeproviders" long-name="Runtime Providers" level="support"/>
 <collection name="firsttimeuse_info" long-name="First Time Use Info" level="ui">
-<component name="firsttimeuse_build" long-name="First Time Use Build">
+<component name="firsttimeuse_build" long-name="First Time Use Build" filter="s60">
 <unit bldFile="app/firsttimeuse" proFile="ftu.pro" qmakeArgs="-r -config rom"/>
 </component>
 </collection>
@@ -8566,7 +8564,10 @@
 <component name="radioapplication" filter="s60" long-name="Radio Application" introduced="^4">
 <unit bldFile="app/radio/radioapp/radioapplication" proFile="radioapplication.pro"/>
 </component>
-<component name="radio_rom" filter="s60" long-name="Radio ROM" introduced="^4">
+<component name="radiowidgetsplugin" filter="s60" long-name="Radio Widgets Plugin" introduced="^4" plugin="Y">
+<unit bldFile="app/radio/radioapp/radiowidgetsplugin" proFile="radiowidgetsplugin.pro"/>
+</component>
+<component name="radio_rom" filter="s60" long-name="Radio ROM" introduced="^4" class="config">
 <unit bldFile="app/radio/rom"/>
 </component>
 </collection>
@@ -8666,57 +8667,45 @@
 <unit bldFile="app/jrt/jrt_plat/java_debug_api/build"/>
 </component>
 </collection>
-<collection name="java_stubs" long-name="Java Stubs" level="rt">
-<component name="java_stubs_build" long-name="Build Native Java" filter="sf_build" introduced="^4">
-<unit bldFile="app/jrt/java_stubs/group"/>
-</component>
-</collection>
 <collection name="build_nativejava" long-name="Build Native Java">
 <component name="nativejava" long-name="Build Native Java" filter="s60" introduced="^4">
-<unit bldFile="app/jrt/build/nativejava" filter="!sf_build" proFile="nativejava.pro" qmakeArgs="-r"/>
-<unit bldFile="app/jrt/build/nativejava" filter="sf_build" proFile="nativejava.pro" qmakeArgs="-r RD_JAVA_SF_BUILD=1"/>
+<unit bldFile="app/jrt/build"/>
 </component>
 </collection>
 <collection name="javacommons" long-name="Java Commons" level="generic">
-<component name="javacommons_build" filter="s60" long-name="JRT Build">
-<unit bldFile="app/jrt/javacommons" filter="!sf_build" proFile="javacommons.pro" qmakeArgs="-r"/>
-<unit bldFile="app/jrt/javacommons" filter="sf_build" proFile="javacommons.pro" qmakeArgs="-r RD_JAVA_SF_BUILD=1"/>
+<component name="javacommons_build" filter="s60" long-name="Java Commons Build">
+<unit bldFile="app/jrt/javacommons" proFile="javacommons.pro"/>
 </component>
 </collection>
 <collection name="javaruntimes" long-name="Java Runtimes" level="rt">
-<component name="javaruntimes_build" filter="s60" long-name="JRT Build">
-<unit bldFile="app/jrt/javaruntimes" filter="!sf_build" proFile="javaruntimes.pro" qmakeArgs="-r"/>
-<unit bldFile="app/jrt/javaruntimes" filter="sf_build" proFile="javaruntimes.pro" qmakeArgs="-r RD_JAVA_SF_BUILD=1"/>
+<component name="javaruntimes_build" filter="s60" long-name="Java Runtimes Build">
+<unit bldFile="app/jrt/javaruntimes" proFile="javaruntimes.pro"/>
 </component>
 </collection>
 <collection name="javauis" long-name="Java UIs" level="ui">
-<component name="javauis_build" filter="s60" long-name="JRT Build">
-<unit bldFile="app/jrt/javauis" filter="!sf_build" proFile="javauis.pro" qmakeArgs="-r"/>
-<unit bldFile="app/jrt/javauis" filter="sf_build" proFile="javauis.pro" qmakeArgs="-r RD_JAVA_SF_BUILD=1"/>
+<component name="javauis_build" filter="s60" long-name="Java UIs Build">
+<unit bldFile="app/jrt/javauis" proFile="javauis.pro"/>
 </component>
 </collection>
-<collection name="javamanager" level="generic">
-<component name="javamanager_build" filter="s60" long-name="JRT Build">
-<unit bldFile="app/jrt/javamanager" filter="!sf_build" proFile="javamanager.pro" qmakeArgs="-r"/>
-<unit bldFile="app/jrt/javamanager" filter="sf_build" proFile="javamanager.pro" qmakeArgs="-r RD_JAVA_SF_BUILD=1"/>
+<collection name="javamanager" long-name="Java Manager" level="generic">
+<component name="javamanager_build" filter="s60" long-name="Java Manager Build">
+<unit bldFile="app/jrt/javamanager" proFile="javamanager.pro"/>
 </component>
 </collection>
 <collection name="javatools" long-name="Java Tools" level="util">
-<component name="javatools_build" filter="s60" long-name="JRT Build">
-<unit bldFile="app/jrt/javatools" filter="!sf_build" proFile="javatools.pro" qmakeArgs="-r"/>
-<unit bldFile="app/jrt/javatools" filter="sf_build" proFile="javatools.pro" qmakeArgs="-r RD_JAVA_SF_BUILD=1"/>
+<component name="javatools_build" filter="s60" long-name="Java Tools Build">
+<unit bldFile="app/jrt/javatools" proFile="javatools.pro"/>
 </component>
 </collection>
 <collection name="javaextensions" long-name="Java Extensions" level="generic">
-<component name="javaextensions_build" filter="s60" long-name="JRT Build">
-<unit bldFile="app/jrt/javaextensions" filter="!sf_build" proFile="javaextensions.pro" qmakeArgs="-r"/>
-<unit bldFile="app/jrt/javaextensions" filter="sf_build" proFile="javaextensions.pro" qmakeArgs="-r RD_JAVA_SF_BUILD=1"/>
+<component name="javaextensions_build" filter="s60" long-name="Java Extensions Build">
+<unit bldFile="app/jrt/javaextensions" proFile="javaextensions.pro"/>
 </component>
 </collection>
 </block>
 <block name="browserui" level="services" long-name="Browser UI" levels="utils support ui">
 <collection name="browserui_info" long-name="Browser UI Info" level="ui">
-<component name="browserui_build" long-name="Bookmarks Engine Build" introduced="^4">
+<component name="browserui_build" long-name="Bookmarks Engine Build" introduced="^4" filter="s60">
 <unit bldFile="app/browserui" proFile="browserui.pro"/>
 </component>
 </collection>
@@ -8777,24 +8766,10 @@
 <unit bldFile="app/rndtools/screengrabber" proFile="screengrabber.pro"/>
 </component>
 </collection>
-<collection name="stifui" long-name="STIF UI" level="generic">
-<component name="stifui_avkon" filter="s60" long-name="STIF UI for Avkon" purpose="development">
-<unit bldFile="app/rndtools/stifui/avkon/group"/>
-</component>
-</collection>
 <collection name="memspyui" long-name="Memspy UI" level="generic">
 <!-- collection is really a component. Should move down a directory -->
 <component name="memspyui_build" filter="s60" long-name="Memspy UI Application" purpose="development" class="tool">
 <unit bldFile="app/rndtools/memspyui" proFile="memspyui.pro"/>
-</component>
-</collection>
-<collection name="htiui" long-name="Harmonized Test Interface UI" level="generic">
-<component name="htiui_build" filter="s60" long-name="HTI UI Build" purpose="development">
-<!-- should split up into individual components -->
-<unit bldFile="app/rndtools/htiui/group"/>
-</component>
-<component name="htiadminqt" filter="s60" long-name="HTI Admin Qt" purpose="development">
-<unit bldFile="app/rndtools/htiui/htiadminqt" proFile="HtiAdmin.pro"/>
 </component>
 </collection>
 </block>
