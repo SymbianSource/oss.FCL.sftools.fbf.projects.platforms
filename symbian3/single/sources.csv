@@ -31,7 +31,7 @@ http://developer.symbian.org/oss/MCL/sf/app/podcatcher/,/sf/app/podcatcher,branc
 http://developer.symbian.org/oss/FCL/sf/app/printing/,/sf/app/printing,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/profile/,/sf/app/profile,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/radio/,/sf/app/radio,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/app/rndtools/,/sf/app/rndtools,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/app/rndtools/,/sf/app/rndtools,changeset,d40e813b23c0,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/screensaver/,/sf/app/screensaver,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/settingsuis/,/sf/app/settingsuis,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/speechsrv/,/sf/app/speechsrv,branch,RCL_3,layers.sysdef.xml
