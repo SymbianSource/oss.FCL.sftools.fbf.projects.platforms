@@ -253,6 +253,19 @@
 </component>
 </collection>
 </block>
+<block name="openmaxil.nokia" level="mw" long-name="Nokia OpenMAX IL Adaptation" levels="adaptation hw-if device-fw">
+<collection name="omxilcomp" long-name="OpenMAX IL Components" level="adaptation">
+<component name="omxilgeneric" long-name="Generic OpenMAX IL Components" introduced="^3" purpose="optional" plugin="Y">
+<unit bldFile="adapt/openmaxil.nokia/omxilcomp/omxilgeneric/group" version="1"/>
+</component>
+<component name="omxilaudioemulator" long-name="OpenMAX IL Audio Emulator" introduced="^3" purpose="optional" plugin="Y">
+<unit bldFile="adapt/openmaxil.nokia/omxilcomp/omxilaudioemulator/group" version="1"/>
+</component>
+<component name="omxiltestcomp" long-name="OpenMAX IL Test Components" introduced="^3" purpose="development" plugin="Y">
+<unit bldFile="adapt/openmaxil.nokia/omxilcomp/omxiltestcomp/group" version="1"/>
+</component>
+</collection>
+</block>
 </layer>
 <layer name="os" long-name="OS" levels="hw services">
 <block name="kernelhwsrv" level="hw" long-name="Kernel and Hardware Services" levels="hw-if adaptation framework test">
@@ -4761,9 +4774,6 @@
 <component name="backupengine" long-name="Backup Engine" introduced="9.0" purpose="optional">
 <unit bldFile="mw/remoteconn/backupandrestore/backupengine/group" mrp="mw/remoteconn/backupandrestore/backupengine/group/connectivity_backupengine.mrp"/>
 </component>
-<component name="backuptest" long-name="Backup Test" introduced="^2" purpose="development">
-<unit bldFile="mw/remoteconn/backupandrestore/backuptest/group" mrp="mw/remoteconn/backupandrestore/backuptest/group/connectivity_backuptest.mrp"/>
-</component>
 </collection>
 <collection name="obex" long-name="OBEX" level="generic">
 <component name="obexprotocol" long-name="OBEX Protocol" introduced="9.1" purpose="optional">
@@ -7428,6 +7438,22 @@
 <collection name="svgtencoder" long-name="SVGT Encoder" level="encode">
 <component name="svgtenc" filter="s60" long-name="Standalone SVGT Encoder" class="PC">
 <unit bldFile="mw/uitools/svgtencoder/svgtenc/standalone/group"/>
+</component>
+</collection>
+</block>
+<block name="socialmobilefw" level="specific" long-name="Social Mobile Framework">
+<collection name="smf_example" long-name="SMF Examples"/>
+<collection name="flickr_example" long-name="Flickr Examples"/>
+<collection name="fb_example" long-name="Facebook Examples"/>
+<collection name="smf" long-name="Social Mobile Framework">
+<component name="smfcredentialmgr" long-name="Credential Manager">
+<unit bldFile="mw/socialmobilefw/smf/smfcredentialmgr" proFile="smfcredentialmgr.pro"/>
+</component>
+<component name="smfservermodule" long-name="Server Module">
+<unit bldFile="mw/socialmobilefw/smf/smfservermodule" proFile="smfservermodule.pro"/>
+</component>
+<component name="smfsettingsui" long-name="Settings UI">
+<unit bldFile="mw/socialmobilefw/smf/smfsettingsui" proFile="smfsettingsui.pro"/>
 </component>
 </collection>
 </block>
