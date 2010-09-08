@@ -69,7 +69,6 @@ http://developer.symbian.org/oss/FCL/sf/mw/mmappfw/,/sf/mw/mmappfw,tag,S3_LATEST
 http://developer.symbian.org/oss/MCL/sf/mw/mmmw/,/sf/mw/mmmw,tag,S3_LATESTGOOD,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/mmuifw/,/sf/mw/mmuifw,tag,S3_LATESTGOOD,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/netprotocols/,/sf/mw/netprotocols,tag,S3_LATESTGOOD,layers.sysdef.xml
-http://developer.symbian.org/oss/MCL/sf/mw/networkingdm/,/sf/mw/networkingdm,tag,S3_LATESTGOOD,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/opensrv/,/sf/mw/opensrv,tag,S3_LATESTGOOD,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/phonesrv/,/sf/mw/phonesrv,tag,S3_LATESTGOOD,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/mw/remoteconn/,/sf/mw/remoteconn,tag,S3_LATESTGOOD,layers.sysdef.xml
