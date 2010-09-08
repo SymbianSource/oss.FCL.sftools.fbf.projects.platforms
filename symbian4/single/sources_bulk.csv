@@ -84,6 +84,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/securitysrv/,/sf/mw/securitysrv,tag,S
 http://developer.symbian.org/oss/FCL/sf/mw/serviceapi/,/sf/mw/serviceapi,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/serviceapifw/,/sf/mw/serviceapifw,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/srvdiscovery/,/sf/mw/srvdiscovery,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/socialmobilefw/,/sf/mw/socialmobilefw,branch,default,NON_NOKIA
 http://developer.symbian.org/oss/FCL/sf/mw/svgt/,/sf/mw/svgt,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/uiaccelerator/,/sf/mw/uiaccelerator,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/uiresources/,/sf/mw/uiresources,tag,S4_PDK_FIX,
