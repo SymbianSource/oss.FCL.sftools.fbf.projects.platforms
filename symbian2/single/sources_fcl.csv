@@ -16,6 +16,7 @@ http://developer.symbian.org/oss/MCL/sftools/fbf/utilities/,/utilities,branch,de
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/ostools/osrndtools/,/sf/ostools/osrndtools,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/adaptation/stubs/,/sf/adaptation/stubs,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_development/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,branch,default,
+http://developer.symbian.org/oss/MCL/sf/adaptation/codecs.aricent/,/sf/adaptation/codecs.aricent,branch,default,
 //v800008/Builds01/mercurial_master_prod/sfl/MCL/sf/os/boardsupport/,/sf/os/boardsupport,branch,RCL_1,layers.sysdef.xml
 //v800008/Builds01/mercurial_master_prod/sfl/FCL/sf/os/ossrv/,/sf/os/ossrv,branch,RCL_1,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/security/,/sf/os/security,branch,RCL_1,layers.sysdef.xml
