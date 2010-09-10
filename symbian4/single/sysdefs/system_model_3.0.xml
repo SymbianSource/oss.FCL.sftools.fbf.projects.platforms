@@ -5144,6 +5144,14 @@
     
     <unit bldFile="/mw/remotemgmt/remotemgmt_plat/ds_capability_mgmt_plugin_api/group"/>
    </component>
+   <component id="syncml_ds_customization_api" name="SyncML DS Customisation API" filter="s60" class="api" target="device" purpose="optional">
+    
+    <unit bldFile="/mw/remotemgmt/remotemgmt_plat/syncml_ds_customization_api/group"/>
+   </component>
+   <component id="syncml_ds_error_reporting_api" name="SyncML DS Error Reporting API" filter="s60" class="api" target="device" purpose="optional">
+    
+    <unit bldFile="/mw/remotemgmt/remotemgmt_plat/syncml_ds_error_reporting_api/group"/>
+   </component>
    <component id="devicemgmt_dialogs_api" name="Device Management Dialogs API" introduced="^4" filter="s60" class="api" target="device" purpose="optional">
     <unit bldFile="/mw/remotemgmt/remotemgmt_plat/devicemgmt_dialogs_api/group"/>
    </component>
@@ -6176,7 +6184,41 @@
    </component>
   </collection>
  </package>
-       
+      <package id="gstreamer" level="generic" tech-domain="mm" levels="plugin core api" name="GStreamer">
+      	
+	<!-- structure matches planned directory layout -->
+    <collection id="gstreamerfw" name="GStreamer Framework" level="core">
+      <component id="gstreamer_core" name="GStreamer Core" introduced="^3" filter="s60" target="device" purpose="optional">
+        <unit bldFile="/mw/gstreamer/gstreamer_core/group"/>
+      </component>
+    </collection>
+    <collection id="gst_plugins" name="GStreamer Plugins" level="plugin">
+      <component id="gst_plugins_base" name="GStreamer Base Plugins" introduced="^3" filter="s60" target="device" purpose="optional">
+        <unit bldFile="/mw/gstreamer/gst_plugins_base/group"/>
+      </component>
+      <component id="gst_plugins_good" name="GStreamer Good Plugins" introduced="^3" filter="s60" target="device" purpose="optional">
+        <unit bldFile="/mw/gstreamer/gst_plugins_good/group"/>
+      </component>
+      <component id="gst_plugins_symbian" name="GStreamer Sybmian Plugins" introduced="^3" filter="s60" target="device" purpose="optional">
+        <unit bldFile="/mw/gstreamer/gst_plugins_symbian/group" filter="!test"/>
+        
+      </component>
+    </collection>
+    <collection id="gstregistrygenerator" name="GStreamer Registry Generator" level="core">
+    	<!-- collection is really a component. Move down an directory  -->
+      <component id="gstregistrygenerator_build" name="GStreamer Registry Generator Build" introduced="^3" filter="s60" target="device" purpose="optional">
+         <unit bldFile="/mw/gstreamer/gstregistrygenerator/group"/>
+      </component>
+    </collection>
+    <collection id="gst_test_apps" name="GStreamer Test Applications" level="api">
+      
+    </collection>
+    <collection id="gstreamer_info" name="GStreamer Info" level="api">
+      <component id="gstreamer_rom" name="GStreamer ROM" introduced="^3" filter="s60" class="config" target="device" purpose="optional">
+        <unit bldFile="/mw/gstreamer/rom"/>
+      </component>
+    </collection>
+  </package> 
       <package id="helix" level="generic" tech-domain="mm" levels="plugin framework server generic specific" name="Helix">
     <collection id="helix_ren" name="Helix Engine" level="framework">
       <component id="helix_ren_build" name="Helix Engine Build" introduced="^2" filter="s60" target="device" purpose="optional">

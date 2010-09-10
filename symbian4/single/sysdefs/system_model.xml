@@ -4596,6 +4596,12 @@
 <component name="ds_capability_mgmt_plugin_api" long-name="DS Capability Management Plugin API" filter="s60" purpose="optional" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/ds_capability_mgmt_plugin_api/group"/>
 </component>
+<component name="syncml_ds_customization_api" long-name="SyncML DS Customisation API" filter="s60" purpose="optional" class="api">
+<unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_ds_customization_api/group"/>
+</component>
+<component name="syncml_ds_error_reporting_api" long-name="SyncML DS Error Reporting API" filter="s60" purpose="optional" class="api">
+<unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_ds_error_reporting_api/group"/>
+</component>
 <component name="devicemgmt_dialogs_api" long-name="Device Management Dialogs API" introduced="^4" filter="s60" purpose="optional" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/devicemgmt_dialogs_api/group"/>
 </component>
@@ -5477,6 +5483,37 @@
 <collection name="mmmw_info" long-name="Multimedia Middleware Info" level="specific">
 <component name="mmmw_metadata" long-name="Multimedia Middleware Metadata" introduced="^2" purpose="development" class="config PC">
 <unit mrp="mw/mmmw/mmmw_info/mmmw_metadata/mmmw_metadata.mrp"/>
+</component>
+</collection>
+</block>
+<block name="gstreamer" level="generic" levels="plugin core api" long-name="GStreamer">
+<!-- structure matches planned directory layout -->
+<collection name="gstreamerfw" long-name="GStreamer Framework" level="core">
+<component name="gstreamer_core" long-name="GStreamer Core" introduced="^3" filter="s60" purpose="optional">
+<unit bldFile="mw/gstreamer/gstreamer_core/group"/>
+</component>
+</collection>
+<collection name="gst_plugins" long-name="GStreamer Plugins" level="plugin">
+<component name="gst_plugins_base" long-name="GStreamer Base Plugins" introduced="^3" filter="s60" purpose="optional">
+<unit bldFile="mw/gstreamer/gst_plugins_base/group"/>
+</component>
+<component name="gst_plugins_good" long-name="GStreamer Good Plugins" introduced="^3" filter="s60" purpose="optional">
+<unit bldFile="mw/gstreamer/gst_plugins_good/group"/>
+</component>
+<component name="gst_plugins_symbian" long-name="GStreamer Sybmian Plugins" introduced="^3" filter="s60" purpose="optional">
+<unit bldFile="mw/gstreamer/gst_plugins_symbian/group" filter="!test"/>
+</component>
+</collection>
+<collection name="gstregistrygenerator" long-name="GStreamer Registry Generator" level="core">
+<!-- collection is really a component. Move down an directory  -->
+<component name="gstregistrygenerator_build" long-name="GStreamer Registry Generator Build" introduced="^3" filter="s60" purpose="optional">
+<unit bldFile="mw/gstreamer/gstregistrygenerator/group"/>
+</component>
+</collection>
+<collection name="gst_test_apps" long-name="GStreamer Test Applications" level="api"/>
+<collection name="gstreamer_info" long-name="GStreamer Info" level="api">
+<component name="gstreamer_rom" long-name="GStreamer ROM" introduced="^3" filter="s60" purpose="optional" class="config">
+<unit bldFile="mw/gstreamer/rom"/>
 </component>
 </collection>
 </block>
