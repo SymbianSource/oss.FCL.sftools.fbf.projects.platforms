@@ -43,7 +43,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/accesssec/,/sf/mw/accesssec,tag,tip_b
 http://developer.symbian.org/oss/FCL/sf/mw/appinstall/,/sf/mw/appinstall,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/mw/appsupport/,/sf/mw/appsupport,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/browser/,/sf/mw/browser,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/btservices/,/sf/mw/btservices,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/btservices/,/sf/mw/btservices,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/mw/camerasrv/,/sf/mw/camerasrv,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/classicui/,/sf/mw/classicui,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/dlnasrv/,/sf/mw/dlnasrv,tag,tip_bulk,layers.sysdef.xml
