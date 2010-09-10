@@ -253,7 +253,19 @@
 </component>
 </collection>
 </block>
-<block name="openmaxil.nokia" level="mw"/>
+<block name="openmaxil.nokia" level="mw" long-name="Nokia OpenMAX IL Adaptation" levels="adaptation hw-if device-fw">
+<collection name="omxilcomp" long-name="OpenMAX IL Components" level="adaptation">
+<component name="omxilgeneric" long-name="Generic OpenMAX IL Components" introduced="^3" purpose="optional" plugin="Y">
+<unit bldFile="adaptation/openmaxil.nokia/omxilcomp/omxilgeneric/group" version="1"/>
+</component>
+<component name="omxilaudioemulator" long-name="OpenMAX IL Audio Emulator" introduced="^3" purpose="optional" plugin="Y">
+<unit bldFile="adaptation/openmaxil.nokia/omxilcomp/omxilaudioemulator/group" version="1"/>
+</component>
+<component name="omxiltestcomp" long-name="OpenMAX IL Test Components" introduced="^3" purpose="development" plugin="Y">
+<unit bldFile="adaptation/openmaxil.nokia/omxilcomp/omxiltestcomp/group" version="1"/>
+</component>
+</collection>
+</block>
 </layer>
 <layer name="os" long-name="OS" levels="hw services">
 <block name="kernelhwsrv" level="hw" long-name="Kernel and Hardware Services" levels="hw-if adaptation framework test">
@@ -4590,6 +4602,12 @@
 </component>
 <component name="ds_capability_mgmt_plugin_api" long-name="DS Capability Management Plugin API" filter="s60" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/ds_capability_mgmt_plugin_api/group"/>
+</component>
+<component name="syncml_ds_customization_api" long-name="SyncML DS Customisation API" filter="s60" class="api">
+<unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_ds_customization_api/group"/>
+</component>
+<component name="syncml_ds_error_reporting_api" long-name="SyncML DS Error Reporting API" filter="s60" class="api">
+<unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_ds_error_reporting_api/group"/>
 </component>
 <component name="devicemgmt_dialogs_api" long-name="Device Management Dialogs API" filter="s60" introduced="^4" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/devicemgmt_dialogs_api/group"/>
