@@ -1345,7 +1345,7 @@
 <component name="privacyprotocolmodule" long-name="Privacy Protocol Module" introduced="^2" purpose="optional" plugin="Y">
 <unit bldFile="os/lbs/networkprotocolmodules/privacyprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/privacyprotocolmodule/group/lbs_privacyprotocolmodule.mrp"/>
 </component>
-<component introduced="^2" purpose="optional">
+<component name="networkpmutils" long-name="Networkpm Utils" introduced="^2" purpose="optional" plugin="Y">
 <unit bldFile="os/lbs/networkprotocolmodules/networkpmutils/group" mrp="os/lbs/networkprotocolmodules/networkpmutils/group/lbs_networkpmutils.mrp"/>
 </component>
 <component name="suplproxyprotocolmodule" long-name="SUPL Proxy Protocol Module" introduced="^3" purpose="optional" plugin="Y">
