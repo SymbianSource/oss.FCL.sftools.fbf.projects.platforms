@@ -101,7 +101,7 @@ http://developer.symbian.org/oss/FCL/sf/os/buildtools/,/sf/os/buildtools,tag,S4_
 http://developer.symbian.org/oss/FCL/sf/os/cellularsrv/,/sf/os/cellularsrv,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/commsfw/,/sf/os/commsfw,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,tag,S4_PDK_FIX,
-http://developer.symbian.org/oss/FCL/sf/os/devicesrv/,/sf/os/devicesrv,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/devicesrv/,/sf/os/devicesrv,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/os/fshell/,/sf/os/fshell,branch,default,NON_NOKIA
 http://developer.symbian.org/oss/FCL/sf/os/graphics/,/sf/os/graphics,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/os/imagingext/,/sf/os/imagingext,tag,tip_bulk,layers.sysdef.xml
