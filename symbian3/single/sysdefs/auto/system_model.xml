@@ -6348,14 +6348,6 @@
 <unit bldFile="mw/qt/examples" proFile="examples.pro" qmakeArgs="-r"/>
 </component>
 </collection>
-<collection name="qt_tests" long-name="Qt Tests" level="app">
-<component name="qttestsauto" long-name="Qt Automated Tests" introduced="^2" filter="qttestsauto">
-<unit bldFile="mw/qt/tests/auto" proFile="qtpauto.pro" makeArgs="-r"/>
-</component>
-<component name="qttestsbenchmarks" long-name="Qt Benchmarks Tests" introduced="^2" filter="qttestsbenchmarks">
-<unit bldFile="mw/qt/tests/benchmarks" proFile="benchmarks.pro" qmakeArgs="-r"/>
-</component>
-</collection>
 </block>
 <block name="classicui" level="generic" long-name="Classic UI" levels="base support server generic specific">
 <collection name="classicui_plat" long-name="Classic UI Platform Interfaces" level="specific">
