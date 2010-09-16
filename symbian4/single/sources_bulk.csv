@@ -54,7 +54,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/hapticsservices/,/sf/mw/hapticsservic
 http://developer.symbian.org/oss/FCL/sf/mw/hb/,/sf/mw/hb,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/helix/,/sf/mw/helix,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/hgwidgets/,/sf/mw/hgwidgets,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/homescreensrv/,/sf/mw/homescreensrv,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/homescreensrv/,/sf/mw/homescreensrv,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/mw/homescreensrvlegacy/,/sf/mw/homescreensrvlegacy,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/imghandling/,/sf/mw/imghandling,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/mw/imsrv/,/sf/mw/imsrv,tag,tip_bulk,layers.sysdef.xml
