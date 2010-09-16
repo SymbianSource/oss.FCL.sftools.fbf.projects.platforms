@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE SystemDefinition [
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE SystemDefinition [
 <!ELEMENT SystemDefinition ( systemModel )>
 <!ATTLIST SystemDefinition
   name CDATA #REQUIRED
@@ -72,7 +73,7 @@
   priority CDATA #IMPLIED
 >
 ]>
-<SystemDefinition schema="2.0.1" name="Symbian^4">
+<SystemDefinition name="Symbian^4" schema="2.0.1">
 <systemModel>
 <layer name="adaptation" long-name="Adaptation" levels="low mw high">
 <block name="stubs" level="high" span="2" levels="adaptation plugin mid engine" long-name="Stubs">
@@ -581,9 +582,6 @@
 </component>
 </collection>
 <collection name="stdlibs" long-name="Standard Libraries" level="translation">
-<component name="libz" long-name="Z Compression Library" filter="s60" purpose="optional">
-<unit bldFile="os/ossrv/stdlibs/libz/group"/>
-</component>
 <component name="libcrypt" long-name="Crypt Library" filter="s60" purpose="optional">
 <unit bldFile="os/ossrv/stdlibs/libcrypt/group"/>
 </component>
@@ -6714,10 +6712,10 @@
 <unit bldFile="mw/homescreensrv/activityfw" proFile="activityfw.pro" qmakeArgs="-r"/>
 </component>
 </collection>
-<collection name="tstaskmonitor" long-name="Task Switcher Task Monitor" level="fw">
+<collection name="taskswitcher" long-name="Task Switcher" level="fw">
 <!-- move collection down to a component directory or split up into component .pro files -->
-<component name="tstaskmonitor_build" long-name="Task Switcher Task Monitor Build" introduced="^4" purpose="optional">
-<unit bldFile="mw/homescreensrv/tstaskmonitor" proFile="tstaskmonitor.pro" qmakeArgs="-r"/>
+<component name="taskswitcher_build" long-name="Task Switcher Build" introduced="^4" purpose="optional">
+<unit bldFile="mw/homescreensrv/taskswitcher" proFile="taskswitcher.pro"/>
 </component>
 </collection>
 <collection name="hsappkeyhandler" long-name="HS Appplication Key Handler" level="server">
