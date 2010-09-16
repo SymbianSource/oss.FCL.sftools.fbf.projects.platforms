@@ -68,7 +68,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/mds/,/sf/mw/mds,tag,tip_bulk,layers.s
 http://developer.symbian.org/oss/FCL/sf/mw/messagingmw/,/sf/mw/messagingmw,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/metadatasrv/,/sf/mw/metadatasrv,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/mmappfw/,/sf/mw/mmappfw,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/mw/mmmw/,/sf/mw/mmmw,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/mw/mmmw/,/sf/mw/mmmw,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/mw/netprotocols/,/sf/mw/netprotocols,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/platformthemes/,/sf/mw/platformthemes,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/platformtools/,/sf/mw/platformtools,tag,tip_bulk,layers.sysdef.xml
