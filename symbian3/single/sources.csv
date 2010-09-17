@@ -24,7 +24,7 @@ http://developer.symbian.org/oss/MCL/sf/app/location/,/sf/app/location,branch,RC
 http://developer.symbian.org/oss/MCL/sf/app/messaging/,/sf/app/messaging,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/mmsharinguis/,/sf/app/mmsharinguis,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/musicplayer/,/sf/app/musicplayer,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/app/organizer/,/sf/app/organizer,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/app/organizer/,/sf/app/organizer,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/phone/,/sf/app/phone,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/photos/,/sf/app/photos,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/podcatcher/,/sf/app/podcatcher,branch,RCL_3,package_definition.xml
@@ -100,7 +100,7 @@ http://developer.symbian.org/oss/FCL/sf/os/devicesrv/,/sf/os/devicesrv,branch,RC
 http://developer.symbian.org/oss/FCL/sf/os/graphics/,/sf/os/graphics,branch,NewGraphicsArchitecture,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/imagingext/,/sf/os/imagingext,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/os/lbs/,/sf/os/lbs,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/os/lbs/,/sf/os/lbs,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/mm/,/sf/os/mm,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/networkingsrv/,/sf/os/networkingsrv,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/ossrv/,/sf/os/ossrv,branch,RCL_3,layers.sysdef.xml
