@@ -6,7 +6,7 @@ http://developer.symbian.org/oss/FCL/sf/adaptation/stubs/,/sf/adaptation/stubs,b
 http://developer.symbian.org/oss/MCL/sf/app/camera/,/sf/app/camera,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/commonemail/,/sf/app/commonemail,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/conntools/,/sf/app/conntools,branch,RCL_3,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/app/contacts/,/sf/app/contacts,branch,RCL_3,layers.sysdef.xml
+http://developer.symbian.org/oss/MCL/sf/app/contacts/,/sf/app/contacts,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/contentcontrol/,/sf/app/contentcontrol,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/conversations/,/sf/app/conversations,branch,RCL_3,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/devicecontrol/,/sf/app/devicecontrol,branch,RCL_3,layers.sysdef.xml
