@@ -40,4 +40,7 @@
     <!-- use sources defined in BOM as this will rebuild that PDK -->
     <property name="sf.spec.sourcesync.sourcespecdir"  value="${sf.spec.job.drive}\build_info\logs\BOM"/>
     <property name="sf.spec.systemdefinition.location" value="${sf.spec.job.drive}\build_info\logs\BOM"/>
+    
+    <!-- dont run depends analysis by default as additional tools needed -->
+    <property name="sf.spec.analysis.depends.enable" value="false" />
 </project>
