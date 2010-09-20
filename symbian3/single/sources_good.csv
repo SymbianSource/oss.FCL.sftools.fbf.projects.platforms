@@ -1,10 +1,10 @@
 source,dst,type,pattern,sysdef
 http://developer.symbian.org/oss/FCL/sftools/fbf/utilities/,/utilities,branch,default,
-//v800008/Builds01/mercurial_internal/rnd/rndonly/aricent/,/rnd/rndonly/aricent,branch,default,
-//v800008/Builds01/mercurial_internal/rnd/rndonly/monotype/,/rnd/rndonly/monotype,branch,default,
-//v800008/Builds01/mercurial_internal/rnd/rndonly/realnetworks/,/rnd/rndonly/realnetworks,branch,default,
-//v800008/Builds01/mercurial_internal/rnd/rndonly/samsung/,/rnd/rndonly/samsung,branch,default,
-//v800008/Builds01/mercurial_internal/rnd/redist/objective_systems/,/rnd/redist/objective_systems,branch,default,
+//v800020/mercurial_internal/rnd/rndonly/aricent/,/rnd/rndonly/aricent,branch,default,
+//v800020/mercurial_internal/rnd/rndonly/monotype/,/rnd/rndonly/monotype,branch,default,
+//v800020/mercurial_internal/rnd/rndonly/realnetworks/,/rnd/rndonly/realnetworks,branch,default,
+//v800020/mercurial_internal/rnd/rndonly/samsung/,/rnd/rndonly/samsung,branch,default,
+//v800020/mercurial_internal/rnd/redist/objective_systems/,/rnd/redist/objective_systems,branch,default,
 http://developer.symbian.org/oss/FCL/sf/adaptation/stubs/,/sf/adaptation/stubs,tag,S3_LATESTGOOD,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/camera/,/sf/app/camera,tag,S3_LATESTGOOD,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/commonemail/,/sf/app/commonemail,tag,S3_LATESTGOOD,layers.sysdef.xml

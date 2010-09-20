@@ -1,9 +1,9 @@
 source,dst,type,pattern,sysdef
-//v800008/Builds01/mercurial_internal/rnd/rndonly/aricent/,/rnd/rndonly/aricent,changeset,5c9ca1e17dbb,
-//v800008/Builds01/mercurial_internal/rnd/rndonly/monotype/,/rnd/rndonly/monotype,changeset,d179868647e4,
-//v800008/Builds01/mercurial_internal/rnd/rndonly/realnetworks/,/rnd/rndonly/realnetworks,changeset,afb66031ac23,
-//v800008/Builds01/mercurial_internal/rnd/rndonly/samsung/,/rnd/rndonly/samsung,changeset,bc65ca6d8d9c,
-//v800008/Builds01/mercurial_internal/rnd/redist/objective_systems/,/rnd/redist/objective_systems,changeset,3308607f8c27,
+//v800020/mercurial_internal/rnd/rndonly/aricent/,/rnd/rndonly/aricent,changeset,5c9ca1e17dbb,
+//v800020/mercurial_internal/rnd/rndonly/monotype/,/rnd/rndonly/monotype,changeset,d179868647e4,
+//v800020/mercurial_internal/rnd/rndonly/realnetworks/,/rnd/rndonly/realnetworks,changeset,afb66031ac23,
+//v800020/mercurial_internal/rnd/rndonly/samsung/,/rnd/rndonly/samsung,changeset,bc65ca6d8d9c,
+//v800020/mercurial_internal/rnd/redist/objective_systems/,/rnd/redist/objective_systems,changeset,3308607f8c27,
 http://developer.symbian.org/oss/FCL/sf/adaptation/stubs/,/sf/adaptation/stubs,changeset,08c4f946d508,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/camera/,/sf/app/camera,changeset,dbec5787fa68,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/commonemail/,/sf/app/commonemail,changeset,e1b6206813b4,layers.sysdef.xml
