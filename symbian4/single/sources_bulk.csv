@@ -17,12 +17,10 @@ http://developer.symbian.org/oss/FCL/sf/app/files/,/sf/app/files,tag,tip_bulk,la
 http://developer.symbian.org/oss/FCL/sf/app/firsttimeuse/,/sf/app/firsttimeuse,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/helps/,/sf/app/helps,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/homescreen/,/sf/app/homescreen,tag,S4_PDK_FIX,
-http://developer.symbian.org/oss/FCL/sf/app/homescreentools/,/sf/app/homescreentools,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/jrt/,/sf/app/jrt,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/internetradio/,/sf/app/internetradio,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/location/,/sf/app/location,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/messaging/,/sf/app/messaging,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/app/mmsharinguis/,/sf/app/mmsharinguis,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/musicplayer/,/sf/app/musicplayer,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/organizer/,/sf/app/organizer,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/app/phone/,/sf/app/phone,tag,S4_PDK_FIX,
@@ -34,11 +32,8 @@ http://developer.symbian.org/oss/FCL/sf/app/recents/,/sf/app/recents,tag,tip_bul
 http://developer.symbian.org/oss/FCL/sf/app/rndtools/,/sf/app/rndtools,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/settingsuis/,/sf/app/settingsuis,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/search/,/sf/app/search,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/app/techview/,/sf/app/techview,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/testtools/,/sf/app/testtools,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/videoplayer/,/sf/app/videoplayer,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/app/videotelephony/,/sf/app/videotelephony,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/app/webuis/,/sf/app/webuis,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/accesssec/,/sf/mw/accesssec,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/appinstall/,/sf/mw/appinstall,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/mw/appsupport/,/sf/mw/appsupport,tag,tip_bulk,layers.sysdef.xml
@@ -120,4 +115,3 @@ http://developer.symbian.org/oss/FCL/sf/os/textandloc/,/sf/os/textandloc,tag,S4_
 http://developer.symbian.org/oss/FCL/sf/os/usb/,/sf/os/usb,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/os/wlan/,/sf/os/wlan,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/xmlsrv/,/sf/os/xmlsrv,tag,tip_bulk,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/tools/buildplatforms/,/sf/tools/buildplatforms,tag,tip_bulk,layers.sysdef.xml
