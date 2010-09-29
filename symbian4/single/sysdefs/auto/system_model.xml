@@ -193,6 +193,22 @@
 </component>
 </collection>
 </block>
+<block name="naviengine.nec" level="low" levels="hw-if" long-name="NaviEngine">
+<collection name="navienginebsp" long-name="NaviEngine BSP" level="hw-if">
+<component name="ne1_tb" long-name="NaviEngine 1 (Multiple)" introduced="^4" filter="sf_build" purpose="optional">
+<unit bldFile="adaptation/naviengine.nec/navienginebsp/ne1_tb"/>
+</component>
+<component name="sne1_tb" long-name="NaviEngine 1 (Single)" introduced="^4" filter="sf_build" purpose="optional">
+<unit bldFile="adaptation/naviengine.nec/navienginebsp/ne1_tb/single"/>
+</component>
+<component name="fne1_tb" long-name="NaviEngine 1 (Flexible)" introduced="^4" filter="sf_build" purpose="optional">
+<unit bldFile="adaptation/naviengine.nec/navienginebspflexible"/>
+</component>
+<component name="navienginebootldr" long-name="NaviEngine Boot Loader" introduced="^4" filter="sf_build" purpose="optional">
+<unit bldFile="adaptation/naviengine.nec/navienginebootldr"/>
+</component>
+</collection>
+</block>
 <block name="codecs.aricent" level="low" levels="util plugin" long-name="Aricent Codecs">
 <collection name="aricent_utilities" long-name="Aricent Utilities" level="util">
 <component name="ariprocessengine" long-name="Aricent Process Engine" introduced="^4" filter="sf_build" purpose="optional">
