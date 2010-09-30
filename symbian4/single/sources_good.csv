@@ -2,6 +2,7 @@ source,dst,type,pattern,sysdef
 http://developer.symbian.org/oss/FCL/sftools/fbf/utilities/,/utilities,tag,S4_LATESTGOOD,NON-NOKIA
 http://developer.symbian.org/oss/FCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,tag,S4_LATESTGOOD,NON-NOKIA
 http://developer.symbian.org/oss/FCL/sf/adaptation/codecs.aricent/,/sf/adaptation/codecs.aricent,tag,S4_LATESTGOOD,NON-NOKIA
+http://developer.symbian.org/oss/FCL/sf/adaptation/naviengine.nec/,/sf/adaptation/naviengine.nec,tag,S4_LATESTGOOD,
 http://developer.symbian.org/oss/FCL/sf/adaptation/openmaxil.nokia/,/sf/adaptation/openmaxil.nokia,tag,S4_LATESTGOOD,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,tag,S4_LATESTGOOD,NON-NOKIA
 http://developer.symbian.org/oss/FCL/sf/adaptation/stubs/,/sf/adaptation/stubs,tag,S4_LATESTGOOD,layers.sysdef.xml
