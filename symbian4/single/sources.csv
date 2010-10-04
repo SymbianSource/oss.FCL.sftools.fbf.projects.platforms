@@ -1,5 +1,4 @@
 source,dst,type,pattern,sysdef
-http://developer.symbian.org/oss/FCL/sftools/fbf/utilities/,/utilities,branch,default,NON-NOKIA
 http://developer.symbian.org/oss/FCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,branch,default,NON-NOKIA
 http://developer.symbian.org/oss/MCL/sf/adaptation/codecs.aricent/,/sf/adaptation/codecs.aricent,branch,default,NON-NOKIA
 http://developer.symbian.org/oss/FCL/sf/adaptation/openmaxil.nokia/,/sf/adaptation/openmaxil.nokia,tag,tip_bulk,layers.sysdef.xml
