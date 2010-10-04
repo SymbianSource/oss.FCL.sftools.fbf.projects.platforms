@@ -26,13 +26,16 @@ http://developer.symbian.org/oss/FCL/sf/app/phone/,/sf/app/phone,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/app/photos/,/sf/app/photos,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/podcatcher/,/sf/app/podcatcher,branch,default,NON-NOKIA
 http://developer.symbian.org/oss/FCL/sf/app/printing/,/sf/app/printing,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/profileswidgetplugin/,/sf/app/profileswidgetplugin,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/radio/,/sf/app/radio,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/recents/,/sf/app/recents,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/rndtools/,/sf/app/rndtools,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/settingsuis/,/sf/app/settingsuis,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/search/,/sf/app/search,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/silentwidgetplugin/,/sf/app/silentwidgetplugin,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/testtools/,/sf/app/testtools,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/videoplayer/,/sf/app/videoplayer,tag,tip_bulk,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/app/videotelephony/,/sf/app/videotelephony,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/accesssec/,/sf/mw/accesssec,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/appinstall/,/sf/mw/appinstall,tag,S4_PDK_FIX,
 http://developer.symbian.org/oss/FCL/sf/mw/appsupport/,/sf/mw/appsupport,tag,tip_bulk,layers.sysdef.xml
@@ -70,6 +73,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/phonesrv/,/sf/mw/phonesrv,tag,tip_bul
 http://developer.symbian.org/oss/FCL/sf/mw/qt/,/sf/mw/qt,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/qtextensions/,/sf/mw/qtextensions,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/qtmobility/,/sf/mw/qtmobility,tag,S4_PDK_FIX,
+http://developer.symbian.org/oss/FCL/sf/mw/qttranslations/,/sf/mw/qttranslations,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/remoteconn/,/sf/mw/remoteconn,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/remotemgmt/,/sf/mw/remotemgmt,tag,tip_bulk,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/searchsrv/,/sf/mw/searchsrv,tag,tip_bulk,layers.sysdef.xml
