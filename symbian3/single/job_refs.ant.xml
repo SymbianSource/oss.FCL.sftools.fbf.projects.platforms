@@ -1,62 +1,67 @@
-<?xml version="1.0"?>
-
-<project name="SF-JOB-REFS" xmlns:hlm="http://www.nokia.com/helium">
-
-<!-- For a combined model GT+S60, sf.spec.os.system.definition.files must be used -->
-  <path id="sf.spec.os.system.definition.files">
-    <fileset dir="${sf.spec.systemdefinition.location}/" casesensitive="false">
-            <include name="${sf.spec.systemdefinition.filename}" />
-    </fileset>
-  </path>
-    
-  <!-- iMaker config to be used by build-roms Helium target -->
-  <hlm:imakerconfigurationset id="imaker.rom.config">
-     <imakerconfiguration>
-         <makefileset>
-             <!-- Note: case sensitive -->
-             <include name="**/image_conf_syborg.mk"/>
-         </makefileset>
-         <targetset>
-             <include name="^flash$" />
-             <!--
-             include name="langpack_\d+" />
-             <include name="^custvariant_.*$" />
-             <include name="^udaerase$" /
-             -->
-         </targetset>
-         <variableset>
-             <!--
-             <variable name="TYPE" value="rnd"/>
-             <variable name="USE_SYMGEN" value="1"/>
-             <variable name="USE_UDEB" value="1"/>
-             -->
-         </variableset>
-     </imakerconfiguration>
-     
-     <!--imakerconfiguration regionalVariation="false">
-         <makefileset>
-             <include name="**/*zoom2*.mk"/>
-         </makefileset>
-         <targetset>
-             <include name="^core$" />
-         </targetset>
-         <variableset>
-             <variable name="TYPE" value="rnd"/>
-             <variable name="USE_SYMGEN" value="1"/>
-             <variable name="USE_UDEB" value="1"/>
-         </variableset>
-     </imakerconfiguration -->
-     
-     <imakerconfiguration>
-         <makefileset>
-             <include name="/epoc32/rom/config/sf_refhw/beagle/image_conf_beagle.mk"/>
-         </makefileset>
-         <targetset>
-             <include name="^flash$" />
-         </targetset>
-         <variableset/>
-     </imakerconfiguration>
-     
-  </hlm:imakerconfigurationset>
-    
+<?xml version="1.0"?>
+
+<project name="SF-JOB-REFS" xmlns:hlm="http://www.nokia.com/helium">
+
+<!-- For a combined model GT+S60, sf.spec.os.system.definition.files must be used -->
+  <path id="sf.spec.os.system.definition.files">
+    <fileset dir="${sf.spec.systemdefinition.location}/" casesensitive="false">
+            <include name="${sf.spec.systemdefinition.filename}" />
+    </fileset>
+  </path>
+  <path id="sf.spec.tools.system.definition.files">
+    <fileset dir="${sf.spec.tools.systemdefinition.location}/" casesensitive="false">
+            <include name="tools_model.xml" />
+    </fileset>
+  </path>
+    
+  <!-- iMaker config to be used by build-roms Helium target -->
+  <hlm:imakerconfigurationset id="imaker.rom.config">
+     <imakerconfiguration>
+         <makefileset>
+             <!-- Note: case sensitive -->
+             <include name="**/image_conf_syborg.mk"/>
+         </makefileset>
+         <targetset>
+             <include name="^flash$" />
+             <!--
+             include name="langpack_\d+" />
+             <include name="^custvariant_.*$" />
+             <include name="^udaerase$" /
+             -->
+         </targetset>
+         <variableset>
+             <!--
+             <variable name="TYPE" value="rnd"/>
+             <variable name="USE_SYMGEN" value="1"/>
+             <variable name="USE_UDEB" value="1"/>
+             -->
+         </variableset>
+     </imakerconfiguration>
+     
+     <!--imakerconfiguration regionalVariation="false">
+         <makefileset>
+             <include name="**/*zoom2*.mk"/>
+         </makefileset>
+         <targetset>
+             <include name="^core$" />
+         </targetset>
+         <variableset>
+             <variable name="TYPE" value="rnd"/>
+             <variable name="USE_SYMGEN" value="1"/>
+             <variable name="USE_UDEB" value="1"/>
+         </variableset>
+     </imakerconfiguration -->
+     
+     <imakerconfiguration>
+         <makefileset>
+             <include name="/epoc32/rom/config/sf_refhw/beagle/image_conf_beagle.mk"/>
+         </makefileset>
+         <targetset>
+             <include name="^flash$" />
+         </targetset>
+         <variableset/>
+     </imakerconfiguration>
+     
+  </hlm:imakerconfigurationset>
+    
  </project>
