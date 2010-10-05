@@ -2650,39 +2650,26 @@
 </component>
 </collection>
 </block>
-<block name="osrndtools" level="services" levels="fw trace analysis" long-name="OS R&amp;D tools">
-<collection name="memspy" long-name="MemSpy" level="trace">
-<component name="memspy_plat" long-name="MemSpy Platform Interfaces" filter="s60" purpose="development" class="api">
-<unit bldFile="os/osrndtools/memspy/memspy_plat/group"/>
-</component>
-<component name="driver" long-name="MemSpy Driver" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/memspy/driver/group"/>
-</component>
-<component name="memspy_engine" long-name="MemSpy Engine" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/memspy/engine/group"/>
-</component>
-<component name="commandline" long-name="MemSpy Command Line" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/memspy/commandline/group"/>
-</component>
-<component name="memspyserver" long-name="MemSpy Server" introduced="^4" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/memspy/MemSpyServer/group"/>
-</component>
-<component name="memspyclient" long-name="MemSpy Client" introduced="^4" filter="s60" purpose="development">
-<unit bldFile="os/osrndtools/memspy/MemSpyClient/group"/>
-</component>
-<component name="memspy_build" long-name="MemSpy Build" filter="s60" purpose="development">
-<!--  move exports into self-contained component.-->
-<unit bldFile="os/osrndtools/memspy/group"/>
+<block name="osrndtools" level="services" levels="trace analysis" long-name="OS R&amp;D Tools">
+<collection name="debugsrv" long-name="Debug Services" level="trace">
+<component name="runmodedebug" long-name="Run Mode Debug" filter="s60" purpose="development">
+<unit bldFile="os/osrndtools/debugsrv/runmodedebug/group"/>
 </component>
 </collection>
-<collection name="piprofiler" long-name="Performance Investigator Profiler" level="analysis">
-<component name="piprofiler_build" long-name="Performance Investigator Profiler Build" introduced="^4" purpose="optional">
-<unit bldFile="os/osrndtools/piprofiler/group"/>
+<collection name="perfsrv" long-name="Performance Services" level="analysis">
+<component name="analyzetool" long-name="AnalyzeTool" filter="s60" purpose="development">
+<unit bldFile="os/osrndtools/perfsrv/analyzetool/group"/>
+</component>
+<component name="memspy" long-name="MemSpy" filter="s60" purpose="development">
+<unit bldFile="os/osrndtools/perfsrv/memspy/group"/>
+</component>
+<component name="piprofiler" long-name="Performance Investigator Profiler" filter="s60" purpose="development">
+<unit bldFile="os/osrndtools/perfsrv/piprofiler/group"/>
 </component>
 </collection>
-<collection name="analyzetool" long-name="Analyze Tool" level="analysis">
-<component name="analyzetool_build" long-name="Analyze Tool Build" introduced="^4" purpose="optional">
-<unit bldFile="os/osrndtools/analyzetool/group"/>
+<collection name="tracefw" long-name="Trace Framework" level="trace">
+<component name="tracecompiler" long-name="TraceCompiler" filter="s60" purpose="development">
+<unit bldFile="os/osrndtools/tracefw/tracecompiler/group"/>
 </component>
 </collection>
 </block>
@@ -3082,196 +3069,199 @@
 </block>
 <block name="securitysrv" level="generic" levels="plugin framework server generic specific" long-name="Security Services">
 <collection name="secsrv_plat" long-name="Security Services Platform Interfaces" level="specific">
-<component name="cms_api" long-name="CMS API" filter="s60" purpose="optional" class="api">
+<component name="cms_api" long-name="CMS API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/securitysrv/secsrv_plat/cms_api/group"/>
 </component>
-<component name="pkcs12_parser_api" long-name="PKCS12 Parser API" filter="s60" purpose="optional" class="api">
+<component name="pkcs12_parser_api" long-name="PKCS12 Parser API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/securitysrv/secsrv_plat/pkcs12_parser_api/group"/>
 </component>
-<component name="java_utils_api" long-name="Java Utils API" filter="s60" purpose="optional" class="api">
+<component name="java_utils_api" long-name="Java Utils API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/securitysrv/secsrv_plat/java_utils_api/group"/>
 </component>
-<component name="wim_cert_api" long-name="WIM Cert API" filter="s60" purpose="optional" class="api">
+<component name="wim_cert_api" long-name="WIM Cert API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/securitysrv/secsrv_plat/wim_cert_api/group"/>
 </component>
-<component name="device_key_store_encryption_plugin_api" long-name="Device Key Store Encryption Plug-in API" filter="s60" purpose="optional" class="api">
+<component name="device_key_store_encryption_plugin_api" long-name="Device Key Store Encryption Plug-in API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/securitysrv/secsrv_plat/device_key_store_encryption_plugin_api/group"/>
 </component>
-<component name="x509certnameparser_api" long-name="X.509 Certificate Name Parser API" filter="s60" purpose="optional" class="api">
+<component name="x509certnameparser_api" long-name="X.509 Certificate Name Parser API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/securitysrv/secsrv_plat/x509certnameparser_api/group"/>
 </component>
-<component name="remote_lock_api" long-name="Remote Lock API" filter="s60" purpose="optional" class="api">
+<component name="remote_lock_api" long-name="Remote Lock API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/securitysrv/secsrv_plat/remote_lock_api/group"/>
 </component>
-<component name="pkidialog_api" long-name="PKI Dialog API" filter="s60" purpose="optional" class="api">
+<component name="pkidialog_api" long-name="PKI Dialog API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/securitysrv/secsrv_plat/pkidialog_api/group"/>
 </component>
-<component name="provisioning_api" long-name="Provisioning API" filter="s60" purpose="optional" class="api">
+<component name="provisioning_api" long-name="Provisioning API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/securitysrv/secsrv_plat/provisioning_api/group"/>
 </component>
-<component name="keyguard_configuration_api" long-name="Keyguard Configuration API" filter="s60" purpose="optional" class="api">
+<component name="keyguard_configuration_api" long-name="Keyguard Configuration API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/securitysrv/secsrv_plat/keyguard_configuration_api/group"/>
 </component>
-<component name="keylock_policy_api" long-name="Keylock Policy API" filter="s60" purpose="optional" class="api">
+<component name="keylock_policy_api" long-name="Keylock Policy API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/securitysrv/secsrv_plat/keylock_policy_api/group"/>
 </component>
-<component name="security_code_ui_api" long-name="Security Code UI API" filter="s60" purpose="optional" class="api">
+<component name="security_code_ui_api" long-name="Security Code UI API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/securitysrv/secsrv_plat/security_code_ui_api/group"/>
 </component>
-<component name="gba_api" long-name="GBA API" filter="s60" purpose="optional" class="api">
+<component name="gba_api" long-name="GBA API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/securitysrv/secsrv_plat/gba_api/group"/>
 </component>
-<component name="keyguard_access_api" long-name="Keyguard Access API" filter="s60" purpose="optional" class="api">
+<component name="keyguard_access_api" long-name="Keyguard Access API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/securitysrv/secsrv_plat/keyguard_access_api/group"/>
 </component>
-<component name="devicelock_access_api" long-name="Device Lock Access API" filter="s60" purpose="optional" class="api">
+<component name="devicelock_access_api" long-name="Device Lock Access API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/securitysrv/secsrv_plat/devicelock_access_api/group"/>
 </component>
-<component name="lockapp_server_api" long-name="Lock Application Server API" filter="s60" purpose="optional" class="api">
+<component name="lockapp_server_api" long-name="Lock Application Server API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/securitysrv/secsrv_plat/lockapp_server_api/group"/>
 </component>
-<component name="devencadaptation_api" long-name="Device Encryption Adaptation API" filter="s60" purpose="optional" class="api">
+<component name="devencadaptation_api" long-name="Device Encryption Adaptation API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/securitysrv/secsrv_plat/devencadaptation_api/group"/>
 </component>
-<component name="devenccommonutils_api" long-name="Device Encryption Common Utils API" filter="s60" purpose="optional" class="api">
+<component name="devenccommonutils_api" long-name="Device Encryption Common Utils API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/securitysrv/secsrv_plat/devenccommonutils_api/group"/>
 </component>
 </collection>
 <collection name="cms" long-name="Certificate Management Service" level="server">
 <!-- collection is really a component. Need to move down a directory-->
-<component name="cms_build" long-name="CMS" introduced="^3" filter="s60" purpose="optional">
+<component name="cms_build" long-name="CMS" introduced="^3" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/securitysrv/cms/group"/>
 </component>
 </collection>
 <collection name="pkiutilities" long-name="PKI Utilities" level="plugin">
-<component name="x509certnameparser" long-name="X.509 Certificate Name Parser" filter="s60" purpose="optional">
+<component name="x509certnameparser" long-name="X.509 Certificate Name Parser" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/securitysrv/pkiutilities/x509certnameparser/group"/>
 </component>
-<component name="pkcs12" long-name="PKCS #12" filter="s60" purpose="optional">
+<component name="pkcs12" long-name="PKCS #12" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/securitysrv/pkiutilities/pkcs12/group"/>
 </component>
-<component name="ctsecuritydialogs" long-name="Crypto Token Security Dialogs" filter="s60" purpose="optional">
-<unit bldFile="mw/securitysrv/pkiutilities/ctsecuritydialogs/group"/>
-</component>
-<component name="certsaver" long-name="Certificate Saver" filter="s60" purpose="optional">
+<component name="certsaver" long-name="Certificate Saver" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/securitysrv/pkiutilities/certsaver/group"/>
 </component>
-<component name="devicetoken" long-name="Device Token" filter="s60" purpose="optional">
+<component name="devicetoken" long-name="Device Token" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/securitysrv/pkiutilities/devicetoken/group"/>
 </component>
-<component name="certificates" long-name="Certificates" filter="s60" purpose="optional">
-<unit bldFile="mw/securitysrv/pkiutilities/Certificates/group" filter="sf_build"/>
+<component name="securitydialognotifier" long-name="Security Dialogs Notifier" introduced="^4" filter="s60,build_as_app" purpose="optional">
+<unit bldFile="mw/securitysrv/pkiutilities/securitydialognotifier/group"/>
 </component>
-<component name="pkiutilities_build" long-name="PKI Utilities Build" filter="s60" purpose="optional">
+<component name="securitydialognotifiersrv" long-name="Security Dialogs Notifier Server" introduced="^4" filter="s60,build_as_app" purpose="optional">
+<unit bldFile="mw/securitysrv/pkiutilities/securitydialognotifiersrv/group"/>
+</component>
+<component name="certificates" long-name="Certificates" filter="s60,build_as_app" purpose="optional">
+<unit bldFile="mw/securitysrv/pkiutilities/Certificates/group"/>
+</component>
+<component name="pkiutilities_build" long-name="PKI Utilities Build" filter="s60,build_as_app" purpose="optional">
 <!-- need to split this into the above components -->
 <unit bldFile="mw/securitysrv/pkiutilities/group"/>
 </component>
-<component name="ocsp" long-name="Online Certificate Status Protocol" introduced="^2" purpose="optional">
+<component name="ocsp" long-name="Online Certificate Status Protocol" introduced="^2" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/securitysrv/pkiutilities/ocsp/group" mrp="mw/securitysrv/pkiutilities/ocsp/group/securitysrv_ocsp.mrp"/>
 </component>
-<component name="untrustedcertificatedialog" long-name="Untrusted Certificate Dialog" introduced="^4" filter="s60" purpose="optional">
-<unit bldFile="mw/securitysrv/pkiutilities/untrustedcertificatedialog" proFile="untrustedcertificateplugin.pro" qmakeArgs="-r"/>
+<component name="ocsp_ncp" long-name="Online Certificate Status Protocol" introduced="^2" purpose="optional">
+<unit bldFile="mw/securitysrv/pkiutilities/ocsp/group_ncp" mrp="mw/securitysrv/pkiutilities/ocsp/group/securitysrv_ocsp.mrp"/>
+</component>
+<component name="untrustedcertificatedialog" long-name="Untrusted Certificate Dialog" introduced="^4" filter="s60,build_as_app" purpose="optional">
+<unit bldFile="mw/securitysrv/pkiutilities/untrustedcertificatedialog" proFile="untrustedcertificateplugin.pro"/>
 </component>
 </collection>
 <collection name="wim" long-name="Wireless Identity Module" level="framework">
 <!-- collection is really a component. Need to move down a directory-->
-<component name="wim_build" long-name="WIM Build" filter="s60" purpose="optional">
+<component name="wim_build" long-name="WIM Build" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/securitysrv/wim/group"/>
 </component>
 </collection>
 <collection name="remotelock" long-name="Remote Lock" level="generic">
 <!-- collection is really a component. Need to move down a directory-->
-<component name="remotelock_build" long-name="Remote Lock Build" filter="s60" purpose="optional">
+<component name="remotelock_build" long-name="Remote Lock Build" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/securitysrv/remotelock/group"/>
 </component>
 </collection>
 <collection name="securitydialogs" long-name="Security Dialogs" level="specific">
-<component name="keylockpolicyapi" long-name="Keylock Policy API" filter="s60" purpose="optional">
+<component name="keylockpolicyapi" long-name="Keylock Policy API" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/securitysrv/securitydialogs/keylockpolicyapi/group"/>
 </component>
-<component name="secui" long-name="Security UI" filter="s60" purpose="optional">
+<component name="secui" long-name="Security UI" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/securitysrv/securitydialogs/secui/group"/>
 </component>
-<component name="securitynotifier" long-name="Security Notifier" filter="s60" purpose="optional">
+<component name="securitynotifier" long-name="Security Notifier" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/securitysrv/securitydialogs/securitynotifier/group"/>
 </component>
-<component name="lockclient" long-name="Lock Client" introduced="^3" filter="s60" purpose="optional">
-<!-- This overwrites the bld.inf already in this dir. I'm pretty sure this will cause problems with the export -->
-<unit bldFile="mw/securitysrv/securitydialogs/lockclient/group" proFile="lockclient.pro" qmakeArgs="-r"/>
+<component name="lockclient" long-name="Lock Client" introduced="^3" filter="s60,build_as_app" purpose="optional">
+<unit bldFile="mw/securitysrv/securitydialogs/lockclient/group" proFile="lockclient.pro"/>
 </component>
-<component name="lockapp" long-name="Lock Application" introduced="^3" filter="s60" purpose="optional">
+<component name="lockapp" long-name="Lock Application" introduced="^3" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/securitysrv/securitydialogs/lockapp/group"/>
 </component>
-<component name="secuinotifications" long-name="Security UI Notifications" introduced="^4" filter="s60" purpose="optional">
-<unit bldFile="mw/securitysrv/securitydialogs/secuinotifications" proFile="secuinotifications.pro" qmakeArgs="-r"/>
+<component name="secuinotifications" long-name="Security UI Notifications" introduced="^4" filter="s60,build_as_app" purpose="optional">
+<unit bldFile="mw/securitysrv/securitydialogs/secuinotifications" proFile="secuinotifications.pro"/>
 </component>
-<component name="indicatorautolockplugin" long-name="Auto Lock Indicator Plugin" introduced="^4" filter="s60" purpose="optional" plugin="Y">
+<component name="indicatorautolockplugin" long-name="Auto Lock Indicator Plugin" introduced="^4" filter="s60,build_as_app" purpose="optional" plugin="Y">
 <!-- directory at the wrong level to be a component-->
-<unit bldFile="mw/securitysrv/securitydialogs/autolock/indicatorplugin" proFile="indicatorautolockplugin.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/securitysrv/securitydialogs/autolock/indicatorplugin" proFile="indicatorautolockplugin.pro"/>
 </component>
-<component name="autolockuseractivityservice" long-name="Auto Lock User Activity Service" introduced="^4" filter="s60" purpose="optional">
+<component name="autolockuseractivityservice" long-name="Auto Lock User Activity Service" introduced="^4" filter="s60,build_as_app" purpose="optional">
 <!-- Can't have a component inside another. Need to move to securitydialogs/autolockuseractivityservice -->
-<unit bldFile="mw/securitysrv/securitydialogs/autolock/autolockuseractivityservice" proFile="autolockuseractivityservice.pro" qmakeArgs="-r"/>
+<unit bldFile="mw/securitysrv/securitydialogs/autolock/autolockuseractivityservice" proFile="autolockuseractivityservice.pro"/>
 </component>
-<component name="autolocksrv" long-name="Auto Lock Server" introduced="^4" filter="s60" purpose="optional">
-<unit bldFile="mw/securitysrv/securitydialogs/autolock" proFile="autolock.pro" qmakeArgs="-r"/>
+<component name="autolocksrv" long-name="Auto Lock Server" introduced="^4" filter="s60,build_as_app" purpose="optional">
+<unit bldFile="mw/securitysrv/securitydialogs/autolock" proFile="autolock.pro"/>
 </component>
 </collection>
 <collection name="cpsecplugins" long-name="Security Settings Plugins" level="plugin">
-<component name="devicelockplugin" long-name="Device Lock Plugin" introduced="^4" filter="s60" purpose="optional">
-<unit bldFile="mw/securitysrv/cpsecplugins/devicelockplugin" proFile="devicelockplugin.pro" qmakeArgs="-r"/>
+<component name="devicelockplugin" long-name="Device Lock Plugin" introduced="^4" filter="s60,build_as_app" purpose="optional" plugin="Y">
+<unit bldFile="mw/securitysrv/cpsecplugins/devicelockplugin" proFile="devicelockplugin.pro"/>
 </component>
-<component name="simpincodeplugin" long-name="SIM PIN Code Plugin" introduced="^4" filter="s60" purpose="optional">
-<unit bldFile="mw/securitysrv/cpsecplugins/simpincodeplugin" proFile="pincodeplugin.pro" qmakeArgs="-r"/>
+<component name="simpincodeplugin" long-name="SIM PIN Code Plugin" introduced="^4" filter="s60,build_as_app" purpose="optional" plugin="Y">
+<unit bldFile="mw/securitysrv/cpsecplugins/simpincodeplugin" proFile="pincodeplugin.pro"/>
 </component>
-<component name="cpadvancedsecplugin" long-name="Advanced Security Plugin" introduced="^4" filter="s60" purpose="optional">
-<unit bldFile="mw/securitysrv/cpsecplugins/cpadvancedsecplugin/group" proFile="advancedsecplugin.pro" qmakeArgs="-r"/>
+<component name="cpadvancedsecplugin" long-name="Advanced Security Plugin" introduced="^4" filter="s60,build_as_app" purpose="optional" plugin="Y">
+<unit bldFile="mw/securitysrv/cpsecplugins/cpadvancedsecplugin/group" proFile="advancedsecplugin.pro"/>
 </component>
 </collection>
 <collection name="boottimeintegritycheck" long-name="Boot Time Integrity Check" level="plugin">
 <!-- collection is really a component. Need to move down a directory-->
-<component name="boottimeintegritycheck_build" long-name="Boot Time Integrity Check Build" filter="s60" purpose="optional">
+<component name="boottimeintegritycheck_build" long-name="Boot Time Integrity Check Build" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/securitysrv/boottimeintegritycheck/group"/>
 </component>
 </collection>
 <collection name="gba" long-name="Generic Bootstrapping Architecture" level="server">
-<component name="uicc" long-name="UICC" introduced="^2" filter="s60" purpose="optional" plugin="Y">
+<component name="uicc" long-name="UICC" introduced="^2" filter="s60,build_as_app" purpose="optional" plugin="Y">
 <unit bldFile="mw/securitysrv/gba/uicc/group"/>
 </component>
-<component name="gbaserver" long-name="GBA Server" introduced="^2" filter="s60" purpose="optional">
+<component name="gbaserver" long-name="GBA Server" introduced="^2" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/securitysrv/gba/gbaserver/group"/>
 </component>
-<component name="gbaapi" long-name="GBA API" introduced="^2" filter="s60" purpose="optional">
+<component name="gbaapi" long-name="GBA API" introduced="^2" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/securitysrv/gba/gbaapi/group"/>
 </component>
-<component name="gbafilter" long-name="GBA HTTP Filter" introduced="^2" filter="s60" purpose="optional" plugin="Y">
+<component name="gbafilter" long-name="GBA HTTP Filter" introduced="^2" filter="s60,build_as_app" purpose="optional" plugin="Y">
 <unit bldFile="mw/securitysrv/gba/gbafilter/group"/>
 </component>
-<component name="gba_build" long-name="Generic Boot Architecture Build" introduced="^2" filter="s60" purpose="optional">
-<!-- need to split this into the above components, or remove #includes and make this GBA ROM  -->
-<unit bldFile="mw/securitysrv/gba/group"/>
+<component name="gba_rom" long-name="Generic Boot Architecture ROM" introduced="^2" filter="s60,build_as_app" purpose="optional">
+<unit bldFile="mw/securitysrv/gba/rom"/>
 </component>
 </collection>
 <collection name="devencdiskutils" long-name="Device Encryption Disk Utils" level="server">
-<component name="devenccommonutils" long-name="Device Encryption Common Utils" introduced="^3" filter="s60" purpose="optional">
+<component name="devenccommonutils" long-name="Device Encryption Common Utils" introduced="^3" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/securitysrv/devencdiskutils/DevEncCommonUtils/group"/>
 </component>
-<component name="devencrfsplugin" long-name="Device Encryption RFS Plugin" introduced="^3" filter="s60" purpose="optional" plugin="Y">
+<component name="devencrfsplugin" long-name="Device Encryption RFS Plugin" introduced="^3" filter="s60,build_as_app" purpose="optional" plugin="Y">
 <unit bldFile="mw/securitysrv/devencdiskutils/DevEncRfsPlugin/group"/>
 </component>
-<component name="pk5recognizer" long-name="Device Encryption Pk5 Recognizer" introduced="^3" filter="s60" purpose="optional" plugin="Y">
+<component name="pk5recognizer" long-name="Device Encryption Pk5 Recognizer" introduced="^3" filter="s60,build_as_app" purpose="optional" plugin="Y">
 <unit bldFile="mw/securitysrv/devencdiskutils/Pk5Recognizer/group"/>
 </component>
-<component name="devencstarter" long-name="Device Encryption Starter" introduced="^3" filter="s60" purpose="optional" plugin="Y">
+<component name="devencstarter" long-name="Device Encryption Starter" introduced="^3" filter="s60,build_as_app" purpose="optional" plugin="Y">
 <unit bldFile="mw/securitysrv/devencdiskutils/DevEncStarter/group"/>
 </component>
-<component name="devencdiskutils_build" long-name="Device Encryption Disk Utils Build" introduced="^3" filter="s60" purpose="optional">
-<!-- need to split this into the above components, or remove #includes and make this a ROM  component-->
-<unit bldFile="mw/securitysrv/devencdiskutils/group"/>
+<component name="devencdiskutils_rom" long-name="Device Encryption Disk Utils ROM" introduced="^3" filter="s60,build_as_app" purpose="optional">
+<unit bldFile="mw/securitysrv/devencdiskutils/rom"/>
 </component>
 </collection>
 <collection name="securitysrv_info" long-name="Security Services Info" level="specific">
-<component name="securitysrv_test" long-name="Security Services Test" filter="s60,test,api_test" purpose="development"/>
+<component name="securitysrv_test" long-name="Security Services Test" filter="s60,build_as_app,test,api_test" purpose="development"/>
 <component name="securitysrv_metadata" long-name="Security Services Metadata" introduced="^2" purpose="development" class="config PC">
 <unit mrp="mw/securitysrv/securitysrv_info/securitysrv_metadata/securitysrv_metadata.mrp"/>
 </component>
@@ -3721,17 +3711,6 @@
 </collection>
 </block>
 <block name="netprotocols" level="generic" levels="plugin framework server generic specific" long-name="High-level Internet Protocols">
-<collection name="netprotocols_plat" long-name="High-level Internet Protocols Platform Interfaces" level="specific">
-<component name="cookie_manager_api" long-name="Cookie Manager API" filter="s60" purpose="optional" class="api">
-<unit bldFile="mw/netprotocols/netprotocols_plat/cookie_manager_api/group"/>
-</component>
-<component name="http_cache_mgr_api" long-name="HTTP Cache Manager API" filter="s60" purpose="optional" class="api">
-<unit bldFile="mw/netprotocols/netprotocols_plat/http_cache_mgr_api/group"/>
-</component>
-<component name="http_filters_api" long-name="HTTP Filters API" filter="s60" purpose="optional" class="api">
-<unit bldFile="mw/netprotocols/netprotocols_plat/http_filters_api/group"/>
-</component>
-</collection>
 <collection name="httpfilters" long-name="HTTP Filters" level="plugin">
 <component name="httpfiltercommon" long-name="HTTP Filter Common" filter="s60" purpose="optional">
 <unit bldFile="mw/netprotocols/httpfilters/httpfiltercommon/group"/>
@@ -3745,54 +3724,51 @@
 <component name="httpfilterauthentication" long-name="Authentication Filter" filter="s60" purpose="optional" plugin="Y">
 <unit bldFile="mw/netprotocols/httpfilters/httpfilterauthentication/group"/>
 </component>
-<component name="httpfilterconnhandler" long-name="Connection Handler Fitler" filter="s60" purpose="optional" plugin="Y">
-<unit bldFile="mw/netprotocols/httpfilters/httpfilterconnhandler/group"/>
-</component>
 <component name="httpfilteriop" long-name="HTTP IOP Filter" filter="s60" purpose="optional" plugin="Y">
 <unit bldFile="mw/netprotocols/httpfilters/httpfilteriop/group"/>
 </component>
-<component name="httpfilterproxy" long-name="HTTP Proxy Filter" filter="s60" purpose="optional" plugin="Y">
-<unit bldFile="mw/netprotocols/httpfilters/httpfilterproxy/group"/>
-</component>
 </collection>
 <collection name="applayerprotocols" long-name="Application Layer Protocols" level="server">
-<component name="httptransportfw" long-name="HTTP Transport Framework" introduced="6.2" purpose="optional">
+<component name="httptransportfw" long-name="HTTP Transport Framework" introduced="6.2" filter="s60" purpose="optional">
 <unit bldFile="mw/netprotocols/applayerprotocols/httptransportfw/group" mrp="mw/netprotocols/applayerprotocols/httptransportfw/group/http_transport-framework.mrp"/>
 </component>
-<component name="httpexamples" long-name="HTTP Examples" introduced="6.2" purpose="development">
+<component name="httpexamples" long-name="HTTP Examples" introduced="6.2" filter="s60" purpose="development">
 <unit bldFile="mw/netprotocols/applayerprotocols/httpexamples/group" mrp="mw/netprotocols/applayerprotocols/httpexamples/group/http_examples.mrp"/>
 </component>
-<component name="wappushsupport" long-name="WAP Push Support" introduced="6.2" purpose="optional">
+<component name="wappushsupport" long-name="WAP Push Support" introduced="6.2" filter="s60" purpose="optional">
 <unit bldFile="mw/netprotocols/applayerprotocols/wappushsupport/Group" mrp="mw/netprotocols/applayerprotocols/wappushsupport/Group/wap-browser_wappushsupport.mrp"/>
 </component>
-<component name="wapbase" long-name="WAP Base" introduced="6.0" purpose="optional">
+<component name="wapbase" long-name="WAP Base" introduced="6.0" filter="s60" purpose="optional">
 <unit bldFile="mw/netprotocols/applayerprotocols/wapbase/Group" mrp="mw/netprotocols/applayerprotocols/wapbase/Group/wap-browser_wapbase.mrp"/>
 </component>
-<component name="ftpengine" long-name="FTP Engine" introduced="6.0" purpose="optional">
+<component name="ftpengine" long-name="FTP Engine" introduced="6.0" filter="s60" purpose="optional">
 <unit bldFile="mw/netprotocols/applayerprotocols/ftpengine/group" mrp="mw/netprotocols/applayerprotocols/ftpengine/group/networking_ftp_e.mrp"/>
 </component>
-<component name="telnetengine" long-name="Telnet Engine" introduced="6.0" purpose="optional">
+<component name="telnetengine" long-name="Telnet Engine" introduced="6.0" filter="s60" purpose="optional">
 <unit bldFile="mw/netprotocols/applayerprotocols/telnetengine/group" mrp="mw/netprotocols/applayerprotocols/telnetengine/group/networking_telnet_e.mrp"/>
 </component>
-<component name="httpserviceapi" long-name="HTTP Service API" introduced="TB9.2" purpose="optional">
+<component name="httpserviceapi" long-name="HTTP Service API" introduced="TB9.2" filter="s60" purpose="optional">
 <unit bldFile="mw/netprotocols/applayerprotocols/httpservice/group" mrp="mw/netprotocols/applayerprotocols/httpservice/group/http_service.mrp"/>
 </component>
 </collection>
 <collection name="applayerpluginsandutils" long-name="Application Layer Plugins and Utils" level="framework">
-<component name="uripermissionservices" long-name="URI Permission Services" introduced="^2" purpose="optional">
+<component name="uripermissionservices" long-name="URI Permission Services" introduced="^2" filter="s60" purpose="optional">
 <unit bldFile="mw/netprotocols/applayerpluginsandutils/uripermissionservices/group" mrp="mw/netprotocols/applayerpluginsandutils/uripermissionservices/group/application-protocols_ineturilist.mrp"/>
 </component>
-<component name="bookmarksupport" long-name="Bookmark Support" introduced="9.1" purpose="optional">
+<component name="bookmarksupport" long-name="Bookmark Support" introduced="9.1" filter="s60" purpose="optional">
 <unit bldFile="mw/netprotocols/applayerpluginsandutils/bookmarksupport/group" mrp="mw/netprotocols/applayerpluginsandutils/bookmarksupport/group/application-protocols_bookmarks.mrp"/>
 </component>
-<component name="httpprotocolplugins" long-name="HTTP Protocol Plugins" introduced="6.2" purpose="optional" plugin="Y">
+<component name="httpprotocolplugins" long-name="HTTP Protocol Plugins" introduced="6.2" filter="s60" purpose="optional" plugin="Y">
 <unit bldFile="mw/netprotocols/applayerpluginsandutils/httpprotocolplugins/group" mrp="mw/netprotocols/applayerpluginsandutils/httpprotocolplugins/group/http_protocol-plugin.mrp"/>
 </component>
-<component name="httptransportplugins" long-name="HTTP Transport Plugins" introduced="6.2" purpose="optional" plugin="Y">
+<component name="httptransportplugins" long-name="HTTP Transport Plugins" introduced="6.2" filter="s60" purpose="optional" plugin="Y">
 <unit bldFile="mw/netprotocols/applayerpluginsandutils/httptransportplugins/group" mrp="mw/netprotocols/applayerpluginsandutils/httptransportplugins/group/http_transport-plugin.mrp"/>
 </component>
 </collection>
 <collection name="netprotocols_info" long-name="High-level Internet Protocols Info" level="specific">
+<component name="netprotocols_plat" long-name="High-level Internet Protocols Platform Interfaces" filter="s60" purpose="optional" class="api">
+<unit bldFile="mw/netprotocols/netprotocols_plat/group"/>
+</component>
 <component name="netprotocols_metadata" long-name="High-level Internet Protocols Metadata" introduced="^2" purpose="development" class="config PC">
 <unit mrp="mw/netprotocols/netprotocols_info/netprotocols_metadata/netprotocols_metadata.mrp"/>
 </component>
@@ -4589,17 +4565,8 @@
 <component name="pnpms_utils_api" long-name="PNPMS Utils API" filter="s60" purpose="optional" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/pnpms_utils_api/group"/>
 </component>
-<component name="adaptive_history_list_api" long-name="Adaptive History List API" filter="s60" purpose="optional" class="api">
-<unit bldFile="mw/remotemgmt/remotemgmt_plat/adaptive_history_list_api/group"/>
-</component>
-<component name="adaptive_history_list_session_api" long-name="Adaptive History List Session API" filter="s60" purpose="optional" class="api">
-<unit bldFile="mw/remotemgmt/remotemgmt_plat/adaptive_history_list_session_api/group"/>
-</component>
 <component name="fota_engine_api" long-name="FOTA Engine API" filter="s60" purpose="optional" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/fota_engine_api/group"/>
-</component>
-<component name="update_package_storage_plugin_api" long-name="Update Package Storage Plug-in API" filter="s60" purpose="optional" class="api">
-<unit bldFile="mw/remotemgmt/remotemgmt_plat/update_package_storage_plugin_api/group"/>
 </component>
 <component name="dcmo_adapter_api" long-name="DCMO Adapter API" filter="s60" purpose="optional" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/dcmo_adapter_api/group"/>
@@ -4610,10 +4577,10 @@
 <component name="ds_capability_mgmt_plugin_api" long-name="DS Capability Management Plugin API" filter="s60" purpose="optional" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/ds_capability_mgmt_plugin_api/group"/>
 </component>
-<component name="syncml_ds_customization_api" long-name="SyncML DS Customisation API" filter="s60" purpose="optional" class="api">
+<component name="syncml_ds_customization_api" long-name="SyncML DS Customization API" introduced="^4" filter="s60" purpose="optional" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_ds_customization_api/group"/>
 </component>
-<component name="syncml_ds_error_reporting_api" long-name="SyncML DS Error Reporting API" filter="s60" purpose="optional" class="api">
+<component name="syncml_ds_error_reporting_api" long-name="SyncML DS Error Reporting API" introduced="^4" filter="s60" purpose="optional" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_ds_error_reporting_api/group"/>
 </component>
 <component name="devicemgmt_dialogs_api" long-name="Device Management Dialogs API" introduced="^4" filter="s60" purpose="optional" class="api">
@@ -4684,9 +4651,8 @@
 <component name="dcmocustcmd" long-name="DCMO Custom Commands" filter="s60" purpose="optional">
 <unit bldFile="mw/remotemgmt/dcmofw/dcmocustcmd/group"/>
 </component>
-<component name="dcmofw_build" long-name="DCMO Build" filter="s60" purpose="optional">
-<!--  need to distribute exports, etc into the other components and remove this-->
-<unit bldFile="mw/remotemgmt/dcmofw/group"/>
+<component name="dcmofw_rom" long-name="DCMO ROM" filter="s60" purpose="optional">
+<unit bldFile="mw/remotemgmt/dcmofw/rom"/>
 </component>
 </collection>
 <collection name="fotaapplication" long-name="FOTA Application" level="generic">
@@ -4700,7 +4666,7 @@
 </collection>
 <collection name="devicemgmtnotifications" long-name="Device Management Notifications" level="server">
 <component name="devicemgmtnotifications_rom" long-name="DM Notifications ROM" introduced="^4" filter="s60" purpose="optional">
-<unit bldFile="mw/remotemgmt/devicemgmtnotifications/group"/>
+<unit bldFile="mw/remotemgmt/devicemgmtnotifications/rom"/>
 </component>
 <component name="dmdevdialogclient" long-name="DM Device Dialog Client" introduced="^4" filter="s60" purpose="optional">
 <unit bldFile="mw/remotemgmt/devicemgmtnotifications/dmdevdialogclient/bld"/>
@@ -6652,34 +6618,30 @@
 <component name="ftuwizardmodel_api" long-name="FTU Wizard Model API" filter="bldfirst,s60" purpose="optional" class="api">
 <unit bldFile="mw/gsprofilesrv/gsprofilesrv_plat/ftuwizardmodel_api" proFile="ftuwizardmodel_api.pro" qmakeArgs="-r -config rom"/>
 </component>
-<component name="profiles_engine_api" long-name="Profiles Engine API" filter="s60" purpose="optional" class="api">
+<component name="profiles_engine_api" long-name="Profiles Engine API" filter="bldfirst,s60" purpose="optional" class="api">
 <unit bldFile="mw/gsprofilesrv/gsprofilesrv_plat/profiles_engine_api/group"/>
 </component>
-<component name="settings_uis_cenrep_collection_api" long-name="Settings UIs CenRep Collection API" filter="s60" purpose="optional" class="api">
+<component name="settings_uis_cenrep_collection_api" long-name="Settings UIs CenRep Collection API" filter="bldfirst,s60" purpose="optional" class="api">
 <unit bldFile="mw/gsprofilesrv/gsprofilesrv_plat/settings_uis_cenrep_collection_api/group"/>
+</component>
+<component name="controlpanel_api" long-name="Control panel api" filter="bldfirst,s60" purpose="optional" class="api">
+<unit bldFile="mw/gsprofilesrv/gsprofilesrv_plat/controlpanel_api" proFile="controlpanel_api.pro" qmakeArgs="-r -config rom"/>
 </component>
 </collection>
 <collection name="ftuwizardmodel" long-name="FTU Wizard Model" level="generic">
-<component name="ftuwizardmodel_build" long-name="FTU Wizardmodel Build" filter="bldfirst" purpose="optional">
+<component name="ftuwizardmodel_build" long-name="FTU Wizardmodel Build" filter="s60,bldfirst" purpose="optional">
 <unit bldFile="mw/gsprofilesrv/ftuwizardmodel" proFile="ftuwizardmodel.pro" qmakeArgs="-r -config rom"/>
 </component>
 </collection>
 <collection name="controlpanel" long-name="Control Panel" level="generic">
-<component name="controlpanel_rom" long-name="Control Panel ROM" filter="s60" purpose="optional" class="placeholder">
-<!-- Need to create a real .pro file for this 
-	  <unit bldFile="controlpanel/rom" qt:proFile="cp_rom.pri" qt:qmakeArgs="-r -config rom"/> -->
+<component name="controlpanel_rom" long-name="Control Panel ROM" filter="s60" purpose="optional" class="config">
+<unit bldFile="mw/gsprofilesrv/controlpanel/rom"/>
 </component>
-<component name="controlpanel_config" long-name="Control Panel Config" introduced="^4" filter="s60" purpose="optional" class="config placeholder">
-<!-- Need to create a real .pro file for this 
-	  <unit bldFile="controlpanel/conf" qt:proFile="conf.pri" qt:qmakeArgs="-r -config rom"/> -->
+<component name="controlpanel_config" long-name="Control Panel Config" introduced="^4" filter="s60" purpose="optional" class="config">
+<unit bldFile="mw/gsprofilesrv/controlpanel/conf"/>
 </component>
-<component name="controlpanel_source" long-name="Control Panel Source" filter="s60" purpose="optional" class="placeholder">
-<!-- Uncomment when controlpanel_build is removed
-	  <unit bldFile="controlpanel/src" qt:qmakeArgs="-r -config rom" qt:proFile="src.pro"/> -->
-</component>
-<component name="controlpanel_build" long-name="Control Panel Build" filter="s60" purpose="optional">
-<!-- need to make included .pri file into a real .pro file -->
-<unit bldFile="mw/gsprofilesrv/controlpanel" proFile="controlpanel.pro" qmakeArgs="-r -config rom"/>
+<component name="controlpanel_source" long-name="Control Panel Source" filter="s60" purpose="optional">
+<unit bldFile="mw/gsprofilesrv/controlpanel/src" proFile="src.pro" qmakeArgs="-r -config rom"/>
 </component>
 </collection>
 <collection name="profilesservices" long-name="Profiles Services" level="server">
@@ -6769,75 +6731,78 @@
 </block>
 <block name="appinstall" level="generic" levels="tool framework generic api" long-name="Application Installation">
 <collection name="appinstall_plat" long-name="Application Installation Platform Interfaces" level="api">
-<component name="iaupdate_api" long-name="IA Update API" filter="s60" purpose="optional" class="api">
+<component name="iaupdate_api" long-name="IA Update API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/appinstall/appinstall_plat/iaupdate_api/group"/>
 </component>
-<component name="task_plugin_api" long-name="Task Plugin API" filter="s60" purpose="optional" class="api">
+<component name="task_plugin_api" long-name="Task Plugin API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/appinstall/appinstall_plat/task_plugin_api/group"/>
 </component>
-<component name="sw_installer_common_ui_api" long-name="SW Installer Common UI API" filter="s60" purpose="optional" class="api">
+<component name="sw_installer_common_ui_api" long-name="SW Installer Common UI API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/appinstall/appinstall_plat/sw_installer_common_ui_api/group"/>
 </component>
-<component name="sw_installer_launcher_api" long-name="SW Installer Launcher API" filter="s60" purpose="optional" class="api">
+<component name="sw_installer_launcher_api" long-name="SW Installer Launcher API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/appinstall/appinstall_plat/sw_installer_launcher_api/group"/>
 </component>
-<component name="task_management_api" long-name="Task Management API" filter="s60" purpose="optional" class="api">
+<component name="task_management_api" long-name="Task Management API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/appinstall/appinstall_plat/task_management_api/group"/>
 </component>
-<component name="sw_installer_ui_plugin_api" long-name="SW Installer UI Plugin API" filter="s60" purpose="optional" class="api">
+<component name="sw_installer_ui_plugin_api" long-name="SW Installer UI Plugin API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/appinstall/appinstall_plat/sw_installer_ui_plugin_api/group"/>
 </component>
-<component name="sw_installer_cr_keys" long-name="SW Installer CR Keys" filter="s60" purpose="optional" class="api">
+<component name="sw_installer_cr_keys" long-name="SW Installer CR Keys" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/appinstall/appinstall_plat/sw_installer_cr_keys/group"/>
 </component>
-<component name="sw_installer_ps_keys" long-name="SW Installer PS Keys" filter="s60" purpose="optional" class="api">
+<component name="sw_installer_ps_keys" long-name="SW Installer PS Keys" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/appinstall/appinstall_plat/sw_installer_ps_keys/group"/>
 </component>
-<component name="sifui_api" long-name="STIF UI API" filter="s60" purpose="optional" class="api">
+<component name="sifui_api" long-name="STIF UI API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/appinstall/appinstall_plat/sifui_api/group"/>
 </component>
 </collection>
 <collection name="appinstall_pub" long-name="Application Installation Public Interfaces" level="api">
-<component name="startup_list_management_api" long-name="Startup List Management API" filter="s60" purpose="optional" class="api">
+<component name="startup_list_management_api" long-name="Startup List Management API" filter="s60,build_as_app" purpose="optional" class="api">
 <unit bldFile="mw/appinstall/appinstall_pub/startup_list_management_api/group"/>
 </component>
 </collection>
 <collection name="ncdengine" long-name="Nokia Content Discover" level="framework">
-<component name="ncdengine_build" long-name="NCD Engine" introduced="^1" filter="s60" purpose="optional">
+<component name="ncdengine_build" long-name="NCD Engine" introduced="^1" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/appinstall/ncdengine/group"/>
 </component>
-<component name="ncdengine_qt_build" long-name="NCD Qt Engine" filter="s60" purpose="optional">
+<component name="ncdengine_qt_build" long-name="NCD Qt Engine" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/appinstall/ncdengine/engine" proFile="engine.pro"/>
 </component>
 </collection>
 <collection name="appinstaller" long-name="Application Installer" level="generic">
-<component name="appinstui" long-name="Application Installer UI" introduced="^2" filter="s60" purpose="optional">
+<component name="appinstui" long-name="Application Installer UI" introduced="^2" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/appinstall/appinstaller/appinstui/group"/>
 </component>
-<component name="appinstui_qt" long-name="Application Installer Qt UI" introduced="^2" filter="s60" purpose="optional">
+<component name="appinstui_qt" long-name="Application Installer Qt UI" introduced="^2" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/appinstall/appinstaller/appinstui" proFile="appinstui.pro"/>
 </component>
 </collection>
 <collection name="iaupdateapi_stub" long-name="IA Update API Stub" level="api">
 <!-- the collection is really a component. Move down a directory.-->
-<component name="iaupdateapi_stub_build" long-name="IA Update API Stub Build" introduced="^2" filter="s60" purpose="optional">
+<component name="iaupdateapi_stub_build" long-name="IA Update API Stub Build" introduced="^2" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/appinstall/iaupdateapi_stub/group"/>
 </component>
 </collection>
 <collection name="iaupdate" long-name="Independent Apps Update" level="api">
 <!-- Should reorganise into actual components -->
-<component name="iad" long-name="Independent App delivery" introduced="^4" filter="s60" purpose="development">
+<component name="iad" long-name="Independent App delivery" introduced="^4" filter="s60,build_as_app" purpose="development">
 <unit bldFile="mw/appinstall/iaupdate" proFile="iaupdate.pro"/>
 </component>
-<component name="iaupdate_build" long-name="IA Update Build" introduced="^2" filter="s60" purpose="optional">
+<component name="iaupdate_build" long-name="IA Update Build" introduced="^2" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/appinstall/iaupdate/group"/>
 </component>
 </collection>
 <collection name="installationservices" long-name="Installation Services" level="generic">
-<component name="swi" long-name="Secure Software Install" purpose="optional">
+<component name="swi" long-name="Secure Software Install" filter="s60,build_as_app" purpose="optional">
 <unit bldFile="mw/appinstall/installationservices/swi/group" mrp="mw/appinstall/installationservices/swi/group/security_swi.mrp"/>
 </component>
-<component name="swidevicetools" long-name="Secure Software Install Device Tools" introduced="8.1" purpose="development">
+<component name="swi_ncp" long-name="Secure Software Install" purpose="optional">
+<unit bldFile="mw/appinstall/installationservices/swi/group_ncp" mrp="mw/appinstall/installationservices/swi/group/security_swi.mrp"/>
+</component>
+<component name="swidevicetools" long-name="Secure Software Install Device Tools" introduced="8.1" filter="s60,build_as_app" purpose="development">
 <unit bldFile="mw/appinstall/installationservices/swidevicetools/group" mrp="mw/appinstall/installationservices/swidevicetools/group/security_switools_device.mrp"/>
 </component>
 <component name="swcomponentregistry" long-name="Software Component Registry" introduced="^4" purpose="mandatory">
@@ -6849,10 +6814,10 @@
 <component name="swtransactionservices" long-name="Software Transaction Services" introduced="^4" purpose="optional">
 <unit bldFile="mw/appinstall/installationservices/swtransactionservices/group" mrp="mw/appinstall/installationservices/swtransactionservices/group/security_softwaretransactionservices.mrp"/>
 </component>
-<component name="refswinstallationplugin" long-name="Reference Software Installation Plugin" introduced="^4" purpose="development" plugin="Y">
+<component name="refswinstallationplugin" long-name="Reference Software Installation Plugin" introduced="^4" filter="s60,build_as_app" purpose="development" plugin="Y">
 <unit bldFile="mw/appinstall/installationservices/refswinstallationplugin/group" mrp="mw/appinstall/installationservices/refswinstallationplugin/group/security_sifrefplugin.mrp"/>
 </component>
-<component name="refsoftwareappmgr" long-name="Reference Software Application Manager" introduced="^4" purpose="development">
+<component name="refsoftwareappmgr" long-name="Reference Software Application Manager" introduced="^4" filter="s60,build_as_app" purpose="development">
 <unit bldFile="mw/appinstall/installationservices/refsoftwareappmgr/group" mrp="mw/appinstall/installationservices/refsoftwareappmgr/group/security_referenceapplicationmanager.mrp"/>
 </component>
 <component name="swiconfig" long-name="Software Install Config" introduced="9.1" purpose="optional" class="config">
@@ -6860,13 +6825,13 @@
 </component>
 </collection>
 <collection name="secureswitools" long-name="Secure Software Install Tools" level="tool">
-<component name="makekeys" long-name="MakeKeys" introduced="6.0" filter="gt" purpose="optional" class="PC">
+<component name="makekeys" long-name="MakeKeys" introduced="6.0" filter="s60,gt,build_as_app" purpose="optional" class="PC">
 <unit bldFile="mw/appinstall/secureswitools/makekeys/group" mrp="mw/appinstall/secureswitools/makekeys/group/security_makekeys.mrp"/>
 </component>
-<component name="swianalysistoolkit" long-name="SWI Analysis Toolkit" purpose="development" class="PC">
+<component name="swianalysistoolkit" long-name="SWI Analysis Toolkit" filter="s60,build_as_app" purpose="development" class="PC">
 <unit bldFile="mw/appinstall/secureswitools/swianalysistoolkit/group" mrp="mw/appinstall/secureswitools/swianalysistoolkit/group/security_switools.mrp"/>
 </component>
-<component name="openssllib" long-name="OpenSSL Library" purpose="optional" class="PC">
+<component name="openssllib" long-name="OpenSSL Library" filter="s60,build_as_app" purpose="optional" class="PC">
 <unit mrp="mw/appinstall/secureswitools/openssllib/security_openssl.mrp"/>
 </component>
 <component name="swisistools" long-name="Secure Software Install SIS Tools" purpose="optional" class="PC">
