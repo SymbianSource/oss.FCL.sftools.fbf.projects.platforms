@@ -74,7 +74,7 @@
 >
 ]>
 <SystemDefinition name="Symbian^3" schema="2.0.1">
-<toolsModel>
+<systemModel>
 <layer name="tools" long-name="Tools" levels="low mw high">
 <block name="sdkcreationmdw" level="high" long-name="Sdk Creation Mdw" levels="mw">
 <collection name="Winsock_impl" level="mw">
@@ -90,5 +90,5 @@
 </collection>
 </block>
 </layer>
-</toolsModel>
+</systemModel>
 </SystemDefinition>

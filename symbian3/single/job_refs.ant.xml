@@ -9,7 +9,7 @@
     </fileset>
   </path>
   <path id="sf.spec.tools.system.definition.files">
-    <fileset dir="${sf.spec.tools.systemdefinition.location}/" casesensitive="false">
+    <fileset dir="${sf.spec.systemdefinition.location}/" casesensitive="false">
             <include name="tools_model.xml" />
     </fileset>
   </path>

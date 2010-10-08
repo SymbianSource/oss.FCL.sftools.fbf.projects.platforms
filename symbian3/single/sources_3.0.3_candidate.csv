@@ -1,5 +1,5 @@
 source,dst,type,pattern,sysdef
-http://developer.symbian.org/oss/FCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,changeset,ed23a53a5ee2,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,changeset,86e1b70f1f94,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/adaptation/codecs.aricent/,/sf/adaptation/codecs.aricent,changeset,bb31fbe78861,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,changeset,78b83e1454a6,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/adaptation/stubs/,/sf/adaptation/stubs,changeset,a8c9b9457ed6,layers.sysdef.xml
