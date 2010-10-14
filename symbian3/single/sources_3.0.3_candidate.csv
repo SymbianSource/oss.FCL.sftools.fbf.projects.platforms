@@ -105,7 +105,7 @@ http://developer.symbian.org/oss/MCL/sf/os/mm/,/sf/os/mm,changeset,613edd2a8a70,
 http://developer.symbian.org/oss/FCL/sf/os/networkingsrv/,/sf/os/networkingsrv,changeset,61fa4f7b5dd1,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/ossrv/,/sf/os/ossrv,changeset,b670675990af,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/persistentdata/,/sf/os/persistentdata,changeset,047f208ea78f,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/os/security/,/sf/os/security,changeset,94225563cd41,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/security/,/sf/os/security,changeset,e1f6ec9fb9b4,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/textandloc/,/sf/os/textandloc,changeset,c14349048220,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/os/usb/,/sf/os/usb,changeset,ee9b31ff95f7,
 http://developer.symbian.org/oss/MCL/sf/os/wlan/,/sf/os/wlan,changeset,d3d7683d16f5,layers.sysdef.xml
