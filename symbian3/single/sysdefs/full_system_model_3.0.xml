@@ -4,57 +4,57 @@
 <package id="stubs" tech-domain="hb" level="high" name="Stubs" levels="stub">
 <collection id="s60_stubs" level="stub">
 <component id="audiostubs" name="Audio Stubs">
-<unit bldFile="/adaptation/stubs/audiostubs/group"/>
+<unit bldFile="/adapt/stubs/audiostubs/group"/>
 </component>
 <component id="btaudioadaptation_stub" name="Bluetooth Audio Adaptation Stub">
-<unit bldFile="/adaptation/stubs/btaudioadaptation_stub/group"/>
+<unit bldFile="/adapt/stubs/btaudioadaptation_stub/group"/>
 </component>
 <component id="drm_stubs" name="DRM Stubs">
-<unit bldFile="/adaptation/stubs/drm_stubs/group"/>
+<unit bldFile="/adapt/stubs/drm_stubs/group"/>
 </component>
 <component id="ocrsrv_stub" name="OCR Services Stub">
-<unit bldFile="/adaptation/stubs/ocrsrv_stub/group"/>
+<unit bldFile="/adapt/stubs/ocrsrv_stub/group"/>
 </component>
 <component id="omasuplasnconverterstubimpl" name="OMA SUPL ASN Converter Stub Implementation">
-<unit bldFile="/adaptation/stubs/omasuplasnconverterstubimpl/group"/>
+<unit bldFile="/adapt/stubs/omasuplasnconverterstubimpl/group"/>
 </component>
 <component id="posmsgpluginreferenceimpl" name="POS Message Plugin Reference Implementation" class="plugin">
-<unit bldFile="/adaptation/stubs/posmsgpluginreferenceimpl/group"/>
+<unit bldFile="/adapt/stubs/posmsgpluginreferenceimpl/group"/>
 </component>
 <component id="srsfenginestub" name="SRSF Engine Stub">
-<unit bldFile="/adaptation/stubs/srsfenginestub/group"/>
+<unit bldFile="/adapt/stubs/srsfenginestub/group"/>
 </component>
 <component id="power_save_display_mode_stub" name="Power Save Display Mode Stub">
-<unit bldFile="/adaptation/stubs/power_save_display_mode_stub/group"/>
+<unit bldFile="/adapt/stubs/power_save_display_mode_stub/group"/>
 </component>
 <component id="systemswstubs" name="System Software Stubs">
-<unit bldFile="/adaptation/stubs/systemswstubs/group"/>
+<unit bldFile="/adapt/stubs/systemswstubs/group"/>
 </component>
 <component id="tactileclickplugin_stub" name="Tactile Click Plugin Stub" class="plugin">
-<unit bldFile="/adaptation/stubs/tactileclickplugin_stub/group"/>
+<unit bldFile="/adapt/stubs/tactileclickplugin_stub/group"/>
 </component>
 <component id="wlanhwinit_stub" name="WLAN Hardware Init Stub">
-<unit bldFile="/adaptation/stubs/wlanhwinit_stub/group"/>
+<unit bldFile="/adapt/stubs/wlanhwinit_stub/group"/>
 </component>
 </collection>
 </package>
 <package id="beagleboard" tech-domain="hb" level="low" name="Beagle Board" levels="hw-if">
 <collection id="omap3530" name="OMAP 3530" level="hw-if">
 <component id="omap3530_build" name="Beagle Board Common" introduced="^3" purpose="optional" filter="sf_build">
-<unit bldFile="/adaptation/beagleboard/omap3530" mrp="/adaptation/beagleboard/omap3530/base_beagle.mrp"/>
+<unit bldFile="/adapt/beagleboard/omap3530" mrp="/adapt/beagleboard/omap3530/base_beagle.mrp"/>
 </component>
 <component id="omap3530_kernel" name="Beagle Board Kernel" introduced="^3" purpose="optional" filter="sf_build">
-<unit bldFile="/adaptation/beagleboard/omap3530/kernel"/>
+<unit bldFile="/adapt/beagleboard/omap3530/kernel"/>
 </component>
 <component id="beagleboard_Baseport" name="Beagle Board Baseport" introduced="^3" purpose="optional" filter="sf_build">
-<unit bldFile="/adaptation/beagleboard/omap3530/beagleboard"/>
+<unit bldFile="/adapt/beagleboard/omap3530/beagleboard"/>
 </component>
 </collection>
 </package>
 <package id="qemu" tech-domain="hb" level="low" name="QEMU and Baseport" levels="hw-if">
 <collection id="qemu_baseport" name="Baseport" level="hw-if">
 <component id="syborg" name="Syborg" introduced="^2" purpose="optional" filter="sf_build">
-<unit bldFile="/adaptation/qemu/baseport/syborg" mrp="/adaptation/qemu/baseport/syborg/syborg.mrp"/>
+<unit bldFile="/adapt/qemu/baseport/syborg" mrp="/adapt/qemu/baseport/syborg/syborg.mrp"/>
 </component>
 </collection>
 </package>

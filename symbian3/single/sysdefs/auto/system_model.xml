@@ -79,133 +79,133 @@
 <block name="stubs" level="high" long-name="Stubs" levels="stub">
 <collection name="s60_stubs" level="stub">
 <component name="audiostubs" long-name="Audio Stubs">
-<unit bldFile="adaptation/stubs/audiostubs/group"/>
+<unit bldFile="adapt/stubs/audiostubs/group"/>
 </component>
 <component name="btaudioadaptation_stub" long-name="Bluetooth Audio Adaptation Stub">
-<unit bldFile="adaptation/stubs/btaudioadaptation_stub/group"/>
+<unit bldFile="adapt/stubs/btaudioadaptation_stub/group"/>
 </component>
 <component name="drm_stubs" long-name="DRM Stubs">
-<unit bldFile="adaptation/stubs/drm_stubs/group"/>
+<unit bldFile="adapt/stubs/drm_stubs/group"/>
 </component>
 <component name="ocrsrv_stub" long-name="OCR Services Stub">
-<unit bldFile="adaptation/stubs/ocrsrv_stub/group"/>
+<unit bldFile="adapt/stubs/ocrsrv_stub/group"/>
 </component>
 <component name="omasuplasnconverterstubimpl" long-name="OMA SUPL ASN Converter Stub Implementation">
-<unit bldFile="adaptation/stubs/omasuplasnconverterstubimpl/group"/>
+<unit bldFile="adapt/stubs/omasuplasnconverterstubimpl/group"/>
 </component>
 <component name="posmsgpluginreferenceimpl" long-name="POS Message Plugin Reference Implementation" plugin="Y">
-<unit bldFile="adaptation/stubs/posmsgpluginreferenceimpl/group"/>
+<unit bldFile="adapt/stubs/posmsgpluginreferenceimpl/group"/>
 </component>
 <component name="srsfenginestub" long-name="SRSF Engine Stub">
-<unit bldFile="adaptation/stubs/srsfenginestub/group"/>
+<unit bldFile="adapt/stubs/srsfenginestub/group"/>
 </component>
 <component name="power_save_display_mode_stub" long-name="Power Save Display Mode Stub">
-<unit bldFile="adaptation/stubs/power_save_display_mode_stub/group"/>
+<unit bldFile="adapt/stubs/power_save_display_mode_stub/group"/>
 </component>
 <component name="systemswstubs" long-name="System Software Stubs">
-<unit bldFile="adaptation/stubs/systemswstubs/group"/>
+<unit bldFile="adapt/stubs/systemswstubs/group"/>
 </component>
 <component name="tactileclickplugin_stub" long-name="Tactile Click Plugin Stub" plugin="Y">
-<unit bldFile="adaptation/stubs/tactileclickplugin_stub/group"/>
+<unit bldFile="adapt/stubs/tactileclickplugin_stub/group"/>
 </component>
 <component name="wlanhwinit_stub" long-name="WLAN Hardware Init Stub">
-<unit bldFile="adaptation/stubs/wlanhwinit_stub/group"/>
+<unit bldFile="adapt/stubs/wlanhwinit_stub/group"/>
 </component>
 </collection>
 </block>
 <block name="beagleboard" level="low" long-name="Beagle Board" levels="hw-if">
 <collection name="omap3530" long-name="OMAP 3530" level="hw-if">
 <component name="omap3530_build" long-name="Beagle Board Common" introduced="^3" purpose="optional" filter="sf_build">
-<unit bldFile="adaptation/beagleboard/omap3530" mrp="adaptation/beagleboard/omap3530/base_beagle.mrp"/>
+<unit bldFile="adapt/beagleboard/omap3530" mrp="adapt/beagleboard/omap3530/base_beagle.mrp"/>
 </component>
 <component name="omap3530_kernel" long-name="Beagle Board Kernel" introduced="^3" purpose="optional" filter="sf_build">
-<unit bldFile="adaptation/beagleboard/omap3530/kernel"/>
+<unit bldFile="adapt/beagleboard/omap3530/kernel"/>
 </component>
 <component name="beagleboard_Baseport" long-name="Beagle Board Baseport" introduced="^3" purpose="optional" filter="sf_build">
-<unit bldFile="adaptation/beagleboard/omap3530/beagleboard"/>
+<unit bldFile="adapt/beagleboard/omap3530/beagleboard"/>
 </component>
 </collection>
 </block>
 <block name="qemu" level="low" long-name="QEMU and Baseport" levels="hw-if">
 <collection name="qemu_baseport" long-name="Baseport" level="hw-if">
 <component name="syborg" long-name="Syborg" introduced="^2" purpose="optional" filter="sf_build">
-<unit bldFile="adaptation/qemu/baseport/syborg" mrp="adaptation/qemu/baseport/syborg/syborg.mrp"/>
+<unit bldFile="adapt/qemu/baseport/syborg" mrp="adapt/qemu/baseport/syborg/syborg.mrp"/>
 </component>
 </collection>
 </block>
 <block name="naviengine.nec" level="low" long-name="NaviEngine" levels="hw-if">
 <collection name="navienginebsp" long-name="NaviEngine BSP" level="hw-if">
 <component name="ne1_tb" long-name="NaviEngine 1 (Multiple)" introduced="^4" purpose="optional" filter="sf_build">
-<unit bldFile="adaptation/naviengine.nec/navienginebsp/ne1_tb"/>
+<unit bldFile="adapt/naviengine.nec/navienginebsp/ne1_tb"/>
 </component>
 <component name="sne1_tb" long-name="NaviEngine 1 (Single)" introduced="^4" purpose="optional" filter="sf_build">
-<unit bldFile="adaptation/naviengine.nec/navienginebsp/ne1_tb/single"/>
+<unit bldFile="adapt/naviengine.nec/navienginebsp/ne1_tb/single"/>
 </component>
 <component name="fne1_tb" long-name="NaviEngine 1 (Flexible)" introduced="^4" purpose="optional" filter="sf_build">
-<unit bldFile="adaptation/naviengine.nec/navienginebspflexible"/>
+<unit bldFile="adapt/naviengine.nec/navienginebspflexible"/>
 </component>
 <component name="navienginebootldr" long-name="NaviEngine Boot Loader" introduced="^4" purpose="optional" filter="sf_build">
-<unit bldFile="adaptation/naviengine.nec/navienginebootldr"/>
+<unit bldFile="adapt/naviengine.nec/navienginebootldr"/>
 </component>
 </collection>
 </block>
 <block name="codecs.aricent" level="low" long-name="Aricent Codecs">
 <collection name="utilities" long-name="Aricent Utilities">
 <component name="ariprocessengine" long-name="Aricent Process Engine">
-<unit bldFile="adaptation/codecs.aricent/utilities/ariprocessengine/group"/>
+<unit bldFile="adapt/codecs.aricent/utilities/ariprocessengine/group"/>
 </component>
 <component name="aristatemachine" long-name="Aricent State Machine">
-<unit bldFile="adaptation/codecs.aricent/utilities/aristatemachine/group"/>
+<unit bldFile="adapt/codecs.aricent/utilities/aristatemachine/group"/>
 </component>
 </collection>
 <collection name="aaclc_enc" level="plugin">
 <component name="ariaaclcencmmfcodec">
-<unit bldFile="adaptation/codecs.aricent/aaclc_enc/ariaaclcencmmfcodec/group"/>
+<unit bldFile="adapt/codecs.aricent/aaclc_enc/ariaaclcencmmfcodec/group"/>
 </component>
 </collection>
 <collection name="amrnb_dec" level="plugin">
 <component name="ariamrnbdecmmfcodec">
-<unit bldFile="adaptation/codecs.aricent/amrnb_dec/ariamrnbdecmmfcodec/group"/>
+<unit bldFile="adapt/codecs.aricent/amrnb_dec/ariamrnbdecmmfcodec/group"/>
 </component>
 </collection>
 <collection name="amrnb_enc" level="plugin">
 <component name="ariamrnbencmmfcodec">
-<unit bldFile="adaptation/codecs.aricent/amrnb_enc/ariamrnbencmmfcodec/group"/>
+<unit bldFile="adapt/codecs.aricent/amrnb_enc/ariamrnbencmmfcodec/group"/>
 </component>
 </collection>
 <collection name="amrwb_dec" level="plugin">
 <component name="ariamrwbdecmmfcodec">
-<unit bldFile="adaptation/codecs.aricent/amrwb_dec/ariamrwbdecmmfcodec/group"/>
+<unit bldFile="adapt/codecs.aricent/amrwb_dec/ariamrwbdecmmfcodec/group"/>
 </component>
 </collection>
 <collection name="h264_dec" level="plugin">
 <component name="arih264dechwdevice">
-<unit bldFile="adaptation/codecs.aricent/h264_dec/arih264dechwdevice/group"/>
+<unit bldFile="adapt/codecs.aricent/h264_dec/arih264dechwdevice/group"/>
 </component>
 </collection>
 <collection name="h264_enc" level="plugin">
 <component name="arih264enchwdevice">
-<unit bldFile="adaptation/codecs.aricent/h264_enc/arih264enchwdevice/group"/>
+<unit bldFile="adapt/codecs.aricent/h264_enc/arih264enchwdevice/group"/>
 </component>
 </collection>
 <collection name="heaac_dec" level="plugin">
 <component name="ariheaacdecmmfcodec">
-<unit bldFile="adaptation/codecs.aricent/heaac_dec/ariheaacdecmmfcodec/group"/>
+<unit bldFile="adapt/codecs.aricent/heaac_dec/ariheaacdecmmfcodec/group"/>
 </component>
 </collection>
 <collection name="mp3_dec" level="plugin">
 <component name="arimp3decmmfcodec">
-<unit bldFile="adaptation/codecs.aricent/mp3_dec/arimp3decmmfcodec/group"/>
+<unit bldFile="adapt/codecs.aricent/mp3_dec/arimp3decmmfcodec/group"/>
 </component>
 </collection>
 <collection name="mp4asp_dec" level="plugin">
 <component name="arimpeg4aspdechwdevice">
-<unit bldFile="adaptation/codecs.aricent/mp4asp_dec/arimpeg4aspdechwdevice/group"/>
+<unit bldFile="adapt/codecs.aricent/mp4asp_dec/arimpeg4aspdechwdevice/group"/>
 </component>
 </collection>
 <collection name="mp4sp_enc" level="plugin">
 <component name="arimp4spenchwdevice">
-<unit bldFile="adaptation/codecs.aricent/mp4sp_enc/arimp4spenchwdevice/group"/>
+<unit bldFile="adapt/codecs.aricent/mp4sp_enc/arimp4spenchwdevice/group"/>
 </component>
 </collection>
 </block>

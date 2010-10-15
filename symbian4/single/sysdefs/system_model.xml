@@ -79,206 +79,206 @@
 <block name="stubs" level="high" span="2" levels="adaptation plugin mid engine" long-name="Stubs">
 <collection name="audiostubs" long-name="Audio Stubs" level="adaptation">
 <component name="devsoundextensions_stubs" long-name="Devsound Extensions Stubs" purpose="optional">
-<unit bldFile="adaptation/stubs/audiostubs/devsoundextensions_stubs/group"/>
+<unit bldFile="adapt/stubs/audiostubs/devsoundextensions_stubs/group"/>
 </component>
 <component name="fmradiotunercontrolstub" long-name="FM Radio Tuner Control Stub" purpose="optional">
-<unit bldFile="adaptation/stubs/audiostubs/fmradiotunercontrolstub/group"/>
+<unit bldFile="adapt/stubs/audiostubs/fmradiotunercontrolstub/group"/>
 </component>
 </collection>
 <collection name="drm_stubs" long-name="DRM Stubs" level="plugin">
 <component name="drm_stubs_build" long-name="DRM Stubs Build" purpose="optional">
-<unit bldFile="adaptation/stubs/drm_stubs/group"/>
+<unit bldFile="adapt/stubs/drm_stubs/group"/>
 </component>
 </collection>
 <collection name="ocrsrv_stub" long-name="OCR Services Stub" level="mid">
 <component name="ocrsrv_stub_build" long-name="OCR Services Stub Build" filter="!dfs_build" purpose="optional">
-<unit bldFile="adaptation/stubs/ocrsrv_stub/group"/>
+<unit bldFile="adapt/stubs/ocrsrv_stub/group"/>
 </component>
 </collection>
 <collection name="omasuplasnconverterstubimpl" long-name="OMA SUPL ASN Converter Stub Implementation" level="plugin">
 <component name="omasuplasnconverterstubimpl_build" long-name="OMA SUPL ASN Converter Stub Implementation Build" filter="!dfs_build" purpose="optional">
-<unit bldFile="adaptation/stubs/omasuplasnconverterstubimpl/group"/>
+<unit bldFile="adapt/stubs/omasuplasnconverterstubimpl/group"/>
 </component>
 </collection>
 <collection name="posmsgpluginreferenceimpl" long-name="POS Message Plugin Reference Implementation" level="plugin">
 <component name="posmsgpluginreferenceimpl_build" long-name="POS Message Plugin Reference Implementation Build" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/stubs/posmsgpluginreferenceimpl/group"/>
+<unit bldFile="adapt/stubs/posmsgpluginreferenceimpl/group"/>
 </component>
 </collection>
 <collection name="srsfenginestub" long-name="SRSF Engine Stub" level="engine">
 <component name="srsfenginestub_build" long-name="SRSF Engine Stub Build" filter="stubs" purpose="optional">
-<unit bldFile="adaptation/stubs/srsfenginestub/group"/>
+<unit bldFile="adapt/stubs/srsfenginestub/group"/>
 </component>
 </collection>
 <collection name="power_save_display_mode_stub" long-name="Power Save Display Mode Stub" level="plugin">
 <component name="power_save_display_mode_stub_build" long-name="Power Save Display Mode Stub Build" purpose="optional">
-<unit bldFile="adaptation/stubs/power_save_display_mode_stub/group"/>
+<unit bldFile="adapt/stubs/power_save_display_mode_stub/group"/>
 </component>
 </collection>
 <collection name="systemswstubs" long-name="System Software Stubs" level="adaptation">
 <component name="ddcaccessstub" long-name="DDC Access Stub" purpose="optional">
-<unit bldFile="adaptation/stubs/systemswstubs/ddcaccessstub/group"/>
+<unit bldFile="adapt/stubs/systemswstubs/ddcaccessstub/group"/>
 </component>
 <component name="tvoutconfig" long-name="TV Out Config" purpose="optional">
-<unit bldFile="adaptation/stubs/systemswstubs/TVOutConfig/group" filter="oem_build"/>
+<unit bldFile="adapt/stubs/systemswstubs/TVOutConfig/group" filter="oem_build"/>
 </component>
 <component name="accessorypolicyreference" long-name="Accessory Policy Reference" purpose="optional">
-<unit bldFile="adaptation/stubs/systemswstubs/accessorypolicyreference/group" filter="oem_build"/>
+<unit bldFile="adapt/stubs/systemswstubs/accessorypolicyreference/group" filter="oem_build"/>
 </component>
 <component name="asyreference" long-name="ASY Reference" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/stubs/systemswstubs/asyreference/group" filter="oem_build"/>
+<unit bldFile="adapt/stubs/systemswstubs/asyreference/group" filter="oem_build"/>
 </component>
 <component name="examplecommonisc" long-name="Example Common ISC" purpose="optional">
-<unit bldFile="adaptation/stubs/systemswstubs/examplecommonisc/group" filter="oem_build"/>
+<unit bldFile="adapt/stubs/systemswstubs/examplecommonisc/group" filter="oem_build"/>
 </component>
 <component name="exampledsy" long-name="Example DSY" purpose="optional">
-<unit bldFile="adaptation/stubs/systemswstubs/exampledsy/group" filter="oem_build"/>
+<unit bldFile="adapt/stubs/systemswstubs/exampledsy/group" filter="oem_build"/>
 </component>
 <component name="featuremanagerstub" long-name="Feature Manager Stub" purpose="optional">
-<unit bldFile="adaptation/stubs/systemswstubs/featuremanagerstub/group" filter="oem_build"/>
+<unit bldFile="adapt/stubs/systemswstubs/featuremanagerstub/group" filter="oem_build"/>
 </component>
 <component name="hwrmstubplugins" long-name="Hardware Resource Manager Stub Plugins" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/stubs/systemswstubs/hwrmstubplugins/group" filter="oem_build"/>
+<unit bldFile="adapt/stubs/systemswstubs/hwrmstubplugins/group" filter="oem_build"/>
 </component>
 <component name="hwrmhapticsstubplugin" long-name="Hardware Resource Manager Haptics Stub Plugin" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/stubs/systemswstubs/hwrmhapticsstubplugin/group" filter="oem_build"/>
+<unit bldFile="adapt/stubs/systemswstubs/hwrmhapticsstubplugin/group" filter="oem_build"/>
 </component>
 <component name="sensorchannelsreference" long-name="Sensor Channels Reference" purpose="optional">
-<unit bldFile="adaptation/stubs/systemswstubs/sensorchannelsreference/group" filter="oem_build"/>
+<unit bldFile="adapt/stubs/systemswstubs/sensorchannelsreference/group" filter="oem_build"/>
 </component>
 <component name="ssyreference" long-name="SSY Reference" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/stubs/systemswstubs/ssyreference/group" filter="oem_build"/>
+<unit bldFile="adapt/stubs/systemswstubs/ssyreference/group" filter="oem_build"/>
 </component>
 <component name="startupadaptationstub" long-name="Startup Adaptation Stub" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/stubs/systemswstubs/startupadaptationstub/group" filter="oem_build"/>
+<unit bldFile="adapt/stubs/systemswstubs/startupadaptationstub/group" filter="oem_build"/>
 </component>
 <component name="tiltcompensationstub" long-name="Tilt Compensation Stub" purpose="optional">
-<unit bldFile="adaptation/stubs/systemswstubs/tiltcompensationstub/group" filter="oem_build"/>
+<unit bldFile="adapt/stubs/systemswstubs/tiltcompensationstub/group" filter="oem_build"/>
 </component>
 <component name="tvoutbehaviour" long-name="TV Out Behaviour" purpose="optional">
-<unit bldFile="adaptation/stubs/systemswstubs/tvoutbehaviour/group" filter="oem_build"/>
+<unit bldFile="adapt/stubs/systemswstubs/tvoutbehaviour/group" filter="oem_build"/>
 </component>
 <component name="wiredbearerreference" long-name="Wired Bearer Reference" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/stubs/systemswstubs/wiredbearerreference/group" filter="oem_build"/>
+<unit bldFile="adapt/stubs/systemswstubs/wiredbearerreference/group" filter="oem_build"/>
 </component>
 </collection>
 <collection name="tactileclickplugin_stub" long-name="Tactile Click Plugin Stub" level="engine">
 <component name="tactileclickplugin_stub_build" long-name="Tactile Click Plugin Stub Build" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/stubs/tactileclickplugin_stub/group"/>
+<unit bldFile="adapt/stubs/tactileclickplugin_stub/group"/>
 </component>
 </collection>
 <collection name="wlanhwinit_stub" long-name="WLAN Hardware Init Stub" level="mid">
 <component name="wlanhwinit_stub_build" long-name="WLAN Hardware Init Stub Build" purpose="optional">
-<unit bldFile="adaptation/stubs/wlanhwinit_stub/group"/>
+<unit bldFile="adapt/stubs/wlanhwinit_stub/group"/>
 </component>
 </collection>
 </block>
 <block name="beagleboard" level="low" levels="hw-if" long-name="Beagle Board">
 <collection name="omap3530" long-name="OMAP 3530" level="hw-if">
 <component name="omap3530_build" long-name="Beagle Board Common" introduced="^3" filter="sf_build" purpose="optional">
-<unit bldFile="adaptation/beagleboard/omap3530" mrp="adaptation/beagleboard/omap3530/base_beagle.mrp"/>
+<unit bldFile="adapt/beagleboard/omap3530" mrp="adapt/beagleboard/omap3530/base_beagle.mrp"/>
 </component>
 <component name="omap3530_kernel" long-name="Beagle Board Kernel" introduced="^3" filter="sf_build" purpose="optional">
-<unit bldFile="adaptation/beagleboard/omap3530/kernel"/>
+<unit bldFile="adapt/beagleboard/omap3530/kernel"/>
 </component>
 <component name="beagleboard_Baseport" long-name="Beagle Board Baseport" introduced="^3" filter="sf_build" purpose="optional">
-<unit bldFile="adaptation/beagleboard/omap3530/beagleboard"/>
+<unit bldFile="adapt/beagleboard/omap3530/beagleboard"/>
 </component>
 </collection>
 </block>
 <block name="qemu" level="low" levels="hw-if" long-name="QEMU and Baseport">
 <collection name="qemu_baseport" long-name="Baseport" level="hw-if">
 <component name="syborg" long-name="Syborg" introduced="^2" filter="sf_build" purpose="optional">
-<unit bldFile="adaptation/qemu/baseport/syborg" mrp="adaptation/qemu/baseport/syborg/syborg.mrp"/>
+<unit bldFile="adapt/qemu/baseport/syborg" mrp="adapt/qemu/baseport/syborg/syborg.mrp"/>
 </component>
 </collection>
 </block>
 <block name="naviengine.nec" level="low" levels="hw-if" long-name="NaviEngine">
 <collection name="navienginebsp" long-name="NaviEngine BSP" level="hw-if">
 <component name="ne1_tb" long-name="NaviEngine 1 (Multiple)" introduced="^4" filter="sf_build" purpose="optional">
-<unit bldFile="adaptation/naviengine.nec/navienginebsp/ne1_tb"/>
+<unit bldFile="adapt/naviengine.nec/navienginebsp/ne1_tb"/>
 </component>
 <component name="sne1_tb" long-name="NaviEngine 1 (Single)" introduced="^4" filter="sf_build" purpose="optional">
-<unit bldFile="adaptation/naviengine.nec/navienginebsp/ne1_tb/single"/>
+<unit bldFile="adapt/naviengine.nec/navienginebsp/ne1_tb/single"/>
 </component>
 <component name="fne1_tb" long-name="NaviEngine 1 (Flexible)" introduced="^4" filter="sf_build" purpose="optional">
-<unit bldFile="adaptation/naviengine.nec/navienginebspflexible"/>
+<unit bldFile="adapt/naviengine.nec/navienginebspflexible"/>
 </component>
 <component name="navienginebootldr" long-name="NaviEngine Boot Loader" introduced="^4" filter="sf_build" purpose="optional">
-<unit bldFile="adaptation/naviengine.nec/navienginebootldr"/>
+<unit bldFile="adapt/naviengine.nec/navienginebootldr"/>
 </component>
 </collection>
 </block>
 <block name="codecs.aricent" level="low" levels="util plugin" long-name="Aricent Codecs">
 <collection name="aricent_utilities" long-name="Aricent Utilities" level="util">
 <component name="ariprocessengine" long-name="Aricent Process Engine" introduced="^4" filter="sf_build" purpose="optional">
-<unit bldFile="adaptation/codecs.aricent/utilities/ariprocessengine/group"/>
+<unit bldFile="adapt/codecs.aricent/utilities/ariprocessengine/group"/>
 </component>
 <component name="aristatemachine" long-name="Aricent State Machine" introduced="^4" filter="sf_build" purpose="optional">
-<unit bldFile="adaptation/codecs.aricent/utilities/aristatemachine/group"/>
+<unit bldFile="adapt/codecs.aricent/utilities/aristatemachine/group"/>
 </component>
 </collection>
 <collection name="aaclc_enc" long-name="AAC LC Encoding" level="plugin">
 <component name="ariaaclcencmmfcodec" long-name="Aricent AAC LC Encoding MMF Codec" introduced="^4" filter="sf_build" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/codecs.aricent/aaclc_enc/ariaaclcencmmfcodec/group"/>
+<unit bldFile="adapt/codecs.aricent/aaclc_enc/ariaaclcencmmfcodec/group"/>
 </component>
 </collection>
 <collection name="amrnb_dec" long-name="AMR NB Decoding" level="plugin">
 <component name="ariamrnbdecmmfcodec" long-name="Aricent AMR NB Decoding MMF Codec" introduced="^4" filter="sf_build" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/codecs.aricent/amrnb_dec/ariamrnbdecmmfcodec/group"/>
+<unit bldFile="adapt/codecs.aricent/amrnb_dec/ariamrnbdecmmfcodec/group"/>
 </component>
 </collection>
 <collection name="amrnb_enc" long-name="AMR NB Encoding" level="plugin">
 <component name="ariamrnbencmmfcodec" long-name="Aricent AMR NB Encoding MMF Codec" introduced="^4" filter="sf_build" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/codecs.aricent/amrnb_enc/ariamrnbencmmfcodec/group"/>
+<unit bldFile="adapt/codecs.aricent/amrnb_enc/ariamrnbencmmfcodec/group"/>
 </component>
 </collection>
 <collection name="amrwb_dec" long-name="AMR WB Decoding" level="plugin">
 <component name="ariamrwbdecmmfcodec" long-name="Aricent AMR WB Decoding MMF Codec" introduced="^4" filter="sf_build" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/codecs.aricent/amrwb_dec/ariamrwbdecmmfcodec/group"/>
+<unit bldFile="adapt/codecs.aricent/amrwb_dec/ariamrwbdecmmfcodec/group"/>
 </component>
 </collection>
 <collection name="h264_dec" long-name="H264 Decoding" level="plugin">
 <component name="arih264dechwdevice" long-name="Aricent H264 Decoding Hardware Device" introduced="^4" filter="sf_build" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/codecs.aricent/h264_dec/arih264dechwdevice/group"/>
+<unit bldFile="adapt/codecs.aricent/h264_dec/arih264dechwdevice/group"/>
 </component>
 </collection>
 <collection name="h264_enc" long-name="H264 Encoding" level="plugin">
 <component name="arih264enchwdevice" long-name="Aricent H264 Encoding Hardware Device" introduced="^4" filter="sf_build" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/codecs.aricent/h264_enc/arih264enchwdevice/group"/>
+<unit bldFile="adapt/codecs.aricent/h264_enc/arih264enchwdevice/group"/>
 </component>
 </collection>
 <collection name="heaac_dec" long-name="HE AAC Decoding" level="plugin">
 <component name="ariheaacdecmmfcodec" long-name="Aricent HE AAC Decoding MMF Codec" introduced="^4" filter="sf_build" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/codecs.aricent/heaac_dec/ariheaacdecmmfcodec/group"/>
+<unit bldFile="adapt/codecs.aricent/heaac_dec/ariheaacdecmmfcodec/group"/>
 </component>
 </collection>
 <collection name="mp3_dec" long-name="MP3 Decoding" level="plugin">
 <component name="arimp3decmmfcodec" long-name="Aricent MP3 Decoding MMF Codec" introduced="^4" filter="sf_build" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/codecs.aricent/mp3_dec/arimp3decmmfcodec/group"/>
+<unit bldFile="adapt/codecs.aricent/mp3_dec/arimp3decmmfcodec/group"/>
 </component>
 </collection>
 <collection name="mp4asp_dec" long-name="MP4 ASP Decoding" level="plugin">
 <component name="arimpeg4aspdechwdevice" long-name="Aricent MP4 ASP Decoding Hardware Device" introduced="^4" filter="sf_build" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/codecs.aricent/mp4asp_dec/arimpeg4aspdechwdevice/group"/>
+<unit bldFile="adapt/codecs.aricent/mp4asp_dec/arimpeg4aspdechwdevice/group"/>
 </component>
 </collection>
 <collection name="mp4sp_enc" long-name="MP4 SP Encoding" level="plugin">
 <component name="arimp4spenchwdevice" long-name="MP4 SP Encoding Hardware Device" introduced="^4" filter="sf_build" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/codecs.aricent/mp4sp_enc/arimp4spenchwdevice/group"/>
+<unit bldFile="adapt/codecs.aricent/mp4sp_enc/arimp4spenchwdevice/group"/>
 </component>
 </collection>
 </block>
 <block name="openmaxil.nokia" level="mw" levels="adaptation hw-if device-fw" long-name="Nokia OpenMAX IL Adaptation">
 <collection name="omxilcomp" long-name="OpenMAX IL Components" level="adaptation">
 <component name="omxilgeneric" long-name="Generic OpenMAX IL Components" introduced="^3" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/openmaxil.nokia/omxilcomp/omxilgeneric/group" version="1"/>
+<unit bldFile="adapt/openmaxil.nokia/omxilcomp/omxilgeneric/group" version="1"/>
 </component>
 <component name="omxilaudioemulator" long-name="OpenMAX IL Audio Emulator" introduced="^3" purpose="optional" plugin="Y">
-<unit bldFile="adaptation/openmaxil.nokia/omxilcomp/omxilaudioemulator/group" version="1"/>
+<unit bldFile="adapt/openmaxil.nokia/omxilcomp/omxilaudioemulator/group" version="1"/>
 </component>
 <component name="omxiltestcomp" long-name="OpenMAX IL Test Components" introduced="^3" purpose="development" plugin="Y">
-<unit bldFile="adaptation/openmaxil.nokia/omxilcomp/omxiltestcomp/group" version="1"/>
+<unit bldFile="adapt/openmaxil.nokia/omxilcomp/omxiltestcomp/group" version="1"/>
 </component>
 </collection>
 </block>

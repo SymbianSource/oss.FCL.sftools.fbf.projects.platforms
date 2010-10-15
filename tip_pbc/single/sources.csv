@@ -1,9 +1,9 @@
 source,dst,type,pattern,sysdef
-http://developer.symbian.org/oss/FCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,branch,default,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/adaptation/codecs.aricent/,/sf/adaptation/codecs.aricent,branch,default,NON-NOKIA
-http://developer.symbian.org/oss/FCL/sf/adaptation/openmaxil.nokia/,/sf/adaptation/openmaxil.nokia,branch,default,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,branch,default,modified-FCL
-http://developer.symbian.org/oss/FCL/sf/adaptation/stubs/,/sf/adaptation/stubs,tag,tip_pbc,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/adapt/beagleboard/,/sf/adapt/beagleboard,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/adapt/codecs.aricent/,/sf/adapt/codecs.aricent,branch,default,NON-NOKIA
+http://developer.symbian.org/oss/FCL/sf/adapt/openmaxil.nokia/,/sf/adapt/openmaxil.nokia,branch,default,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/adapt/qemu/,/sf/adapt/qemu,branch,default,modified-FCL
+http://developer.symbian.org/oss/FCL/sf/adapt/stubs/,/sf/adapt/stubs,tag,tip_pbc,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/browserui/,/sf/app/browserui,tag,tip_pbc,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/camera/,/sf/app/camera,tag,tip_pbc,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/calendarwidget/,/sf/app/calendarwidget,branch,default,layers.sysdef.xml

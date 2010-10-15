@@ -5,7 +5,7 @@ http://developer.symbian.org/oss/FCL/sftools/fbf/utilities/,/utilities,branch,de
 //v800020/mercurial_internal/rnd/rndonly/realnetworks/,/rnd/rndonly/realnetworks,branch,default,
 //v800020/mercurial_internal/rnd/rndonly/samsung/,/rnd/rndonly/samsung,branch,default,
 //v800020/mercurial_internal/rnd/redist/objective_systems/,/rnd/redist/objective_systems,branch,default,
-http://developer.symbian.org/oss/FCL/sf/adaptation/stubs/,/sf/adaptation/stubs,tag,S3_LATESTGOOD,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/adapt/stubs/,/sf/adapt/stubs,tag,S3_LATESTGOOD,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/camera/,/sf/app/camera,tag,S3_LATESTGOOD,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/commonemail/,/sf/app/commonemail,tag,S3_LATESTGOOD,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/conntools/,/sf/app/conntools,tag,S3_LATESTGOOD,layers.sysdef.xml
@@ -110,8 +110,8 @@ http://developer.symbian.org/oss/MCL/sf/os/usb/,/sf/os/usb,tag,S3_LATESTGOOD,
 http://developer.symbian.org/oss/MCL/sf/os/wlan/,/sf/os/wlan,tag,S3_LATESTGOOD,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/xmlsrv/,/sf/os/xmlsrv,tag,S3_LATESTGOOD,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/os/osrndtools/,/sf/os/osrndtools,tag,S3_LATESTGOOD,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,tag,S3_LATESTGOOD,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,tag,S3_LATESTGOOD,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/adapt/beagleboard/,/sf/adapt/beagleboard,tag,S3_LATESTGOOD,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/adapt/qemu/,/sf/adapt/qemu,tag,S3_LATESTGOOD,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/tools/buildplatforms/,/sf/tools/buildplatforms,tag,S3_LATESTGOOD,layers.sysdef.xml
 http://developer.symbian.org/oss/MCL/sf/app/homescreentools/,/sf/app/homescreentools,tag,S3_LATESTGOOD,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/mw/platformtools/,/sf/mw/platformtools,tag,S3_LATESTGOOD,layers.sysdef.xml

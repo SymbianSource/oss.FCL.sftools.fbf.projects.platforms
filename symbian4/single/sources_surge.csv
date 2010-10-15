@@ -1,8 +1,8 @@
 source,dst,type,pattern,sysdef
 http://developer.symbian.org/oss/FCL/sftools/fbf/utilities/,/utilities,branch,default,
-http://developer.symbian.org/oss/FCL/sf/adaptation/beagleboard/,/sf/adaptation/beagleboard,branch,GCC_SURGE,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/adaptation/qemu/,/sf/adaptation/qemu,branch,GCC_SURGE,modified-FCL
-http://developer.symbian.org/oss/FCL/sf/adaptation/stubs/,/sf/adaptation/stubs,branch,GCC_SURGE,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/adapt/beagleboard/,/sf/adapt/beagleboard,branch,GCC_SURGE,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/adapt/qemu/,/sf/adapt/qemu,branch,GCC_SURGE,modified-FCL
+http://developer.symbian.org/oss/FCL/sf/adapt/stubs/,/sf/adapt/stubs,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/browserui/,/sf/app/browserui,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/camera/,/sf/app/camera,branch,GCC_SURGE,layers.sysdef.xml
 http://developer.symbian.org/oss/FCL/sf/app/commonemail/,/sf/app/commonemail,branch,GCC_SURGE,layers.sysdef.xml
