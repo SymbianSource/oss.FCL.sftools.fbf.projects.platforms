@@ -211,7 +211,7 @@
 </block>
 </layer>
 <layer name="os" long-name="OS" levels="hw services">
-<block name="kernelhwsrv" level="hw" long-name="Kernel and Hardware Services" levels="hw-if adaptation framework test">
+<block name="kernelhwsrv" level="hw" long-name="Kernel and Hardware Services" levels="hw-if adapt framework test">
 <collection name="brdbootldr" long-name="Board Boot Loader" level="hw-if">
 <component name="ubootldr" long-name="Boot Loader" introduced="9.2" purpose="optional">
 <unit mrp="os/kernelhwsrv/brdbootldr/ubootldr/base_ubootldr.mrp"/>
@@ -222,7 +222,7 @@
 <unit bldFile="os/kernelhwsrv/bsptemplate/asspandvariant/template_variant" mrp="os/kernelhwsrv/bsptemplate/asspandvariant/base_template.mrp"/>
 </component>
 </collection>
-<collection name="kernel" long-name="Kernel Architecture" level="adaptation">
+<collection name="kernel" long-name="Kernel Architecture" level="adapt">
 <component name="eka" long-name="Kernel Architecture" introduced="8.0" purpose="mandatory">
 <unit bldFile="os/kernelhwsrv/kernel/eka" mrp="os/kernelhwsrv/kernel/eka/base_e32.mrp"/>
 </component>
@@ -238,7 +238,7 @@
 <unit bldFile="os/kernelhwsrv/kerneltest/f32test/group" mrp="os/kernelhwsrv/kerneltest/f32test/group/base_f32test.mrp"/>
 </component>
 </collection>
-<collection name="ldds" long-name="Logical Device Drivers" level="adaptation">
+<collection name="ldds" long-name="Logical Device Drivers" level="adapt">
 <component name="ethernetldd" long-name="Ethernet Drivers" purpose="optional">
 <unit bldFile="os/kernelhwsrv/kernel/eka/drivers/ethernet" mrp="os/kernelhwsrv/kernel/eka/drivers/ethernet/base_e32_drivers_ethernet.mrp"/>
 </component>
@@ -804,7 +804,7 @@
 </component>
 </collection>
 </block>
-<block name="persistentdata" level="services" long-name="Persistent Data Services" levels="adaptation hw-if plugin framework server app-if">
+<block name="persistentdata" level="services" long-name="Persistent Data Services" levels="adapt hw-if plugin framework server app-if">
 <collection name="featuremgmt" long-name="Feature Management" level="framework">
 <component name="featuremgr" long-name="Feature Manager" introduced="^3" purpose="mandatory">
 <unit bldFile="os/persistentdata/featuremgmt/featuremgr/group" mrp="os/persistentdata/featuremgmt/featuremgr/group/syslibs_featmgr.mrp"/>
@@ -855,7 +855,7 @@
 </component>
 </collection>
 </block>
-<block name="devicesrv" level="services" long-name="Device Services" levels="adaptation hw-if plugin framework server app-if">
+<block name="devicesrv" level="services" long-name="Device Services" levels="adapt hw-if plugin framework server app-if">
 <collection name="devicesrv_pub" long-name="Device Services Public Interfaces" level="app-if">
 <component name="platform_path_definitions_api" long-name="Platform Path Definitions API" filter="s60,bldmefirst" class="api">
 <unit bldFile="os/devicesrv/devicesrv_pub/platform_path_definitions_api/group"/>
@@ -1301,7 +1301,7 @@
 </component>
 </collection>
 </block>
-<block name="lbs" level="services" long-name="Locating Services" levels="hw-if data-acquisition adaptation management application-interface">
+<block name="lbs" level="services" long-name="Locating Services" levels="hw-if data-acquisition adapt management application-interface">
 <collection name="datasourcemodules" long-name="Generic Positioning Plugins" level="data-acquisition">
 <component name="defaultpositioningmodule" long-name="Default Positioning Module" introduced="^2" purpose="optional" plugin="Y">
 <unit bldFile="os/lbs/datasourcemodules/defaultpositioningmodule/group" mrp="os/lbs/datasourcemodules/defaultpositioningmodule/group/lbs_default_positioning_module.mrp"/>
@@ -1322,7 +1322,7 @@
 <unit bldFile="os/lbs/datasourcemodules/locationapesuplpsy/group"/>
 </component>
 </collection>
-<collection name="datasourceadaptation" long-name="Data Source Adaptation" level="adaptation">
+<collection name="datasourceadaptation" long-name="Data Source Adaptation" level="adapt">
 <component name="gpsdatasourceadaptation" long-name="GPS Data Source Adaptation" introduced="^2" purpose="optional" plugin="Y">
 <unit bldFile="os/lbs/datasourceadaptation/gpsdatasourceadaptation/group" mrp="os/lbs/datasourceadaptation/gpsdatasourceadaptation/group/lbs_gps_data_source_adaptation.mrp"/>
 </component>
@@ -1357,7 +1357,7 @@
 <unit bldFile="os/lbs/locationmgmt/networkgateway/group" mrp="os/lbs/locationmgmt/networkgateway/group/lbs_networkgateway.mrp"/>
 </component>
 </collection>
-<collection name="networkprotocolmodules" long-name="Network Protocol Modules" level="adaptation">
+<collection name="networkprotocolmodules" long-name="Network Protocol Modules" level="adapt">
 <component name="privacyprotocolmodule" long-name="Privacy Protocol Module" introduced="^2" purpose="optional" plugin="Y">
 <unit bldFile="os/lbs/networkprotocolmodules/privacyprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/privacyprotocolmodule/group/lbs_privacyprotocolmodule.mrp"/>
 </component>
@@ -1476,7 +1476,7 @@
 </component>
 </collection>
 </block>
-<block name="networkingsrv" level="services" long-name="Networking Services" levels="adaptation hw-if plugin framework server app-if">
+<block name="networkingsrv" level="services" long-name="Networking Services" levels="adapt hw-if plugin framework server app-if">
 <collection name="commsdb" long-name="Comms DB" level="server">
 <component name="s60_commsdb" filter="s60" long-name="S60 Commsdb" class="config">
 <unit bldFile="os/networkingsrv/commsdb/s60_commsdb/group"/>
@@ -1704,13 +1704,13 @@
 </component>
 </collection>
 </block>
-<block name="cellularsrv" level="services" long-name="Cellular Baseband Services" levels="adaptation hw-if plugin framework server app-if">
+<block name="cellularsrv" level="services" long-name="Cellular Baseband Services" levels="adapt hw-if plugin framework server app-if">
 <collection name="basebandabstraction" long-name="Baseband Abstraction" level="hw-if">
 <component name="basebandchanneladaptor" long-name="Baseband Channel Adaptor" introduced="8.1" purpose="optional">
 <unit bldFile="os/cellularsrv/basebandabstraction/basebandchanneladaptor/group" mrp="os/cellularsrv/basebandabstraction/basebandchanneladaptor/group/networking_bca.mrp"/>
 </component>
 </collection>
-<collection name="basebandadaptationplugins" long-name="Baseband Adaptation Plugins" level="adaptation">
+<collection name="basebandadaptationplugins" long-name="Baseband Adaptation Plugins" level="adapt">
 <component name="basebandchanneladaptorforc32" long-name="Baseband Channel Adaptor for C32" introduced="8.1" purpose="optional" plugin="Y">
 <unit bldFile="os/cellularsrv/basebandadaptationplugins/basebandchanneladaptorforc32/group" mrp="os/cellularsrv/basebandadaptationplugins/basebandchanneladaptorforc32/group/networking_c32bca.mrp"/>
 </component>
@@ -1807,7 +1807,7 @@
 <unit mrp="os/cellularsrv/cellularsrv_info/cellularsrv_metadata/cellularsrv_metadata.mrp"/>
 </component>
 </collection>
-<collection name="hwpluginsimulation" long-name="Hardware Plugin Simulation" level="adaptation">
+<collection name="hwpluginsimulation" long-name="Hardware Plugin Simulation" level="adapt">
 <component name="mocksy" long-name="MockSY" introduced="^2" purpose="development" plugin="Y">
 <unit bldFile="os/cellularsrv/hwpluginsimulation/mocksy/group" mrp="os/cellularsrv/hwpluginsimulation/mocksy/group/telephony_tools_mocksy.mrp"/>
 </component>
@@ -1819,7 +1819,7 @@
 </component>
 </collection>
 </block>
-<block name="bt" level="services" long-name="Bluetooth" levels="adaptation hw-if plugin framework server app-if">
+<block name="bt" level="services" long-name="Bluetooth" levels="adapt hw-if plugin framework server app-if">
 <collection name="bt_plat" long-name="Bluetooth Platform Interfaces" level="app-if">
 <component name="bluetooth_audio_adaptation_api" long-name="Bluetooth Audio Adaptation API" filter="s60" class="api">
 <unit bldFile="os/bt/bt_plat/bluetooth_audio_adaptation_api/group"/>
@@ -1902,7 +1902,7 @@
 </component>
 </collection>
 </block>
-<block name="usb" level="services" long-name="USB" levels="adaptation hw-if plugin framework server app-if">
+<block name="usb" level="services" long-name="USB" levels="adapt hw-if plugin framework server app-if">
 <collection name="usbldd" long-name="USB Logical Device Drivers" level="hw-if">
 <!-- usbclientdrivers  to be moved here from kernelhwsrv-->
 </collection>
@@ -1920,7 +1920,7 @@
 </component>
 </collection>
 </block>
-<block name="mm" level="services" long-name="Multimedia" levels="adaptation hw-if device-fw devices middleware app-if">
+<block name="mm" level="services" long-name="Multimedia" levels="adapt hw-if device-fw devices middleware app-if">
 <collection name="mm_pub" long-name="Multimedia Public Interfaces" level="app-if">
 <component name="audio_effects_api" long-name="Audio Effects API" filter="s60" class="api">
 <unit bldFile="os/mm/mm_pub/audio_effects_api/group"/>
@@ -2267,7 +2267,7 @@
 <unit bldFile="os/mm/mmdevicefw/speechrecogsupport/group" mrp="os/mm/mmdevicefw/speechrecogsupport/group/multimedia_mmf_ASR.mrp"/>
 </component>
 </collection>
-<collection name="mmswadaptation" long-name="Multimedia Software Adaptation" level="adaptation">
+<collection name="mmswadaptation" long-name="Multimedia Software Adaptation" level="adapt">
 <component name="videorenderer" long-name="Video Renderer" introduced="^3" purpose="optional">
 <unit bldFile="os/mm/mmswadaptation/videorenderer/group" mrp="os/mm/mmswadaptation/videorenderer/group/multimedia_videorenderer.mrp"/>
 </component>
@@ -2316,7 +2316,7 @@
 <unit bldFile="os/mm/devsound/a3fsrvstart/group" mrp="os/mm/devsound/a3fsrvstart/group/multimedia_a3f_serverstart.mrp"/>
 </component>
 </collection>
-<collection name="mmhais" long-name="Multimedia Hardware Adaptation Interfaces" level="adaptation">
+<collection name="mmhais" long-name="Multimedia Hardware Adaptation Interfaces" level="adapt">
 <component name="devsoundhwdeviceapi" long-name="DevSound Hardware Device API" introduced="7.0s" purpose="optional">
 <unit bldFile="os/mm/devsound/hwdevapi/group" mrp="os/mm/devsound/hwdevapi/group/multimedia_mdf_devsound_hwdev.mrp"/>
 </component>
@@ -2337,7 +2337,7 @@
 </component>
 </collection>
 </block>
-<block name="imagingext" level="services" long-name="Imaging Extensions" levels="adaptation hw-if plugin framework server app-if">
+<block name="imagingext" level="services" long-name="Imaging Extensions" levels="adapt hw-if plugin framework server app-if">
 <collection name="imagingext_pub" long-name="Imaging Extensions Public Interfaces" level="app-if">
 <component name="exif_api" long-name="Exif API" filter="s60" class="api">
 <unit bldFile="os/imagingext/imagingext_pub/exif_api/group" filter="!test"/>
@@ -2384,8 +2384,8 @@
 </component>
 </collection>
 </block>
-<block name="graphics" level="services" long-name="Graphics" levels="adaptation engines internal-adaptations device-interface internal-utils app-if">
-<collection name="graphicsaccelaration" long-name="Graphics Acceleration" level="adaptation">
+<block name="graphics" level="services" long-name="Graphics" levels="adapt engines internal-adaptations device-interface internal-utils app-if">
+<collection name="graphicsaccelaration" long-name="Graphics Acceleration" level="adapt">
 <component name="vgi" filter="s60" long-name="VGI">
 <unit bldFile="os/graphics/graphicsaccelaration/vgi/group"/>
 </component>
@@ -2408,7 +2408,7 @@
 <unit bldFile="os/graphics/graphicsutils/commongraphicsheaders/group" mrp="os/graphics/graphicsutils/commongraphicsheaders/group/graphics_commonheader.mrp"/>
 </component>
 </collection>
-<collection name="graphicshwdrivers" long-name="Graphics Hardware Drivers" level="adaptation">
+<collection name="graphicshwdrivers" long-name="Graphics Hardware Drivers" level="adapt">
 <!-- displayldd to be moved here -->
 <component name="surfacemgr" long-name="Surface Manager" introduced="^3" purpose="optional">
 <unit bldFile="os/graphics/graphicshwdrivers/surfacemgr/group" mrp="os/graphics/graphicshwdrivers/surfacemgr/group/graphics_surfacemanager.mrp"/>
