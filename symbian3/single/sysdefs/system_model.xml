@@ -10800,5 +10800,14 @@
 </collection>
 </block>
 </layer>
+<!--  Block to build the stem kit. This builds alternate versions of a number of components to support stemp kit rom -->
+<layer name="stem" long-name="stem">
+<block name="stemkit_block" long-name="Stem Kit block ">
+<component name="stemkit" long-name="Stem Kit component">
+<unit bldFile="incubator/stemkit/group">
+</unit>
+</component>
+</block>
+</layer>
 </systemModel>
 </SystemDefinition>
