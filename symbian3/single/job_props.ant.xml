@@ -33,7 +33,8 @@
     <!-- and set sf.spec.baseline.enable to 'true'                                                          -->        
 
     <!-- get full source env and binaries from pdk -->
-    <property name="sf.spec.baseline.location"       value="\\v800020\PDT\prebuilt_default.76_patched" /> <!-- prebuilt stuff etc. -->
+    <property name="sf.spec.baseline.getenv_options" value="-i prebuilt -i symbian3 -k"/> <!-- unpack anything prebuilt from baseline -->
+    <property name="sf.spec.baseline.location"       value="\\v800020\PDT\prebuilt_default.77_patched" /> <!-- prebuilt stuff etc. -->
     <property name="sf.spec.toolsbaseline.location"       value="\\v800020\Releases\${sf.previous.pdk.tag}_custom" /> <!-- tools baseline location e.g. tools_epoc.zip -->
     
     <!-- platform build specific properties -->
