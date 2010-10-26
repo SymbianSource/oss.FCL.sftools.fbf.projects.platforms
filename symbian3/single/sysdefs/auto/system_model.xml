@@ -1327,12 +1327,9 @@
 <component name="privacyprotocolmodule" long-name="Privacy Protocol Module" introduced="^2" purpose="optional" plugin="Y">
 <unit bldFile="os/lbs/networkprotocolmodules/privacyprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/privacyprotocolmodule/group/lbs_privacyprotocolmodule.mrp"/>
 </component>
-<component name="networkpmutils" long-name="Networkpm Utils" introduced="^2" purpose="optional" plugin="Y">
-<unit bldFile="os/lbs/networkprotocolmodules/networkpmutils/group" mrp="os/lbs/networkprotocolmodules/networkpmutils/group/lbs_networkpmutils.mrp"/>
-</component>
 <component name="suplproxyprotocolmodule" long-name="SUPL Proxy Protocol Module" introduced="^3" purpose="optional" plugin="Y">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
-<unit bldFile="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/group/lbs_suplproxyprotocolmodule.mrp"/>
+<unit bldFile="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/sfgroup" mrp="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/sfgroup/lbs_suplproxyprotocolmodule.mrp"/>
 </component>
 <component name="suplprotocolmodule" long-name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" plugin="Y">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
@@ -1346,13 +1343,9 @@
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
 <unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/SuplPushAPI/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
 </component>
-<component name="suplrrlpasn1" filter="sf_build" long-name="SUPL RRLP ASN1 Parser">
-<!-- hack for Foundation builds needed while collection is reorganised into proper components -->
-<unit bldFile="os/lbs/networkprotocolmodules/suplpmcore/suplrrlpasn1/group"/>
-</component>
 <component name="suplrrlpprotocol" long-name="SUPL RRLP Protocol Module">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
-<unit bldFile="os/lbs/networkprotocolmodules/suplcontrolplaneprotocols/suplrrlpprotocol/group"/>
+<unit bldFile="os/lbs/networkprotocolmodules/suplcontrolplaneprotocols/common/suplrrlpprotocol/sfgroup"/>
 </component>
 </collection>
 <collection name="lbsapitest" long-name="Location API Tests" level="application-interface"/>
@@ -4829,12 +4822,6 @@
 <component name="diagnostics_plugin_pool_api" long-name="Diagnostics Plugin Pool API" filter="s60" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/diagnostics_plugin_pool_api/group"/>
 </component>
-<component name="adaptive_history_list_api" long-name="Adaptive History List API" filter="s60" class="api">
-<unit bldFile="mw/remotemgmt/remotemgmt_plat/adaptive_history_list_api/group"/>
-</component>
-<component name="adaptive_history_list_session_api" long-name="Adaptive History List Session API" filter="s60" class="api">
-<unit bldFile="mw/remotemgmt/remotemgmt_plat/adaptive_history_list_session_api/group"/>
-</component>
 <component name="fota_engine_api" long-name="FOTA Engine API" filter="s60" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/fota_engine_api/group"/>
 </component>
@@ -4864,9 +4851,6 @@
 </component>
 <component name="syncml_ds_customization_api" long-name="SyncML DS Customization API" filter="s60" introduced="^3" class="api">
 <unit bldFile="mw/remotemgmt/remotemgmt_plat/syncml_ds_customization_api/group"/>
-</component>
-<component name="lawmo_plugin_api" long-name="Lawmo Plugin API" filter="s60" introduced="^3" class="api">
-<unit bldFile="mw/remotemgmt/remotemgmt_plat/lawmo_plugin_api/group"/>
 </component>
 </collection>
 <collection name="policymanagement" long-name="Policy Management" level="generic">
