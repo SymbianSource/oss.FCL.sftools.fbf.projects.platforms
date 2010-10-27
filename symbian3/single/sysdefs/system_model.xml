@@ -133,6 +133,22 @@
 </component>
 </collection>
 </block>
+<block name="naviengine.nec" level="low" long-name="NaviEngine" levels="hw-if">
+<collection name="navienginebsp" long-name="NaviEngine BSP" level="hw-if">
+<component name="ne1_tb" long-name="NaviEngine 1 (Multiple)" introduced="^4" purpose="optional" filter="sf_build">
+<unit bldFile="adapt/naviengine.nec/navienginebsp/ne1_tb"/>
+</component>
+<component name="sne1_tb" long-name="NaviEngine 1 (Single)" introduced="^4" purpose="optional" filter="sf_build">
+<unit bldFile="adapt/naviengine.nec/navienginebsp/ne1_tb/single"/>
+</component>
+<component name="fne1_tb" long-name="NaviEngine 1 (Flexible)" introduced="^4" purpose="optional" filter="sf_build">
+<unit bldFile="adapt/naviengine.nec/navienginebspflexible"/>
+</component>
+<component name="navienginebootldr" long-name="NaviEngine Boot Loader" introduced="^4" purpose="optional" filter="sf_build">
+<unit bldFile="adapt/naviengine.nec/navienginebootldr"/>
+</component>
+</collection>
+</block>
 <block name="codecs.aricent" level="low" long-name="Aricent Codecs">
 <collection name="utilities" long-name="Aricent Utilities">
 <component name="ariprocessengine" long-name="Aricent Process Engine">
@@ -1311,6 +1327,10 @@
 <component name="privacyprotocolmodule" long-name="Privacy Protocol Module" introduced="^2" purpose="optional" plugin="Y">
 <unit bldFile="os/lbs/networkprotocolmodules/privacyprotocolmodule/group" mrp="os/lbs/networkprotocolmodules/privacyprotocolmodule/group/lbs_privacyprotocolmodule.mrp"/>
 </component>
+<component name="suplproxyprotocolmodule" long-name="SUPL Proxy Protocol Module" introduced="^3" purpose="optional" plugin="Y">
+<!-- hack for Foundation builds needed while collection is reorganised into proper components -->
+<unit bldFile="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/sfgroup" mrp="os/lbs/networkprotocolmodules/suplproxyprotocolmodule/sfgroup/lbs_suplproxyprotocolmodule.mrp"/>
+</component>
 <component name="suplprotocolmodule" long-name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" plugin="Y">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
 <unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/SuplConnectionManager/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
@@ -1322,6 +1342,10 @@
 <component name="suplprotocolmodule" long-name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" plugin="Y">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
 <unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/SuplPushAPI/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
+</component>
+<component name="suplrrlpprotocol" long-name="SUPL RRLP Protocol Module">
+<!-- hack for Foundation builds needed while collection is reorganised into proper components -->
+<unit bldFile="os/lbs/networkprotocolmodules/suplcontrolplaneprotocols/common/suplrrlpprotocol/sfgroup"/>
 </component>
 </collection>
 <collection name="lbsapitest" long-name="Location API Tests" level="application-interface"/>
