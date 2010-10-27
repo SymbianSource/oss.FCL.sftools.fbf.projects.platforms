@@ -1,4 +1,5 @@
 source,dst,type,pattern,sysdef
+//v800020/mercurial_internal/rnd/rndonly/adobe/,/rnd/rndonly/adobe,branch,default,
 //v800020/mercurial_internal/rnd/rndonly/aricent/,/rnd/rndonly/aricent,branch,default,
 //v800020/mercurial_internal/rnd/rndonly/monotype/,/rnd/rndonly/monotype,branch,default,
 //v800020/mercurial_internal/rnd/rndonly/realnetworks/,/rnd/rndonly/realnetworks,branch,default,
