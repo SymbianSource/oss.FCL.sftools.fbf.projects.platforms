@@ -1,5 +1,5 @@
 source,dst,type,pattern,sysdef
 http://developer.symbian.org/oss/FCL/sftools/fbf/utilities/,/utilities,branch,default,
 http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,branch,S3_LATESTGOOD,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,branch,S3_LATESTGOOD,layers.sysdef.xml
-http://developer.symbian.org/oss/FCL/sf/os/buildtools/,/sf/os/buildtools,branch,S3_LATESTGOOD,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,branch,S3_LATESTGOOD,package_definition.xml
+http://developer.symbian.org/oss/FCL/sf/os/buildtools/,/sf/os/buildtools,branch,S3_LATESTGOOD,package_definition.xml
