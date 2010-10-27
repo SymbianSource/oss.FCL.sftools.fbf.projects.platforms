@@ -4792,12 +4792,6 @@
 <component id="diagnostics_plugin_pool_api" name="Diagnostics Plugin Pool API" class="api" filter="s60">
 <unit bldFile="/mw/remotemgmt/remotemgmt_plat/diagnostics_plugin_pool_api/group"/>
 </component>
-<component id="adaptive_history_list_api" name="Adaptive History List API" class="api" filter="s60">
-<unit bldFile="/mw/remotemgmt/remotemgmt_plat/adaptive_history_list_api/group"/>
-</component>
-<component id="adaptive_history_list_session_api" name="Adaptive History List Session API" class="api" filter="s60">
-<unit bldFile="/mw/remotemgmt/remotemgmt_plat/adaptive_history_list_session_api/group"/>
-</component>
 <component id="fota_engine_api" name="FOTA Engine API" class="api" filter="s60">
 <unit bldFile="/mw/remotemgmt/remotemgmt_plat/fota_engine_api/group"/>
 </component>
