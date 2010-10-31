@@ -1,7 +1,7 @@
 source,dst,type,pattern,sysdef
 http://developer.symbian.org/oss/FCL/sf/adapt/beagleboard/,/sf/adapt/beagleboard,branch,default,
 http://developer.symbian.org/oss/FCL/sf/adapt/codecs.aricent/,/sf/adapt/codecs.aricent,branch,default,
-http://developer.symbian.org/oss/FCL/sf/adapt/naviengine.nec/,/sf/adapt/naviengine.nec,branch,default,
+http://developer.symbian.org/oss/FCL/sf/adapt/naviengine.nec/,/sf/adapt/naviengine.nec,branch,RCL_3,
 http://developer.symbian.org/oss/FCL/sf/adapt/qemu/,/sf/adapt/qemu,changeset,f4712cc7c69e,
 http://developer.symbian.org/oss/FCL/sf/adapt/stubs/,/sf/adapt/stubs,branch,RCL_3,bug 2449
 http://developer.symbian.org/oss/FCL/sf/app/camera/,/sf/app/camera,branch,RCL_3,
