@@ -10294,9 +10294,6 @@
 <component name="menufwui" filter="s60" long-name="Menu Framework UI">
 <unit bldFile="app/homescreen/menufw/menufwui/group"/>
 </component>
-<component name="menusuites" filter="s60" long-name="Menu Suites">
-<unit bldFile="app/homescreen/menufw/menusuites/group"/>
-</component>
 <component name="menufw_build" filter="s60" long-name="Menu Framework Build">
 <!-- can the exports be exported by the other components? -->
 <unit bldFile="app/homescreen/menufw/group"/>
