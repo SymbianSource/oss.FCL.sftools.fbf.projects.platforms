@@ -374,9 +374,9 @@
 </component>
 </collection>
 </block>
-<block name="fshell" level="generic" long-name="Build Tools" levels="bld mw fw ui">
-<collection name="fshell_all" long-name="fshell" level="fw">
-<component name="fshell_s3" long-name="fshell s3" introduced="^3" purpose="development">
+<block name="fshell" level="generic" long-name="FShell" levels="bld mw fw ui">
+<collection name="fshell_all" long-name="FShell Build" level="fw">
+<component name="fshell_s3" long-name="FShell Symbian^3" introduced="^3" purpose="development">
 <unit bldFile="os/fshell/fshell/build/sf/3"/>
 </component>
 </collection>
@@ -699,7 +699,7 @@
 <component name="dbus" filter="s60" long-name="D-Bus">
 <unit bldFile="os/ossrv/ofdbus/dbus/group"/>
 </component>
-<component name="dbus-glib" filter="s60" long-name="D-Bus GLib">
+<component name="dbus_glib" filter="s60" long-name="D-Bus GLib">
 <unit bldFile="os/ossrv/ofdbus/dbus-glib/group"/>
 </component>
 <component name="ofdbus_rom" filter="s60" long-name="D-Bus ROM">
@@ -1348,15 +1348,15 @@
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
 <unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/SuplConnectionManager/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
 </component>
-<component name="suplprotocolmodule" long-name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" plugin="Y">
+<component name="suplprotocolmodule1" long-name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" plugin="Y">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
 <unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/HostSettingsApi/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
 </component>
-<component name="suplprotocolmodule" long-name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" plugin="Y">
+<component name="suplprotocolmodule2" long-name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" plugin="Y">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
 <unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/SuplPushAPI/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
 </component>
-<component name="suplrrlpprotocol" long-name="SUPL RRLP Protocol Module">
+<component name="suplrrlpprotocol3" long-name="SUPL RRLP Protocol Module">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
 <unit bldFile="os/lbs/networkprotocolmodules/suplcontrolplaneprotocols/common/suplrrlpprotocol/sfgroup"/>
 </component>
@@ -2725,7 +2725,7 @@
 <component name="rombuild_zoom2" filter="sf_build" long-name="Zoom2 iMaker Config" purpose="development" introduced="^3" class="config">
 <unit bldFile="os/deviceplatformrelease/sf_config/rombuild/zoom2/group"/>
 </component>
-<component name="rombuild_sfrefhw" filter="sf_build" long-name="sf_refhw iMaker Config" purpose="development" introduced="^3" class="config">
+<component name="rombuild_sfrefhw" filter="sf_build" long-name="Foundation Reference Hardware iMaker Config" purpose="development" introduced="^3" class="config">
 <unit bldFile="os/deviceplatformrelease/sf_config/rombuild/sf_refhw/group"/>
 </component>
 </collection>
@@ -3248,7 +3248,7 @@
 <unit bldFile="mw/securitysrv/pkiutilities/ocsp/group" mrp="mw/securitysrv/pkiutilities/ocsp/group/securitysrv_ocsp.mrp"/>
 </component>
 </collection>
-<collection name="wim" long-name="Wireless Identity Module " level="framework">
+<collection name="wim" long-name="Wireless Identity Module" level="framework">
 <!-- collection is really a component. Need to move down a directory-->
 <component name="wim_build" filter="s60" long-name="WIM Build">
 <unit bldFile="mw/securitysrv/wim/group"/>
@@ -3320,7 +3320,7 @@
 <component name="devencstarter" filter="s60" long-name="Device Encryption Starter" introduced="^3" plugin="Y">
 <unit bldFile="mw/securitysrv/devencdiskutils/DevEncStarter/group"/>
 </component>
-<component name="devencdiskutils" filter="s60" long-name="Device Encryption Disk Utils Build" introduced="^3">
+<component name="devencdiskutils_build" filter="s60" long-name="Device Encryption Disk Utils Build" introduced="^3">
 <!-- need to split this into the above components, or remove #includes and make this a ROM  component-->
 <unit bldFile="mw/securitysrv/devencdiskutils/group"/>
 </component>
@@ -3619,7 +3619,7 @@
 <component name="wep_security_settings_ui_api" long-name="WEP Security Settings UI API" filter="s60" class="api">
 <unit bldFile="mw/accesssec/accesssec_plat/wep_security_settings_ui_api/group"/>
 </component>
-<component name="wi-fi_protected_setup_ui_api" long-name="Wi-Fi Protected Setup UI API" filter="s60" class="api">
+<component name="wifi_protected_setup_ui_api" long-name="Wi-Fi Protected Setup UI API" filter="s60" class="api">
 <unit bldFile="mw/accesssec/accesssec_plat/wi-fi_protected_setup_ui_api/group"/>
 </component>
 <component name="wlan_eap_settings_ui_api" long-name="WLAN EAP Settings UI API" filter="s60" class="api">
@@ -5507,7 +5507,7 @@
 <component name="image_handling_library_api" long-name="Image Handling Library API" filter="s60" class="api">
 <unit bldFile="mw/imghandling/imagehandling_plat/image_handling_library_api/group"/>
 </component>
-<component name="3gp_library_api" long-name="3GP Library API" filter="s60" class="api">
+<component name="lib3gp_library_api" long-name="3GP Library API" filter="s60" class="api">
 <unit bldFile="mw/imghandling/imagehandling_plat/3gp_library_api/group"/>
 </component>
 <component name="thumbnailmanager_api" long-name="Thumbnail Manager API" filter="s60" class="api">
@@ -5963,7 +5963,7 @@
 <component name="media_recorder_api" long-name="Media Recorder API" filter="s60" class="api">
 <unit bldFile="mw/camerasrv/camerasrv_plat/media_recorder_api/group" filter="!test"/>
 </component>
-<component name="3gp_file_composer_api" long-name="3GP File Composer API" filter="s60" class="api">
+<component name="lib3gp_file_composer_api" long-name="3GP File Composer API" filter="s60" class="api">
 <unit bldFile="mw/camerasrv/camerasrv_plat/3gp_file_composer_api/group"/>
 </component>
 <component name="asynchronous_file_saving_queue_api" long-name="Asynchronous File Saving Queue API" filter="s60" class="api">
@@ -6025,7 +6025,7 @@
 <component name="playlist_engine_api" long-name="Playlist Engine API" introduced="^1" filter="s60" class="api">
 <unit bldFile="mw/mmappfw/mmappfw_plat/playlist_engine_api/group"/>
 </component>
-<component name="mtp_keys_api" long-name="MTP Keys API" introduced="^1" filter="s60" class="api">
+<component name="mmappfw_mtp_keys_api" long-name="MTP Keys API" introduced="^1" filter="s60" class="api">
 <unit bldFile="mw/mmappfw/mmappfw_plat/mtp_keys_api/group"/>
 </component>
 <component name="mpx_collection_common_definition_api" long-name="MPX Collection Common Definition API" introduced="^1" filter="s60" class="api">
@@ -6531,7 +6531,7 @@
 <component name="avkon_testability_api" long-name="AVKON Testability API" filter="s60" class="api">
 <unit bldFile="mw/classicui/classicui_plat/avkon_testability_api/group"/>
 </component>
-<component name="ganes_api" filter="s60" class="api">
+<component name="ganes_api" long-name="Ganes API" filter="s60" class="api">
 <unit bldFile="mw/classicui/classicui_plat/ganes_api/group"/>
 </component>
 <component name="ode_api" long-name="Ode API" filter="s60" class="api">
@@ -7619,7 +7619,7 @@
 <component name="xml_parser_api" long-name="XML Parser API" filter="s60" class="api">
 <unit bldFile="mw/web/web_plat/xml_parser_api/group"/>
 </component>
-<component name="stmgesturefw_api" long-name="State Machine Gesture Framework API " filter="s60" class="api">
+<component name="stmgesturefw_api" long-name="State Machine Gesture Framework API" filter="s60" class="api">
 <unit bldFile="mw/web/web_plat/stmgesturefw_api/group"/>
 </component>
 </collection>
@@ -8126,7 +8126,7 @@
 </block>
 <block name="phone" level="apps" span="2" long-name="Phone Apps" levels="engine plugin ui app">
 <collection name="phone_plat" long-name="Phone Apps Platform Interfaces" level="app">
-<component name="3d_ringing_tone_enabler_api" long-name="3D Ringing Tone Enabler API" filter="s60" class="api">
+<component name="ringing_tone_3d_enabler_api" long-name="3D Ringing Tone Enabler API" filter="s60" class="api">
 <unit bldFile="app/phone/phone_plat/3d_ringing_tone_enabler_api/group"/>
 </component>
 <component name="telephony_comms_information_api" long-name="Telephony Comms Information API" filter="s60" class="api">
@@ -8171,7 +8171,7 @@
 <component name="phone_application_voip_commands_api" long-name="Phone Application VOIP Commands API" filter="s60" class="api">
 <unit bldFile="app/phone/phone_plat/phone_application_voip_commands_api/group"/>
 </component>
-<component name="telephony_mediator_api" long-name="Telephony Mediator API" filter="s60" class="api">
+<component name="phone_telephony_mediator_api" long-name="Telephony Mediator API" filter="s60" class="api">
 <unit bldFile="app/phone/phone_plat/telephony_mediator_api/group"/>
 </component>
 <component name="video_telephony_mediator_api" long-name="Video Telephony Mediator API" filter="s60" class="api">
@@ -8599,7 +8599,7 @@
 </collection>
 </block>
 <block name="printing" level="services" long-name="Printing" levels="app">
-<collection name="DirectPrint" level="app">
+<collection name="directprint" long-name="DirectPrint" level="app">
 <component name="DirectPrintApp" filter="sf_build" long-name="DirectPrint App" introduced="^3">
 <unit bldFile="app/printing/DirectPrint/DirectPrintApp/group"/>
 </component>
@@ -8704,10 +8704,10 @@
 </collection>
 <collection name="contacts_plat" long-name="Contacts Apps Platform Interfaces" level="ui">
 <component name="virtual_phonebook_store_api" long-name="Virtual Phonebook Store API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_store_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_store_api/group" filter="!test"/>
 </component>
 <component name="virtual_phonebook_sim_services_api" long-name="Virtual Phonebook SIM Services API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_sim_services_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_sim_services_api/group" filter="!test"/>
 </component>
 <component name="virtual_phonebook_configuration_api" long-name="Virtual Phonebook Configuration API" filter="s60" class="api">
 <unit bldFile="app/contacts/contacts_plat/virtual_phonebook_configuration_api/group"/>
@@ -8716,28 +8716,28 @@
 <unit bldFile="app/contacts/contacts_plat/virtual_phonebook_copy_policy_api/group"/>
 </component>
 <component name="virtual_phonebook_policy_api" long-name="Virtual Phonebook Policy API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_policy_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_policy_api/group" filter="!test"/>
 </component>
 <component name="virtual_phonebook_engine_api" long-name="Virtual Phonebook Engine API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_engine_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_engine_api/group" filter="!test"/>
 </component>
 <component name="virtual_phonebook_migration_support_api" long-name="Virtual Phonebook Migration Support API" filter="s60" class="api">
 <unit bldFile="app/contacts/contacts_plat/virtual_phonebook_migration_support_api/group"/>
 </component>
 <component name="virtual_phonebook_view_definition_api" long-name="Virtual Phonebook View Definition API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_view_definition_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_view_definition_api/group" filter="!test"/>
 </component>
 <component name="virtual_phonebook_vcard_api" long-name="Virtual Phonebook vCard API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_vcard_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_vcard_api/group" filter="!test"/>
 </component>
 <component name="cms_contactor_api" long-name="CMS Contactor API" filter="s60" class="api">
 <unit bldFile="app/contacts/contacts_plat/cms_contactor_api/group"/>
 </component>
 <component name="contactpresence_api" long-name="Contact Presence API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/contactpresence_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/contactpresence_api/group" filter="!test"/>
 </component>
 <component name="presence_cache_api" long-name="Presence Cache API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/presence_cache_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/presence_cache_api/group" filter="!test"/>
 </component>
 <component name="phonebook_internal_common_api" long-name="Phonebook Internal Common API" filter="s60" class="api">
 <unit bldFile="app/contacts/contacts_plat/phonebook_internal_common_api/group"/>
@@ -8824,16 +8824,16 @@
 <unit bldFile="app/contacts/contacts_plat/phonebook_2_ui_utilities_api/group"/>
 </component>
 <component name="cca_launch_api" long-name="CCA Launch API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/cca_launch_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/cca_launch_api/group" filter="!test"/>
 </component>
 <component name="cca_view_plugin_api" long-name="CCA View Plugin API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/cca_view_plugin_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/cca_view_plugin_api/group" filter="!test"/>
 </component>
 <component name="predictivesearch_client_api" long-name="Predictive Search Client API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/predictivesearch_client_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/predictivesearch_client_api/group" filter="!test"/>
 </component>
 <component name="predictivesearch_utils_api" long-name="Predictive Search Utils API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/predictivesearch_utils_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/predictivesearch_utils_api/group" filter="!test"/>
 </component>
 <component name="predictivesearch_adapters_api" long-name="Predictive Search Adapters API" filter="s60" class="api">
 <unit bldFile="app/contacts/contacts_plat/predictivesearch_adapters_api/group"/>
@@ -8842,7 +8842,7 @@
 <unit bldFile="app/contacts/contacts_plat/predictivesearch_algorithm_api/group"/>
 </component>
 <component name="phonebook_2_rcl_api" long-name="Phonebook 2 RCL API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/phonebook_2_rcl_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/phonebook_2_rcl_api/group" filter="!test"/>
 </component>
 </collection>
 <collection name="contactextensions" long-name="Contacts Extensions" level="services">
@@ -10147,7 +10147,7 @@
 <component name="fmradio_help" filter="s60" long-name="FM Radio Help">
 <unit bldFile="app/radio/fmradio/help/group"/>
 </component>
-<component name="fmradio_build" filter="s60" long-name="FM Radio ROM">
+<component name="fmradio_rom" filter="s60" long-name="FM Radio ROM">
 <!--  remove above #included bld.infs -->
 <unit bldFile="app/radio/fmradio/group"/>
 </component>
@@ -10158,6 +10158,8 @@
 <component name="podcatcher_build" filter="sf_build" long-name="Podcatcher Build" introduced="^3">
 <unit bldFile="app/podcatcher/group"/>
 </component>
+<component name="podcatcher_app" filter="sf_build" long-name="Podcatcher Application" introduced="^3"/>
+<component name="podcatcher_engine" filter="sf_build" long-name="Podcatcher Engine" introduced="^3"/>
 </collection>
 </block>
 <block name="voicerec" level="apps" long-name="Voice Recorder Apps">
