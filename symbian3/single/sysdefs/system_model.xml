@@ -374,6 +374,13 @@
 </component>
 </collection>
 </block>
+<block name="fshell" level="generic" long-name="Build Tools" levels="bld mw fw ui">
+<collection name="fshell_all" long-name="fshell" level="fw">
+<component name="fshell_s3" long-name="fshell s3" introduced="^3" purpose="development">
+<unit bldFile="os/fshell/build/sf/3"/>
+</component>
+</collection>
+</block>
 <block name="ossrv" level="services" long-name="Generic OS Services" levels="physical-abstraction app-libs encoding translation data-services utilities">
 <collection name="ossrv_pub" long-name="Generic OS Services Public Interfaces" level="utilities">
 <component name="boost_apis" long-name="Boost APIs" filter="s60" class="api">
