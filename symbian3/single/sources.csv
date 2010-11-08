@@ -98,7 +98,7 @@ http://developer.symbian.org/oss/FCL/sf/os/cellularsrv/,/sf/os/cellularsrv,branc
 http://developer.symbian.org/oss/FCL/sf/os/commsfw/,/sf/os/commsfw,branch,RCL_3,emulator.cfg for winsock
 http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,changeset,ec8b76ee69ef,
 http://developer.symbian.org/oss/FCL/sf/os/devicesrv/,/sf/os/devicesrv,branch,RCL_3,Bug 3786
-http://developer.symbian.org/oss/FCL/sf/os/fshell/,/sf/os/fshell,branch,RCL_3
+http://developer.symbian.org/oss/FCL/sf/os/fshell/,/sf/os/fshell,branch,RCL_3,
 http://developer.symbian.org/oss/FCL/sf/os/graphics/,/sf/os/graphics,branch,NewGraphicsArchitecture,
 http://developer.symbian.org/oss/FCL/sf/os/imagingext/,/sf/os/imagingext,branch,RCL_3,
 http://developer.symbian.org/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,branch,RCL_3, Bug 2149 bug 2283 GCCE and rom_sbs.pl 
