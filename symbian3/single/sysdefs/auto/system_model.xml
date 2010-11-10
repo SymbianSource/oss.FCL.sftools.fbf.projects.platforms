@@ -4482,9 +4482,6 @@
 <component name="biomsgfw" long-name="BIO Messaging Framework" introduced="6.0" purpose="optional">
 <unit bldFile="mw/messagingmw/messagingfw/biomsgfw/group" mrp="mw/messagingmw/messagingfw/biomsgfw/group/messaging_biomsg.mrp"/>
 </component>
-<component name="msgconf" long-name="Messaging Config" introduced="^2" purpose="optional" class="config">
-<unit bldFile="mw/messagingmw/messagingfw/msgconf/group" mrp="mw/messagingmw/messagingfw/msgconf/group/messaging_config.mrp"/>
-</component>
 <component name="watcherfw" long-name="Watcher Framework" purpose="optional">
 <unit bldFile="mw/messagingmw/messagingfw/watcherfw/group" mrp="mw/messagingmw/messagingfw/watcherfw/group/messaging_watcher.mrp"/>
 </component>
