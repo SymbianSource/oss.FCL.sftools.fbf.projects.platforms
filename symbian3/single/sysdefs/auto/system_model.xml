@@ -5707,10 +5707,9 @@
 <unit bldFile="mw/mmuifw/mmuifw_plat/mul_widget_api/group"/>
 </component>
 </collection>
-<collection name="mmuifw_info" long-name="Multimedia UI Framework Info" level="ui">
-<component name="mmuifw_build" filter="s60" long-name="Multimedia UI Framework Build" deprecated="^3">
-<!-- Move exports into other componetns or remove all #includes and make this a ROM component -->
-<unit bldFile="mw/mmuifw/group"/>
+<collection name="mmuifw_info" long-name="Multimedia UI Framework Info" level="util">
+<component name="mmuifw_rom" filter="s60" long-name="Multimedia UI Framework ROM" deprecated="^3">
+<unit bldFile="mw/mmuifw/rom/group"/>
 </component>
 </collection>
 <collection name="osncore" long-name="OS Neutral Library Core" level="util">
@@ -8646,8 +8645,11 @@
 <component name="deviceencryption_help" filter="s60" long-name="Device Encryption Help" introduced="^3">
 <unit bldFile="app/files/deviceencryption/help/group"/>
 </component>
-<component name="deviceencryption_build" filter="s60" long-name="Device Encryption Build" introduced="^3">
-<unit bldFile="app/files/deviceencryption/group"/>
+<component name="deviceencryption_headers" filter="s60" long-name="Device Encryption Headers" introduced="^3">
+<unit bldFile="app/files/deviceencryption/common/group"/>
+</component>
+<component name="deviceencryption_rom" filter="s60" long-name="Device Encryption ROM" introduced="^3">
+<unit bldFile="app/files/deviceencryption/rom/group"/>
 </component>
 </collection>
 <collection name="filemanager" long-name="File Manager" level="apps">
