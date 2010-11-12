@@ -8453,9 +8453,8 @@
 <component name="dasgsplugin" filter="s60" long-name="Default Application Settings GS Plugin" introduced="^1" plugin="Y">
 <unit bldFile="app/settingsuis/defaultapplicationsettings/gsplugin/group"/>
 </component>
-<component name="defaultapplicationsettings_build" filter="s60" long-name="Default Application Settings Build" introduced="^1">
-<!-- split the IBYs up into the appropriate components? Make this a ROM component? -->
-<unit bldFile="app/settingsuis/defaultapplicationsettings/group"/>
+<component name="defaultapplicationsettings_rom" filter="s60" long-name="Default Application Settings ROM" introduced="^1">
+<unit bldFile="app/settingsuis/defaultapplicationsettings/rom/group"/>
 </component>
 </collection>
 <collection name="systemswuis" long-name="System SW UIs" level="ui">
@@ -8553,9 +8552,11 @@
 <component name="omascomoadapter" filter="s60" long-name="OMA SCOMO Adapter" introduced="^3" plugin="Y">
 <unit bldFile="app/devicecontrol/applicationmanagement/omascomoadapter/group"/>
 </component>
-<component name="applicationmanagement_build" filter="s60" long-name="AM Build">
-<!-- If thes aren't collapsed into one cmp, can all  #includes removed from here, and it renamed AM ROM? -->
-<unit bldFile="app/devicecontrol/applicationmanagement/group"/>
+<component name="applicationmanagement_config" filter="s60" long-name="AM Configuration">
+<unit bldFile="app/devicecontrol/applicationmanagement/conf/group"/>
+</component>
+<component name="applicationmanagement_rom" filter="s60" long-name="AM ROM">
+<unit bldFile="app/devicecontrol/applicationmanagement/rom/group"/>
 </component>
 </collection>
 <collection name="customization" long-name="DM Customization Adapters" level="mid">
@@ -8583,9 +8584,8 @@
 <component name="embeddedlinkadapter" filter="s60" long-name="Embedded Link Adapter" plugin="Y">
 <unit bldFile="app/devicecontrol/customization/embeddedlinkadapter/bld"/>
 </component>
-<component name="customization_build" filter="s60" long-name="DM Customization Build">
-<!-- If thes aren't collapsed into one cmp, can all  #includes removed from here, and it renamed DM Customization ROM? -->
-<unit bldFile="app/devicecontrol/customization/group"/>
+<component name="customization_config" filter="s60" long-name="DM Customization Configuration">
+<unit bldFile="app/devicecontrol/customization/conf/group"/>
 </component>
 </collection>
 <collection name="omacp" long-name="OMA Content Provisioning" level="oma">
