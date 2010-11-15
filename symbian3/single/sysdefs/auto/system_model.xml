@@ -10134,9 +10134,11 @@
 <component name="fmradio_help" filter="s60" long-name="FM Radio Help">
 <unit bldFile="app/radio/fmradio/help/group"/>
 </component>
-<component name="fmradio_rom" filter="s60" long-name="FM Radio ROM">
-<!--  remove above #included bld.infs -->
-<unit bldFile="app/radio/fmradio/group"/>
+<component name="fmradio_conf" filter="s60" long-name="FM Radio Configuration">
+<unit bldFile="app/radio/fmradio/conf"/>
+</component>
+<component name="fmradio_loc" filter="s60" long-name="FM Radio Localisation">
+<unit bldFile="app/radio/fmradio/loc"/>
 </component>
 </collection>
 </block>
