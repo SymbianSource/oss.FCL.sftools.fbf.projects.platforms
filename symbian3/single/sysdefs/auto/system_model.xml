@@ -10244,9 +10244,8 @@
 <component name="idlehomescreen_data" filter="s60" long-name="Idle Home Screen Data">
 <unit bldFile="app/homescreen/idlehomescreen/data/group"/>
 </component>
-<component name="idlehomescreen_build" filter="s60" long-name="Idle Home Screen Build">
-<!-- can the loc file be moved to another comopnent and this one removed? -->
-<unit bldFile="app/homescreen/idlehomescreen/group"/>
+<component name="idlehomescreen_loc" filter="s60" long-name="Idle Home Screen Localisation">
+<unit bldFile="app/homescreen/idlehomescreen/loc/group"/>
 </component>
 </collection>
 <collection name="menufw" long-name="Menu Framework" level="fw">
@@ -10258,10 +10257,6 @@
 </component>
 <component name="menusuites" filter="s60" long-name="Menu Suites">
 <unit bldFile="app/homescreen/menufw/menusuites/group"/>
-</component>
-<component name="menufw_build" filter="s60" long-name="Menu Framework Build">
-<!-- can the exports be exported by the other components? -->
-<unit bldFile="app/homescreen/menufw/group"/>
 </component>
 </collection>
 <collection name="taskswitcher" long-name="Task Switcher" level="support">
