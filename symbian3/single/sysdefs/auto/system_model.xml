@@ -7613,12 +7613,6 @@
 <unit bldFile="mw/web/web_plat/stmgesturefw_api/group"/>
 </component>
 </collection>
-<collection name="web_info" long-name="Web Info" level="specific">
-<component name="web_build" filter="s60" long-name="Web Build">
-<!-- when configuration is in place, the #ifdef is no longer needed and this component can be removed -->
-<unit bldFile="mw/web/group"/>
-</component>
-</collection>
 <collection name="browserutilities" long-name="Browser Utilities" level="utils">
 <component name="browserdialogsprovider" filter="s60" long-name="Browser Dialogs Provider">
 <unit bldFile="mw/web/browserutilities/browserdialogsprovider/group"/>
@@ -7648,8 +7642,7 @@
 <unit bldFile="mw/web/browserutilities/feedsengine/group"/>
 </component>
 <component name="multipartparser" filter="s60" long-name="Multipart Parser">
-<!-- uncomment the unit when configuration is in place, it's currently #included from browserutilities_build -->
-<!-- <unit bldFile="browserutilities/multipartparser/group"/> -->
+<unit bldFile="mw/web/browserutilities/multipartparser/group"/>
 </component>
 <component name="schemehandler" filter="s60" long-name="Scheme Handler">
 <unit bldFile="mw/web/browserutilities/schemehandler/group"/>
@@ -7659,10 +7652,6 @@
 </component>
 <component name="aiwbrowserprovider" filter="s60" long-name="AIW Browser Provider" plugin="Y">
 <unit bldFile="mw/web/browserutilities/aiwbrowserprovider/group"/>
-</component>
-<component name="browserutilities_build" filter="s60" long-name="Browser Utilities Build">
-<!-- when configuration is in place, the #ifdef is no longer needed and this component can be removed -->
-<unit bldFile="mw/web/browserutilities/group"/>
 </component>
 </collection>
 <collection name="webengine" long-name="Web Engine" level="server">
@@ -7737,10 +7726,11 @@
 <component name="roapapp" filter="s60" long-name="ROAP Application">
 <unit bldFile="mw/web/codhandler/roapapp/group"/>
 </component>
-<component name="codhandler_build" filter="s60" long-name="COD Handler Build">
-<!-- Exports need to go into another component or make this self-contained.
-      		#included .hrh file needs to be #included in each of the other components -->
-<unit bldFile="mw/web/codhandler/group"/>
+<component name="codhandler_loc" filter="s60" long-name="COD Handler Localisation">
+<unit bldFile="mw/web/codhandler/Loc"/>
+</component>
+<component name="codhandler_rom" filter="s60" long-name="COD Handler ROM">
+<unit bldFile="mw/web/codhandler/rom"/>
 </component>
 </collection>
 <collection name="widgets" long-name="Web Widget Framework" level="generic">
