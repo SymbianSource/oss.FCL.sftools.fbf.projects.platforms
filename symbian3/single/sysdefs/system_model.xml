@@ -374,9 +374,9 @@
 </component>
 </collection>
 </block>
-<block name="fshell" level="generic" long-name="Build Tools" levels="bld mw fw ui">
-<collection name="fshell_all" long-name="fshell" level="fw">
-<component name="fshell_s3" long-name="fshell s3" introduced="^3" purpose="development">
+<block name="fshell" level="generic" long-name="FShell" levels="bld mw fw ui">
+<collection name="fshell_all" long-name="FShell Build" level="fw">
+<component name="fshell_s3" long-name="FShell Symbian^3" introduced="^3" purpose="development">
 <unit bldFile="os/fshell/build/sf/3"/>
 </component>
 </collection>
@@ -647,7 +647,7 @@
 <component name="dbus_api" long-name="Dbus API" filter="s60" class="api">
 <unit bldFile="os/ossrv/ossrv_pub/dbus/group"/>
 </component>
-<component name="dbus-glib" long-name="Dbus-glib API" filter="s60" class="api">
+<component name="dbus_glib_api" long-name="D-Bus GLib API" filter="s60" class="api">
 <unit bldFile="os/ossrv/ossrv_pub/dbus-glib/group"/>
 </component>
 </collection>
@@ -699,7 +699,7 @@
 <component name="dbus" filter="s60" long-name="D-Bus">
 <unit bldFile="os/ossrv/ofdbus/dbus/group"/>
 </component>
-<component name="dbus-glib" filter="s60" long-name="D-Bus GLib">
+<component name="dbus_glib" filter="s60" long-name="D-Bus GLib">
 <unit bldFile="os/ossrv/ofdbus/dbus-glib/group"/>
 </component>
 <component name="ofdbus_rom" filter="s60" long-name="D-Bus ROM">
@@ -790,7 +790,7 @@
 <component name="eventlogger" long-name="Event Logger" introduced="6.0" purpose="optional">
 <unit bldFile="os/persistentdata/loggingservices/eventlogger/group" mrp="os/persistentdata/loggingservices/eventlogger/group/syslibs_logeng.mrp"/>
 </component>
-<component name="filelogger" long-name="File Logger" introduced="ER5" purpose="optional">
+<component name="filelogger" long-name="File Logger" introduced="ER5" deprecated="^3" purpose="optional">
 <unit bldFile="os/persistentdata/loggingservices/filelogger/group" mrp="os/persistentdata/loggingservices/filelogger/group/comms-infras_flogger.mrp"/>
 </component>
 <component name="rfilelogger" long-name="RFile Logger" deprecated="^3" introduced="9.1" purpose="development">
@@ -1291,8 +1291,8 @@
 <component name="networkpositioningmodule" long-name="Network Positioning Module" introduced="^3" purpose="optional" plugin="Y">
 <unit bldFile="os/lbs/datasourcemodules/networkpositioningmodule/group" mrp="os/lbs/datasourcemodules/networkpositioningmodule/group/lbs_network_positioning_module.mrp"/>
 </component>
-<component name="locationapesuplpsy" long-name="APE SUPL PSY" introduced="^3" purpose="optional" filter="s60" plugin="Y">
-<unit bldFile="os/lbs/datasourcemodules/locationapesuplpsy/group"/>
+<component name="locationapesuplpsy" long-name="APE SUPL Positioning Module" introduced="^3" purpose="optional" filter="s60" plugin="Y">
+<unit bldFile="os/lbs/datasourcemodules/locationapesuplpsy/group" mrp="os/lbs/datasourcemodules/locationapesuplpsy/group/lbs_ape_supl_positioning_module.mrp"/>
 </component>
 </collection>
 <collection name="datasourceadaptation" long-name="Data Source Adaptation" level="adapt">
@@ -1342,15 +1342,15 @@
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
 <unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/SuplConnectionManager/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
 </component>
-<component name="suplprotocolmodule" long-name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" plugin="Y">
+<component name="suplprotocolmodule1" long-name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" plugin="Y">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
 <unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/HostSettingsApi/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
 </component>
-<component name="suplprotocolmodule" long-name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" plugin="Y">
+<component name="suplprotocolmodule2" long-name="SUPL Protocol Module" introduced="^2" deprecated="^2" purpose="optional" plugin="Y">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
 <unit bldFile="os/lbs/networkprotocolmodules/suplprotocolmodule/SuplPushAPI/group" mrp="os/lbs/networkprotocolmodules/suplprotocolmodule/group/lbs_suplprotocolmodule.mrp"/>
 </component>
-<component name="suplrrlpprotocol" long-name="SUPL RRLP Protocol Module">
+<component name="suplrrlpprotocol3" long-name="SUPL RRLP Protocol Module">
 <!-- hack for Foundation builds needed while collection is reorganised into proper components -->
 <unit bldFile="os/lbs/networkprotocolmodules/suplcontrolplaneprotocols/common/suplrrlpprotocol/sfgroup"/>
 </component>
@@ -1855,6 +1855,9 @@
 </collection>
 </block>
 <block name="usb" level="services" long-name="USB" levels="adapt hw-if plugin framework server app-if">
+<collection name="usb_plat" long-name="USB Platform Interfaces" level="app-if">
+<!-- placeholder for platform APIs -->
+</collection>
 <collection name="usbldd" long-name="USB Logical Device Drivers" level="hw-if">
 <!-- usbclientdrivers  to be moved here from kernelhwsrv-->
 </collection>
@@ -1875,13 +1878,13 @@
 <block name="mm" level="services" long-name="Multimedia" levels="adapt hw-if device-fw devices middleware app-if">
 <collection name="mm_pub" long-name="Multimedia Public Interfaces" level="app-if">
 <component name="audio_effects_api" long-name="Audio Effects API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_pub/audio_effects_api/group"/>
+<unit bldFile="os/mm/mm_pub/audio_effects_api/group" filter="!test"/>
 </component>
 <component name="audio_effects_presets_api" long-name="Audio Effects Presets API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_pub/audio_effects_presets_api/group"/>
+<unit bldFile="os/mm/mm_pub/audio_effects_presets_api/group" filter="!test"/>
 </component>
 <component name="drm_audio_player_api" long-name="DRM Audio Player API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_pub/drm_audio_player_api/group"/>
+<unit bldFile="os/mm/mm_pub/drm_audio_player_api/group" filter="!test"/>
 </component>
 <component name="multimedia_extension_interfaces_api" long-name="Multimedia Extension Interfaces API" filter="s60" class="api">
 <unit bldFile="os/mm/mm_pub/multimedia_extension_interfaces_api/group"/>
@@ -1889,7 +1892,7 @@
 </collection>
 <collection name="mm_plat" long-name="Multimedia Platform Interfaces" level="app-if">
 <component name="aac_decoder_config_api" long-name="AAC Decoder Config API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_plat/aac_decoder_config_api/group"/>
+<unit bldFile="os/mm/mm_plat/aac_decoder_config_api/group" filter="!test"/>
 </component>
 <component name="aac_decoder_config_msg_hdlr_api" long-name="AAC Decoder Config Msg Hdlr API" filter="s60" class="api">
 <unit bldFile="os/mm/mm_plat/aac_decoder_config_msg_hdlr_api/group"/>
@@ -1916,7 +1919,7 @@
 <unit bldFile="os/mm/mm_plat/audio_policy_header_api/group"/>
 </component>
 <component name="audio_routing_api" long-name="Audio Routing API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_plat/audio_routing_api/group"/>
+<unit bldFile="os/mm/mm_plat/audio_routing_api/group" filter="!test"/>
 </component>
 <component name="audio_routing_msg_hdlr_api" long-name="Audio Routing Msg Hdlr API" filter="s60" class="api">
 <unit bldFile="os/mm/mm_plat/audio_routing_msg_hdlr_api/group"/>
@@ -1943,7 +1946,7 @@
 <unit bldFile="os/mm/mm_plat/display_posting_api/group"/>
 </component>
 <component name="eaac_plus_decoder_interface_api" long-name="eAAC Plus Decoder Interface API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_plat/eaac_plus_decoder_interface_api/group"/>
+<unit bldFile="os/mm/mm_plat/eaac_plus_decoder_interface_api/group" filter="!test"/>
 </component>
 <component name="eaac_plus_decoder_interface_msg_hdlr_api" long-name="eAAC Plus Decoder Interface Message Handler API" filter="s60" class="api">
 <unit bldFile="os/mm/mm_plat/eaac_plus_decoder_interface_msg_hdlr_api/group"/>
@@ -1952,7 +1955,7 @@
 <unit bldFile="os/mm/mm_plat/eaac_plus_decoder_interface_proxy_api/group"/>
 </component>
 <component name="error_concealment_interface_api" long-name="Error Concealment Interface API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_plat/error_concealment_interface_api/group"/>
+<unit bldFile="os/mm/mm_plat/error_concealment_interface_api/group" filter="!test"/>
 </component>
 <component name="error_concealment_interface_msg_hdlr_api" long-name="Error Concealment Interface Message Handler API" filter="s60" class="api">
 <unit bldFile="os/mm/mm_plat/error_concealment_interface_msg_hdlr_api/group"/>
@@ -1964,7 +1967,7 @@
 <unit bldFile="os/mm/mm_plat/fm_radio_adaptation_api/group"/>
 </component>
 <component name="g711_decoder_interface_api" long-name="G711 Decoder Interface API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_plat/g711_decoder_interface_api/group"/>
+<unit bldFile="os/mm/mm_plat/g711_decoder_interface_api/group" filter="!test"/>
 </component>
 <component name="g711_decoder_interface_msg_hdlr_api" long-name="G711 Decoder Interface Message Handler API" filter="s60" class="api">
 <unit bldFile="os/mm/mm_plat/g711_decoder_interface_msg_hdlr_api/group"/>
@@ -1973,7 +1976,7 @@
 <unit bldFile="os/mm/mm_plat/g711_decoder_interface_proxy_api/group"/>
 </component>
 <component name="g711_encoder_interface_api" long-name="G711 Encoder Interface API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_plat/g711_encoder_interface_api/group"/>
+<unit bldFile="os/mm/mm_plat/g711_encoder_interface_api/group" filter="!test"/>
 </component>
 <component name="g711_encoder_interface_msg_hdlr_api" long-name="G711 Encoder Interface Message Handler API" filter="s60" class="api">
 <unit bldFile="os/mm/mm_plat/g711_encoder_interface_msg_hdlr_api/group"/>
@@ -1982,7 +1985,7 @@
 <unit bldFile="os/mm/mm_plat/g711_encoder_interface_proxy_api/group"/>
 </component>
 <component name="g729_decoder_interface_api" long-name="G729 Decoder Interface API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_plat/g729_decoder_interface_api/group"/>
+<unit bldFile="os/mm/mm_plat/g729_decoder_interface_api/group" filter="!test"/>
 </component>
 <component name="g729_decoder_interface_msg_hdlr_api" long-name="G729 Decoder Interface Message Handler API" filter="s60" class="api">
 <unit bldFile="os/mm/mm_plat/g729_decoder_interface_msg_hdlr_api/group"/>
@@ -1991,7 +1994,7 @@
 <unit bldFile="os/mm/mm_plat/g729_decoder_interface_proxy_api/group"/>
 </component>
 <component name="g729_encoder_interface_api" long-name="G729 Encoder Interface API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_plat/g729_encoder_interface_api/group"/>
+<unit bldFile="os/mm/mm_plat/g729_encoder_interface_api/group" filter="!test"/>
 </component>
 <component name="g729_encoder_interface_proxy_api" long-name="G729 Encoder Interface Proxy API" filter="s60" class="api">
 <unit bldFile="os/mm/mm_plat/g729_encoder_interface_proxy_api/group"/>
@@ -2000,13 +2003,13 @@
 <unit bldFile="os/mm/mm_plat/g729_encoder_interface_msg_hdlr_api/group"/>
 </component>
 <component name="global_audio_settings_api" long-name="Global Audio Settings API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_plat/global_audio_settings_api/group"/>
+<unit bldFile="os/mm/mm_plat/global_audio_settings_api/group" filter="!test"/>
 </component>
 <component name="global_audio_settings_definition_api" long-name="Global Audio Settings Definition API" filter="s60" class="api">
 <unit bldFile="os/mm/mm_plat/global_audio_settings_definition_api/group"/>
 </component>
 <component name="ilbc_decoder_interface_api" long-name="Ilbc Decoder Interface API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_plat/ilbc_decoder_interface_api/group"/>
+<unit bldFile="os/mm/mm_plat/ilbc_decoder_interface_api/group" filter="!test"/>
 </component>
 <component name="ilbc_decoder_interface_msg_hdlr_api" long-name="Ilbc Decoder Interface Message Handler API" filter="s60" class="api">
 <unit bldFile="os/mm/mm_plat/ilbc_decoder_interface_msg_hdlr_api/group"/>
@@ -2015,7 +2018,7 @@
 <unit bldFile="os/mm/mm_plat/ilbc_decoder_interface_proxy_api/group"/>
 </component>
 <component name="ilbc_encoder_interface_api" long-name="Ilbc Encoder Interface API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_plat/ilbc_encoder_interface_api/group"/>
+<unit bldFile="os/mm/mm_plat/ilbc_encoder_interface_api/group" filter="!test"/>
 </component>
 <component name="ilbc_encoder_interface_msg_hdlr_api" long-name="Ilbc Encoder Interface Message Handler API" filter="s60" class="api">
 <unit bldFile="os/mm/mm_plat/ilbc_encoder_interface_msg_hdlr_api/group"/>
@@ -2036,7 +2039,7 @@
 <unit bldFile="os/mm/mm_plat/nokia_multimedia_fourcc_definitions_api/group"/>
 </component>
 <component name="ra8_decoder_interface_api" long-name="RA8 Decoder Interface API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_plat/ra8_decoder_interface_api/group"/>
+<unit bldFile="os/mm/mm_plat/ra8_decoder_interface_api/group" filter="!test"/>
 </component>
 <component name="ra8_decoder_interface_msg_hdlr_api" long-name="RA8 Decoder Interface Message Handler API" filter="s60" class="api">
 <unit bldFile="os/mm/mm_plat/ra8_decoder_interface_msg_hdlr_api/group"/>
@@ -2048,7 +2051,7 @@
 <unit bldFile="os/mm/mm_plat/rds_adaptation_api/group"/>
 </component>
 <component name="restricted_audio_output_api" long-name="Restricted Audio Output API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_plat/restricted_audio_output_api/group"/>
+<unit bldFile="os/mm/mm_plat/restricted_audio_output_api/group" filter="!test"/>
 </component>
 <component name="restricted_audio_output_msg_hdlr_api" long-name="Restricted Audio Output Message Handler API" filter="s60" class="api">
 <unit bldFile="os/mm/mm_plat/restricted_audio_output_msg_hdlr_api/group"/>
@@ -2057,7 +2060,7 @@
 <unit bldFile="os/mm/mm_plat/restricted_audio_output_proxy_api/group"/>
 </component>
 <component name="sbc_encoder_interface_api" long-name="SBC Encoder Interface API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_plat/sbc_encoder_interface_api/group"/>
+<unit bldFile="os/mm/mm_plat/sbc_encoder_interface_api/group" filter="!test"/>
 </component>
 <component name="sbc_encoder_interface_msg_hdlr_api" long-name="SBC Encoder Interface Message Handler API" filter="s60" class="api">
 <unit bldFile="os/mm/mm_plat/sbc_encoder_interface_msg_hdlr_api/group"/>
@@ -2069,7 +2072,7 @@
 <unit bldFile="os/mm/mm_plat/secure_output_mdf_custom_interface/group"/>
 </component>
 <component name="speech_encoder_config_api" long-name="Speech Encoder Config API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_plat/speech_encoder_config_api/group"/>
+<unit bldFile="os/mm/mm_plat/speech_encoder_config_api/group" filter="!test"/>
 </component>
 <component name="speech_encoder_config_msg_hdlr_api" long-name="Speech Encoder Config Message Handler API" filter="s60" class="api">
 <unit bldFile="os/mm/mm_plat/speech_encoder_config_msg_hdlr_api/group"/>
@@ -2099,7 +2102,7 @@
 <unit bldFile="os/mm/mm_plat/video_window_control_custom_interface/group"/>
 </component>
 <component name="wma_decoder_interface_api" long-name="WMA Decoder Interface API" filter="s60" class="api">
-<unit bldFile="os/mm/mm_plat/wma_decoder_interface_api/group"/>
+<unit bldFile="os/mm/mm_plat/wma_decoder_interface_api/group" filter="!test"/>
 </component>
 <component name="wma_decoder_interface_msg_hdlr_api" long-name="WMA Decoder Interface Message Handler API" filter="s60" class="api">
 <unit bldFile="os/mm/mm_plat/wma_decoder_interface_msg_hdlr_api/group"/>
@@ -2258,7 +2261,7 @@
 <component name="refdevsound" long-name="Reference DevSound Plugins" introduced="7.0s" purpose="optional">
 <unit bldFile="os/mm/devsound/devsoundrefplugin/group" mrp="os/mm/devsound/devsoundrefplugin/group/multimedia_mdf_devsound_refplugin.mrp"/>
 </component>
-<component name="btdevsound" long-name="Bluetooth DevSound Plugin" introduced="7.0s" purpose="development" plugin="Y">
+<component name="btdevsound" long-name="Bluetooth DevSound Plugin" introduced="7.0s" purpose="development" deprecated="^4" plugin="Y">
 <unit bldFile="os/mm/devsound/sounddevbt/group" mrp="os/mm/devsound/sounddevbt/group/multimedia_mdf_devsound_refbtplugin.mrp"/>
 </component>
 <component name="a3ftrace" long-name="A3F Trace Utility" introduced="^2" purpose="development">
@@ -2314,7 +2317,7 @@
 <component name="ecam_face_tracking_custom_api" long-name="ECam Face Tracking Custom API" filter="s60" class="api">
 <unit bldFile="os/imagingext/imagingext_plat/ecam_face_tracking_custom_api/group"/>
 </component>
-<component name="ecam_use_case_hint_custom_api" long-name="ECam Use Case Hint Custom API" filter="s60" class="api">
+<component name="ecam_use_case_hint_custom_api" long-name="ECam Use Case Hint Custom API" filter="s60" introduced="^3" class="api">
 <unit bldFile="os/imagingext/imagingext_plat/ecam_use_case_hint_custom_api/group"/>
 </component>
 </collection>
@@ -2727,7 +2730,7 @@
 <component name="rombuild_zoom2" filter="sf_build" long-name="Zoom2 iMaker Config" purpose="development" introduced="^3" class="config">
 <unit bldFile="os/deviceplatformrelease/sf_config/rombuild/zoom2/group"/>
 </component>
-<component name="rombuild_sfrefhw" filter="sf_build" long-name="sf_refhw iMaker Config" purpose="development" introduced="^3" class="config">
+<component name="rombuild_sfrefhw" filter="sf_build" long-name="Foundation Reference Hardware iMaker Config" purpose="development" introduced="^3" class="config">
 <unit bldFile="os/deviceplatformrelease/sf_config/rombuild/sf_refhw/group"/>
 </component>
 </collection>
@@ -2759,7 +2762,7 @@
 </component>
 </collection>
 </block>
-<block name="osrndtools" level="services" long-name="OS R&amp;D tools" levels="fw trace">
+<block name="osrndtools" level="services" long-name="OS R&amp;D tools" levels="fw trace analysis">
 <collection name="stif" long-name="STIF" level="fw">
 <component name="stif_plat" filter="s60" long-name="STIF Platform Interfaces" purpose="development" class="api">
 <unit bldFile="os/osrndtools/stif/stif_plat/group"/>
@@ -2809,23 +2812,23 @@
 <unit bldFile="os/osrndtools/stif/group"/>
 </component>
 </collection>
-<collection name="memspy" long-name="Memspy" level="trace">
-<component name="memspy_plat" filter="s60" long-name="Memspy Platform Interfaces" purpose="development" class="api">
+<collection name="memspy" long-name="MemSpy" level="trace">
+<component name="memspy_plat" filter="s60" long-name="MemSpy Platform Interfaces" purpose="development" class="api">
 <unit bldFile="os/osrndtools/memspy/memspy_plat/group"/>
 </component>
-<component name="driver" filter="s60" long-name="Memspy Driver" purpose="development">
+<component name="driver" filter="s60" long-name="MemSpy Driver" purpose="development">
 <unit bldFile="os/osrndtools/memspy/driver/group"/>
 </component>
-<component name="memspy_engine" filter="s60" long-name="Memspy Engine" purpose="development">
+<component name="memspy_engine" filter="s60" long-name="MemSpy Engine" purpose="development">
 <unit bldFile="os/osrndtools/memspy/engine/group"/>
 </component>
-<component name="commandline" filter="s60" long-name="Memspy Command Line" purpose="development">
+<component name="commandline" filter="s60" long-name="MemSpy Command Line" purpose="development">
 <unit bldFile="os/osrndtools/memspy/commandline/group"/>
 </component>
-<component name="console" filter="s60" long-name="Memspy Console" purpose="development">
+<component name="console" filter="s60" long-name="MemSpy Console" purpose="development">
 <unit bldFile="os/osrndtools/memspy/console/group"/>
 </component>
-<component name="memspy_build" filter="s60" long-name="Memspy Build" purpose="development">
+<component name="memspy_build" filter="s60" long-name="MemSpy Build" purpose="development">
 <!--  move exports into self-contained component.-->
 <unit bldFile="os/osrndtools/memspy/group"/>
 </component>
@@ -3255,7 +3258,7 @@
 <unit bldFile="mw/securitysrv/pkiutilities/ocsp/group" mrp="mw/securitysrv/pkiutilities/ocsp/group/securitysrv_ocsp.mrp"/>
 </component>
 </collection>
-<collection name="wim" long-name="Wireless Identity Module " level="framework">
+<collection name="wim" long-name="Wireless Identity Module" level="framework">
 <!-- collection is really a component. Need to move down a directory-->
 <component name="wim_build" filter="s60" long-name="WIM Build">
 <unit bldFile="mw/securitysrv/wim/group"/>
@@ -3327,7 +3330,7 @@
 <component name="devencstarter" filter="s60" long-name="Device Encryption Starter" introduced="^3" plugin="Y">
 <unit bldFile="mw/securitysrv/devencdiskutils/DevEncStarter/group"/>
 </component>
-<component name="devencdiskutils" filter="s60" long-name="Device Encryption Disk Utils Build" introduced="^3">
+<component name="devencdiskutils_build" filter="s60" long-name="Device Encryption Disk Utils Build" introduced="^3">
 <!-- need to split this into the above components, or remove #includes and make this a ROM  component-->
 <unit bldFile="mw/securitysrv/devencdiskutils/group"/>
 </component>
@@ -3626,7 +3629,7 @@
 <component name="wep_security_settings_ui_api" long-name="WEP Security Settings UI API" filter="s60" class="api">
 <unit bldFile="mw/accesssec/accesssec_plat/wep_security_settings_ui_api/group"/>
 </component>
-<component name="wi-fi_protected_setup_ui_api" long-name="Wi-Fi Protected Setup UI API" filter="s60" class="api">
+<component name="wifi_protected_setup_ui_api" long-name="Wi-Fi Protected Setup UI API" filter="s60" class="api">
 <unit bldFile="mw/accesssec/accesssec_plat/wi-fi_protected_setup_ui_api/group"/>
 </component>
 <component name="wlan_eap_settings_ui_api" long-name="WLAN EAP Settings UI API" filter="s60" class="api">
@@ -3687,8 +3690,8 @@
 </component>
 </collection>
 </block>
-<block name="ipconnmgmt" level="generic" long-name="IP Connectivity Management" levels="plugin framework server generic utils">
-<collection name="ipcm_plat" long-name="IP Connectivity Management Platform Interfaces" level="utils">
+<block name="ipconnmgmt" level="generic" long-name="IP Connectivity Management" levels="plugin framework server utils api">
+<collection name="ipcm_plat" long-name="IP Connectivity Management Platform Interfaces" level="api">
 <component name="access_point_engine_misc_api" long-name="Access Point Engine Misc API" filter="s60" class="api">
 <unit bldFile="mw/ipconnmgmt/ipcm_plat/access_point_engine_misc_api/group"/>
 </component>
@@ -3726,7 +3729,7 @@
 <unit bldFile="mw/ipconnmgmt/ipcm_plat/mpm_connect_screen_api/group"/>
 </component>
 </collection>
-<collection name="ipcm_pub" long-name="IP Connectivity Management Public Interfaces" level="utils">
+<collection name="ipcm_pub" long-name="IP Connectivity Management Public Interfaces" level="api">
 <component name="connection_settings_api" long-name="Connection Settings API" filter="s60" class="api">
 <unit bldFile="mw/ipconnmgmt/ipcm_pub/connection_settings_api/group"/>
 </component>
@@ -3832,7 +3835,7 @@
 <unit bldFile="mw/ipconnmgmt/dbcreator/group"/>
 </component>
 </collection>
-<collection name="ipconnmgmt_info" long-name="IP Connectivity Management Info" level="utils">
+<collection name="ipconnmgmt_info" long-name="IP Connectivity Management Info" level="api">
 <component name="ipcm_build" filter="s60" long-name="IP Connectivity Management Build">
 <!-- need to move exports to another component, or maek this a config component and revmove the #includes -->
 <unit bldFile="mw/ipconnmgmt/group"/>
@@ -4043,7 +4046,7 @@
 </component>
 </collection>
 <collection name="vpnapiimpl" long-name="VPN API Implementation" level="api">
-<component name="vpnapi" filter="s60" long-name="VPN API">
+<component name="vpnapi_impl" filter="s60" long-name="VPN API">
 <unit bldFile="mw/vpnclient/vpnapiimpl/group" filter="!oem_build"/>
 </component>
 </collection>
@@ -4143,7 +4146,7 @@
 <component name="vpndialogmanager" filter="s60" long-name="VPN Dialog Manager">
 <unit bldFile="mw/vpnclient/vpnui/vpndialogmanager/group" filter="!oem_build"/>
 </component>
-<component name="vpnmanagementui" filter="s60" long-name="VPN Management UI" plugin="Y">
+<component name="vpnmanagementui" filter="s60" long-name="VPN Management UI" deprecated="^3" plugin="Y">
 <unit bldFile="mw/vpnclient/vpnui/vpnmanagementui/group" filter="!oem_build"/>
 </component>
 <component name="vpnpolins" filter="s60" long-name="VPN Policy Installer">
@@ -4157,9 +4160,8 @@
 <component name="vpnclient_help" filter="s60" long-name="VPN Client Help">
 <unit bldFile="mw/vpnclient/help/group" filter="!oem_build"/>
 </component>
-<component name="vpnclient_build" filter="s60" long-name="VPN Client Build">
-<!-- should split this up into the other components and remove this-->
-<unit bldFile="mw/vpnclient/group" filter="!oem_build"/>
+<component name="vpnclient_exports" filter="s60" long-name="VPN Client Exports">
+<unit bldFile="mw/vpnclient/exports" filter="!oem_build"/>
 </component>
 </collection>
 </block>
@@ -4466,7 +4468,7 @@
 <unit bldFile="mw/messagingmw/msgfw_plat/send_ui_datautils_api/group"/>
 </component>
 </collection>
-<collection name="msgbranched" long-name="Messaging Branched" level="fw">
+<collection name="msgbranched" long-name="Messaging Branched" level="support">
 <!-- collection is really a component. Need to move down a directory -->
 <component name="msgbranched_build" filter="s60" long-name="Messaging Branched Build">
 <unit bldFile="mw/messagingmw/msgbranched/group"/>
@@ -4597,7 +4599,7 @@
 <component name="im_cache_server_api" long-name="IM Cache Server API" filter="s60" class="api">
 <unit bldFile="mw/imsrv/imsrv_plat/im_cache_server_api/group"/>
 </component>
-<component name="presence_avabilitytext" long-name="Presence Availbility Text" filter="s60" class="api">
+<component name="presence_avabilitytext" long-name="Presence Availability Text" filter="s60" class="api">
 <unit bldFile="mw/imsrv/imsrv_plat/presence_avabilitytext/group"/>
 </component>
 </collection>
@@ -5042,37 +5044,37 @@
 </block>
 <block name="srvdiscovery" level="generic" long-name="Service Discovery and Usage" levels="plugin framework server generic specific">
 <collection name="upnpstack_plat" long-name="UPnP Stack Platform Interfaces" level="specific">
-<component name="upnpstack_plat" long-name="UPnP Device API" purpose="optional" introduced="^3" class="api">
+<component name="upnp_device_api" long-name="UPnP Device API" purpose="optional" introduced="^3" class="api">
 <unit bldFile="mw/srvdiscovery/upnp/upnpstack_plat/upnp_device_api/group"/>
 </component>
-<component name="upnpstack_plat" long-name="UPnP Common API" purpose="optional" introduced="^3" class="api">
+<component name="upnp_common_api" long-name="UPnP Common API" purpose="optional" introduced="^3" class="api">
 <unit bldFile="mw/srvdiscovery/upnp/upnpstack_plat/upnp_common_api/group"/>
 </component>
-<component name="upnpstack_plat" long-name="UPnP Utils API" purpose="optional" introduced="^3" class="api">
+<component name="upnp_utils_api" long-name="UPnP Utils API" purpose="optional" introduced="^3" class="api">
 <unit bldFile="mw/srvdiscovery/upnp/upnpstack_plat/upnp_utils_api/group"/>
 </component>
-<component name="upnpstack_plat" long-name="UPnP Control Point API" purpose="optional" introduced="^3" class="api">
+<component name="upnp_control_point_api" long-name="UPnP Control Point API" purpose="optional" introduced="^3" class="api">
 <unit bldFile="mw/srvdiscovery/upnp/upnpstack_plat/upnp_control_point_api/group"/>
 </component>
-<component name="upnpstack_plat" long-name="UPnP HTTP Server API" purpose="optional" introduced="^3" class="api">
+<component name="upnp_httpserver_api" long-name="UPnP HTTP Server API" purpose="optional" introduced="^3" class="api">
 <unit bldFile="mw/srvdiscovery/upnp/upnpstack_plat/upnp_httpserver_api/group"/>
 </component>
-<component name="upnpstack_plat" long-name="UPnP HTTP Transfer API" purpose="optional" introduced="^3" class="api">
+<component name="upnp_http_transfer_api" long-name="UPnP HTTP Transfer API" purpose="optional" introduced="^3" class="api">
 <unit bldFile="mw/srvdiscovery/upnp/upnpstack_plat/upnp_http_transfer_api/group"/>
 </component>
 </collection>
 <collection name="servicediscoveryandcontrol" long-name="Service Discovery and Control" level="framework">
-<component name="servicediscoveryfw" long-name="Service Discovery Framework" introduced="^3" purpose="optional">
+<component name="servicediscoveryfw" long-name="Service Discovery Framework" introduced="^3" purpose="optional" filter="s60">
 <unit bldFile="mw/srvdiscovery/servicediscoveryandcontrol/pnp/group" mrp="mw/srvdiscovery/servicediscoveryandcontrol/pnp/group/servicediscoveryframework.mrp"/>
 </component>
 </collection>
 <collection name="upnp" long-name="UPnP" level="server">
-<component name="upnpstack" long-name="UPnP Stack" introduced="^3" purpose="optional">
+<component name="upnpstack" long-name="UPnP Stack" introduced="^3" purpose="optional" filter="s60">
 <unit bldFile="mw/srvdiscovery/upnp/upnpstack/group"/>
 </component>
 </collection>
 <collection name="srvdiscovery_info" long-name="Service Discovery and Usage Info" level="specific">
-<component name="srvdiscovery_metadata" long-name="Service Discovery and Usage Metadata" introduced="^2" purpose="development" class="config PC">
+<component name="srvdiscovery_metadata" long-name="Service Discovery and Usage Metadata" introduced="^2" purpose="development" filter="s60" class="config PC">
 <unit mrp="mw/srvdiscovery/srvdiscovery_info/srvdiscovery_metadata/srvdiscovery_metadata.mrp"/>
 </component>
 </collection>
@@ -5289,19 +5291,19 @@
 <unit bldFile="mw/btservices/btservices_plat/bluetooth_engine_api/group"/>
 </component>
 <component name="bluetooth_engine_connection_management_api" long-name="Bluetooth Engine Connection Management API" filter="s60" class="api">
-<unit bldFile="mw/btservices/btservices_plat/bluetooth_engine_connection_management_api/group"/>
+<unit bldFile="mw/btservices/btservices_plat/bluetooth_engine_connection_management_api/group" filter="!test"/>
 </component>
 <component name="bluetooth_engine_device_management_api" long-name="Bluetooth Engine Device Management API" filter="s60" class="api">
-<unit bldFile="mw/btservices/btservices_plat/bluetooth_engine_device_management_api/group"/>
+<unit bldFile="mw/btservices/btservices_plat/bluetooth_engine_device_management_api/group" filter="!test"/>
 </component>
 <component name="bluetooth_engine_discovery_api" long-name="Bluetooth Engine Discovery API" filter="s60" class="api">
-<unit bldFile="mw/btservices/btservices_plat/bluetooth_engine_discovery_api/group"/>
+<unit bldFile="mw/btservices/btservices_plat/bluetooth_engine_discovery_api/group" filter="!test"/>
 </component>
 <component name="bluetooth_engine_features_api" long-name="Bluetooth Engine Features API" filter="s60" class="api">
 <unit bldFile="mw/btservices/btservices_plat/bluetooth_engine_features_api/group"/>
 </component>
 <component name="bluetooth_engine_settings_api" long-name="Bluetooth Engine Settings API" filter="s60" class="api">
-<unit bldFile="mw/btservices/btservices_plat/bluetooth_engine_settings_api/group"/>
+<unit bldFile="mw/btservices/btservices_plat/bluetooth_engine_settings_api/group" filter="!test"/>
 </component>
 <component name="bluetooth_engine_plugin_api" long-name="Bluetooth Engine Plugin API" filter="s60" class="api">
 <unit bldFile="mw/btservices/btservices_plat/bluetooth_engine_plugin_api/group"/>
@@ -5327,7 +5329,7 @@
 <unit bldFile="mw/btservices/bluetoothengine/btnotif/group"/>
 </component>
 <component name="btaudioman" filter="s60" long-name="Bluetooth Audio Manager">
-<unit bldFile="mw/btservices/bluetoothengine/btaudioman/group"/>
+<unit bldFile="mw/btservices/bluetoothengine/btaudioman/group" filter="!test"/>
 </component>
 <component name="btmac" filter="s60" long-name="Bluetooth Mono Audio Controller" plugin="Y">
 <unit bldFile="mw/btservices/bluetoothengine/btmac/group"/>
@@ -5336,7 +5338,7 @@
 <unit bldFile="mw/btservices/bluetoothengine/btsac/group"/>
 </component>
 <component name="btaudiostreamer" filter="s60" long-name="Bluetooth Audio Streamer">
-<unit bldFile="mw/btservices/bluetoothengine/btaudiostreamer/group"/>
+<unit bldFile="mw/btservices/bluetoothengine/btaudiostreamer/group" filter="!test"/>
 </component>
 <component name="btsap" filter="s60" long-name="Bluetooth SIM Access Profile" plugin="Y">
 <unit bldFile="mw/btservices/bluetoothengine/btsap/group"/>
@@ -5526,7 +5528,7 @@
 <component name="image_handling_library_api" long-name="Image Handling Library API" filter="s60" class="api">
 <unit bldFile="mw/imghandling/imagehandling_plat/image_handling_library_api/group"/>
 </component>
-<component name="3gp_library_api" long-name="3GP Library API" filter="s60" class="api">
+<component name="lib3gp_library_api" long-name="3GP Library API" filter="s60" class="api">
 <unit bldFile="mw/imghandling/imagehandling_plat/3gp_library_api/group"/>
 </component>
 <component name="thumbnailmanager_api" long-name="Thumbnail Manager API" filter="s60" class="api">
@@ -5700,112 +5702,111 @@
 </block>
 <block name="mmuifw" level="specific" long-name="Multimedia UI Framework" levels="mgr mdl util ui api">
 <collection name="mmuifw_plat" long-name="Multimedia UI Framework Platform Interfaces" level="api">
-<component name="alf_widgetfactory_api" long-name="ALF Widget Factory API" filter="s60" class="api">
+<component name="alf_widgetfactory_api" long-name="ALF Widget Factory API" filter="s60" deprecated="^3" class="api">
 <unit bldFile="mw/mmuifw/mmuifw_plat/alf_widgetfactory_api/group"/>
 </component>
-<component name="alf_widgetutils_api" long-name="ALF Widget Utils API" filter="s60" class="api">
+<component name="alf_widgetutils_api" long-name="ALF Widget Utils API" filter="s60" deprecated="^3" class="api">
 <unit bldFile="mw/mmuifw/mmuifw_plat/alf_widgetutils_api/group"/>
 </component>
-<component name="alf_widgetmodel_api" long-name="ALF Widget Model API" filter="s60" class="api">
+<component name="alf_widgetmodel_api" long-name="ALF Widget Model API" filter="s60" deprecated="^3" class="api">
 <unit bldFile="mw/mmuifw/mmuifw_plat/alf_widgetmodel_api/group"/>
 </component>
-<component name="osn_container_api" long-name="OSN Container API" filter="s60" class="api">
+<component name="osn_container_api" long-name="OSN Container API" filter="s60" deprecated="^3" class="api">
 <unit bldFile="mw/mmuifw/mmuifw_plat/osn_container_api/group"/>
 </component>
-<component name="osn_global_api" long-name="OSN Global API" filter="s60" class="api">
+<component name="osn_global_api" long-name="OSN Global API" filter="s60" deprecated="^3" class="api">
 <unit bldFile="mw/mmuifw/mmuifw_plat/osn_global_api/group"/>
 </component>
-<component name="osn_string_api" long-name="OSN String API" filter="s60" class="api">
+<component name="osn_string_api" long-name="OSN String API" filter="s60" deprecated="^3" class="api">
 <unit bldFile="mw/mmuifw/mmuifw_plat/osn_string_api/group"/>
 </component>
-<component name="alf_resourcepool_api" long-name="ALF Resource Pool API" filter="s60" class="api">
+<component name="alf_resourcepool_api" long-name="ALF Resource Pool API" filter="s60" deprecated="^3" class="api">
 <unit bldFile="mw/mmuifw/mmuifw_plat/alf_resourcepool_api/group"/>
 </component>
-<component name="alf_containerwidget_api" long-name="ALF Container Widget API" filter="s60" class="api">
+<component name="alf_containerwidget_api" long-name="ALF Container Widget API" filter="s60" deprecated="^3" class="api">
 <unit bldFile="mw/mmuifw/mmuifw_plat/alf_containerwidget_api/group"/>
 </component>
-<component name="alf_viewwidget_api" long-name="ALF View Widget API" filter="s60" class="api">
+<component name="alf_viewwidget_api" long-name="ALF View Widget API" filter="s60" deprecated="^3" class="api">
 <unit bldFile="mw/mmuifw/mmuifw_plat/alf_viewwidget_api/group"/>
 </component>
-<component name="alf_scrollbarwidget_api" long-name="ALF Scrollbar Widget API" filter="s60" class="api">
+<component name="alf_scrollbarwidget_api" long-name="ALF Scrollbar Widget API" filter="s60" deprecated="^3" class="api">
 <unit bldFile="mw/mmuifw/mmuifw_plat/alf_scrollbarwidget_api/group"/>
 </component>
-<component name="alf_customlayoutmanagers_api" long-name="ALF Custom Layout Managers API" filter="s60" class="api">
+<component name="alf_customlayoutmanagers_api" long-name="ALF Custom Layout Managers API" filter="s60" deprecated="^3" class="api">
 <unit bldFile="mw/mmuifw/mmuifw_plat/alf_customlayoutmanagers_api/group"/>
 </component>
-<component name="gesturehelper_api" long-name="Gesture Helper API" filter="s60" class="api">
+<component name="gesturehelper_api" long-name="Gesture Helper API" filter="s60" deprecated="^3" class="api">
 <unit bldFile="mw/mmuifw/mmuifw_plat/gesturehelper_api/group"/>
 </component>
-<component name="mul_coverflowwidget_api" long-name="MUL Coverflow Widget API" filter="s60" class="api">
+<component name="mul_coverflowwidget_api" long-name="MUL Coverflow Widget API" filter="s60" deprecated="^3" class="api">
 <unit bldFile="mw/mmuifw/mmuifw_plat/mul_coverflowwidget_api/group"/>
 </component>
-<component name="mul_datamodel_api" long-name="MUL Data Model API" filter="s60" class="api">
+<component name="mul_datamodel_api" long-name="MUL Data Model API" filter="s60" deprecated="^3" class="api">
 <unit bldFile="mw/mmuifw/mmuifw_plat/mul_datamodel_api/group"/>
 </component>
-<component name="mul_sliderwidget_api" long-name="MUL Slider Widget API" filter="s60" class="api">
+<component name="mul_sliderwidget_api" long-name="MUL Slider Widget API" filter="s60" deprecated="^3" class="api">
 <unit bldFile="mw/mmuifw/mmuifw_plat/mul_sliderwidget_api/group"/>
 </component>
-<component name="mul_widget_api" long-name="MUL Widget API" filter="s60" class="api">
+<component name="mul_widget_api" long-name="MUL Widget API" filter="s60" deprecated="^3" class="api">
 <unit bldFile="mw/mmuifw/mmuifw_plat/mul_widget_api/group"/>
 </component>
 </collection>
-<collection name="mmuifw_info" long-name="Multimedia UI Framework Info" level="ui">
-<component name="mmuifw_build" filter="s60" long-name="Multimedia UI Framework Build">
-<!-- Move exports into other componetns or remove all #includes and make this a ROM component -->
-<unit bldFile="mw/mmuifw/group"/>
+<collection name="mmuifw_info" long-name="Multimedia UI Framework Info" level="util">
+<component name="mmuifw_rom" filter="s60" long-name="Multimedia UI Framework ROM" deprecated="^3">
+<unit bldFile="mw/mmuifw/rom/group"/>
 </component>
 </collection>
 <collection name="osncore" long-name="OS Neutral Library Core" level="util">
 <!-- collection is really a component. Move down a directory -->
-<component name="osncore_build" filter="s60" long-name="OSN Core Build">
+<component name="osncore_build" filter="s60" long-name="OSN Core Build" deprecated="^3">
 <unit bldFile="mw/mmuifw/osncore/group"/>
 </component>
 </collection>
 <collection name="alfwidgetutils" long-name="Accelerated LAF Widget Utils" level="ui">
 <!-- collection is really a component. Move down a directory -->
-<component name="alfwidgetutils_build" filter="s60" long-name="ALF Widget Utils">
+<component name="alfwidgetutils_build" filter="s60" long-name="ALF Widget Utils" deprecated="^3">
 <unit bldFile="mw/mmuifw/alfwidgetutils/group"/>
 </component>
 </collection>
 <collection name="resourcepool" long-name="Resource Pool" level="util">
 <!-- collection is really a component. Move down a directory -->
-<component name="alfresourcepool" filter="s60" long-name="ALF Resource Pool">
+<component name="alfresourcepool" filter="s60" long-name="ALF Resource Pool" deprecated="^3">
 <unit bldFile="mw/mmuifw/resourcepool/group"/>
 </component>
 </collection>
 <collection name="widgetmodel" long-name="Widget Model" level="mdl">
 <!-- collection is really a component. Move down a directory -->
-<component name="widgetmodel_build" filter="s60" long-name="Widget Model Build">
+<component name="widgetmodel_build" filter="s60" long-name="Widget Model Build" deprecated="^3">
 <unit bldFile="mw/mmuifw/widgetmodel/group"/>
 </component>
 </collection>
 <collection name="mulwidgets" long-name="MUL Widgets" level="ui">
 <!-- should spell out MUL in the collection name -->
-<component name="mullogging" filter="s60" long-name="MUL Logging">
+<component name="mullogging" filter="s60" long-name="MUL Logging" deprecated="^3">
 <unit bldFile="mw/mmuifw/mulwidgets/mullogging/group"/>
 </component>
-<component name="muldatamodel" filter="s60" long-name="MUL Data Model">
+<component name="muldatamodel" filter="s60" long-name="MUL Data Model" deprecated="^3">
 <unit bldFile="mw/mmuifw/mulwidgets/muldatamodel/group"/>
 </component>
-<component name="mulwidgets_common" filter="s60" long-name="MUL Common Utils">
+<component name="mulwidgets_common" filter="s60" long-name="MUL Common Utils" deprecated="^3">
 <unit bldFile="mw/mmuifw/mulwidgets/common/group"/>
 </component>
-<component name="gesturehelper" filter="s60" long-name="Gesture Helper">
+<component name="gesturehelper" filter="s60" long-name="Gesture Helper" deprecated="^3">
 <unit bldFile="mw/mmuifw/mulwidgets/gesturehelper/group"/>
 </component>
-<component name="mulcoverflowwidget" filter="s60" long-name="MUL CoverFlow Widget">
+<component name="mulcoverflowwidget" filter="s60" long-name="MUL CoverFlow Widget" deprecated="^3">
 <unit bldFile="mw/mmuifw/mulwidgets/mulcoverflowwidget/group"/>
 </component>
-<component name="mulsliderwidget" filter="s60" long-name="MUL Slider Widget">
+<component name="mulsliderwidget" filter="s60" long-name="MUL Slider Widget" deprecated="^3">
 <unit bldFile="mw/mmuifw/mulwidgets/mulsliderwidget/group"/>
 </component>
-<component name="alfviewwidget" filter="s60" long-name="ALF View Widget">
+<component name="alfviewwidget" filter="s60" long-name="ALF View Widget" deprecated="^3">
 <unit bldFile="mw/mmuifw/mulwidgets/alfviewwidget/group"/>
 </component>
-<component name="alfcontainerwidget" filter="s60" long-name="ALF Container Widget">
+<component name="alfcontainerwidget" filter="s60" long-name="ALF Container Widget" deprecated="^3">
 <unit bldFile="mw/mmuifw/mulwidgets/alfcontainerwidget/group"/>
 </component>
-<component name="alfscrollbarwidget" filter="s60" long-name="ALF Scrollbar Widget">
+<component name="alfscrollbarwidget" filter="s60" long-name="ALF Scrollbar Widget" deprecated="^3">
 <unit bldFile="mw/mmuifw/mulwidgets/alfscrollbarwidget/group"/>
 </component>
 </collection>
@@ -5813,10 +5814,10 @@
 <block name="videoutils" level="specific" long-name="Video Utils" levels="eng util if">
 <collection name="videoutils_plat" long-name="Video Utils Platform Interfaces" level="if">
 <component name="videoscheduler_api" long-name="Video Scheduler API" filter="s60" class="api">
-<unit bldFile="mw/videoutils/videoutils_plat/videoscheduler_api/group"/>
+<unit bldFile="mw/videoutils/videoutils_plat/videoscheduler_api/group" filter="!test"/>
 </component>
 <component name="videoconnutility_api" long-name="Video Connection Utility API" filter="s60" class="api">
-<unit bldFile="mw/videoutils/videoutils_plat/videoconnutility_api/group"/>
+<unit bldFile="mw/videoutils/videoutils_plat/videoconnutility_api/group" filter="!test"/>
 </component>
 <component name="videoplayer_constants_api" long-name="Videoplayer Constants API" filter="s60" class="api">
 <unit bldFile="mw/videoutils/videoutils_plat/videoplayer_constants_api/group"/>
@@ -6002,7 +6003,7 @@
 <component name="media_recorder_api" long-name="Media Recorder API" filter="s60" class="api">
 <unit bldFile="mw/camerasrv/camerasrv_plat/media_recorder_api/group" filter="!test"/>
 </component>
-<component name="3gp_file_composer_api" long-name="3GP File Composer API" filter="s60" class="api">
+<component name="lib3gp_file_composer_api" long-name="3GP File Composer API" filter="s60" class="api">
 <unit bldFile="mw/camerasrv/camerasrv_plat/3gp_file_composer_api/group"/>
 </component>
 <component name="asynchronous_file_saving_queue_api" long-name="Asynchronous File Saving Queue API" filter="s60" class="api">
@@ -6064,7 +6065,7 @@
 <component name="playlist_engine_api" long-name="Playlist Engine API" introduced="^1" filter="s60" class="api">
 <unit bldFile="mw/mmappfw/mmappfw_plat/playlist_engine_api/group"/>
 </component>
-<component name="mtp_keys_api" long-name="MTP Keys API" introduced="^1" filter="s60" class="api">
+<component name="mmappfw_mtp_keys_api" long-name="MTP Keys API" introduced="^1" filter="s60" class="api">
 <unit bldFile="mw/mmappfw/mmappfw_plat/mtp_keys_api/group"/>
 </component>
 <component name="mpx_collection_common_definition_api" long-name="MPX Collection Common Definition API" introduced="^1" filter="s60" class="api">
@@ -6098,22 +6099,16 @@
 <unit bldFile="mw/mmappfw/mmappfw_plat/media_player_settings_engine_api/group"/>
 </component>
 <component name="mpx_backstepping_utility_api" long-name="MPX Backstepping Utility API" introduced="^1" filter="s60" class="api">
-<!-- uncomment when configuration is put in place
-	 <unit bldFile="mmappfw_plat/mpx_backstepping_utility_api/group"/> -->
+<unit bldFile="mw/mmappfw/mmappfw_plat/mpx_backstepping_utility_api/group"/>
 </component>
 <component name="asx_parser_api" long-name="ASX Parser API" introduced="^1" filter="s60" class="api">
-<!-- uncomment when configuration is put in place
-    <unit bldFile="mmappfw_plat/asx_parser_api/group"/> -->
+<unit bldFile="mw/mmappfw/mmappfw_plat/asx_parser_api/group"/>
 </component>
 <component name="playback_helper_api" long-name="Playback Helper API" introduced="^1" filter="s60" class="api">
 <unit bldFile="mw/mmappfw/mmappfw_plat/playback_helper_api/group"/>
 </component>
 <component name="videoplaylist_utility_api" long-name="Video Playlist Utility API" introduced="^1" filter="s60" class="api">
 <unit bldFile="mw/mmappfw/mmappfw_plat/videoplaylist_utility_api/group"/>
-</component>
-<component name="mmappfw_plat_build" long-name="Multimedia App Framework Platform Interface Build" introduced="^1" filter="s60" class="api">
-<!-- needed only for #ifdefs. Remove anmd uncomment above units when configuration is in place -->
-<unit bldFile="mw/mmappfw/mmappfw_plat/group"/>
 </component>
 </collection>
 <collection name="mpx" long-name="Multimedia Player" level="fw">
@@ -6129,17 +6124,17 @@
 <component name="mpxviewfw" filter="s60" long-name="MPX View Framework" introduced="^1">
 <unit bldFile="mw/mmappfw/mpx/viewframework/group"/>
 </component>
-<component name="mpx_build" filter="s60" long-name="MPX Build" introduced="^1">
-<!--  Move the export to another component or remove the #includes from this one -->
-<unit bldFile="mw/mmappfw/mpx/group"/>
+<component name="mpx_conf" filter="s60" long-name="MPX Configuration" introduced="^1">
+<unit bldFile="mw/mmappfw/mpx/Conf"/>
+</component>
+<component name="mpx_rom" filter="s60" long-name="MPX ROM" introduced="^1">
+<unit bldFile="mw/mmappfw/mpx/rom"/>
+</component>
+<component name="mpx_sis" filter="s60" long-name="MPX SIS" introduced="^1">
+<unit bldFile="mw/mmappfw/mpx/sis"/>
 </component>
 </collection>
 <collection name="mmappcomponents" long-name="Multimedia App Components" level="utils">
-<component name="mmappcomponents_build" filter="s60" long-name="Multimedia App Components Build" introduced="^1">
-<!-- needed for  #ifdefs and hrh include. Need to #include the .hrh file in each bld.inf
-      		Can remove this once configuration is in place-->
-<unit bldFile="mw/mmappfw/mmappcomponents/group"/>
-</component>
 <component name="collectionhelper" filter="s60" long-name="Media Player Collection Helper" introduced="^1">
 <unit bldFile="mw/mmappfw/mmappcomponents/collectionhelper/group"/>
 </component>
@@ -6156,12 +6151,10 @@
 <unit bldFile="mw/mmappfw/mmappcomponents/mediaplayersettingsengine/group"/>
 </component>
 <component name="audiofetcher" filter="s60" long-name="Audio Fetcher" introduced="^1" plugin="Y">
-<!-- uncomment when config is in place, currently #included in mmappcomponents_build -->
-<!-- <unit bldFile="mmappcomponents/audiofetcher/group"/>-->
+<unit bldFile="mw/mmappfw/mmappcomponents/audiofetcher/group"/>
 </component>
 <component name="asxparser" filter="s60" long-name="ASX Parser" introduced="^1">
-<!-- uncomment when config is in place, currently #included in mmappcomponents_build -->
-<!-- <unit bldFile="mmappcomponents/asxparser/group"/>-->
+<unit bldFile="mw/mmappfw/mmappcomponents/asxparser/group"/>
 </component>
 <component name="playbackhelper" filter="s60" long-name="Playback Helper" introduced="^3">
 <unit bldFile="mw/mmappfw/mmappcomponents/playbackhelper/group"/>
@@ -6174,10 +6167,6 @@
 </component>
 </collection>
 <collection name="mmappfw_info" long-name="Multimedia App Framework Info" level="if">
-<component name="mmappfw_build" filter="s60" long-name="Multimedia App Framework Build" introduced="^1">
-<!--  Move the export to another component or remove the #includes from this one -->
-<unit bldFile="mw/mmappfw/group"/>
-</component>
 <component name="mmappfw_test" filter="s60,test,api_test,pref_test" long-name="Multimedia App Framework Test" purpose="development" introduced="^1"/>
 </collection>
 </block>
@@ -6224,8 +6213,7 @@
 </collection>
 <collection name="textinput" long-name="Text Input" level="framework">
 <component name="ptienginev2" filter="s60" long-name="Predictive Text Input Engine">
-<!--uncomment when configuration is turned on and textinput_build is removed-->
-<!--  <unit bldFile="textinput/ptienginev2/group"/>-->
+<unit bldFile="mw/inputmethods/textinput/ptienginev2/group"/>
 </component>
 <component name="akninputlanguage" filter="s60" long-name="Avkon Input Language">
 <unit bldFile="mw/inputmethods/textinput/akninputlanguage/group"/>
@@ -6283,10 +6271,6 @@
 </component>
 <component name="peninputsplitqwerty" filter="s60" long-name="Pen Input Split QWERTY" introduced="^3" plugin="Y">
 <unit bldFile="mw/inputmethods/textinput/peninputsplitqwerty/group"/>
-</component>
-<component name="textinput_build" filter="s60" long-name="Text Input Build">
-<!--needed for #ifdef, can be removed when configuration is implemented -->
-<unit bldFile="mw/inputmethods/textinput/group"/>
 </component>
 </collection>
 <collection name="fep" long-name="FEP" level="engine">
@@ -6570,7 +6554,7 @@
 <component name="avkon_testability_api" long-name="AVKON Testability API" filter="s60" class="api">
 <unit bldFile="mw/classicui/classicui_plat/avkon_testability_api/group"/>
 </component>
-<component name="ganes_api" filter="s60" class="api">
+<component name="ganes_api" long-name="Ganes API" filter="s60" class="api">
 <unit bldFile="mw/classicui/classicui_plat/ganes_api/group"/>
 </component>
 <component name="ode_api" long-name="Ode API" filter="s60" class="api">
@@ -7658,14 +7642,8 @@
 <component name="xml_parser_api" long-name="XML Parser API" filter="s60" class="api">
 <unit bldFile="mw/web/web_plat/xml_parser_api/group"/>
 </component>
-<component name="stmgesturefw_api" long-name="State Machine Gesture Framework API " filter="s60" class="api">
+<component name="stmgesturefw_api" long-name="State Machine Gesture Framework API" filter="s60" class="api">
 <unit bldFile="mw/web/web_plat/stmgesturefw_api/group"/>
-</component>
-</collection>
-<collection name="web_info" long-name="Web Info" level="specific">
-<component name="web_build" filter="s60" long-name="Web Build">
-<!-- when configuration is in place, the #ifdef is no longer needed and this component can be removed -->
-<unit bldFile="mw/web/group"/>
 </component>
 </collection>
 <collection name="browserutilities" long-name="Browser Utilities" level="utils">
@@ -7697,8 +7675,7 @@
 <unit bldFile="mw/web/browserutilities/feedsengine/group"/>
 </component>
 <component name="multipartparser" filter="s60" long-name="Multipart Parser">
-<!-- uncomment the unit when configuration is in place, it's currently #included from browserutilities_build -->
-<!-- <unit bldFile="browserutilities/multipartparser/group"/> -->
+<unit bldFile="mw/web/browserutilities/multipartparser/group"/>
 </component>
 <component name="schemehandler" filter="s60" long-name="Scheme Handler">
 <unit bldFile="mw/web/browserutilities/schemehandler/group"/>
@@ -7708,10 +7685,6 @@
 </component>
 <component name="aiwbrowserprovider" filter="s60" long-name="AIW Browser Provider" plugin="Y">
 <unit bldFile="mw/web/browserutilities/aiwbrowserprovider/group"/>
-</component>
-<component name="browserutilities_build" filter="s60" long-name="Browser Utilities Build">
-<!-- when configuration is in place, the #ifdef is no longer needed and this component can be removed -->
-<unit bldFile="mw/web/browserutilities/group"/>
 </component>
 </collection>
 <collection name="webengine" long-name="Web Engine" level="server">
@@ -7786,10 +7759,11 @@
 <component name="roapapp" filter="s60" long-name="ROAP Application">
 <unit bldFile="mw/web/codhandler/roapapp/group"/>
 </component>
-<component name="codhandler_build" filter="s60" long-name="COD Handler Build">
-<!-- Exports need to go into another component or make this self-contained.
-      		#included .hrh file needs to be #included in each of the other components -->
-<unit bldFile="mw/web/codhandler/group"/>
+<component name="codhandler_loc" filter="s60" long-name="COD Handler Localisation">
+<unit bldFile="mw/web/codhandler/Loc"/>
+</component>
+<component name="codhandler_rom" filter="s60" long-name="COD Handler ROM">
+<unit bldFile="mw/web/codhandler/rom"/>
 </component>
 </collection>
 <collection name="widgets" long-name="Web Widget Framework" level="generic">
@@ -7958,10 +7932,10 @@
 </component>
 </collection>
 <collection name="uitools_plat" long-name="UI Tools Platform Interfaces" level="if">
-<component name="cdl_api" long-name="CDL API" filter="s60" class="api">
+<component name="uitools_cdl_api" long-name="CDL API" filter="s60" class="api">
 <unit bldFile="mw/uitools/uitools_plat/cdl_api/group"/>
 </component>
-<component name="layout_system_private_api" long-name="Layout System Private API" filter="s60" class="api">
+<component name="uitools_layout_system_private_api" long-name="Layout System Private API" filter="s60" class="api">
 <unit bldFile="mw/uitools/uitools_plat/layout_system_private_api/group"/>
 </component>
 </collection>
@@ -8006,7 +7980,6 @@
 </component>
 </collection>
 </block>
-<!-- <package id="opensrv" level="specific" tech-domain="pr" href="../../../../mw/opensrv/package_definition.xml"/> -->
 </layer>
 <layer name="app" long-name="Applications" levels="services apps">
 <block name="location" level="apps" long-name="Location Apps" levels="ui events loc apps">
@@ -8043,9 +8016,11 @@
 <component name="msgviewer" filter="s60" long-name="Landmarks Message Viewer">
 <unit bldFile="app/location/landmarksui/msgviewer/group"/>
 </component>
-<component name="landmarksui_build" filter="s60" long-name="Landmarks UI Build">
-<!-- consider distributing this into the other components or collapsing into a single component -->
-<unit bldFile="app/location/landmarksui/group"/>
+<component name="landmarksui_loc" filter="s60" long-name="Landmarks UI Localisation">
+<unit bldFile="app/location/landmarksui/loc"/>
+</component>
+<component name="landmarksui_rom" filter="s60" long-name="Landmarks UI ROM">
+<unit bldFile="app/location/landmarksui/rom"/>
 </component>
 </collection>
 <collection name="eventsui" long-name="Location Events UI" level="events">
@@ -8067,9 +8042,17 @@
 <component name="eventsmgmtui" filter="s60" long-name="Events Management UI">
 <unit bldFile="app/location/eventsui/eventsmgmtui/group"/>
 </component>
-<component name="eventsui_build" filter="s60" long-name="Events UI Build">
-<!-- consider distributing this into the other components or collapsing into a single component -->
-<unit bldFile="app/location/eventsui/group"/>
+<component name="eventsui_conf" filter="s60" long-name="Events UI Configuration">
+<unit bldFile="app/location/eventsui/conf"/>
+</component>
+<component name="eventsui_data" filter="s60" long-name="Events UI Data">
+<unit bldFile="app/location/eventsui/data"/>
+</component>
+<component name="eventsui_loc" filter="s60" long-name="Events UI Localisation">
+<unit bldFile="app/location/eventsui/loc"/>
+</component>
+<component name="eventsui_rom" filter="s60" long-name="Events UI ROM">
+<unit bldFile="app/location/eventsui/rom"/>
 </component>
 </collection>
 <collection name="locationlandmarksrefappfors60" long-name="Location Landmarks Reference App for S60" level="apps">
@@ -8167,7 +8150,7 @@
 </block>
 <block name="phone" level="apps" span="2" long-name="Phone Apps" levels="engine plugin ui app">
 <collection name="phone_plat" long-name="Phone Apps Platform Interfaces" level="app">
-<component name="3d_ringing_tone_enabler_api" long-name="3D Ringing Tone Enabler API" filter="s60" class="api">
+<component name="ringing_tone_3d_enabler_api" long-name="3D Ringing Tone Enabler API" filter="s60" class="api">
 <unit bldFile="app/phone/phone_plat/3d_ringing_tone_enabler_api/group"/>
 </component>
 <component name="telephony_comms_information_api" long-name="Telephony Comms Information API" filter="s60" class="api">
@@ -8212,7 +8195,7 @@
 <component name="phone_application_voip_commands_api" long-name="Phone Application VOIP Commands API" filter="s60" class="api">
 <unit bldFile="app/phone/phone_plat/phone_application_voip_commands_api/group"/>
 </component>
-<component name="telephony_mediator_api" long-name="Telephony Mediator API" filter="s60" class="api">
+<component name="phone_telephony_mediator_api" long-name="Telephony Mediator API" filter="s60" class="api">
 <unit bldFile="app/phone/phone_plat/telephony_mediator_api/group"/>
 </component>
 <component name="video_telephony_mediator_api" long-name="Video Telephony Mediator API" filter="s60" class="api">
@@ -8498,9 +8481,8 @@
 <component name="dasgsplugin" filter="s60" long-name="Default Application Settings GS Plugin" introduced="^1" plugin="Y">
 <unit bldFile="app/settingsuis/defaultapplicationsettings/gsplugin/group"/>
 </component>
-<component name="defaultapplicationsettings_build" filter="s60" long-name="Default Application Settings Build" introduced="^1">
-<!-- split the IBYs up into the appropriate components? Make this a ROM component? -->
-<unit bldFile="app/settingsuis/defaultapplicationsettings/group"/>
+<component name="defaultapplicationsettings_rom" filter="s60" long-name="Default Application Settings ROM" introduced="^1">
+<unit bldFile="app/settingsuis/defaultapplicationsettings/rom/group"/>
 </component>
 </collection>
 <collection name="systemswuis" long-name="System SW UIs" level="ui">
@@ -8544,29 +8526,29 @@
 </block>
 <block name="devicecontrol" level="services" long-name="Device Control Daemons" levels="oma mid app">
 <collection name="devicediagnostics" long-name="Device Diagnostics" level="app">
-<component name="devdiagapp" filter="s60" long-name="Device Diagnostics App">
+<component name="devdiagapp" filter="s60" long-name="Device Diagnostics App" deprecated="^3">
 <unit bldFile="app/devicecontrol/devicediagnostics/devdiagapp/group"/>
 </component>
-<component name="devdiaggsplugin" filter="s60" long-name="Device Diagnostics GS Plugin" plugin="Y">
+<component name="devdiaggsplugin" filter="s60" long-name="Device Diagnostics GS Plugin" deprecated="^3" plugin="Y">
 <unit bldFile="app/devicecontrol/devicediagnostics/devdiaggsplugin/group"/>
 </component>
-<component name="diagplugins" filter="s60" long-name="Diagnostics Plugins" plugin="Y">
+<component name="diagplugins" filter="s60" long-name="Diagnostics Plugins" deprecated="^3" plugin="Y">
 <unit bldFile="app/devicecontrol/devicediagnostics/diagplugins/group"/>
 </component>
-<component name="diagsuites" filter="s60" long-name="Diagnostics Suites" plugin="Y">
+<component name="diagsuites" filter="s60" long-name="Diagnostics Suites" deprecated="^3" plugin="Y">
 <unit bldFile="app/devicecontrol/devicediagnostics/diagsuites/group"/>
 </component>
-<component name="devicediagnostics_build" filter="s60" long-name="Device Diagnostics Build">
+<component name="devicediagnostics_build" filter="s60" long-name="Device Diagnostics Build" deprecated="^3">
 <!-- can the exports be moved to one of the other components?
 			or all  #includes removed from here, and it renamed Device Diagnostics ROM -->
 <unit bldFile="app/devicecontrol/devicediagnostics/group"/>
 </component>
 </collection>
 <collection name="omadm" long-name="OMA Device Management" level="oma">
-<component name="omadmappui" filter="s60" long-name="OMA DM Application UI">
+<component name="omadmappui" filter="s60" long-name="OMA DM Application UI" deprecated="^3">
 <unit bldFile="app/devicecontrol/omadm/omadmappui/group"/>
 </component>
-<component name="omadmextensions" filter="s60" long-name="OMA DM Extensions" plugin="Y">
+<component name="omadmextensions" filter="s60" long-name="OMA DM Extensions" deprecated="^3" plugin="Y">
 <unit bldFile="app/devicecontrol/omadm/omadmextensions/group"/>
 </component>
 <component name="dcmo" filter="s60" long-name="Device Capabilities Management Object" introduced="^3" plugin="Y">
@@ -8574,7 +8556,7 @@
 </component>
 </collection>
 <collection name="pnpmobileservices" long-name="PnP Mobile Services" level="mid">
-<component name="pnpms" filter="s60" long-name="PnP MS">
+<component name="pnpms" filter="s60" long-name="PnP MS" deprecated="^3">
 <unit bldFile="app/devicecontrol/pnpmobileservices/pnpms/group"/>
 </component>
 </collection>
@@ -8598,9 +8580,11 @@
 <component name="omascomoadapter" filter="s60" long-name="OMA SCOMO Adapter" introduced="^3" plugin="Y">
 <unit bldFile="app/devicecontrol/applicationmanagement/omascomoadapter/group"/>
 </component>
-<component name="applicationmanagement_build" filter="s60" long-name="AM Build">
-<!-- If thes aren't collapsed into one cmp, can all  #includes removed from here, and it renamed AM ROM? -->
-<unit bldFile="app/devicecontrol/applicationmanagement/group"/>
+<component name="applicationmanagement_config" filter="s60" long-name="AM Configuration">
+<unit bldFile="app/devicecontrol/applicationmanagement/conf/group"/>
+</component>
+<component name="applicationmanagement_rom" filter="s60" long-name="AM ROM">
+<unit bldFile="app/devicecontrol/applicationmanagement/rom/group"/>
 </component>
 </collection>
 <collection name="customization" long-name="DM Customization Adapters" level="mid">
@@ -8628,9 +8612,8 @@
 <component name="embeddedlinkadapter" filter="s60" long-name="Embedded Link Adapter" plugin="Y">
 <unit bldFile="app/devicecontrol/customization/embeddedlinkadapter/bld"/>
 </component>
-<component name="customization_build" filter="s60" long-name="DM Customization Build">
-<!-- If thes aren't collapsed into one cmp, can all  #includes removed from here, and it renamed DM Customization ROM? -->
-<unit bldFile="app/devicecontrol/customization/group"/>
+<component name="customization_config" filter="s60" long-name="DM Customization Configuration">
+<unit bldFile="app/devicecontrol/customization/conf/group"/>
 </component>
 </collection>
 <collection name="omacp" long-name="OMA Content Provisioning" level="oma">
@@ -8640,7 +8623,7 @@
 </collection>
 </block>
 <block name="printing" level="services" long-name="Printing" levels="app">
-<collection name="DirectPrint" level="app">
+<collection name="directprint" long-name="DirectPrint" level="app">
 <component name="DirectPrintApp" filter="sf_build" long-name="DirectPrint App" introduced="^3">
 <unit bldFile="app/printing/DirectPrint/DirectPrintApp/group"/>
 </component>
@@ -8690,8 +8673,11 @@
 <component name="deviceencryption_help" filter="s60" long-name="Device Encryption Help" introduced="^3">
 <unit bldFile="app/files/deviceencryption/help/group"/>
 </component>
-<component name="deviceencryption_build" filter="s60" long-name="Device Encryption Build" introduced="^3">
-<unit bldFile="app/files/deviceencryption/group"/>
+<component name="deviceencryption_headers" filter="s60" long-name="Device Encryption Headers" introduced="^3">
+<unit bldFile="app/files/deviceencryption/common/group"/>
+</component>
+<component name="deviceencryption_rom" filter="s60" long-name="Device Encryption ROM" introduced="^3">
+<unit bldFile="app/files/deviceencryption/rom/group"/>
 </component>
 </collection>
 <collection name="filemanager" long-name="File Manager" level="apps">
@@ -8745,10 +8731,10 @@
 </collection>
 <collection name="contacts_plat" long-name="Contacts Apps Platform Interfaces" level="ui">
 <component name="virtual_phonebook_store_api" long-name="Virtual Phonebook Store API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_store_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_store_api/group" filter="!test"/>
 </component>
 <component name="virtual_phonebook_sim_services_api" long-name="Virtual Phonebook SIM Services API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_sim_services_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_sim_services_api/group" filter="!test"/>
 </component>
 <component name="virtual_phonebook_configuration_api" long-name="Virtual Phonebook Configuration API" filter="s60" class="api">
 <unit bldFile="app/contacts/contacts_plat/virtual_phonebook_configuration_api/group"/>
@@ -8757,28 +8743,28 @@
 <unit bldFile="app/contacts/contacts_plat/virtual_phonebook_copy_policy_api/group"/>
 </component>
 <component name="virtual_phonebook_policy_api" long-name="Virtual Phonebook Policy API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_policy_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_policy_api/group" filter="!test"/>
 </component>
 <component name="virtual_phonebook_engine_api" long-name="Virtual Phonebook Engine API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_engine_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_engine_api/group" filter="!test"/>
 </component>
 <component name="virtual_phonebook_migration_support_api" long-name="Virtual Phonebook Migration Support API" filter="s60" class="api">
 <unit bldFile="app/contacts/contacts_plat/virtual_phonebook_migration_support_api/group"/>
 </component>
 <component name="virtual_phonebook_view_definition_api" long-name="Virtual Phonebook View Definition API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_view_definition_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_view_definition_api/group" filter="!test"/>
 </component>
 <component name="virtual_phonebook_vcard_api" long-name="Virtual Phonebook vCard API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_vcard_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/virtual_phonebook_vcard_api/group" filter="!test"/>
 </component>
 <component name="cms_contactor_api" long-name="CMS Contactor API" filter="s60" class="api">
 <unit bldFile="app/contacts/contacts_plat/cms_contactor_api/group"/>
 </component>
 <component name="contactpresence_api" long-name="Contact Presence API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/contactpresence_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/contactpresence_api/group" filter="!test"/>
 </component>
 <component name="presence_cache_api" long-name="Presence Cache API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/presence_cache_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/presence_cache_api/group" filter="!test"/>
 </component>
 <component name="phonebook_internal_common_api" long-name="Phonebook Internal Common API" filter="s60" class="api">
 <unit bldFile="app/contacts/contacts_plat/phonebook_internal_common_api/group"/>
@@ -8865,16 +8851,16 @@
 <unit bldFile="app/contacts/contacts_plat/phonebook_2_ui_utilities_api/group"/>
 </component>
 <component name="cca_launch_api" long-name="CCA Launch API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/cca_launch_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/cca_launch_api/group" filter="!test"/>
 </component>
 <component name="cca_view_plugin_api" long-name="CCA View Plugin API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/cca_view_plugin_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/cca_view_plugin_api/group" filter="!test"/>
 </component>
 <component name="predictivesearch_client_api" long-name="Predictive Search Client API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/predictivesearch_client_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/predictivesearch_client_api/group" filter="!test"/>
 </component>
 <component name="predictivesearch_utils_api" long-name="Predictive Search Utils API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/predictivesearch_utils_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/predictivesearch_utils_api/group" filter="!test"/>
 </component>
 <component name="predictivesearch_adapters_api" long-name="Predictive Search Adapters API" filter="s60" class="api">
 <unit bldFile="app/contacts/contacts_plat/predictivesearch_adapters_api/group"/>
@@ -8883,7 +8869,7 @@
 <unit bldFile="app/contacts/contacts_plat/predictivesearch_algorithm_api/group"/>
 </component>
 <component name="phonebook_2_rcl_api" long-name="Phonebook 2 RCL API" filter="s60" class="api">
-<unit bldFile="app/contacts/contacts_plat/phonebook_2_rcl_api/group"/>
+<unit bldFile="app/contacts/contacts_plat/phonebook_2_rcl_api/group" filter="!test"/>
 </component>
 </collection>
 <collection name="contactextensions" long-name="Contacts Extensions" level="services">
@@ -9756,10 +9742,10 @@
 <block name="camera" level="apps" long-name="Camera Apps">
 <collection name="camera_plat" long-name="Camera Apps Platform Interfaces">
 <component name="camcorder_ui_constants_api" long-name="Camcorder UI Constants API" filter="s60" class="api">
-<unit bldFile="app/camera/camera_plat/camcorder_ui_constants_api/group"/>
+<unit bldFile="app/camera/camera_plat/camcorder_ui_constants_api/group" filter="!test"/>
 </component>
 <component name="active_palette_2_api" long-name="Active Palette 2 API" filter="s60" class="api">
-<unit bldFile="app/camera/camera_plat/active_palette_2_api/group"/>
+<unit bldFile="app/camera/camera_plat/active_palette_2_api/group" filter="!test"/>
 </component>
 </collection>
 <collection name="camerauis" long-name="Camera UIs">
@@ -9833,9 +9819,8 @@
 <component name="editorprovider" filter="s60" long-name="Image Editor Provider">
 <unit bldFile="app/imgeditor/imageeditor/editorprovider/group"/>
 </component>
-<component name="imageeditor_build" filter="s60" long-name="Image Editor Build">
-<!-- should distribute this to the other components -->
-<unit bldFile="app/imgeditor/imageeditor/group"/>
+<component name="imageeditor_exports" filter="s60" long-name="Image Editor Exports">
+<unit bldFile="app/imgeditor/imageeditor/exports"/>
 </component>
 </collection>
 <collection name="imageeditorengine" long-name="Image Editor Engine" level="engine">
@@ -9873,10 +9858,6 @@
 </component>
 <component name="enginewrapper" filter="s60" long-name="Image Editor Engine Wrapper">
 <unit bldFile="app/imgeditor/imageeditorengine/enginewrapper/group"/>
-</component>
-<component name="imageeditorengine_build" filter="s60" long-name="Image Editor Engine Build">
-<!-- should distribute this to the other components -->
-<unit bldFile="app/imgeditor/imageeditorengine/group"/>
 </component>
 </collection>
 </block>
@@ -10071,9 +10052,8 @@
 <component name="imgvwr" filter="s60" long-name="Photos Image Viewer" introduced="^3">
 <unit bldFile="app/photos/photosgallery/imgvwr/group"/>
 </component>
-<component name="photosgallery_build" filter="s60" long-name="Photos Gallery Build" introduced="^2">
-<!--  need to remove the #included above bld.infs from this  -->
-<unit bldFile="app/photos/photosgallery/group"/>
+<component name="photosgallery_exports" filter="s60" long-name="Photos Gallery Exports" introduced="^2">
+<unit bldFile="app/photos/photosgallery/exports"/>
 </component>
 </collection>
 </block>
@@ -10189,9 +10169,11 @@
 <component name="fmradio_help" filter="s60" long-name="FM Radio Help">
 <unit bldFile="app/radio/fmradio/help/group"/>
 </component>
-<component name="fmradio_build" filter="s60" long-name="FM Radio ROM">
-<!--  remove above #included bld.infs -->
-<unit bldFile="app/radio/fmradio/group"/>
+<component name="fmradio_conf" filter="s60" long-name="FM Radio Configuration">
+<unit bldFile="app/radio/fmradio/conf"/>
+</component>
+<component name="fmradio_loc" filter="s60" long-name="FM Radio Localisation">
+<unit bldFile="app/radio/fmradio/loc"/>
 </component>
 </collection>
 </block>
@@ -10286,9 +10268,8 @@
 <component name="idlehomescreen_data" filter="s60" long-name="Idle Home Screen Data">
 <unit bldFile="app/homescreen/idlehomescreen/data/group"/>
 </component>
-<component name="idlehomescreen_build" filter="s60" long-name="Idle Home Screen Build">
-<!-- can the loc file be moved to another comopnent and this one removed? -->
-<unit bldFile="app/homescreen/idlehomescreen/group"/>
+<component name="idlehomescreen_loc" filter="s60" long-name="Idle Home Screen Localisation">
+<unit bldFile="app/homescreen/idlehomescreen/loc/group"/>
 </component>
 </collection>
 <collection name="menufw" long-name="Menu Framework" level="fw">
@@ -10298,13 +10279,12 @@
 <component name="menufwui" filter="s60" long-name="Menu Framework UI">
 <unit bldFile="app/homescreen/menufw/menufwui/group"/>
 </component>
-<component name="menufw_build" filter="s60" long-name="Menu Framework Build">
-<!-- can the exports be exported by the other components? -->
-<unit bldFile="app/homescreen/menufw/group"/>
+<component name="menusuites" filter="s60" long-name="Menu Suites">
+<unit bldFile="app/homescreen/menufw/menusuites/group"/>
 </component>
 </collection>
 <collection name="taskswitcher" long-name="Task Switcher" level="support">
-<component name="contextengine" filter="s60" long-name="Context Engine" introduced="^3">
+<component name="hs_contextengine" filter="s60" long-name="Context Engine" introduced="^3">
 <unit bldFile="app/homescreen/taskswitcher/contextengine/group"/>
 </component>
 <component name="taskswitcherui" filter="s60" long-name="Task Switcher UI" introduced="^3">
@@ -10733,7 +10713,7 @@
 </collection>
 <collection name="techviewplat" long-name="Techview Platform" level="services"/>
 <collection name="techviewui" long-name="Techview UI" level="ui"/>
-<collection name="controlpanel" long-name="Control Panel" level="ui"/>
+<collection name="tv_controlpanel" long-name="Control Panel" level="ui"/>
 <collection name="pimapps" long-name="PIM Apps" level="apps3"/>
 <collection name="securityapps" long-name="Security Apps" level="apps3"/>
 <collection name="utilityapps" long-name="Utility Apps" level="apps2"/>
