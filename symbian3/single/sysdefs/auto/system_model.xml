@@ -8074,8 +8074,8 @@
 <unit bldFile="app/mmsharinguis/mmsharing/mmshui/group"/>
 <unit bldFile="app/mmsharinguis/mmsharing/mmshui/help/group"/>
 </component>
-<component name="mmsharing_build" filter="s60" long-name="MM Sharing Build">
-<unit bldFile="app/mmsharinguis/mmsharing/group"/>
+<component name="mmsharing_exports" filter="s60" long-name="MM Sharing exports">
+<unit bldFile="app/mmsharinguis/mmsharing/exports"/>
 </component>
 </collection>
 <collection name="mmshplugins" long-name="Multimedia Sharing Plugins" level="plugin">
@@ -8096,9 +8096,8 @@
 </component>
 </collection>
 <collection name="mmsharinguis_info" long-name="Multimedia Sharing UIs Info" level="if">
-<component name="mmsharinguis_build" filter="s60" long-name="Multimedia Sharing UIs Build">
-<!--  consider distributing to other components -->
-<unit bldFile="app/mmsharinguis/group"/>
+<component name="mmsharinguis_rom" filter="s60" long-name="Multimedia Sharing UIs ROM">
+<unit bldFile="app/mmsharinguis/rom"/>
 </component>
 </collection>
 </block>
@@ -10057,9 +10056,8 @@
 <component name="mpxmusicplayer_app" filter="s60" long-name="MPX Application">
 <unit bldFile="app/musicplayer/mpxmusicplayer/app/group"/>
 </component>
-<component name="mpxmusicplayer_build" filter="s60" long-name="MPX Music Player Build">
-<!--  can the exports be distributed to the above components?  -->
-<unit bldFile="app/musicplayer/mpxmusicplayer/group"/>
+<component name="mpxmusicplayer_exports" filter="s60" long-name="MPX Music Player Exports">
+<unit bldFile="app/musicplayer/mpxmusicplayer/exports"/>
 </component>
 </collection>
 <collection name="musichomescreen_multiview" long-name="Music Home Screen Multiview" level="hs">
@@ -10091,17 +10089,11 @@
 <component name="viewplugins" filter="s60" long-name="MPX View Plugins" plugin="Y">
 <unit bldFile="app/musicplayer/mpxplugins/viewplugins/group"/>
 </component>
-<component name="mpxplugins_build" filter="s60" long-name="MPX Plugins Build">
-<!--  can the exports be distributed to the above components?  -->
-<unit bldFile="app/musicplayer/mpxplugins/group"/>
+<component name="mpxplugins_exports" filter="s60" long-name="MPX Plugins Exports">
+<unit bldFile="app/musicplayer/mpxplugins/exports"/>
 </component>
 </collection>
-<collection name="musicplayer_info" long-name="Music Player Apps Info" level="app">
-<component name="musicplayer_build" filter="s60" long-name="Music Player Build">
-<!-- should explicitly #inlcude musicplayerbldvariant.hrh in each component  -->
-<unit bldFile="app/musicplayer/group"/>
-</component>
-</collection>
+<collection name="musicplayer_info" long-name="Music Player Apps Info" level="app"/>
 </block>
 <block name="radio" level="apps" long-name="Radio Apps" levels="engine ui">
 <collection name="fmradio" long-name="FM Radio" level="ui">
