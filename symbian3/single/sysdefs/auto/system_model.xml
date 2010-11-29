@@ -8491,10 +8491,8 @@
 <component name="diagsuites" filter="s60" long-name="Diagnostics Suites" deprecated="^3" plugin="Y">
 <unit bldFile="app/devicecontrol/devicediagnostics/diagsuites/group"/>
 </component>
-<component name="devicediagnostics_build" filter="s60" long-name="Device Diagnostics Build" deprecated="^3">
-<!-- can the exports be moved to one of the other components?
-			or all  #includes removed from here, and it renamed Device Diagnostics ROM -->
-<unit bldFile="app/devicecontrol/devicediagnostics/group"/>
+<component name="devicediagnostics_sis" filter="s60" long-name="Device Diagnostics SIS" deprecated="^3">
+<unit bldFile="app/devicecontrol/devicediagnostics/sis"/>
 </component>
 </collection>
 <collection name="omadm" long-name="OMA Device Management" level="oma">
