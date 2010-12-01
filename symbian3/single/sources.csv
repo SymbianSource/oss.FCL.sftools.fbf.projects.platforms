@@ -25,7 +25,7 @@ http://developer.symbian.org/oss/FCL/sf/app/location/,/sf/app/location,changeset
 http://developer.symbian.org/oss/FCL/sf/app/messaging/,/sf/app/messaging,changeset,da6ac9d688df,
 http://developer.symbian.org/oss/FCL/sf/app/mmsharinguis/,/sf/app/mmsharinguis,changeset,755f0370535b,
 http://developer.symbian.org/oss/FCL/sf/app/musicplayer/,/sf/app/musicplayer,changeset,1f1dad4af8f8,
-http://developer.symbian.org/oss/FCL/sf/app/organizer/,/sf/app/organizer,changeset,9dfcaf1038dd,
+http://developer.symbian.org/oss/FCL/sf/app/organizer/,/sf/app/organizer,changeset,250f0dfb7d22, Bug 2257
 http://developer.symbian.org/oss/FCL/sf/app/phone/,/sf/app/phone,changeset,b49b5af297a7,Bug 3596 and Bug 2832
 http://developer.symbian.org/oss/FCL/sf/app/photos/,/sf/app/photos,changeset,01504893d9cb,
 http://developer.symbian.org/oss/FCL/sf/app/podcatcher/,/sf/app/podcatcher,changeset,c11c471936bc,
@@ -45,7 +45,7 @@ http://developer.symbian.org/oss/FCL/sf/app/voicerec/,/sf/app/voicerec,changeset
 http://developer.symbian.org/oss/FCL/sf/app/webuis/,/sf/app/webuis,changeset,a45dccb283c5,
 http://developer.symbian.org/oss/FCL/sf/mw/accesssec/,/sf/mw/accesssec,changeset,9c2aa05919d9,
 http://developer.symbian.org/oss/FCL/sf/mw/appinstall/,/sf/mw/appinstall,changeset,8b5c572a3757,
-http://developer.symbian.org/oss/FCL/sf/mw/appsupport/,/sf/mw/appsupport,changeset,20e07ff6040b,Bug 2524 Bug 2414 
+http://developer.symbian.org/oss/FCL/sf/mw/appsupport/,/sf/mw/appsupport,changeset,32f887d619a0,Bug 2524 2414 and 3556
 http://developer.symbian.org/oss/FCL/sf/mw/btservices/,/sf/mw/btservices,changeset,4b59561a31c0,
 http://developer.symbian.org/oss/FCL/sf/mw/camerasrv/,/sf/mw/camerasrv,changeset,e3d67ce66f28,
 http://developer.symbian.org/oss/FCL/sf/mw/classicui/,/sf/mw/classicui,changeset,7437a26b11d0,Bugs 2846 2584 and 2012
@@ -60,7 +60,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/imsrv/,/sf/mw/imsrv,changeset,3387242
 http://developer.symbian.org/oss/FCL/sf/mw/inputmethods/,/sf/mw/inputmethods,changeset,9eb76adaa71f,error on rom boot
 http://developer.symbian.org/oss/FCL/sf/mw/ipappprotocols/,/sf/mw/ipappprotocols,changeset,2c7192069824,
 http://developer.symbian.org/oss/FCL/sf/mw/ipappsrv/,/sf/mw/ipappsrv,changeset,b0e4b01681c5,
-http://developer.symbian.org/oss/FCL/sf/mw/ipconnmgmt/,/sf/mw/ipconnmgmt,changeset,cf1b3ddbe9a1,
+http://developer.symbian.org/oss/FCL/sf/mw/ipconnmgmt/,/sf/mw/ipconnmgmt,changeset,dd7f31e692c1, Bug 2675
 http://developer.symbian.org/oss/FCL/sf/mw/legacypresence/,/sf/mw/legacypresence,changeset,bafa26c1d234,
 http://developer.symbian.org/oss/FCL/sf/mw/locationsrv/,/sf/mw/locationsrv,changeset,ea98413ce11f,
 http://developer.symbian.org/oss/FCL/sf/mw/mds/,/sf/mw/mds,changeset,e538444823de,
@@ -83,7 +83,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/shortlinkconn/,/sf/mw/shortlinkconn,c
 http://developer.symbian.org/oss/FCL/sf/mw/srvdiscovery/,/sf/mw/srvdiscovery,changeset,594d15129e2c,
 http://developer.symbian.org/oss/FCL/sf/mw/svgt/,/sf/mw/svgt,changeset,1902ade171ab,
 http://developer.symbian.org/oss/FCL/sf/mw/uiaccelerator/,/sf/mw/uiaccelerator,changeset,e1987ab3768a,
-http://developer.symbian.org/oss/FCL/sf/mw/uiresources/,/sf/mw/uiresources,changeset,f24e086457b7,Bug 26 Bug 1361 and fresh theme
+http://developer.symbian.org/oss/FCL/sf/mw/uiresources/,/sf/mw/uiresources,changeset,67a72ace5294,Bugs 26 1361 3172 and fresh theme
 http://developer.symbian.org/oss/FCL/sf/mw/uitools/,/sf/mw/uitools,changeset,8db86ce11363,
 http://developer.symbian.org/oss/FCL/sf/mw/usbservices/,/sf/mw/usbservices,changeset,dde4619868dc,
 http://developer.symbian.org/oss/FCL/sf/mw/videoutils/,/sf/mw/videoutils,changeset,13a33d82ad98,
@@ -95,14 +95,14 @@ http://developer.symbian.org/oss/FCL/sf/os/boardsupport/,/sf/os/boardsupport,cha
 http://developer.symbian.org/oss/FCL/sf/os/bt/,/sf/os/bt,changeset,015fa7494bd2,
 http://developer.symbian.org/oss/FCL/sf/os/buildtools/,/sf/os/buildtools,changeset,7e5a49312cad,
 http://developer.symbian.org/oss/FCL/sf/os/cellularsrv/,/sf/os/cellularsrv,changeset,ea777f234bd4,bug 1398
-http://developer.symbian.org/oss/FCL/sf/os/commsfw/,/sf/os/commsfw,changeset,9d66deb8dc6f,emulator.cfg for winsock
-http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,changeset,ec8b76ee69ef,
-http://developer.symbian.org/oss/FCL/sf/os/devicesrv/,/sf/os/devicesrv,changeset,e5cdfbe15c03,Bug 3786
+http://developer.symbian.org/oss/FCL/sf/os/commsfw/,/sf/os/commsfw,changeset,077156ad1d4e,Bug 2675
+http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,changeset,3bde23d36dce, Bug 3176 and keymap fix
+http://developer.symbian.org/oss/FCL/sf/os/devicesrv/,/sf/os/devicesrv,changeset,79105dd92dc2,Bug 3786 and 3852
 http://developer.symbian.org/oss/FCL/sf/os/graphics/,/sf/os/graphics,changeset,f67ec42dc838,
 http://developer.symbian.org/oss/FCL/sf/os/imagingext/,/sf/os/imagingext,changeset,e6e35c6539fa,
 http://developer.symbian.org/oss/FCL/sf/os/kernelhwsrv/,/sf/os/kernelhwsrv,changeset,2024e52ac966, Bug 2149 bug 2283 GCCE and rom_sbs.pl 
 http://developer.symbian.org/oss/FCL/sf/os/lbs/,/sf/os/lbs,changeset,a796fdeeb33c,
-http://developer.symbian.org/oss/FCL/sf/os/mm/,/sf/os/mm,changeset,af86cc8a4692,
+http://developer.symbian.org/oss/FCL/sf/os/mm/,/sf/os/mm,changeset,b35006be8823, Bug 3673
 http://developer.symbian.org/oss/FCL/sf/os/networkingsrv/,/sf/os/networkingsrv,changeset,8c9903e4e6b4,Bug 1894 and Bug 3108
 http://developer.symbian.org/oss/FCL/sf/os/ossrv/,/sf/os/ossrv,changeset,5b3c983434ca,
 http://developer.symbian.org/oss/FCL/sf/os/persistentdata/,/sf/os/persistentdata,changeset,839ea9debada,
