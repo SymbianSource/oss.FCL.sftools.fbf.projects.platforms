@@ -60,7 +60,7 @@ http://developer.symbian.org/oss/FCL/sf/mw/imsrv/,/sf/mw/imsrv,changeset,3387242
 http://developer.symbian.org/oss/FCL/sf/mw/inputmethods/,/sf/mw/inputmethods,changeset,9eb76adaa71f,error on rom boot
 http://developer.symbian.org/oss/FCL/sf/mw/ipappprotocols/,/sf/mw/ipappprotocols,changeset,2c7192069824,
 http://developer.symbian.org/oss/FCL/sf/mw/ipappsrv/,/sf/mw/ipappsrv,changeset,b0e4b01681c5,
-http://developer.symbian.org/oss/FCL/sf/mw/ipconnmgmt/,/sf/mw/ipconnmgmt,changeset,dd7f31e692c1, Bug 2675
+http://developer.symbian.org/oss/FCL/sf/mw/ipconnmgmt/,/sf/mw/ipconnmgmt,changeset,cf1b3ddbe9a1, 
 http://developer.symbian.org/oss/FCL/sf/mw/legacypresence/,/sf/mw/legacypresence,changeset,bafa26c1d234,
 http://developer.symbian.org/oss/FCL/sf/mw/locationsrv/,/sf/mw/locationsrv,changeset,ea98413ce11f,
 http://developer.symbian.org/oss/FCL/sf/mw/mds/,/sf/mw/mds,changeset,e538444823de,
@@ -95,7 +95,7 @@ http://developer.symbian.org/oss/FCL/sf/os/boardsupport/,/sf/os/boardsupport,cha
 http://developer.symbian.org/oss/FCL/sf/os/bt/,/sf/os/bt,changeset,015fa7494bd2,
 http://developer.symbian.org/oss/FCL/sf/os/buildtools/,/sf/os/buildtools,changeset,7e5a49312cad,
 http://developer.symbian.org/oss/FCL/sf/os/cellularsrv/,/sf/os/cellularsrv,changeset,ea777f234bd4,bug 1398
-http://developer.symbian.org/oss/FCL/sf/os/commsfw/,/sf/os/commsfw,changeset,077156ad1d4e,Bug 2675
+http://developer.symbian.org/oss/FCL/sf/os/commsfw/,/sf/os/commsfw,changeset,9d66deb8dc6f,
 http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,changeset,3bde23d36dce, Bug 3176 and keymap fix
 http://developer.symbian.org/oss/FCL/sf/os/devicesrv/,/sf/os/devicesrv,changeset,79105dd92dc2,Bug 3786 and 3852
 http://developer.symbian.org/oss/FCL/sf/os/graphics/,/sf/os/graphics,changeset,f67ec42dc838,
