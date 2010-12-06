@@ -96,7 +96,7 @@ http://developer.symbian.org/oss/FCL/sf/os/bt/,/sf/os/bt,branch,RCL_3,
 http://developer.symbian.org/oss/FCL/sf/os/buildtools/,/sf/os/buildtools,branch,RCL_3,
 http://developer.symbian.org/oss/FCL/sf/os/cellularsrv/,/sf/os/cellularsrv,branch,RCL_3,bug 1398
 http://developer.symbian.org/oss/FCL/sf/os/commsfw/,/sf/os/commsfw,changeset,9d66deb8dc6f,
-http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,changeset,ec8b76ee69ef,
+http://developer.symbian.org/oss/FCL/sf/os/deviceplatformrelease/,/sf/os/deviceplatformrelease,changeset,3bde23d36dce,
 http://developer.symbian.org/oss/FCL/sf/os/devicesrv/,/sf/os/devicesrv,branch,RCL_3,Bug 3786
 http://developer.symbian.org/oss/FCL/sf/os/fshell/,/sf/os/fshell,branch,default,
 http://developer.symbian.org/oss/FCL/sf/os/graphics/,/sf/os/graphics,branch,NewGraphicsArchitecture,
@@ -115,4 +115,4 @@ http://developer.symbian.org/oss/FCL/sf/os/xmlsrv/,/sf/os/xmlsrv,branch,RCL_3,
 http://developer.symbian.org/oss/FCL/sf/os/osrndtools/,/sf/os/osrndtools,changeset,3406c99bc375,
 http://developer.symbian.org/oss/FCL/sf/tools/buildplatforms/,/sf/tools/buildplatforms,changeset,e541da0d3b0d,
 http://developer.symbian.org/oss/FCL/sf/incubator/stemkit,/sf/incubator/stemkit,branch,default,
-http://developer.symbian.org/oss/FCL/sftools/depl/sdkcreationmdw/packaging/,/sftools/depl/sdkcreationmdw/packaging,changeset,ba779db5b8c5,layers.sysdef.xml
+http://developer.symbian.org/oss/FCL/sftools/depl/sdkcreationmdw/packaging/,/sftools/depl/sdkcreationmdw/packaging,changeset,b3b823debf08,layers.sysdef.xml
