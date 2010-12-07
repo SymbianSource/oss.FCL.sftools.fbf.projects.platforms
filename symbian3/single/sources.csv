@@ -1,5 +1,5 @@
 source,dst,type,pattern,sysdef
-http://developer.symbian.org/oss/FCL/sf/adapt/beagleboard/,/sf/adapt/beagleboard,branch,default,
+http://developer.symbian.org/oss/FCL/sf/adapt/beagleboard/,/sf/adapt/beagleboard,changeset,7f1628607b77,
 http://developer.symbian.org/oss/FCL/sf/adapt/codecs.aricent/,/sf/adapt/codecs.aricent,branch,default,
 http://developer.symbian.org/oss/FCL/sf/adapt/naviengine.nec/,/sf/adapt/naviengine.nec,branch,RCL_3,
 http://developer.symbian.org/oss/FCL/sf/adapt/qemu/,/sf/adapt/qemu,changeset,f4712cc7c69e,
